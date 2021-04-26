@@ -1,21 +1,22 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
-import { BrowserRouter, Switch, Redirect, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Redirect, Route } from 'react-router-dom'
 
-import HomePage from "../HomePage";
-import AdminPage from "../AdminPage";
-import UserPage from "../UserPage";
-import NotFoundPage from "../NotFoundPage";
+import HomePage from '../components/HomePage'
+import AdminPage from '../components/AdminPage'
+import UserPage from '../components/UserPage'
+import NotFoundPage from '../components/NotFoundPage'
+import InkTestPage from '../pages/InkTestPage/InkTestPage'
 
 class Router extends Component {
   render() {
     // Properties
-    const { user, roles, bar } = this.props;
+    const { user, roles, bar } = this.props
 
     // Functions
-    const { openSnackbar } = this.props;
+    const { openSnackbar } = this.props
 
     return (
       <BrowserRouter basename={process.env.REACT_APP_BASENAME}>
@@ -26,8 +27,12 @@ class Router extends Component {
             <HomePage user={user} openSnackbar={openSnackbar} />
           </Route>
 
+          <Route path="/inky" exact>
+            <InkTestPage />
+          </Route>
+
           <Route path="/admin">
-            {user && roles.includes("admin") ? (
+            {user && roles.includes('admin') ? (
               <AdminPage />
             ) : (
               <Redirect to="/" />
@@ -43,7 +48,7 @@ class Router extends Component {
           </Route>
         </Switch>
       </BrowserRouter>
-    );
+    )
   }
 }
 
@@ -55,6 +60,6 @@ Router.propTypes = {
 
   // Functions
   openSnackbar: PropTypes.func.isRequired,
-};
+}
 
-export default Router;
+export default Router

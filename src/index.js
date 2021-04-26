@@ -4,7 +4,7 @@ import * as Sentry from "@sentry/browser";
 import * as serviceWorker from "./serviceWorker";
 import "typeface-roboto";
 import "./index.css";
-import App from "./components/App";
+import App from "./App";
 
 Sentry.init({
   dsn: process.env.REACT_APP_SENTRY_DSN,
