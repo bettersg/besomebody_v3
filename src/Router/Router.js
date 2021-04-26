@@ -4,10 +4,10 @@ import PropTypes from 'prop-types'
 
 import { BrowserRouter, Switch, Redirect, Route } from 'react-router-dom'
 
-import HomePage from '../components/HomePage'
 import AdminPage from '../components/AdminPage'
 import UserPage from '../components/UserPage'
 import NotFoundPage from '../components/NotFoundPage'
+import HomePage from '../pages/HomePage/HomePage'
 import InkTestPage from '../pages/InkTestPage/InkTestPage'
 
 class Router extends Component {

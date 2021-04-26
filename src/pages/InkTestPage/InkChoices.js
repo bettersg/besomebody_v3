@@ -1,5 +1,6 @@
-import { Box, Button, Typography } from '@material-ui/core'
 import React from 'react'
+import PropTypes from 'prop-types'
+import { Box, Button, Typography } from '@material-ui/core'
 
 const InkChoices = (props) => {
   const { choices, handleSelectChoice } = props
@@ -25,6 +26,11 @@ const InkChoices = (props) => {
       ))}
     </Box>
   )
+}
+
+InkChoices.propTypes = {
+  choices: PropTypes.array,
+  handleSelectChoice: PropTypes.func,
 }
 
 export default InkChoices

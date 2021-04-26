@@ -34,7 +34,7 @@ const InkTestPage = () => {
       </Box>
 
       {/* Render texts with styling conditions based on tags */}
-      <InkParagraphs paragraphs={paragraphs} />
+      <InkParagraphs paragraphs={paragraphs} variables={variables} />
 
       {/* Render choices with choice index for triggers */}
       <InkChoices choices={choices} handleSelectChoice={handleSelectChoice} />

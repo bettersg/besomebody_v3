@@ -1,8 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Box, Divider, Typography } from '@material-ui/core'
 
 const InkParagraphs = (props) => {
-  const { paragraphs } = props
+  const { paragraphs, variables } = props
 
   const elementRef = React.useRef()
 
@@ -31,6 +32,11 @@ const InkParagraphs = (props) => {
       <Divider />
     </>
   )
+}
+
+InkParagraphs.propTypes = {
+  paragraphs: PropTypes.array,
+  variables: PropTypes.object,
 }
 
 export default InkParagraphs
