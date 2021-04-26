@@ -6,14 +6,13 @@ import InkParagraphs from '../../components/Ink/InkParagraphs'
 import InkChoices from '../../components/Ink/InkChoices'
 import InkControls from '../../components/Ink/InkControls'
 
-const InkTestPage = () => {
+const InkTestPageBasic = () => {
   const {
     // State hooks
     isStoryStarted,
     paragraphs,
     choices,
     variables,
-    savedTexts,
 
     // Controller Hooks
     setParagraphs,
@@ -21,10 +20,6 @@ const InkTestPage = () => {
     getStory,
     setChoice,
     resetStory,
-    startStoryFrom,
-    saveStory,
-    loadSavedStory,
-    resetSavedStory,
   } = useInk(json)
 
   return (
@@ -46,17 +41,12 @@ const InkTestPage = () => {
       {/* Render event triggers */}
       <InkControls
         isStoryStarted={isStoryStarted}
-        savedTexts={savedTexts}
         setIsStoryStarted={setIsStoryStarted}
         getStory={getStory}
         resetStory={resetStory}
-        startStoryFrom={startStoryFrom}
-        saveStory={saveStory}
-        loadSavedStory={loadSavedStory}
-        resetSavedStory={resetSavedStory}
       />
     </Container>
   )
 }
 
-export default InkTestPage
+export default InkTestPageBasic

@@ -31,12 +31,16 @@ const initInk = (storyApi, json) => {
     const background = inkStory.variablesState['background']
     const leftCharacter = inkStory.variablesState['leftCharacter']
     const rightCharacter = inkStory.variablesState['rightCharacter']
+    const chatgroupTitle = inkStory.variablesState['chatgroupTitle']
+    const chatgroupImage = inkStory.variablesState['chatgroupImage']
 
     const variables = {
       ui,
       background,
       leftCharacter,
       rightCharacter,
+      chatgroupTitle,
+      chatgroupImage,
     }
 
     return variables

@@ -2,7 +2,7 @@ import React from 'react'
 import { Story } from 'inkjs'
 import { initInk } from './initInk'
 
-const useInkJs = (json) => {
+const useInk = (json) => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const inkStory = React.useMemo(() => initInk(Story, json), [json])
 
@@ -15,7 +15,7 @@ const useInkJs = (json) => {
   const [variables, setVariables] = React.useState({})
 
   // Save story progression states
-  const [saved, setSaved] = React.useState(null)
+  const [savedTexts, setSavedTexts] = React.useState(null)
   const [paragraphsSnapShot, setParagraphsSnapShot] = React.useState([])
   const [choicesSnapShot, setChoicesSnapShot] = React.useState([])
 
@@ -31,6 +31,8 @@ const useInkJs = (json) => {
   // To fetch next sequence in story
   const handleGetStory = () => {
     const nextStep = inkStory.nextStoryStep()
+
+    console.log('nextStep: ', nextStep)
 
     // Update paragraphs states
     if (nextStep?.type === 'text') {
@@ -67,6 +69,7 @@ const useInkJs = (json) => {
     setIsStoryStarted(false)
     setParagraphs([])
     setChoices([])
+    setVariables({})
     inkStory.resetStory()
   }
 
@@ -74,6 +77,7 @@ const useInkJs = (json) => {
   const handleStartStoryFrom = (pathName) => {
     inkStory.startStoryFrom(pathName)
     setIsStoryStarted(true)
+    handleGetStory()
   }
 
   // Save snapshots of both React and inkStory states
@@ -81,44 +85,46 @@ const useInkJs = (json) => {
     setParagraphsSnapShot(paragraphs)
     setChoicesSnapShot(choices)
     const savedState = inkStory.saveStoryState()
-    setSaved(savedState)
+    setSavedTexts(savedState)
   }
 
   // Load the snapshots back into both React and inkStory states
-  const handleLoadStoryFromState = (savedState) => {
+  const handleLoadSavedStory = (savedState) => {
     if (savedState && paragraphsSnapShot.length) {
       setParagraphs(paragraphsSnapShot)
       setChoices(choicesSnapShot)
       inkStory.loadStoryState(savedState)
       setIsStoryStarted(true)
+      handleGetStory()
     }
   }
 
   // Clear snapshots in React states
-  const handleClearLoadStates = () => {
+  const handleResetSavedStory = () => {
     setParagraphsSnapShot([])
     setChoicesSnapShot([])
-    setSaved(null)
+    setSavedTexts(null)
   }
 
   return {
     // State hooks
-    storyStarted: isStoryStarted,
+    isStoryStarted,
     paragraphs,
     choices,
     variables,
-    saved,
+    savedTexts,
 
     // Controller Hooks
-    startStory: () => setIsStoryStarted(true),
+    setParagraphs,
+    setIsStoryStarted,
     getStory: handleGetStory,
-    selectChoice: handleSelectChoice,
+    setChoice: handleSelectChoice,
     resetStory: handleResetStory,
     startStoryFrom: handleStartStoryFrom,
     saveStory: handleSaveStory,
-    loadStory: handleLoadStoryFromState,
-    clearLoad: handleClearLoadStates,
+    loadSavedStory: handleLoadSavedStory,
+    resetSavedStory: handleResetSavedStory,
   }
 }
 
-export default useInkJs
+export default useInk

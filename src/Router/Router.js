@@ -9,6 +9,7 @@ import UserPage from '../components/UserPage'
 import NotFoundPage from '../components/NotFoundPage'
 import HomePage from '../pages/HomePage/HomePage'
 import InkTestPage from '../pages/InkTestPage/InkTestPage'
+import InkTestPageBasic from '../pages/InkTestPage/InkTestPageBasic'
 
 class Router extends Component {
   render() {
@@ -27,8 +28,12 @@ class Router extends Component {
             <HomePage user={user} openSnackbar={openSnackbar} />
           </Route>
 
-          <Route path="/inky" exact>
+          <Route path="/ink" exact>
             <InkTestPage />
+          </Route>
+
+          <Route path="/ink-basic" exact>
+            <InkTestPageBasic />
           </Route>
 
           <Route path="/admin">
