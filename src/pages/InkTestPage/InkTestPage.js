@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Container, Typography } from '@material-ui/core'
 import useInk from '../../lib/Ink/useInk'
-import json from '../../lib/Ink/nadid.ink.json'
+import NadidInk from './nadid.ink.json'
 import InkParagraphs from '../../components/Ink/InkParagraphs'
 import InkChoices from '../../components/Ink/InkChoices'
 import InkControls from '../../components/Ink/InkControls'
@@ -25,7 +25,7 @@ const InkTestPage = () => {
     saveStory,
     loadSavedStory,
     resetSavedStory,
-  } = useInk(json)
+  } = useInk(NadidInk)
 
   return (
     <Container maxWidth="lg">

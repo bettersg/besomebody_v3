@@ -617,7 +617,6 @@
                 "c-13": [
                   "^ gav what if this is destined to end in heartbreak? i don't want to lose both my best friend and my boyfriend at once. maybe it's best we just part as friends rather than get into all these fights with our family and suffer a life of hardships? ",
                   { "#": "Speaker1" },
-                  { "->": "break_up" },
                   "\n",
                   { "->": ".^.^.^.g-6" },
                   { "#f": 5 }

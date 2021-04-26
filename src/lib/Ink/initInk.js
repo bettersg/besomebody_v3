@@ -1,10 +1,22 @@
+const STORY_VALUE_TYPE = {
+  CHOICE: 'choice',
+  TEXT: 'text',
+}
+
+const INK_VARIABLE_UI = 'ui'
+const INK_VARIABLE_BACKGROUND = 'background'
+const INK_VARIABLE_LEFT_CHARACTER = 'leftCharacter'
+const INK_VARIABLE_RIGHT_CHARACTER = 'rightCharacter'
+const INK_VARIABLE_CHATGROUP_TITLE = 'chatgroupTitle'
+const INK_VARIABLE_CHATGROUP_IMAGE = 'chatgroupImage'
+
 const initInk = (storyApi, json) => {
   const inkStory = new storyApi(json)
 
   const nextStoryStep = () => {
     if (inkStory.currentChoices.length) {
       const values = {
-        type: 'choice',
+        type: STORY_VALUE_TYPE.CHOICE,
         values: inkStory.currentChoices,
         tags: inkStory.currentTags,
       }
@@ -18,7 +30,7 @@ const initInk = (storyApi, json) => {
       }
 
       const values = {
-        type: 'text',
+        type: STORY_VALUE_TYPE.TEXT,
         values: text,
         tags: inkStory.currentTags,
       }
@@ -26,13 +38,13 @@ const initInk = (storyApi, json) => {
     }
   }
 
-  const allVariables = () => {
-    const ui = inkStory.variablesState['ui']
-    const background = inkStory.variablesState['background']
-    const leftCharacter = inkStory.variablesState['leftCharacter']
-    const rightCharacter = inkStory.variablesState['rightCharacter']
-    const chatgroupTitle = inkStory.variablesState['chatgroupTitle']
-    const chatgroupImage = inkStory.variablesState['chatgroupImage']
+  const getVariables = () => {
+    const ui = inkStory.variablesState[INK_VARIABLE_UI]
+    const background = inkStory.variablesState[INK_VARIABLE_BACKGROUND]
+    const leftCharacter = inkStory.variablesState[INK_VARIABLE_LEFT_CHARACTER]
+    const rightCharacter = inkStory.variablesState[INK_VARIABLE_RIGHT_CHARACTER]
+    const chatgroupTitle = inkStory.variablesState[INK_VARIABLE_CHATGROUP_TITLE]
+    const chatgroupImage = inkStory.variablesState[INK_VARIABLE_CHATGROUP_IMAGE]
 
     const variables = {
       ui,
@@ -68,7 +80,7 @@ const initInk = (storyApi, json) => {
 
   return {
     nextStoryStep,
-    allVariables,
+    getVariables,
     selectChoice,
     resetStory,
     startStoryFrom,
@@ -79,4 +91,5 @@ const initInk = (storyApi, json) => {
 
 module.exports = {
   initInk: initInk,
+  STORY_VALUE_TYPE: STORY_VALUE_TYPE,
 }

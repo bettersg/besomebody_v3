@@ -1,9 +1,8 @@
 import React from 'react'
 import { Story } from 'inkjs'
-import { initInk } from './initInk'
+import { initInk, STORY_VALUE_TYPE } from './initInk'
 
 const useInk = (json) => {
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   const inkStory = React.useMemo(() => initInk(Story, json), [json])
 
   // Story initialising state
@@ -22,7 +21,7 @@ const useInk = (json) => {
   // Auto fetch all variables when story is started and paragraphs are fetched
   React.useEffect(() => {
     if (isStoryStarted) {
-      const fetchedVariables = inkStory.allVariables()
+      const fetchedVariables = inkStory.getVariables()
       setVariables(fetchedVariables)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -32,33 +31,38 @@ const useInk = (json) => {
   const handleGetStory = () => {
     const nextStep = inkStory.nextStoryStep()
 
-    console.log('nextStep: ', nextStep)
+    if (!nextStep) return null
 
-    // Update paragraphs states
-    if (nextStep?.type === 'text') {
-      const values = {
-        text: nextStep.values,
-        tags: nextStep.tags,
-      }
-      setParagraphs([...paragraphs, values])
-    }
-
-    // Update choices states
-    if (nextStep?.type === 'choice') {
-      const nextChoices = nextStep.values.map((step) => {
-        return {
-          text: step.text,
-          index: step.index,
+    switch (nextStep.type) {
+      // Update paragraphs states
+      case STORY_VALUE_TYPE.TEXT: {
+        const values = {
+          text: nextStep.values,
           tags: nextStep.tags,
         }
-      })
+        setParagraphs([...paragraphs, values])
+        break
+      }
 
-      setChoices(nextChoices)
+      // Update choices states
+      case STORY_VALUE_TYPE.CHOICE: {
+        const nextChoices = nextStep.values.map((step) => {
+          return {
+            text: step.text,
+            index: step.index,
+            tags: nextStep.tags,
+          }
+        })
+        setChoices(nextChoices)
+        break
+      }
+      default:
+        return
     }
   }
 
   // Submit choice to story and fetch next sequence
-  const handleSelectChoice = (choiceIndex) => {
+  const handleSetChoice = (choiceIndex) => {
     setChoices([])
     inkStory.selectChoice(choiceIndex)
     handleGetStory()
@@ -90,13 +94,13 @@ const useInk = (json) => {
 
   // Load the snapshots back into both React and inkStory states
   const handleLoadSavedStory = (savedState) => {
-    if (savedState && paragraphsSnapShot.length) {
-      setParagraphs(paragraphsSnapShot)
-      setChoices(choicesSnapShot)
-      inkStory.loadStoryState(savedState)
-      setIsStoryStarted(true)
-      handleGetStory()
-    }
+    if (!(savedState && paragraphsSnapShot.length)) return null
+
+    setParagraphs(paragraphsSnapShot)
+    setChoices(choicesSnapShot)
+    inkStory.loadStoryState(savedState)
+    setIsStoryStarted(true)
+    handleGetStory()
   }
 
   // Clear snapshots in React states
@@ -118,7 +122,7 @@ const useInk = (json) => {
     setParagraphs,
     setIsStoryStarted,
     getStory: handleGetStory,
-    setChoice: handleSelectChoice,
+    setChoice: handleSetChoice,
     resetStory: handleResetStory,
     startStoryFrom: handleStartStoryFrom,
     saveStory: handleSaveStory,
