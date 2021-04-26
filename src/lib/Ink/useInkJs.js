@@ -1,11 +1,11 @@
 import React from 'react'
 import { Story } from 'inkjs'
-import { EVENT_TYPE_ENUM, inkJs } from './index'
-import json from './nadid.ink.json'
+import { initInk } from './initInk'
 
-const inkStory = inkJs(Story, json, EVENT_TYPE_ENUM)
+const useInkJs = (json) => {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const inkStory = React.useMemo(() => initInk(Story, json), [json])
 
-const UseInkJs = () => {
   // Story initialising state
   const [isStoryStarted, setIsStoryStarted] = React.useState(false)
 
@@ -25,6 +25,7 @@ const UseInkJs = () => {
       const fetchedVariables = inkStory.allVariables()
       setVariables(fetchedVariables)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isStoryStarted, paragraphs])
 
   // To fetch next sequence in story
@@ -32,7 +33,7 @@ const UseInkJs = () => {
     const nextStep = inkStory.nextStoryStep()
 
     // Update paragraphs states
-    if (nextStep?.type === EVENT_TYPE_ENUM.TEXT) {
+    if (nextStep?.type === 'text') {
       const values = {
         text: nextStep.values,
         tags: nextStep.tags,
@@ -41,7 +42,7 @@ const UseInkJs = () => {
     }
 
     // Update choices states
-    if (nextStep?.type === EVENT_TYPE_ENUM.CHOICE) {
+    if (nextStep?.type === 'choice') {
       const nextChoices = nextStep.values.map((step) => {
         return {
           text: step.text,
@@ -102,22 +103,22 @@ const UseInkJs = () => {
 
   return {
     // State hooks
-    isStoryStarted,
-    setIsStoryStarted,
+    storyStarted: isStoryStarted,
     paragraphs,
     choices,
     variables,
     saved,
 
     // Controller Hooks
-    handleGetStory,
-    handleSelectChoice,
-    handleResetStory,
-    handleStartStoryFrom,
-    handleSaveStory,
-    handleLoadStoryFromState,
-    handleClearLoadStates,
+    startStory: () => setIsStoryStarted(true),
+    getStory: handleGetStory,
+    selectChoice: handleSelectChoice,
+    resetStory: handleResetStory,
+    startStoryFrom: handleStartStoryFrom,
+    saveStory: handleSaveStory,
+    loadStory: handleLoadStoryFromState,
+    clearLoad: handleClearLoadStates,
   }
 }
 
-export default UseInkJs
+export default useInkJs

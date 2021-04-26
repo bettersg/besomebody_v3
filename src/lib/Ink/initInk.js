@@ -1,15 +1,10 @@
-const EVENT_TYPE_ENUM = {
-  CHOICE: 'choice',
-  TEXT: 'text',
-}
-
-const inkJs = (storyApi, json, EVENT_TYPE_ENUM) => {
+const initInk = (storyApi, json) => {
   const inkStory = new storyApi(json)
 
   const nextStoryStep = () => {
     if (inkStory.currentChoices.length) {
       const values = {
-        type: EVENT_TYPE_ENUM.CHOICE,
+        type: 'choice',
         values: inkStory.currentChoices,
         tags: inkStory.currentTags,
       }
@@ -23,7 +18,7 @@ const inkJs = (storyApi, json, EVENT_TYPE_ENUM) => {
       }
 
       const values = {
-        type: EVENT_TYPE_ENUM.TEXT,
+        type: 'text',
         values: text,
         tags: inkStory.currentTags,
       }
@@ -79,6 +74,5 @@ const inkJs = (storyApi, json, EVENT_TYPE_ENUM) => {
 }
 
 module.exports = {
-  inkJs: inkJs,
-  EVENT_TYPE_ENUM: EVENT_TYPE_ENUM,
+  initInk: initInk,
 }

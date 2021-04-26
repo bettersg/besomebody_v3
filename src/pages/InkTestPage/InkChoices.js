@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Box, Button, Typography } from '@material-ui/core'
 
 const InkChoices = (props) => {
-  const { choices, handleSelectChoice } = props
+  const { choices, selectChoice } = props
 
   return (
     <Box
@@ -18,7 +18,7 @@ const InkChoices = (props) => {
             variant="outlined"
             color="primary"
             size="small"
-            onClick={() => handleSelectChoice(choice.index)}
+            onClick={() => selectChoice(choice.index)}
           >
             <Typography variant="caption">{choice.text}</Typography>
           </Button>
@@ -30,7 +30,7 @@ const InkChoices = (props) => {
 
 InkChoices.propTypes = {
   choices: PropTypes.array,
-  handleSelectChoice: PropTypes.func,
+  selectChoice: PropTypes.func,
 }
 
 export default InkChoices

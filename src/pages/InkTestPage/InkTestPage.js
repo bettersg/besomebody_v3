@@ -1,29 +1,30 @@
 import React from 'react'
 import { Box, Button, Container, Divider, Typography } from '@material-ui/core'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext'
-import UseInkJs from '../../inky/UseInkJs'
+import useInkJs from '../../lib/Ink/useInkJs'
+import json from '../../lib/Ink/nadid.ink.json'
 import InkParagraphs from './InkParagraphs'
 import InkChoices from './InkChoices'
 
 const InkTestPage = () => {
   const {
     // State hooks
-    isStoryStarted,
-    setIsStoryStarted,
+    storyStarted,
     paragraphs,
     choices,
     variables,
     saved,
 
     // Controller Hooks
-    handleGetStory,
-    handleSelectChoice,
-    handleResetStory,
-    handleStartStoryFrom,
-    handleSaveStory,
-    handleLoadStoryFromState,
-    handleClearLoadStates,
-  } = UseInkJs()
+    startStory,
+    getStory,
+    selectChoice,
+    resetStory,
+    startStoryFrom,
+    saveStory,
+    loadStory,
+    clearLoad,
+  } = useInkJs(json)
 
   console.log('variables: ', variables)
 
@@ -37,7 +38,7 @@ const InkTestPage = () => {
       <InkParagraphs paragraphs={paragraphs} variables={variables} />
 
       {/* Render choices with choice index for triggers */}
-      <InkChoices choices={choices} handleSelectChoice={handleSelectChoice} />
+      <InkChoices choices={choices} selectChoice={selectChoice} />
 
       {/* Render event triggers */}
       <Box mt={5} mb={2}>
@@ -52,8 +53,8 @@ const InkTestPage = () => {
           endIcon={<NavigateNextIcon />}
           color="primary"
           onClick={() => {
-            handleGetStory()
-            setIsStoryStarted(true)
+            getStory()
+            startStory()
           }}
         >
           Next
@@ -61,42 +62,31 @@ const InkTestPage = () => {
       </Box>
 
       <Box my={2}>
-        {isStoryStarted && (
-          <Button
-            variant="text"
-            color="primary"
-            onClick={() => handleResetStory()}
-          >
+        {storyStarted && (
+          <Button variant="text" color="primary" onClick={() => resetStory()}>
             Reset Story
           </Button>
         )}
       </Box>
 
-      <Box my={2} hidden={isStoryStarted}>
-        <Button
-          color="primary"
-          onClick={() => handleStartStoryFrom('whatsapp')}
-        >
+      <Box my={2} hidden={storyStarted}>
+        <Button color="primary" onClick={() => startStoryFrom('whatsapp')}>
           Start story from Whatsapp
         </Button>
       </Box>
 
-      <Box my={2} hidden={!isStoryStarted}>
-        <Button
-          variant="contained"
-          color="primary"
-          onClick={() => handleSaveStory()}
-        >
+      <Box my={2} hidden={!storyStarted}>
+        <Button variant="contained" color="primary" onClick={() => saveStory()}>
           Save Story
         </Button>
       </Box>
 
-      {!isStoryStarted && saved && (
+      {!storyStarted && saved && (
         <Box my={2} display="flex">
           <Button
             variant="outlined"
             color="primary"
-            onClick={() => handleLoadStoryFromState(saved)}
+            onClick={() => loadStory(saved)}
           >
             Load Story
           </Button>
@@ -105,7 +95,7 @@ const InkTestPage = () => {
             <Button
               variant="outlined"
               color="secondary"
-              onClick={() => handleClearLoadStates()}
+              onClick={() => clearLoad()}
             >
               Clear Load States
             </Button>
