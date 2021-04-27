@@ -33,6 +33,7 @@ const InkParagraphs = (props) => {
 
   const elementRef = React.useRef()
 
+  // Help to scroll to bottom of the paragraphs render screen
   React.useEffect(() => {
     if (elementRef.current) {
       elementRef.current.scrollIntoView({
@@ -42,14 +43,17 @@ const InkParagraphs = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [elementRef, paragraphs])
 
+  // If on whatsapp chapter, filter out paragraphs not pertaining to whatsapp
   React.useEffect(() => {
-    const lastText = paragraphs[paragraphs.length - 1]
-    if (lastText) {
-      setParagraphs([lastText])
+    if (variables.ui === 'whatsapp') {
+      const nextParagraphs = paragraphs.filter((paragraph) =>
+        paragraph.tags.find((text) => text.includes('Speaker'))
+      )
+
+      setParagraphs([...nextParagraphs])
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [variables.ui])
-
 
   return (
     <>

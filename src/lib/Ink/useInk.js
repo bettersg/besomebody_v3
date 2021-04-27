@@ -3,6 +3,7 @@ import { Story } from 'inkjs'
 import { initInk, STORY_VALUE_TYPE } from './initInk'
 
 const useInk = (json) => {
+  // Initialise story api
   const inkStory = React.useMemo(() => initInk(Story, json), [json])
 
   // Story initialising state
@@ -100,7 +101,6 @@ const useInk = (json) => {
     setChoices(choicesSnapShot)
     inkStory.loadStoryState(savedState)
     setIsStoryStarted(true)
-    handleGetStory()
   }
 
   // Clear snapshots in React states
