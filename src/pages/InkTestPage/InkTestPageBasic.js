@@ -8,15 +8,13 @@ import InkControls from '../../components/Ink/InkControls'
 
 const InkTestPageBasic = () => {
   const {
-    // State hooks
+    // States
     isStoryStarted,
     paragraphs,
     choices,
-    variables,
+    specialTags,
 
-    // Controller Hooks
-    setParagraphs,
-    setIsStoryStarted,
+    // Methods
     getStory,
     setChoice,
     resetStory,
@@ -29,11 +27,7 @@ const InkTestPageBasic = () => {
       </Box>
 
       {/* Render texts with styling conditions based on tags */}
-      <InkParagraphs
-        paragraphs={paragraphs}
-        variables={variables}
-        setParagraphs={setParagraphs}
-      />
+      <InkParagraphs paragraphs={paragraphs} specialTags={specialTags} />
 
       {/* Render choices with choice index for triggers */}
       <InkChoices choices={choices} setChoice={setChoice} />
@@ -41,7 +35,6 @@ const InkTestPageBasic = () => {
       {/* Render event triggers */}
       <InkControls
         isStoryStarted={isStoryStarted}
-        setIsStoryStarted={setIsStoryStarted}
         getStory={getStory}
         resetStory={resetStory}
       />

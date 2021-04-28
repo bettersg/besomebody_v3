@@ -7,7 +7,6 @@ const InkControls = (props) => {
     isStoryStarted,
     savedTexts,
 
-    setIsStoryStarted,
     getStory,
     resetStory,
     startStoryFrom,
@@ -25,7 +24,7 @@ const InkControls = (props) => {
         <Divider />
       </Box>
 
-      {getStory && setIsStoryStarted && (
+      {getStory && (
         <Box my={2}>
           <Button
             endIcon={<NavigateNextIcon />}

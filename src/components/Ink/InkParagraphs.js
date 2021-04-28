@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import { Box, Grid, Typography } from '@material-ui/core'
 import Fade from '@material-ui/core/Fade'
@@ -27,31 +27,32 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const InkParagraphs = (props) => {
-  const { paragraphs, variables, setParagraphs } = props
+  const { paragraphs, specialTags } = props
 
-  const classes = useStyles({ image: variables.background })
+  const classes = useStyles({ image: specialTags.background })
+  const elementRef = useRef()
 
-  const elementRef = React.useRef()
+  const [currentParagraphs, setCurrentParagraphs] = useState([...paragraphs])
 
   // Help to scroll to bottom of the paragraphs render screen
-  React.useEffect(() => {
+  useEffect(() => {
     if (elementRef.current) {
       elementRef.current.scrollIntoView({
         behavior: 'smooth',
       })
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [elementRef, paragraphs])
+  }, [elementRef, currentParagraphs])
 
   // Filter out paragraphs based on the current UI variable
-  React.useEffect(() => {
-    switch (variables.ui) {
+  useEffect(() => {
+    switch (specialTags.ui) {
       case 'whatsapp': {
         const nextParagraphs = paragraphs.filter((paragraph) =>
           paragraph.tags.find((tag) => tag.includes('Speaker'))
         )
 
-        return setParagraphs([...nextParagraphs])
+        return setCurrentParagraphs([...nextParagraphs])
       }
       case 'school': {
         const nextParagraphs = paragraphs.filter(
@@ -59,18 +60,18 @@ const InkParagraphs = (props) => {
             !Boolean(paragraph.tags.find((tag) => tag.includes('Speaker')))
         )
 
-        return setParagraphs([...nextParagraphs])
+        return setCurrentParagraphs([...nextParagraphs])
       }
       default:
         return
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [variables.ui])
+  }, [specialTags.ui, paragraphs])
 
   return (
     <>
-      {variables.ui === 'school' && (
-        <Fade in={variables.ui === 'school'}>
+      {specialTags.ui === 'school' && (
+        <Fade in={specialTags.ui === 'school'}>
           <Box className={classes.paragraphWrapper} p={3}>
             <Box
               className={classes.textWrapper}
@@ -78,7 +79,7 @@ const InkParagraphs = (props) => {
               height={300}
               overflow="scroll"
             >
-              {paragraphs.map((step) => {
+              {currentParagraphs.map((step) => {
                 return (
                   <Box my={1} key={step.text}>
                     <Typography>{step.text}</Typography>
@@ -91,8 +92,8 @@ const InkParagraphs = (props) => {
         </Fade>
       )}
 
-      {variables.ui === 'whatsapp' && (
-        <Fade in={variables.ui === 'whatsapp'}>
+      {specialTags.ui === 'whatsapp' && (
+        <Fade in={specialTags.ui === 'whatsapp'}>
           <Box className={classes.paragraphWrapper} pb={3}>
             <Box className={classes.whatsappHeader} p={1} mb={3}>
               <Grid container alignItems="center">
@@ -106,7 +107,7 @@ const InkParagraphs = (props) => {
                     <img
                       width="100%"
                       height="100%"
-                      src={`gameAssets/${variables.chatgroupImage}`}
+                      src={`gameAssets/${specialTags.chatgroupImage}`}
                       alt="Chat Profile"
                     />
                   </Box>
@@ -114,7 +115,7 @@ const InkParagraphs = (props) => {
 
                 <Grid item xs={8}>
                   <Typography color="inherit" variant="h4">
-                    {variables.chatgroupTitle}
+                    {specialTags.chatgroupTitle}
                   </Typography>
                   <Typography color="inherit" variant="subtitle1">
                     online
@@ -126,7 +127,7 @@ const InkParagraphs = (props) => {
             </Box>
 
             <Box maxHeight={300} overflow="scroll">
-              {paragraphs.map((step) => {
+              {currentParagraphs.map((step) => {
                 if (step.tags[0]?.includes('Speaker_self')) {
                   return (
                     <Box
@@ -170,8 +171,7 @@ const InkParagraphs = (props) => {
 
 InkParagraphs.propTypes = {
   paragraphs: PropTypes.array,
-  variables: PropTypes.object,
-  setParagraphs: PropTypes.func,
+  specialTags: PropTypes.object,
 }
 
 export default InkParagraphs

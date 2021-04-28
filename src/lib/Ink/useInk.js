@@ -3,95 +3,85 @@ import { Story } from 'inkjs'
 import { initInk, STORY_VALUE_TYPE } from './initInk'
 
 const useInk = (json) => {
-  // Initialise story api
+  // Initialise inkjs
   const inkStory = React.useMemo(() => initInk(Story, json), [json])
 
-  // Story initialising state
+  // Story initialising state is a boolean
   const [isStoryStarted, setIsStoryStarted] = React.useState(false)
 
-  /**
-   * paragraphs is an array of object that contains
-   * {
-   *  text: string
-   *  tags: array of strings
-   * }
-   */
+  // Paragraphs is an array of object that contains
+  // { text: string, tags: string[] }
   const [paragraphs, setParagraphs] = React.useState([])
 
-  /**
-   * choices is an array of object that contains
-   * {
-   *  text: string
-   *  index: number
-   *  tags: array of strings
-   * }
-   */
+  // Choices is an array of object that contains
+  // { text: string, index: number, tags: string[] }
   const [choices, setChoices] = React.useState([])
 
-  /**
-   * variables is an object that contains:
-   * - the name of the ink variable as the key
-   * - and the content of the variable as the value
-   *
-   * for e.g:
-   * {
-   *  background: "school.jpg"
-   *  leftCharacter: "Nadia_happy.jpg"
-   *  ui: "school"
-   * }
-   */
-  const [variables, setVariables] = React.useState({})
+  // SpecialTags is an dynamic object with only strings as it values
+  const [specialTags, setSpecialTags] = React.useState({})
 
   // Save story progression states
   const [savedTexts, setSavedTexts] = React.useState(null)
   const [paragraphsSnapShot, setParagraphsSnapShot] = React.useState([])
   const [choicesSnapShot, setChoicesSnapShot] = React.useState([])
+  const [specialTagsSnapShot, setSpecialTagsSnapShot] = React.useState({})
 
-  // Auto fetch all variables when story is started and paragraphs are fetched
-  React.useEffect(() => {
-    if (isStoryStarted) {
-      const fetchedVariables = inkStory.getVariables()
-      setVariables(fetchedVariables)
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isStoryStarted, paragraphs])
+  /**
+   * To update special tags with:
+   * - The content before the first colon in the tag as the key
+   * - The content after the first colon in the tag as as the value
+   * @param {* string[]} tags
+   */
+  const handleUpdateSpecialTags = (tags) => {
+    const nextSpecialTags = { ...specialTags }
+    tags.map((tag) => {
+      const key = tag.substr(0, tag.indexOf(':'))
+      const value = tag.substr(tag.indexOf(':') + 1)
+      nextSpecialTags[key] = value
+      return null
+    })
+
+    setSpecialTags(nextSpecialTags)
+  }
 
   /**
    * To fetch next sequence in story
-   * Unable to determine before hand if next sequence is paragraphs or choices
-   * Hence a switch statement is used inside to either update choices or paragraphs state
-   * @returns null
+   * - Set storyStarted to true if it is false
+   * - Update specialTags if there are special tags
+   * - Update either choices or paragraphs state
    */
   const handleGetStory = () => {
+    // Set storyStarted to true if it is false
     if (!isStoryStarted) setIsStoryStarted(true)
 
     const nextStep = inkStory.nextStoryStep()
     if (!nextStep) return null
 
+    // Update specialTags if there are special tags
+    const currentSpecialTags = nextStep.tags.filter((tag) => tag.includes(':'))
+    if (currentSpecialTags.length) handleUpdateSpecialTags(currentSpecialTags)
+    const nonSpecialTags = nextStep.tags.filter((tag) => !tag.includes(':'))
+
     switch (nextStep.type) {
+      // Append to existing paragraphs array
       case STORY_VALUE_TYPE.TEXT: {
         const values = {
           text: nextStep.values,
-          tags: nextStep.tags,
+          tags: nonSpecialTags,
         }
-
-        // Append to existing paragraphs array
-        setParagraphs([...paragraphs, values])
-        break
+        return setParagraphs([...paragraphs, values])
       }
 
+      // Replaces existing choices array
       case STORY_VALUE_TYPE.CHOICE: {
         const nextChoices = nextStep.values.map((step) => {
           return {
             text: step.text,
             index: step.index,
-            tags: nextStep.tags,
+            tags: nonSpecialTags,
           }
         })
-
-        // Replaces existing choices array
-        setChoices(nextChoices)
-        break
+        return setChoices(nextChoices)
       }
       default:
         return
@@ -113,11 +103,14 @@ const useInk = (json) => {
     setIsStoryStarted(false)
     setParagraphs([])
     setChoices([])
-    setVariables({})
+    setSpecialTags({})
     inkStory.resetStory()
   }
 
-  // Set starting point in inkStory and fetch next sequence
+  /**
+   * Set starting point in inkjs and fetch next sequence
+   * @param {* string} pathName
+   */
   const handleStartStoryFrom = (pathName) => {
     inkStory.startStoryFrom(pathName)
     setIsStoryStarted(true)
@@ -128,6 +121,7 @@ const useInk = (json) => {
   const handleSaveStory = () => {
     setParagraphsSnapShot(paragraphs)
     setChoicesSnapShot(choices)
+    setSpecialTagsSnapShot(specialTags)
     const savedState = inkStory.saveStoryState()
     setSavedTexts(savedState)
   }
@@ -136,15 +130,15 @@ const useInk = (json) => {
    * Load the paragraphs or choices in local snapshots back into the React states
    * Submit the ink saved state back to inkjs so it knows where to start fetching the next story from
    * @param {* json string} savedState
-   * @returns null
    */
   const handleLoadSavedStory = (savedState) => {
     if (!(savedState && paragraphsSnapShot.length)) return null
 
     setParagraphs(paragraphsSnapShot)
     setChoices(choicesSnapShot)
-    inkStory.loadStoryState(savedState)
+    setSpecialTags(specialTagsSnapShot)
     setIsStoryStarted(true)
+    inkStory.loadStoryState(savedState)
   }
 
   // Clear snapshots in React states
@@ -155,16 +149,14 @@ const useInk = (json) => {
   }
 
   return {
-    // State hooks
+    // States
     isStoryStarted,
     paragraphs,
     choices,
-    variables,
+    specialTags,
     savedTexts,
 
-    // Controller Hooks
-    setParagraphs,
-    setIsStoryStarted,
+    // Methods
     getStory: handleGetStory,
     setChoice: handleSetChoice,
     resetStory: handleResetStory,
