@@ -9,9 +9,37 @@ const useInk = (json) => {
   // Story initialising state
   const [isStoryStarted, setIsStoryStarted] = React.useState(false)
 
-  // Paragraphs, Choices, and Variables states
+  /**
+   * paragraphs is an array of object that contains
+   * {
+   *  text: string
+   *  tags: array of strings
+   * }
+   */
   const [paragraphs, setParagraphs] = React.useState([])
+
+  /**
+   * choices is an array of object that contains
+   * {
+   *  text: string
+   *  index: number
+   *  tags: array of strings
+   * }
+   */
   const [choices, setChoices] = React.useState([])
+
+  /**
+   * variables is an object that contains:
+   * - the name of the ink variable as the key
+   * - and the content of the variable as the value
+   *
+   * for e.g:
+   * {
+   *  background: "school.jpg"
+   *  leftCharacter: "Nadia_happy.jpg"
+   *  ui: "school"
+   * }
+   */
   const [variables, setVariables] = React.useState({})
 
   // Save story progression states
@@ -28,24 +56,30 @@ const useInk = (json) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isStoryStarted, paragraphs])
 
-  // To fetch next sequence in story
+  /**
+   * To fetch next sequence in story
+   * Unable to determine before hand if next sequence is paragraphs or choices
+   * Hence a switch statement is used inside to either update choices or paragraphs state
+   * @returns null
+   */
   const handleGetStory = () => {
-    const nextStep = inkStory.nextStoryStep()
+    if (!isStoryStarted) setIsStoryStarted(true)
 
+    const nextStep = inkStory.nextStoryStep()
     if (!nextStep) return null
 
     switch (nextStep.type) {
-      // Update paragraphs states
       case STORY_VALUE_TYPE.TEXT: {
         const values = {
           text: nextStep.values,
           tags: nextStep.tags,
         }
+
+        // Append to existing paragraphs array
         setParagraphs([...paragraphs, values])
         break
       }
 
-      // Update choices states
       case STORY_VALUE_TYPE.CHOICE: {
         const nextChoices = nextStep.values.map((step) => {
           return {
@@ -54,6 +88,8 @@ const useInk = (json) => {
             tags: nextStep.tags,
           }
         })
+
+        // Replaces existing choices array
         setChoices(nextChoices)
         break
       }
@@ -62,7 +98,10 @@ const useInk = (json) => {
     }
   }
 
-  // Submit choice to story and fetch next sequence
+  /**
+   * Submit choice to story and fetch next sequence
+   * @param {* number} choiceIndex
+   */
   const handleSetChoice = (choiceIndex) => {
     setChoices([])
     inkStory.selectChoice(choiceIndex)
@@ -93,7 +132,12 @@ const useInk = (json) => {
     setSavedTexts(savedState)
   }
 
-  // Load the snapshots back into both React and inkStory states
+  /**
+   * Load the paragraphs or choices in local snapshots back into the React states
+   * Submit the ink saved state back to inkjs so it knows where to start fetching the next story from
+   * @param {* json string} savedState
+   * @returns null
+   */
   const handleLoadSavedStory = (savedState) => {
     if (!(savedState && paragraphsSnapShot.length)) return null
 
