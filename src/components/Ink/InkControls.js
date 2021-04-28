@@ -32,7 +32,6 @@ const InkControls = (props) => {
             color="primary"
             onClick={() => {
               getStory()
-              setIsStoryStarted(true)
             }}
           >
             Next

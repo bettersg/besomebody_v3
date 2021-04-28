@@ -43,14 +43,26 @@ const InkParagraphs = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [elementRef, paragraphs])
 
-  // If on whatsapp chapter, filter out paragraphs not pertaining to whatsapp
+  // Filter out paragraphs based on the current UI variable
   React.useEffect(() => {
-    if (variables.ui === 'whatsapp') {
-      const nextParagraphs = paragraphs.filter((paragraph) =>
-        paragraph.tags.find((text) => text.includes('Speaker'))
-      )
+    switch (variables.ui) {
+      case 'whatsapp': {
+        const nextParagraphs = paragraphs.filter((paragraph) =>
+          paragraph.tags.find((tag) => tag.includes('Speaker'))
+        )
 
-      setParagraphs([...nextParagraphs])
+        return setParagraphs([...nextParagraphs])
+      }
+      case 'school': {
+        const nextParagraphs = paragraphs.filter(
+          (paragraph) =>
+            !Boolean(paragraph.tags.find((tag) => tag.includes('Speaker')))
+        )
+
+        return setParagraphs([...nextParagraphs])
+      }
+      default:
+        return
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [variables.ui])
@@ -68,7 +80,7 @@ const InkParagraphs = (props) => {
             >
               {paragraphs.map((step) => {
                 return (
-                  <Box my={1}>
+                  <Box my={1} key={step.text}>
                     <Typography>{step.text}</Typography>
                   </Box>
                 )
@@ -117,7 +129,13 @@ const InkParagraphs = (props) => {
               {paragraphs.map((step) => {
                 if (step.tags[0]?.includes('Speaker_self')) {
                   return (
-                    <Box my={2} mx={1} display="flex" justifyContent="flex-end">
+                    <Box
+                      key={step.text}
+                      my={2}
+                      mx={1}
+                      display="flex"
+                      justifyContent="flex-end"
+                    >
                       <Box
                         className={classes.chatboxSender}
                         borderRadius={5}
@@ -129,7 +147,7 @@ const InkParagraphs = (props) => {
                   )
                 } else {
                   return (
-                    <Box my={2} mx={1} display="flex">
+                    <Box key={step.text} my={2} mx={1} display="flex">
                       <Box
                         className={classes.chatboxReceiver}
                         borderRadius={5}

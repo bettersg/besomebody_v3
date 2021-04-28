@@ -13,7 +13,7 @@ const InkChoices = (props) => {
       hidden={choices.length === 0}
     >
       {choices.map((choice) => (
-        <Box mx={1}>
+        <Box mx={1} key={choice.text}>
           <Button
             variant="outlined"
             color="primary"
