@@ -3,13 +3,6 @@ const STORY_VALUE_TYPE = {
   TEXT: 'text',
 }
 
-const INK_VARIABLE_UI = 'ui'
-const INK_VARIABLE_BACKGROUND = 'background'
-const INK_VARIABLE_LEFT_CHARACTER = 'leftCharacter'
-const INK_VARIABLE_RIGHT_CHARACTER = 'rightCharacter'
-const INK_VARIABLE_CHATGROUP_TITLE = 'chatgroupTitle'
-const INK_VARIABLE_CHATGROUP_IMAGE = 'chatgroupImage'
-
 const initInk = (storyApi, json) => {
   const inkStory = new storyApi(json)
 
@@ -38,26 +31,6 @@ const initInk = (storyApi, json) => {
     }
   }
 
-  const getVariables = () => {
-    const ui = inkStory.variablesState[INK_VARIABLE_UI]
-    const background = inkStory.variablesState[INK_VARIABLE_BACKGROUND]
-    const leftCharacter = inkStory.variablesState[INK_VARIABLE_LEFT_CHARACTER]
-    const rightCharacter = inkStory.variablesState[INK_VARIABLE_RIGHT_CHARACTER]
-    const chatgroupTitle = inkStory.variablesState[INK_VARIABLE_CHATGROUP_TITLE]
-    const chatgroupImage = inkStory.variablesState[INK_VARIABLE_CHATGROUP_IMAGE]
-
-    const variables = {
-      ui,
-      background,
-      leftCharacter,
-      rightCharacter,
-      chatgroupTitle,
-      chatgroupImage,
-    }
-
-    return variables
-  }
-
   const selectChoice = (choiceIndex) => {
     inkStory.ChooseChoiceIndex(choiceIndex)
   }
@@ -80,7 +53,6 @@ const initInk = (storyApi, json) => {
 
   return {
     nextStoryStep,
-    getVariables,
     selectChoice,
     resetStory,
     startStoryFrom,

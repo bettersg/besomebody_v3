@@ -1,4 +1,4 @@
-﻿{
+{
   "inkVersion": 19,
   "root": [
     [{ "->": "nadid_chapter6" }, ["done", { "#f": 5, "#n": "g-0" }], null],
