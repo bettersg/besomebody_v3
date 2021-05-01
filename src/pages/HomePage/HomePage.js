@@ -6,10 +6,12 @@ import authentication from '../../services/authentication'
 import EmptyState from '../../components/EmptyState'
 import { ReactComponent as CabinIllustration } from '../../illustrations/cabin.svg'
 import { ReactComponent as InsertBlockIllustration } from '../../illustrations/insert-block.svg'
+import HomePageApp from "./App.js"
 
 class HomePage extends Component {
   signInWithEmailLink = () => {
     const { user } = this.props
+    console.log (this.props)
 
     if (user) {
       return
@@ -66,11 +68,12 @@ class HomePage extends Component {
 
     if (user) {
       return (
-        <EmptyState
-          image={<CabinIllustration />}
-          title="Home"
-          description="This is the home page. You can edit it from HomePage.js."
-        />
+        // <EmptyState
+        //   image={<CabinIllustration />}
+        //   title="Home"
+        //   description="This is the home page. You can edit it from HomePage.js."
+        // />
+        <HomePageApp/>
       )
     }
 

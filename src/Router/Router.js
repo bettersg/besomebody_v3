@@ -10,11 +10,14 @@ import NotFoundPage from '../components/NotFoundPage'
 import HomePage from '../pages/HomePage/HomePage'
 import InkTestPage from '../pages/InkTestPage/InkTestPage'
 import InkTestPageBasic from '../pages/InkTestPage/InkTestPageBasic'
+import CharProfilePage from '../pages/CharProfilePage/CharProfilePage'
+import HomePg from "../pages/HomePage/App"
 
 class Router extends Component {
   render() {
     // Properties
     const { user, roles, bar } = this.props
+    console.log(this.props)
 
     // Functions
     const { openSnackbar } = this.props
@@ -47,6 +50,15 @@ class Router extends Component {
           <Route path="/user/:userId">
             {user ? <UserPage /> : <Redirect to="/" />}
           </Route>
+
+          <Route path="/home" exact>
+            <HomePg />
+          </Route>
+
+          <Route path="/profile" exact>
+            <CharProfilePage />
+          </Route>
+
 
           <Route>
             <NotFoundPage />
