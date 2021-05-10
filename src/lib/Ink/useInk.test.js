@@ -10,7 +10,7 @@ describe('useInk Hook Test', () => {
       paragraphs,
       choices,
       specialTags,
-      savedTexts,
+      hasSavedState,
     } = result.current
 
     // Expected default states
@@ -18,7 +18,7 @@ describe('useInk Hook Test', () => {
     expect(paragraphs).toMatchObject([])
     expect(choices).toMatchObject([])
     expect(specialTags).toMatchObject({})
-    expect(savedTexts).toBe(null)
+    expect(hasSavedState).toBe(false)
   })
 
   it('should start story, populate paragraphs, and populate specialTags', () => {
@@ -131,19 +131,9 @@ describe('useInk Hook Test', () => {
       result.current.saveStory()
     })
 
-    // Helper func to test if param is JSON string or not
-    const isJson = (jsonString) => {
-      try {
-        JSON.parse(jsonString)
-        return true
-      } catch {
-        return false
-      }
-    }
-
-    // Expect savedTexts to be JSON string instead of null
-    const { savedTexts } = result.current
-    expect(isJson(savedTexts)).toBe(true)
+    // Expect hasSavedState to be true
+    const { hasSavedState } = result.current
+    expect(hasSavedState).toBe(true)
   })
 
   it('should load saved story', () => {
@@ -181,7 +171,7 @@ describe('useInk Hook Test', () => {
 
     // Run loadSavedStory
     act(() => {
-      result.current.loadSavedStory(result.current.savedTexts)
+      result.current.loadSavedStory()
     })
 
     // Expect states to be populated back again
@@ -208,15 +198,15 @@ describe('useInk Hook Test', () => {
       result.current.saveStory()
     })
 
-    // Expect savedTexts to not be null
-    expect(result.current.savedTexts).not.toBe(null)
+    // Expect hasSavedState to be true
+    expect(result.current.hasSavedState).toBe(true)
 
     // Run resetSavedStory once
     act(() => {
       result.current.resetSavedStory()
     })
 
-    // Expect savedTexts to be null
-    expect(result.current.savedTexts).toBe(null)
+    // Expect hasSavedState to be false
+    expect(result.current.hasSavedState).toBe(false)
   })
 })
