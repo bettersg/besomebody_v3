@@ -1,0 +1,33 @@
+.paragraph-wrapper {
+    // background-image: url('gameAssets/${image}'); 
+    background-size: cover; 
+    background-position: center; 
+    background-color: #808080;
+}
+.text-wrapper {
+    background: grey;
+    opacity: 0.9;
+}
+.whatsapp-header {
+    background: #045E54;
+    color: white;
+    height: 50%; 
+}
+.chatbox-sender {
+    background: #E1FFC7;
+}
+.chatbox-receiver {
+    background: white;
+}
+.whatsapp-box {
+    width: 100%; 
+    overflow: hidden;
+    padding-right: 20px;
+    img {
+        border-radius: 50%; 
+        width: 54px; 
+        height: 54px; 
+    }
+    
+}
+

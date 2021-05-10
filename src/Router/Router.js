@@ -12,6 +12,7 @@ import InkTestPage from '../pages/InkTestPage/InkTestPage'
 import InkTestPageBasic from '../pages/InkTestPage/InkTestPageBasic'
 import CharProfilePage from '../pages/CharProfilePage/CharProfilePage'
 import HomePg from "../pages/HomePage/App"
+import WhatsappPage from "../pages/WhatsappPage/WhatsappPage"
 
 class Router extends Component {
   render() {
@@ -24,7 +25,7 @@ class Router extends Component {
 
     return (
       <BrowserRouter basename={process.env.REACT_APP_BASENAME}>
-        {bar}
+        {/* {bar} */}
 
         <Switch>
           <Route path="/" exact>
@@ -57,6 +58,10 @@ class Router extends Component {
 
           <Route path="/profile" exact>
             <CharProfilePage />
+          </Route>
+
+          <Route path="/wa" exact>
+            <WhatsappPage />
           </Route>
 
 

@@ -1,0 +1,205 @@
+@mixin clearfix {
+    &:after {
+      content: "";
+      display: table; 
+      clear: both;
+    }
+}
+
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin absolute-center {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.wa-container {
+    // width: 3px;
+    height: 700px;
+    width: 100%; 
+    display: flex; 
+    justify-content: center;
+    // flex: center; 
+
+    // padding: 6px 0 0;
+
+}
+
+.chat-window {
+    height: 100%;    
+    // height: calc(100% - 152px);
+    position: relative;
+    background-color: #999999; 
+    background-size: 100%;
+    @include clearfix;
+    box-shadow: inset 0 10px 10px -10px #000000;
+    padding-bottom: 0;
+    .conversation {
+        width: 100%;
+        overflow: auto;
+        height: 100%;
+        padding: 0 16px;
+        @include clearfix;
+    }
+    .balloon {
+        padding: 8px;
+        position: relative;
+        color: #000;
+        font-size: 14px;
+        line-height: 18px;
+        box-shadow: 0 0 1px rgba(0, 0, 0, .2);
+        clear: both;
+        margin: 8px 0;
+        max-width: 85%;
+        &:after {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        img {
+            width: 100%;
+        }
+        &:first-child {
+            margin: 16px 0 8px;
+        }
+        &.him {
+            background: #CCCCCC;
+            float: left;
+            border-radius: 0px 5px 5px 5px;
+            .data {
+                padding: 0 0 0 16px;
+            }
+            &:after {
+                top: 0;
+                left: -10px;
+                border-width: 0px 10px 10px 0;
+                border-color: transparent #CCCCCC transparent transparent;
+            }
+        }
+        &.you {
+            background: #F2F2F2;
+            float: right;
+            border-radius: 5px 0px 5px 5px;
+            &:after {
+                top: 0;
+                right: -10px;
+                border-width: 0px 0 10px 10px;
+                border-color: transparent transparent transparent #F2F2F2;
+            }
+        }
+    } //balloon
+    .textarea {
+        background-color: #333333; 
+        width: 100%;
+        z-index: 2;
+        left: 0;
+        position: absolute;
+        bottom: 8px;
+        height: 70px;
+        padding: 15px;
+        padding-right: 0px;
+        @include clearfix;
+        div,
+        .textarea {
+            height: 100%;
+            float: left;
+            background: #4C4C4C;
+            padding: 10 10 10 8px;
+        }
+        .message {
+            width: 82%;
+            border: 0;
+            outline: none;
+            padding-top: 10px;
+            padding-left: 14px;
+            resize: none;
+            color: #818181; 
+        }
+        .continue {
+            width: 17%;
+            background: transparent;
+            position: relative;
+            cursor: pointer;
+            .circle-cont {
+                color: #fff;
+                border-radius: 50%;
+                @include absolute-center;
+                background: #1DBF7B;
+                width: 48px;
+                height: 48px;
+                box-shadow: 0 1px 0 darken(#00897b, 10%);
+                .i {
+                    display: inline-block;
+                    @include absolute-center;
+                    font-size: 24px;
+                }
+            }
+        }
+    } //text area container
+
+}
+
+.wrapperchat {
+    height: calc(100% - 70px);
+}
+
+.chat-root {
+    height: 100%;
+}
+
+.user-bar {
+    height: 55px;
+    background: #333333;
+    @include clearfix;
+    color: #fff;
+    padding: 0 8px;
+    font-size: 24px;
+    div {
+        float: left;
+        @include vertical-align;
+        &.actions {
+            float: right;
+            margin: 0 0 0 20px;
+            &.more {
+                margin: 0 12px 0 20px;
+            }
+            &.attachment {
+                i {
+                    display: block;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+    .user {
+        margin: 0 0 0 8px;
+        width: 36px;
+        height: 36px;
+        img {
+            border-radius: 50%;
+            display: block;
+            box-shadow: 0 1px 0 rgba(255, 255, 255, .1);
+            width: 100%;
+        }
+    }  // user
+    .user-name {
+        font-size: 16px;
+        margin: 0 0 0 8px;
+        width: 165px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        span {
+            display: block;
+            font-size: 12px;
+        }
+    } //username     
+}

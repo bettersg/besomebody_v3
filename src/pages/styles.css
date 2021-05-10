@@ -4,7 +4,7 @@
 } */
 
 @media screen and (min-device-width:481px) {
-  .smartphone {
+  html {
     margin-top: 15% !important; 
     position: relative;
     width: 390px;
@@ -15,7 +15,7 @@
     border-bottom-width: 60px;
     border-radius: 36px;
   }
-  .smartphone:before {
+  html:before {
     content: '';
     display: block;
     width: 60px;
@@ -27,7 +27,7 @@
     background: #333;
     border-radius: 10px;
   }
-  .smartphone:after {
+  html:after {
     content: '';
     display: block;
     width: 35px;
@@ -39,7 +39,7 @@
     background: #333;
     border-radius: 50%;
   }
-  .smartphone .App {
+  html .App {
     height: 660px;
     overflow: scroll;
     background: white;
