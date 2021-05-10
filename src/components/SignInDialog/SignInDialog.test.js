@@ -1,11 +1,9 @@
-import React from "react";
+import React from 'react'
+import ReactDOM from 'react-dom'
+import SignInDialog from './SignInDialog'
 
-import ReactDOM from "react-dom";
-
-import SignInDialog from "./SignInDialog";
-
-it("renders without crashing", () => {
-  const div = document.createElement("div");
+it('renders without crashing', () => {
+  const div = document.createElement('div')
 
   ReactDOM.render(
     <SignInDialog
@@ -20,7 +18,7 @@ it("renders without crashing", () => {
       onAuthProviderClick={() => {}}
     />,
     div
-  );
+  )
 
-  ReactDOM.unmountComponentAtNode(div);
-});
+  ReactDOM.unmountComponentAtNode(div)
+})
