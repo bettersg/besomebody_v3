@@ -130,9 +130,13 @@ const useInk = (json, inkName) => {
    * @param {* string} pathName
    */
   const handleStartStoryFrom = (pathName) => {
-    inkStory.startStoryFrom(pathName)
-    setIsStoryStarted(true)
-    handleGetStory()
+    try {
+      inkStory.startStoryFrom(pathName)
+      setIsStoryStarted(true)
+      handleGetStory()
+    } catch (err) {
+      console.log('err: ', err)
+    }
   }
 
   // Save snapshots of both React and inkStory states

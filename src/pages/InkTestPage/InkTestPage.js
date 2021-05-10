@@ -23,7 +23,7 @@ const InkTestPage = () => {
     saveStory,
     loadSavedStory,
     resetSavedStory,
-  } = useInk(NadidInk)
+  } = useInk(NadidInk, 'nadid')
 
   return (
     <Container maxWidth="lg">

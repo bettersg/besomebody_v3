@@ -15,6 +15,7 @@ import ErrorBoundary from '../components/ErrorBoundary'
 import LaunchScreen from '../components/LaunchScreen'
 import Bar from '../components/Bar'
 import Router from '../Router'
+import SnackbarProvider from '../contexts/SnackbarContext'
 
 const initialState = {
   ready: false,
@@ -254,25 +255,27 @@ class App extends Component {
 
           {ready && (
             <AuthProvider>
-              <Router
-                user={user}
-                roles={roles}
-                bar={
-                  <Bar
-                    performingAction={performingAction}
-                    theme={theme}
-                    user={user}
-                    userData={userData}
-                    roles={roles}
-                    onSignUpClick={() => this.openDialog('signUpDialog')}
-                    onSignInClick={() => this.openDialog('signInDialog')}
-                    onAboutClick={() => this.openDialog('aboutDialog')}
-                    onSettingsClick={() => this.openDialog('settingsDialog')}
-                    onSignOutClick={() => this.openDialog('signOutDialog')}
-                  />
-                }
-                openSnackbar={this.openSnackbar}
-              />
+              <SnackbarProvider>
+                <Router
+                  user={user}
+                  roles={roles}
+                  bar={
+                    <Bar
+                      performingAction={performingAction}
+                      theme={theme}
+                      user={user}
+                      userData={userData}
+                      roles={roles}
+                      onSignUpClick={() => this.openDialog('signUpDialog')}
+                      onSignInClick={() => this.openDialog('signInDialog')}
+                      onAboutClick={() => this.openDialog('aboutDialog')}
+                      onSettingsClick={() => this.openDialog('settingsDialog')}
+                      onSignOutClick={() => this.openDialog('signOutDialog')}
+                    />
+                  }
+                  openSnackbar={this.openSnackbar}
+                />
+              </SnackbarProvider>
             </AuthProvider>
           )}
         </ErrorBoundary>

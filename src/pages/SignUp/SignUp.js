@@ -9,15 +9,14 @@ import {
   CardHeader,
   Grid,
   Link,
-  Snackbar,
   TextField,
   Typography,
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
-import { Alert } from '@material-ui/lab'
 import { Controller, useForm } from 'react-hook-form'
 import { useAuth } from '../../contexts/AuthContext'
 import { createDbUser } from '../../models/userModel'
+import { useSnackbar } from '../../contexts/SnackbarContext'
 
 const useStyles = makeStyles((theme) => ({
   link: {
@@ -32,13 +31,11 @@ const SignUp = () => {
   const history = useHistory()
 
   const [isLoading, setIsLoading] = useState(false)
-  const [snackbar, setSnackbar] = useState({
-    message: '',
-    open: false,
-    type: 'error',
-  })
 
-  // Init firebase auth
+  // Snackbar Context
+  const { setSnackbar } = useSnackbar()
+
+  // Auth Context
   const { signUp } = useAuth()
 
   // Init form
@@ -130,58 +127,63 @@ const SignUp = () => {
             titleTypographyProps={{ variant: 'h4', align: 'center' }}
           />
           <CardContent>
-            <Grid container spacing={1}>
-              <Grid item xs={2}>
-                <Typography variant="body1">Email:</Typography>
+            <form onSubmit={handleSubmit(beforeSubmit)}>
+              <Grid container spacing={1}>
+                <Grid item xs={2}>
+                  <Typography variant="body1">Email:</Typography>
+                </Grid>
+                <Grid item xs={10}>
+                  <Controller
+                    as={TextField}
+                    control={control}
+                    name="email"
+                    type="email"
+                    placeholder="Enter your email here"
+                    required
+                    fullWidth
+                  />
+                </Grid>
+                <Grid item xs={2}>
+                  <Typography variant="body1">Password:</Typography>
+                </Grid>
+                <Grid item xs={10}>
+                  <Controller
+                    as={TextField}
+                    control={control}
+                    name="password"
+                    type="password"
+                    placeholder="Enter your password here"
+                    required
+                    fullWidth
+                  />
+                </Grid>
+                <Grid item xs={2}>
+                  <Typography variant="body1">Confirm Password:</Typography>
+                </Grid>
+                <Grid item xs={10}>
+                  <Controller
+                    as={TextField}
+                    control={control}
+                    name="confirmPassword"
+                    type="password"
+                    placeholder="Enter your confirm password here"
+                    required
+                    fullWidth
+                  />
+                </Grid>
               </Grid>
-              <Grid item xs={10}>
-                <Controller
-                  as={TextField}
-                  control={control}
-                  name="email"
-                  type="email"
-                  placeholder="Enter your email here"
-                  fullWidth
-                />
-              </Grid>
-              <Grid item xs={2}>
-                <Typography variant="body1">Password:</Typography>
-              </Grid>
-              <Grid item xs={10}>
-                <Controller
-                  as={TextField}
-                  control={control}
-                  name="password"
-                  type="password"
-                  placeholder="Enter your password here"
-                  fullWidth
-                />
-              </Grid>
-              <Grid item xs={2}>
-                <Typography variant="body1">Confirm Password:</Typography>
-              </Grid>
-              <Grid item xs={10}>
-                <Controller
-                  as={TextField}
-                  control={control}
-                  name="confirmPassword"
-                  type="password"
-                  placeholder="Enter your confirm password here"
-                  fullWidth
-                />
-              </Grid>
-            </Grid>
 
-            <Box mt={2} display="flex" justifyContent="center">
-              <Button
-                variant="contained"
-                color="primary"
-                disabled={isSubmitting || isLoading}
-                onClick={handleSubmit(beforeSubmit)}
-              >
-                Submit
-              </Button>
-            </Box>
+              <Box mt={2} display="flex" justifyContent="center">
+                <Button
+                  type="submit"
+                  variant="contained"
+                  color="primary"
+                  disabled={isSubmitting || isLoading}
+                >
+                  Submit
+                </Button>
+              </Box>
+            </form>
           </CardContent>
         </Card>
 
@@ -196,14 +198,6 @@ const SignUp = () => {
           </Typography>
         </Box>
       </Box>
-
-      <Snackbar
-        open={snackbar.open}
-        autoHideDuration={6000}
-        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
-      >
-        <Alert severity={snackbar.type}>{snackbar.message}</Alert>
-      </Snackbar>
     </Box>
   )
 }

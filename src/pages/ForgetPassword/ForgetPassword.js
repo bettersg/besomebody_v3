@@ -9,14 +9,13 @@ import {
   CardHeader,
   Grid,
   Link,
-  Snackbar,
   TextField,
   Typography,
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import { Controller, useForm } from 'react-hook-form'
-import { Alert } from '@material-ui/lab'
 import { useAuth } from '../../contexts/AuthContext'
+import { useSnackbar } from '../../contexts/SnackbarContext'
 
 const useStyles = makeStyles((theme) => ({
   link: {
@@ -30,13 +29,11 @@ const ForgetPassword = () => {
   const classes = useStyles()
 
   const [isLoading, setIsLoading] = useState(false)
-  const [snackbar, setSnackbar] = useState({
-    message: '',
-    open: false,
-    type: 'success',
-  })
 
-  // Init firebase auth
+  // Snackbar Context
+  const { setSnackbar } = useSnackbar()
+
+  // Auth Context
   const { resetPassword } = useAuth()
 
   // Init form
@@ -97,44 +94,47 @@ const ForgetPassword = () => {
             titleTypographyProps={{ variant: 'h4', align: 'center' }}
           />
           <CardContent>
-            <Grid container spacing={1}>
-              <Grid item xs={2}>
-                <Typography variant="body1">Email:</Typography>
+            <form onSubmit={handleSubmit(beforeSubmit)}>
+              <Grid container spacing={1}>
+                <Grid item xs={2}>
+                  <Typography variant="body1">Email:</Typography>
+                </Grid>
+                <Grid item xs={10}>
+                  <Controller
+                    as={TextField}
+                    control={control}
+                    name="email"
+                    type="email"
+                    placeholder="Enter your email here"
+                    required
+                    fullWidth
+                  />
+                </Grid>
               </Grid>
-              <Grid item xs={10}>
-                <Controller
-                  as={TextField}
-                  control={control}
-                  name="email"
-                  type="email"
-                  placeholder="Enter your email here"
-                  fullWidth
-                />
-              </Grid>
-            </Grid>
 
-            <Box mt={2} mx="auto">
-              <Typography variant="body2" align="center">
-                <Link
-                  to="/login"
-                  component={RouterLink}
-                  className={classes.link}
+              <Box mt={2} mx="auto">
+                <Typography variant="body2" align="center">
+                  <Link
+                    to="/login"
+                    component={RouterLink}
+                    className={classes.link}
+                  >
+                    Login
+                  </Link>
+                </Typography>
+              </Box>
+
+              <Box mt={2} display="flex" justifyContent="center">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  disabled={isSubmitting || isLoading}
+                  type="submit"
                 >
-                  Login
-                </Link>
-              </Typography>
-            </Box>
-
-            <Box mt={2} display="flex" justifyContent="center">
-              <Button
-                variant="contained"
-                color="primary"
-                disabled={isSubmitting || isLoading}
-                onClick={handleSubmit(beforeSubmit)}
-              >
-                Submit
-              </Button>
-            </Box>
+                  Submit
+                </Button>
+              </Box>
+            </form>
           </CardContent>
         </Card>
 
@@ -150,14 +150,6 @@ const ForgetPassword = () => {
           </Typography>
         </Box>
       </Box>
-
-      <Snackbar
-        open={snackbar.open}
-        autoHideDuration={6000}
-        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
-      >
-        <Alert severity={snackbar.type}>{snackbar.message}</Alert>
-      </Snackbar>
     </Box>
   )
 }
