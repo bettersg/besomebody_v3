@@ -8,10 +8,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   },
-  textWrapper: {
-    background: theme.palette.grey[100],
-    opacity: 0.9,
-  },
   whatsappHeader: {
     background: '#045E54',
     color: theme.palette.common.white,

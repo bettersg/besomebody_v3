@@ -10,10 +10,11 @@ import {
 } from '../../models/saveStateModel'
 
 const useInk = (json, inkName) => {
+  // Get current user info
+  const { currentUser } = useAuth()
+
   // Initialise inkjs
   const inkStory = React.useMemo(() => initInk(Story, json), [json])
-
-  const { currentUser } = useAuth()
 
   // Story initialising state is a boolean
   const [isStoryStarted, setIsStoryStarted] = React.useState(false)
