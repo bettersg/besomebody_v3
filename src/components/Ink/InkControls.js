@@ -5,7 +5,7 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext'
 const InkControls = (props) => {
   const {
     isStoryStarted,
-    savedTexts,
+    hasSavedState,
 
     getStory,
     resetStory,
@@ -66,12 +66,12 @@ const InkControls = (props) => {
         </Box>
       )}
 
-      {!isStoryStarted && savedTexts && (
+      {!isStoryStarted && hasSavedState && (
         <Box my={2} display="flex">
           <Button
             variant="outlined"
             color="primary"
-            onClick={() => loadSavedStory(savedTexts)}
+            onClick={() => loadSavedStory()}
           >
             Load Story
           </Button>

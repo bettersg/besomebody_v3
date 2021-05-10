@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Container, Typography } from '@material-ui/core'
 import useInk from '../../lib/Ink/useInk'
-import NadidInk from './nadid.ink.json'
+import NadidInk from '../../inkJsons/nadid.ink.json'
 import InkParagraphs from '../../components/Ink/InkParagraphs'
 import InkChoices from '../../components/Ink/InkChoices'
 import InkControls from '../../components/Ink/InkControls'
@@ -13,7 +13,7 @@ const InkTestPage = () => {
     paragraphs,
     choices,
     specialTags,
-    savedTexts,
+    hasSavedState,
 
     // Methods
     getStory,
@@ -40,7 +40,7 @@ const InkTestPage = () => {
       {/* Render event triggers */}
       <InkControls
         isStoryStarted={isStoryStarted}
-        savedTexts={savedTexts}
+        hasSavedState={hasSavedState}
         getStory={getStory}
         resetStory={resetStory}
         startStoryFrom={startStoryFrom}
