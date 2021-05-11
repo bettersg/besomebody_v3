@@ -1,31 +1,17 @@
 import { firestore } from '../firebase'
 
-export const createDbUser = (obj) => {
-  return new Promise((resolve, reject) => {
-    firestore
-      .collection('users')
-      .doc(obj.id)
-      .set(obj)
-      .then((res) => {
-        resolve(res)
-      })
-      .catch((err) => {
-        reject(err)
-      })
-  })
+export const createDbUser = async (obj) => {
+  try {
+    await firestore.collection('users').doc(obj.id).set(obj)
+  } catch (err) {
+    console.error(`Error at createDbUser: ${err}`)
+  }
 }
 
-export const deleteDbUser = (userId) => {
-  return new Promise((resolve, reject) => {
-    firestore
-      .collection('users')
-      .doc(userId)
-      .delete()
-      .then((res) => {
-        resolve(res)
-      })
-      .catch((err) => {
-        reject(err)
-      })
-  })
+export const deleteDbUser = async (userId) => {
+  try {
+    await firestore.collection('users').doc(userId).delete()
+  } catch (err) {
+    console.error(`Error at deleteDbUser: ${err}`)
+  }
 }
