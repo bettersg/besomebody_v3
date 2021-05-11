@@ -6,7 +6,7 @@ import makeStyles from '@material-ui/core/styles/makeStyles'
 
 const useStyles = makeStyles((theme) => ({
   paragraphWrapper: {
-    backgroundImage: ({ image }) => `url('gameAssets/${image}')`,
+    backgroundImage: ({ image }) => `url('/gameAssets/${image}')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   },
@@ -107,7 +107,7 @@ const InkParagraphs = (props) => {
                     <img
                       width="100%"
                       height="100%"
-                      src={`gameAssets/${specialTags.chatgroupImage}`}
+                      src={`/gameAssets/${specialTags.chatgroupImage}`}
                       alt="Chat Profile"
                     />
                   </Box>
