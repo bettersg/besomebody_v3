@@ -13,6 +13,9 @@ const useInk = (json, inkName) => {
   // Get current user info
   const { currentUser } = useAuth()
 
+  // Format a fixed saved data ID for firestore DB
+  const saveDataId = `${currentUser.uid}-${inkName}`
+
   // Initialise inkjs
   const inkStory = React.useMemo(() => initInk(Story, json), [json])
 
@@ -35,7 +38,7 @@ const useInk = (json, inkName) => {
 
   useEffect(() => {
     const getSaveStates = async () => {
-      const savedStateRes = await getDbSavedStates(currentUser.uid, inkName)
+      const savedStateRes = await getDbSavedStates(saveDataId)
       if (savedStateRes) {
         setHasSavedState(true)
       }
@@ -135,21 +138,23 @@ const useInk = (json, inkName) => {
       setIsStoryStarted(true)
       handleGetStory()
     } catch (err) {
-      console.log('err: ', err)
+      console.error(err)
     }
   }
 
   // Save snapshots of both React and inkStory states
   const handleSaveStory = async () => {
     const savedState = inkStory.saveStoryState()
-    await createDbSavedStates({
+    const saveData = {
       inkJson: savedState,
       specialTags,
       paragraphs,
       choices,
       userId: currentUser.uid,
       inkName,
-    })
+    }
+
+    await createDbSavedStates(saveData, saveDataId)
     setHasSavedState(true)
   }
 
@@ -158,7 +163,7 @@ const useInk = (json, inkName) => {
    * Submit the ink saved state back to inkjs so it knows where to start fetching the next story from
    */
   const handleLoadSavedStory = async () => {
-    const savedStateRes = await getDbSavedStates(currentUser.uid, inkName)
+    const savedStateRes = await getDbSavedStates(saveDataId)
     if (!savedStateRes) return null
 
     setParagraphs(savedStateRes.paragraphs)
@@ -170,7 +175,7 @@ const useInk = (json, inkName) => {
 
   // Clear snapshots in React states
   const handleResetSavedStory = async () => {
-    await deleteDbSavedStates(currentUser.uid, inkName)
+    await deleteDbSavedStates(saveDataId)
     setHasSavedState(false)
   }
 

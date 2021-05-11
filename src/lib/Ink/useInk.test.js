@@ -97,7 +97,7 @@ describe('useInk Hook Test', () => {
       },
     })
 
-    createDbSavedStates.mockReturnValue(true)
+    createDbSavedStates.mockReturnValue()
     getDbSavedStates.mockReturnValue({
       paragraphs: [{ text: 'test paragraph', tags: ['test tag'] }],
       specialTags: {
@@ -108,7 +108,7 @@ describe('useInk Hook Test', () => {
       },
       inkJson: JSON.stringify(mockJson),
     })
-    deleteDbSavedStates.mockReturnValue(true)
+    deleteDbSavedStates.mockReturnValue()
   })
 
   it('should display default states', async () => {
