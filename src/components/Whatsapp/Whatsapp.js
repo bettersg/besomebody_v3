@@ -5,6 +5,7 @@ import "./style.scss";
 const Whatsapp = (props) => {
 
     return (
+        // TO DO: make whatsapp screen fit the screen and customise controls 
         <Box className="paragraph-wrapper" pb={3}>
             <Box className="whatsapp-header" p={1} mb={3}>
                 <Grid container alignItems="center">
@@ -30,7 +31,7 @@ const Whatsapp = (props) => {
                 </Grid>
             </Box> 
         
-            <Box maxHeight={300} overflow="scroll">
+            <Box maxHeight={300} className="text-area">
                 {props.currentPara.map((step) => {
                 if (step.tags[0]?.includes('Speaker_self')) {
                     return (

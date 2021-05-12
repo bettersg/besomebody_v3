@@ -1,5 +1,4 @@
 .paragraph-wrapper {
-    // background-image: url('gameAssets/${image}'); 
     background-size: cover; 
     background-position: center; 
     background-color: #808080;
@@ -28,6 +27,9 @@
         width: 54px; 
         height: 54px; 
     }
-    
+}
+
+.text-area {
+    overflow-y: scroll;
 }
 

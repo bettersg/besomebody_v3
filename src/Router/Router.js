@@ -11,8 +11,8 @@ import HomePage from '../pages/HomePage/HomePage'
 import InkTestPage from '../pages/InkTestPage/InkTestPage'
 import InkTestPageBasic from '../pages/InkTestPage/InkTestPageBasic'
 import CharProfilePage from '../pages/CharProfilePage/CharProfilePage'
+import InstagramPage from '../pages/InstagramPage/InstagramPage'
 import HomePg from "../pages/HomePage/App"
-import WhatsappPage from "../pages/WhatsappPage/WhatsappPage"
 
 class Router extends Component {
   render() {
@@ -60,10 +60,9 @@ class Router extends Component {
             <CharProfilePage />
           </Route>
 
-          <Route path="/wa" exact>
-            <WhatsappPage />
+          <Route path="/insta" exact>
+            <InstagramPage />
           </Route>
-
 
           <Route>
             <NotFoundPage />
