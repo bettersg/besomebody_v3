@@ -1,8 +1,21 @@
-import React from 'react'
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect } from 'react'
 import { Story } from 'inkjs'
 import { initInk, STORY_VALUE_TYPE } from './initInk'
+import { useAuth } from '../../contexts/AuthContext'
+import {
+  createDbSavedStates,
+  deleteDbSavedStates,
+  getDbSavedStates,
+} from '../../models/saveStateModel'
 
-const useInk = (json) => {
+const useInk = (json, inkName) => {
+  // Get current user info
+  const { currentUser } = useAuth()
+
+  // Format a fixed saved data ID for firestore DB
+  const saveDataId = `${currentUser.uid}-${inkName}`
+
   // Initialise inkjs
   const inkStory = React.useMemo(() => initInk(Story, json), [json])
 
@@ -21,10 +34,18 @@ const useInk = (json) => {
   const [specialTags, setSpecialTags] = React.useState({})
 
   // Save story progression states
-  const [savedTexts, setSavedTexts] = React.useState(null)
-  const [paragraphsSnapShot, setParagraphsSnapShot] = React.useState([])
-  const [choicesSnapShot, setChoicesSnapShot] = React.useState([])
-  const [specialTagsSnapShot, setSpecialTagsSnapShot] = React.useState({})
+  const [hasSavedState, setHasSavedState] = React.useState(false)
+
+  useEffect(() => {
+    const getSaveStates = async () => {
+      const savedStateRes = await getDbSavedStates(saveDataId)
+      if (savedStateRes) {
+        setHasSavedState(true)
+      }
+    }
+
+    getSaveStates()
+  }, [])
 
   /**
    * To update special tags with:
@@ -50,7 +71,7 @@ const useInk = (json) => {
    * - Update specialTags if there are special tags
    * - Update either choices or paragraphs state
    */
-  const handleGetStory = () => {
+  const handleGetStory = async () => {
     // Set storyStarted to true if it is false
     if (!isStoryStarted) setIsStoryStarted(true)
 
@@ -112,40 +133,50 @@ const useInk = (json) => {
    * @param {* string} pathName
    */
   const handleStartStoryFrom = (pathName) => {
-    inkStory.startStoryFrom(pathName)
-    setIsStoryStarted(true)
-    handleGetStory()
+    try {
+      inkStory.startStoryFrom(pathName)
+      setIsStoryStarted(true)
+      handleGetStory()
+    } catch (err) {
+      console.error(err)
+    }
   }
 
   // Save snapshots of both React and inkStory states
-  const handleSaveStory = () => {
-    setParagraphsSnapShot(paragraphs)
-    setChoicesSnapShot(choices)
-    setSpecialTagsSnapShot(specialTags)
+  const handleSaveStory = async () => {
     const savedState = inkStory.saveStoryState()
-    setSavedTexts(savedState)
+    const saveData = {
+      inkJson: savedState,
+      specialTags,
+      paragraphs,
+      choices,
+      userId: currentUser.uid,
+      inkName,
+    }
+
+    await createDbSavedStates(saveData, saveDataId)
+    setHasSavedState(true)
   }
 
   /**
    * Load the paragraphs or choices in local snapshots back into the React states
    * Submit the ink saved state back to inkjs so it knows where to start fetching the next story from
-   * @param {* json string} savedState
    */
-  const handleLoadSavedStory = (savedState) => {
-    if (!(savedState && paragraphsSnapShot.length)) return null
+  const handleLoadSavedStory = async () => {
+    const savedStateRes = await getDbSavedStates(saveDataId)
+    if (!savedStateRes) return null
 
-    setParagraphs(paragraphsSnapShot)
-    setChoices(choicesSnapShot)
-    setSpecialTags(specialTagsSnapShot)
+    setParagraphs(savedStateRes.paragraphs)
+    setChoices(savedStateRes.choices)
+    setSpecialTags(savedStateRes.specialTags)
     setIsStoryStarted(true)
-    inkStory.loadStoryState(savedState)
+    inkStory.loadStoryState(savedStateRes.inkJson)
   }
 
   // Clear snapshots in React states
-  const handleResetSavedStory = () => {
-    setParagraphsSnapShot([])
-    setChoicesSnapShot([])
-    setSavedTexts(null)
+  const handleResetSavedStory = async () => {
+    await deleteDbSavedStates(saveDataId)
+    setHasSavedState(false)
   }
 
   return {
@@ -154,7 +185,7 @@ const useInk = (json) => {
     paragraphs,
     choices,
     specialTags,
-    savedTexts,
+    hasSavedState,
 
     // Methods
     getStory: handleGetStory,

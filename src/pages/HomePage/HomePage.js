@@ -1,98 +1,122 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { withRouter } from 'react-router-dom'
-import { auth } from '../../firebase'
-import authentication from '../../services/authentication'
-import EmptyState from '../../components/EmptyState'
-import { ReactComponent as CabinIllustration } from '../../illustrations/cabin.svg'
-import { ReactComponent as InsertBlockIllustration } from '../../illustrations/insert-block.svg'
-import HomePageApp from "./App.js"
+import React, { useState } from 'react'
+import {
+  Box,
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+  Snackbar,
+  Typography,
+} from '@material-ui/core'
+import { Alert } from '@material-ui/lab'
+import { useAuth } from '../../contexts/AuthContext'
+import { deleteDbUser } from '../../models/userModel'
 
-class HomePage extends Component {
-  signInWithEmailLink = () => {
-    const { user } = this.props
-    console.log (this.props)
+const Home = () => {
+  const [isLoading, setIsLoading] = useState(false)
+  const [isDialogOpen, setIsDialogOpen] = useState(false)
+  const [snackbar, setSnackbar] = useState({
+    message: '',
+    open: false,
+    type: 'error',
+  })
 
-    if (user) {
-      return
+  const { currentUser, logout, deleteUser } = useAuth()
+
+  const handleLogout = async () => {
+    try {
+      setIsLoading(true)
+      await logout()
+    } catch (err) {
+      setSnackbar({
+        message: `Failed to logout: ${err.message}`,
+        open: true,
+        type: 'error',
+      })
     }
 
-    const emailLink = window.location.href
+    setIsLoading(false)
+  }
 
-    if (!emailLink) {
-      return
-    }
-
-    if (auth.isSignInWithEmailLink(emailLink)) {
-      let emailAddress = localStorage.getItem('emailAddress')
-
-      if (!emailAddress) {
-        this.props.history.push('/')
-
-        return
-      }
-
-      authentication
-        .signInWithEmailLink(emailAddress, emailLink)
-        .then((value) => {
-          const user = value.user
-          const displayName = user.displayName
-          const emailAddress = user.email
-
-          this.props.openSnackbar(`Signed in as ${displayName || emailAddress}`)
-        })
-        .catch((reason) => {
-          const code = reason.code
-          const message = reason.message
-
-          switch (code) {
-            case 'auth/expired-action-code':
-            case 'auth/invalid-email':
-            case 'auth/user-disabled':
-              this.props.openSnackbar(message)
-              break
-
-            default:
-              this.props.openSnackbar(message)
-              return
-          }
-        })
-        .finally(() => {
-          this.props.history.push('/')
-        })
+  const handleDeleteUser = async () => {
+    try {
+      setIsLoading(true)
+      await deleteUser()
+      await deleteDbUser(currentUser.uid)
+    } catch (err) {
+      setSnackbar({
+        message: `Failed to delete user: ${err.message}`,
+        open: true,
+        type: 'error',
+      })
     }
   }
 
-  render() {
-    const { user } = this.props
+  return (
+    <Box>
+      <Box width={500} mx="auto" mt={5}>
+        <Typography variant="h4" align="center">
+          RMUIF
+        </Typography>
+        <Typography variant="body1" align="center">
+          Supercharged version of Create React App with all the bells and
+          whistles.
+        </Typography>
+      </Box>
 
-    if (user) {
-      return (
-        // <EmptyState
-        //   image={<CabinIllustration />}
-        //   title="Home"
-        //   description="This is the home page. You can edit it from HomePage.js."
-        // />
-        <HomePageApp/>
-      )
-    }
+      <Box width={400} mx="auto" mt={10} display="flex" justifyContent="center">
+        <Button
+          color="secondary"
+          variant="outlined"
+          disabled={isLoading}
+          onClick={handleLogout}
+        >
+          Logout
+        </Button>
+      </Box>
 
-    return (
-      <EmptyState
-        image={<InsertBlockIllustration />}
-        title="RMUIF"
-        description="Supercharged version of Create React App with all the bells and whistles."
-      />
-    )
-  }
+      <Box width={400} mx="auto" mt={10} display="flex" justifyContent="center">
+        <Button
+          color="secondary"
+          variant="contained"
+          disabled={isLoading}
+          onClick={() => setIsDialogOpen(true)}
+        >
+          Delete account
+        </Button>
+      </Box>
 
-  componentDidMount() {
-    this.signInWithEmailLink()
-  }
+      <Dialog
+        open={isDialogOpen}
+        onClose={() => setIsDialogOpen(false)}
+        aria-labelledby="delete-user-title"
+        aria-describedby="delete-user-description"
+      >
+        <DialogTitle id="delete-user-title">Delete User</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="delete-user-description">
+            Are you sure you want to delete {currentUser.email} ?
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setIsDialogOpen(false)}>Cancel</Button>
+          <Button onClick={handleDeleteUser} color="secondary">
+            Delete
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+      <Snackbar
+        open={snackbar.open}
+        autoHideDuration={6000}
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+      >
+        <Alert severity={snackbar.type}>{snackbar.message}</Alert>
+      </Snackbar>
+    </Box>
+  )
 }
 
-HomePage.propTypes = {
-  user: PropTypes.object,
-}
-
-export default withRouter(HomePage)
+export default Home
