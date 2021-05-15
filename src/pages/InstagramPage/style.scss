@@ -1,0 +1,60 @@
+.insta-wrapper {
+    padding: 10px; 
+    max-height: 655px;
+    overflow-y: scroll;
+
+    .insta-heading {
+        height: 10%; 
+        font-size: 28px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 51px;
+    }
+    .social-icons {
+        margin-left: 10px;
+    }
+    .stories-list {
+        display: flex;
+        .stories-item {
+            margin-right: 20px; 
+            p {
+                text-align: center;
+            }
+        }
+        .stories {
+            height: 70px;
+            width: 70px;
+        }
+    }
+
+    .content-wrapper {
+        .content-header {
+            display: flex;
+            vertical-align: middle;
+            margin-bottom: 10px;
+        }
+        .insta-post {
+            height: 360px; 
+            background-color: #C4C4C4;
+            img {
+                height: 100%; 
+            }
+        }
+        .post-text {
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: 20px;
+            margin-right: 10px;
+            font-weight: 700;
+        }
+        .post-description {
+            margin-bottom: 10px;
+        }
+        .post-interaction {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px; 
+        }
+    }
+
+}

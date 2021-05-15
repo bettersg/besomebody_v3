@@ -1,0 +1,117 @@
+/* html {
+  max-width: 480px;   
+  margin: auto; 
+} */
+
+@media screen and (min-device-width:481px) {
+  html {
+    margin-top: 15% !important; 
+    position: relative;
+    width: 390px;
+    height: 780px;
+    margin: auto;
+    border: 16px black solid;
+    border-top-width: 60px;
+    border-bottom-width: 60px;
+    border-radius: 36px;
+  }
+  html:before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 5px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333;
+    border-radius: 10px;
+  }
+  html:after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    bottom: -65px;
+    transform: translate(-50%, -50%);
+    background: #333;
+    border-radius: 50%;
+  }
+  html .App {
+    height: 660px;
+    overflow: scroll;
+    background: white;
+    align-items: center;
+    overflow-x: hidden;
+  }
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(235, 235, 235, 0.8); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+background: rgba(155, 155, 155, 0.4); 
+}
+
+body {
+  margin-bottom: 20% !important; 
+  height: 90%; 
+  margin-top: 5%; 
+  background-color: #F2F2F2;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  height: 90%; 
+  width: 100%; 
+}
+
+.profileBox {
+  padding: 10%; 
+  background-color: white;
+  margin: 0 !important; 
+  margin-bottom: 5% !important; 
+  /* width: 100%;   */
+}
+
+.navBar { 
+  margin: 0; 
+}
+
+.navBarIcons.Mui-selected {
+  color: grey !important; 
+}
+
+.navBarIcons {
+  color: lightgrey !important; 
+}
+
+.profilePgBtn {
+  background-color: #1DBF7B !important; 
+  color: white !important; 
+  border-radius: 70px !important;
+  width: 80% !important; 
+  padding: 5px 15px !important; 
+  font-size: 0.65rem !important;
+  margin-left: 20px !important; 
+  position: fixed; 
+  bottom: 0 !important; 
+  z-index: 1; 
+}

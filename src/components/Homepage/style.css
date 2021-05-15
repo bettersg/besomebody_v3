@@ -1,0 +1,17 @@
+.center {
+  align-items: center;
+}
+
+@media screen and (max-device-width:480px) {
+  .bottomNav {
+    border-top: 1px solid #E7E7E7;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0; 
+  }
+}

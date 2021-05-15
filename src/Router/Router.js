@@ -10,6 +10,9 @@ import PrivateRoute from '../components/PrivateRoute'
 import HomePage from '../pages/HomePage/HomePage'
 import InkTestPage from '../pages/InkTestPage/InkTestPage'
 import InkTestPageBasic from '../pages/InkTestPage/InkTestPageBasic'
+import CharProfilePage from '../pages/CharProfilePage/CharProfilePage'
+import InstagramPage from '../pages/InstagramPage/InstagramPage'
+import HomePg from "../pages/HomePage/App"
 import SignUp from '../pages/SignUp/SignUp'
 import Login from '../pages/Login/Login'
 import ForgetPassword from '../pages/ForgetPassword/ForgetPassword'
@@ -19,10 +22,11 @@ class Router extends Component {
   render() {
     // Properties
     const { user, roles, bar } = this.props
+    console.log(this.props)
 
     return (
       <BrowserRouter basename={process.env.REACT_APP_BASENAME}>
-        {bar}
+        {/* {bar} */}
 
         <Switch>
           <PrivateRoute path="/" exact>
@@ -63,6 +67,18 @@ class Router extends Component {
 
           <Route path="/user/:userId">
             {user ? <UserPage /> : <Redirect to="/" />}
+          </Route>
+
+          <Route path="/home" exact>
+            <HomePg />
+          </Route>
+
+          <Route path="/profile" exact>
+            <CharProfilePage />
+          </Route>
+
+          <Route path="/insta" exact>
+            <InstagramPage />
           </Route>
 
           <Route>

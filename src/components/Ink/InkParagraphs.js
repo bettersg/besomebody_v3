@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Box, Grid, Typography } from '@material-ui/core'
 import Fade from '@material-ui/core/Fade'
 import makeStyles from '@material-ui/core/styles/makeStyles'
+import Whatsapp from "../Whatsapp/Whatsapp"
 
 const useStyles = makeStyles((theme) => ({
   paragraphWrapper: {
@@ -93,6 +94,8 @@ const InkParagraphs = (props) => {
       )}
 
       {specialTags.ui === 'whatsapp' && (
+        // <Fade in={specialTags.ui === 'whatsapp'}> 
+          // {/* <Whatsapp content={specialTags} currentPara={currentParagraphs} eleRef={elementRef}/> */}
         <Fade in={specialTags.ui === 'whatsapp'}>
           <Box className={classes.paragraphWrapper} pb={3}>
             <Box className={classes.whatsappHeader} p={1} mb={3}>

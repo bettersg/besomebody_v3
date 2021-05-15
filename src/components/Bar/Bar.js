@@ -14,6 +14,8 @@ import {
   Link,
 } from '@material-ui/core'
 
+import "./style.css";
+
 class Bar extends Component {
   constructor(props) {
     super(props)
@@ -49,7 +51,7 @@ class Bar extends Component {
 
     // Events
     return (
-      <AppBar color="primary" position="static">
+      <AppBar color="primary" position="static" className="navBarTop">
         <Toolbar>
           <Box display="flex" flexGrow={1}>
             <Typography color="inherit" variant="h6">
@@ -59,7 +61,7 @@ class Bar extends Component {
                 to="/"
                 underline="none"
               >
-                {process.env.REACT_APP_TITLE}
+                {process.env.REACT_APP_TITLE} 
               </Link>
             </Typography>
           </Box>
