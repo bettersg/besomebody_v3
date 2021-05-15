@@ -87,9 +87,12 @@ const InkController = () => {
 
   return (
     <Container maxWidth="lg">
-      <Box fontSize="h4.fontSize" my={2}>
+       
+      
+      <Box>
         <Typography variant="inherit">{name}</Typography>
       </Box>
+       
 
       {getUi({ paragraphs, choices, specialTags, setChoice })}
 

@@ -11,6 +11,8 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import { Link } from 'react-router-dom'
+
 
 import "./style.css"; 
 
@@ -51,6 +53,9 @@ export default function ChapterBox(props) {
                         <Typography className="chaptTitle">
                             {chaptDetails.title}
                         </Typography>
+                        <Typography variant="body2">
+                            {chaptDetails.chapter_summary}
+                        </Typography>
                         {rows}
                         <span className="chaptText" style={{marginLeft:"5px"}}>{chaptDetails.endingUnlocked} of {chaptDetails.endingAvail} endings unlocked</span>
                     </CardContent>
@@ -60,9 +65,9 @@ export default function ChapterBox(props) {
                         <Button size="small" variant="outlined" className="chaptBtnReplay">
                             REPLAY
                         </Button> :
-                        <Button size="small" variant="contained" className="chaptBtn">
+                        <Link to={chaptDetails.knot_link}><Button size="small" variant="contained" className="chaptBtn">
                             PLAY
-                        </Button>
+                        </Button></Link>
 
                     }
 

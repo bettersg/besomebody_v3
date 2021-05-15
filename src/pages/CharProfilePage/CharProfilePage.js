@@ -23,7 +23,7 @@ class CharProfile extends React.Component {
             src:
             "https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F0f59699e1dd943ba87446eb0c7ec9704",
             name: "Nadid",
-            description: "You've been friends since primary school",
+            description: "Nadia wants to become a doctor, but will life and love get in the way of her plan?",
         }, 
         chaptDetails: [
             {
@@ -33,7 +33,9 @@ class CharProfile extends React.Component {
                 title: "Family Matters",
                 endingUnlocked: 0, 
                 endingAvail: 3,
-                replay: false 
+                replay: false,
+                knot_link: "/ink/nadid",
+                chapter_summary: "This is a summary of what happened"
             }, 
             {
                 new: false, 

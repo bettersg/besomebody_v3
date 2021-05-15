@@ -33,17 +33,11 @@ class Router extends Component {
             <HomePage />
           </PrivateRoute>
 
-          <PrivateRoute path="/ink" exact>
-            <InkTestPage />
-          </PrivateRoute>
 
           <PrivateRoute path="/ink/:name" exact>
             <InkController />
           </PrivateRoute>
 
-          <Route path="/ink-basic" exact>
-            <InkTestPageBasic />
-          </Route>
 
           <Route path="/signup" exact>
             <SignUp />
@@ -77,9 +71,23 @@ class Router extends Component {
             <CharProfilePage />
           </Route>
 
+          
+          {/* // old routes 
+          
+          <PrivateRoute path="/ink" exact>
+            <InkTestPage />
+          </PrivateRoute>
+
+
+          <Route path="/ink-basic" exact>
+            <InkTestPageBasic />
+          </Route>
+          
           <Route path="/insta" exact>
             <InstagramPage />
           </Route>
+          
+          */}
 
           <Route>
             <NotFoundPage />
