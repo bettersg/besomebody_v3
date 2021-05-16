@@ -1,16 +1,16 @@
 import React from "react";
-import ProfileAvatar from "../../components/CharProfile/ProfileAvatar"
+import ProfileAvatar from "./ProfileAvatar"
 import {
     ThemeProvider,
     createMuiTheme, 
     makeStyles
 } from "@material-ui/core/styles";
-import TopNavBar from "../../components/CharProfile/TopNavBar";
+import TopNavBar from "./TopNavBar";
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
-import ChapterBox from "../../components/CharProfile/ChapterBox"
-import NavBar from "../../components/CharProfile/NavBar"
+import ChapterBox from "./ChapterBox"
+import NavBar from "./NavBar"
 
 
 import "../styles.css";
@@ -34,7 +34,7 @@ class CharProfile extends React.Component {
                 endingUnlocked: 0, 
                 endingAvail: 3,
                 replay: false,
-                knot_link: "/ink/nadid",
+                knot_link: "/story/nadid",
                 chapter_summary: "This is a summary of what happened"
             }, 
             {

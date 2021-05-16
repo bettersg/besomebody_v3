@@ -1,7 +1,6 @@
-import "../styles.css";
 import React from "react";
-import CharacterAvatar from "../../components/Homepage/CharacterAvatar";
-import CharacterProfile from "../../components/Homepage/CharacterProfile";
+import CharacterAvatar from "./CharacterAvatar";
+import CharacterProfile from "./CharacterProfile";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Box from '@material-ui/core/Box';
@@ -10,8 +9,8 @@ import {
 ThemeProvider,
 createMuiTheme
 } from "@material-ui/core/styles";
-import NavBar from "../../components/Homepage/NavBar";
-
+import NavBar from "./NavBar";
+import "../styles.css";
 
 
 class App extends React.Component {

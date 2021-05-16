@@ -1,14 +1,14 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { Box, Container, Typography } from '@material-ui/core'
-import NadidInk from '../../inkJsons/nadid.ink.json'
-import DavidInk from '../../inkJsons/david.ink.json'
+import NadidInk from '../../stories/nadid.ink.json'
+import DavidInk from '../../stories/david.ink.json'
 import useInk from '../../lib/Ink/useInk'
 import NotFoundPage from '../../components/NotFoundPage'
-import WhatsApp from '../../components/WhatsApp'
-import School from '../../components/School'
-import InkControls from '../../components/Ink/InkControls'
-import DefaultInk from '../../components/DefaultInk'
+import WhatsApp from '../WhatsApp'
+import School from '../School'
+import InkControls from './InkControls'
+import DefaultInk from '../DefaultInk'
 
 const getInkJson = (nameParam) => {
   switch (nameParam) {
@@ -90,7 +90,7 @@ const InkController = () => {
        
       
       <Box>
-        <Typography variant="inherit">{name}</Typography>
+        <Typography variant="overline" >{name}</Typography>
       </Box>
        
 

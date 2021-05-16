@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Box, Grid, Typography } from '@material-ui/core'
 import Fade from '@material-ui/core/Fade'
 import makeStyles from '@material-ui/core/styles/makeStyles'
-import Whatsapp from "../Whatsapp/Whatsapp"
+// import Whatsapp from "../WhatsApp"
 
 const useStyles = makeStyles((theme) => ({
   paragraphWrapper: {

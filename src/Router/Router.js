@@ -6,17 +6,20 @@ import AdminPage from '../components/AdminPage'
 import UserPage from '../components/UserPage'
 import NotFoundPage from '../components/NotFoundPage'
 import PrivateRoute from '../components/PrivateRoute'
-
-import HomePage from '../pages/HomePage/HomePage'
-import InkTestPage from '../pages/InkTestPage/InkTestPage'
-import InkTestPageBasic from '../pages/InkTestPage/InkTestPageBasic'
-import CharProfilePage from '../pages/CharProfilePage/CharProfilePage'
-import InstagramPage from '../pages/InstagramPage/InstagramPage'
-import HomePg from "../pages/HomePage/App"
 import SignUp from '../pages/SignUp/SignUp'
 import Login from '../pages/Login/Login'
 import ForgetPassword from '../pages/ForgetPassword/ForgetPassword'
+
 import InkController from '../pages/InkController/InkController'
+
+import HomePage from '../pages/HomePage/HomePage'
+import CharProfilePage from '../pages/CharProfilePage/CharProfilePage'
+import HomePg from "../pages/HomePage/App"
+
+// import InkTestPage from '../pages/InkTestPage/InkTestPage'
+// import InkTestPageBasic from '../pages/InkTestPage/InkTestPageBasic'
+// import InstagramPage from '../pages/InstagramPage/InstagramPage'
+
 
 class Router extends Component {
   render() {
@@ -34,7 +37,7 @@ class Router extends Component {
           </PrivateRoute>
 
 
-          <PrivateRoute path="/ink/:name" exact>
+          <PrivateRoute path="/story/:name" exact>
             <InkController />
           </PrivateRoute>
 

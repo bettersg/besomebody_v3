@@ -1,11 +1,11 @@
 import React from "react";
-import ProfileAvatar from "../../components/CharProfile/ProfileAvatar"
+// import ProfileAvatar from "../CharProfilePage/CharProfilePage/ProfileAvatar"
 import {
     ThemeProvider,
     createMuiTheme, 
     makeStyles
 } from "@material-ui/core/styles";
-import WhatsappContainer from "../../components/Whatsapp/WhatsappContainer"
+import WhatsappContainer from "./WhatsappContainer"
 
 
 import "../styles.css";
