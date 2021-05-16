@@ -14,7 +14,7 @@ import InkController from '../pages/InkController/InkController'
 
 import HomePage from '../pages/HomePage/HomePage'
 import CharProfilePage from '../pages/CharProfilePage/CharProfilePage'
-import HomePg from "../pages/HomePage/App"
+import CharacterChoice from "../pages/HomePage/CharacterChoice"
 
 // import InkTestPage from '../pages/InkTestPage/InkTestPage'
 // import InkTestPageBasic from '../pages/InkTestPage/InkTestPageBasic'
@@ -67,7 +67,7 @@ class Router extends Component {
           </Route>
 
           <Route path="/home" exact>
-            <HomePg />
+            <CharacterChoice />
           </Route>
 
           <Route path="/profile" exact>

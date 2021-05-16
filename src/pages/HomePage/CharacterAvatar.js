@@ -52,7 +52,7 @@ export default function ImageAvatars(props) {
         <Typography variant="subtitle2">{personaInfo.description}</Typography>
         
         {personaInfo.buttonShow == true ? 
-          <Button buttonText="CONTINUE" /> :
+          <Button buttonText="CONTINUE" link={personaInfo.link} /> :
           null
         }
       </div>

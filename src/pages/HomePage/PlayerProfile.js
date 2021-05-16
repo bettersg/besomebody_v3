@@ -40,9 +40,10 @@ const theme = createMuiTheme( {
   }
 });
 
-export default function CharacterProfile(props) {
+export default function PlayerProfile(props) {
   const classes = useStyles();
   const { userInfo } = props;
+  
 
   return (
     <ThemeProvider theme={theme}>
@@ -51,17 +52,19 @@ export default function CharacterProfile(props) {
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Grid>
                 <Avatar className={classes.large}/>
-                <Typography variant="subtitle1">My Name</Typography>
+                <Typography variant="subtitle1">Name: {userInfo.name}</Typography>
                 <Typography variant="subtitle1">My Desc</Typography>
             </Grid>
            </div>
            <Grid container spacing={3}>
             <Grid item xs={4} alignItems="center">
-              <div style={{ display: "flex", justifyContent: "center"}}>
               <Typography>3 Persona</Typography>
+            </Grid>    
+            <Grid item xs={4} alignItems="center">
               <Typography>15 Outcomes</Typography>
-              <Typography>8 Chapters</Typography>
-              </div>
+            </Grid>
+            <Grid item xs={4} alignItems="center">
+              <Typography>8 Chapters</Typography>              
             </Grid>
            </Grid>
         

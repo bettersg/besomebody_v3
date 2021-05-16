@@ -3,7 +3,7 @@ import { Box, Container, Typography } from '@material-ui/core'
 import useInk from '../../lib/Ink/useInk'
 import NadidInk from '../../stories/nadid.ink.json'
 import InkParagraphs from '../../components/Ink/InkParagraphs'
-import InkChoices from '../../components/Ink/InkChoices'
+import InkChoices from '../InkController/InkChoices'
 import InkControls from '../../components/Ink/InkControls'
 
 const InkTestPage = () => {
