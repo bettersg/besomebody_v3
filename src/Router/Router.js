@@ -12,6 +12,7 @@ import InkTestPage from '../pages/InkTestPage/InkTestPage'
 import InkTestPageBasic from '../pages/InkTestPage/InkTestPageBasic'
 import CharProfilePage from '../pages/CharProfilePage/CharProfilePage'
 import InstagramPage from '../pages/InstagramPage/InstagramPage'
+import EmailPage from '../pages/EmailPage/EmailPage'
 import HomePg from "../pages/HomePage/App"
 import SignUp from '../pages/SignUp/SignUp'
 import Login from '../pages/Login/Login'
@@ -79,6 +80,10 @@ class Router extends Component {
 
           <Route path="/insta" exact>
             <InstagramPage />
+          </Route>
+
+          <Route path="/email" exact>
+            <EmailPage />
           </Route>
 
           <Route>

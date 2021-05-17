@@ -55,17 +55,19 @@ export default function CharacterProfile(props) {
                 <Typography variant="subtitle1">My Desc</Typography>
             </Grid>
            </div>
-           <Grid container spacing={3}>
-            <Grid item xs={4} alignItems="center">
+           <Grid>
               <div style={{ display: "flex", justifyContent: "center"}}>
-              <Typography>3 Persona</Typography>
-              <Typography>15 Outcomes</Typography>
-              <Typography>8 Chapters</Typography>
+              <Grid container items xs alignItems='center' display="inline">
+              <Typography variant="h6">3 Personas</Typography> 
+              </Grid>
+              <Grid container items xs alignItems='center'>
+              <Typography variant="h6">15 Outcomes</Typography>
+              </Grid>
+              <Grid container item xs alignItems='center' style={{display: 'inline-block'}}>
+              <Typography variant="h6">8 Chapters</Typography>
+              </Grid>
               </div>
-            </Grid>
            </Grid>
-        
-
           </Paper>
         </div>
     </ThemeProvider>
