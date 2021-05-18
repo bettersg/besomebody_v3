@@ -33,6 +33,9 @@ const useInk = (json, inkName) => {
   // SpecialTags is an dynamic object with only strings as it values
   const [specialTags, setSpecialTags] = React.useState({})
 
+  // GlobalVariables is an dynamic object
+  const [globalVariables, setGlobalVariables] = React.useState({})
+
   // Save story progression states
   const [hasSavedState, setHasSavedState] = React.useState(false)
 
@@ -68,6 +71,7 @@ const useInk = (json, inkName) => {
   /**
    * To fetch next sequence in story
    * - Set storyStarted to true if it is false
+   * - Update globalVariables if there are global variables
    * - Update specialTags if there are special tags
    * - Update either choices or paragraphs state
    */
@@ -77,6 +81,10 @@ const useInk = (json, inkName) => {
 
     const nextStep = inkStory.nextStoryStep()
     if (!nextStep) return null
+
+    // Update globalVariables if there are global variables
+    const currentGlobalVariables = inkStory.getGlobalVariables()
+    if (currentGlobalVariables) setGlobalVariables(currentGlobalVariables)
 
     // Update specialTags if there are special tags
     const currentSpecialTags = nextStep.tags.filter((tag) => tag.includes(':'))
@@ -125,6 +133,7 @@ const useInk = (json, inkName) => {
     setParagraphs([])
     setChoices([])
     setSpecialTags({})
+    setGlobalVariables({})
     inkStory.resetStory()
   }
 
@@ -148,6 +157,7 @@ const useInk = (json, inkName) => {
     const saveData = {
       inkJson: savedState,
       specialTags,
+      globalVariables,
       paragraphs,
       choices,
       userId: currentUser.uid,
@@ -169,6 +179,7 @@ const useInk = (json, inkName) => {
     setParagraphs(savedStateRes.paragraphs)
     setChoices(savedStateRes.choices)
     setSpecialTags(savedStateRes.specialTags)
+    setGlobalVariables(savedStateRes.globalVariables)
     setIsStoryStarted(true)
     inkStory.loadStoryState(savedStateRes.inkJson)
   }
@@ -185,6 +196,7 @@ const useInk = (json, inkName) => {
     paragraphs,
     choices,
     specialTags,
+    globalVariables,
     hasSavedState,
 
     // Methods

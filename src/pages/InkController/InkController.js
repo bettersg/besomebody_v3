@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { Box, Container, Typography } from '@material-ui/core'
@@ -24,7 +25,13 @@ const getInkJson = (nameParam) => {
   }
 }
 
-const getUi = ({ paragraphs, choices, specialTags, setChoice }) => {
+const getUi = ({
+  paragraphs,
+  choices,
+  specialTags,
+  globalVariables,
+  setChoice,
+}) => {
   switch (specialTags.ui) {
     case 'school': {
       return (
@@ -33,6 +40,7 @@ const getUi = ({ paragraphs, choices, specialTags, setChoice }) => {
           choices={choices}
           setChoice={setChoice}
           specialTags={specialTags}
+          globalVariables={globalVariables}
         />
       )
     }
@@ -43,6 +51,7 @@ const getUi = ({ paragraphs, choices, specialTags, setChoice }) => {
           choices={choices}
           setChoice={setChoice}
           specialTags={specialTags}
+          globalVariables={globalVariables}
         />
       )
     }
@@ -53,6 +62,7 @@ const getUi = ({ paragraphs, choices, specialTags, setChoice }) => {
           choices={choices}
           setChoice={setChoice}
           specialTags={specialTags}
+          globalVariables={globalVariables}
         />
       )
   }
@@ -69,6 +79,7 @@ const InkController = () => {
     paragraphs,
     choices,
     specialTags,
+    globalVariables,
     hasSavedState,
 
     // Methods
@@ -81,20 +92,31 @@ const InkController = () => {
     resetSavedStory,
   } = useInk(inkJson, name)
 
+  /*
+  // ===========
+  // EXAMPLE
+  // ===========
+  useEffect(() => {
+    // MOCK CONDITION: Save game only if global variables or the ui key in special tags exists
+    if (globalVariables || specialTags.ui) {
+      saveStory()
+    }
+
+    // MOCK CONDITION: Trigger this useEffect everytime global variables or the ui key in special tags updates
+  }, [globalVariables, specialTags?.ui])
+  */
+
   if (!inkJson) {
     return <NotFoundPage />
   }
 
   return (
     <Container maxWidth="lg">
-       
-      
       <Box>
-        <Typography variant="overline" >{name}</Typography>
+        <Typography variant="overline">{name}</Typography>
       </Box>
-       
 
-      {getUi({ paragraphs, choices, specialTags, setChoice })}
+      {getUi({ paragraphs, choices, specialTags, globalVariables, setChoice })}
 
       {/* Render event triggers */}
       <InkControls
