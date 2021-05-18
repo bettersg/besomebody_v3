@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react'
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { Box, Button, Fade, Typography } from '@material-ui/core'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 
@@ -15,34 +16,38 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const School = (props) => {
-  const { paragraphs, choices, setChoice, specialTags } = props
-
+  const { paragraphs, choices, setChoice, specialTags, globalVariables } = props
   const classes = useStyles({ image: specialTags.background })
+
+  // ==========================================
+  // Get paragraphs belonging to this UI
+  // ==========================================
+  const [currentParagraphs, setCurrentParagraphs] = useState([])
+
+  // Get the splice index when this component renders for the first time
+  const paragraphSpliceIndex = useMemo(() => paragraphs.length - 1, [])
+
+  // Eveytime paragraphs gets updated, only retrieve paragraphs starting from the paragraphSpliceIndex
+  useEffect(() => {
+    const nextParagraphs = [...paragraphs]
+    nextParagraphs.splice(0, paragraphSpliceIndex)
+
+    return setCurrentParagraphs([...nextParagraphs])
+  }, [paragraphs])
+
+  // ========================================================
+  // Help to scroll to bottom of the paragraphs render screen
+  // ========================================================
   const elementRef = useRef()
 
-  const [currentParagraphs, setCurrentParagraphs] = useState([...paragraphs])
-
-  // Help to scroll to bottom of the paragraphs render screen
+  // Eveytime currentParagraphs gets updated or choices appear, scroll to the elementRef
   useEffect(() => {
     if (elementRef.current) {
       elementRef.current.scrollIntoView({
         behavior: 'smooth',
       })
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [elementRef, currentParagraphs, choices])
-
-  // Filter out paragraphs based on the current UI variable
-  useEffect(() => {
-    const nextParagraphs = paragraphs.filter(
-      (paragraph) =>
-        !Boolean(paragraph.tags.find((tag) => tag.includes('Speaker')))
-    )
-
-    return setCurrentParagraphs([...nextParagraphs])
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [paragraphs])
 
   return (
     <Fade in>

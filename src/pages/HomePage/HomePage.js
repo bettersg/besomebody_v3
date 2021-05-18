@@ -9,10 +9,12 @@ import {
   DialogTitle,
   Snackbar,
   Typography,
+  Container,
 } from '@material-ui/core'
 import { Alert } from '@material-ui/lab'
 import { useAuth } from '../../contexts/AuthContext'
 import { deleteDbUser } from '../../models/userModel'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(false)
@@ -56,28 +58,34 @@ const Home = () => {
 
   return (
     <Box>
-      <Box width={500} mx="auto" mt={5}>
-        <Typography variant="h4" align="center">
-          RMUIF
-        </Typography>
-        <Typography variant="body1" align="center">
-          Supercharged version of Create React App with all the bells and
-          whistles.
-        </Typography>
-      </Box>
-
-      <Box width={400} mx="auto" mt={10} display="flex" justifyContent="center">
-        <Button
-          color="secondary"
-          variant="outlined"
-          disabled={isLoading}
-          onClick={handleLogout}
-        >
-          Logout
+      <section>
+        <Container maxWidth="md">
+          <Box py={8} textAlign="center">
+            <Typography variant="h3" component="h2" gutterBottom={true}>Be Somebody</Typography>
+            <Typography variant="h5" color="textSecondary" paragraph={true}>Introducing Singapore’s first interactive fiction game that challenges how we see race, religion, and background in others -- and ourselves.</Typography>
+            <Box mt={4}>
+              <Link to="/Home"><Button variant="contained" color="primary" >Play Game</Button></Link>
+              <Button color="secondary">Read more</Button>
+            </Box>
+          </Box>
+        </Container>
+      </section>
+      
+      
+        <Box maxWidth="md" mx="auto" display="flex" justifyContent="center">
+          <Button
+            color="secondary"
+            variant="outlined"
+            disabled={isLoading}
+            onClick={handleLogout}
+          >
+            Logout
         </Button>
-      </Box>
+        </Box>
+        
 
-      <Box width={400} mx="auto" mt={10} display="flex" justifyContent="center">
+      { /* 
+      <Box maxWidth="md" mx="auto" mt={10} display="flex" justifyContent="center">
         <Button
           color="secondary"
           variant="contained"
@@ -87,6 +95,7 @@ const Home = () => {
           Delete account
         </Button>
       </Box>
+      */ }
 
       <Dialog
         open={isDialogOpen}

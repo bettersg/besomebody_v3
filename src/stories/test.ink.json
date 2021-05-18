@@ -1,4 +1,4 @@
-{
+﻿{
   "inkVersion": 19,
   "root": [
     [{ "->": "nadid_chapter6" }, ["done", { "#f": 5, "#n": "g-0" }], null],
@@ -105,6 +105,12 @@
               "^ and he's super pissed. he hasn't stopped yelling for an hour. ",
               { "#": "Speaker_self" },
               "\n",
+              "ev",
+              { "VAR?": "nadid_mood" },
+              1,
+              "-",
+              "/ev",
+              { "VAR=": "nadid_mood", "re": true },
               { "->": ".^.^.g-0" },
               { "#f": 5 }
             ],
@@ -170,6 +176,12 @@
                   "^ more than anything. what the hell. i'm 17. i'm not some stupid kid who doesn't know what i want.  ",
                   { "#": "Speaker_self" },
                   "\n",
+                  "ev",
+                  { "VAR?": "nadid_mood" },
+                  1,
+                  "-",
+                  "/ev",
+                  { "VAR=": "nadid_mood", "re": true },
                   { "->": ".^.^.^.g-1" },
                   { "#f": 5 }
                 ],
@@ -183,6 +195,12 @@
                   "^ why can't they be happy for me? why must holding hands turn into such a bloody fight ",
                   { "#": "Speaker_self" },
                   "\n",
+                  "ev",
+                  { "VAR?": "gavin_mood" },
+                  1,
+                  "-",
+                  "/ev",
+                  { "VAR=": "gavin_mood", "re": true },
                   { "->": ".^.^.^.g-1" },
                   { "#f": 5 }
                 ],
@@ -258,6 +276,12 @@
                   "^, saying \"this boy will never convert for me and that he just wants to do what all teenage boys do and he has no morals\" like how tf does he get that from an insta profile ",
                   { "#": "Speaker_self" },
                   "\n",
+                  "ev",
+                  { "VAR?": "gavin_mood" },
+                  1,
+                  "-",
+                  "/ev",
+                  { "VAR=": "gavin_mood", "re": true },
                   { "->": ".^.^.^.g-2" },
                   { "#f": 5 }
                 ],
@@ -337,6 +361,12 @@
                   "^ why is our relationship any of her business and what is she saying about us? ",
                   { "#": "Speaker_self" },
                   "\n",
+                  "ev",
+                  { "VAR?": "nadid_mood" },
+                  1,
+                  "-",
+                  "/ev",
+                  { "VAR=": "nadid_mood", "re": true },
                   { "->": ".^.^.^.g-3" },
                   { "#f": 5 }
                 ],
@@ -644,6 +674,16 @@
         "\n",
         "end",
         { "#f": 1 }
+      ],
+      "global decl": [
+        "ev",
+        5,
+        { "VAR=": "nadid_mood" },
+        5,
+        { "VAR=": "gavin_mood" },
+        "/ev",
+        "end",
+        null
       ],
       "#f": 1
     }

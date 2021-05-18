@@ -6,19 +6,21 @@ import AdminPage from '../components/AdminPage'
 import UserPage from '../components/UserPage'
 import NotFoundPage from '../components/NotFoundPage'
 import PrivateRoute from '../components/PrivateRoute'
-
-import HomePage from '../pages/HomePage/HomePage'
-import InkTestPage from '../pages/InkTestPage/InkTestPage'
-import InkTestPageBasic from '../pages/InkTestPage/InkTestPageBasic'
-import CharProfilePage from '../pages/CharProfilePage/CharProfilePage'
-import InstagramPage from '../pages/InstagramPage/InstagramPage'
-import EmailPage from '../pages/EmailPage/EmailPage'
-import HomePg from "../pages/HomePage/App"
 import SignUp from '../pages/SignUp/SignUp'
 import Login from '../pages/Login/Login'
 import ForgetPassword from '../pages/ForgetPassword/ForgetPassword'
+
 import InkController from '../pages/InkController/InkController'
 import WhatsappPage from '../pages/WhatsappPage/Whatsapp'
+
+import HomePage from '../pages/HomePage/HomePage'
+import CharProfilePage from '../pages/CharProfilePage/CharProfilePage'
+import CharacterChoice from "../pages/HomePage/CharacterChoice"
+
+// import InkTestPage from '../pages/InkTestPage/InkTestPage'
+// import InkTestPageBasic from '../pages/InkTestPage/InkTestPageBasic'
+// import InstagramPage from '../pages/InstagramPage/InstagramPage'
+
 
 class Router extends Component {
   render() {
@@ -35,17 +37,11 @@ class Router extends Component {
             <HomePage />
           </PrivateRoute>
 
-          <PrivateRoute path="/ink" exact>
-            <InkTestPage />
-          </PrivateRoute>
 
-          <PrivateRoute path="/ink/:name" exact>
+          <PrivateRoute path="/story/:name" exact>
             <InkController />
           </PrivateRoute>
 
-          <Route path="/ink-basic" exact>
-            <InkTestPageBasic />
-          </Route>
 
           <Route path="/signup" exact>
             <SignUp />
@@ -72,16 +68,30 @@ class Router extends Component {
           </Route>
 
           <Route path="/home" exact>
-            <HomePg />
+            <CharacterChoice />
           </Route>
 
           <Route path="/profile" exact>
             <CharProfilePage />
           </Route>
 
+          
+          {/* // old routes 
+          
+          <PrivateRoute path="/ink" exact>
+            <InkTestPage />
+          </PrivateRoute>
+
+
+          <Route path="/ink-basic" exact>
+            <InkTestPageBasic />
+          </Route>
+          
           <Route path="/insta" exact>
             <InstagramPage />
           </Route>
+          
+          */}
 
           <Route path="/wa" exact>
             <WhatsappPage />

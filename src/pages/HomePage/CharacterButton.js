@@ -32,7 +32,7 @@ export default function CharacterButton(props) {
   return (
     <div>
       <ThemeProvider theme={theme}>
-        <Link to="/profile" style={{ textDecoration: 'none' }}>
+        <Link to={props.link} style={{ textDecoration: 'none' }}>
           <Button size="small" variant="contained" color="primary" className={classes.margin} style={{zIndex: 0}}>
             {props.buttonText}
           </Button>

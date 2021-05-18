@@ -18,9 +18,7 @@ const InkControls = (props) => {
   return (
     <>
       <Box mt={5} mb={2}>
-        <Typography variant="h6" align="center">
-          Controls
-        </Typography>
+        
         <Divider />
       </Box>
 

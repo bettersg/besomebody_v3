@@ -1,7 +1,6 @@
-import "../styles.css";
 import React from "react";
-import CharacterAvatar from "../../components/Homepage/CharacterAvatar";
-import CharacterProfile from "../../components/Homepage/CharacterProfile";
+import CharacterAvatar from "./CharacterAvatar";
+import PlayerProfile from "./PlayerProfile";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Box from '@material-ui/core/Box';
@@ -10,11 +9,11 @@ import {
 ThemeProvider,
 createMuiTheme
 } from "@material-ui/core/styles";
-import NavBar from "../../components/Homepage/NavBar";
+import NavBar from "./NavBar";
+import "../styles.css";
 
 
-
-class App extends React.Component {
+class CharacterChoice extends React.Component {
 	state = {
 		user: [
 			{
@@ -29,43 +28,37 @@ class App extends React.Component {
 		personas: [
 			{
 				alt: "Nadia",
-				src:
+				src: 
 				"https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F0f59699e1dd943ba87446eb0c7ec9704",
 				name: "Nadid",
-				description: "Traits Background Story Teaser",
-				buttonShow: true
+				description: "Nadia Rahim wants to become a doctor - but will love and religion get in the way?",
+				buttonShow: true,
+				link: "/profile"
 			},
 			{
-				alt: "Ben",
+				alt: "Aman",
 				src:
 				"https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F67b34f4b3f8c45abaca6389b1e8e0d53",
-				name: "Ben",
-				description: "Traits Background Story Teaser",
-				buttonShow: true
-			},
-			{
-				alt: "Sally",
-				src:
-				"https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F2b85e086dd6e4e9f8cee78e60a8b2f0e",
-				name: "Sally",
-				description: "Traits Background Story Teaser",
-				buttonShow: true
-			}
+				name: "Aman",
+				description: "Aman Singh dreams of writing poetry - but he has bigger headaches to deal with first.",
+				buttonShow: true,
+				link: "/home"
+			} 
 			], 
 			personas2: [
 			{
-				alt: "Nadia",
+				alt: "Nazeema",
 				src:
 				"https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F0f59699e1dd943ba87446eb0c7ec9704",
-				name: "Nadid",
+				name: "Nazeema",
 				description: "Traits Background Story Teaser",
 				buttonShow: false
 			},
 			{
-				alt: "Ben",
+				alt: "Zhi Hao",
 				src:
 				"https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F67b34f4b3f8c45abaca6389b1e8e0d53",
-				name: "Ben",
+				name: "Zhi Hao",
 				description: "Traits Background Story Teaser",
 				buttonShow: false
 			},
@@ -116,7 +109,7 @@ class App extends React.Component {
 					<div className="App">
 						{/* user profile section  */}
 						<Box className="profileBox" px={3} m={5}>
-							<CharacterProfile userInfo={user}/>
+							<PlayerProfile userInfo={user}/>
 						</Box> 
 
 						{/* your personas section  */}
@@ -131,7 +124,7 @@ class App extends React.Component {
 							{/* map the JSON data into the components */}
 							{personas.map((persona) => {
 								return (
-								<Grid item xs={4}>
+								<Grid item xs={6}>
 									<CharacterAvatar personaInfo={persona} />
 								</Grid>
 								);
@@ -172,4 +165,4 @@ class App extends React.Component {
 		);
 	}
 }
-export default App;
+export default CharacterChoice;

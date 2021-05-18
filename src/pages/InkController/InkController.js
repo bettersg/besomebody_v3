@@ -1,14 +1,15 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { Box, Container, Typography } from '@material-ui/core'
-import NadidInk from '../../inkJsons/nadid.ink.json'
-import DavidInk from '../../inkJsons/david.ink.json'
+import NadidInk from '../../stories/nadid.ink.json'
+import DavidInk from '../../stories/david.ink.json'
 import useInk from '../../lib/Ink/useInk'
 import NotFoundPage from '../../components/NotFoundPage'
-import WhatsApp from '../../components/WhatsApp'
-import School from '../../components/School'
-import InkControls from '../../components/Ink/InkControls'
-import DefaultInk from '../../components/DefaultInk'
+import WhatsApp from '../WhatsApp'
+import School from '../School'
+import InkControls from './InkControls'
+import DefaultInk from '../DefaultInk'
 
 const getInkJson = (nameParam) => {
   switch (nameParam) {
@@ -24,7 +25,13 @@ const getInkJson = (nameParam) => {
   }
 }
 
-const getUi = ({ paragraphs, choices, specialTags, setChoice }) => {
+const getUi = ({
+  paragraphs,
+  choices,
+  specialTags,
+  globalVariables,
+  setChoice,
+}) => {
   switch (specialTags.ui) {
     case 'school': {
       return (
@@ -33,6 +40,7 @@ const getUi = ({ paragraphs, choices, specialTags, setChoice }) => {
           choices={choices}
           setChoice={setChoice}
           specialTags={specialTags}
+          globalVariables={globalVariables}
         />
       )
     }
@@ -43,6 +51,7 @@ const getUi = ({ paragraphs, choices, specialTags, setChoice }) => {
           choices={choices}
           setChoice={setChoice}
           specialTags={specialTags}
+          globalVariables={globalVariables}
         />
       )
     }
@@ -53,6 +62,7 @@ const getUi = ({ paragraphs, choices, specialTags, setChoice }) => {
           choices={choices}
           setChoice={setChoice}
           specialTags={specialTags}
+          globalVariables={globalVariables}
         />
       )
   }
@@ -69,6 +79,7 @@ const InkController = () => {
     paragraphs,
     choices,
     specialTags,
+    globalVariables,
     hasSavedState,
 
     // Methods
@@ -81,17 +92,31 @@ const InkController = () => {
     resetSavedStory,
   } = useInk(inkJson, name)
 
+  /*
+  // ===========
+  // EXAMPLE
+  // ===========
+  useEffect(() => {
+    // MOCK CONDITION: Save game only if global variables or the ui key in special tags exists
+    if (globalVariables || specialTags.ui) {
+      saveStory()
+    }
+
+    // MOCK CONDITION: Trigger this useEffect everytime global variables or the ui key in special tags updates
+  }, [globalVariables, specialTags?.ui])
+  */
+
   if (!inkJson) {
     return <NotFoundPage />
   }
 
   return (
     <Container maxWidth="lg">
-      <Box fontSize="h4.fontSize" my={2}>
-        <Typography variant="inherit">{name}</Typography>
+      <Box>
+        <Typography variant="overline">{name}</Typography>
       </Box>
 
-      {getUi({ paragraphs, choices, specialTags, setChoice })}
+      {getUi({ paragraphs, choices, specialTags, globalVariables, setChoice })}
 
       {/* Render event triggers */}
       <InkControls
