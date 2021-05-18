@@ -2,6 +2,8 @@
     background-size: cover; 
     background-position: center; 
     background-color: #808080;
+    height: 390px; 
+    margin-bottom: 15px;
 }
 .text-wrapper {
     background: grey;
@@ -10,7 +12,7 @@
 .whatsapp-header {
     background: #045E54;
     color: white;
-    height: 50%; 
+    height: 70px;  
 }
 .chatbox-sender {
     background: #E1FFC7;
@@ -32,4 +34,43 @@
 .text-area {
     overflow-y: scroll;
 }
-
+.choices-wrapper {
+    height: 220px; 
+    overflow-y: scroll;
+    z-index: -1;
+    
+    .choices-title {
+        text-align: center;
+        font-weight: 800;
+    }
+    .choices {
+        border: 1px solid grey;
+        border-radius: 10px;
+        margin: 5px; 
+        padding: 10px;
+        &:hover {
+            background-color: lightblue;
+        }
+    }
+}
+.send-wrapper {
+    padding: 10px 0; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: grey; 
+    border-top: solid grey 0.1px;
+    .send-button {
+        border: 1px solid grey;
+        border-radius: 15px;
+        padding: 3px 80px; 
+        color: black;
+        &:hover {
+            background-color: #045E54;
+        }
+    }
+    .wa-sticker {
+        width: 6%;
+        height: 6%;
+    }
+}
