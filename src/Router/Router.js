@@ -18,6 +18,7 @@ import SignUp from '../pages/SignUp/SignUp'
 import Login from '../pages/Login/Login'
 import ForgetPassword from '../pages/ForgetPassword/ForgetPassword'
 import InkController from '../pages/InkController/InkController'
+import WhatsappPage from '../pages/WhatsappPage/Whatsapp'
 
 class Router extends Component {
   render() {
@@ -82,8 +83,8 @@ class Router extends Component {
             <InstagramPage />
           </Route>
 
-          <Route path="/email" exact>
-            <EmailPage />
+          <Route path="/wa" exact>
+            <WhatsappPage />
           </Route>
 
           <Route>
