@@ -1,3 +1,6 @@
+VAR nadid_mood = 5
+VAR gavin_mood = 5
+
 
 -> nadid_chapter6
 
@@ -30,12 +33,15 @@ Introduction: I didn't really like Gavin at first. He was always acting silly, n
    Bae, what's up? I just got home and was going to watch some Netflix. You ok? # Speaker1
    // Gaurav - actually i want to make this an emoji instead of text
    * (direct) My pa saw us holding hands[] and he's super pissed. he hasn't stopped yelling for an hour. # Speaker_self 
+   ~ nadid_mood = nadid_mood - 1
    * i just need to escape my pa for a while[.] can you just chat with me? # Speaker_self
    - dee you know i'm always here for you. this sounds bad... what is he saying? # Speaker1
    he was so angry. he kept yelling about you not being a good person and then stormed out of the house screaming. like i know what it's really about. he just hates that i'm not dating a muslim boy. # Speaker_self
    even ma started crying. she said some shit about not raising me properly to have values and started praying that i will change like wtf i am happy with who i am and who i am with # Speaker_self
    * {direct} i'm angry [] more than anything. what the hell. i'm 17. i'm not some stupid kid who doesn't know what i want.  # Speaker_self
+   ~ nadid_mood = nadid_mood - 1
    * i'm really sad [.] why can't they be happy for me? why must holding hands turn into such a bloody fight # Speaker_self
+   ~ gavin_mood = gavin_mood - 1
    - I'm so sorry dee. don't go back out there unless he comes back in a calm state. Would it help if I came down to talk to them? # Speaker1
    // gaurav: actually i want the bottom option only to show if she was rude to him earlier in the game
    Oh gav you're such an angel for offering but you're an idiot.... pa will get even more angry if he sees you in person. i don't know what to do. # Speaker_self
@@ -45,6 +51,7 @@ Introduction: I didn't really like Gavin at first. He was always acting silly, n
    oh no dee, my profile is locked but i have my church role listed in my profile description. oh shit i'm so sorry i'm trying to change it now # Speaker1
    too late gav. # Speaker_self
    * pa is ranting about your religion[], saying "this boy will never convert for me and that he just wants to do what all teenage boys do and he has no morals" like how tf does he get that from an insta profile # Speaker_self
+   ~ gavin_mood = gavin_mood - 1
    * pa is getting really upset. i can't tell if he's angry or sad now though []... his voice sounds different # Speaker_self
    // gaurav: if nadia chooses this option, gavin's morale reduces
    - dee i really can come down right now and talk to him. i'm not scared. i want him to know that i really care about you # Speaker1
@@ -53,6 +60,7 @@ Introduction: I didn't really like Gavin at first. He was always acting silly, n
    it sounds like they have gone to sleep already. man what a nightmare. i don't know what tomorrow will be like in the morning. sigh why must life be so difficult for us # Speaker_self
    i know dee, i wish people would just be happy for us. even in school i heard amelia say shit about us. they don't even know what we're like, but they all want to talk about whether we will last or not # Speaker1
    * amelia?! why is she so kaypoh? [] why is our relationship any of her business and what is she saying about us? # Speaker_self
+   ~ nadid_mood = nadid_mood - 1
    * sigh unwanted advice? [] yeah i know a few people who think they are trying to help but just give shitty advice like we should break up now before things get harder later. # Speaker_self
    - sigh # Speaker1
    you know how much i care about you dee. i wish it was just you and me alone on an island somewhere. none of this shit from other people about what race you are or religion you are. # Speaker1

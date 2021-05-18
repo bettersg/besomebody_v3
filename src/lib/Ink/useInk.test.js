@@ -1,7 +1,7 @@
 import { renderHook, act } from '@testing-library/react-hooks'
 import { waitFor } from '@testing-library/react'
 import useInk from './useInk'
-import testJson from './test.ink.json'
+import testJson from '../../stories/test.ink.json'
 import { useAuth } from '../../contexts/AuthContext'
 import {
   createDbSavedStates,
@@ -107,17 +107,22 @@ describe('useInk Hook Test', () => {
         rightCharacter: '',
       },
       inkJson: JSON.stringify(mockJson),
+      globalVariables: {
+        nadid_mood: 5,
+        gavin_mood: 5,
+      },
     })
     deleteDbSavedStates.mockReturnValue()
   })
 
   it('should display default states', async () => {
-    const { result } = renderHook(() => useInk(testJson))
+    const { result } = renderHook(() => useInk(testJson, 'test'))
     const {
       isStoryStarted,
       paragraphs,
       choices,
       specialTags,
+      globalVariables,
       hasSavedState,
     } = result.current
 
@@ -127,12 +132,13 @@ describe('useInk Hook Test', () => {
       expect(paragraphs).toMatchObject([])
       expect(choices).toMatchObject([])
       expect(specialTags).toMatchObject({})
+      expect(globalVariables).toMatchObject({})
       expect(hasSavedState).toBe(false)
     })
   })
 
   it('should start story, populate paragraphs, and populate specialTags', async () => {
-    const { result } = renderHook(() => useInk(testJson))
+    const { result } = renderHook(() => useInk(testJson, 'test'))
 
     // Run getStory once
     act(() => {
@@ -140,7 +146,8 @@ describe('useInk Hook Test', () => {
     })
 
     // Expect states to be populated
-    const { isStoryStarted, paragraphs, specialTags } = result.current
+    const { isStoryStarted, paragraphs, specialTags, globalVariables } =
+      result.current
     await waitFor(() => {
       expect(isStoryStarted).toBe(true)
       expect(paragraphs.length).toBe(1)
@@ -150,11 +157,15 @@ describe('useInk Hook Test', () => {
         leftCharacter: 'Nadia_happy.jpg',
         rightCharacter: '',
       })
+      expect(globalVariables).toMatchObject({
+        nadid_mood: 5,
+        gavin_mood: 5,
+      })
     })
   })
 
   it('should have choices and should be able to submit choice', async () => {
-    const { result } = renderHook(() => useInk(testJson))
+    const { result } = renderHook(() => useInk(testJson, 'test'))
 
     // Run getStory 3 times
     act(() => {
@@ -186,7 +197,7 @@ describe('useInk Hook Test', () => {
   })
 
   it('should reset story, paragraphs, and specialTags', async () => {
-    const { result } = renderHook(() => useInk(testJson))
+    const { result } = renderHook(() => useInk(testJson, 'test'))
 
     // Run getStory once
     act(() => {
@@ -203,6 +214,10 @@ describe('useInk Hook Test', () => {
         leftCharacter: 'Nadia_happy.jpg',
         rightCharacter: '',
       })
+      expect(result.current.globalVariables).toMatchObject({
+        nadid_mood: 5,
+        gavin_mood: 5,
+      })
     })
 
     // Run resetStory once
@@ -215,11 +230,12 @@ describe('useInk Hook Test', () => {
       expect(result.current.isStoryStarted).toBe(false)
       expect(result.current.paragraphs).toMatchObject([])
       expect(result.current.specialTags).toMatchObject({})
+      expect(result.current.globalVariables).toMatchObject({})
     })
   })
 
   it('should start story from whatsapp chapter', async () => {
-    const { result } = renderHook(() => useInk(testJson))
+    const { result } = renderHook(() => useInk(testJson, 'test'))
 
     // Run startStoryFrom with whatsapp string
     act(() => {
@@ -227,7 +243,8 @@ describe('useInk Hook Test', () => {
     })
 
     // Expect states to be populated
-    const { isStoryStarted, paragraphs, specialTags } = result.current
+    const { isStoryStarted, paragraphs, specialTags, globalVariables } =
+      result.current
     await waitFor(() => {
       expect(isStoryStarted).toBe(true)
       expect(paragraphs.length).toBe(1)
@@ -237,11 +254,15 @@ describe('useInk Hook Test', () => {
         chatgroupTitle: 'Gavin',
         chatgroupImage: 'Gavin_profile.jpg',
       })
+      expect(globalVariables).toMatchObject({
+        nadid_mood: 5,
+        gavin_mood: 5,
+      })
     })
   })
 
   it('should save state', async () => {
-    const { result } = renderHook(() => useInk(testJson))
+    const { result } = renderHook(() => useInk(testJson, 'test'))
 
     // Run getStory once
     act(() => {
@@ -260,8 +281,54 @@ describe('useInk Hook Test', () => {
     })
   })
 
+  it('should see that global variables changed', async () => {
+    const { result } = renderHook(() => useInk(testJson, 'test'))
+
+    // Start story from WhatsApp chapter
+    act(() => {
+      result.current.startStoryFrom('whatsapp')
+    })
+
+    // Expect globalVariables to be default
+    await waitFor(() => {
+      expect(result.current.globalVariables).toMatchObject({
+        nadid_mood: 5,
+        gavin_mood: 5,
+      })
+    })
+
+    // Run getStory 2 times
+    act(() => {
+      result.current.getStory()
+    })
+    act(() => {
+      result.current.getStory()
+    })
+
+    // Expect choices to be populated
+    await waitFor(() => {
+      expect(result.current.choices.length).toBe(2)
+    })
+
+    // Submit choice and get story
+    act(() => {
+      result.current.setChoice(result.current.choices[0].index)
+    })
+    act(() => {
+      result.current.getStory()
+    })
+
+    // Expect globalVariables to change, nadid_mood decreases
+    await waitFor(() => {
+      expect(result.current.globalVariables).toMatchObject({
+        nadid_mood: 4,
+        gavin_mood: 5,
+      })
+    })
+  })
+
   it('should load saved story', async () => {
-    const { result } = renderHook(() => useInk(testJson))
+    const { result } = renderHook(() => useInk(testJson, 'test'))
 
     // Run getStory
     act(() => {
@@ -277,6 +344,10 @@ describe('useInk Hook Test', () => {
         background: 'school.jpg',
         leftCharacter: 'Nadia_happy.jpg',
         rightCharacter: '',
+      })
+      expect(result.current.globalVariables).toMatchObject({
+        nadid_mood: 5,
+        gavin_mood: 5,
       })
     })
 
@@ -295,6 +366,7 @@ describe('useInk Hook Test', () => {
       expect(result.current.isStoryStarted).toBe(false)
       expect(result.current.paragraphs).toMatchObject([])
       expect(result.current.specialTags).toMatchObject({})
+      expect(result.current.globalVariables).toMatchObject({})
     })
 
     // Run loadSavedStory
@@ -312,11 +384,15 @@ describe('useInk Hook Test', () => {
         leftCharacter: 'Nadia_happy.jpg',
         rightCharacter: '',
       })
+      expect(result.current.globalVariables).toMatchObject({
+        nadid_mood: 5,
+        gavin_mood: 5,
+      })
     })
   })
 
   it('should clear saved state', async () => {
-    const { result } = renderHook(() => useInk(testJson))
+    const { result } = renderHook(() => useInk(testJson, 'test'))
 
     // Run getStory once
     act(() => {
