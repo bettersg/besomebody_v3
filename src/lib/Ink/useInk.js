@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react'
 import { Story } from 'inkjs'
-import { initInk, STORY_VALUE_TYPE } from './initInk'
+import { initInk } from './initInk'
 import { useAuth } from '../../contexts/AuthContext'
 import {
   createDbSavedStates,
@@ -23,11 +23,11 @@ const useInk = (json, inkName) => {
   const [isStoryStarted, setIsStoryStarted] = React.useState(false)
 
   // Paragraphs is an array of object that contains
-  // { text: string, tags: string[] }
+  // { text: string, tags: string[], currentChapter: string }
   const [paragraphs, setParagraphs] = React.useState([])
 
   // Choices is an array of object that contains
-  // { text: string, index: number, tags: string[] }
+  // { text: string, index: number, tags: string[], currentChapter: string }
   const [choices, setChoices] = React.useState([])
 
   // SpecialTags is an dynamic object with only strings as it values
@@ -35,6 +35,9 @@ const useInk = (json, inkName) => {
 
   // GlobalVariables is an dynamic object
   const [globalVariables, setGlobalVariables] = React.useState({})
+
+  // CurrentChapter is an dynamic object
+  const [currentChapter, setCurrentChapter] = React.useState(null)
 
   // Save story progression states
   const [hasSavedState, setHasSavedState] = React.useState(false)
@@ -73,13 +76,17 @@ const useInk = (json, inkName) => {
    * - Set storyStarted to true if it is false
    * - Update globalVariables if there are global variables
    * - Update specialTags if there are special tags
+   * - Update currentChapter if chapter is retrieved
    * - Update either choices or paragraphs state
    */
   const handleGetStory = async () => {
     // Set storyStarted to true if it is false
     if (!isStoryStarted) setIsStoryStarted(true)
 
+    // Get next story step
     const nextStep = inkStory.nextStoryStep()
+
+    // Return nothing if story ended
     if (!nextStep) return null
 
     // Update globalVariables if there are global variables
@@ -87,33 +94,33 @@ const useInk = (json, inkName) => {
     if (currentGlobalVariables) setGlobalVariables(currentGlobalVariables)
 
     // Update specialTags if there are special tags
-    const currentSpecialTags = nextStep.tags.filter((tag) => tag.includes(':'))
-    if (currentSpecialTags.length) handleUpdateSpecialTags(currentSpecialTags)
-    const nonSpecialTags = nextStep.tags.filter((tag) => !tag.includes(':'))
+    const nextSpecialTags = nextStep.tags.filter((tag) => tag.includes(':'))
+    if (nextSpecialTags.length) handleUpdateSpecialTags(nextSpecialTags)
 
-    switch (nextStep.type) {
-      // Append to existing paragraphs array
-      case STORY_VALUE_TYPE.TEXT: {
-        const values = {
-          text: nextStep.values,
-          tags: nonSpecialTags,
+    // Update currentChapter if chapter is retrieved
+    const nextCurrentChapter = nextStep.currentChapter
+    if (nextCurrentChapter) setCurrentChapter(nextCurrentChapter)
+
+    // Update paragraphs
+    const normalTags = nextStep.tags.filter((tag) => !tag.includes(':'))
+    const paragraphValues = {
+      text: nextStep.paragraph,
+      tags: normalTags,
+      currentChapter: nextStep.currentChapter,
+    }
+    setParagraphs([...paragraphs, paragraphValues])
+
+    // Update choices if there's choices
+    if (nextStep.choices.length) {
+      const nextChoices = nextStep.choices.map((choice) => {
+        return {
+          text: choice.text,
+          index: choice.index,
+          tags: normalTags,
+          currentChapter: nextStep.currentChapter,
         }
-        return setParagraphs([...paragraphs, values])
-      }
-
-      // Replaces existing choices array
-      case STORY_VALUE_TYPE.CHOICE: {
-        const nextChoices = nextStep.values.map((step) => {
-          return {
-            text: step.text,
-            index: step.index,
-            tags: nonSpecialTags,
-          }
-        })
-        return setChoices(nextChoices)
-      }
-      default:
-        return
+      })
+      return setChoices(nextChoices)
     }
   }
 
@@ -134,6 +141,7 @@ const useInk = (json, inkName) => {
     setChoices([])
     setSpecialTags({})
     setGlobalVariables({})
+    setCurrentChapter(null)
     inkStory.resetStory()
   }
 
@@ -158,6 +166,7 @@ const useInk = (json, inkName) => {
       inkJson: savedState,
       specialTags,
       globalVariables,
+      currentChapter,
       paragraphs,
       choices,
       userId: currentUser.uid,
@@ -180,6 +189,7 @@ const useInk = (json, inkName) => {
     setChoices(savedStateRes.choices)
     setSpecialTags(savedStateRes.specialTags)
     setGlobalVariables(savedStateRes.globalVariables)
+    setCurrentChapter(savedStateRes.currentChapter)
     setIsStoryStarted(true)
     inkStory.loadStoryState(savedStateRes.inkJson)
   }
@@ -197,6 +207,7 @@ const useInk = (json, inkName) => {
     choices,
     specialTags,
     globalVariables,
+    currentChapter,
     hasSavedState,
 
     // Methods
