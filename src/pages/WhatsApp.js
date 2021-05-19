@@ -23,24 +23,14 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const WhatsApp = (props) => {
-  const { paragraphs, choices, setChoice, specialTags, globalVariables } = props
+  const {
+    currentParagraphs,
+    choices,
+    setChoice,
+    specialTags,
+    globalVariables,
+  } = props
   const classes = useStyles({ image: specialTags.background })
-
-  // ==========================================
-  // Get paragraphs belonging to this UI
-  // ==========================================
-  const [currentParagraphs, setCurrentParagraphs] = useState([])
-
-  // Get the splice index when this component renders for the first time
-  const paragraphSpliceIndex = useMemo(() => paragraphs.length - 1, [])
-
-  // Eveytime paragraphs gets updated, only retrieve paragraphs starting from the paragraphSpliceIndex
-  useEffect(() => {
-    const nextParagraphs = [...paragraphs]
-    nextParagraphs.splice(0, paragraphSpliceIndex)
-
-    return setCurrentParagraphs([...nextParagraphs])
-  }, [paragraphs])
 
   // ========================================================
   // Help to scroll to bottom of the paragraphs render screen
