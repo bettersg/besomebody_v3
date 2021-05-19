@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useMemo, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Box, Button, Fade, Typography } from '@material-ui/core'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 
@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   textWrapper: {
     background: theme.palette.grey[100],
     opacity: 0.9,
-    height: '100%'
+    height: '100%',
   },
 }))
 

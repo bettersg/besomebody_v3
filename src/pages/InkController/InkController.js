@@ -59,7 +59,7 @@ const getUi = ({
       return (
         // to change to an instagram
         <WhatsApp 
-          paragraphs={paragraphs}
+          currentParagraphs={currentParagraphs}
           choices={choices}
           setChoice={setChoice}
           specialTags={specialTags}
@@ -111,11 +111,14 @@ const InkController = () => {
   const [currentParagraphs, setCurrentParagraphs] = useState([])
 
   useEffect(() => {
-    const nextParagraphs = paragraphs.filter((paragraph) => {
-      return paragraph.currentChapter === currentChapter
-    })
-    setCurrentParagraphs([...nextParagraphs])
+    if (currentChapter || paragraphs[paragraphs.length - 1]?.currentChapter) {
+      const nextParagraphs = paragraphs.filter((paragraph) => {
+        return paragraph.currentChapter === currentChapter
+      })
+      return setCurrentParagraphs([...nextParagraphs])
+    }
 
+    setCurrentParagraphs(paragraphs)
     // Run this useEffect whenever paragraphs or currentChapter get updated
   }, [paragraphs, currentChapter])
 
