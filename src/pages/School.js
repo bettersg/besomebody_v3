@@ -8,10 +8,12 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: ({ image }) => `url('/images/${image}')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    height: '80vh',
   },
   textWrapper: {
     background: theme.palette.grey[100],
     opacity: 0.9,
+    height: '100%'
   },
 }))
 
@@ -51,7 +53,7 @@ const School = (props) => {
 
   return (
     <Fade in>
-      <Box className={classes.paragraphWrapper} p={3}>
+      <Box className={classes.paragraphWrapper} p={3} height="100%">
         <Box
           className={classes.textWrapper}
           p={3}

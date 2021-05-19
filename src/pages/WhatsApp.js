@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: ({ image }) => `url('/images/${image}')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    height: '80vh',
   },
   whatsappHeader: {
     background: '#045E54',
@@ -89,7 +90,7 @@ const WhatsApp = (props) => {
           </Grid>
         </Box>
 
-        <Box maxHeight={300} overflow="scroll">
+        <Box maxHeight={500} overflow="scroll">
           {currentParagraphs.map((step) => {
             if (step.tags[0]?.includes('Speaker_self')) {
               return (

@@ -3,7 +3,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { Box, Container, Typography } from '@material-ui/core'
 import NadidInk from '../../stories/nadid.ink.json'
-import DavidInk from '../../stories/david.ink.json'
+import DavidInk from '../../stories/test2.ink.json'
 import useInk from '../../lib/Ink/useInk'
 import NotFoundPage from '../../components/NotFoundPage'
 import WhatsApp from '../WhatsApp'
@@ -124,7 +124,7 @@ const InkController = () => {
 
   return (
     <Container maxWidth="lg">
-      <Box>
+      <Box >
         <Typography variant="overline">{name}</Typography>
       </Box>
 

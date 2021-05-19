@@ -15,18 +15,26 @@ const InkControls = (props) => {
     resetSavedStory,
   } = props
 
+  /* 
+  // Call the savestory function when there is a boolean flag in the ink story called saveStory
+  if (globalVariables.saveStory) {
+    saveStory()
+  }
+  */
+  
   return (
     <>
-      <Box mt={5} mb={2}>
+      <Box width="100%">
         
         <Divider />
       </Box>
 
       {getStory && (
-        <Box my={2}>
+        <Box width="100%">
           <Button
             endIcon={<NavigateNextIcon />}
             color="primary"
+            fullWidth
             onClick={() => {
               getStory()
             }}
@@ -36,6 +44,16 @@ const InkControls = (props) => {
         </Box>
       )}
 
+
+    </>
+  )
+}
+
+export default InkControls
+
+/* 
+
+// I removed and commented these out as our story is unlikely to present these functions directly to the user. They should be triggered by events at the back-end, rather than presented on the front-end.
       {isStoryStarted && resetStory && (
         <Box my={2}>
           <Button variant="text" color="primary" onClick={() => resetStory()}>
@@ -85,8 +103,4 @@ const InkControls = (props) => {
           </Box>
         </Box>
       )}
-    </>
-  )
-}
-
-export default InkControls
+*/
