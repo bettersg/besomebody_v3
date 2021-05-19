@@ -20,7 +20,7 @@ Introduction: I didn't really like Gavin at first. He was always acting silly, n
 #leftCharacter:Nadia_happy.jpg
 #rightCharacter:Gavin_happy.jpg
     Initially, we were really careful. I made sure that we never held hands in public, and nobody talked about us in school because we kept our distance. After a while, we got careless. Gavin held my hand one day at the bus stop just outside my house. It was just for a few seconds, but that was enough. My pa was across the road at the coffee shop, and he saw. When I got home, he was furious. Pa yelled at me and said that I could never see Gavin again. He made all sorts of threats. He yelled again. I cried and ran into my room to lock the door. I had to talk to Gavin.
-    * [...] -> whatsapp
+    * [MiniGame] 
     
 
 == whatsapp ==

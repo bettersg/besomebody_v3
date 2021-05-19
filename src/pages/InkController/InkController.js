@@ -55,6 +55,18 @@ const getUi = ({
         />
       )
     }
+    case 'instagram': {
+      return (
+        // to change to an instagram
+        <WhatsApp 
+          paragraphs={paragraphs}
+          choices={choices}
+          setChoice={setChoice}
+          specialTags={specialTags}
+          globalVariables={globalVariables}
+        />
+      )
+    }
     default:
       return (
         <DefaultInk

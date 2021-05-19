@@ -5,7 +5,7 @@ import makeStyles from '@material-ui/core/styles/makeStyles'
 
 const useStyles = makeStyles((theme) => ({
   paragraphWrapper: {
-    backgroundImage: ({ image }) => `url('/gameAssets/${image}')`,
+    backgroundImage: ({ image }) => `url('/images/${image}')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   },

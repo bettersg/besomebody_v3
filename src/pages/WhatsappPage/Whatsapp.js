@@ -12,7 +12,7 @@ const Whatsapp = (props) => {
                 <Grid item xs={2}>
                     <Box className="whatsapp-box">
                         <img
-                            src={`gameAssets/${props.content.chatgroupImage}`}
+                            src={`images/${props.content.chatgroupImage}`}
                             alt="Chat Profile"
                         />
                     </Box>
