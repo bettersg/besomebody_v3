@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Box, Container, Typography } from '@material-ui/core'
 import NadidInk from '../../stories/nadid.ink.json'
@@ -26,7 +26,7 @@ const getInkJson = (nameParam) => {
 }
 
 const getUi = ({
-  paragraphs,
+  currentParagraphs,
   choices,
   specialTags,
   globalVariables,
@@ -36,7 +36,7 @@ const getUi = ({
     case 'school': {
       return (
         <School
-          paragraphs={paragraphs}
+          currentParagraphs={currentParagraphs}
           choices={choices}
           setChoice={setChoice}
           specialTags={specialTags}
@@ -47,7 +47,7 @@ const getUi = ({
     case 'whatsapp': {
       return (
         <WhatsApp
-          paragraphs={paragraphs}
+          currentParagraphs={currentParagraphs}
           choices={choices}
           setChoice={setChoice}
           specialTags={specialTags}
@@ -59,7 +59,7 @@ const getUi = ({
       return (
         // to change to an instagram
         <WhatsApp 
-          paragraphs={paragraphs}
+          currentParagraphs={currentParagraphs}
           choices={choices}
           setChoice={setChoice}
           specialTags={specialTags}
@@ -70,7 +70,7 @@ const getUi = ({
     default:
       return (
         <DefaultInk
-          paragraphs={paragraphs}
+          currentParagraphs={currentParagraphs}
           choices={choices}
           setChoice={setChoice}
           specialTags={specialTags}
@@ -92,6 +92,7 @@ const InkController = () => {
     choices,
     specialTags,
     globalVariables,
+    currentChapter,
     hasSavedState,
 
     // Methods
@@ -103,6 +104,23 @@ const InkController = () => {
     loadSavedStory,
     resetSavedStory,
   } = useInk(inkJson, name)
+
+  // ==============================================================
+  // Filter paragraphs based on current chapter
+  // ==============================================================
+  const [currentParagraphs, setCurrentParagraphs] = useState([])
+
+  useEffect(() => {
+    if (currentChapter || paragraphs[paragraphs.length - 1]?.currentChapter) {
+      const nextParagraphs = paragraphs.filter((paragraph) => {
+        return paragraph.currentChapter === currentChapter
+      })
+      return setCurrentParagraphs([...nextParagraphs])
+    }
+
+    setCurrentParagraphs(paragraphs)
+    // Run this useEffect whenever paragraphs or currentChapter get updated
+  }, [paragraphs, currentChapter])
 
   /*
   // ===========
@@ -128,7 +146,13 @@ const InkController = () => {
         <Typography variant="overline">{name}</Typography>
       </Box>
 
-      {getUi({ paragraphs, choices, specialTags, globalVariables, setChoice })}
+      {getUi({
+        currentParagraphs,
+        choices,
+        specialTags,
+        globalVariables,
+        setChoice,
+      })}
 
       {/* Render event triggers */}
       <InkControls

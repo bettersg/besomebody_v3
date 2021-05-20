@@ -6,6 +6,7 @@
     {
       "nadid_chapter6": [
         [
+          { "#": "chapter:nadid_chapter6" },
           { "#": "ui:school" },
           { "#": "background:school.jpg" },
           { "#": "leftCharacter:Nadia_happy.jpg" },
@@ -27,6 +28,7 @@
       ],
       "found_out": [
         [
+          { "#": "chapter:found_out" },
           { "#": "ui:school" },
           { "#": "background:school.jpg" },
           { "#": "leftCharacter:Nadia_happy.jpg" },
@@ -45,6 +47,7 @@
       ],
       "whatsapp": [
         [
+          { "#": "chapter:whatsapp" },
           { "#": "ui:whatsapp" },
           { "#": "background:whatsapp.png" },
           { "#": "chatgroupTitle:Gavin" },
@@ -57,7 +60,7 @@
           "\n",
           [
             "ev",
-            { "^->": "whatsapp.0.10.$r1" },
+            { "^->": "whatsapp.0.11.$r1" },
             { "temp=": "$r" },
             "str",
             { "->": ".^.s" },
@@ -75,7 +78,7 @@
           ],
           [
             "ev",
-            { "^->": "whatsapp.0.11.$r1" },
+            { "^->": "whatsapp.0.12.$r1" },
             { "temp=": "$r" },
             "str",
             { "->": ".^.s" },
@@ -100,7 +103,7 @@
               { "^->": "whatsapp.0.c-0.$r2" },
               "/ev",
               { "temp=": "$r" },
-              { "->": ".^.^.10.s" },
+              { "->": ".^.^.11.s" },
               [{ "#n": "$r2" }],
               "^ and he's super pissed. he hasn't stopped yelling for an hour. ",
               { "#": "Speaker_self" },
@@ -119,7 +122,7 @@
               { "^->": "whatsapp.0.c-1.$r2" },
               "/ev",
               { "temp=": "$r" },
-              { "->": ".^.^.11.s" },
+              { "->": ".^.^.12.s" },
               [{ "#n": "$r2" }],
               "^ can you just chat with me? ",
               { "#": "Speaker_self" },
@@ -666,13 +669,14 @@
         { "#f": 1 }
       ],
       "break_up": [
+        { "#": "chapter:break_up" },
         { "#": "ui:school" },
         { "#": "background:school.jpg" },
         { "#": "leftCharacter:" },
         { "#": "rightCharacter:" },
         "^We broke up a little while later, for many reasons aside from this.",
         "\n",
-        "end",
+        "done",
         { "#f": 1 }
       ],
       "global decl": [

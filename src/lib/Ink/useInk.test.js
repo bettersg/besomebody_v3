@@ -111,6 +111,7 @@ describe('useInk Hook Test', () => {
         nadid_mood: 5,
         gavin_mood: 5,
       },
+      currentChapter: 'nadid_chapter6',
     })
     deleteDbSavedStates.mockReturnValue()
   })
@@ -123,6 +124,7 @@ describe('useInk Hook Test', () => {
       choices,
       specialTags,
       globalVariables,
+      currentChapter,
       hasSavedState,
     } = result.current
 
@@ -133,6 +135,7 @@ describe('useInk Hook Test', () => {
       expect(choices).toMatchObject([])
       expect(specialTags).toMatchObject({})
       expect(globalVariables).toMatchObject({})
+      expect(currentChapter).toBe(null)
       expect(hasSavedState).toBe(false)
     })
   })
@@ -146,8 +149,13 @@ describe('useInk Hook Test', () => {
     })
 
     // Expect states to be populated
-    const { isStoryStarted, paragraphs, specialTags, globalVariables } =
-      result.current
+    const {
+      isStoryStarted,
+      paragraphs,
+      specialTags,
+      globalVariables,
+      currentChapter,
+    } = result.current
     await waitFor(() => {
       expect(isStoryStarted).toBe(true)
       expect(paragraphs.length).toBe(1)
@@ -161,6 +169,7 @@ describe('useInk Hook Test', () => {
         nadid_mood: 5,
         gavin_mood: 5,
       })
+      expect(currentChapter).toBe('nadid_chapter6')
     })
   })
 
@@ -168,9 +177,6 @@ describe('useInk Hook Test', () => {
     const { result } = renderHook(() => useInk(testJson, 'test'))
 
     // Run getStory 3 times
-    act(() => {
-      result.current.getStory()
-    })
     act(() => {
       result.current.getStory()
     })
@@ -191,12 +197,23 @@ describe('useInk Hook Test', () => {
 
     // Expect paragraphs to increase and choices to be reset
     await waitFor(() => {
+      expect(result.current.choices.length).toBe(1)
       expect(result.current.paragraphs.length).toBe(3)
+    })
+
+    // Submit choice using setChoice with a choice index
+    act(() => {
+      result.current.setChoice(result.current.choices[0].index)
+    })
+
+    // Expect paragraphs to increase and choices to be reset
+    await waitFor(() => {
+      expect(result.current.paragraphs.length).toBe(4)
       expect(result.current.choices).toMatchObject([])
     })
   })
 
-  it('should reset story, paragraphs, and specialTags', async () => {
+  it('should reset story, paragraphs, specialTags, globalVariables, and currentChapter', async () => {
     const { result } = renderHook(() => useInk(testJson, 'test'))
 
     // Run getStory once
@@ -218,6 +235,7 @@ describe('useInk Hook Test', () => {
         nadid_mood: 5,
         gavin_mood: 5,
       })
+      expect(result.current.currentChapter).toBe('nadid_chapter6')
     })
 
     // Run resetStory once
@@ -231,6 +249,7 @@ describe('useInk Hook Test', () => {
       expect(result.current.paragraphs).toMatchObject([])
       expect(result.current.specialTags).toMatchObject({})
       expect(result.current.globalVariables).toMatchObject({})
+      expect(result.current.currentChapter).toBe(null)
     })
   })
 
@@ -243,8 +262,13 @@ describe('useInk Hook Test', () => {
     })
 
     // Expect states to be populated
-    const { isStoryStarted, paragraphs, specialTags, globalVariables } =
-      result.current
+    const {
+      isStoryStarted,
+      paragraphs,
+      specialTags,
+      globalVariables,
+      currentChapter,
+    } = result.current
     await waitFor(() => {
       expect(isStoryStarted).toBe(true)
       expect(paragraphs.length).toBe(1)
@@ -258,6 +282,7 @@ describe('useInk Hook Test', () => {
         nadid_mood: 5,
         gavin_mood: 5,
       })
+      expect(currentChapter).toBe('whatsapp')
     })
   })
 
@@ -327,6 +352,33 @@ describe('useInk Hook Test', () => {
     })
   })
 
+  it('should see that currentChapter changes', async () => {
+    const { result } = renderHook(() => useInk(testJson, 'test'))
+
+    // Run getStory twice
+    act(() => {
+      result.current.getStory()
+    })
+    act(() => {
+      result.current.getStory()
+    })
+
+    // Expect globalVariables to be default
+    await waitFor(() => {
+      expect(result.current.currentChapter).toBe('nadid_chapter6')
+    })
+
+    // Submit choice using setChoice with a choice index
+    act(() => {
+      result.current.setChoice(result.current.choices[0].index)
+    })
+
+    // Expect globalVariables to be default
+    await waitFor(() => {
+      expect(result.current.currentChapter).toBe('found_out')
+    })
+  })
+
   it('should load saved story', async () => {
     const { result } = renderHook(() => useInk(testJson, 'test'))
 
@@ -349,6 +401,7 @@ describe('useInk Hook Test', () => {
         nadid_mood: 5,
         gavin_mood: 5,
       })
+      expect(result.current.currentChapter).toBe('nadid_chapter6')
     })
 
     // Run saveStory
@@ -367,6 +420,7 @@ describe('useInk Hook Test', () => {
       expect(result.current.paragraphs).toMatchObject([])
       expect(result.current.specialTags).toMatchObject({})
       expect(result.current.globalVariables).toMatchObject({})
+      expect(result.current.currentChapter).toBe(null)
     })
 
     // Run loadSavedStory
@@ -388,6 +442,7 @@ describe('useInk Hook Test', () => {
         nadid_mood: 5,
         gavin_mood: 5,
       })
+      expect(result.current.currentChapter).toBe('nadid_chapter6')
     })
   })
 
