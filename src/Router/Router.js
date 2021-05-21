@@ -21,7 +21,6 @@ import CharacterChoice from "../pages/HomePage/CharacterChoice"
 // import InkTestPageBasic from '../pages/InkTestPage/InkTestPageBasic'
 // import InstagramPage from '../pages/InstagramPage/InstagramPage'
 
-
 class Router extends Component {
   render() {
     // Properties
@@ -102,6 +101,7 @@ class Router extends Component {
           </Route>
         </Switch>
       </BrowserRouter>
+        
     )
   }
 }

@@ -2,7 +2,7 @@
     background-size: cover; 
     background-position: center; 
     background-color: #808080;
-    height: 390px; 
+    height: 375px; 
     margin-bottom: 15px;
 }
 .text-wrapper {
@@ -13,6 +13,7 @@
     background: #045E54;
     color: white;
     height: 70px;  
+    margin-bottom: 0 !important; 
 }
 .chatbox-sender {
     background: #E1FFC7;
@@ -33,11 +34,12 @@
 
 .text-area {
     overflow-y: scroll;
+    height: 100%; 
 }
 .choices-wrapper {
     height: 220px; 
     overflow-y: scroll;
-    z-index: -1;
+    // z-index: -1;
     
     .choices-title {
         text-align: center;
@@ -60,6 +62,10 @@
     align-items: center;
     color: grey; 
     border-top: solid grey 0.1px;
+    position: absolute;
+    bottom: 20px; 
+    right: 0; 
+    left: 0;
     .send-button {
         border: 1px solid grey;
         border-radius: 15px;

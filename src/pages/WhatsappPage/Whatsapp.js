@@ -1,8 +1,11 @@
-import React from "react";
-import { Box, Grid, Typography } from '@material-ui/core'
-import "./style.scss"; 
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useMemo, useRef, useState } from 'react'
+import { Box, Button, Fade, Grid, Typography } from '@material-ui/core'
+import makeStyles from '@material-ui/core/styles/makeStyles'
+
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
-import MicNoneIcon from '@material-ui/icons/MicNone';; 
+import MicNoneIcon from '@material-ui/icons/MicNone';
+import "./style.scss"; 
 
 const data = {
     content : {
@@ -62,89 +65,131 @@ const data = {
 }
 
 const Whatsapp = (props) => {
+    const { paragraphs, choices, setChoice, specialTags, globalVariables } = props; 
+
+    // ==========================================
+    // Get paragraphs belonging to this UI
+    // ==========================================
+    const [currentParagraphs, setCurrentParagraphs] = useState([])
+
+    // Get the splice index when this component renders for the first time
+    const paragraphSpliceIndex = useMemo(() => paragraphs.length - 1, [])
+
+    // Eveytime paragraphs gets updated, only retrieve paragraphs starting from the paragraphSpliceIndex
+    useEffect(() => {
+        const nextParagraphs = [...paragraphs]
+        nextParagraphs.splice(0, paragraphSpliceIndex)
+
+        return setCurrentParagraphs([...nextParagraphs])
+    }, [paragraphs])
+
+    // ========================================================
+    // Help to scroll to bottom of the paragraphs render screen
+    // ========================================================
+    const elementRef = useRef()
+
+    // Eveytime currentParagraphs gets updated or choices appear, scroll to the elementRef
+    useEffect(() => {
+        if (elementRef.current) {
+        elementRef.current.scrollIntoView({
+            behavior: 'smooth',
+        })
+        }
+    }, [elementRef, currentParagraphs, choices])
 
     return (
         // TO DO: make whatsapp screen fit the screen and customise controls 
-        <Box className="paragraph-wrapper" pb={3}>
-            <Box className="whatsapp-header" p={1} mb={3}>
-                <Grid container alignItems="center">
-                <Grid item xs={2}>
-                    <Box className="whatsapp-box">
-                        <img
-                            src={"/gameAssets/" + data.content.chatgrpImg}
-                            alt="Chat Profile"
-                        />
-                    </Box>
-                </Grid>
-        
-                <Grid item xs={8}>
-                    <Typography color="inherit" variant="h6" className="chat-name">
-                        {data.content.chatgroupTitle}
-                    </Typography>
-                    <Typography color="inherit" variant="subtitle2">
-                        online
-                    </Typography>
-                </Grid>
-        
-                <Grid item xs={2} />
-                </Grid>
-            </Box> 
-        
-            <Box maxHeight={300} className="text-area">
-                {data.chat.map((content, index) => {
-                    {console.log(content.text)}
-                if (content.him===true) {
-                    return (
-                    <Box
-                        key={content.text}
-                        my={2}
-                        mx={1}
-                        display="flex"
-                        justifyContent="flex-end"
-                    >
-                        <Box
-                            className="chatbox-sender"
-                            borderRadius={5}
-                            p={1}
-                        >
-                            <Typography>{content.text}</Typography>
+        <Fade in>
+
+            <Box className="paragraph-wrapper" pb={3}>
+                <Box className="whatsapp-header" p={1} mb={3}>
+                    <Grid container alignItems="center">
+                    <Grid item xs={2}>
+                        <Box className="whatsapp-box">
+                            <img
+                                src={`/gameAssets/${specialTags.chatgroupImage}`}
+                                alt="Chat Profile"
+                            />
                         </Box>
-                    </Box>
-                    )
-                } else {
-                    return (
-                    <Box key={content.text} my={2} mx={1} display="flex">
+                    </Grid>
+            
+                    <Grid item xs={8}>
+                        <Typography color="inherit" variant="h6" className="chat-name">
+                            {specialTags.chatgroupTitle}
+                        </Typography>
+                        <Typography color="inherit" variant="subtitle2">
+                            online
+                        </Typography>
+                    </Grid>
+            
+                    <Grid item xs={2} />
+                    </Grid>
+                </Box> 
+            
+                <Box maxHeight={300} className="text-area">
+                    {currentParagraphs.map((step) => {
+                    if (step.tags[0]?.includes('Speaker_self')) {
+                        return (
                         <Box
-                            className="chatbox-receiver"
-                            borderRadius={5}
-                            p={1}
+                            key={step.text}
+                            my={2}
+                            mx={1}
+                            display="flex"
+                            justifyContent="flex-end"
                         >
-                        <Typography>{content.text}</Typography>
+                            <Fade in={step.text}>
+                                <Box
+                                    className="chatbox-sender"
+                                    borderRadius={5}
+                                    p={1}
+                                >
+                                    <Typography>{step.text}</Typography>
+                                </Box>
+                            </Fade>
                         </Box>
+                        )
+                    } else {
+                        return (
+                        <Box key={step.text} my={2} mx={1} display="flex">
+                            <Box
+                                className="chatbox-receiver"
+                                borderRadius={5}
+                                p={1}
+                            >
+                            <Typography>{step.text}</Typography>
+                            </Box>
+                        </Box>
+                        )
+                    }
+                    })}
+
+                    <div ref={elementRef} />
+                </Box>
+                <Box className="choices-wrapper">
+                    <p className="choices-title">What should (Character) say?</p>
+                    {choices.map((choice) => {
+                        return (
+                            <Box 
+                                className="choices"
+                                onClick={() => setChoice(choice.index)}
+                            >
+                                {choice.text}
+                            </Box>
+
+                        )
+                    })}
+
+                    <Box className="send-wrapper">
+                        <FiberManualRecordIcon/>
+                        <Box className="send-button">
+                            Send
+                        </Box>
+                        <img src="gameAssets/wa-sticker.png" className="wa-sticker"></img>
+                        <MicNoneIcon/>
                     </Box>
-                    )
-                }
-                })}
-                <div ref={props.eleRef} />
+                </Box>
             </Box>
-            <Box className="choices-wrapper">
-                <p className="choices-title">What should (Character) say?</p>
-                {data.characterChoice.map((content, index) => {
-                    return (
-                        <Box className="choices">{content.text}</Box>
-
-                    )
-                })}
-
-            </Box>
-            <Box className="send-wrapper">
-                <FiberManualRecordIcon/>
-                <Box className="send-button">Send</Box>
-                <img src="gameAssets/wa-sticker.png" className="wa-sticker"></img>
-                <MicNoneIcon/>
-
-            </Box>
-        </Box>
+        </Fade>
 
     )
 }

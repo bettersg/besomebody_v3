@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, Button, Divider, Typography } from '@material-ui/core'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext'
+import "./styles.scss"
 
 const InkControls = (props) => {
   const {
@@ -16,15 +17,16 @@ const InkControls = (props) => {
   } = props
 
   return (
-    <>
-      <Box mt={5} mb={2}>
+    <div className="story">
+      {/* <Box mt={5} mb={2}>
         
         <Divider />
-      </Box>
+      </Box> */}
 
       {getStory && (
         <Box my={2}>
           <Button
+            className="next-button"
             endIcon={<NavigateNextIcon />}
             color="primary"
             onClick={() => {
@@ -38,7 +40,7 @@ const InkControls = (props) => {
 
       {isStoryStarted && resetStory && (
         <Box my={2}>
-          <Button variant="text" color="primary" onClick={() => resetStory()}>
+          <Button variant="text" color="primary" onClick={() => resetStory()} className="reset-button">
             Reset Story
           </Button>
         </Box>
@@ -55,6 +57,7 @@ const InkControls = (props) => {
       {isStoryStarted && saveStory && (
         <Box my={2}>
           <Button
+            className="save-button"
             variant="contained"
             color="primary"
             onClick={() => saveStory()}
@@ -85,7 +88,7 @@ const InkControls = (props) => {
           </Box>
         </Box>
       )}
-    </>
+    </div>
   )
 }
 

@@ -6,7 +6,7 @@ import NadidInk from '../../stories/nadid.ink.json'
 import DavidInk from '../../stories/david.ink.json'
 import useInk from '../../lib/Ink/useInk'
 import NotFoundPage from '../../components/NotFoundPage'
-import WhatsApp from '../WhatsApp'
+import WhatsApp from '../WhatsappPage/Whatsapp'
 import School from '../School'
 import InkControls from './InkControls'
 import DefaultInk from '../DefaultInk'
@@ -115,8 +115,9 @@ const InkController = () => {
       <Box>
         <Typography variant="overline">{name}</Typography>
       </Box>
-
-      {getUi({ paragraphs, choices, specialTags, globalVariables, setChoice })}
+      <div className="ui-screens">
+        {getUi({ paragraphs, choices, specialTags, globalVariables, setChoice })}
+      </div>
 
       {/* Render event triggers */}
       <InkControls
