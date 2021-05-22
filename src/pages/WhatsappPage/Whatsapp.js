@@ -2,9 +2,8 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { Box, Button, Fade, Grid, Typography } from '@material-ui/core'
 import makeStyles from '@material-ui/core/styles/makeStyles'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
-import MicNoneIcon from '@material-ui/icons/MicNone';
 import "./style.scss"; 
 
 const data = {
@@ -109,6 +108,7 @@ const Whatsapp = (props) => {
                             <img
                                 src={`/gameAssets/${specialTags.chatgroupImage}`}
                                 alt="Chat Profile"
+                                className="profile-img"
                             />
                         </Box>
                     </Grid>
@@ -117,7 +117,7 @@ const Whatsapp = (props) => {
                         <Typography color="inherit" variant="h6" className="chat-name">
                             {specialTags.chatgroupTitle}
                         </Typography>
-                        <Typography color="inherit" variant="subtitle2">
+                        <Typography color="inherit" variant="subtitle2" className="online-status">
                             online
                         </Typography>
                     </Grid>
@@ -125,8 +125,7 @@ const Whatsapp = (props) => {
                     <Grid item xs={2} />
                     </Grid>
                 </Box> 
-            
-                <Box maxHeight={300} className="text-area">
+                <Box className={`text-area ${choices.length === 0 ? 'full' : ""}`}>
                     {currentParagraphs.map((step) => {
                     if (step.tags[0]?.includes('Speaker_self')) {
                         return (
@@ -165,8 +164,17 @@ const Whatsapp = (props) => {
 
                     <div ref={elementRef} />
                 </Box>
-                <Box className="choices-wrapper">
-                    <p className="choices-title">What should (Character) say?</p>
+
+                <Box className="send-wrapper">
+                    <Box className={`send-button ${choices.length === 0 ? '' : "choice"}`}>
+                        Choose your reply...
+                    </Box>
+                    <Box className="send-button-right">
+                        <ExpandMoreIcon />
+                    </Box>
+                </Box>
+                <Box className={`choices-wrapper ${choices.length === 0 ? 'no-choices' : ""}`}>
+                    {/* <p className="choices-title">What should (Character) say?</p> */}
                     {choices.map((choice) => {
                         return (
                             <Box 
@@ -175,18 +183,8 @@ const Whatsapp = (props) => {
                             >
                                 {choice.text}
                             </Box>
-
                         )
                     })}
-
-                    <Box className="send-wrapper">
-                        <FiberManualRecordIcon/>
-                        <Box className="send-button">
-                            Send
-                        </Box>
-                        <img src="gameAssets/wa-sticker.png" className="wa-sticker"></img>
-                        <MicNoneIcon/>
-                    </Box>
                 </Box>
             </Box>
         </Fade>
