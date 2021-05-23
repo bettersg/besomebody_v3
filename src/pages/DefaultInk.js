@@ -2,10 +2,10 @@ import React from 'react'
 import { Box, Button, Fade, Typography } from '@material-ui/core'
 
 const DefaultInk = (props) => {
-  const { paragraphs, choices, setChoice, specialTags } = props
+  const { currentParagraphs, choices, setChoice, specialTags } = props
   return (
     <Box>
-      {paragraphs?.map((paragraph) => {
+      {currentParagraphs?.map((paragraph) => {
         return (
           <Box my={2}>
             <Fade in={paragraph.text}>

@@ -1,13 +1,14 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useMemo, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Box, Button, Fade, Grid, Typography } from '@material-ui/core'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 
 const useStyles = makeStyles((theme) => ({
   paragraphWrapper: {
-    backgroundImage: ({ image }) => `url('/gameAssets/${image}')`,
+    backgroundImage: ({ image }) => `url('/images/${image}')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    height: '80vh',
   },
   whatsappHeader: {
     background: '#045E54',
@@ -22,24 +23,14 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const WhatsApp = (props) => {
-  const { paragraphs, choices, setChoice, specialTags, globalVariables } = props
+  const {
+    currentParagraphs,
+    choices,
+    setChoice,
+    specialTags,
+    globalVariables,
+  } = props
   const classes = useStyles({ image: specialTags.background })
-
-  // ==========================================
-  // Get paragraphs belonging to this UI
-  // ==========================================
-  const [currentParagraphs, setCurrentParagraphs] = useState([])
-
-  // Get the splice index when this component renders for the first time
-  const paragraphSpliceIndex = useMemo(() => paragraphs.length - 1, [])
-
-  // Eveytime paragraphs gets updated, only retrieve paragraphs starting from the paragraphSpliceIndex
-  useEffect(() => {
-    const nextParagraphs = [...paragraphs]
-    nextParagraphs.splice(0, paragraphSpliceIndex)
-
-    return setCurrentParagraphs([...nextParagraphs])
-  }, [paragraphs])
 
   // ========================================================
   // Help to scroll to bottom of the paragraphs render screen
@@ -70,7 +61,7 @@ const WhatsApp = (props) => {
                 <img
                   width="100%"
                   height="100%"
-                  src={`/gameAssets/${specialTags.chatgroupImage}`}
+                  src={`/images/${specialTags.chatgroupImage}`}
                   alt="Chat Profile"
                 />
               </Box>
@@ -89,7 +80,7 @@ const WhatsApp = (props) => {
           </Grid>
         </Box>
 
-        <Box maxHeight={300} overflow="scroll">
+        <Box maxHeight={500} overflow="scroll">
           {currentParagraphs.map((step) => {
             if (step.tags[0]?.includes('Speaker_self')) {
               return (
