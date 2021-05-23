@@ -1,0 +1,25 @@
+.story {
+    .next-button {
+        bottom: 0; 
+        right: 0;
+        height: 20px; 
+        position: absolute;
+    }
+    .reset-button {
+        display: none;
+    }
+    .save-button {
+        bottom: 0; 
+        left: 0;
+        height: 20px;
+        position: absolute;
+    }
+    
+}
+
+.ui-screens {
+    min-height: 90%; 
+}
+.MuiContainer-root {
+    padding: 0% !important;
+}

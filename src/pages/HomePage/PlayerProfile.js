@@ -67,8 +67,6 @@ export default function PlayerProfile(props) {
               <Typography>8 Chapters</Typography>              
             </Grid>
            </Grid>
-        
-
           </Paper>
         </div>
     </ThemeProvider>

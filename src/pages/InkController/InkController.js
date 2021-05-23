@@ -6,7 +6,7 @@ import NadidInk from '../../stories/nadid.ink.json'
 import DavidInk from '../../stories/test2.ink.json'
 import useInk from '../../lib/Ink/useInk'
 import NotFoundPage from '../../components/NotFoundPage'
-import WhatsApp from '../WhatsApp'
+import WhatsApp from '../WhatsappPage/Whatsapp'
 import School from '../School'
 import InkControls from './InkControls'
 import DefaultInk from '../DefaultInk'
@@ -145,6 +145,7 @@ const InkController = () => {
       <Box >
         <Typography variant="overline">{name}</Typography>
       </Box>
+ 
 
       {getUi({
         currentParagraphs,
@@ -153,6 +154,7 @@ const InkController = () => {
         globalVariables,
         setChoice,
       })}
+
 
       {/* Render event triggers */}
       <InkControls
