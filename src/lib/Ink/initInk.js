@@ -1,31 +1,25 @@
-const STORY_VALUE_TYPE = {
-  CHOICE: 'choice',
-  TEXT: 'text',
-}
-
 const initInk = (storyApi, json) => {
   const inkStory = new storyApi(json)
 
   const nextStoryStep = () => {
-    if (inkStory.currentChoices.length) {
-      const values = {
-        type: STORY_VALUE_TYPE.CHOICE,
-        values: inkStory.currentChoices,
-        tags: inkStory.currentTags,
-      }
-      return values
-    }
-
     if (inkStory.canContinue) {
-      const text = inkStory.Continue()
-      if (text === '\n') {
+      inkStory.Continue()
+      if (inkStory.state.currentText === '') {
         return nextStoryStep()
       }
 
+      const currentChapterTag = inkStory.currentTags
+        .find((tag) => tag.includes('chapter:'))
+        ?.split(':')[1]
+      const currentChapter = inkStory.currentChoices.length
+        ? inkStory.currentChoices[0].sourcePath?.split('.')[0]
+        : inkStory.state.currentPathString?.split('.')[0]
+
       const values = {
-        type: STORY_VALUE_TYPE.TEXT,
-        values: text,
-        tags: inkStory.currentTags,
+        paragraph: inkStory.state.currentText,
+        choices: inkStory.currentChoices,
+        tags: inkStory.currentTags || [],
+        currentChapter: currentChapter || currentChapterTag,
       }
       return values
     }
@@ -73,5 +67,4 @@ const initInk = (storyApi, json) => {
 
 module.exports = {
   initInk: initInk,
-  STORY_VALUE_TYPE: STORY_VALUE_TYPE,
 }

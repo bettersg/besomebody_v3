@@ -4,32 +4,34 @@ VAR gavin_mood = 5
 -> nadid_chapter6
 
 === nadid_chapter6 ===
-#UI: Background_with_two_characters
-#Background: school.jpg
-#Left_character: Nadia_happy.jpg
-
+#chapter:nadid_chapter6
+#ui:school
+#background:school.jpg
+#leftCharacter:Nadia_happy.jpg
+#rightCharacter:
 Family Matters # Title
 
 Introduction: I didn't really like Gavin at first. He was always acting silly, never taking things seriously, and was a bit sloppy in his appearance. It was only when we both were assigned to a class project that I got to know the real him. And when I did, he surprised me. He was really earnest and genuine beneath that exterior, and he was a really sweet person. I never expected to like someone like Gavin, but by the end of the project, I had a full blown crush on him. And after that last class, when he told me he liked me... well, I felt like my heart was going to explode. We have been dating for about 2 years now, but in secret from most people. Gavin is a Chinese Christian, and I'm a Malay Muslim.
      -> found_out
     
 == found_out ==    
-#UI: Background_with_two_characters
-#Background: school.jpg
-#Left_character: Nadia_happy.jpg
-#Right_character: Gavin_happy.jpg
+#chapter:found_out
+#ui:school
+#background:school.jpg
+#leftCharacter:Nadia_happy.jpg
+#rightCharacter:Gavin_happy.jpg
     Initially, we were really careful. I made sure that we never held hands in public, and nobody talked about us in school because we kept our distance. After a while, we got careless. Gavin held my hand one day at the bus stop just outside my house. It was just for a few seconds, but that was enough. My pa was across the road at the coffee shop, and he saw. When I got home, he was furious. Pa yelled at me and said that I could never see Gavin again. He made all sorts of threats. He yelled again. I cried and ran into my room to lock the door. I had to talk to Gavin.
     + [...] -> whatsapp
     
 -> whatsapp
 
 
-    == whatsapp ==
-# UI: Whatsapp
-# Chatgroup_title: Gavin
-# Chatgroup_image: Gavin_profile.jpg
-# Speaker1: Gavin
-# Speaker_self: Nadid
+== whatsapp ==
+#chapter:whatsapp
+#ui:whatsapp
+#background:whatsapp.png
+#chatgroupTitle:Gavin
+#chatgroupImage:Gavin_profile.jpg
     
    Gav are you there? I really need to talk. # Speaker_self
    Bae, what's up? I just got home and was going to watch some Netflix. You ok? # Speaker1
@@ -90,7 +92,12 @@ Introduction: I didn't really like Gavin at first. He was always acting silly, n
     -> break_up
     
 == break_up ==
+#chapter:break_up
+#ui:school
+#background:school.jpg
+#leftCharacter:
+#rightCharacter:
 We broke up a little while later, for many reasons aside from this.
 
 
--> END
+-> DONE

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, Button, Divider, Typography } from '@material-ui/core'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext'
+import "./styles.scss"
 
 const InkControls = (props) => {
   const {
@@ -23,15 +24,16 @@ const InkControls = (props) => {
   */
   
   return (
-    <>
-      <Box width="100%">
+    <div className="story">
+      {/* <Box mt={5} mb={2}>
         
         <Divider />
-      </Box>
+      </Box> */}
 
       {getStory && (
         <Box width="100%">
           <Button
+            className="next-button"
             endIcon={<NavigateNextIcon />}
             color="primary"
             fullWidth
@@ -56,7 +58,7 @@ export default InkControls
 // I removed and commented these out as our story is unlikely to present these functions directly to the user. They should be triggered by events at the back-end, rather than presented on the front-end.
       {isStoryStarted && resetStory && (
         <Box my={2}>
-          <Button variant="text" color="primary" onClick={() => resetStory()}>
+          <Button variant="text" color="primary" onClick={() => resetStory()} className="reset-button">
             Reset Story
           </Button>
         </Box>
@@ -73,6 +75,7 @@ export default InkControls
       {isStoryStarted && saveStory && (
         <Box my={2}>
           <Button
+            className="save-button"
             variant="contained"
             color="primary"
             onClick={() => saveStory()}
@@ -103,4 +106,8 @@ export default InkControls
           </Box>
         </Box>
       )}
-*/
+    </div>
+  )
+}
+
+export default InkControls

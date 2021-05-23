@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useMemo, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Box, Button, Fade, Typography } from '@material-ui/core'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 
@@ -13,29 +13,19 @@ const useStyles = makeStyles((theme) => ({
   textWrapper: {
     background: theme.palette.grey[100],
     opacity: 0.9,
-    height: '100%'
+    height: '100%',
   },
 }))
 
 const School = (props) => {
-  const { paragraphs, choices, setChoice, specialTags, globalVariables } = props
+  const {
+    currentParagraphs,
+    choices,
+    setChoice,
+    specialTags,
+    globalVariables,
+  } = props
   const classes = useStyles({ image: specialTags.background })
-
-  // ==========================================
-  // Get paragraphs belonging to this UI
-  // ==========================================
-  const [currentParagraphs, setCurrentParagraphs] = useState([])
-
-  // Get the splice index when this component renders for the first time
-  const paragraphSpliceIndex = useMemo(() => paragraphs.length - 1, [])
-
-  // Eveytime paragraphs gets updated, only retrieve paragraphs starting from the paragraphSpliceIndex
-  useEffect(() => {
-    const nextParagraphs = [...paragraphs]
-    nextParagraphs.splice(0, paragraphSpliceIndex)
-
-    return setCurrentParagraphs([...nextParagraphs])
-  }, [paragraphs])
 
   // ========================================================
   // Help to scroll to bottom of the paragraphs render screen

@@ -11,6 +11,7 @@ import Login from '../pages/Login/Login'
 import ForgetPassword from '../pages/ForgetPassword/ForgetPassword'
 
 import InkController from '../pages/InkController/InkController'
+import WhatsappPage from '../pages/WhatsappPage/Whatsapp'
 
 import HomePage from '../pages/HomePage/HomePage'
 import CharProfilePage from '../pages/CharProfilePage/CharProfilePage'
@@ -19,7 +20,6 @@ import CharacterChoice from "../pages/HomePage/CharacterChoice"
 // import InkTestPage from '../pages/InkTestPage/InkTestPage'
 // import InkTestPageBasic from '../pages/InkTestPage/InkTestPageBasic'
 // import InstagramPage from '../pages/InstagramPage/InstagramPage'
-
 
 class Router extends Component {
   render() {
@@ -114,11 +114,16 @@ class Router extends Component {
           
           */}
 
+          <Route path="/wa" exact>
+            <WhatsappPage />
+          </Route>
+
           <Route>
             <NotFoundPage />
           </Route>
         </Switch>
       </BrowserRouter>
+        
     )
   }
 }
