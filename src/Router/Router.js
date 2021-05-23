@@ -16,6 +16,8 @@ import WhatsappPage from '../pages/WhatsappPage/Whatsapp'
 import HomePage from '../pages/HomePage/HomePage'
 import CharProfilePage from '../pages/CharProfilePage/CharProfilePage'
 import CharacterChoice from "../pages/HomePage/CharacterChoice"
+import MultipleChoiceQuiz from '../pages/MiniGames/MultipleChoiceQuiz/MultipleChoiceQuiz/MultipleChoiceQuiz'
+
 
 // import InkTestPage from '../pages/InkTestPage/InkTestPage'
 // import InkTestPageBasic from '../pages/InkTestPage/InkTestPageBasic'
@@ -94,6 +96,10 @@ class Router extends Component {
 
           <Route path="/profile" exact>
             <CharProfilePage />
+          </Route>
+
+          <Route path="/quiz" exact>
+            <MultipleChoiceQuiz />
           </Route>
 
           
