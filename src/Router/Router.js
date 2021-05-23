@@ -111,12 +111,13 @@ class Router extends Component {
           <Route path="/insta" exact>
             <InstagramPage />
           </Route>
-          
-          */}
 
           <Route path="/wa" exact>
             <WhatsappPage />
           </Route>
+          
+          */}
+
 
           <Route>
             <NotFoundPage />

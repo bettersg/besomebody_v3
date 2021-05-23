@@ -25,10 +25,6 @@ const InkControls = (props) => {
   
   return (
     <div className="story">
-      {/* <Box mt={5} mb={2}>
-        
-        <Divider />
-      </Box> */}
 
       {getStory && (
         <Box width="100%">
@@ -45,17 +41,24 @@ const InkControls = (props) => {
           </Button>
         </Box>
       )}
-
-
-    </>
+      </div>
   )
 }
 
+
+
+
+
+      
+            
 export default InkControls
 
-/* 
 
-// I removed and commented these out as our story is unlikely to present these functions directly to the user. They should be triggered by events at the back-end, rather than presented on the front-end.
+
+
+
+{/*    
+      // I removed and commented these out as our story is unlikely to present these functions directly to the user. They should be triggered by events at the back-end, rather than presented on the front-end.
       {isStoryStarted && resetStory && (
         <Box my={2}>
           <Button variant="text" color="primary" onClick={() => resetStory()} className="reset-button">
@@ -109,5 +112,4 @@ export default InkControls
     </div>
   )
 }
-
-export default InkControls
+*/ }
