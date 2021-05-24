@@ -23,11 +23,11 @@ const useInk = (json, inkName) => {
   const [isStoryStarted, setIsStoryStarted] = React.useState(false)
 
   // Paragraphs is an array of object that contains
-  // { text: string, tags: string[], currentChapter: string }
+  // { text: string, tags: string[], currentKnot: string }
   const [paragraphs, setParagraphs] = React.useState([])
 
   // Choices is an array of object that contains
-  // { text: string, index: number, tags: string[], currentChapter: string }
+  // { text: string, index: number, tags: string[], currentKnot: string }
   const [choices, setChoices] = React.useState([])
 
   // SpecialTags is an dynamic object with only strings as it values
@@ -36,8 +36,8 @@ const useInk = (json, inkName) => {
   // GlobalVariables is an dynamic object
   const [globalVariables, setGlobalVariables] = React.useState({})
 
-  // CurrentChapter is an dynamic object
-  const [currentChapter, setCurrentChapter] = React.useState(null)
+  // CurrentKnot is an string denoting the current knot the user is in
+  const [currentKnot, setCurrentKnot] = React.useState(null)
 
   // Save story progression states
   const [hasSavedState, setHasSavedState] = React.useState(false)
@@ -76,7 +76,7 @@ const useInk = (json, inkName) => {
    * - Set storyStarted to true if it is false
    * - Update globalVariables if there are global variables
    * - Update specialTags if there are special tags
-   * - Update currentChapter if chapter is retrieved
+   * - Update currentKnot if chapter is retrieved
    * - Update either choices or paragraphs state
    */
   const handleGetStory = async () => {
@@ -97,16 +97,16 @@ const useInk = (json, inkName) => {
     const nextSpecialTags = nextStep.tags.filter((tag) => tag.includes(':'))
     if (nextSpecialTags.length) handleUpdateSpecialTags(nextSpecialTags)
 
-    // Update currentChapter if chapter is retrieved
-    const nextCurrentChapter = nextStep.currentChapter
-    if (nextCurrentChapter) setCurrentChapter(nextCurrentChapter)
+    // Update currentKnot if chapter is retrieved
+    const nextCurrentKnot = nextStep.currentKnot
+    if (nextCurrentKnot) setCurrentKnot(nextCurrentKnot)
 
     // Update paragraphs
     const normalTags = nextStep.tags.filter((tag) => !tag.includes(':'))
     const paragraphValues = {
       text: nextStep.paragraph,
       tags: normalTags,
-      currentChapter: nextStep.currentChapter,
+      currentKnot: nextStep.currentKnot,
     }
     setParagraphs([...paragraphs, paragraphValues])
 
@@ -117,7 +117,7 @@ const useInk = (json, inkName) => {
           text: choice.text,
           index: choice.index,
           tags: normalTags,
-          currentChapter: nextStep.currentChapter,
+          currentKnot: nextStep.currentKnot,
         }
       })
       return setChoices(nextChoices)
@@ -141,7 +141,7 @@ const useInk = (json, inkName) => {
     setChoices([])
     setSpecialTags({})
     setGlobalVariables({})
-    setCurrentChapter(null)
+    setCurrentKnot(null)
     inkStory.resetStory()
   }
 
@@ -166,7 +166,7 @@ const useInk = (json, inkName) => {
       inkJson: savedState,
       specialTags,
       globalVariables,
-      currentChapter,
+      currentKnot,
       paragraphs,
       choices,
       userId: currentUser.uid,
@@ -189,7 +189,7 @@ const useInk = (json, inkName) => {
     setChoices(savedStateRes.choices)
     setSpecialTags(savedStateRes.specialTags)
     setGlobalVariables(savedStateRes.globalVariables)
-    setCurrentChapter(savedStateRes.currentChapter)
+    setCurrentKnot(savedStateRes.currentKnot)
     setIsStoryStarted(true)
     inkStory.loadStoryState(savedStateRes.inkJson)
   }
@@ -207,7 +207,7 @@ const useInk = (json, inkName) => {
     choices,
     specialTags,
     globalVariables,
-    currentChapter,
+    currentKnot,
     hasSavedState,
 
     // Methods
