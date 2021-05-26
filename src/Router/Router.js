@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { BrowserRouter, Switch, Redirect, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Redirect, Route , Link } from 'react-router-dom'
 
 import AdminPage from '../components/AdminPage'
 import UserPage from '../components/UserPage'
@@ -33,7 +33,29 @@ class Router extends Component {
         {/* {bar} */}
 
         <Switch>
-          <PrivateRoute path="/" exact>
+          <Route path="/" exact>
+            <>
+              {user ?
+                (
+                  <>
+                    <h2>logged-in player lands here from main URL</h2>
+                    <h4><Link to="/characterchoice">Resume Game</Link></h4>
+                  </>
+                )
+                :
+                (
+                  <>
+                    <h2>non-logged-in visitor lands here from main URL</h2>
+                    <h4><Link to="/intro">Play -> Start the intro sequence then signup form and profile builder</Link></h4>
+                    <h4><Link to="/login">Login to resume game</Link></h4>
+                  </>
+                )
+              }
+            </>
+          </Route>
+
+
+          <PrivateRoute path="/home" exact>
             <HomePage />
           </PrivateRoute>
 
@@ -67,7 +89,7 @@ class Router extends Component {
             {user ? <UserPage /> : <Redirect to="/" />}
           </Route>
 
-          <Route path="/home" exact>
+          <Route path="/characterchoice" exact>
             <CharacterChoice />
           </Route>
 
@@ -90,12 +112,13 @@ class Router extends Component {
           <Route path="/insta" exact>
             <InstagramPage />
           </Route>
-          
-          */}
 
           <Route path="/wa" exact>
             <WhatsappPage />
           </Route>
+          
+          */}
+
 
           <Route path="/email" exact>
             <EmailPage />

@@ -6,95 +6,30 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import "./style.scss"; 
 
-const data = {
-    content : {
-            chatgrpImg: "Gavin_profile.jpg",
-            chatgroupTitle: "Gavin", 
-    }, 
-    chat: [
-        {
-            him: true, 
-            text: "Gav are you there? I really need to talk."
-        }, 
-        {
-            him: false, 
-            text: "Bae, what's up? I just got home and was going to watch some Netflix. You ok?"
-        }, 
-        {
-            him: true, 
-            text: "Gav are you there? I really need to talk."
-        }, 
-        {
-            him: false, 
-            text: "Bae, what's up? I just got home and was going to watch some Netflix. You ok?"
-        }, 
-        {
-            him: true, 
-            text: "Gav are you there? I really need to talk."
-        }, 
-        {
-            him: false, 
-            text: "Bae, what's up? I just got home and was going to watch some Netflix. You ok?"
-        }, 
-        {
-            him: true, 
-            text: "Gav are you there? I really need to talk."
-        }, 
-        {
-            him: false, 
-            text: "Bae, what's up? I just got home and was going to watch some Netflix. You ok?"
-        }, 
-    ], 
-    characterChoice: [
-        {
-            text: "Excepteur sint occaecat cupidatat non proident, deserunt mollit anim id est eopksio "
-        }, 
-        {
-            text: "Bae, what's up? I just got home and was going to watch some Netflix. You ok?"
-        }, 
-        {
-            text: "Gav are you there? I really need to talk."
-        }, 
-        {
-            text: "Gav are you there? I really need to talk."
-        }
-    ]
-    
-    
-}
 
 const Whatsapp = (props) => {
-    const { paragraphs, choices, setChoice, specialTags, globalVariables } = props; 
-
-    // ==========================================
-    // Get paragraphs belonging to this UI
-    // ==========================================
-    const [currentParagraphs, setCurrentParagraphs] = useState([])
-
-    // Get the splice index when this component renders for the first time
-    const paragraphSpliceIndex = useMemo(() => paragraphs.length - 1, [])
-
-    // Eveytime paragraphs gets updated, only retrieve paragraphs starting from the paragraphSpliceIndex
-    useEffect(() => {
-        const nextParagraphs = [...paragraphs]
-        nextParagraphs.splice(0, paragraphSpliceIndex)
-
-        return setCurrentParagraphs([...nextParagraphs])
-    }, [paragraphs])
-
-    // ========================================================
-    // Help to scroll to bottom of the paragraphs render screen
-    // ========================================================
-    const elementRef = useRef()
-
-    // Eveytime currentParagraphs gets updated or choices appear, scroll to the elementRef
-    useEffect(() => {
+    const {
+        currentParagraphs,
+        choices,
+        setChoice,
+        specialTags,
+        globalVariables,
+      } = props
+      
+    
+      // ========================================================
+      // Help to scroll to bottom of the paragraphs render screen
+      // ========================================================
+      const elementRef = useRef()
+    
+      // Eveytime currentParagraphs gets updated or choices appear, scroll to the elementRef
+      useEffect(() => {
         if (elementRef.current) {
-        elementRef.current.scrollIntoView({
+          elementRef.current.scrollIntoView({
             behavior: 'smooth',
-        })
+          })
         }
-    }, [elementRef, currentParagraphs, choices])
+      }, [elementRef, currentParagraphs, choices])
 
     return (
         // TO DO: make whatsapp screen fit the screen and customise controls 
@@ -106,7 +41,7 @@ const Whatsapp = (props) => {
                     <Grid item xs={2}>
                         <Box className="whatsapp-box">
                             <img
-                                src={`/gameAssets/${specialTags.chatgroupImage}`}
+                                src={`/images/${specialTags.chatgroupImage}`}
                                 alt="Chat Profile"
                                 className="profile-img"
                             />
