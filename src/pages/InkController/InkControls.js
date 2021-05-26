@@ -47,7 +47,7 @@ const InkControls = (props) => {
       )}
 
 
-    </>
+    </div>
   )
 }
 
@@ -111,3 +111,5 @@ export default InkControls
 }
 
 export default InkControls
+
+*/

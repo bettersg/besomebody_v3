@@ -8,6 +8,7 @@ import Avatar from "@material-ui/core/Avatar";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Paper from '@material-ui/core/Paper';
+import Box from '@material-ui/core/Box';
 import { isClassExpression } from "typescript";
 
 const useStyles = makeStyles((theme) => ({
@@ -49,6 +50,7 @@ export default function PlayerProfile(props) {
     <ThemeProvider theme={theme}>
         <div className={classes}>
         <Paper> 
+          <Box bgcolor="text.secondary">
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Grid>
                 <Avatar className={classes.large}/>
@@ -67,6 +69,7 @@ export default function PlayerProfile(props) {
               <Typography>8 Chapters</Typography>              
             </Grid>
            </Grid>
+           </Box>
           </Paper>
         </div>
     </ThemeProvider>
