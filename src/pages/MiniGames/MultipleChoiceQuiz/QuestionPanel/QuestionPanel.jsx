@@ -1,22 +1,26 @@
 import React,{useState} from 'react';
-import {lighten, makeStyles } from '@material-ui/core/styles';
-import Box from '@material-ui/core/Box';
-import Container from '@material-ui/core/Container';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Divider from '@material-ui/core/Divider';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import './QuestionPanel.css';
+import { makeStyles } from '@material-ui/core/styles';
+
+import {
+  Box,
+  Button,
+  ButtonBase,
+  Card,
+  CardMedia,
+  CardActionArea,
+  CardContent,
+  Divider,
+  Typography
+} from '@material-ui/core'
+import './QuestionPanel.css'
 
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     textAlign:'left',
     padding:10
   },
+
   question:{
     color:'black',
   },
@@ -25,16 +29,78 @@ const useStyles = makeStyles({
     height: 16,
     borderRadius: 20,
   },
-});
+  media: {
+    height: 130,
+  },
+
+}));
+
+
+
 
 export default function QuestionPanel({question, nextQuestion, total, questionNo, progress, checkUserAnswer,maxScore, score}) {
   const [answered,setAnswered] = useState('');
   const [message,setMessage]=useState(''); 
+
+  const getUi = ({question,answer,answered,handleAnswer}) => {
   
+
+
+    switch(question.type){
+  
+      case("text"): {
+        return (
+          <Button 
+            fullWidth={true}
+            variant={answered === answer ? "contained" :"outlined"} 
+            color="primary" 
+            key={answer} 
+            onClick={()=>handleAnswer(answer)}
+            disabled={answered!==''? true : false}
+          >
+                  {answer}
+          </Button>
+        )
+      }
+      
+      case('image') : {
+        return (
+          <Box width={1/4} component="span">
+            <ButtonBase 
+              variant={answered === answer.title ? "contained" :"outlined"} 
+              color="primary" 
+              key={answer.title} 
+              onClick={()=>handleAnswer(answer.title)}
+              disabled={answered!==''? true : false}
+            >
+              <Card className={classes.imageCard}>
+                <CardActionArea>
+                <CardMedia
+                  className={classes.media}
+                  image={'/images/' + answer.url}
+                />
+                <CardContent>
+                  <Typography>
+                    {answer.title}
+                  </Typography>
+                </CardContent>
+                </CardActionArea>
+              </Card>
+            </ButtonBase>
+          </Box>
+        )
+      }
+  
+    }
+  
+  }
+
   const handleAnswer = (ans) =>{
     setAnswered(ans);
     checkUserAnswer(ans);
-    if(decodeURIComponent(question['correct_answer'])==ans){
+
+    
+    if(question['correct_answer']==ans){
       setMessage('Correct!')
     }
     else{
@@ -43,6 +109,7 @@ export default function QuestionPanel({question, nextQuestion, total, questionNo
   }
 
   const classes = useStyles();
+
   return (
   
   
@@ -50,29 +117,30 @@ export default function QuestionPanel({question, nextQuestion, total, questionNo
         <Card className={classes.root}>
           <CardActionArea>  
             <CardContent>
-              <Typography variant="p" component="h3">
+              <Typography variant="h5" >
                 Question {questionNo} of {total}
               </Typography>
               <Divider/>
-              <Typography  variant="body1" color="textSecondary" component="p" className={classes.question}>
-                {decodeURIComponent(question['question'])}
+              <Typography  color="textSecondary" className={classes.question}>
+                {question['question']}
               </Typography>
             </CardContent>
           </CardActionArea>
 
-            { question['answers'].map(key =>
-                <Button 
-                      fullWidth={true}
-                      variant={answered === decodeURIComponent(key)? "contained" :"outlined"} 
-                      color="primary" 
-                      key={decodeURIComponent(key)} 
-                      onClick={()=>handleAnswer(decodeURIComponent(key))}
-                      disabled={answered!==''?true : false}
-                >
-                        {decodeURIComponent(key)}
-                </Button>
+
+
+            <Box >
+            { question['answers'].map(answer =>
+                getUi({
+                  question,
+                  answer,
+                  answered,
+                  handleAnswer,
+                })
               )
             }
+            </Box>
+
             
 
           <Typography variant="h5" component="h3" className="message">

@@ -17,7 +17,7 @@ import HomePage from '../pages/HomePage/HomePage'
 import CharProfilePage from '../pages/CharProfilePage/CharProfilePage'
 import CharacterChoice from "../pages/HomePage/CharacterChoice"
 import MultipleChoiceQuiz from '../pages/MiniGames/MultipleChoiceQuiz/MultipleChoiceQuiz/MultipleChoiceQuiz'
-
+import TrueFalseQuiz from '../pages/MiniGames/TrueFalseQuiz/TrueFalseQuiz'
 
 // import InkTestPage from '../pages/InkTestPage/InkTestPage'
 // import InkTestPageBasic from '../pages/InkTestPage/InkTestPageBasic'
@@ -99,6 +99,10 @@ class Router extends Component {
           </Route>
 
           <Route path="/quiz" exact>
+            <TrueFalseQuiz />
+          </Route>
+
+          <Route path="/mcq" exact>
             <MultipleChoiceQuiz />
           </Route>
 
