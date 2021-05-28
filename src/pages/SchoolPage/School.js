@@ -3,12 +3,14 @@ import React, { useEffect, useRef } from 'react'
 import { Box, Button, Fade, Typography } from '@material-ui/core'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 
+import "./style.scss"
+
 const useStyles = makeStyles((theme) => ({
   paragraphWrapper: {
     backgroundImage: ({ image }) => `url('/images/${image}')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    height: '80vh',
+    height: '630px',
   },
   textWrapper: {
     background: theme.palette.grey[100],
@@ -40,6 +42,8 @@ const School = (props) => {
       })
     }
   }, [elementRef, currentParagraphs, choices])
+
+  console.log(choices)
 
   return (
     <Fade in>
@@ -73,6 +77,7 @@ const School = (props) => {
                   variant="contained"
                   color="primary"
                   onClick={() => setChoice(choice.index)}
+                  className="next-button"
                 >
                   <Typography variant="caption">{choice.text}</Typography>
                 </Button>
