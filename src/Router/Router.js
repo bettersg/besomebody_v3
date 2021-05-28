@@ -15,8 +15,8 @@ import InkController from '../pages/InkController/InkController'
 import LandingPage from '../pages/LandingPage'
 import CharacterChoicePage from "../pages/CharacterChoicePage"
 import CharacterChapterPage from "../pages/CharacterChapterPage"
+import IntroPage from "../pages/IntroPage"
  
-
 class Router extends Component {
   render() {
     // Properties
@@ -41,14 +41,9 @@ class Router extends Component {
           </Route>
 
 
-          <Route path="/intro" exact>            
-            <>
-              {/* <IntroPage /> */}
-              <h1>Intro video sequence</h1>
-              <h4><Link to="/signup">After video finishes, Sign up form</Link></h4>
-            </>
+          <Route path="/intro" exact>                        
+            <IntroPage />             
           </Route>
-
 
           <PrivateRoute path="/chapters/:name" exact>
             <CharacterChapterPage />
