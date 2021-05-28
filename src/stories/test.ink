@@ -36,13 +36,13 @@ Introduction: I didn't really like Gavin at first. He was always acting silly, n
    Gav are you there? I really need to talk. # Speaker_self
    Bae, what's up? I just got home and was going to watch some Netflix. You ok? # Speaker1
    // Gaurav - actually i want to make this an emoji instead of text
-   + (direct) My pa saw us holding hands[] and he's super pissed. he hasn't stopped yelling for an hour. # Speaker_self 
+   + (angry_choice) My pa saw us holding hands[] and he's super pissed. he hasn't stopped yelling for an hour. # Speaker_self 
    * i just need to escape my pa for a while[.] can you just chat with me? # Speaker_self
    - dee you know i'm always here for you. this sounds bad... what is he saying? # Speaker1
    he was so angry. he kept yelling about you not being a good person and then stormed out of the house screaming. like i know what it's really about. he just hates that i'm not dating a muslim boy. # Speaker_self
    ~ nadid_mood = nadid_mood - 1
    even ma started crying. she said some shit about not raising me properly to have values and started praying that i will change like wtf i am happy with who i am and who i am with # Speaker_self
-   * {direct} i'm angry [] more than anything. what the hell. i'm 17. i'm not some stupid kid who doesn't know what i want. -> found_out # Speaker_self  
+   * {angry_choice} i'm angry [] more than anything. what the hell. i'm 17. i'm not some stupid kid who doesn't know what i want. -> found_out # Speaker_self  
    + i'm really sad [.] why can't they be happy for me? why must holding hands turn into such a bloody fight # Speaker_self
    - I'm so sorry dee. don't go back out there unless he comes back in a calm state. Would it help if I came down to talk to them? # Speaker1
    // gaurav: actually i want the bottom option only to show if she was rude to him earlier in the game
@@ -61,7 +61,7 @@ Introduction: I didn't really like Gavin at first. He was always acting silly, n
    // gaurav: i would like thisthe above part to be by whatsapp but the section below is inner monologue
    it sounds like they have gone to sleep already. man what a nightmare. i don't know what tomorrow will be like in the morning. sigh why must life be so difficult for us # Speaker_self
    i know dee, i wish people would just be happy for us. even in school i heard amelia say shit about us. they don't even know what we're like, but they all want to talk about whether we will last or not # Speaker1
-   * amelia?! why is she so kaypoh? [] why is our relationship any of her business and what is she saying about us? -> direct # Speaker_self
+   * amelia?! why is she so kaypoh? [] why is our relationship any of her business and what is she saying about us? -> angry_choice # Speaker_self
    * sigh unwanted advice? [] yeah i know a few people who think they are trying to help but just give shitty advice like we should break up now before things get harder later. # Speaker_self
    - sigh # Speaker1
     ~ gavin_mood = gavin_mood - 1
@@ -89,8 +89,15 @@ Introduction: I didn't really like Gavin at first. He was always acting silly, n
    * (love_prevails) [gav should we just continue dating and see where it goes] gav i think you're right, we're only 18. let's take this one step at a time. i want you and you want me... that's step 1. we'll get to step 2 about marriage and all that another day... and hopefully by then, if we have been together long enough, our parents can see that we're going to make this work, and they will come around. it will take time, but it's worth it. My mood is now {nadid_mood} # Speaker_self
    * (ignore_parents) gav who cares what the parents think. this is our life not theirs. [] let's just ignore them and do what we think is right for us. and if that ends in marriage, then so be it. Gavin's mood is {gavin_mood}  # Speaker_self
    - dee you know i'm here for you no matter where this goes. # Speaker1
-    -> break_up
+    -> survey
     
+
+=== survey ===
+#ui:survey
+#survey_data:survey1.json
+-> break_up
+
+
 == break_up ==
 #chapter:break_up
 #ui:school

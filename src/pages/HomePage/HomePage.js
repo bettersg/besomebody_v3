@@ -16,7 +16,7 @@ import { useAuth } from '../../contexts/AuthContext'
 import { deleteDbUser } from '../../models/userModel'
 import { Link } from 'react-router-dom'
 
-const Home = () => {
+const HomePage = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [isDialogOpen, setIsDialogOpen] = useState(false)
   const [snackbar, setSnackbar] = useState({
@@ -128,4 +128,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default HomePage;

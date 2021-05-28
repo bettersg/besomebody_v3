@@ -11,58 +11,58 @@ import Login from '../pages/Login/Login'
 import ForgetPassword from '../pages/ForgetPassword/ForgetPassword'
 
 import InkController from '../pages/InkController/InkController'
-import WhatsappPage from '../pages/WhatsappPage/Whatsapp'
 
-import HomePage from '../pages/HomePage/HomePage'
-import CharProfilePage from '../pages/CharProfilePage/CharProfilePage'
-import CharacterChoice from "../pages/HomePage/CharacterChoice"
-
-// import InkTestPage from '../pages/InkTestPage/InkTestPage'
-// import InkTestPageBasic from '../pages/InkTestPage/InkTestPageBasic'
-// import InstagramPage from '../pages/InstagramPage/InstagramPage'
+import LandingPage from '../pages/LandingPage'
+import CharacterChoicePage from "../pages/CharacterChoicePage"
+import CharacterChapterPage from "../pages/CharacterChapterPage"
+ 
 
 class Router extends Component {
   render() {
     // Properties
     const { user, roles, bar } = this.props
-    console.log(this.props)
+    // console.log(this.props)
 
     return (
       <BrowserRouter basename={process.env.REACT_APP_BASENAME}>
         {/* {bar} */}
 
         <Switch>
-          <Route path="/" exact>
-            <>
+          <Route path="/" exact>            
               {user ?
                 (
-                  <>
-                    <h2>logged-in player lands here from main URL</h2>
-                    <h4><Link to="/characterchoice">Resume Game</Link></h4>
-                  </>
+                  <CharacterChoicePage />
                 )
                 :
                 (
-                  <>
-                    <h2>non-logged-in visitor lands here from main URL</h2>
-                    <h4><Link to="/intro">Play -> Start the intro sequence then signup form and profile builder</Link></h4>
-                    <h4><Link to="/login">Login to resume game</Link></h4>
-                  </>
+                  <LandingPage />
                 )
-              }
+              }            
+          </Route>
+
+
+          <Route path="/intro" exact>            
+            <>
+              {/* <IntroPage /> */}
+              <h1>Intro video sequence</h1>
+              <h4><Link to="/signup">After video finishes, Sign up form</Link></h4>
             </>
           </Route>
 
 
-          <PrivateRoute path="/home" exact>
-            <HomePage />
+          <PrivateRoute path="/chapters/:name" exact>
+            <CharacterChapterPage />
           </PrivateRoute>
-
-
+        
           <PrivateRoute path="/story/:name" exact>
             <InkController />
           </PrivateRoute>
-
+          
+          <PrivateRoute path="/characterchoice" exact>
+            <CharacterChoicePage />
+          </PrivateRoute>
+ 
+          
 
           <Route path="/signup" exact>
             <SignUp />
@@ -76,47 +76,17 @@ class Router extends Component {
             <ForgetPassword />
           </Route>
 
-          <Route path="/admin">
+          <PrivateRoute path="/admin">
             {user && roles.includes('admin') ? (
               <AdminPage />
             ) : (
               <Redirect to="/" />
             )}
-          </Route>
-
-          <Route path="/user/:userId">
-            {user ? <UserPage /> : <Redirect to="/" />}
-          </Route>
-
-          <Route path="/characterchoice" exact>
-            <CharacterChoice />
-          </Route>
-
-          <Route path="/profile" exact>
-            <CharProfilePage />
-          </Route>
-
-          
-          {/* // old routes 
-          
-          <PrivateRoute path="/ink" exact>
-            <InkTestPage />
           </PrivateRoute>
 
-
-          <Route path="/ink-basic" exact>
-            <InkTestPageBasic />
-          </Route>
-          
-          <Route path="/insta" exact>
-            <InstagramPage />
-          </Route>
-
-          <Route path="/wa" exact>
-            <WhatsappPage />
-          </Route>
-          
-          */}
+          <PrivateRoute path="/user/:userId">
+            {user ? <UserPage /> : <Redirect to="/" />}
+          </PrivateRoute>
 
 
           <Route>
