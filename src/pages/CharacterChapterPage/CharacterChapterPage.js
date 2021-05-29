@@ -1,4 +1,6 @@
 import React from "react";
+import { useParams } from 'react-router-dom'
+
 import ProfileAvatar from "./ProfileAvatar"
 import {
     ThemeProvider,
@@ -15,11 +17,20 @@ import NavBar from "./NavBar"
 
 import "../styles.css";
 
-class CharProfile extends React.Component {
 
+function CharacterName() {
+    let { name } = useParams();
+    return <>{name}</>;
+}
+
+// TODO: Convert the static state below into one that pulls info from a JSON on all the characters
+  
+class CharacterChapterPage extends React.Component {
+    
+    
     state = {
         persona: {
-            alt: "Nadia",
+            alt: "Nadid",
             src:
             "https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F0f59699e1dd943ba87446eb0c7ec9704",
             name: "Nadid",
@@ -77,6 +88,7 @@ class CharProfile extends React.Component {
                         <TopNavBar />
                         <Box className="profileBox" px={8} m={5}>
                             <ProfileAvatar avatarInfo={this.state.persona} />
+                            <CharacterName />
                         </Box>
                         <div style={{paddingBottom:"20%"}}>
                             {chaptDetails.length > 0 
@@ -100,4 +112,4 @@ class CharProfile extends React.Component {
     }
 }
 
-export default CharProfile; 
+export default CharacterChapterPage; 

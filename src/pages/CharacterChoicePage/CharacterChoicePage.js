@@ -12,6 +12,8 @@ createMuiTheme
 import NavBar from "./NavBar";
 import "../styles.css";
 
+// TODO: Convert the static state below into one that pulls info from a JSON on all the chapters for each character
+
 
 class CharacterChoice extends React.Component {
 	state = {
@@ -27,13 +29,13 @@ class CharacterChoice extends React.Component {
 		],
 		personas: [
 			{
-				alt: "Nadia",
+				alt: "Nadid",
 				src: 
 				"https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F0f59699e1dd943ba87446eb0c7ec9704",
 				name: "Nadid",
-				description: "Nadia Rahim wants to become a doctor - but will love and religion get in the way?",
+				description: "Nadid Rahim wants to become a doctor - but will love and religion get in the way?",
 				buttonShow: true,
-				link: "/profile"
+				link: "/chapters/Nadid"
 			},
 			{
 				alt: "Aman",
@@ -42,7 +44,7 @@ class CharacterChoice extends React.Component {
 				name: "Aman",
 				description: "Aman Singh dreams of writing poetry - but he has bigger headaches to deal with first.",
 				buttonShow: true,
-				link: "/home"
+				link: "/story/david"
 			} 
 			], 
 			personas2: [
