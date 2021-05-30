@@ -39,7 +39,7 @@ const ProfileBuilderPage = () => {
   const { setSnackbar } = useSnackbar()
 
   // Auth Context
-  const { signUp } = useAuth() // TODO: check this if it is correct
+  const { currentUser } = useAuth() // TODO: check this if it is correct
 
   // Init form
   const defaultValues = {
@@ -76,10 +76,9 @@ const ProfileBuilderPage = () => {
           setIsLoading(true)          
           
           const profile = {
-            age: values.age, // TODO: update for profile fields
-           
+            age: values.age, // TODO: update for profile fields            
           }
-          await updateDbUser(profile)        
+          await updateDbUser(profile, currentUser.id)        
           history.push('/')
         } catch (err) {
           setSnackbar({
