@@ -1,15 +1,10 @@
 import React from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
+import { Avatar } from '@material-ui/core';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-import Button from '@material-ui/core/Button';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import MenuIcon from '@material-ui/icons/Menu';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
 import "./style.scss"; 
 
@@ -42,11 +37,45 @@ export default function SwipeableTemporaryDrawer() {
       className={clsx(classes.list, {
         [classes.fullList]: anchor === 'top' || anchor === 'bottom',
       })}
+      id="menu-items"
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
+      <div className="menu-username">
+        <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" className="menu-avatar" />
+        username
+      </div>
+      <div className="menu-description">
+        <div>
+          <div>You’re 48% through</div>
+          <div className="chapter-num">Nadia, Chapter 2</div>
+          <div className="resume"> Resume Game </div>
+        </div>
+        <div>
+          <ArrowForwardIosIcon className="arrow-icon"/>
+        </div>
+
+      </div>
+      <hr/>
+      <div className="menu-options">
+        <Avatar alt="c" src="/" style={{marginRight:"15px"}}/> <span>Character Menu</span>
+      </div>
+      <div className="menu-options">
+        <Avatar alt="c" src="/" style={{marginRight:"15px"}}/> <span>Help</span>
+      </div>
+      <div className="menu-options">
+        <Avatar alt="c" src="/" style={{marginRight:"15px"}}/> <span>Library</span>
+      </div>
+      <div className="menu-bottom">
+        <hr/>
+        <div className="menu-options">
+          <Avatar alt="c" src="/" style={{marginRight:"15px"}}/> <span>Library</span>
+        </div>
+      </div>
+
+      {/* orginal */}
+      {/* <List>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
@@ -62,20 +91,22 @@ export default function SwipeableTemporaryDrawer() {
             <ListItemText primary={text} />
           </ListItem>
         ))}
-      </List>
+      </List> */}
     </div>
   );
 
   return (
-    <div>
+    <div className="menu-wrapper">
       {['left'].map((anchor) => (
         <React.Fragment key={anchor}>
-          <div onClick={toggleDrawer(anchor, true)} className="menu-button">{anchor}</div>
+          <div onClick={toggleDrawer(anchor, true)} className="menu-button"><MenuIcon/></div>
           <SwipeableDrawer
             anchor={anchor}
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}
             onOpen={toggleDrawer(anchor, true)}
+            className="menu-drawer"
+            containerStyle={{height: 'calc(100% - 64px)', top: 64}}
           >
             {list(anchor)}
           </SwipeableDrawer>
