@@ -33,7 +33,12 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
-      setCurrentUser(user)
+      const { uid, ...rest } = user || {}
+      const nextCurrentUser = user ? {
+        ...rest,
+        id: uid,
+      } : null
+      setCurrentUser(nextCurrentUser)
       setIsLoading(false)
     })
 

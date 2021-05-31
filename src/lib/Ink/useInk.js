@@ -14,7 +14,7 @@ const useInk = (json, inkName) => {
   const { currentUser } = useAuth()
 
   // Format a fixed saved data ID for firestore DB
-  const saveDataId = `${currentUser.uid}-${inkName}`
+  const saveDataId = `${currentUser.id}-${inkName}`
 
   // Initialise inkjs
   const inkStory = React.useMemo(() => initInk(Story, json), [json])
@@ -169,7 +169,7 @@ const useInk = (json, inkName) => {
       currentKnot,
       paragraphs,
       choices,
-      userId: currentUser.uid,
+      userId: currentUser.id,
       inkName,
     }
 
