@@ -5,49 +5,41 @@
     "done",
     {
       "nadid_chapter6": [
-        [
-          { "#": "chapter:nadid_chapter6" },
-          { "#": "ui:school" },
-          { "#": "background:school.jpg" },
-          { "#": "leftCharacter:Nadia_happy.jpg" },
-          { "#": "rightCharacter:" },
-          "^Family Matters ",
-          { "#": "Title" },
-          "\n",
-          "^Introduction: I didn't really like Gavin at first. He was always acting silly, never taking things seriously, and was a bit sloppy in his appearance. It was only when we both were assigned to a class project that I got to know the real him. And when I did, he surprised me. He was really earnest and genuine beneath that exterior, and he was a really sweet person. I never expected to like someone like Gavin, but by the end of the project, I had a full blown crush on him. And after that last class, when he told me he liked me... well, I felt like my heart was going to explode. We have been dating for about 2 years now, but in secret from most people. Gavin is a Chinese Christian, and I'm a Malay Muslim.",
-          "\n",
-          "ev",
-          "str",
-          "^...",
-          "/str",
-          "/ev",
-          { "*": ".^.c-0", "flg": 20 },
-          { "c-0": ["^ ", { "->": "found_out" }, "\n", { "#f": 5 }] }
-        ],
+        { "#": "knot:nadid_chapter6" },
+        { "#": "ui:school" },
+        { "#": "background:school.jpg" },
+        { "#": "leftCharacter:Nadia_happy.jpg" },
+        { "#": "rightCharacter:" },
+        "^Family Matters ",
+        { "#": "Title" },
+        "\n",
+        "^Introduction: I didn't really like Gavin at first. He was always acting silly, never taking things seriously, and was a bit sloppy in his appearance. It was only when we both were assigned to a class project that I got to know the real him. And when I did, he surprised me. He was really earnest and genuine beneath that exterior, and he was a really sweet person. I never expected to like someone like Gavin, but by the end of the project, I had a full blown crush on him. And after that last class, when he told me he liked me... well, I felt like my heart was going to explode. We have been dating for about 2 years now, but in secret from most people. Gavin is a Chinese Christian, and I'm a Malay Muslim.",
+        "\n",
+        { "->": "found_out" },
         { "#f": 1 }
       ],
       "found_out": [
-        [
-          { "#": "chapter:found_out" },
-          { "#": "ui:school" },
-          { "#": "background:school.jpg" },
-          { "#": "leftCharacter:Nadia_happy.jpg" },
-          { "#": "rightCharacter:Gavin_happy.jpg" },
-          "^Initially, we were really careful. I made sure that we never held hands in public, and nobody talked about us in school because we kept our distance. After a while, we got careless. Gavin held my hand one day at the bus stop just outside my house. It was just for a few seconds, but that was enough. My pa was across the road at the coffee shop, and he saw. When I got home, he was furious. Pa yelled at me and said that I could never see Gavin again. He made all sorts of threats. He yelled again. I cried and ran into my room to lock the door. I had to talk to Gavin.",
-          "\n",
-          "ev",
-          "str",
-          "^...",
-          "/str",
-          "/ev",
-          { "*": ".^.c-0", "flg": 20 },
-          { "c-0": ["^ ", { "->": "whatsapp" }, "\n", { "#f": 5 }] }
-        ],
+        { "#": "knot:found_out" },
+        { "#": "ui:school" },
+        { "#": "background:school.jpg" },
+        { "#": "leftCharacter:Nadia_happy.jpg" },
+        { "#": "rightCharacter:Gavin_happy.jpg" },
+        "^Initially, we were really careful. I made sure that we never held hands in public, and nobody talked about us in school because we kept our distance. After a while, we got careless. Gavin held my hand one day at the bus stop just outside my house. It was just for a few seconds, but that was enough. My pa was across the road at the coffee shop, and he saw. When I got home, he was furious. Pa yelled at me and said that I could never see Gavin again. He made all sorts of threats. He yelled again. I cried and ran into my room to lock the door. I had to talk to Gavin.",
+        "\n",
+        { "->": "survey" },
+        { "#f": 1 }
+      ],
+      "survey": [
+        { "#": "knot:survey" },
+        { "#": "ui:survey" },
+        "^This is a test survey",
+        "\n",
+        { "->": "whatsapp" },
         { "#f": 1 }
       ],
       "whatsapp": [
         [
-          { "#": "chapter:whatsapp" },
+          { "#": "knot:whatsapp" },
           { "#": "ui:whatsapp" },
           { "#": "background:whatsapp.png" },
           { "#": "chatgroupTitle:Gavin" },
@@ -669,7 +661,7 @@
         { "#f": 1 }
       ],
       "break_up": [
-        { "#": "chapter:break_up" },
+        { "#": "knot:break_up" },
         { "#": "ui:school" },
         { "#": "background:school.jpg" },
         { "#": "leftCharacter:" },

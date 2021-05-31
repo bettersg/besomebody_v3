@@ -10,6 +10,7 @@ import WhatsApp from '../WhatsappPage/Whatsapp'
 import School from '../School'
 import InkControls from './InkControls'
 import DefaultInk from '../DefaultInk'
+import Survey from '../SurveyPage/Survey'
 
 const getInkJson = (nameParam) => {
   switch (nameParam) {
@@ -31,6 +32,7 @@ const getUi = ({
   specialTags,
   globalVariables,
   setChoice,
+  getStory,
 }) => {
   switch (specialTags.ui) {
     case 'school': {
@@ -55,10 +57,16 @@ const getUi = ({
         />
       )
     }
+    case 'survey': {
+      // TODO: update this component
+      return (
+        <Survey getStory={getStory} currentParagraphs={currentParagraphs} />
+      )
+    }
     case 'instagram': {
       return (
         // to change to an instagram
-        <WhatsApp 
+        <WhatsApp
           currentParagraphs={currentParagraphs}
           choices={choices}
           setChoice={setChoice}
@@ -92,7 +100,7 @@ const InkController = () => {
     choices,
     specialTags,
     globalVariables,
-    currentChapter,
+    currentKnot,
     hasSavedState,
 
     // Methods
@@ -106,21 +114,21 @@ const InkController = () => {
   } = useInk(inkJson, name)
 
   // ==============================================================
-  // Filter paragraphs based on current chapter
+  // Filter paragraphs based on current knot
   // ==============================================================
   const [currentParagraphs, setCurrentParagraphs] = useState([])
 
   useEffect(() => {
-    if (currentChapter || paragraphs[paragraphs.length - 1]?.currentChapter) {
+    if (currentKnot || paragraphs[paragraphs.length - 1]?.currentKnot) {
       const nextParagraphs = paragraphs.filter((paragraph) => {
-        return paragraph.currentChapter === currentChapter
+        return paragraph.currentKnot === currentKnot
       })
       return setCurrentParagraphs([...nextParagraphs])
     }
 
     setCurrentParagraphs(paragraphs)
-    // Run this useEffect whenever paragraphs or currentChapter get updated
-  }, [paragraphs, currentChapter])
+    // Run this useEffect whenever paragraphs or currentKnot get updated
+  }, [paragraphs, currentKnot])
 
   /*
   // ===========
@@ -142,10 +150,9 @@ const InkController = () => {
 
   return (
     <Container maxWidth="lg">
-      <Box >
+      <Box>
         <Typography variant="overline">{name}</Typography>
       </Box>
- 
 
       {getUi({
         currentParagraphs,
@@ -153,8 +160,8 @@ const InkController = () => {
         specialTags,
         globalVariables,
         setChoice,
+        getStory,
       })}
-
 
       {/* Render event triggers */}
       <InkControls

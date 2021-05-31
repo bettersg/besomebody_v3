@@ -93,7 +93,7 @@ describe('useInk Hook Test', () => {
   beforeEach(() => {
     useAuth.mockReturnValue({
       currentUser: {
-        uid: 'test-uid',
+        id: 'test-current-user-id',
       },
     })
 
@@ -111,7 +111,7 @@ describe('useInk Hook Test', () => {
         nadid_mood: 5,
         gavin_mood: 5,
       },
-      currentChapter: 'nadid_chapter6',
+      currentKnot: 'nadid_chapter6',
     })
     deleteDbSavedStates.mockReturnValue()
   })
@@ -124,7 +124,7 @@ describe('useInk Hook Test', () => {
       choices,
       specialTags,
       globalVariables,
-      currentChapter,
+      currentKnot,
       hasSavedState,
     } = result.current
 
@@ -135,7 +135,7 @@ describe('useInk Hook Test', () => {
       expect(choices).toMatchObject([])
       expect(specialTags).toMatchObject({})
       expect(globalVariables).toMatchObject({})
-      expect(currentChapter).toBe(null)
+      expect(currentKnot).toBe(null)
       expect(hasSavedState).toBe(false)
     })
   })
@@ -154,7 +154,7 @@ describe('useInk Hook Test', () => {
       paragraphs,
       specialTags,
       globalVariables,
-      currentChapter,
+      currentKnot,
     } = result.current
     await waitFor(() => {
       expect(isStoryStarted).toBe(true)
@@ -169,25 +169,50 @@ describe('useInk Hook Test', () => {
         nadid_mood: 5,
         gavin_mood: 5,
       })
-      expect(currentChapter).toBe('nadid_chapter6')
+      expect(currentKnot).toBe('nadid_chapter6')
     })
   })
 
   it('should have choices and should be able to submit choice', async () => {
     const { result } = renderHook(() => useInk(testJson, 'test'))
 
-    // Run getStory 3 times
+    // Get to nadid_chapter6 knot
     act(() => {
       result.current.getStory()
     })
+
+    // Get to found_out knot
+    act(() => {
+      result.current.getStory()
+    })
+    act(() => {
+      result.current.getStory()
+    })
+
+    // Get to survey knot
+    act(() => {
+      result.current.getStory()
+    })
+
+    // Get to whatsapp knot
+    act(() => {
+      result.current.getStory()
+    })
+
+    // Expect currentKnot to be whatsapp
+    await waitFor(() => {
+      expect(result.current.currentKnot).toBe('whatsapp')
+    })
+
+    // Get to the first whatsapp choice
     act(() => {
       result.current.getStory()
     })
 
     // Expect paragraphs and choices to be populated
     await waitFor(() => {
-      expect(result.current.choices.length).toBe(1)
-      expect(result.current.paragraphs.length).toBe(2)
+      expect(result.current.choices.length).toBe(2)
+      expect(result.current.paragraphs.length).toBe(6)
     })
 
     // Submit choice using setChoice with a choice index
@@ -197,23 +222,12 @@ describe('useInk Hook Test', () => {
 
     // Expect paragraphs to increase and choices to be reset
     await waitFor(() => {
-      expect(result.current.choices.length).toBe(1)
-      expect(result.current.paragraphs.length).toBe(3)
-    })
-
-    // Submit choice using setChoice with a choice index
-    act(() => {
-      result.current.setChoice(result.current.choices[0].index)
-    })
-
-    // Expect paragraphs to increase and choices to be reset
-    await waitFor(() => {
-      expect(result.current.paragraphs.length).toBe(4)
-      expect(result.current.choices).toMatchObject([])
+      expect(result.current.choices.length).toBe(0)
+      expect(result.current.paragraphs.length).toBe(7)
     })
   })
 
-  it('should reset story, paragraphs, specialTags, globalVariables, and currentChapter', async () => {
+  it('should reset story, paragraphs, specialTags, globalVariables, and currentKnot', async () => {
     const { result } = renderHook(() => useInk(testJson, 'test'))
 
     // Run getStory once
@@ -235,7 +249,7 @@ describe('useInk Hook Test', () => {
         nadid_mood: 5,
         gavin_mood: 5,
       })
-      expect(result.current.currentChapter).toBe('nadid_chapter6')
+      expect(result.current.currentKnot).toBe('nadid_chapter6')
     })
 
     // Run resetStory once
@@ -249,11 +263,11 @@ describe('useInk Hook Test', () => {
       expect(result.current.paragraphs).toMatchObject([])
       expect(result.current.specialTags).toMatchObject({})
       expect(result.current.globalVariables).toMatchObject({})
-      expect(result.current.currentChapter).toBe(null)
+      expect(result.current.currentKnot).toBe(null)
     })
   })
 
-  it('should start story from whatsapp chapter', async () => {
+  it('should start story from whatsapp knot', async () => {
     const { result } = renderHook(() => useInk(testJson, 'test'))
 
     // Run startStoryFrom with whatsapp string
@@ -267,7 +281,7 @@ describe('useInk Hook Test', () => {
       paragraphs,
       specialTags,
       globalVariables,
-      currentChapter,
+      currentKnot,
     } = result.current
     await waitFor(() => {
       expect(isStoryStarted).toBe(true)
@@ -282,7 +296,7 @@ describe('useInk Hook Test', () => {
         nadid_mood: 5,
         gavin_mood: 5,
       })
-      expect(currentChapter).toBe('whatsapp')
+      expect(currentKnot).toBe('whatsapp')
     })
   })
 
@@ -309,7 +323,7 @@ describe('useInk Hook Test', () => {
   it('should see that global variables changed', async () => {
     const { result } = renderHook(() => useInk(testJson, 'test'))
 
-    // Start story from WhatsApp chapter
+    // Start story from WhatsApp knot
     act(() => {
       result.current.startStoryFrom('whatsapp')
     })
@@ -352,10 +366,20 @@ describe('useInk Hook Test', () => {
     })
   })
 
-  it('should see that currentChapter changes', async () => {
+  it('should see that currentKnot changes', async () => {
     const { result } = renderHook(() => useInk(testJson, 'test'))
 
-    // Run getStory twice
+    // Get to nadid_chapter6 knot
+    act(() => {
+      result.current.getStory()
+    })
+
+    // Expect currentKnot to be nadid_chapter6
+    await waitFor(() => {
+      expect(result.current.currentKnot).toBe('nadid_chapter6')
+    })
+
+    // Get to found_out knot
     act(() => {
       result.current.getStory()
     })
@@ -363,19 +387,9 @@ describe('useInk Hook Test', () => {
       result.current.getStory()
     })
 
-    // Expect globalVariables to be default
+    // Expect currentKnot to change to found_out
     await waitFor(() => {
-      expect(result.current.currentChapter).toBe('nadid_chapter6')
-    })
-
-    // Submit choice using setChoice with a choice index
-    act(() => {
-      result.current.setChoice(result.current.choices[0].index)
-    })
-
-    // Expect globalVariables to be default
-    await waitFor(() => {
-      expect(result.current.currentChapter).toBe('found_out')
+      expect(result.current.currentKnot).toBe('found_out')
     })
   })
 
@@ -401,7 +415,7 @@ describe('useInk Hook Test', () => {
         nadid_mood: 5,
         gavin_mood: 5,
       })
-      expect(result.current.currentChapter).toBe('nadid_chapter6')
+      expect(result.current.currentKnot).toBe('nadid_chapter6')
     })
 
     // Run saveStory
@@ -420,7 +434,7 @@ describe('useInk Hook Test', () => {
       expect(result.current.paragraphs).toMatchObject([])
       expect(result.current.specialTags).toMatchObject({})
       expect(result.current.globalVariables).toMatchObject({})
-      expect(result.current.currentChapter).toBe(null)
+      expect(result.current.currentKnot).toBe(null)
     })
 
     // Run loadSavedStory
@@ -442,7 +456,7 @@ describe('useInk Hook Test', () => {
         nadid_mood: 5,
         gavin_mood: 5,
       })
-      expect(result.current.currentChapter).toBe('nadid_chapter6')
+      expect(result.current.currentKnot).toBe('nadid_chapter6')
     })
   })
 

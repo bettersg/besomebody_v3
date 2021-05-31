@@ -46,7 +46,7 @@ const HomePage = () => {
     try {
       setIsLoading(true)
       await deleteUser()
-      await deleteDbUser(currentUser.uid)
+      await deleteDbUser(currentUser.id)
     } catch (err) {
       setSnackbar({
         message: `Failed to delete user: ${err.message}`,
