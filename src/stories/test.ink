@@ -100,8 +100,8 @@ Introduction: I didn't really like Gavin at first. He was always acting silly, n
 
 == break_up ==
 #chapter:break_up
-#ui:school
-#background:school.jpg
+#ui:scenes
+#background:home.jpg
 #leftCharacter:
 #rightCharacter:
 We broke up a little while later, for many reasons aside from this.
