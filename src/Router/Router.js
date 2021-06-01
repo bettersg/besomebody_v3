@@ -16,6 +16,7 @@ import LandingPage from '../pages/LandingPage'
 import CharacterChoicePage from "../pages/CharacterChoicePage"
 import CharacterChapterPage from "../pages/CharacterChapterPage"
 import IntroPage from "../pages/IntroPage"
+import ProfileBuilderPage from "../pages/ProfileBuilderPage"
  
 class Router extends Component {
   render() {
@@ -63,12 +64,8 @@ class Router extends Component {
             <SignUp />
           </Route>
 
-          <Route path="/profilebuilder" exact>
-            <>
-              <h1>Profile Builder</h1>
-              <h5>The form to build the user profile / demographics goes here, and this will push to the UserDB model</h5>
-              <Link to="/">Upon completion of the form - Start the game</Link>
-            </>
+          <Route path="/profilebuilder" exact>                     
+            <ProfileBuilderPage />             
           </Route>
 
 
@@ -91,7 +88,6 @@ class Router extends Component {
           <PrivateRoute path="/user/:userId">
             {user ? <UserPage /> : <Redirect to="/" />}
           </PrivateRoute>
-
 
           <Route>
             <NotFoundPage />
