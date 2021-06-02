@@ -8,6 +8,12 @@ import {
   DialogContentText,
   DialogTitle,
   Snackbar,
+  FormGroup,
+  FormLabel,
+  FormControlLabel,
+  Checkbox,
+  RadioGroup,
+  Radio,
   TextField,
   Typography,
   Container,
@@ -42,10 +48,13 @@ const ProfileBuilderPage = () => {
   const { currentUser } = useAuth() // TODO: check this if it is correct
 
   // Init form
-  const defaultValues = {
-    email: '',
-    
+  const defaultValues = {    
+    gender: '',   
   }
+
+  const [gender, setGender] = useState('female');
+
+
   const {
     formState: { isSubmitting },
     handleSubmit,
@@ -63,6 +72,8 @@ const ProfileBuilderPage = () => {
 
   const beforeSubmit = async (values) => {
     switch (true) {
+      /* 
+      // TODO: Validation
       case !values.email: {
         return setSnackbar({
           message: 'Email is required',
@@ -70,7 +81,9 @@ const ProfileBuilderPage = () => {
           type: 'error',
         })
       }
-       
+      
+      */
+
       default: {
         try {
           setIsLoading(true)          
@@ -92,29 +105,57 @@ const ProfileBuilderPage = () => {
     }
   }
 
+
+  const handleGender = (event) => {
+    setGender(event.target.value);
+    console.log("gender" + event.target.value);
+    // build up the user profile avatar or do something else
+  };
+
+  const handleOther = (event) => {
+    console.log("other" + event.target.value);
+    // if user selects other, convert to text field
+  };
+
   return (
     <Box>
       <section>
         <Container maxWidth="md">
-          <Box py={8} textAlign="center">
-            <Typography variant="h3" component="h2" gutterBottom={true}>Profile Builder</Typography>
-            <Typography variant="h6" color="textSecondary" paragraph={true}>The form to build the user profile / demographics goes here, and this will push to the UserDB model.</Typography>
+          <Box py={2} textAlign="center">
+            <Typography variant="h3" component="h2" gutterBottom={true}>Profile Builder </Typography>
+            <Typography variant="h6" color="textSecondary" paragraph={true}>The form to build the user profile / demographics goes here, and this will push to the UserDB model for { currentUser.id }</Typography>
           </Box>
-          <Box mx="auto" width="75%" my={2}>
+          <Box mx="auto" width="75%" my={4}>
             <form onSubmit={handleSubmit(beforeSubmit)}>
-              <Controller
-                as={TextField}
-                control={control}
-                name="age"
-                type="age"
-                placeholder="Enter your age here"
-                required
-                fullWidth
-              />
+              
+
+              <Box my={4}>
+                <FormLabel component="legend">Age</FormLabel>
+                <RadioGroup aria-label="age" name="age">
+                  <FormControlLabel value="10" control={<Radio />} label="<19" />
+                  <FormControlLabel value="20" control={<Radio />} label="20-29" />
+                  <FormControlLabel value="30" control={<Radio />} label="30-39" />                
+                </RadioGroup>
+                
+              </Box>
+
+              <Box my={4}>
+                <FormLabel component="legend">Sex</FormLabel>
+                <RadioGroup aria-label="gender" name="gender" onChange={handleGender}>
+                  <FormControlLabel value="female" control={<Radio />} label="Female" />
+                  <FormControlLabel value="male" control={<Radio />} label="Male" />
+                  <FormControlLabel value="other" control={<Radio onChange={handleOther} />} label="Other" />
+                  {gender === 'other' && <input type="text" onChange={handleOther}></input>}
+                </RadioGroup>
+                
+              </Box>
+
+              <Link to="/" ><Button variant="contained" color="primary" type="Submit"  disabled={isSubmitting || isLoading}> Submit - then Start the game</Button></Link>
+
             </form>
-            <Link to="/"><Button variant="contained" fullWidth={true} color="primary"  > Upon completion of the form - Start the game</Button></Link>
-          </Box>
             
+          </Box>
+         
         </Container>
       </section>
       

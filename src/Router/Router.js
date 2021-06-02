@@ -22,12 +22,11 @@ class Router extends Component {
   render() {
     // Properties
     const { user, roles, bar } = this.props
-    // console.log(this.props)
 
     return (
       <BrowserRouter basename={process.env.REACT_APP_BASENAME}>
-        {/* {bar} */}
-
+        {/* {bar} // TODO: implement "bar" as a menubar above the game components below */}
+        
         <Switch>
           <Route path="/" exact>            
               {user ?
@@ -36,16 +35,19 @@ class Router extends Component {
                 )
                 :
                 (
-                  <LandingPage />
+                    <LandingPage />  
                 )
               }            
           </Route>
 
-
           <Route path="/intro" exact>                        
             <IntroPage />             
           </Route>
-
+          
+          <PrivateRoute path="/characterchoice" exact>
+            <CharacterChoicePage />
+          </PrivateRoute>
+ 
           <PrivateRoute path="/chapters/:name" exact>
             <CharacterChapterPage />
           </PrivateRoute>
@@ -53,23 +55,16 @@ class Router extends Component {
           <PrivateRoute path="/story/:name" exact>
             <InkController />
           </PrivateRoute>
-          
-          <PrivateRoute path="/characterchoice" exact>
-            <CharacterChoicePage />
-          </PrivateRoute>
- 
-          
 
           <Route path="/signup" exact>
             <SignUp />
           </Route>
 
-          <Route path="/profilebuilder" exact>                     
+          <PrivateRoute path="/profilebuilder" exact>                     
             <ProfileBuilderPage />             
-          </Route>
+          </PrivateRoute>
 
-
-          <Route path="/login" exact>
+          <Route path="/login" exact>            
             <Login />
           </Route>
 
