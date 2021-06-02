@@ -72,6 +72,8 @@ const ProfileBuilderPage = () => {
 
   const beforeSubmit = async (values) => {
     switch (true) {
+      /* 
+      // TODO: Validation
       case !values.email: {
         return setSnackbar({
           message: 'Email is required',
@@ -79,7 +81,9 @@ const ProfileBuilderPage = () => {
           type: 'error',
         })
       }
-       
+      
+      */
+
       default: {
         try {
           setIsLoading(true)          
@@ -118,8 +122,8 @@ const ProfileBuilderPage = () => {
       <section>
         <Container maxWidth="md">
           <Box py={2} textAlign="center">
-            <Typography variant="h3" component="h2" gutterBottom={true}>Profile Builder</Typography>
-            <Typography variant="h6" color="textSecondary" paragraph={true}>The form to build the user profile / demographics goes here, and this will push to the UserDB model.</Typography>
+            <Typography variant="h3" component="h2" gutterBottom={true}>Profile Builder </Typography>
+            <Typography variant="h6" color="textSecondary" paragraph={true}>The form to build the user profile / demographics goes here, and this will push to the UserDB model for { currentUser.id }</Typography>
           </Box>
           <Box mx="auto" width="75%" my={4}>
             <form onSubmit={handleSubmit(beforeSubmit)}>
@@ -146,11 +150,12 @@ const ProfileBuilderPage = () => {
                 
               </Box>
 
+              <Link to="/" ><Button variant="contained" color="primary" type="Submit"  disabled={isSubmitting || isLoading}> Submit - then Start the game</Button></Link>
 
             </form>
             
           </Box>
-          <Link to="/" ><Button variant="contained" color="primary" > Upon completion of the form - Start the game</Button></Link>
+         
         </Container>
       </section>
       
