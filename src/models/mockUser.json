@@ -5,15 +5,16 @@
     {
       "createdAt": "Firebase timestamp",
       "updatedAt": "Firebase timestamp",
-      "chapter": "NADID_CHAPTER_1",
-      "savedStateId": "asd2312dasd123123asd-NADID_CHAPTER_1",
+      "character": 1,
+      "chapter": 1,
+      "savedStateId": "asd2312dasd123123asd-1-1",
       "endings": [
         {
-          "id": "ENDING_ONE",
+          "id": 1,
           "completedAt": "Firebase timestamp"
         },
         {
-          "id": "ENDING_TWO",
+          "id": 2,
           "completedAt": "Firebase timestamp"
         }
       ]
@@ -21,15 +22,16 @@
     {
       "createdAt": "Firebase timestamp",
       "updatedAt": "Firebase timestamp",
-      "chapter": "NADID_CHAPTER_2",
-      "savedStateId": "asd2312dasd123123asd-NADID_CHAPTER_2",
+      "character": 1,
+      "chapter": 2,
+      "savedStateId": "asd2312dasd123123asd-1-2",
       "endings": [
         {
-          "id": "ENDING_ONE",
+          "id": 1,
           "completedAt": "Firebase timestamp"
         },
         {
-          "id": "ENDING_TWO",
+          "id": 2,
           "completedAt": "Firebase timestamp"
         }
       ]
@@ -37,11 +39,12 @@
     {
       "createdAt": "Firebase timestamp",
       "updatedAt": "Firebase timestamp",
-      "chapter": "DAVID_CHAPTER_2",
-      "savedStateId": "asd2312dasd123123asd-DAVID_CHAPTER_2",
+      "character": 2,
+      "chapter": 1,
+      "savedStateId": "asd2312dasd123123asd-2-1",
       "endings": [
         {
-          "id": "ENDING_ONE",
+          "id": 1,
           "completedAt": "Firebase timestamp"
         }
       ]
