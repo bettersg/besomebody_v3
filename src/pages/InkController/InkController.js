@@ -2,8 +2,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Box, Container, Typography } from '@material-ui/core'
-import NadidInk from '../../stories/nadid.ink.json'
-import DavidInk from '../../stories/test2.ink.json'
 import useInk from '../../lib/Ink/useInk'
 import NotFoundPage from '../../components/NotFoundPage'
 import WhatsApp from '../WhatsappPage/Whatsapp'
@@ -11,14 +9,31 @@ import School from '../School'
 import InkControls from './InkControls'
 import DefaultInk from '../DefaultInk'
 import Survey from '../SurveyPage/Survey'
+import { STORY_MAP } from '../../models/storyMap'
 
 const getInkJson = (nameParam) => {
   switch (nameParam) {
     case 'nadid': {
-      return NadidInk
+      const nadidStory = STORY_MAP.find((story) => story.id === 1)
+      const nadidChapter1 = nadidStory.chapters.find(
+        (chapter) => chapter.id === 1
+      )
+      const json = nadidChapter1.inkJson
+      return {
+        inkJson: json,
+        character: nadidStory.id,
+        chapter: nadidChapter1.id,
+      }
     }
     case 'david': {
-      return DavidInk
+      const david = STORY_MAP.find((story) => story.id === 2)
+      const davidChapter1 = david.chapters.find((chapter) => chapter.id === 1)
+      const json = davidChapter1.inkJson
+      return {
+        inkJson: json,
+        character: david.id,
+        chapter: davidChapter1.id,
+      }
     }
     default: {
       return null
@@ -91,7 +106,7 @@ const getUi = ({
 const InkController = () => {
   const { name } = useParams()
 
-  const inkJson = getInkJson(name)
+  const { inkJson, character, chapter } = getInkJson(name)
 
   const {
     // States
@@ -111,7 +126,7 @@ const InkController = () => {
     saveStory,
     loadSavedStory,
     resetSavedStory,
-  } = useInk(inkJson, name)
+  } = useInk(inkJson, character, chapter)
 
   // ==============================================================
   // Filter paragraphs based on current knot

@@ -9,12 +9,12 @@ import {
   getDbSavedStates,
 } from '../../models/saveStateModel'
 
-const useInk = (json, inkName) => {
+const useInk = (json, character, chapter) => {
   // Get current user info
   const { currentUser } = useAuth()
 
   // Format a fixed saved data ID for firestore DB
-  const saveDataId = `${currentUser.id}-${inkName}`
+  const saveDataId = `${currentUser.id}-${character}-${chapter}`
 
   // Initialise inkjs
   const inkStory = React.useMemo(() => initInk(Story, json), [json])
@@ -170,7 +170,8 @@ const useInk = (json, inkName) => {
       paragraphs,
       choices,
       userId: currentUser.id,
-      inkName,
+      character,
+      chapter,
     }
 
     await createDbSavedStates(saveData, saveDataId)
