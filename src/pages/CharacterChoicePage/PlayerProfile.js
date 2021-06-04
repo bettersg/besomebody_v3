@@ -45,28 +45,31 @@ export default function PlayerProfile(props) {
   const classes = useStyles();
   const { userInfo } = props;
   
-
+// TO-DO: to pass number of persona, outcomes and chapters as props
   return (
     <ThemeProvider theme={theme}>
         <div className={classes}>
         <Paper> 
-          <Box bgcolor="text.secondary">
+          <Box>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Grid>
                 <Avatar className={classes.large}/>
                 <Typography variant="subtitle1">Name: {userInfo.name}</Typography>
-                <Typography variant="subtitle1">My Desc</Typography>
+                <Typography variant="subtitle1">My Desc: {userInfo.desc}</Typography>
             </Grid>
            </div>
            <Grid container spacing={3}>
             <Grid item xs={4} alignItems="center">
-              <Typography>3 Persona</Typography>
+              <Typography>3</Typography> 
+              <Typography>Persona</Typography>
             </Grid>    
             <Grid item xs={4} alignItems="center">
-              <Typography>15 Outcomes</Typography>
+              <Typography>15</Typography>
+              <Typography>Outcomes</Typography>
             </Grid>
             <Grid item xs={4} alignItems="center">
-              <Typography>8 Chapters</Typography>              
+              <Typography>8</Typography>  
+              <Typography>Chapters</Typography>             
             </Grid>
            </Grid>
            </Box>
