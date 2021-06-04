@@ -3,11 +3,11 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Box, Container, Typography } from '@material-ui/core'
 import NadidInk from '../../stories/nadid.ink.json'
-import DavidInk from '../../stories/test2.ink.json'
+import DavidInk from '../../stories/aman_chapter1.ink.json'
 import useInk from '../../lib/Ink/useInk'
 import NotFoundPage from '../../components/NotFoundPage'
 import WhatsApp from '../WhatsappPage/Whatsapp'
-import School from '../School'
+import Scene from '../ScenePage/Scene'
 import InkControls from './InkControls'
 import DefaultInk from '../DefaultInk'
 import Survey from '../SurveyPage/Survey'
@@ -35,9 +35,9 @@ const getUi = ({
   getStory,
 }) => {
   switch (specialTags.ui) {
-    case 'school': {
+    case 'scene': {
       return (
-        <School
+        <Scene
           currentParagraphs={currentParagraphs}
           choices={choices}
           setChoice={setChoice}
@@ -63,10 +63,10 @@ const getUi = ({
         <Survey getStory={getStory} currentParagraphs={currentParagraphs} />
       )
     }
-    case 'instagram': {
+    case 'school': {
       return (
-        // to change to an instagram
-        <WhatsApp
+        // to remove school from nadia's story
+        <Scene
           currentParagraphs={currentParagraphs}
           choices={choices}
           setChoice={setChoice}

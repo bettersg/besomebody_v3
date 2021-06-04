@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-const School = (props) => {
+const Scene = (props) => {
   const {
     currentParagraphs,
     choices,
@@ -51,7 +51,7 @@ const School = (props) => {
 
   return (
     <Fade in>
-      <Box className={classes.paragraphWrapper} p={1} height="100%">
+      <Box className={classes.paragraphWrapper}  height="100%">
         <Box
           className={classes.textWrapper}
           p={1}
@@ -102,4 +102,4 @@ const School = (props) => {
   )
 }
 
-export default School
+export default Scene

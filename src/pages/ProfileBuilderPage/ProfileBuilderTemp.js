@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   }))
   
 
-const ProfileBuilderPage = () => {
+const ProfileBuilderTemp = () => {
 
     const history = useHistory()
     
@@ -129,4 +129,4 @@ const ProfileBuilderPage = () => {
     );
 }
  
-export default ProfileBuilderPage;
+export default ProfileBuilderTemp;

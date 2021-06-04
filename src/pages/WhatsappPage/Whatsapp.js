@@ -62,7 +62,7 @@ const Whatsapp = (props) => {
                 </Box> 
                 <Box className={`text-area ${choices.length === 0 ? 'full' : ""}`}>
                     {currentParagraphs.map((step) => {
-                    if (step.tags[0]?.includes('Speaker_self')) {
+                    if (step.tags[0]?.includes('Speaker_self')) {  // to lowercase this so that writer capitalisation doesn't matter
                         return (
                         <Box
                             key={step.text}
