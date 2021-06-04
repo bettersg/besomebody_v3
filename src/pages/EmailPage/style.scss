@@ -1,60 +1,87 @@
-.insta-wrapper {
+.top-border{
+    background: #C4C4C4;
+    
+}
+
+.time{
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left:20px;
+}
+
+.misc-icons{
+    margin-left: 210px;
+}
+
+.email-wrapper {
+    margin-top: 10px;
     padding: 10px; 
     max-height: 655px;
+    overflow-y: scroll;  
+    }
+
+.email-header{
+    height: 40px;
+    background: #C4C4C4;
+    font-size: 20px; 
+    font-style: bold;
+    vertical-align: middle;
+
+    .arrow-back{
+        margin-top: 9px;
+        margin-left: 5px;
+    }
+
+    .email-compose{
+        margin-top: 7px;
+        margin-left: 5px;
+    }
+
+    .close-icon{
+        margin-top: 7px;
+        margin-left: 180px;
+    }
+}
+
+.email-body {
     overflow-y: scroll;
+    height: 300px; 
+    font-size: 18px;
+    transition: height 1s; 
+    margin-top: 10px;
+    &.full {
+        height: 475px; 
+        transition: height 1s;
+    }
+}
 
-    .insta-heading {
-        height: 10%; 
-        font-size: 28px;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 51px;
-    }
-    .social-icons {
-        margin-left: 10px;
-    }
-    .stories-list {
-        display: flex;
-        .stories-item {
-            margin-right: 20px; 
-            p {
-                text-align: center;
-            }
-        }
-        .stories {
-            height: 70px;
-            width: 70px;
-        }
-    }
+.email-from{
+    margin-top: 9px;
+    height: 40px;
+    font-size: 18px; 
+}
 
-    .content-wrapper {
-        .content-header {
-            display: flex;
-            vertical-align: middle;
-            margin-bottom: 10px;
-        }
-        .insta-post {
-            height: 360px; 
-            background-color: #C4C4C4;
-            img {
-                height: 100%; 
-            }
-        }
-        .post-text {
-            margin-top: auto;
-            margin-bottom: auto;
-            margin-left: 20px;
-            margin-right: 10px;
-            font-weight: 700;
-        }
-        .post-description {
-            margin-bottom: 10px;
-        }
-        .post-interaction {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px; 
-        }
-    }
+.arrow-drop{
+    margin-left: 100px;
+}
+.email-to{
+    margin-top: 9px;
+    height: 40px;
+    font-size: 18px; 
+}
 
+.email-subject{
+    margin-top: 9px;
+    height: 40px;
+    font-size: 18px; 
+}
+
+.send-button{
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.attachment-delete{
+    margin-left: 140px;
 }
