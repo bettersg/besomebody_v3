@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Button, Divider, Typography } from '@material-ui/core'
-import NavigateNextIcon from '@material-ui/icons/NavigateNext'
 import SwipeableTemporaryDrawer from "./SiderComponent/SiderComponent"
+import NextButton from "../../components/NextButton" 
 import "./styles.scss"
 
 const InkControls = (props) => {
@@ -30,17 +30,7 @@ const InkControls = (props) => {
       {getStory && (
         <Box width="100%">
           <div className="game-menu"><SwipeableTemporaryDrawer/></div>
-          <Button
-            className="next-button"
-            endIcon={<NavigateNextIcon />}
-            color="primary"
-            fullWidth
-            onClick={() => {
-              getStory()
-            }}
-          >
-            Next
-          </Button>
+          <NextButton getStory={getStory}/>
         </Box>
       )}
       </div>

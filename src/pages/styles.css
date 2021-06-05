@@ -2,7 +2,10 @@
   max-width: 480px;   
   margin: auto; 
 } */
-
+html, body {
+  height: 100%;
+  width: 100%; 
+}
 @media screen and (min-device-width:481px) {
   html {
     margin-top: 5% !important; 

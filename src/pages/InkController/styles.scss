@@ -10,7 +10,7 @@
     .next-button {
         bottom: 0; 
         right: 0;
-        height: 20px; 
+        height: 100px; 
         position: absolute;
     }
     .reset-button {
@@ -23,6 +23,13 @@
         position: absolute;
     }
     
+}
+
+.ink-controller {
+    .name {
+        position: absolute;
+        top: 0;
+    }
 }
 
 .ui-screens {

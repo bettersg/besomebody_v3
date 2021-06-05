@@ -27,6 +27,7 @@ const getInkJson = (nameParam) => {
 
 const getUi = ({
   currentParagraphs,
+  getStory, 
   choices,
   specialTags,
   globalVariables,
@@ -37,6 +38,7 @@ const getUi = ({
       return (
         <School
           currentParagraphs={currentParagraphs}
+          getStory={getStory}
           choices={choices}
           setChoice={setChoice}
           specialTags={specialTags}
@@ -141,14 +143,15 @@ const InkController = () => {
   }
 
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" className="ink-controller">
       <Box >
-        <Typography variant="overline">{name}</Typography>
+        <Typography variant="overline" className="name">{name}</Typography>
       </Box>
  
 
       {getUi({
         currentParagraphs,
+        getStory, 
         choices,
         specialTags,
         globalVariables,
