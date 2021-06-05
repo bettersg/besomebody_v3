@@ -60,48 +60,47 @@ const Whatsapp = (props) => {
                     <Grid item xs={2} />
                     </Grid>
                 </Box> 
-                <Box className={`text-area ${choices.length === 0 ? 'full' : ""}`}>
+                <Box className={`text-area ${choices.length === 0 ? 'full' : ""}`} dir="ltr">
                     {currentParagraphs.map((step) => {
-                    if (step.tags[0]?.includes('Speaker_self')) {
-                        return (
-                        <Box
-                            key={step.text}
-                            my={2}
-                            mx={1}
-                            display="flex"
-                            justifyContent="flex-end"
-                        >
-                            <Fade in={step.text}>
+                        if (step.tags[0]?.includes('Speaker_self')) {
+                            return (
+                            <Box
+                                key={step.text}
+                                my={2}
+                                mx={1}
+                                display="flex"
+                                justifyContent="flex-end"
+                            >
+                                <Fade in={step.text}>
+                                    <Box
+                                        className="chatbox-sender"
+                                        borderRadius={5}
+                                        p={1}
+                                    >
+                                        <Typography>{step.text}</Typography>
+                                    </Box>
+                                </Fade>
+                            </Box>
+                            )
+                        } else {
+                            return (
+                            <Box key={step.text} my={2} mx={1} display="flex">
                                 <Box
-                                    className="chatbox-sender"
+                                    className="chatbox-receiver"
                                     borderRadius={5}
                                     p={1}
                                 >
-                                    <Typography>{step.text}</Typography>
+                                <Typography>{step.text}</Typography>
                                 </Box>
-                            </Fade>
-                        </Box>
-                        )
-                    } else {
-                        return (
-                        <Box key={step.text} my={2} mx={1} display="flex">
-                            <Box
-                                className="chatbox-receiver"
-                                borderRadius={5}
-                                p={1}
-                            >
-                            <Typography>{step.text}</Typography>
                             </Box>
-                        </Box>
-                        )
-                    }
+                            )
+                        }
                     })}
-
                     <div ref={elementRef} />
                 </Box>
 
                 <Box className="send-wrapper">
-                    <Box className={`send-button ${choices.length === 0 ? '' : "choice"}`}>
+                    <Box className={`send-wrapper__send-button ${choices.length === 0 ? '' : "choice"}`}>
                         Choose your reply...
                     </Box>
                     <Box className="send-button-right">
@@ -109,7 +108,6 @@ const Whatsapp = (props) => {
                     </Box>
                 </Box>
                 <Box className={`choices-wrapper ${choices.length === 0 ? 'no-choices' : ""}`}>
-                    {/* <p className="choices-title">What should (Character) say?</p> */}
                     {choices.map((choice) => {
                         return (
                             <Box 
