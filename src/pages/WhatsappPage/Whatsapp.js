@@ -2,6 +2,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { Box, Button, Fade, Grid, Typography } from '@material-ui/core'
 import makeStyles from '@material-ui/core/styles/makeStyles'
+import NextButton from "../../components/NextButton" 
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import "./style.scss"; 
@@ -10,6 +11,7 @@ import "./style.scss";
 const Whatsapp = (props) => {
     const {
         currentParagraphs,
+        getStory, 
         choices,
         setChoice,
         specialTags,
@@ -107,18 +109,23 @@ const Whatsapp = (props) => {
                         <ExpandMoreIcon />
                     </Box>
                 </Box>
-                <Box className={`choices-wrapper ${choices.length === 0 ? 'no-choices' : ""}`}>
-                    {choices.map((choice) => {
-                        return (
-                            <Box 
-                                className="choices"
-                                onClick={() => setChoice(choice.index)}
-                            >
-                                {choice.text}
-                            </Box>
-                        )
-                    })}
-                </Box>
+                {/* this if else is needed to toggle between "Next Button" and choices (if any) */}
+                {choices.length > 0 ? 
+                    <Box className={`choices-wrapper ${choices.length === 0 ? 'no-choices' : "w3-animate-fading"}`}>
+                        {choices.map((choice) => {
+                            return (
+                                <Box 
+                                    className="choices"
+                                    onClick={() => setChoice(choice.index)}
+                                >
+                                    {choice.text}
+                                </Box>
+                            )
+                        })}
+                    </Box>
+                    :
+                    <NextButton getStory={getStory}/>
+                }
             </Box>
         </Fade>
 

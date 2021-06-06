@@ -47,7 +47,7 @@ html, body {
 .text-area {
     background-color: #808080;
     overflow-y: scroll;
-    transition: height 1s; 
+    transition: height 0.4s; 
     height: 66.1vh; 
     scroll-snap-type: y mandatory;
 
@@ -57,7 +57,7 @@ html, body {
     }
 
     &.full {
-        transition: height 1s; 
+        transition: height 0.4s; 
         height: 85.3vh; 
         @media screen and (min-device-width:481px) {
             height: 535px; 
@@ -67,8 +67,11 @@ html, body {
 .choices-wrapper {
     height: 170px; 
     overflow-y: scroll;
-    transition: height 1s; 
+    transition: height 0.4s; 
     background-color: #414141;
+
+    animation:opac 0.9s;
+    
 
     // display: none;
     // z-index: -1;
@@ -93,7 +96,12 @@ html, body {
         &:hover {
             background-color: rgb(91, 158, 102);
         }
+
     }
+}
+@keyframes opac{
+    from{opacity:0} 
+    to{opacity:1}
 }
 .send-wrapper {
     padding: 10px 10px; 
