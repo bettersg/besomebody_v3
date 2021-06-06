@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useRef } from 'react'
 import { Box, Button, Fade, Typography } from '@material-ui/core'
+import NextButton from "../../components/NextButton" 
 import makeStyles from '@material-ui/core/styles/makeStyles'
 
 const useStyles = makeStyles((theme) => ({
@@ -9,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '640px',
+    bottom: 0, 
   },
   textWrapper: {
     background: theme.palette.grey[100],
@@ -28,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
 const Scene = (props) => {
   const {
     currentParagraphs,
+    getStory, 
     choices,
     setChoice,
     specialTags,
@@ -51,6 +54,8 @@ const Scene = (props) => {
 
   return (
     <Fade in>
+      <div>
+
       <Box className={classes.paragraphWrapper}  height="100%">
         <Box
           className={classes.textWrapper}
@@ -98,6 +103,9 @@ const Scene = (props) => {
           ))}
         </div>
       </Box>
+      <NextButton getStory={getStory}/>
+      </div>
+
     </Fade>
   )
 }

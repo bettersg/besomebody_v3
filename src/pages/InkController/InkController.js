@@ -95,6 +95,7 @@ const getUi = ({
       return (
         <DefaultInk
           currentParagraphs={currentParagraphs}
+          getStory={getStory}
           choices={choices}
           setChoice={setChoice}
           specialTags={specialTags}
