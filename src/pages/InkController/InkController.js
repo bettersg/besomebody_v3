@@ -42,8 +42,7 @@ const getInkJson = (nameParam) => {
 }
 
 const getUi = ({
-  currentParagraphs,
-  getStory, 
+  currentParagraphs, 
   choices,
   specialTags,
   globalVariables,
