@@ -12,10 +12,11 @@ createMuiTheme
 import NavBar from "./NavBar";
 import "../styles.css";
 
-// TODO: Convert the static state below into one that pulls info from a JSON on all the chapters for each character
 
 
 class CharacterChoice extends React.Component {
+
+
 	state = {
 		user: [
 			{
@@ -44,7 +45,7 @@ class CharacterChoice extends React.Component {
 				name: "Aman",
 				description: "Aman Singh dreams of writing poetry - but he has bigger headaches to deal with first.",
 				buttonShow: true,
-				link: "/story/david"
+				link: "/story/aman"
 			} 
 			], 
 			personas2: [

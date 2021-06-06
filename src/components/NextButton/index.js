@@ -12,7 +12,7 @@ const NextButton = (props) => {
             className="next-button"
             endIcon={<NavigateNextIcon />}
             color="primary"
-            fullWidth
+            
             onClick={() => {
               getStory()
             }}

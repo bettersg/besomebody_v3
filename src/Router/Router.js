@@ -16,18 +16,17 @@ import LandingPage from '../pages/LandingPage'
 import CharacterChoicePage from "../pages/CharacterChoicePage"
 import CharacterChapterPage from "../pages/CharacterChapterPage"
 import IntroPage from "../pages/IntroPage"
-import EmailPage from "../pages/EmailPage/EmailPage"
+import ProfileBuilderPage from "../pages/ProfileBuilderPage"
  
 class Router extends Component {
   render() {
     // Properties
     const { user, roles, bar } = this.props
-    // console.log(this.props)
 
     return (
       <BrowserRouter basename={process.env.REACT_APP_BASENAME}>
-        {/* {bar} */}
-
+        {/* {bar} // TODO: implement "bar" as a menubar above the game components below */}
+        
         <Switch>
           <Route path="/" exact>            
               {user ?
@@ -36,16 +35,19 @@ class Router extends Component {
                 )
                 :
                 (
-                  <LandingPage />
+                    <LandingPage />  
                 )
               }            
           </Route>
 
-
           <Route path="/intro" exact>                        
             <IntroPage />             
           </Route>
-
+          
+          <PrivateRoute path="/characterchoice" exact>
+            <CharacterChoicePage />
+          </PrivateRoute>
+ 
           <PrivateRoute path="/chapters/:name" exact>
             <CharacterChapterPage />
           </PrivateRoute>
@@ -53,18 +55,16 @@ class Router extends Component {
           <PrivateRoute path="/story/:name" exact>
             <InkController />
           </PrivateRoute>
-          
-          <PrivateRoute path="/characterchoice" exact>
-            <CharacterChoicePage />
-          </PrivateRoute>
- 
-          
 
           <Route path="/signup" exact>
             <SignUp />
           </Route>
 
-          <Route path="/login" exact>
+          <PrivateRoute path="/profilebuilder" exact>                     
+            <ProfileBuilderPage />             
+          </PrivateRoute>   
+
+          <Route path="/login" exact>            
             <Login />
           </Route>
 
@@ -83,11 +83,6 @@ class Router extends Component {
           <PrivateRoute path="/user/:userId">
             {user ? <UserPage /> : <Redirect to="/" />}
           </PrivateRoute>
-
-          <Route path="/email" exact>
-            <EmailPage />
-          </Route>
-
 
           <Route>
             <NotFoundPage />

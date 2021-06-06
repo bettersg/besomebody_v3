@@ -8,10 +8,10 @@ const initInk = (storyApi, json) => {
         return nextStoryStep()
       }
 
-      const currentChapterTag = inkStory.currentTags
-        .find((tag) => tag.includes('chapter:'))
+      const currentKnotTag = inkStory.currentTags
+        .find((tag) => tag.includes('knot:'))
         ?.split(':')[1]
-      const currentChapter = inkStory.currentChoices.length
+      const currentKnot = inkStory.currentChoices.length
         ? inkStory.currentChoices[0].sourcePath?.split('.')[0]
         : inkStory.state.currentPathString?.split('.')[0]
 
@@ -19,7 +19,7 @@ const initInk = (storyApi, json) => {
         paragraph: inkStory.state.currentText,
         choices: inkStory.currentChoices,
         tags: inkStory.currentTags || [],
-        currentChapter: currentChapter || currentChapterTag,
+        currentKnot: currentKnot || currentKnotTag,
       }
       return values
     }

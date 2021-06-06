@@ -2,22 +2,38 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Box, Container, Typography } from '@material-ui/core'
-import NadidInk from '../../stories/nadid.ink.json'
-import DavidInk from '../../stories/test2.ink.json'
 import useInk from '../../lib/Ink/useInk'
 import NotFoundPage from '../../components/NotFoundPage'
 import WhatsApp from '../WhatsappPage/Whatsapp'
-import School from '../SchoolPage/School'
+import Scene from '../ScenePage/Scene'
 import InkControls from './InkControls'
 import DefaultInk from '../DefaultInk'
+import Survey from '../SurveyPage/Survey'
+import { STORY_MAP } from '../../models/storyMap'
 
 const getInkJson = (nameParam) => {
   switch (nameParam) {
     case 'nadid': {
-      return NadidInk
+      const nadidStory = STORY_MAP.find((story) => story.id === 1)
+      const nadidChapter1 = nadidStory.chapters.find(
+        (chapter) => chapter.id === 1
+      )
+      const json = nadidChapter1.inkJson
+      return {
+        inkJson: json,
+        character: nadidStory.id,
+        chapter: nadidChapter1.id,
+      }
     }
-    case 'david': {
-      return DavidInk
+    case 'aman': {
+      const aman = STORY_MAP.find((story) => story.id === 2)
+      const amanChapter1 = aman.chapters.find((chapter) => chapter.id === 1)
+      const json = amanChapter1.inkJson
+      return {
+        inkJson: json,
+        character: aman.id,
+        chapter: amanChapter1.id,
+      }
     }
     default: {
       return null
@@ -26,17 +42,17 @@ const getInkJson = (nameParam) => {
 }
 
 const getUi = ({
-  currentParagraphs,
-  getStory, 
+  currentParagraphs, 
   choices,
   specialTags,
   globalVariables,
   setChoice,
+  getStory,
 }) => {
   switch (specialTags.ui) {
-    case 'school': {
+    case 'scene': {
       return (
-        <School
+        <Scene
           currentParagraphs={currentParagraphs}
           getStory={getStory}
           choices={choices}
@@ -57,10 +73,16 @@ const getUi = ({
         />
       )
     }
-    case 'instagram': {
+    case 'survey': {
+      // TODO: update this component
       return (
-        // to change to an instagram
-        <WhatsApp 
+        <Survey getStory={getStory} currentParagraphs={currentParagraphs} />
+      )
+    }
+    case 'school': {
+      return (
+        // to remove school from nadia's story
+        <Scene
           currentParagraphs={currentParagraphs}
           choices={choices}
           setChoice={setChoice}
@@ -85,7 +107,7 @@ const getUi = ({
 const InkController = () => {
   const { name } = useParams()
 
-  const inkJson = getInkJson(name)
+  const { inkJson, character, chapter } = getInkJson(name)
 
   const {
     // States
@@ -94,7 +116,7 @@ const InkController = () => {
     choices,
     specialTags,
     globalVariables,
-    currentChapter,
+    currentKnot,
     hasSavedState,
 
     // Methods
@@ -105,24 +127,24 @@ const InkController = () => {
     saveStory,
     loadSavedStory,
     resetSavedStory,
-  } = useInk(inkJson, name)
+  } = useInk(inkJson, character, chapter)
 
   // ==============================================================
-  // Filter paragraphs based on current chapter
+  // Filter paragraphs based on current knot
   // ==============================================================
   const [currentParagraphs, setCurrentParagraphs] = useState([])
 
   useEffect(() => {
-    if (currentChapter || paragraphs[paragraphs.length - 1]?.currentChapter) {
+    if (currentKnot || paragraphs[paragraphs.length - 1]?.currentKnot) {
       const nextParagraphs = paragraphs.filter((paragraph) => {
-        return paragraph.currentChapter === currentChapter
+        return paragraph.currentKnot === currentKnot
       })
       return setCurrentParagraphs([...nextParagraphs])
     }
 
     setCurrentParagraphs(paragraphs)
-    // Run this useEffect whenever paragraphs or currentChapter get updated
-  }, [paragraphs, currentChapter])
+    // Run this useEffect whenever paragraphs or currentKnot get updated
+  }, [paragraphs, currentKnot])
 
   /*
   // ===========
@@ -147,7 +169,6 @@ const InkController = () => {
       <Box >
         <Typography variant="overline" className="name">{name}</Typography>
       </Box>
- 
 
       {getUi({
         currentParagraphs,
@@ -156,8 +177,8 @@ const InkController = () => {
         specialTags,
         globalVariables,
         setChoice,
+        getStory,
       })}
-
 
       {/* Render event triggers */}
       <InkControls
