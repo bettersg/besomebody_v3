@@ -6,15 +6,14 @@
     .menu-button {
         position: absolute;
         color: rgba(243, 243, 243, 0.83);
-        background-color: rgba(206, 206, 206, 0.467);
-        height: 45px;
-        width: 45px; 
-        border-radius: 30px;
+        height: 35px;
+        width: 35px; 
         display: flex;
         justify-content: center;
         align-items: center;
+        opacity: 0.5;
+        
         &:active {
-            background-color: grey;
             box-shadow: 3px 3px 5px lightgrey;
             -webkit-transition: 0.35s;
         }
@@ -27,8 +26,6 @@
     
     .menu-drawer {
         height: 100%;
-        
-        background-color: honeydew;
         overflow-y: hidden;
     }
     

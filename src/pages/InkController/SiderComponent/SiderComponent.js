@@ -3,8 +3,8 @@ import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import { Avatar } from '@material-ui/core';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-import MenuIcon from '@material-ui/icons/Menu';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import HomeIcon from '@material-ui/icons/Home';
 
 import "./style.scss"; 
 
@@ -99,7 +99,7 @@ export default function SwipeableTemporaryDrawer() {
     <div className="menu-wrapper">
       {['left'].map((anchor) => (
         <React.Fragment key={anchor}>
-          <div onClick={toggleDrawer(anchor, true)} className="menu-button"><MenuIcon/></div>
+          <img onClick={toggleDrawer(anchor, true)} src="/common/home.svg" className="menu-button" />
           <SwipeableDrawer
             anchor={anchor}
             open={state[anchor]}
