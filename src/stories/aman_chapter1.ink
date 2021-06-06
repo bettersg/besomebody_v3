@@ -6,8 +6,6 @@ Introduction to Aman Singh
 #knot:Aman_Chapter1_Fundraiser
 #ui:scene
 #background:aman_fundraiser.jpg
-#left_character_image:aman_happy.jpg
-#left_character_name:Aman
 #right_character_image:zhihao_happy.jpg
 #right_character_name:Zhihao
 
@@ -32,8 +30,6 @@ Z: You wanna kena tekan by your parents, or kena tekan by the sergeant major? #s
 #knot:Aman_Chapter1_Barber
 #ui:scene
 #background:aman_barber.jpg
-#left_character_image:aman_scared.jpg
-#left_character_name:Aman
 #right_character_image:barber.jpg
 #right_character_name:Barber
 
@@ -80,8 +76,6 @@ Aman is in the public restroom after cutting his hair. Staring at his new reflec
 #knot:Aman_Chapter1_Enlisting
 #ui:scene
 #background:aman_bmt.jpg
-#left_character_image:
-#left_character_name:
 #right_character_image:sergeant_tan.jpg
 #right_character_name:Sergeant Tan 
 

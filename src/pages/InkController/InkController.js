@@ -25,14 +25,14 @@ const getInkJson = (nameParam) => {
         chapter: nadidChapter1.id,
       }
     }
-    case 'david': {
-      const david = STORY_MAP.find((story) => story.id === 2)
-      const davidChapter1 = david.chapters.find((chapter) => chapter.id === 1)
-      const json = davidChapter1.inkJson
+    case 'aman': {
+      const aman = STORY_MAP.find((story) => story.id === 2)
+      const amanChapter1 = aman.chapters.find((chapter) => chapter.id === 1)
+      const json = amanChapter1.inkJson
       return {
         inkJson: json,
-        character: david.id,
-        chapter: davidChapter1.id,
+        character: aman.id,
+        chapter: amanChapter1.id,
       }
     }
     default: {

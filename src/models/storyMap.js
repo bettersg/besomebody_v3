@@ -1,5 +1,5 @@
 import NadidInk from '../stories/nadid.ink.json'
-import DavidInk from '../stories/test2.ink.json'
+import AmanInk from '../stories/aman_chapter1.ink.json'
 
 // TODO: Update with other properties such as character image, character bio, chapter summary, etc
 export const STORY_MAP = [
@@ -30,12 +30,12 @@ export const STORY_MAP = [
   },
   {
     id: 2,
-    name: 'Dave Alonso',
+    name: 'Aman',
     chapters: [
       {
         id: 1,
-        name: 'The Bully',
-        inkJson: DavidInk,
+        name: 'The Haircut',
+        inkJson: AmanInk,
         endings: [
           {
             id: 1,
