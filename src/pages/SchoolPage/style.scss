@@ -1,0 +1,6 @@
+.schoolWrapper {
+    height: 100vh;
+    @media screen and (min-device-width:481px) {
+        height: 660px; 
+    }
+}

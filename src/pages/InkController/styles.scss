@@ -1,8 +1,16 @@
 .story {
+    .game-menu {
+        // height: 20px; 
+        // width: 20px; 
+        // background-color: grey;
+        top: 10px;
+        left: 10px;
+        position: absolute;
+    }
     .next-button {
         bottom: 0; 
         right: 0;
-        height: 20px; 
+        height: 100px; 
         position: absolute;
     }
     .reset-button {
@@ -15,6 +23,13 @@
         position: absolute;
     }
     
+}
+
+.ink-controller {
+    .name {
+        position: absolute;
+        top: 0;
+    }
 }
 
 .ui-screens {

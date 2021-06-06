@@ -2,13 +2,16 @@
   max-width: 480px;   
   margin: auto; 
 } */
-
+html, body {
+  height: 100%;
+  width: 100%; 
+}
 @media screen and (min-device-width:481px) {
   html {
     margin-top: 5% !important; 
     position: relative;
     width: 390px;
-    height: 780px;
+    height: 780px !important;
     margin: auto;
     border: 16px black solid;
     border-top-width: 60px;
@@ -45,6 +48,10 @@
     background: white;
     align-items: center;
     overflow-x: hidden;
+  }
+
+  body {
+    height: 660px !important;
   }
 }
 
