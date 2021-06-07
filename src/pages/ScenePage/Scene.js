@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useRef } from 'react'
 import { Box, Button, Fade, Typography } from '@material-ui/core'
+import NextButton from "../../components/NextButton" 
 import makeStyles from '@material-ui/core/styles/makeStyles'
 
 const useStyles = makeStyles((theme) => ({
@@ -9,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '640px',
+    bottom: 0, 
   },
   textWrapper: {
     background: theme.palette.grey[100],
@@ -28,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
 const Scene = (props) => {
   const {
     currentParagraphs,
+    getStory, 
     choices,
     setChoice,
     specialTags,
@@ -51,6 +54,8 @@ const Scene = (props) => {
 
   return (
     <Fade in>
+      <div>
+
       <Box className={classes.paragraphWrapper}  height="100%">
         <Box
           className={classes.textWrapper}
@@ -72,32 +77,40 @@ const Scene = (props) => {
 
           <div ref={elementRef} />
         </Box>
-        
-        <div  className={classes.choiceWrapper} >            
-          {choices.map((choice) => (
-            
-            <Box
-                mx={1}
-                key={choice.text}
-                display="flex"
-                justifyContent="center"
-                my={1}
+        {/* this if else is needed to toggle between "Next Button" and choices (if any) */}
+        {choices.length > 0 ? 
+          <div  className={classes.choiceWrapper} >            
+            {choices.map((choice) => (
               
-              >
-                <Fade in={choice.text}>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    onClick={() => setChoice(choice.index)}
-                  >
-                    <Typography variant="caption">{choice.text}</Typography>
-                  </Button>
-                </Fade>
-              </Box>
-              
-          ))}
-        </div>
+              <Box
+                  mx={1}
+                  key={choice.text}
+                  display="flex"
+                  justifyContent="center"
+                  my={1}
+                
+                >
+                  <Fade in={choice.text}>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      onClick={() => setChoice(choice.index)}
+                    >
+                      <Typography variant="caption">{choice.text}</Typography>
+                    </Button>
+                  </Fade>
+                </Box>
+                
+            ))}
+          </div>
+          : 
+          <NextButton getStory={getStory}/>
+
+        }
       </Box>
+      
+      </div>
+        
     </Fade>
   )
 }

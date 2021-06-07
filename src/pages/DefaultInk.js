@@ -1,10 +1,12 @@
 import React from 'react'
 import { Box, Button, Fade, Typography } from '@material-ui/core'
+import NextButton from "../components/NextButton" 
+
 
 const DefaultInk = (props) => {
-  const { currentParagraphs, choices, setChoice, specialTags } = props
+  const { currentParagraphs, getStory, choices, setChoice, specialTags } = props
   return (
-    <Box>
+    <Box >
       {currentParagraphs?.map((paragraph) => {
         return (
           <Box my={2}>
@@ -31,6 +33,7 @@ const DefaultInk = (props) => {
           </Box>
         )
       })}
+          <NextButton getStory={getStory}/>
     </Box>
   )
 }
