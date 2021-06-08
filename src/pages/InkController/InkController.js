@@ -79,6 +79,11 @@ const getUi = ({
         <Survey getStory={getStory} currentParagraphs={currentParagraphs} />
       )
     }
+      
+      // case reflection  - return a reflection component with argument for survey id from ink
+      // <Reflection getstory surveyid />
+
+
     case 'school': {
       return (
         // to remove school from nadia's story

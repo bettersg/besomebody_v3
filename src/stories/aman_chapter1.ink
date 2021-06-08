@@ -68,6 +68,7 @@ Aman is in the public restroom after cutting his hair. Staring at his new reflec
 === Aman_Chapter1_survey ===
 #knot:survey
 #ui:survey
+#surveyid:17
     This is a test survey
 -> Aman_Chapter1_Enlisting
     
@@ -91,5 +92,7 @@ A: Yes, sorry.
 Sergeant: “Wah lao eh! Now must procure helmet for you. Why you so troublesome one? Take this first and go sit down. Later I call you.”
 
 <Sergeant shoves duffel bag at Aman who takes it and walks away> 
+
+VAR Aman_End_1 = true
 
 -> DONE
