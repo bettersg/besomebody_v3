@@ -52,6 +52,7 @@ const ProfileBuilderPage = () => {
         race: "",
         religion: "",
         housing: "",
+        username:"",
     });
   
     const [formData, updateFormData] = React.useState(initialFormData);
@@ -155,6 +156,11 @@ const ProfileBuilderPage = () => {
                   {formData.housing === 'other' && <input type="text" placeholder="e.g. Chinese-Indian , Eurasian" name="religion" onBlur={handleChange} ></input>} 
                 </RadioGroup>
               </Box>     
+
+              <Box my={4}>
+                <FormLabel component="legend">Preferred Username (optional, or you can keep the random string below)</FormLabel>                              
+                  <input type="text" value={ currentUser.id.substring(0, 6).toUpperCase() } name="username" onBlur={handleChange} ></input>                 
+              </Box> 
 
               <Button variant="contained" color="primary" type="Submit" > Submit - then Start the game</Button>
 
