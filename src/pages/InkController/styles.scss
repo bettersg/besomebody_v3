@@ -3,16 +3,11 @@
         // height: 20px; 
         // width: 20px; 
         // background-color: grey;
-        top: 10px;
-        left: 10px;
+        top: 20px;
+        right: 45px;
         position: absolute;
     }
-    .next-button {
-        bottom: 0; 
-        right: 0;
-        height: 100px; 
-        position: absolute;
-    }
+
     .reset-button {
         display: none;
     }
@@ -24,6 +19,8 @@
     }
     
 }
+
+
 
 .ink-controller {
     .name {

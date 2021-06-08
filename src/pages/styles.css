@@ -122,3 +122,14 @@ body {
   bottom: 0 !important; 
   z-index: 1; 
 }
+
+.next-button {
+  bottom: 0; 
+  height: 350px; 
+  position: absolute;
+  z-index: 10000; 
+  display: block;
+  /* test next */
+  /* background-color: darkblue;
+  opacity: 0.5; */
+}

@@ -8,17 +8,13 @@ import "./style.scss"
 const NextButton = (props) => {
     const { getStory } = props
     return (
-        <Button
-            className="next-button"
-            endIcon={<NavigateNextIcon />}
-            color="primary"
-            
-            onClick={() => {
-              getStory()
-            }}
-          >
-            Next
-        </Button>
+      <div 
+      className="next-button" 
+      onClick={() => {
+        getStory()
+      }}
+      >
+      </div>
     )
 }
 

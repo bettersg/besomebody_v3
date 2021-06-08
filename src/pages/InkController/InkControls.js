@@ -30,7 +30,7 @@ const InkControls = (props) => {
       {getStory && (
         <Box width="100%">
           <div className="game-menu"><SwipeableTemporaryDrawer/></div>
-          <NextButton getStory={getStory}/>
+          {/* <NextButton getStory={getStory}/> */}
         </Box>
       )}
       </div>

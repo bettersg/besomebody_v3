@@ -66,6 +66,7 @@ const getUi = ({
       return (
         <WhatsApp
           currentParagraphs={currentParagraphs}
+          getStory={getStory}
           choices={choices}
           setChoice={setChoice}
           specialTags={specialTags}
@@ -89,6 +90,7 @@ const getUi = ({
         // to remove school from nadia's story
         <Scene
           currentParagraphs={currentParagraphs}
+          getStory={getStory}
           choices={choices}
           setChoice={setChoice}
           specialTags={specialTags}
@@ -100,6 +102,7 @@ const getUi = ({
       return (
         <DefaultInk
           currentParagraphs={currentParagraphs}
+          getStory={getStory}
           choices={choices}
           setChoice={setChoice}
           specialTags={specialTags}
