@@ -61,25 +61,31 @@ const ProfileBuilderPage = () => {
         updateFormData({
           ...formData,
     
-          // Trimming any whitespace -> TODO: check why this is needed?
-          [e.target.name]: e.target.value.trim()
-        });
+          // Trimming any whitespace and convert to uppercase for standardisation
+          [e.target.name]: e.target.value.trim().toUpperCase()
+        });        
     };
  
   
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
+         
+        // console.log(formData);        
         
-        setIsLoading(true);
-        
-        // TODO: Validation       
-
-        console.log(formData);        
-        // change this to a try / catch err
-        updateDbUser(formData, currentUser.id);
-
-        setIsLoading(false);
-        history.push('/');
+        try {
+          setIsLoading(true)          
+          await updateDbUser(formData, currentUser.id)
+          history.push('/')  // redirect to root which will be the characterchoice page now.
+         
+        } catch (err) {
+          setSnackbar({
+            message: `There was an error: ${err.message}`,
+            open: true,
+            type: 'error',
+          })
+        }
+        setIsLoading(false)      
+ 
     };
     
 
@@ -112,10 +118,10 @@ const ProfileBuilderPage = () => {
               <Box my={4}>
                 <FormLabel component="legend">Gender</FormLabel>                              
                 <RadioGroup aria-label="gender" name="gender"  onChange={handleChange} >
-                  <FormControlLabel value="male" control={<Radio />} label="Male" />
-                  <FormControlLabel value="female" control={<Radio />} label="Female" />
-                  <FormControlLabel value="other" control={<Radio />} label="Other" />
-                    {formData.gender === 'other' && <input type="text" placeholder="Other" name="gender" onBlur={handleChange} ></input>}
+                  <FormControlLabel value="MALE" control={<Radio />} label="Male" />
+                  <FormControlLabel value="FEMALE" control={<Radio />} label="Female" />
+                  <FormControlLabel value="OTHER" control={<Radio />} label="Other" />
+                    {formData.gender === 'OTHER' && <input type="text" placeholder="Other" name="gender" onBlur={handleChange} ></input>}
                   {/* Using onBlur instead of onChange because once changed, the text field disappears. So need to capture the data only once the user moves away. */ }
                 </RadioGroup>
               </Box>
@@ -123,46 +129,64 @@ const ProfileBuilderPage = () => {
               <Box my={4}>
                 <FormLabel component="legend">Race</FormLabel>                              
                 <RadioGroup aria-label="race" name="race"  onChange={handleChange} >
-                  <FormControlLabel value="chinese" control={<Radio />} label="Chinese" />
-                  <FormControlLabel value="malay" control={<Radio />} label="Malay" />
-                  <FormControlLabel value="indian" control={<Radio />} label="Indian" />
-                  <FormControlLabel value="other" control={<Radio />} label="Other" />
-                  {formData.race === 'other' && <input type="text" placeholder="e.g. Chinese-Indian , Eurasian" name="race" onBlur={handleChange} ></input>} 
+                  <FormControlLabel value="CHINESE" control={<Radio />} label="Chinese" />
+                  <FormControlLabel value="MALAY" control={<Radio />} label="Malay" />
+                  <FormControlLabel value="INDIAN" control={<Radio />} label="Indian" />
+                  <FormControlLabel value="OTHER" control={<Radio />} label="Other" />
+                  {formData.race === 'OTHER' && <input type="text" placeholder="e.g. Chinese-Indian , Eurasian" name="race" onBlur={handleChange} ></input>} 
                 </RadioGroup>
               </Box>                
 
               <Box my={4}>
                 <FormLabel component="legend">Religion</FormLabel>                              
                 <RadioGroup aria-label="religion" name="religion"  onChange={handleChange} >
-                  <FormControlLabel value="christian" control={<Radio />} label="Christian" />
-                  <FormControlLabel value="hindu" control={<Radio />} label="Hindu" />
-                  <FormControlLabel value="buddhist" control={<Radio />} label="Buddhist" />
-                  <FormControlLabel value="taoist" control={<Radio />} label="Taoist" />
-                  <FormControlLabel value="muslim" control={<Radio />} label="Muslim" />
-                  <FormControlLabel value="sikh" control={<Radio />} label="Sikh" />
-                  <FormControlLabel value="free-thinker" control={<Radio />} label="Free-thinker" />                  
-                  <FormControlLabel value="other" control={<Radio />} label="Other" />
-                  {formData.religion === 'other' && <input type="text" placeholder="e.g. Chinese-Indian , Eurasian" name="religion" onBlur={handleChange} ></input>} 
+                  <FormControlLabel value="CHRISTIAN" control={<Radio />} label="Christian" />
+                  <FormControlLabel value="HINDU" control={<Radio />} label="Hindu" />
+                  <FormControlLabel value="BUDDHIST" control={<Radio />} label="Buddhist" />
+                  <FormControlLabel value="TAOIST" control={<Radio />} label="Taoist" />
+                  <FormControlLabel value="MUSLIM" control={<Radio />} label="Muslim" />
+                  <FormControlLabel value="SIKH" control={<Radio />} label="Sikh" />
+                  <FormControlLabel value="FREE-THINKER" control={<Radio />} label="Free-thinker" />                  
+                  <FormControlLabel value="OTHER" control={<Radio />} label="Other" />
+                  {formData.religion === 'OTHER' && <input type="text" placeholder="e.g. Chinese-Indian , Eurasian" name="religion" onBlur={handleChange} ></input>} 
                 </RadioGroup>
               </Box>    
                
               <Box my={4}>
                 <FormLabel component="legend">Housing Type</FormLabel>                              
                 <RadioGroup aria-label="housing" name="housing"  onChange={handleChange} >
-                  <FormControlLabel value="hdb" control={<Radio />} label="HDB" />
-                  <FormControlLabel value="condo" control={<Radio />} label="Condominium" />
-                  <FormControlLabel value="landed" control={<Radio />} label="Landed" />                                     
-                  <FormControlLabel value="other" control={<Radio />} label="Other" />
-                  {formData.housing === 'other' && <input type="text" placeholder="e.g. Chinese-Indian , Eurasian" name="religion" onBlur={handleChange} ></input>} 
+                  <FormControlLabel value="HDB" control={<Radio />} label="HDB" />
+                  <FormControlLabel value="CONDO" control={<Radio />} label="Condominium" />
+                  <FormControlLabel value="LANDED" control={<Radio />} label="Landed" />                                     
+                  <FormControlLabel value="OTHER" control={<Radio />} label="Other" />
+                  {formData.housing === 'OTHER' && <input type="text" placeholder="e.g. Bungalow" name="housing" onBlur={handleChange} ></input>} 
                 </RadioGroup>
               </Box>     
 
               <Box my={4}>
-                <FormLabel component="legend">Preferred Username (optional, or you can keep the random string below)</FormLabel>                              
-                  <input type="text" value={ currentUser.id.substring(0, 6).toUpperCase() } name="username" onBlur={handleChange} ></input>                 
+                <FormLabel component="legend">Preferred Username </FormLabel>                              
+                  <input type="text" placeholder="e.g. FLYBOY21" name="username" onBlur={handleChange} ></input>                 
               </Box> 
-
-              <Button variant="contained" color="primary" type="Submit" > Submit - then Start the game</Button>
+              
+              <Box my={4}>
+                <Typography variant="body2">Your submitted profile is:</Typography>
+                <div>Age: {formData.age}</div>
+                <div>Gender: {formData.gender.toUpperCase()}</div>
+                <div>Race: {formData.race.toUpperCase()}</div>
+                <div>Religion: {formData.religion.toUpperCase()}</div>
+                <div>Housing Type: {formData.housing.toUpperCase()}</div>
+                <div>Username: {formData.username.toUpperCase()}</div>                
+              </Box>
+              
+              
+              <Button
+                  type="submit"
+                  variant="contained"
+                  color="primary"
+                  disabled={isLoading}
+                >
+                  Submit - then Start the game
+              </Button>
 
             </form>
             
