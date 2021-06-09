@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import CharacterAvatar from "./CharacterAvatar";
 import PlayerProfile from "./PlayerProfile";
 import Grid from "@material-ui/core/Grid";
@@ -12,99 +12,48 @@ createMuiTheme
 import NavBar from "./NavBar";
 import "../styles.css";
 
+import { useAuth } from '../../contexts/AuthContext';
+import { useSnackbar } from '../../contexts/SnackbarContext'
+import { STORY_MAP,PLAYABLE_CHARACTERS,NONPLAYABLE_CHARACTERS } from '../../models/storyMap'
 
 
-class CharacterChoice extends React.Component {
+const CharacterChoice = () => {
 
+	
+    // Auth Context
+    const { currentUser } = useAuth()  
+    
+    const { setSnackbar } = useSnackbar()
+	
+	const personas = PLAYABLE_CHARACTERS;
+	const personas2 = NONPLAYABLE_CHARACTERS;
+		// need to update this personas and personas2 to be more dynamic	
+	
 
-	state = {
-		user: [
-			{
-				name: "Your Name",
-				avatar: "xx",
-				desc: "The Peacemaker",
-				numPersona: "3",
-				numOutcomes: "15",
-				numChapter: "8"
-			}
-		],
-		personas: [
-			{
-				alt: "Nadid",
-				src: 
-				"https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F0f59699e1dd943ba87446eb0c7ec9704",
-				name: "Nadid",
-				description: "Nadid Rahim wants to become a doctor - but will love and religion get in the way?",
-				buttonShow: true,
-				link: "/chapters/Nadid"
-			},
-			{
-				alt: "Aman",
-				src:
-				"https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F67b34f4b3f8c45abaca6389b1e8e0d53",
-				name: "Aman",
-				description: "Aman Singh dreams of writing poetry - but he has bigger headaches to deal with first.",
-				buttonShow: true,
-				link: "/story/aman"
-			} 
-			], 
-			personas2: [
-			{
-				alt: "Nazeema",
-				src:
-				"https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F0f59699e1dd943ba87446eb0c7ec9704",
-				name: "Nazeema",
-				description: "Traits Background Story Teaser",
-				buttonShow: false
-			},
-			{
-				alt: "Zhi Hao",
-				src:
-				"https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F67b34f4b3f8c45abaca6389b1e8e0d53",
-				name: "Zhi Hao",
-				description: "Traits Background Story Teaser",
-				buttonShow: false
-			},
-			{
-				alt: "Sally",
-				src:
-				"https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F2b85e086dd6e4e9f8cee78e60a8b2f0e",
-				name: "Sally",
-				description: "Traits Background Story Teaser",
-				buttonShow: false
-			}
-		]
-	};
-
-	render() {
-		let user = this.state.user;
-		let personas = this.state.personas;
-		let personas2 = this.state.personas2;
-
-		const theme = createMuiTheme({
-			overrides: {
-				MuiTypography: {
-					h5: {
-						fontSize: [18, "!important"],
-						fontWeight: 600, 
-						marginBottom: "2%", 
-					}, 
-					subtitle2: {
-						fontSize: [12, "!important"],
-						color: "grey", 
-						marginBottom: "3%", 
-						marginLeft: "20%", 
-						marginRight: "20%", 
-					}, 
+	const theme = createMuiTheme({
+		overrides: {
+			MuiTypography: {
+				h5: {
+					fontSize: [18, "!important"],
+					fontWeight: 600, 
+					marginBottom: "2%", 
 				}, 
-				MuiPaper: {
-					root: {
-						padding: "5%", 
-						marginTop: "5%", 
-					}
+				subtitle2: {
+					fontSize: [12, "!important"],
+					color: "grey", 
+					marginBottom: "3%", 
+					marginLeft: "20%", 
+					marginRight: "20%", 
+				}, 
+			}, 
+			MuiPaper: {
+				root: {
+					padding: "5%", 
+					marginTop: "5%", 
 				}
 			}
-		});
+		}
+	});
 
 		return (
 			<ThemeProvider theme={theme}>
@@ -112,7 +61,7 @@ class CharacterChoice extends React.Component {
 					<div className="App">
 						{/* user profile section  */}
 						<Box className="profileBox" px={3} m={5}>
-							<PlayerProfile userInfo={user}/>
+							<PlayerProfile userInfo={currentUser}/>
 						</Box> 
 
 						{/* your personas section  */}
@@ -166,6 +115,6 @@ class CharacterChoice extends React.Component {
 
 			</ThemeProvider>
 		);
-	}
+	
 }
 export default CharacterChoice;
