@@ -59,15 +59,15 @@ export default function PlayerProfile(props) {
             </Grid>
            </div>
            <Grid container spacing={3}>
-            <Grid item xs={4} alignItems="center">
+            <Grid item xs={4} style={{align:"center"}}>
               <Typography>3</Typography> 
               <Typography>Persona</Typography>
             </Grid>    
-            <Grid item xs={4} alignItems="center">
+            <Grid item xs={4} style={{align:"center"}}>
               <Typography>15</Typography>
               <Typography>Outcomes</Typography>
             </Grid>
-            <Grid item xs={4} alignItems="center">
+            <Grid item xs={4} style={{align:"center"}}>
               <Typography>8</Typography>  
               <Typography>Chapters</Typography>             
             </Grid>

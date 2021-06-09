@@ -32,11 +32,10 @@ const Whatsapp = (props) => {
           })
         }
       }, [elementRef, currentParagraphs, choices])
-
+// TO DO: make whatsapp screen fit the screen and customise controls 
     return (
-        // TO DO: make whatsapp screen fit the screen and customise controls 
-        <Fade in>
-
+        
+        <Fade in>           
             <Box className="paragraph-wrapper" pb={3}>
                 <Box className="whatsapp-header" p={1} mb={3}>
                     <Grid container alignItems="center">

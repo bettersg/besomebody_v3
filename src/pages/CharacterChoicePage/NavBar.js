@@ -20,7 +20,7 @@ export default function SimpleBottomNavigation() {
   const [value, setValue] = React.useState(0);
 
     return (
-        <ThemeProvider>
+        
             <BottomNavigation
                 value={value}
                 onChange={(event, newValue) => {
@@ -35,6 +35,8 @@ export default function SimpleBottomNavigation() {
                 <BottomNavigationAction label="Community" icon={<FiberManualRecord />} className="navBarIcons"/>
                 <BottomNavigationAction label="Profile" icon={<FiberManualRecord />} className="navBarIcons"/>
             </BottomNavigation>
-        </ThemeProvider>
+       
     );
 }
+
+// The bottom navigation used to be wrapped in <ThemeProvider> but I removed that as we are not using the ThemeProvider in this implementation. If we decide to use ThemeProvider then need to make game-wide changes.

@@ -9,6 +9,7 @@ const Survey = (props) => {
   const { setSnackbar } = useSnackbar()
 
   const [isLoading, setIsLoading] = useState(false)
+ // get the survey id from special tags
 
   // Init form
   const defaultValues = {

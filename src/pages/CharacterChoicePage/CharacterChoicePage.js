@@ -74,10 +74,10 @@ const CharacterChoice = () => {
 
 							<Grid container spacing={3}>
 							{/* map the JSON data into the components */}
-							{personas.map((persona) => {
+							{personas.map((persona,i) => {
 								return (
-								<Grid item xs={6}>
-									<CharacterAvatar personaInfo={persona} />
+								<Grid item xs={6} key={i}>
+									<CharacterAvatar personaInfo={persona} key={i} />
 								</Grid>
 								);
 							})}
@@ -94,10 +94,10 @@ const CharacterChoice = () => {
 							</Typography>
 							<Grid container spacing={3}>
 								{personas2.length > 0 
-									? personas2.map((persona) => {
+									? personas2.map((persona,i) => {
 										return (
-											<Grid item xs={4}>
-											<CharacterAvatar personaInfo={persona} />
+											<Grid item xs={4} key={i}>
+												<CharacterAvatar personaInfo={persona} key={i}/>
 											</Grid>
 										);
 									})

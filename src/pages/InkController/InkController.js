@@ -75,7 +75,7 @@ const getUi = ({
       )
     }
     case 'survey': {
-      // TODO: update this component
+      // TODO: update this component 
       return (
         <Survey getStory={getStory} currentParagraphs={currentParagraphs} />
       )
