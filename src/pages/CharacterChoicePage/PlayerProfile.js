@@ -54,8 +54,8 @@ export default function PlayerProfile(props) {
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Grid>
                 <Avatar className={classes.large}/>
-                <Typography variant="subtitle1">Name: {userInfo.name}</Typography>
-                <Typography variant="subtitle1">My Desc: {userInfo.desc}</Typography>
+                <Typography variant="subtitle1">Name: {userInfo.username}</Typography>
+                <Typography variant="subtitle1">My Desc: {userInfo.age}</Typography>
             </Grid>
            </div>
            <Grid container spacing={3}>

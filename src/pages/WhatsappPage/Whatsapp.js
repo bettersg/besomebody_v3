@@ -62,7 +62,7 @@ const Whatsapp = (props) => {
                     </Grid>
                 </Box> 
                 <Box className={`text-area ${choices.length === 0 ? 'full' : ""}`} dir="ltr">
-                    {currentParagraphs.map((step) => {
+                    {currentParagraphs.map((step,i) => {
                         if (step.tags[0]?.includes('Speaker_self')) {
                             return (
                             <Box
@@ -72,13 +72,14 @@ const Whatsapp = (props) => {
                                 display="flex"
                                 justifyContent="flex-end"
                             >
-                                <Fade in={step.text}>
+                                <Fade in={step.text}  key={i}>
                                     <Box
                                         className="chatbox-sender"
                                         borderRadius={5}
                                         p={1}
+                                        key={i}
                                     >
-                                        <Typography>{step.text}</Typography>
+                                        <Typography  key={i}>{step.text}</Typography>
                                     </Box>
                                 </Fade>
                             </Box>
@@ -91,7 +92,7 @@ const Whatsapp = (props) => {
                                     borderRadius={5}
                                     p={1}
                                 >
-                                <Typography>{step.text}</Typography>
+                                <Typography  key={i}>{step.text}</Typography>
                                 </Box>
                             </Box>
                             )
@@ -111,11 +112,12 @@ const Whatsapp = (props) => {
                 {/* this if else is needed to toggle between "Next Button" and choices (if any) */}
                 {choices.length > 0 ? 
                     <Box className={`choices-wrapper ${choices.length === 0 ? 'no-choices' : "w3-animate-fading"}`}>
-                        {choices.map((choice) => {
+                        {choices.map((choice,i) => {
                             return (
                                 <Box 
                                     className="choices"
                                     onClick={() => setChoice(choice.index)}
+                                    key={i}
                                 >
                                     {choice.text}
                                 </Box>

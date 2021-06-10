@@ -21,9 +21,9 @@ const useStyles = makeStyles((theme) => ({
     scrollSnapType: 'y mandatory',
   },
   choiceWrapper: {
-    position: 'fixed',
+    position: 'relative',
     opacity: 0.8,    
-    bottom: '100px',
+    top: '450px',
   }
 }))
 

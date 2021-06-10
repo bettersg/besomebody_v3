@@ -93,6 +93,7 @@ Sergeant: “Wah lao eh! Now must procure helmet for you. Why you so troublesome
 
 <Sergeant shoves duffel bag at Aman who takes it and walks away> 
 
-VAR Aman_End_1 = true
+VAR Character_1_End_1A = true
 
--> DONE
+
+-> END
