@@ -66,11 +66,8 @@ const CharacterChoice = () => {
 
 						{/* your personas section  */}
 						<Paper>
-							<Typography variant="h5"> Your personas </Typography>
-							<Typography variant="subtitle2">
-							{" "}
-							Continue with their stories{" "}
-							</Typography>
+							<Typography variant="h5"> Playable Characters </Typography>
+							<Typography variant="subtitle2">Continue with their stories</Typography>
 
 							<Grid container spacing={3}>
 							
@@ -89,12 +86,8 @@ const CharacterChoice = () => {
 
 						{/* discover more section  */}
 						<Paper>
-							<Typography variant="h5"> Discover more </Typography>
-							<Typography variant="subtitle2">
-								{" "}
-								Complete chapters and outcomes of your personas to unlock more
-								personas{" "}
-							</Typography>
+							<Typography variant="h5"> Unlock New Characters </Typography>
+							<Typography variant="subtitle2">Complete the playable characters to unlock these new characters and stories!</Typography>
 							<Grid container spacing={3}>
 								{characters.map((persona,i) => {
 									return (

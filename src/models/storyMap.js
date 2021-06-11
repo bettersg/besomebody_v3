@@ -10,6 +10,20 @@ profileImage (string),
 description (string), 
 jsonLink (string), 
 playable (boolean)
+variables [] -> character specific variables to track?
+  ?
+chapters []
+  chapterId (int)
+  number (int)
+  title (str)
+  knotTag (str)
+  summary (str)
+  playable (bool)  <- TODO: the chapters should only be playable once the player has finished the previous chapter. This implementation is wrong.
+  endings []
+    endingId
+    name
+
+
 */
 
 export const CHARACTER_MAP = [
@@ -17,10 +31,81 @@ export const CHARACTER_MAP = [
     characterId: 1,
     name: "Nadia Ibrahim",
     linkName: "nadia",
-    profileImage: "https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F0f59699e1dd943ba87446eb0c7ec9704",
-    description: "Nadid wants to become a doctor - but will love and religion get in the way?",
+    profileImage: "https://images.generated.photos/mOW1TlV_t3f-cxpA6Ud9Bj-fleXjDLGQC9f0oI0R24E/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAwMzMwMjIuanBn.jpg",
+    description: "Nadia wants to become a doctor - but will love and religion get in the way?",
     jsonLink: '../stories/nadid.ink.json',
     playable: true,
+    variables: {
+      nadia_mood: 5,
+      gavin_mood: 5,
+    },
+    chapters: [
+      {
+        chapterId: 1,
+        number: 1,
+        title: "Caught with Gavin",
+        knotTag: "nadia_chapter_1",
+        summary: "Nadia gets caught by her father holding hands with Gavin. What should she do?",
+        playable: true,
+        endings: [
+          {
+            endingId: 1,
+            title: "Break Up",
+            knotTag: "nadia_chapter1_ending_1",
+          },
+          {
+            endingId: 2,
+            title: "One Step at a Time",
+            knotTag: "nadia_chapter1_ending_2",
+          },
+          {
+            endingId: 3,
+            title: "Stay Together",
+            knotTag: "nadia_chapter1_ending_3",
+          },
+        ]
+      },
+      {
+        chapterId: 2,
+        number: 2,
+        title: "School Bullies",
+        knotTag: "nadia_chapter_2",
+        summary: "Zhi Hao teases Nadia - should she tell him off?",
+        playable: false,
+        endings: [
+          {
+            endingId: 1,
+            title: "Scold Him",
+            knotTag: "nadia_chapter2_ending_1",
+          },
+          {
+            endingId: 2,
+            title: "Walk Away",
+            knotTag: "nadia_chapter2_ending_2",
+          },
+        ]
+      },
+      {
+        chapterId: 3,
+        number: 3,
+        title: "The Anniversary",
+        knotTag: "nadia_chapter_3",
+        summary: "Gavin and Nadia are celebrating their one month together - but is their status public or private?",
+        playable: false,
+        endings: [
+          {
+            endingId: 1,
+            title: "Public",
+            knotTag: "nadia_chapter3_ending_1",
+          },
+          {
+            endingId: 2,
+            title: "Private",
+            knotTag: "nadia_chapter3_ending_2",
+          },
+        ]
+      },
+    ],
 
   },
   {
@@ -31,7 +116,76 @@ export const CHARACTER_MAP = [
     description: "Aman wants to model and study overseas - but will his culture make things harder?",
     jsonLink: '../stories/aman_chapter1.ink.json',
     playable: true,
-
+    variables: {
+      aman_mood: 5,
+    },
+    chapters: [
+      {
+        chapterId: 1,
+        number: 1,
+        title: "Model Sikh",
+        knotTag: "aman_chapter_1",
+        summary: "Aman gets a modelling offer, but only if he trims his beard.",
+        playable: true,
+        endings: [
+          {
+            endingId: 1,
+            title: "Trim Beard",
+            knotTag: "aman_chapter1_ending_1",
+          },
+          {
+            endingId: 2,
+            title: "Complain Online",
+            knotTag: "aman_chapter1_ending_2",
+          },
+          {
+            endingId: 3,
+            title: "Walk Away",
+            knotTag: "aman_chapter1_ending_3",
+          },
+        ]
+      },
+      {
+        chapterId: 2,
+        number: 2,
+        title: "The Barber",
+        knotTag: "aman_chapter_2",
+        summary: "Zhi Hao suggests Aman cut his hair for NS - should he?",
+        playable: false,
+        endings: [
+          {
+            endingId: 1,
+            title: "Cut Hair",
+            knotTag: "aman_chapter2_ending_1",
+          },
+          {
+            endingId: 2,
+            title: "Keep Hair",
+            knotTag: "aman_chapter2_ending_2",
+          },
+        ]
+      },
+      {
+        chapterId: 3,
+        number: 3,
+        title: "Study or Sonya",
+        knotTag: "aman_chapter_3",
+        summary: "Aman wants to go overseas for uni, but his girlfriend Sonya is staying in Singapore.",
+        playable: false,
+        endings: [
+          {
+            endingId: 1,
+            title: "Stay",
+            knotTag: "aman_chapter3_ending_1",
+          },
+          {
+            endingId: 2,
+            title: "Leave",
+            knotTag: "aman_chapter3_ending_2",
+          },
+        ]
+      },
+    ],
   },
   {
     characterId: 3,

@@ -24,7 +24,7 @@ const CharacterChapterPage = () => {
     const persona = CHARACTER_MAP.find((character) => character.linkName === name);
     const chapters = STORY_MAP.find((character) => character.id === 1);    
     // TODO: change this from hardcoded to id 1 to take in a parameter 
-    
+    console.log(persona);
 
     return(
          
@@ -35,11 +35,11 @@ const CharacterChapterPage = () => {
                     <ProfileAvatar avatarInfo={persona} />                   
                 </Box>
                 <div style={{paddingBottom:"20%"}}>
-                    {chapters.chaptDetails.length > 0 
-                        ? chapters.chaptDetails.map((chapt,i) => {
+                    {persona.chapters.length > 0 
+                        ? persona.chapters.map((chapt,i) => {
                             return (
                                 <div style={{display: "flex", justifyContent: "center"}}  key={i}>
-                                    <ChapterBox chaptDetails={chapt}  key={i} />
+                                    <ChapterBox chaptDetails={chapt} total={persona.chapters.length} key={i} />
                                 </div>
                             )
                         })
