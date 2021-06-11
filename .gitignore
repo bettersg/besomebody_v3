@@ -9,6 +9,9 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 
+### npm lock file (using yarn) ###
+package-lock.json
+
 ### dotenv ###
 .env
 
