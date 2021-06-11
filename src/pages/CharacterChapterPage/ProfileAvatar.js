@@ -41,8 +41,8 @@ export default function ProfileAvatar(props) {
             <div className={classes.root}>
                 <div style={{ display: "flex", justifyContent: "center" }}>
                 <Avatar
-                    alt={avatarInfo.alt}
-                    src={avatarInfo.src}
+                    alt={avatarInfo.name}
+                    src={avatarInfo.profileImage}
                     className={classes.large}
                     style={{zIndex: 0}}
                 />

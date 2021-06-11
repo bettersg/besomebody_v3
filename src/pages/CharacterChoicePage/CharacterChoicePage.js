@@ -14,19 +14,19 @@ import "../styles.css";
 
 import { useAuth } from '../../contexts/AuthContext';
 import { useSnackbar } from '../../contexts/SnackbarContext'
-import { STORY_MAP,PLAYABLE_CHARACTERS,NONPLAYABLE_CHARACTERS } from '../../models/storyMap'
+import { CHARACTER_MAP } from '../../models/storyMap'
 
 
 const CharacterChoice = () => {
 
 	
     // Auth Context
-    const { currentUser } = useAuth()  
-    
+	const { currentUser } = useAuth()
+	// TODO : fix the userInfo. firebase currentUser does not pass the profile fields properly.
+
     const { setSnackbar } = useSnackbar()
 	
-	const personas = PLAYABLE_CHARACTERS;
-	const personas2 = NONPLAYABLE_CHARACTERS;
+	const characters = CHARACTER_MAP;
 		// need to update this personas and personas2 to be more dynamic	
 	
 
@@ -73,12 +73,15 @@ const CharacterChoice = () => {
 							</Typography>
 
 							<Grid container spacing={3}>
-							{/* map the JSON data into the components */}
-							{personas.map((persona,i) => {
+							
+							{characters.map((persona,i) => {
 								return (
-								<Grid item xs={6} key={i}>
-									<CharacterAvatar personaInfo={persona} key={i} />
-								</Grid>
+								( persona.playable == true ? 
+									<Grid item xs={6} key={i}>
+										<CharacterAvatar personaInfo={persona} key={i} />
+									</Grid>
+									: null)
+									
 								);
 							})}
 							</Grid>
@@ -93,16 +96,16 @@ const CharacterChoice = () => {
 								personas{" "}
 							</Typography>
 							<Grid container spacing={3}>
-								{personas2.length > 0 
-									? personas2.map((persona,i) => {
-										return (
-											<Grid item xs={4} key={i}>
-												<CharacterAvatar personaInfo={persona} key={i}/>
-											</Grid>
-										);
-									})
-									: <div>No personas to show...</div>
-								}
+								{characters.map((persona,i) => {
+									return (
+									( persona.playable == false ? 
+										<Grid item xs={6} key={i}>
+											<CharacterAvatar personaInfo={persona} key={i} />
+										</Grid>
+										: null)
+										
+									);
+								})}
 							</Grid>
 						</Paper>
 

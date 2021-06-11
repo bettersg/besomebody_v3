@@ -2,6 +2,66 @@ import NadidInk from '../stories/nadid.ink.json'
 import AmanInk from '../stories/aman_chapter1.ink.json'
 
 // TODO: Update with other properties such as character image, character bio, chapter summary, etc
+/* 
+CHARACTER_MAP =
+characterId (int), 
+name (string), 
+profileImage (string), 
+description (string), 
+jsonLink (string), 
+playable (boolean)
+*/
+
+export const CHARACTER_MAP = [
+  {
+    characterId: 1,
+    name: "Nadia Ibrahim",
+    linkName: "nadia",
+    profileImage: "https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F0f59699e1dd943ba87446eb0c7ec9704",
+    description: "Nadid wants to become a doctor - but will love and religion get in the way?",
+    jsonLink: '../stories/nadid.ink.json',
+    playable: true,
+
+  },
+  {
+    characterId: 2,
+    name: "Aman Singh",
+    linkName: "aman",
+    profileImage: "https://images.generated.photos/7PFNUmz7LLOsqCFQwANR09dLK1EWwS_r0XyJeh59CIQ/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAzOTI3MzIuanBn.jpg",
+    description: "Aman wants to model and study overseas - but will his culture make things harder?",
+    jsonLink: '../stories/aman_chapter1.ink.json',
+    playable: true,
+
+  },
+  {
+    characterId: 3,
+    name: "Zaina Ismail",
+    linkName: "",
+    profileImage: "https://images.generated.photos/DQHHu8JTFXU0kjR5resS59oVA1OzC7RNlSleKxeFWSI/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAyMzk4NzguanBn.jpg",
+    description: "Zaina is a great teacher - but can she balance her family, her career, and her feelings?",
+    jsonLink: '../stories/nadid.ink.json',
+    playable: false,
+  }, 
+  {
+    characterId: 4,
+    name: "Zhi Hao Chan",
+    linkName: "",
+    profileImage: "https://images.generated.photos/rB_1dF254abgibQU0cuxULnYB5RLI94A10C4YYnWbMA/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA4NzY5NTIuanBn.jpg",
+    description: "Zhi Hao seems to have an easy life - but will his hidden struggles derail his friendships?",
+    jsonLink: '../stories/nadid.ink.json',
+    playable: false,
+  }, 
+  {
+    characterId: 5,
+    name: "Marie Oswald",
+    linkName: "",
+    profileImage: "https://images.generated.photos/Dz5nY_-KvnFjqXQCKJDd1-eFgiIRmKQ3OErG7kRIHjg/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA3Mzk2MzkuanBn.jpg",
+    description: "Marie has a storyline, and it will be awesome - but we don't know what it is yet.",
+    jsonLink: '../stories/nadid.ink.json',
+    playable: false,
+  }, 
+];
+
 export const STORY_MAP = [
   {
     id: 1,
@@ -94,58 +154,3 @@ export const STORY_MAP = [
     ],
   },
 ]
-
-
-// code below on personas is a hack job, just to work with the characterchoice page. need to update it.
-
-export const PLAYABLE_CHARACTERS = [
-
-  {
-    id: 1,
-    alt: "Nadid",
-    src:
-      "https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F0f59699e1dd943ba87446eb0c7ec9704",
-    name: "Nadid",
-    description: "Nadid Rahim wants to become a doctor - but will love and religion get in the way?",
-    buttonShow: true,
-    link: "/chapters/nadid"
-  },
-  {
-    id: 2,
-    alt: "Aman",
-    src:
-      "https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F67b34f4b3f8c45abaca6389b1e8e0d53",
-    name: "Aman",
-    description: "Aman Singh dreams of writing poetry - but he has bigger headaches to deal with first.",
-    buttonShow: true,
-    link: "/story/aman"
-  }
-];
-      
-export const NONPLAYABLE_CHARACTERS = [
-			{
-				alt: "Nazeema",
-				src:
-				"https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F0f59699e1dd943ba87446eb0c7ec9704",
-				name: "Nazeema",
-				description: "Traits Background Story Teaser",
-				buttonShow: false
-			},
-			{
-				alt: "Zhi Hao",
-				src:
-				"https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F67b34f4b3f8c45abaca6389b1e8e0d53",
-				name: "Zhi Hao",
-				description: "Traits Background Story Teaser",
-				buttonShow: false
-			},
-			{
-				alt: "Sally",
-				src:
-				"https://cdn.builder.io/api/v1/image/assets%2FTEMP%2F2b85e086dd6e4e9f8cee78e60a8b2f0e",
-				name: "Sally",
-				description: "Traits Background Story Teaser",
-				buttonShow: false
-			}
-		]
-	

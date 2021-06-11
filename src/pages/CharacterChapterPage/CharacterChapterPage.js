@@ -13,7 +13,7 @@ import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import ChapterBox from "./ChapterBox"
 import NavBar from "./NavBar"
-import { STORY_MAP,PLAYABLE_CHARACTERS,NONPLAYABLE_CHARACTERS } from '../../models/storyMap'
+import { CHARACTER_MAP, STORY_MAP } from '../../models/storyMap'
 
 
 import "../styles.css";
@@ -21,9 +21,9 @@ import "../styles.css";
 const CharacterChapterPage = () => {
     const { name } = useParams();
     
-    const persona = PLAYABLE_CHARACTERS.find((character) => character.id === 1);
+    const persona = CHARACTER_MAP.find((character) => character.linkName === name);
     const chapters = STORY_MAP.find((character) => character.id === 1);    
-    // change this from hardcoded to id 1 to take in a parameter 
+    // TODO: change this from hardcoded to id 1 to take in a parameter 
     
 
     return(

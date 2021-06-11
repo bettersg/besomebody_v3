@@ -45,7 +45,8 @@ export default function PlayerProfile(props) {
   const classes = useStyles();
   const { userInfo } = props;
   
-// TO-DO: to pass number of persona, outcomes and chapters as props
+// TO-DO: to pass number of persona, outcomes and chapters as props 
+  // TODO : fix the userInfo. firebase currentUser does not pass the profile fields properly.
   return (
     <ThemeProvider theme={theme}>
         <div className={classes}>
