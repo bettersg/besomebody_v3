@@ -1,12 +1,14 @@
 import React, { useState, useMemo } from 'react';
-import { Controller, useForm } from 'react-hook-form';
-import { Box, Button, Grid, TextField, Typography, Card } from '@material-ui/core'
+import { Box, Typography, Button, CircularProgress } from '@material-ui/core'
 import { useSnackbar } from '../../../contexts/SnackbarContext';
 import { makeStyles } from '@material-ui/core/styles';
-import Question from '../shared/Question';
+import Question from './Question';
 import produce from "immer";
+import { createDbAnswers } from "../../../models/answerModel";
 
 import QUESTIONS from "../../../reflections/questions.json";
+import { useAuth } from '../../../contexts/AuthContext';
+import { firestore } from '../../../firebase';
 
 const useStyles = makeStyles({
   container: {
@@ -30,7 +32,9 @@ const useStyles = makeStyles({
 
 const ReflectionForm = ({ reflection }) => {
   const classes = useStyles();
-  const { setSnackbar } = useSnackbar()
+  const { currentUser } = useAuth();
+  const { setSnackbar } = useSnackbar();
+  const [isLoading, setIsLoading] = useState(false);
 
   const questions = useMemo(
     () => reflection
@@ -40,6 +44,31 @@ const ReflectionForm = ({ reflection }) => {
   );
 
   const [answers, setAnswers] = useState(questions.map(() => ""));
+
+  const handleSubmitClick = async () => {
+    const answerDocs = answers.map((answer, index) => {
+      const question = questions[index];
+      return {
+        reflectionId: reflection.id,
+        questionId: question.id,
+        userId: currentUser.id,
+        answer,
+        submittedAt: new Date(),
+      }
+    });
+    try {
+      setIsLoading(true);
+      await createDbAnswers(answerDocs);
+    } catch (err) {
+      setSnackbar({
+        message: "Failed to submit!",
+        open: true,
+        type: "error",
+      })
+    } finally {
+      setIsLoading(false);
+    }
+  }
 
   return (
     <Box bgcolor="#e5e5e5">
@@ -69,6 +98,13 @@ const ReflectionForm = ({ reflection }) => {
           />
         </Box>
       ))}
+      <Box mt={2} p={2}>
+        {
+          isLoading
+            ? <CircularProgress />
+            : <Button variant="contained" color="primary" fullWidth onClick={handleSubmitClick}>Submit</Button>
+        }
+      </Box>
     </Box>
   );
 };
