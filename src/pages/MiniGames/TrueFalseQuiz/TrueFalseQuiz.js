@@ -17,6 +17,7 @@ const useStyles = makeStyles({
     maxWidth: "300px",
     height: "400px",
     marginBottom: "20px",
+
   },
 
   card: {
@@ -30,9 +31,10 @@ const useStyles = makeStyles({
 
 });
 
-
+const questions = quizData.questions.reverse()
+console.log(questions)
 const alreadyRemoved = []
-let cardsState = quizData // This fixes issues with updating characters state forcing it to use the current state and not the state that was active when the card was created.
+let cardsState = questions // This fixes issues with updating characters state forcing it to use the current state and not the state that was active when the card was created.
 
 function TrueFalseQuiz () {
 
@@ -42,12 +44,11 @@ function TrueFalseQuiz () {
   const [lastDirection, setLastDirection] = useState()
 
   useEffect(() => {
-    setCards(quizData)
+    setCards(questions)
   },[])
 
 
-
-  const childRefs = useMemo(() => Array(quizData.length).fill(0).map(i => React.createRef()), [])
+  const childRefs = useMemo(() => Array(questions.length).fill(0).map(i => React.createRef()), [])
 
   const swiped = (direction, cardToDelete) => {
     console.log('removing: ' + cardToDelete)
@@ -56,15 +57,15 @@ function TrueFalseQuiz () {
   }
 
   const outOfFrame = (card) => {
-    cardsState = cardsState.filter(card => card.title !== card)
+    cardsState = cardsState.filter(card => card.question !== card)
     setCards(cardsState)
   }
 
   const swipe = (dir) => {
-    const cardsLeft = cards.filter(card => !alreadyRemoved.includes(card.title))
+    const cardsLeft = cards.filter(card => !alreadyRemoved.includes(card.question))
     if (cardsLeft.length) {
-      const toBeRemoved = cardsLeft[cardsLeft.length - 1].title // Find the card object to be removed
-      const index = quizData.map(card => card.title).indexOf(toBeRemoved) // Find the index of which to make the reference to
+      const toBeRemoved = cardsLeft[cardsLeft.length - 1].question // Find the card object to be removed
+      const index = questions.map(card => card.question).indexOf(toBeRemoved) // Find the index of which to make the reference to
       alreadyRemoved.push(toBeRemoved) // Make sure the next card gets removed next time if this card do not have time to exit the screen
       childRefs[index].current.swipe(dir) // Swipe the card!
     }
@@ -83,16 +84,25 @@ function TrueFalseQuiz () {
       <Box className={classes.cardContainer}>
         {cards.map((card, index) =>
           <Box
-            key={card.title}
+            key={card.question}
           >
-        
-            <TinderCard 
+             <TinderCard 
             position="absolute"
-              ref={childRefs[index]} className='swipe' onSwipe={(dir) => swiped(dir, card.title)} onCardLeftScreen={() => outOfFrame(card.title)}>
+              ref={childRefs[index]} className='swipe' onSwipe={(dir) => swiped(dir, card.question)} onCardLeftScreen={() => outOfFrame(card.question)}>
               <Card className={classes.card} variant="outlined">
                 <CardContent >
-                <h3>{card.title}</h3>
-                <p>{card.text}</p>
+                <h3>ANSWER: {card.correctAnswer}</h3>
+                <p>{card.explanation}</p>
+                </CardContent>
+              </Card> 
+            </TinderCard>
+            <TinderCard 
+            position="absolute"
+              ref={childRefs[index]} className='swipe' onSwipe={(dir) => swiped(dir, card.question)} onCardLeftScreen={() => outOfFrame(card.question)}>
+              <Card className={classes.card} variant="outlined">
+                <CardContent >
+                <h3>QUESTION {index+1}</h3>
+                <p>{card.question}</p>
                 </CardContent>
               </Card> 
             </TinderCard>

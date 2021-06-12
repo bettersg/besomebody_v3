@@ -38,7 +38,9 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-export default function QuestionPanel({question, nextQuestion, total, questionNo, progress, checkUserAnswer,maxScore, score}) {
+export default function QuestionPanel({question, nextQuestion, total, questionNo, progress, checkUserAnswer, maxScore, score}) {
+
+  console.log(question)
   const [answered,setAnswered] = useState('');
   const [message,setMessage]=useState(''); 
 
@@ -54,11 +56,11 @@ export default function QuestionPanel({question, nextQuestion, total, questionNo
             fullWidth={true}
             variant={answered === answer ? "contained" :"outlined"} 
             color="primary" 
-            key={answer} 
-            onClick={()=>handleAnswer(answer)}
+            key={answer.title} 
+            onClick={()=>handleAnswer(answer.title,question.explanation)}
             disabled={answered!==''? true : false}
           >
-                  {answer}
+                  {answer.title}
           </Button>
         )
       }
@@ -70,14 +72,14 @@ export default function QuestionPanel({question, nextQuestion, total, questionNo
               variant={answered === answer.title ? "contained" :"outlined"} 
               color="primary" 
               key={answer.title} 
-              onClick={()=>handleAnswer(answer.title)}
+              onClick={()=>handleAnswer(answer.title,question.explanation)}
               disabled={answered!==''? true : false}
             >
               <Card className={classes.imageCard}>
                 <CardActionArea>
                 <CardMedia
                   className={classes.media}
-                  image={'/images/' + answer.url}
+                  image={'/images/' + answer.imageUrl}
                 />
                 <CardContent>
                   <Typography>
@@ -95,16 +97,14 @@ export default function QuestionPanel({question, nextQuestion, total, questionNo
   
   }
 
-  const handleAnswer = (ans) =>{
-    setAnswered(ans);
-    checkUserAnswer(ans);
-
-    
-    if(question['correct_answer']==ans){
+  const handleAnswer = (answer,explanation) =>{
+    setAnswered(answer);
+    checkUserAnswer(answer);
+    if(question['correct_answer']==answer){
       setMessage('Correct!')
     }
     else{
-      setMessage('Wrong!')
+      setMessage('Wrong! '+explanation)
     }
   }
 
@@ -140,8 +140,6 @@ export default function QuestionPanel({question, nextQuestion, total, questionNo
               )
             }
             </Box>
-
-            
 
           <Typography variant="h5" component="h3" className="message">
               {answered && message}

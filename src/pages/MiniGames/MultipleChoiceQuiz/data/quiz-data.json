@@ -1,179 +1,50 @@
-[
-  {
-    "question": "What was the name of the hero in the 80s animated video game 'Dragon's Lair'?",
-    "type": "text",
-    "correct_answer": "Dirk the Daring",
-    "answers": [
-      "Dirk the Daring",
-      "Arthur",
-      "Sir Toby Belch",
-      "Guy of Gisbourne"
-    ]
-  },
-  {
-    "question": "Who is the creator of the comic series \"The Walking Dead\"?",
-    "correct_answer": "Robert Kirkman",
-    "type" : "image",
-    "answers": [
-      {
-        "url": "stan.jpeg",
-        "title": "Stan Lee"
-      },
-      {
-        "url": "malcolm.jpg",
-        "title": "Malcolm Wheeler-Nicholson"
-      },
-      {
-        "url": "robert.jpg",
-        "title": "Robert Kirkman"
-      },
-      {
-        "url": "bilius.jpg",
-        "title": "Bilius"
-      }
-    ]
-  },
-  {
-
-    "question": "What is the scientific name for modern day humans?",
-    "correct_answer": "Homo Sapiens",
-    "type": "text",
-    "answers": [
-      "Homo Ergaster",
-      "Homo Sapiens",
-      "Homo Erectus",
-      "Homo Neanderthalensis"
-    ]
-  },
-  {
-    "question": "What is Ron Weasley's middle name?",
-    "type": "text",
-    "correct_answer": "Bilius",
-    "answers": ["Arthur", "John","Bilius","Dominic"]
-  },
-  {
-    "question": "At the start of a standard game of the Monopoly, if you throw a double six, which square would you land on?",
-    "type": "text",
-    "correct_answer": "Electric Company",
-    "answers": ["Electric Company","Water Works", "Chance", "Community Chest"]
-  },
-  {
-    "question": "What is the capital of Jamaica?",
-    "type": "text",
-    "correct_answer": "Kingston",
-    "answers": ["Rio de Janeiro","Kingston","Dar es Salaam", "Kano"]
-  },
-  {
-    "question": "When did Jamaica recieve its independence from England? ",
-    "type": "text",
-    "correct_answer": "1962",
-    "answers": ["1492", "1963","1962","1987"]
-  },
-  {
-    "question": "Kangaroos keep food in their pouches next to their children.",
-    "type": "text",
-    "correct_answer": "False",
-    "answers": ["True","False"]
-  },
-  {
-
-    "question": "In 2013 how much money was lost by Nigerian scams?",
-    "type": "text",
-    "correct_answer": "%2412.7 Billion",
-    "answers": [
-      "%2495 Million",
-      "%24956 Million",
-      "%2412.7 Billion",
-      "%242.7 Billion"
-    ]
-  },
-  {
-
-    "question": "How old was Lyndon B. Johnson when he assumed the role of President of the United States?",
-    "type": "text",
-    "correct_answer": "55",
-    "answers": ["50", "60", "54","55"]
-  },
-  {
-    "question": "In World of Warcraft lore, who organized the creation of the Paladins?",
-    "type": "text",
-    "correct_answer": "Alonsus Faol",
-    "answers": [
-      "Uther the Lightbringer",
-      "Alonsus Faol",
-      "Alexandros Mograine",
-      "Sargeras, The Daemon Lord"
-    ]
-  },
-  {
-    "question": "In the game \"Subnautica\", a \"Cave Crawler\" will attack you.",
-    "type": "text",
-    "correct_answer": "True",
-    "answers": ["False", "True"]
-  },
-  {
-    "question": "What is the name of the device that allows for infinite energy in the anime \"Dimension W\"?",
-    "type": "text",
-    "correct_answer": "Coils",
-    "answers": ["Wires","Coils","Collectors", "Tesla"]
-  },
-  {
-    "question": "What is the name of Cream the Rabbit's mom in the \"Sonic the Hedgehog\" series?",
-    "type": "text",
-    "correct_answer": "Vanilla",
-    "answers": ["Peach", "Strawberry", "Vanilla","Mint"]
-  },
-  {
-    "question": "These two countries held a commonwealth from the 16th to 18th century.",
-    "type": "text",
-    "correct_answer": "Poland and Lithuania",
-    "answers": [
-      "Hutu and Rwanda",
-      "North Korea and South Korea",
-      "Poland and Lithuania",
-      "Bangladesh and Bhutan"
-    ]
-  },
-  {
-    "question": "Which of these voices wasn't a choice for the House AI in \"The Simpsons Treehouse of Horror\" short, House of Whacks?",
-    "type": "text",
-    "correct_answer": "George Clooney",
-    "answers": [
-      "Matthew Perry",
-      "Dennis Miller",
-      "Pierce Brosnan",
-      "George Clooney"
-    ]
-  },
-  {
-    "question": "From which album is the Gorillaz song, \"On Melancholy Hill\" featured in?",
-    "type": "text",
-    "correct_answer": "Plastic Beach",
-    "answers": ["Demon Days", "Humanz", "The Fall"]
-  },
-  {
-
-    "question": "Scotland voted to become an independent country during the referendum from September 2014.",
-    "type": "text",
-    "correct_answer": "False",
-    "answers": ["True"]
-  },
-  {
-
-    "question": "In Left 4 Dead, which campaign has the protagonists going through a subway in order to reach a hospital for evacuation?",
-    "type": "text",
-    "correct_answer": "No Mercy",
-    "answers": [
-      "No Mercy",
-      "Subway Sprint",
-      "Hospital Havoc",
-      "Blood Harvest"
-    ]
-  },
-  {
-    "question": "What was the last colony the UK ceded marking the end of the British Empire?",
-    "type": "text",
-    "correct_answer": "Hong Kong",
-    "answers": ["India","Hong Kong","Australia", "Ireland"]
-  }
-]
+{
+  "id": "asd2312dasd123123asd",
+  "questions" : 
+  [
+    {
+      "question": "How many times do Muslims have to perform Hajj in their lifetime?",
+      "type": "text",
+      "correctAnswer": "Once in their lifetime, if they are physically and financially able",
+      "explanation": "Pilgrimage is viewed as a particularly meritorious activity. Pilgrimage serves as a penance - the ultimate forgiveness for sins, devotion, and intense spirituality. The pilgrimage to Makkah, the most sacred city in Islam, is required of all physically and financially able Muslims once in their life",
+      "answers": [
+        {
+          "title": "Every year"
+        },
+        {
+          "title": "Once in five years"
+        },
+        {
+          "title": "Once in a decade"
+        },
+        {
+          "title": "Once in their lifetime, if they are physically and financially able"
+        }
+      ]
+    },
+    {
+      "question": "How long do Muslims fast every day during the month of Ramadhan?",
+      "correctAnswer": "Muslims fast from dawn to sunset",
+      "explanation": "Sawm (fasting) begins with dawn and ends with sunset. Muslims rise before dawn, eat Suhoor (pre-dawn meal) and drink an adequate amount of liquids for the preparation of Sawm. Eating and drinking stops at dawn. During the day no eating or drinking is allowed. The fast is broken immediately after sunset usually by eating dates and drinking water or juice. However, any lawful food or drink may be used to break the fast. This is followed by the Maghrib Salah (after sunset prayer)",
+      "type" : "image",
+      "answers": [
+        {
+          "imageUrl": "stan.jpeg",
+          "title": "Muslims fast only during the nights"
+        },
+        {
+          "imageUrl": "malcolm.jpg",
+          "title": "Muslims fast from afternoon till sunset"
+        },
+        {
+          "imageUrl": "robert.jpg",
+          "title": "Muslims do not fast during the month of Ramadhan"
+        },
+        {
+          "imageUrl": "bilius.jpg",
+          "title": "Muslims fast from dawn to sunset"
+        }
+      ]
+    }
+  ]
+}
