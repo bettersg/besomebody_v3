@@ -32,7 +32,6 @@ const useStyles = makeStyles({
 });
 
 const questions = quizData.questions.reverse()
-console.log(questions)
 const alreadyRemoved = []
 let cardsState = questions // This fixes issues with updating characters state forcing it to use the current state and not the state that was active when the card was created.
 

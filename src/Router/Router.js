@@ -59,7 +59,7 @@ class Router extends Component {
           <Route path="/signup" exact>
             <SignUp />
           </Route>
-
+          
           <PrivateRoute path="/profilebuilder" exact>                     
             <ProfileBuilderPage />             
           </PrivateRoute>   

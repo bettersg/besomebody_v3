@@ -10,6 +10,7 @@ import {
   CardActionArea,
   CardContent,
   Divider,
+  Grid,
   Typography
 } from '@material-ui/core'
 import './QuestionPanel.css'
@@ -29,15 +30,19 @@ const useStyles = makeStyles((theme) => ({
     height: 16,
     borderRadius: 20,
   },
+
   media: {
-    height: 130,
+    height: 120,
   },
+
+  title: {
+    fontSize: "1rem",
+  }
 
 }));
 
-export default function QuestionPanel({question, nextQuestion, total, questionNo, progress, checkUserAnswer, maxScore, score}) {
+export default function QuestionPanel({question, nextQuestion, total, questionNo, checkUserAnswer,continueToStory, userAnswers}) {
 
-  console.log(question)
   const [answered,setAnswered] = useState('');
   const [message,setMessage]=useState(''); 
 
@@ -64,29 +69,34 @@ export default function QuestionPanel({question, nextQuestion, total, questionNo
       
       case('image') : {
         return (
-          <Box width={1/4} component="span">
+            <Grid 
+              key={answer.title} 
+              item
+              xs={6}
+            > 
             <ButtonBase 
               variant={answered === answer.title ? "contained" :"outlined"} 
               color="primary" 
-              key={answer.title} 
               onClick={()=>handleAnswer(answer.title,question.explanation)}
               disabled={answered!==''? true : false}
             >
-              <Card className={classes.imageCard}>
+              <Card className={classes.imageCard} p={0} m={0}>
                 <CardActionArea>
                 <CardMedia
                   className={classes.media}
                   image={'/images/' + answer.imageUrl}
                 />
-                <CardContent>
-                  <Typography>
+                <CardContent >
+                  <Typography className={classes.title}>
                     {answer.title}
                   </Typography>
                 </CardContent>
                 </CardActionArea>
               </Card>
             </ButtonBase>
-          </Box>
+
+            </Grid>
+
         )
       }
 
@@ -101,14 +111,14 @@ export default function QuestionPanel({question, nextQuestion, total, questionNo
   const handleAnswer = (answer,explanation) =>{
     setAnswered(answer);
     checkUserAnswer(answer);
-    if(question['correct_answer']==answer){
+    if(question.correctAnswer===answer){
       setMessage('Correct!')
     }
     else{
       setMessage('Wrong! '+explanation)
     }
   }
-
+  console.log(userAnswers);
   const classes = useStyles();
 
   return (
@@ -127,10 +137,14 @@ export default function QuestionPanel({question, nextQuestion, total, questionNo
               </Typography>
             </CardContent>
           </CardActionArea>
-
-
-
-            <Box >
+            <Box m={2}>
+            <Grid 
+              spacing={2}
+              container
+              direction="row"
+              justify="center"
+              alignItems="center"
+            >
             { question['answers'].map(answer =>
                 getUi({
                   question,
@@ -140,27 +154,31 @@ export default function QuestionPanel({question, nextQuestion, total, questionNo
                 })
               )
             }
+            </Grid>
             </Box>
-
           <Typography>
               {answered && message}
           </Typography>
             
-          {answered!=='' && progress !==100? 
+          {answered!=='' && questionNo!==total &&
             <Button variant="contained" 
-              className="next-button" 
+              className="nextButton"
               color="secondary" key="next" onClick={()=>{nextQuestion(); setAnswered('');}} 
               >
                 Next Question
           </Button>
-          
-          : ''}
+          }
+
+          {answered!=='' && questionNo===total &&
+            <Button variant="contained" 
+              className="nextButton"
+              color="secondary" key="next" onClick={()=>{continueToStory();}} 
+              >
+                Back to Story
+            </Button>
+          } 
   
         </Card>
-        <div className="score-wrapper">
-          <p>Score: {score} %</p>
-          <p>MaxScore: {maxScore} %</p> 
-        </div>
     </>
   );
 }

@@ -10,7 +10,7 @@ import InkControls from './InkControls'
 import DefaultInk from '../DefaultInk'
 import Survey from '../SurveyPage/Survey'
 import { STORY_MAP } from '../../models/storyMap'
-
+import MultipleChoiceQuiz from '../MiniGames/MultipleChoice/MultipleChoiceQuiz'
 
 const getInkJson = (nameParam) => {
   switch (nameParam) {
@@ -79,6 +79,13 @@ const getUi = ({
       // TODO: update this component 
       return (
         <Survey getStory={getStory} currentParagraphs={currentParagraphs} />
+      )
+    }
+
+    case 'multipleChoice': {
+      // TODO: update this component 
+      return (
+        <MultipleChoiceQuiz getStory={getStory}/>
       )
     }
       

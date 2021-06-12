@@ -6,7 +6,7 @@
       "question": "How many times do Muslims have to perform Hajj in their lifetime?",
       "type": "text",
       "correctAnswer": "Once in their lifetime, if they are physically and financially able",
-      "explanation": "Pilgrimage is viewed as a particularly meritorious activity. Pilgrimage serves as a penance - the ultimate forgiveness for sins, devotion, and intense spirituality. The pilgrimage to Makkah, the most sacred city in Islam, is required of all physically and financially able Muslims once in their life",
+      "explanation": "Pilgrimage is viewed as a particularly meritorious activity. ",
       "answers": [
         {
           "title": "Every year"
@@ -25,24 +25,84 @@
     {
       "question": "How long do Muslims fast every day during the month of Ramadhan?",
       "correctAnswer": "Muslims fast from dawn to sunset",
-      "explanation": "Sawm (fasting) begins with dawn and ends with sunset. Muslims rise before dawn, eat Suhoor (pre-dawn meal) and drink an adequate amount of liquids for the preparation of Sawm. Eating and drinking stops at dawn. During the day no eating or drinking is allowed. The fast is broken immediately after sunset usually by eating dates and drinking water or juice. However, any lawful food or drink may be used to break the fast. This is followed by the Maghrib Salah (after sunset prayer)",
+      "explanation": "Sawm (fasting) begins with dawn and ends with sunset.",
       "type" : "image",
       "answers": [
         {
           "imageUrl": "stan.jpeg",
-          "title": "Muslims fast only during the nights"
+          "title": "During the nights"
         },
         {
           "imageUrl": "malcolm.jpg",
-          "title": "Muslims fast from afternoon till sunset"
+          "title": "Afternoon till sunset"
         },
         {
           "imageUrl": "robert.jpg",
-          "title": "Muslims do not fast during the month of Ramadhan"
+          "title": "Month of Ramadhan"
         },
         {
           "imageUrl": "bilius.jpg",
-          "title": "Muslims fast from dawn to sunset"
+          "title": "Dawn to sunset"
+        }
+      ]
+    },
+    {
+      "question": "How many times do Muslims have to perform Hajj in their lifetime?",
+      "type": "text",
+      "correctAnswer": "Once in their lifetime, if they are physically and financially able",
+      "explanation": "Pilgrimage is viewed as a particularly meritorious activity. ",
+      "answers": [
+        {
+          "title": "Every year"
+        },
+        {
+          "title": "Once in five years"
+        },
+        {
+          "title": "Once in a decade"
+        },
+        {
+          "title": "Once in their lifetime, if they are physically and financially able"
+        }
+      ]
+    },
+    {
+      "question": "How many times do Muslims have to perform Hajj in their lifetime?",
+      "type": "text",
+      "correctAnswer": "Once in their lifetime, if they are physically and financially able",
+      "explanation": "Pilgrimage is viewed as a particularly meritorious activity. ",
+      "answers": [
+        {
+          "title": "Every year"
+        },
+        {
+          "title": "Once in five years"
+        },
+        {
+          "title": "Once in a decade"
+        },
+        {
+          "title": "Once in their lifetime, if they are physically and financially able"
+        }
+      ]
+    },
+    {
+      "question": "How many times do Muslims have to perform Hajj in their lifetime?",
+      "type": "text",
+      "correctAnswer": "Once in their lifetime, if they are physically and financially able",
+      "explanation": "Pilgrimage is viewed as a particularly meritorious activity. ",
+      "answers": [
+        {
+          "title": "Every year"
+        },
+        {
+          "title": "Once in five years"
+        },
+        {
+          "title": "Once in a decade"
+        },
+        {
+          "title": "Once in their lifetime, if they are physically and financially able"
         }
       ]
     }

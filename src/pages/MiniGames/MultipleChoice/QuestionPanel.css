@@ -1,18 +1,15 @@
-Button:hover {
-  background: antiquewhite !important;
-}
 .message {
   display: flex;
   justify-content: center;
   margin-top: 20px !important;
 }
-.next-button {
+.nextButton {
   display: flex !important;
   margin: 0 auto !important;
   margin-top: 20px !important;
 }
 
-.next-button:hover {
+.nextButton:hover {
   background: black !important;
 }
 .score-wrapper {
