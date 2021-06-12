@@ -4,6 +4,7 @@ import { Box, Button, Grid, TextField, Typography, Card } from '@material-ui/cor
 import { useSnackbar } from '../../../contexts/SnackbarContext';
 import { makeStyles } from '@material-ui/core/styles';
 import Question from '../shared/Question';
+import produce from "immer";
 
 import QUESTIONS from "../../../reflections/questions.json";
 
@@ -38,25 +39,7 @@ const ReflectionForm = ({ reflection }) => {
     [reflection],
   );
 
-  const [value, setValue] = useState("");
-
-  const defaultValues = {
-    name: '',
-    email: '',
-  }
-
-  const {
-    formState: { isSubmitting },
-    handleSubmit,
-    control,
-    reset,
-  } = useForm({
-    defaultValues,
-  });
-
-  const beforeSubmit = async (values) => {
-    console.log(values);
-  }
+  const [answers, setAnswers] = useState(questions.map(() => ""));
 
   return (
     <Box bgcolor="#e5e5e5">
@@ -72,12 +55,17 @@ const ReflectionForm = ({ reflection }) => {
           </Typography>
         </Box>
       </Box>
-      {questions.map(question => (
+      {questions.map((question, index) => (
         <Box key={question.id} mt={2} bgcolor="white">
           <Question
+            key={question.id}
             question={question}
-            value={value}
-            onChange={event => setValue(event.target.value)}
+            value={answers[index]}
+            onChange={answer => setAnswers(
+              produce(draftAnswers => {
+                draftAnswers[index] = answer;
+              }, answers),
+            )}
           />
         </Box>
       ))}
