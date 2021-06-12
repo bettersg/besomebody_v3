@@ -41,7 +41,7 @@ export default function ChapterBox(props) {
         startStoryFrom,
         loadSavedStory,
         resetSavedStory,
-      } = useInk(NadidInk, 'nadid') // TODO: convert this from hardcoded to pulled from storymap
+      } = useInk(NadidInk, 1,1) // TODO: convert this from hardcoded to pulled from storymap where params are : ink file, character id , chapter id
 
     var rows = []; 
 

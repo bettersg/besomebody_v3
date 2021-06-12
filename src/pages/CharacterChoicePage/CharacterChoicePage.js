@@ -13,6 +13,7 @@ import NavBar from "./NavBar";
 import "../styles.css";
 
 import { useAuth } from '../../contexts/AuthContext';
+import {getDbUser}  from '../../models/userModel.js';
 import { useSnackbar } from '../../contexts/SnackbarContext'
 import { CHARACTER_MAP } from '../../models/storyMap'
 
@@ -22,6 +23,17 @@ const CharacterChoice = () => {
 	
     // Auth Context
 	const { currentUser } = useAuth()
+
+	const user = async () => {
+		const userFromDB = await getDbUser(currentUser.id);
+		return userFromDB;
+	}
+	(async () => { console.log(await user()) })();
+	
+	
+
+	// console.log(await user())
+	// console.log(user.age);
 	// TODO : fix the userInfo. firebase currentUser does not pass the profile fields properly.
 
     const { setSnackbar } = useSnackbar()

@@ -22,9 +22,9 @@ const CharacterChapterPage = () => {
     const { name } = useParams();
     
     const persona = CHARACTER_MAP.find((character) => character.linkName === name);
-    const chapters = STORY_MAP.find((character) => character.id === 1);    
+    // const chapters = STORY_MAP.find((character) => character.id === 1);    
     // TODO: change this from hardcoded to id 1 to take in a parameter 
-    console.log(persona);
+    // console.log(persona);
 
     return(
          
