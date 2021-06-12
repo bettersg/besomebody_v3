@@ -1,0 +1,87 @@
+.top-border{
+    background: #C4C4C4;
+    
+}
+
+.time{
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left:20px;
+}
+
+.misc-icons{
+    margin-left: 210px;
+}
+
+.email-wrapper {
+    margin-top: 10px;
+    padding: 10px; 
+    max-height: 655px;
+    overflow-y: scroll;  
+    }
+
+.email-header{
+    height: 40px;
+    background: #C4C4C4;
+    font-size: 20px; 
+    font-style: bold;
+    vertical-align: middle;
+
+    .arrow-back{
+        margin-top: 9px;
+        margin-left: 5px;
+    }
+
+    .email-compose{
+        margin-top: 7px;
+        margin-left: 5px;
+    }
+
+    .close-icon{
+        margin-top: 7px;
+        margin-left: 180px;
+    }
+}
+
+.email-body {
+    overflow-y: scroll;
+    height: 300px; 
+    font-size: 18px;
+    transition: height 1s; 
+    margin-top: 10px;
+    &.full {
+        height: 475px; 
+        transition: height 1s;
+    }
+}
+
+.email-from{
+    margin-top: 9px;
+    height: 40px;
+    font-size: 18px; 
+}
+
+.arrow-drop{
+    margin-left: 100px;
+}
+.email-to{
+    margin-top: 9px;
+    height: 40px;
+    font-size: 18px; 
+}
+
+.email-subject{
+    margin-top: 9px;
+    height: 40px;
+    font-size: 18px; 
+}
+
+.send-button{
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.attachment-delete{
+    margin-left: 140px;
+}

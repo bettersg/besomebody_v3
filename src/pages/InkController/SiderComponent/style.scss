@@ -1,0 +1,92 @@
+.menu-wrapper {
+    max-height: 100vh; 
+    @media screen and (min-device-width:481px){
+        max-height: 660px; 
+    }
+    .menu-button {
+        position: absolute;
+        color: rgba(243, 243, 243, 0.83);
+        height: 35px;
+        width: 35px; 
+        opacity: 0.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:active {
+            background-color: grey;
+            box-shadow: 3px 3px 5px lightgrey;
+            -webkit-transition: 0.35s;
+        }
+        &:focus {
+            background-color: red;
+            box-shadow: 3px 3px 5px lightgrey;
+        }
+    }
+
+    
+    .menu-drawer {
+        height: 100%;
+        
+        background-color: honeydew;
+        overflow-y: hidden;
+    }
+    
+    .MuiPaper-root .MuiDrawer-paper .MuiDrawer-paperAnchorLeft .MuiPaper-elevation16 {
+        left: auto;
+    }
+    
+    .MuiDrawer-paperAnchorLeft {
+        left: auto;
+    }
+    .MuiDrawer-paper {
+        z-index: 1 !important;
+    }
+    
+}
+#menu-items {
+    height: 100vh;
+    .menu-username {
+        padding: 0 20px;
+        padding-top: 20px;
+        display: flex;
+        align-items: center;
+    }
+    .menu-description {
+        padding: 20px; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .arrow-icon {
+        color: grey;
+    }
+    .chapter-num {
+        font-weight: 700;
+    }
+    .resume {
+        margin-top: 17px;
+        font-size: smaller;
+    }
+    .menu-avatar {
+        padding: 0 20px;
+        height: 48px;
+        width: 48px;
+        margin-right: 15px;
+    }
+    .menu-options {
+        height: 30px;
+        padding: 0 20px;
+        margin-top: 20px; 
+        display: flex;
+        align-items: center;
+    }
+    .menu-bottom {
+        margin-top: 50vh; 
+    }
+    hr {
+        width: 100%; 
+        margin: 0% !important;
+        padding: 0% !important;
+    }
+
+}

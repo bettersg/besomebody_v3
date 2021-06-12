@@ -15,14 +15,14 @@ class NotFoundPage extends Component {
     return (
       <EmptyState
         image={<NotFoundIllustration />}
-        title="Page doesn’t exist."
-        description="The page you’re trying to access doesn’t exist."
+        title="404"
+        description="We built a game where you can be anybody - but it's better if you're not lost on our website."
         button={
           <Fab variant="extended" color="primary" component={Link} to="/">
             <Box clone mr={1}>
               <HomeIcon />
             </Box>
-            Home
+            Return Home
           </Fab>
         }
       />

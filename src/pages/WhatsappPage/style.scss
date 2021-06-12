@@ -1,3 +1,6 @@
+html, body {
+    height: 100%; 
+}
 .paragraph-wrapper {
     background-size: cover; 
     background-position: center; 
@@ -36,29 +39,46 @@
     }
 }
 
+.text-area > div {
+    scroll-snap-align: end;
+    
+}
+
 .text-area {
     background-color: #808080;
     overflow-y: scroll;
-    height: 300px; 
-    transition: height 1s; 
-    &.full {
-        height: 475px; 
-        transition: height 1s; 
+    transition: height 0.4s; 
+    height: 66.1vh; 
+    scroll-snap-type: y mandatory;
 
+
+    @media screen and (min-device-width:481px) {
+        height: 360px; 
+    }
+
+    &.full {
+        transition: height 0.4s; 
+        height: 85.3vh; 
+        @media screen and (min-device-width:481px) {
+            height: 535px; 
+        }
     }
 }
 .choices-wrapper {
     height: 170px; 
     overflow-y: scroll;
-    transition: height 1s; 
+    transition: height 0.4s; 
     background-color: #414141;
+
+    animation:opac 0.9s;
+    
 
     // display: none;
     // z-index: -1;
     &.no-choices {
         // display: none;
         height: 0;
-        transition: height 1s; 
+        transition: height 0.5s; 
     }
     
     // .choices-title {
@@ -76,7 +96,12 @@
         &:hover {
             background-color: rgb(91, 158, 102);
         }
+
     }
+}
+@keyframes opac{
+    from{opacity:0} 
+    to{opacity:1}
 }
 .send-wrapper {
     padding: 10px 10px; 
@@ -92,7 +117,7 @@
     // bottom: 20px; 
     right: 0; 
     left: 0;
-    .send-button {
+    &__send-button {
         border-radius: 20px;
         width: 280px; 
         color: rgb(184, 184, 184);

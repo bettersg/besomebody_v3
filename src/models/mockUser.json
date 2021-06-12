@@ -1,0 +1,53 @@
+{
+  "id": "asd2312dasd123123asd",
+  "email": "test@email.com",
+  "achievements": [
+    {
+      "createdAt": "Firebase timestamp",
+      "updatedAt": "Firebase timestamp",
+      "character": 1,
+      "chapter": 1,
+      "savedStateId": "asd2312dasd123123asd-1-1",
+      "endings": [
+        {
+          "id": 1,
+          "completedAt": "Firebase timestamp"
+        },
+        {
+          "id": 2,
+          "completedAt": "Firebase timestamp"
+        }
+      ]
+    },
+    {
+      "createdAt": "Firebase timestamp",
+      "updatedAt": "Firebase timestamp",
+      "character": 1,
+      "chapter": 2,
+      "savedStateId": "asd2312dasd123123asd-1-2",
+      "endings": [
+        {
+          "id": 1,
+          "completedAt": "Firebase timestamp"
+        },
+        {
+          "id": 2,
+          "completedAt": "Firebase timestamp"
+        }
+      ]
+    },
+    {
+      "createdAt": "Firebase timestamp",
+      "updatedAt": "Firebase timestamp",
+      "character": 2,
+      "chapter": 1,
+      "savedStateId": "asd2312dasd123123asd-2-1",
+      "endings": [
+        {
+          "id": 1,
+          "completedAt": "Firebase timestamp"
+        }
+      ]
+    }
+  ]
+}

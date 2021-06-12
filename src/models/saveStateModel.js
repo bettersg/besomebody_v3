@@ -4,7 +4,7 @@ export const createDbSavedStates = async (obj, objId) => {
   try {
     await firestore.collection('savedStates').doc(objId).set(obj)
   } catch (err) {
-    console.error(`Error at createDbSavedStates: ${err}`)
+    throw new Error(`Error at createDbSavedStates: ${err}`)
   }
 }
 
@@ -14,12 +14,12 @@ export const getDbSavedStates = async (objId) => {
     const savedStates = await savedStatesRef.get()
 
     if (!savedStates.exists) {
-      console.error(`No such document: ${objId}`)
+      return console.error(`No such saved state in Firestore: ${objId}`)
     } else {
       return savedStates.data()
     }
   } catch (err) {
-    console.error(`Error at getDbSavedStates: ${err}`)
+    throw new Error(`Error at getDbSavedStates: ${err}`)
   }
 }
 
@@ -27,6 +27,6 @@ export const deleteDbSavedStates = async (objId) => {
   try {
     await firestore.collection('savedStates').doc(objId).delete()
   } catch (err) {
-    console.error(`Error at deleteDbSavedStates: ${err}`)
+    throw new Error(`Error at deleteDbSavedStates: ${err}`)
   }
 }

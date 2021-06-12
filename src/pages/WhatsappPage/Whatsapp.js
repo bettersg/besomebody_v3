@@ -2,6 +2,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { Box, Button, Fade, Grid, Typography } from '@material-ui/core'
 import makeStyles from '@material-ui/core/styles/makeStyles'
+import NextButton from "../../components/NextButton" 
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import "./style.scss"; 
@@ -10,6 +11,7 @@ import "./style.scss";
 const Whatsapp = (props) => {
     const {
         currentParagraphs,
+        getStory, 
         choices,
         setChoice,
         specialTags,
@@ -30,11 +32,10 @@ const Whatsapp = (props) => {
           })
         }
       }, [elementRef, currentParagraphs, choices])
-
+// TO DO: make whatsapp screen fit the screen and customise controls 
     return (
-        // TO DO: make whatsapp screen fit the screen and customise controls 
-        <Fade in>
-
+        
+        <Fade in>           
             <Box className="paragraph-wrapper" pb={3}>
                 <Box className="whatsapp-header" p={1} mb={3}>
                     <Grid container alignItems="center">
@@ -60,67 +61,72 @@ const Whatsapp = (props) => {
                     <Grid item xs={2} />
                     </Grid>
                 </Box> 
-                <Box className={`text-area ${choices.length === 0 ? 'full' : ""}`}>
-                    {currentParagraphs.map((step) => {
-                    if (step.tags[0]?.includes('Speaker_self')) {
-                        return (
-                        <Box
-                            key={step.text}
-                            my={2}
-                            mx={1}
-                            display="flex"
-                            justifyContent="flex-end"
-                        >
-                            <Fade in={step.text}>
+                <Box className={`text-area ${choices.length === 0 ? 'full' : ""}`} dir="ltr">
+                    {currentParagraphs.map((step,i) => {
+                        if (step.tags[0]?.includes('Speaker_self')) {
+                            return (
+                            <Box
+                                key={step.text}
+                                my={2}
+                                mx={1}
+                                display="flex"
+                                justifyContent="flex-end"
+                            >
+                                <Fade in={step.text}  key={i}>
+                                    <Box
+                                        className="chatbox-sender"
+                                        borderRadius={5}
+                                        p={1}
+                                        key={i}
+                                    >
+                                        <Typography  key={i}>{step.text}</Typography>
+                                    </Box>
+                                </Fade>
+                            </Box>
+                            )
+                        } else {
+                            return (
+                            <Box key={step.text} my={2} mx={1} display="flex">
                                 <Box
-                                    className="chatbox-sender"
+                                    className="chatbox-receiver"
                                     borderRadius={5}
                                     p={1}
                                 >
-                                    <Typography>{step.text}</Typography>
+                                <Typography  key={i}>{step.text}</Typography>
                                 </Box>
-                            </Fade>
-                        </Box>
-                        )
-                    } else {
-                        return (
-                        <Box key={step.text} my={2} mx={1} display="flex">
-                            <Box
-                                className="chatbox-receiver"
-                                borderRadius={5}
-                                p={1}
-                            >
-                            <Typography>{step.text}</Typography>
                             </Box>
-                        </Box>
-                        )
-                    }
+                            )
+                        }
                     })}
-
                     <div ref={elementRef} />
                 </Box>
 
                 <Box className="send-wrapper">
-                    <Box className={`send-button ${choices.length === 0 ? '' : "choice"}`}>
+                    <Box className={`send-wrapper__send-button ${choices.length === 0 ? '' : "choice"}`}>
                         Choose your reply...
                     </Box>
                     <Box className="send-button-right">
                         <ExpandMoreIcon />
                     </Box>
                 </Box>
-                <Box className={`choices-wrapper ${choices.length === 0 ? 'no-choices' : ""}`}>
-                    {/* <p className="choices-title">What should (Character) say?</p> */}
-                    {choices.map((choice) => {
-                        return (
-                            <Box 
-                                className="choices"
-                                onClick={() => setChoice(choice.index)}
-                            >
-                                {choice.text}
-                            </Box>
-                        )
-                    })}
-                </Box>
+                {/* this if else is needed to toggle between "Next Button" and choices (if any) */}
+                {choices.length > 0 ? 
+                    <Box className={`choices-wrapper ${choices.length === 0 ? 'no-choices' : "w3-animate-fading"}`}>
+                        {choices.map((choice,i) => {
+                            return (
+                                <Box 
+                                    className="choices"
+                                    onClick={() => setChoice(choice.index)}
+                                    key={i}
+                                >
+                                    {choice.text}
+                                </Box>
+                            )
+                        })}
+                    </Box>
+                    :
+                    <NextButton getStory={getStory}/>
+                }
             </Box>
         </Fade>
 

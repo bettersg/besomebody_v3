@@ -42,8 +42,8 @@ export default function ImageAvatars(props) {
       <div className={classes.root}>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <Avatar
-            alt={personaInfo.alt}
-            src={personaInfo.src}
+            alt={personaInfo.name}
+            src={personaInfo.profileImage}
             className={classes.large}
             style={{zIndex: 0}}
           />
@@ -51,8 +51,8 @@ export default function ImageAvatars(props) {
         <Typography variant="subtitle1">{personaInfo.name}</Typography>
         <Typography variant="subtitle2">{personaInfo.description}</Typography>
         
-        {personaInfo.buttonShow == true ? 
-          <Button buttonText="CONTINUE" link={personaInfo.link} /> :
+        {personaInfo.playable == true ? 
+          <Button buttonText="CONTINUE" link={"/chapters/" + personaInfo.linkName} /> :
           null
         }
       </div>

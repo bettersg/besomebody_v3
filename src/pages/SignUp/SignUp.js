@@ -105,7 +105,8 @@ const SignUp = () => {
             id: result.user.uid,
           }
           await createDbUser(user)
-          history.push('/')
+          // history.push('/')
+          history.push('/profilebuilder')
         } catch (err) {
           setSnackbar({
             message: `Failed to sign up: ${err.message}`,

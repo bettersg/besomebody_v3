@@ -16,7 +16,7 @@ import { useAuth } from '../../contexts/AuthContext'
 import { deleteDbUser } from '../../models/userModel'
 import { Link } from 'react-router-dom'
 
-const Home = () => {
+const HomePage = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [isDialogOpen, setIsDialogOpen] = useState(false)
   const [snackbar, setSnackbar] = useState({
@@ -46,7 +46,7 @@ const Home = () => {
     try {
       setIsLoading(true)
       await deleteUser()
-      await deleteDbUser(currentUser.uid)
+      await deleteDbUser(currentUser.id)
     } catch (err) {
       setSnackbar({
         message: `Failed to delete user: ${err.message}`,
@@ -128,4 +128,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default HomePage;

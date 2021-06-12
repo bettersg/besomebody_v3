@@ -4,7 +4,7 @@ export const createDbUser = async (obj) => {
   try {
     await firestore.collection('users').doc(obj.id).set(obj)
   } catch (err) {
-    console.error(`Error at createDbUser: ${err}`)
+    throw new Error(`Error at createDbUser: ${err}`)
   }
 }
 
@@ -14,27 +14,29 @@ export const getDbUser = async (objId) => {
     const user = await userRef.get()
 
     if (!user.exists) {
-      console.error(`No such document: ${objId}`)
+      return console.error(`No such user in Firestore: ${objId}`)
     } else {
       return user.data()
     }
   } catch (err) {
-    console.error(`Error at getDbUser: ${err}`)
+    new Error(`Error at getDbUser: ${err}`)
   }
 }
 
 export const updateDbUser = async (obj, objId) => {
   try {
     const userRef = firestore.collection('users').doc(objId || obj.id)
-    const user = await userRef.update(obj)
+    await userRef.update(obj)
 
     if (!userRef) {
-      console.error(`No such document: ${objId}`)
+      return console.error(`No such user in Firestore: ${objId}`)
     } else {
-      return user.data()
+      const user = await userRef.get()
+      const currentUserData = user.data()
+      return currentUserData
     }
   } catch (err) {
-    console.error(`Error at updateDbUser: ${err}`)
+    throw new Error(`Error at updateDbUser: ${err}`)
   }
 }
 
@@ -42,6 +44,6 @@ export const deleteDbUser = async (userId) => {
   try {
     await firestore.collection('users').doc(userId).delete()
   } catch (err) {
-    console.error(`Error at deleteDbUser: ${err}`)
+    throw new Error(`Error at deleteDbUser: ${err}`)
   }
 }
