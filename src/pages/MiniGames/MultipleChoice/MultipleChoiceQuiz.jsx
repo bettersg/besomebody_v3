@@ -1,6 +1,6 @@
 import React, {Component}from 'react';
-import data from '../data/quiz-data.json';
-import QuestionPanel from '../QuestionPanel/QuestionPanel';
+import data from './data/quiz-data.json';
+import QuestionPanel from './QuestionPanel';
 import './MultipleChoiceQuiz.css';
 
 class MultipleChoiceQuiz extends Component {

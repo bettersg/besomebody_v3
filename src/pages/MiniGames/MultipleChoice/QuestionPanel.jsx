@@ -35,9 +35,6 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-
-
-
 export default function QuestionPanel({question, nextQuestion, total, questionNo, progress, checkUserAnswer, maxScore, score}) {
 
   console.log(question)
@@ -92,6 +89,10 @@ export default function QuestionPanel({question, nextQuestion, total, questionNo
           </Box>
         )
       }
+
+      default : {
+        return <Box></Box>
+      }
   
     }
   
@@ -141,7 +142,7 @@ export default function QuestionPanel({question, nextQuestion, total, questionNo
             }
             </Box>
 
-          <Typography variant="h5" component="h3" className="message">
+          <Typography>
               {answered && message}
           </Typography>
             
