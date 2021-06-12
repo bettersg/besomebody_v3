@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { Box, Button, Grid, TextField, Typography, Card } from '@material-ui/core'
 import { useSnackbar } from '../../../contexts/SnackbarContext';
 import { makeStyles } from '@material-ui/core/styles';
 import Question from '../shared/Question';
 
-import questions from "../../../reflections/questions.json";
+import QUESTIONS from "../../../reflections/questions.json";
 
 const useStyles = makeStyles({
   container: {
@@ -27,9 +27,16 @@ const useStyles = makeStyles({
   },
 });
 
-const ReflectionForm = (props) => {
+const ReflectionForm = ({ reflection }) => {
   const classes = useStyles();
   const { setSnackbar } = useSnackbar()
+
+  const questions = useMemo(
+    () => reflection
+      .questions
+      .map(questionId => QUESTIONS.find(question => question.id === questionId)),
+    [reflection],
+  );
 
   const [value, setValue] = useState("");
 
