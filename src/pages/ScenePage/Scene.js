@@ -3,23 +3,9 @@ import React, { useEffect, useRef } from 'react'
 import { Box, Button, Fade, Typography } from '@material-ui/core'
 import NextButton from "../../components/NextButton" 
 import makeStyles from '@material-ui/core/styles/makeStyles'
+import "./style.scss"
 
 const useStyles = makeStyles((theme) => ({
-  paragraphWrapper: {
-    backgroundImage: ({ image }) => `url('/images/${image}')`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    height: '640px',
-    bottom: 0, 
-  },
-  textWrapper: {
-    background: theme.palette.grey[100],
-    opacity: 0.9,
-    position: 'relative',
-    top: '400px',
-    height: '100px',
-    scrollSnapType: 'y mandatory',
-  },
   choiceWrapper: {
     position: 'relative',
     opacity: 0.8,    
@@ -52,22 +38,21 @@ const Scene = (props) => {
     }
   }, [elementRef, currentParagraphs, choices])
 
+
   return (
     <Fade in>
-      <div>
+      <div className="ScenePage">
 
-      <Box className={classes.paragraphWrapper}  height="100%">
+      <Box height="100%">
+        <img src={`/images/${specialTags.background}`} className="ScenePage__background"/>
         <Box
-          className={classes.textWrapper}
-          p={1}
-          height={300}
-          overflow="scroll"
+          className="ScenePage__textWrapper"
         >
           {currentParagraphs.map((step) => {
             return (
-              <Box my={1} key={step.text} style={{  scrollSnapAlign:'start' }}>
+              <Box my={2} key={step.text} style={{  scrollSnapAlign:'start' }}>
                 <Fade in={step.text}>
-                  <Typography>{step.text}</Typography>
+                  <div>{step.text}</div>
                 </Fade>
               </Box>
             )
