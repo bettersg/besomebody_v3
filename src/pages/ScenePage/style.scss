@@ -1,0 +1,31 @@
+.ScenePage {
+  height: 640px;
+  width: 100%;
+  align-items: center;
+  &__background {
+    height: 660px;
+    bottom: 0;
+    position: absolute; 
+    object-fit: cover;
+    width: 100%;
+    background-position: center; 
+    background-repeat: no-repeat !important;
+    filter: brightness(60%);
+    z-index: 0 !important;
+  }
+  &__textWrapper {
+    height: 100px; 
+    margin-top: 20px;
+    padding: 20px 20px;
+    width: 100%; 
+    color: white;
+    font-weight: 500 ;
+    background-color: rgba(169, 169, 169, 0.474);
+    position: relative;
+    top: 300px;
+    z-index: 1;
+    scroll-snap-type: y mandatory;
+    bottom: 50;
+    overflow-y: scroll;
+  }
+}
