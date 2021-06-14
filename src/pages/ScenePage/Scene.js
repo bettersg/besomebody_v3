@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react'
 import { Box, Button, Fade, Typography } from '@material-ui/core'
 import NextButton from "../../components/NextButton" 
 import makeStyles from '@material-ui/core/styles/makeStyles'
+import { useInkContext } from '../../contexts/InkContext'
 
 const useStyles = makeStyles((theme) => ({
   paragraphWrapper: {
@@ -28,14 +29,8 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const Scene = (props) => {
-  const {
-    currentParagraphs,
-    getStory, 
-    choices,
-    setChoice,
-    specialTags,
-    globalVariables,
-  } = props
+  const { currentParagraphs } = props
+  const { getStory, choices, setChoice, specialTags } = useInkContext()
   const classes = useStyles({ image: specialTags.background })
 
   // ========================================================
