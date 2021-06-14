@@ -43,11 +43,10 @@ const theme = createMuiTheme( {
 
 export default function PlayerProfile(props) {
   const classes = useStyles();
-  const { userInfo } = props;
-  console.log(userInfo)
+  const { userInfo } = props;  
 
   // TO-DO: to pass number of persona, outcomes and chapters as props from user file save
-  // TODO : fix the userInfo. firebase currentUser does not pass the profile fields properly.
+  
   return (
     <ThemeProvider theme={theme}>
         <div className={classes}>
@@ -56,8 +55,8 @@ export default function PlayerProfile(props) {
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Grid>
                 <Avatar className={classes.large}/>
-                <Typography variant="subtitle1">Name: {userInfo.username}</Typography>
-                <Typography variant="subtitle2">My demographics:  {userInfo.race}  </Typography>
+                <Typography variant="subtitle1">Name: {userInfo?.username}</Typography>
+                <Typography variant="subtitle2">My demographics:  {userInfo?.race}  </Typography>
             </Grid>
            </div>
            <Grid container spacing={3}>
