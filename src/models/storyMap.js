@@ -216,95 +216,95 @@ export const CHARACTER_MAP = [
   }, 
 ];
 
-export const STORY_MAP = [
-  {
-    id: 1,
-    name: 'Nadia',
-    chaptDetails: [
-      {
-          new: true, 
-          startChapt: 6, 
-          endChapt: 10, 
-          title: "Family Matters",
-          endingUnlocked: 0, 
-          endingAvail: 3,
-          replay: false,
-          knot_link: "/story/nadid",
-          chapter_summary: "This is a summary of what happened"
-      }, 
-      {
-          new: false, 
-          startChapt: 5, 
-          endChapt: 10, 
-          title: "The Anniversary",
-          endingUnlocked: 1, 
-          endingAvail: 3,
-          replay: true 
-      }, 
-      {
-          new: false, 
-          startChapt: 4, 
-          endChapt: 10, 
-          title: "The Bully",
-          endingUnlocked: 3, 
-          endingAvail: 3,
-          replay: true 
-      }, 
-      {
-          new: false, 
-          startChapt: 3, 
-          endChapt: 10, 
-          title: "The Bully",
-          endingUnlocked: 3, 
-          endingAvail: 3,
-          replay: true 
-      }      
-    ],
-    chapters: [
-      {
-        id: 1,
-        name: 'Family Matters',
-        inkJson: NadidInk,
-        endings: [
-          {
-            id: 1,
-            name: "Nadid's Happy Ending",
-          },
-          {
-            id: 2,
-            name: "Nadid's Sad Ending",
-          },
-          {
-            id: 3,
-            name: "Nadid's Neutral & Gavin's Happy Ending",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 2,
-    name: 'Aman',
-    chapters: [
-      {
-        id: 1,
-        name: 'The Haircut',
-        inkJson: AmanInk,
-        endings: [
-          {
-            id: 1,
-            name: "David's Happy Ending",
-          },
-          {
-            id: 2,
-            name: "David's Sad Ending",
-          },
-          {
-            id: 3,
-            name: "David's Neutral & Jason's Happy Ending",
-          },
-        ],
-      },
-    ],
-  },
-]
+// export const STORY_MAP = [
+//   {
+//     id: 1,
+//     name: 'Nadia',
+//     chaptDetails: [
+//       {
+//           new: true, 
+//           startChapt: 6, 
+//           endChapt: 10, 
+//           title: "Family Matters",
+//           endingUnlocked: 0, 
+//           endingAvail: 3,
+//           replay: false,
+//           knot_link: "/story/nadid",
+//           chapter_summary: "This is a summary of what happened"
+//       }, 
+//       {
+//           new: false, 
+//           startChapt: 5, 
+//           endChapt: 10, 
+//           title: "The Anniversary",
+//           endingUnlocked: 1, 
+//           endingAvail: 3,
+//           replay: true 
+//       }, 
+//       {
+//           new: false, 
+//           startChapt: 4, 
+//           endChapt: 10, 
+//           title: "The Bully",
+//           endingUnlocked: 3, 
+//           endingAvail: 3,
+//           replay: true 
+//       }, 
+//       {
+//           new: false, 
+//           startChapt: 3, 
+//           endChapt: 10, 
+//           title: "The Bully",
+//           endingUnlocked: 3, 
+//           endingAvail: 3,
+//           replay: true 
+//       }      
+//     ],
+//     chapters: [
+//       {
+//         id: 1,
+//         name: 'Family Matters',
+//         inkJson: NadidInk,
+//         endings: [
+//           {
+//             id: 1,
+//             name: "Nadid's Happy Ending",
+//           },
+//           {
+//             id: 2,
+//             name: "Nadid's Sad Ending",
+//           },
+//           {
+//             id: 3,
+//             name: "Nadid's Neutral & Gavin's Happy Ending",
+//           },
+//         ],
+//       },
+//     ],
+//   },
+//   {
+//     id: 2,
+//     name: 'Aman',
+//     chapters: [
+//       {
+//         id: 1,
+//         name: 'The Haircut',
+//         inkJson: AmanInk,
+//         endings: [
+//           {
+//             id: 1,
+//             name: "David's Happy Ending",
+//           },
+//           {
+//             id: 2,
+//             name: "David's Sad Ending",
+//           },
+//           {
+//             id: 3,
+//             name: "David's Neutral & Jason's Happy Ending",
+//           },
+//         ],
+//       },
+//     ],
+//   },
+// ]
