@@ -57,7 +57,7 @@ const useInk = (json, character, chapter) => {
    * To update special tags with:
    * - The content before the first colon in the tag as the key
    * - The content after the first colon in the tag as as the value
-   * @param {* string[]} tags
+   * @param {Array<string>} tags
    */
   const handleUpdateSpecialTags = (tags) => {
     const nextSpecialTags = { ...specialTags }
@@ -126,7 +126,7 @@ const useInk = (json, character, chapter) => {
 
   /**
    * Submit choice to story and fetch next sequence
-   * @param {* number} choiceIndex
+   * @param {number} choiceIndex
    */
   const handleSetChoice = (choiceIndex) => {
     setChoices([])
@@ -134,7 +134,9 @@ const useInk = (json, character, chapter) => {
     handleGetStory()
   }
 
-  // Reset both React and inkStory states
+  /**
+   * Reset both React and inkStory states
+   */
   const handleResetStory = () => {
     setIsStoryStarted(false)
     setParagraphs([])
@@ -147,7 +149,7 @@ const useInk = (json, character, chapter) => {
 
   /**
    * Set starting point in inkjs and fetch next sequence
-   * @param {* string} pathName
+   * @param {string} pathName
    */
   const handleStartStoryFrom = (pathName) => {
     try {
@@ -159,7 +161,9 @@ const useInk = (json, character, chapter) => {
     }
   }
 
-  // Save snapshots of both React and inkStory states
+  /**
+   * Save snapshots of both React and inkStory states
+   */
   const handleSaveStory = async () => {
     const savedState = inkStory.saveStoryState()
     const saveData = {
@@ -195,7 +199,9 @@ const useInk = (json, character, chapter) => {
     inkStory.loadStoryState(savedStateRes.inkJson)
   }
 
-  // Clear snapshots in React states
+  /**
+   * Clear snapshots in React states
+   */
   const handleResetSavedStory = async () => {
     await deleteDbSavedStates(saveDataId)
     setHasSavedState(false)
