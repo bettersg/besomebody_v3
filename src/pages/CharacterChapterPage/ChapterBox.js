@@ -1,4 +1,6 @@
 import React from 'react';
+import { useParams } from 'react-router-dom'
+
 import { 
     makeStyles, 
     ThemeProvider,
@@ -12,6 +14,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import { Link } from 'react-router-dom'
+import { useInkContext } from '../../contexts/InkContext'
 
 
 import "./style.css"; 
@@ -27,37 +30,36 @@ const useStyles = makeStyles({
 
 export default function ChapterBox(props) {
     const classes = useStyles();
-    const { chaptDetails } = props
-    var rows = []; 
+    const { chaptDetails, total } = props
+    const { startStoryFrom } = useInkContext()
+    console.log(useInkContext());
 
-    for (var i = 0; i < chaptDetails.endingUnlocked; i++) {
-        rows.push(<FiberManualRecordIcon style={{fontSize:8, color: "#999999", marginRight: 1}}/>);
-    }
-    for (var j = 0; j < chaptDetails.endingAvail - chaptDetails.endingUnlocked; j ++) {
+    var rows = []; 
+    for (var j = 0; j < chaptDetails.endings.length; j++) {
         rows.push(<FiberManualRecordIcon style={{fontSize:8, color: "#E5E5E5", marginRight: 1}}/>);
     }
-
+  
     return (
-        <Card className={classes.root}>
+        <Card className={classes.root} key={chaptDetails.number}>
             <Grid container>
                 <Grid item xs={8}>
-                    <CardContent>
+                    <CardContent> {/* TODO: this needs to be pulled from the player save data, not from the story*/}
                         {chaptDetails.new == true ?
                             <Typography variant="overline" className="newChapt">
                                 NEW
                             </Typography> : 
                             null
                         }
-                        <span className="chaptText">Chapter {chaptDetails.startChapt} of {chaptDetails.endChapt}</span>
+                        <span className="chaptText">Chapter {chaptDetails.number} of {total}</span>
 
                         <Typography className="chaptTitle">
                             {chaptDetails.title}
                         </Typography>
                         <Typography variant="body2">
-                            {chaptDetails.chapter_summary}
+                            {chaptDetails.summary}
                         </Typography>
                         {rows}
-                        <span className="chaptText" style={{marginLeft:"5px"}}>{chaptDetails.endingUnlocked} of {chaptDetails.endingAvail} endings unlocked</span>
+                        <span className="chaptText" style={{marginLeft:"5px"}}>XXX of {chaptDetails.endings.length} endings unlocked</span>
                     </CardContent>
                 </Grid>
                 <CardActions>
@@ -65,15 +67,22 @@ export default function ChapterBox(props) {
                         <Button size="small" variant="outlined" className="chaptBtnReplay">
                             REPLAY
                         </Button> :
-                        <Link to={chaptDetails.knot_link}><Button size="small" variant="contained" className="chaptBtn">
+                        <Button size="small" variant="contained" className="chaptBtn" onClick={() => startStoryFrom('whatsapp')}>
                             PLAY
-                        </Button></Link>
-
+                        </Button>
                     }
-
                 </CardActions>
 
             </Grid>
         </Card>
     );
 }
+
+
+  /* TODO number of endings unlocked needs to be pulled from the player save data, not from the story data */
+    // for (var i = 0; i < chaptDetails.endingUnlocked; i++) {
+    //     rows.push(<FiberManualRecordIcon style={{fontSize:8, color: "#999999", marginRight: 1}}/>);
+    // }
+    // for (var j = 0; j < chaptDetails.endingAvail - chaptDetails.endingUnlocked; j ++) {
+    //     rows.push(<FiberManualRecordIcon style={{fontSize:8, color: "#E5E5E5", marginRight: 1}}/>);
+    // }

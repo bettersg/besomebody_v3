@@ -13,7 +13,8 @@ import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import ChapterBox from "./ChapterBox"
 import NavBar from "./NavBar"
-import { CHARACTER_MAP, STORY_MAP } from '../../models/storyMap'
+import { CHARACTER_MAP } from '../../models/storyMap'
+import { useInkContext } from '../../contexts/InkContext'
 
 
 import "../styles.css";
@@ -22,7 +23,7 @@ const CharacterChapterPage = () => {
     const { name } = useParams();
     
     const persona = CHARACTER_MAP.find((character) => character.linkName === name);
-    const chapters = STORY_MAP.find((character) => character.id === 1);    
+    // const chapters = STORY_MAP.find((character) => character.id === 1);    
     // TODO: change this from hardcoded to id 1 to take in a parameter 
     
 
@@ -35,11 +36,11 @@ const CharacterChapterPage = () => {
                     <ProfileAvatar avatarInfo={persona} />                   
                 </Box>
                 <div style={{paddingBottom:"20%"}}>
-                    {chapters.chaptDetails.length > 0 
-                        ? chapters.chaptDetails.map((chapt,i) => {
+                    {persona.chapters.length > 0 
+                        ? persona.chapters.map((chapt,i) => {
                             return (
                                 <div style={{display: "flex", justifyContent: "center"}}  key={i}>
-                                    <ChapterBox chaptDetails={chapt}  key={i} />
+                                    <ChapterBox chaptDetails={chapt} total={persona.chapters.length} key={i} />
                                 </div>
                             )
                         })
