@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { 
@@ -16,6 +16,8 @@ import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import { Link } from 'react-router-dom'
 import { useInkContext } from '../../contexts/InkContext'
 
+import { CHARACTER_MAP } from '../../models/storyMap'
+import NadiaJson from '../../stories/nadid.ink.json'
 
 import "./style.css"; 
 
@@ -28,11 +30,74 @@ const useStyles = makeStyles({
     },
 });
 
+
+const getInkJson = (nameParam) => {
+    switch (nameParam) {
+      case 'nadid': 
+      case 'nadia': {                
+        return {
+          inkJson: NadiaJson,
+          characterId: 1,
+          chapterId: 1,
+        }
+      }
+      case 'aman': {
+        const aman = CHARACTER_MAP.find((story) => story.id === 2)
+        const amanChapter1 = aman.chapters.find((chapter) => chapter.id === 1)
+        const json = aman.jsonFile
+        return {
+          inkJson: json,
+          characterId: aman.id,
+          chapterId: amanChapter1.id,
+        }
+      }
+      default: {
+        return null
+      }
+    }
+  }
+
 export default function ChapterBox(props) {
     const classes = useStyles();
     const { chaptDetails, total } = props
-    const { startStoryFrom } = useInkContext()
+    
+
+     // ==============================================================
+    // Get name param from the route path
+    // ==============================================================
+    const { name } = useParams()
+
+    // ==============================================================
+    // Get the ink json file, character id, and chapter id
+    // ==============================================================
+    const { inkJson, characterId, chapterId } = getInkJson(name)
+
+    // ==============================================================
+    // Get the useInk hook initialiser from the context, and other variables if needed
+    // ==============================================================
+    const {
+        // useInk hook initialiser
+        initialiseUseInkHook,
+
+        // States
+        paragraphs,
+        specialTags,
+        currentKnot,
+        startStoryFrom,
+        
+    } = useInkContext()
+
+    // ==============================================================
+    // Initialise the useInk hook within a useEffect to prevent multiple instances of initialising
+    // ==============================================================
+    useEffect(() => {
+        initialiseUseInkHook(inkJson, characterId, chapterId)
+    }, [])
+
+    
+
     console.log(useInkContext());
+
 
     var rows = []; 
     for (var j = 0; j < chaptDetails.endings.length; j++) {
