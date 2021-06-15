@@ -2,11 +2,13 @@ import { useState, useEffect } from 'react';
 import data from './data/quiz-data.json';
 import QuestionPanel from './QuestionPanel';
 import './MultipleChoiceQuiz.css';
+import { useAuth } from '../../../contexts/AuthContext';
+import { createDbAnswers } from "../../../models/answerModel";
 
 export default function MultipleChoiceQuiz(props) {
 
     const { getStory } = props
-
+    const { currentUser } = useAuth();
 
     const [currentQuestion,setCurrentQuestion] = useState(data.questions[0])
     const [currentQuestionNumber,setCurrentQuestionNumber] = useState(1)
@@ -25,11 +27,19 @@ export default function MultipleChoiceQuiz(props) {
         }])
     }
 
-    const continueToStory = () => {
-
-        //TODO: Save user answers to firebase
-
-        getStory();
+    const continueToStory = async () => {
+        const answerDocs = {
+            userId: currentUser.id,
+            answers: userAnswers,
+            createdAt: new Date(),
+        }
+        try {
+            await createDbAnswers(answerDocs);
+        } catch (err) {
+            throw new Error(`${err}`)
+        } finally {
+            getStory();
+        }
     }
 
     const nextQuestion = () =>{

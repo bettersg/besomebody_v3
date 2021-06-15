@@ -10,6 +10,7 @@ import {
 } from '../../models/saveStateModel'
 
 const useInk = (json, character, chapter) => {
+
   // Get current user info
   const { currentUser } = useAuth()
 

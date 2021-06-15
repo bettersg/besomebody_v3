@@ -35,7 +35,9 @@ const questions = quizData.questions.reverse()
 const alreadyRemoved = []
 let cardsState = questions // This fixes issues with updating characters state forcing it to use the current state and not the state that was active when the card was created.
 
-function TrueFalseQuiz () {
+function TrueFalseQuiz (props) {
+
+  const {getStory} = props
 
   const classes = useStyles();
 
@@ -60,6 +62,10 @@ function TrueFalseQuiz () {
     setCards(cardsState)
   }
 
+  const continueToStory = () => {
+    getStory();
+}
+
   const swipe = (dir) => {
     const cardsLeft = cards.filter(card => !alreadyRemoved.includes(card.question))
     if (cardsLeft.length) {
@@ -74,46 +80,58 @@ function TrueFalseQuiz () {
   <>
   <Typography align="center" variant="h1" className={classes.header}>TRUE FALSE QUIZ</Typography>
   <Typography align="center" paragraph>Indicate your answers by clicking the buttons or swiping the cards. Swipe left for FALSE, right for TRUE.</Typography>
-    <Box 
-      display="flex" 
-      flexDirection="column"
-      justifyContent="center"
-      alignItems="center"
-      className={classes.root}>
-      <Box className={classes.cardContainer}>
-        {cards.map((card, index) =>
-          <Box
-            key={card.question}
-          >
-             <TinderCard 
-            position="absolute"
-              ref={childRefs[index]} className='swipe' onSwipe={(dir) => swiped(dir, card.question)} onCardLeftScreen={() => outOfFrame(card.question)}>
-              <Card className={classes.card} variant="outlined">
-                <CardContent >
-                <h3>ANSWER: {card.correctAnswer}</h3>
-                <p>{card.explanation}</p>
-                </CardContent>
-              </Card> 
-            </TinderCard>
-            <TinderCard 
-            position="absolute"
-              ref={childRefs[index]} className='swipe' onSwipe={(dir) => swiped(dir, card.question)} onCardLeftScreen={() => outOfFrame(card.question)}>
-              <Card className={classes.card} variant="outlined">
-                <CardContent >
-                <h3>QUESTION {index+1}</h3>
-                <p>{card.question}</p>
-                </CardContent>
-              </Card> 
-            </TinderCard>
-          </Box>
+    {alreadyRemoved.length!==cards.length&&
+      <Box 
+        display="flex" 
+        flexDirection="column"
+        justifyContent="center"
+        alignItems="center"
+        className={classes.root}>
+        <Box className={classes.cardContainer}>
+          {cards.map((card, index) =>
+            <Box
+              key={card.question}
+            >
+               <TinderCard 
+              position="absolute"
+                ref={childRefs[index]} className='swipe' onSwipe={(dir) => swiped(dir, card.question)} onCardLeftScreen={() => outOfFrame(card.question)}>
+                <Card className={classes.card} variant="outlined">
+                  <CardContent >
+                  <h3>ANSWER: {card.correctAnswer}</h3>
+                  <p>{card.explanation}</p>
+                  </CardContent>
+                </Card> 
+              </TinderCard>
+              <TinderCard 
+              position="absolute"
+                ref={childRefs[index]} className='swipe' onSwipe={(dir) => swiped(dir, card.question)} onCardLeftScreen={() => outOfFrame(card.question)}>
+                <Card className={classes.card} variant="outlined">
+                  <CardContent >
+                  <h3>QUESTION {index+1}</h3>
+                  <p>{card.question}</p>
+                  </CardContent>
+                </Card> 
+              </TinderCard>
+            </Box>
+  
+          )}
+        </Box>
+        <Box className={classes.buttons} display="flex">
+          <Box m={1}><Button color="primary" variant="contained" onClick={() => swipe('left')}>FALSE</Button></Box>
+          <Box m={1}><Button color="primary" variant="contained" onClick={() => swipe('right')}>TRUE</Button></Box>
+        </Box>
+      </Box>
+    }
 
-        )}
-      </Box>
-      <Box className={classes.buttons} display="flex">
-        <Box m={1}><Button color="primary" variant="contained" onClick={() => swipe('left')}>FALSE</Button></Box>
-        <Box m={1}><Button color="primary" variant="contained" onClick={() => swipe('right')}>TRUE</Button></Box>
-      </Box>
-    </Box>
+    {alreadyRemoved.length===cards.length&&
+      <Button variant="contained" 
+        className="nextButton"
+        color="secondary" key="next" onClick={()=>{continueToStory();}} 
+        >
+          Back to Story
+      </Button>
+    }
+
   </>
   )
 }

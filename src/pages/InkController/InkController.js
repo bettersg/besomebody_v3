@@ -11,6 +11,7 @@ import DefaultInk from '../DefaultInk'
 import Survey from '../SurveyPage/Survey'
 import { STORY_MAP } from '../../models/storyMap'
 import MultipleChoiceQuiz from '../MiniGames/MultipleChoice/MultipleChoiceQuiz'
+import TrueFalseQuiz from '../MiniGames/TrueFalse/TrueFalseQuiz'
 
 const getInkJson = (nameParam) => {
   switch (nameParam) {
@@ -86,6 +87,13 @@ const getUi = ({
       // TODO: update this component 
       return (
         <MultipleChoiceQuiz getStory={getStory}/>
+      )
+    }
+
+    case 'trueFalse': {
+      // TODO: update this component 
+      return (
+        <TrueFalseQuiz getStory={getStory}/>
       )
     }
       
