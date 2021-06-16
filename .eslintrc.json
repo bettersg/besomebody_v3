@@ -1,0 +1,79 @@
+{
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier", "react-hooks", "simple-import-sort"],
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 100,
+        "tabWidth": 2,
+        "useTabs": false,
+        "semi": true,
+        "singleQuote": true,
+        "trailingComma": "all",
+        "bracketSpacing": true,
+        "jsxBracketSameLine": false
+      }
+    ],
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".js"]
+      }
+    ],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": [
+          "draftState",
+          "draftCache",
+          "draftCurrentUser",
+          "draftUser",
+          "draftPosts",
+          "draftPost"
+        ]
+      }
+    ],
+    "no-unused-vars": [
+      "error",
+      { "argsIgnorePattern": "^_" }
+    ],
+    "no-else-return": "off",
+    "no-lonely-if": "off",
+    "no-shadow": "off",
+    "no-empty": "off",
+    "no-use-before-define": "off",
+    "no-restricted-syntax": "off",
+    "no-throw-literal": "off",
+    "no-underscore-dangle": "off",
+    "react/prop-types": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "import/prefer-default-export": "off",
+    "sort-imports": "off",
+    "import/order": "off",
+    "simple-import-sort/sort": [
+      "error",
+      {
+        "groups": [
+          ["^\\u0000"],
+          ["^(?!glasspass)@?\\w"],
+          ["^glasspass"],
+          ["^\\."]
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js"]
+      }
+    }
+  }
+}
