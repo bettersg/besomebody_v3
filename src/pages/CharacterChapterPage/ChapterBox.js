@@ -19,7 +19,12 @@ import { useInkContext } from '../../contexts/InkContext'
 import { CHARACTER_MAP } from '../../models/storyMap'
 import NadiaInk from '../../stories/nadid.ink.json'
 import AmanInk from '../../stories/aman_chapter1.ink.json'
-import { getUI } from '../../pages/InkController/InkController.js'
+
+import WhatsApp from '../WhatsappPage/Whatsapp'
+import Scene from '../ScenePage/Scene'
+import DefaultInk from '../DefaultInk'
+import Survey from '../SurveyPage/Survey'
+
 
 import "./style.css"; 
 
@@ -104,6 +109,41 @@ export default function ChapterBox(props) {
     for (var j = 0; j < chaptDetails.endings.length; j++) {
         rows.push(<FiberManualRecordIcon style={{fontSize:8, color: "#E5E5E5", marginRight: 1}}/>);
     }
+
+
+const getUi = ({ currentParagraphs, specialTags }) => {
+    switch (specialTags.ui) {
+      case 'scene': {
+        return <Scene currentParagraphs={currentParagraphs} />
+      }
+      case 'whatsapp': {
+        return <WhatsApp currentParagraphs={currentParagraphs} />
+      }
+      case 'survey': {
+        // TODO: update this component
+        return <Survey currentParagraphs={currentParagraphs} />
+      }
+  
+      // case reflection  - return a reflection component with argument for survey id from ink
+      // <Reflection getstory surveyid />
+  
+      case 'school': {
+        return (
+          // to remove school from nadia's story
+          <Scene currentParagraphs={currentParagraphs} />
+        )
+      }
+      default:
+        return <DefaultInk currentParagraphs={currentParagraphs} />
+    }
+  }
+    const handleChapterStart = () => {
+        startStoryFrom(chaptDetails.knotTag);
+        getUi({
+            paragraphs,
+            specialTags,
+          })
+    }
   
     return (
         <Card className={classes.root} key={chaptDetails.number}>
@@ -133,7 +173,7 @@ export default function ChapterBox(props) {
                         <Button size="small" variant="outlined" disabled >
                             Coming Soon
                         </Button> :
-                        <Button size="small" variant="contained" className="chaptBtn" onClick={() => startStoryFrom(chaptDetails.knotTag)}>
+                        <Button size="small" variant="contained" className="chaptBtn" onClick={ handleChapterStart()}>
                             PLAY
                         </Button>
                     }
