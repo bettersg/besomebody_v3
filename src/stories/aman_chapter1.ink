@@ -86,6 +86,7 @@ Enlistment day, Aman is lining up with other enlistees to receive his deployment
 A: Er sorry sergeant. I cut my hair yesterday. So I need a helmet. 
 
 Sergeant: <Looks up, confused> “Hah?” Looks at Aman’s 11B. “You cut your hair?”
+#background:aman_barber_wide.jpg
 
 A: Yes, sorry.
 

@@ -42,13 +42,11 @@ const getInkJson = (nameParam) => {
         }
       }
       case 'aman': {
-        const aman = CHARACTER_MAP.find((story) => story.id === 2)
-        const amanChapter1 = aman.chapters.find((chapter) => chapter.id === 1)
-        const json = aman.jsonFile
+         
         return {
-          inkJson: json,
-          characterId: aman.id,
-          chapterId: amanChapter1.id,
+            inkJson: NadiaJson,
+            characterId: 1,
+            chapterId: 1,
         }
       }
       default: {
@@ -94,7 +92,7 @@ export default function ChapterBox(props) {
         initialiseUseInkHook(inkJson, characterId, chapterId)
     }, [])
 
-    
+    // getUI
 
     console.log(useInkContext());
 

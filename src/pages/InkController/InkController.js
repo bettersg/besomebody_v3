@@ -11,29 +11,31 @@ import Survey from '../SurveyPage/Survey'
 import { CHARACTER_MAP } from '../../models/storyMap'
 import { useInkContext } from '../../contexts/InkContext'
 
+import NadiaInk from '../../stories/nadid.ink.json'
+import AmanInk from '../../stories/aman_chapter1.ink.json'
+
 const getInkJson = (nameParam) => {
   switch (nameParam) {
     case 'nadid': 
     case 'nadia': {
       const nadidStory = CHARACTER_MAP.find((story) => story.id === 1)
-      const nadidChapter1 = nadidStory.chapters.find(
-        (chapter) => chapter.id === 1
-      )
-      const json = nadidStory.jsonFile
+      // const nadidChapter1 = nadidStory.chapters.find(
+        // (chapter) => chapter.id === 1)
+      // const json = nadidStory.jsonFile
       return {
-        inkJson: json,
-        characterId: nadidStory.id,
-        chapterId: nadidChapter1.id,
+        inkJson: NadiaInk,
+        characterId: 1,
+        chapterId: 1,
       }
     }
     case 'aman': {
       const aman = CHARACTER_MAP.find((story) => story.id === 2)
-      const amanChapter1 = aman.chapters.find((chapter) => chapter.id === 1)
-      const json = aman.jsonFile
+      // const amanChapter1 = aman.chapters.find((chapter) => chapter.id === 1)
+      // const json = aman.jsonFile
       return {
-        inkJson: json,
-        characterId: aman.id,
-        chapterId: amanChapter1.id,
+        inkJson: AmanInk,
+        characterId: 2,
+        chapterId: 1,
       }
     }
     default: {

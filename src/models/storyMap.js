@@ -1,4 +1,4 @@
-import NadidInk from '../stories/nadid.ink.json'
+import NadiaInk from '../stories/nadid.ink.json'
 import AmanInk from '../stories/aman_chapter1.ink.json'
 
 // TODO: Update with other properties such as character image, character bio, chapter summary, etc
@@ -22,8 +22,7 @@ chapters []
   endings []
     endingId
     name
-
-
+ 
 */
 
 export const CHARACTER_MAP = [
@@ -34,7 +33,7 @@ export const CHARACTER_MAP = [
     profileImage: "https://images.generated.photos/mOW1TlV_t3f-cxpA6Ud9Bj-fleXjDLGQC9f0oI0R24E/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAwMzMwMjIuanBn.jpg",
     description: "Nadia wants to become a doctor - but will love and religion get in the way?",
     jsonLink: '../stories/nadid.ink.json',
-    jsonFile: NadidInk,
+    jsonFile: NadiaInk,
     playable: true,
     variables: {
       nadia_mood: 5,
