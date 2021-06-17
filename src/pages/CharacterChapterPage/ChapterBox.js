@@ -17,7 +17,9 @@ import { Link } from 'react-router-dom'
 import { useInkContext } from '../../contexts/InkContext'
 
 import { CHARACTER_MAP } from '../../models/storyMap'
-import NadiaJson from '../../stories/nadid.ink.json'
+import NadiaInk from '../../stories/nadid.ink.json'
+import AmanInk from '../../stories/aman_chapter1.ink.json'
+import { getUI } from '../../pages/InkController/InkController.js'
 
 import "./style.css"; 
 
@@ -36,7 +38,7 @@ const getInkJson = (nameParam) => {
       case 'nadid': 
       case 'nadia': {                
         return {
-          inkJson: NadiaJson,
+          inkJson: NadiaInk,
           characterId: 1,
           chapterId: 1,
         }
@@ -44,16 +46,17 @@ const getInkJson = (nameParam) => {
       case 'aman': {
          
         return {
-            inkJson: NadiaJson,
-            characterId: 1,
-            chapterId: 1,
+          inkJson: AmanInk,
+          characterId: 1,
+          chapterId: 1,
         }
       }
       default: {
         return null
       }
     }
-  }
+}
+
 
 export default function ChapterBox(props) {
     const classes = useStyles();
@@ -126,11 +129,11 @@ export default function ChapterBox(props) {
                     </CardContent>
                 </Grid>
                 <CardActions>
-                    {chaptDetails.replay == true ? 
-                        <Button size="small" variant="outlined" className="chaptBtnReplay">
-                            REPLAY
+                    {chaptDetails.playable == false ? 
+                        <Button size="small" variant="outlined" disabled >
+                            Coming Soon
                         </Button> :
-                        <Button size="small" variant="contained" className="chaptBtn" onClick={() => startStoryFrom('whatsapp')}>
+                        <Button size="small" variant="contained" className="chaptBtn" onClick={() => startStoryFrom(chaptDetails.knotTag)}>
                             PLAY
                         </Button>
                     }

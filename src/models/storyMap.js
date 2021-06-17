@@ -44,7 +44,7 @@ export const CHARACTER_MAP = [
         chapterId: 1,
         number: 1,
         title: "Caught with Gavin",
-        knotTag: "nadia_chapter_1",
+        knotTag: "nadid_chapter6",
         summary: "Nadia gets caught by her father holding hands with Gavin. What should she do?",
         playable: true,
         endings: [
@@ -69,7 +69,7 @@ export const CHARACTER_MAP = [
         chapterId: 2,
         number: 2,
         title: "School Bullies",
-        knotTag: "nadia_chapter_2",
+        knotTag: "whatsapp",
         summary: "Zhi Hao teases Nadia - should she tell him off?",
         playable: false,
         endings: [
@@ -89,7 +89,7 @@ export const CHARACTER_MAP = [
         chapterId: 3,
         number: 3,
         title: "The Anniversary",
-        knotTag: "nadia_chapter_3",
+        knotTag: "break_up",
         summary: "Gavin and Nadia are celebrating their one month together - but is their status public or private?",
         playable: false,
         endings: [
@@ -125,7 +125,7 @@ export const CHARACTER_MAP = [
         chapterId: 1,
         number: 1,
         title: "Model Sikh",
-        knotTag: "aman_chapter_1",
+        knotTag: "aman_1_intro",
         summary: "Aman gets a modelling offer, but only if he trims his beard.",
         playable: true,
         endings: [
