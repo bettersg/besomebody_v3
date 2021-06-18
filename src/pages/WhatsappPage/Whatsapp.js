@@ -81,13 +81,16 @@ const Whatsapp = (props) => {
                   </Fade>
                 </Box>
               )
-            } else {
+            } else if (step.tags[0]?.includes('speaker')) {     // this is needed to avoid rendering inner_monologue
               return (
                 <Box key={step.text} my={2} mx={1} display="flex">
-                  <Box className="chatbox-receiver" borderRadius={5} p={1}>
-                    <Typography key={i} variant="overline">{(step.tags[0]?.includes('speaker_1') ? specialTags.speaker_1_name : '')}</Typography>
-                    <Typography key={i} variant="overline">{(step.tags[0]?.includes('speaker_2') ? specialTags.speaker_2_name : '')}</Typography>
-                    <Typography key={i} variant="overline">{(step.tags[0]?.includes('speaker_3')? specialTags.speaker_3_name :'')}</Typography>
+                  <Box className="chatbox-receiver" borderRadius={5} p={1}>                    
+                    <Typography key={i} variant="overline">
+                      {(step.tags[0]?.includes('speaker_1') ? specialTags.speaker_1_name : null)}
+                      {(step.tags[0]?.includes('speaker_2') ? specialTags.speaker_2_name : null)}
+                      {(step.tags[0]?.includes('speaker_3') ? specialTags.speaker_3_name : null)}
+                      {(step.tags[0]?.includes('speaker_4') ? specialTags.speaker_4_name : null)}
+                    </Typography> 
                     <Typography key={i}>{ step.text }</Typography>
                   </Box>
                 </Box>
