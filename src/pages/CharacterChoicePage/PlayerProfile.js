@@ -9,7 +9,6 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Paper from '@material-ui/core/Paper';
 import Box from '@material-ui/core/Box';
-import { isClassExpression } from "typescript";
 
 const useStyles = makeStyles((theme) => ({
   root: {
