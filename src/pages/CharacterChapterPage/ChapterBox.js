@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { Link as RouterLink, useHistory } from 'react-router-dom'
+
 
 import { 
     makeStyles, 
@@ -18,7 +20,7 @@ import { useInkContext } from '../../contexts/InkContext'
 
 import { CHARACTER_MAP } from '../../models/storyMap'
 import NadiaInk from '../../stories/nadid.ink.json'
-import AmanInk from '../../stories/aman_chapter1.ink.json'
+import AmanInk from '../../stories/aman.ink.json'
 
 import WhatsApp from '../WhatsappPage/Whatsapp'
 import Scene from '../ScenePage/Scene'
@@ -52,7 +54,7 @@ const getInkJson = (nameParam) => {
          
         return {
           inkJson: AmanInk,
-          characterId: 1,
+          characterId: 2,
           chapterId: 1,
         }
       }
@@ -66,7 +68,8 @@ const getInkJson = (nameParam) => {
 export default function ChapterBox(props) {
     const classes = useStyles();
     const { chaptDetails, total } = props
-    
+    const history = useHistory()
+
 
      // ==============================================================
     // Get name param from the route path
@@ -101,10 +104,6 @@ export default function ChapterBox(props) {
         initialiseUseInkHook(inkJson, characterId, chapterId)
     }, [])
 
-    // getUI
-
-    console.log(useInkContext());
-
 
     var rows = []; 
     for (var j = 0; j < chaptDetails.endings.length; j++) {
@@ -112,39 +111,37 @@ export default function ChapterBox(props) {
     }
 
 
-const getUi = ({ currentParagraphs, specialTags }) => {
-    switch (specialTags.ui) {
-      case 'scene': {
-        return <Scene currentParagraphs={currentParagraphs} />
-      }
-      case 'whatsapp': {
-        return <WhatsApp currentParagraphs={currentParagraphs} />
-      }
-      case 'survey': {
-        // TODO: update this component
-        return <Survey currentParagraphs={currentParagraphs} />
-      }
-  
-      // case reflection  - return a reflection component with argument for survey id from ink
-      // <Reflection getstory surveyid />
-  
-      case 'school': {
-        return (
-          // to remove school from nadia's story
-          <Scene currentParagraphs={currentParagraphs} />
-        )
-      }
-      default:
-        return <DefaultInk currentParagraphs={currentParagraphs} />
+    // const getUi = ({ currentParagraphs, specialTags }) => {
+    //     switch (specialTags.ui) {
+    //       case 'scene': {
+    //         return <Scene currentParagraphs={currentParagraphs} />
+    //       }
+    //       case 'whatsapp': {
+    //         return <WhatsApp currentParagraphs={currentParagraphs} />
+    //       }
+    //       case 'survey': {
+    //         // TODO: update this component
+    //         return <Survey currentParagraphs={currentParagraphs} />
+    //       }
+    
+    //       // case reflection  - return a reflection component with argument for survey id from ink
+    //       // <Reflection getstory surveyid />
+    
+    //       case 'school': {
+    //         return (
+    //           // to remove school from nadia's story
+    //           <Scene currentParagraphs={currentParagraphs} />
+    //         )
+    //       }
+    //       default:
+    //         return <DefaultInk currentParagraphs={currentParagraphs} />
+    //     }
+    //   }
+
+    const handleChapterStart = () => {
+        startStoryFrom(chaptDetails.knotTag);
+        history.push("/story/" + name);
     }
-  }
-    // const handleChapterStart = () => {
-    //     startStoryFrom(chaptDetails.knotTag);
-    //     getUi({
-    //         currentParagraphs,
-    //         specialTags,
-    //       })
-    // }
   
     return (
         <Card className={classes.root} key={chaptDetails.number}>
@@ -174,9 +171,9 @@ const getUi = ({ currentParagraphs, specialTags }) => {
                         <Button size="small" variant="outlined" disabled >
                             Coming Soon
                         </Button> :
-                        <Link to={"/story/" + name + "/" + chaptDetails.knotTag}><Button size="small" variant="contained" className="chaptBtn" >
+                        <Button size="small" variant="contained" className="chaptBtn" onClick ={() => handleChapterStart()}>
                             PLAY
-                        </Button></Link>
+                        </Button>
                     }
                 </CardActions>
 

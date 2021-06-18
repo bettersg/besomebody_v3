@@ -14,7 +14,7 @@ variables [] -> character specific variables to track?
   ?
 chapters []
   chapterId (int)
-  number (int)
+  number (int)  -> to remove later
   title (str)
   knotTag (str)
   summary (str)
@@ -71,7 +71,7 @@ export const CHARACTER_MAP = [
         title: "School Bullies",
         knotTag: "whatsapp",
         summary: "Zhi Hao teases Nadia - should she tell him off?",
-        playable: false,
+        playable: true,
         endings: [
           {
             endingId: 1,
@@ -150,7 +150,7 @@ export const CHARACTER_MAP = [
         chapterId: 2,
         number: 2,
         title: "The Barber",
-        knotTag: "aman_chapter_2",
+        knotTag: "aman_1_3",
         summary: "Zhi Hao suggests Aman cut his hair for NS - should he?",
         playable: false,
         endings: [
@@ -170,7 +170,7 @@ export const CHARACTER_MAP = [
         chapterId: 3,
         number: 3,
         title: "Study or Sonya",
-        knotTag: "aman_chapter_3",
+        knotTag: "aman_1_6_narration",
         summary: "Aman wants to go overseas for uni, but his girlfriend Sonya is staying in Singapore.",
         playable: false,
         endings: [

@@ -74,34 +74,33 @@ const InkController = () => {
   // ==============================================================
   // Get name param from the route path
   // ==============================================================
-  const { name , knotTag } = useParams()
+  const { name  } = useParams()
 
-  // ==============================================================
-  // Get the ink json file, character id, and chapter id
-  // ==============================================================
-  const { inkJson, characterId, chapterId } = getInkJson(name)
+  // // ==============================================================
+  // // Get the ink json file, character id, and chapter id
+  // // ==============================================================
+  // const { inkJson, characterId, chapterId } = getInkJson(name)
 
   // ==============================================================
   // Get the useInk hook initialiser from the context, and other variables if needed
   // ==============================================================
   const {
     // useInk hook initialiser
-    initialiseUseInkHook,
+    // initialiseUseInkHook,
 
     // States
     paragraphs,
     specialTags,
-    currentKnot,
-    startStoryFrom,
+    currentKnot,    
   } = useInkContext()
 
 
-  // ==============================================================
-  // Initialise the useInk hook within a useEffect to prevent multiple instances of initialising
-  // ==============================================================
-  useEffect(() => {
-    initialiseUseInkHook(inkJson, characterId, chapterId)
-  }, [])
+  // // ==============================================================
+  // // Initialise the useInk hook within a useEffect to prevent multiple instances of initialising
+  // // ==============================================================
+  // useEffect(() => {
+  //   initialiseUseInkHook(inkJson, characterId, chapterId)
+  // }, [])
 
   // ==============================================================
   // Filter paragraphs based on current knot
@@ -135,10 +134,10 @@ const InkController = () => {
     // MOCK CONDITION: Trigger this useEffect everytime global variables or the ui key in special tags updates
   }, [globalVariables, specialTags?.ui])
   */
-
-  if (!inkJson) {
-    return <NotFoundPage />
-  }
+// later need to do validation at chapter_box to make sure this is captured
+  // if (!inkJson) {
+  //   return <NotFoundPage />
+  // }
 
   return (
     <Container maxWidth="lg" className="ink-controller">

@@ -88,11 +88,11 @@ You okay? You’ve been so quiet this morning. PMS ah? #speaker_left
     You sound like you got handed death sentence. Why? Because going army right? #speaker_left
 - Ya. I thought I would get police. All my cousins got police. Dunno why I kena army. I heard BMT training is from morning to night. How to find time to wash my hair, dry my turban cloth... #speaker_self
 You keeping your turban? Die la. The cloth is never-ending. Can reach JB! #speaker_left
-* [Oi, not funny] You gotta stop those ‘jokes’ man. Just cos I’m your friend and I give you a free pass, all the time...
-* Funny ... ha-ha[.] Some of us have real problems on our hands you know. 
+* [Oi, not funny] You gotta stop those ‘jokes’ man. Just cos I’m your friend and I give you a free pass, all the time...  #speaker_self
+* Funny ... ha-ha[.] Some of us have real problems on our hands you know.  #speaker_self
 - I don’t get it though. If you’re worried about your turban, just cut hair lah. #speaker_left
-* I can’t do that[.] That’s insane. And my parents would kill me!
-* So actually, I’ve been thinking about it[.] It would be easier to blend in. But, my parents would kill me...
+* I can’t do that[.] That’s insane. And my parents would kill me!  #speaker_self
+* So actually, I’ve been thinking about it[.] It would be easier to blend in. But, my parents would kill me...  #speaker_self
 - You want to kena tekan by your parents, or kena tekan by the sergeant major? #speaker_left
 Is tekan by nobody an option? #speaker_self
 This is NS, sure tekan. Anyway, some of your cousins also don’t keep their turban what.  #speaker_left
@@ -138,9 +138,9 @@ Nothing -- #speaker_self
 Don’t lie to me, what is this? #speaker_right
 Just take the airpods and go please, I have a lot of stuff to do -- #speaker_self
 You’ve been cutting your hair, haven’t you? #speaker_right
-* [Yes, so what?] Yes, and I might cut it all off. So?
+* [Yes, so what?] Yes, and I might cut it all off. So?  #speaker_self
 Are you KIDDING me? Papa will kick you out. #speaker_right
-* None of your business[.] My life, my choices.
+* None of your business[.] My life, my choices.  #speaker_self
 You better not do anything stupid. Papa will kick you out. #speaker_right
 - Let him. I’m going to enlist anyway. I’ll just stay in camp. #speaker_self
 How could you even say that! Doesn’t this mean anything to you? How can you take this so lightly? #speaker_right
@@ -247,12 +247,117 @@ This is the start of a new chapter in my life.
 #chat_group_title:Family
 #chat_group_image:aman_family.jpg
 #speaker1_name:Papa
+#speaker2_name:Amma
+#speaker3_name:Jothi
 #timestamp:09.45
+Eh amma can we order something different for dinner tonight? #speaker_3 
+Why? What's wrong with my cooking? #speaker_2 
+It's Aman's last meal as a free man! We should get something nice tonight! #speaker_3
+He is going to NS, not to the moon. And anyway he likes my cooking. #speaker_2
+Speaking of whom, where is he? Went out for breakfast and hasn't come back yet! #speaker_3
+Aman - please tell amma you want to order something for dinner! Side with me! #speaker_2
+Let the boy make up his own mind Jothi! He's going to be a real man soon! #speaker_1
+Aman? #speaker_1
+* [Send them a selfie of your haircut]
+- ... #speaker_self #emoji:aman_haircut_selfie.png
+
+#ui:scene
+#background:aman_barbershop.jpg
+Why isn’t anyone saying anything? #inner_monologue
+They've all seen it. Why don't the reply? #inner_monologue
+I don’t care what they think. Do I care what they think? #inner_monologue
+
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Family
+#chat_group_image:aman_family.jpg
+#speaker1_name:Papa
+#speaker2_name:Amma
+#speaker3_name:Jothi
+#timestamp:09.50
+You will regret it, son. #speaker_1
+
+#ui:scene
+#background:aman_barbershop.jpg
+Shit. shitshitshit.  #inner_monologue
+
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Family
+#chat_group_image:aman_family.jpg
+#speaker1_name:Papa
+#speaker2_name:Amma
+#speaker3_name:Jothi
+* [I'm going to NS so I had to cut it.] Papa you don't understand what Army BMT is like! 
+    I had to cut it otherwise NS will be miserable for me - even more miserable than for the chinese boys. #speaker_self
+    Nobody else in our family had to do Army BMT, and they all went to policy or SCDF so they didn't have to deal with this. #speaker_self
+    If I didn't cut it, there's no time to wash my hair or turban in BMT! #speaker_self
+    Papa?  #speaker_self
+* I knew you wouldn't understand![] 
+    This wasn't easy for me either but none of you even bothered to ask me about how I was preparing for Army BMT. #speaker_self
+    All the chinese boys already complain about how hard it is and how little sleep they have. #speaker_self
+    And they don't even have to wash their hair or turban every night. #speaker_self
+    All the cousins went to police or SCDF so they have no idea how hard it is outfield. #speaker_self
+    And you didn't care to ask me. #speaker_self
+    You're just stuck in your old traditions and don't care about what's best for me. #speaker_self
+    Papa? #speaker_self
+* I really struggled with this Papa[]
+    I wanted to talk to you or Jothi about this but I knew you would judge me. #speaker_self
+    Papa Army BMT is not like police or SCDF, so your experience and the cousins don't have to deal with mud and helmets. #speaker_self
+    I didn't know what to do. I had nobody to talk to about this.  #speaker_self
+    I wish I didn't have to do this but Zhi Hao said they would tekan me in NS if I came in with a turban. #speaker_self
+    I heard all these horror stories about how little sleep they get, and if I had to wash my hair and turban it would be even worse. #speaker_self
+    Papa I'm sorry. I really had to do this. #speaker_self
+    Papa? #speaker_self
+- Sigh. Son, come home. What's done is done. It is in Waheguru's hands now. #speaker_1
 
 
+-> aman_1_6_narration
 
+=== aman_1_6_narration ===
+#knot:aman_1_6_narration
+#ui:narrator
+#background:aman_parade_square_bmt.jpg
+Enlistment Day.
+
+-> aman_1_6 
+
+
+=== aman_1_6 ===
+#knot:aman_1_6
+#ui:scene
+#background:aman_parade_square_bmt.jpg
+#left_character_image:aman_sergeant_confused.png
+#left_character_name:2SG Wong
+Private Singh? #speaker_left
+Oh no.... #inner_monologue
+Confirm you are Private Singh or not? Hello can answer? #speaker_left
+Er, sorry sergeant. I cut my hair yesterday. So I need a helmet. #speaker_self
+Hah? Your 11B photo you wear turban. You register say got turban. CMPB tell me you got turban. #speaker_left
+So I went to draw out turban for you. #speaker_left
+Now you cut your hair? #speaker_left
+Yes, sorry. #speaker_self
+Wah lao eh! Now must procure helmet for you. Why you DAY ONE so troublesome? #speaker_left
+Take this first and go sit down. Later I call you. #speaker_left
+Arrrrrggggh Zhihao was right. First day after cutting my hair, I already kena tekan by my parents and by the sergeant. #inner_monologue
+#left_character_image:lukman.png
+#left_character_name:Pte Wahid
+Hey, I overheard! You cut your hair? #speaker_left
+* [Mind your own business] Why does everyone care so much about my hair?  #speaker_self
+    Whoa sorry. Didn't mean to kaypoh...  #speaker_left
+    No, no. It's ok.. I guess I'm just on edge, man.  #speaker_self
+* [Yeah it's just easier]
+    Yeah, I just cut yesterday. Thought it will be easier in army.  #speaker_self
+    Sure or not? Turban better right? No need wear helmet.   #speaker_left
+- Anyway - I’m Lukman.   #speaker_left
+I’m Aman. Which section? #speaker_self
+Section 2. You? #speaker_left
+Eh. Same! #speaker_self
+Cool! Hopefully can be buddies. #speaker_left
+
+
+-> END
 === aman_1_9 ===
-
 
 
 
