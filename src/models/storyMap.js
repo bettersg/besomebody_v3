@@ -152,7 +152,7 @@ export const CHARACTER_MAP = [
         title: "The Barber",
         knotTag: "aman_1_3",
         summary: "Zhi Hao suggests Aman cut his hair for NS - should he?",
-        playable: false,
+        playable: true,
         endings: [
           {
             endingId: 1,

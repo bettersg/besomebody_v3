@@ -170,7 +170,7 @@ One month later.
 #background:whatsapp.png
 #chat_group_title:Selinder
 #chat_group_image:selinder_profile.jpg
-#speaker1_name:Selinder
+#speaker_1_name:Selinder
 #timestamp:23.34
 Babe, I’m sorry, I think I’m going to do it. #speaker_self
 Jaan, don’t do anything rash. #speaker_1
@@ -190,8 +190,8 @@ Awww... #speaker_self #emoji:heart.png
 So - did you decide...?  #speaker_1
 You know what.  #speaker_self
 I wasn’t sure up till this very moment, but I’ve decided now.  #speaker_self
-* I am going to cut my hair [.] I have to do this. -> aman_1_4
-* I'll keep my hair[.] You were right dear. -> aman_1_9
+* I am going to cut my hair. I have to do this[.] -> aman_1_4 
+* I'll keep my hair. You were right dear[.] -> aman_1_9   
 
 
 === aman_1_4 ===
@@ -246,9 +246,9 @@ This is the start of a new chapter in my life.
 #background:whatsapp.png
 #chat_group_title:Family
 #chat_group_image:aman_family.jpg
-#speaker1_name:Papa
-#speaker2_name:Amma
-#speaker3_name:Jothi
+#speaker_1_name:Papa
+#speaker_2_name:Amma
+#speaker_3_name:Jothi
 #timestamp:09.45
 Eh amma can we order something different for dinner tonight? #speaker_3 
 Why? What's wrong with my cooking? #speaker_2 
@@ -271,9 +271,9 @@ I don’t care what they think. Do I care what they think? #inner_monologue
 #background:whatsapp.png
 #chat_group_title:Family
 #chat_group_image:aman_family.jpg
-#speaker1_name:Papa
-#speaker2_name:Amma
-#speaker3_name:Jothi
+#speaker_1_name:Papa
+#speaker_2_name:Amma
+#speaker_3_name:Jothi
 #timestamp:09.50
 You will regret it, son. #speaker_1
 
@@ -285,9 +285,9 @@ Shit. shitshitshit.  #inner_monologue
 #background:whatsapp.png
 #chat_group_title:Family
 #chat_group_image:aman_family.jpg
-#speaker1_name:Papa
-#speaker2_name:Amma
-#speaker3_name:Jothi
+#speaker_1_name:Papa
+#speaker_2_name:Amma
+#speaker_3_name:Jothi
 * [I'm going to NS so I had to cut it.] Papa you don't understand what Army BMT is like! 
     I had to cut it otherwise NS will be miserable for me - even more miserable than for the chinese boys. #speaker_self
     Nobody else in our family had to do Army BMT, and they all went to policy or SCDF so they didn't have to deal with this. #speaker_self

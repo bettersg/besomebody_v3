@@ -32,7 +32,7 @@ const Whatsapp = (props) => {
             <Grid item xs={2}>
               <Box className="whatsapp-box">
                 <img
-                  src={`/images/${specialTags.chatgroupImage}`}
+                  src={`/images/${specialTags.chat_group_image}`}
                   alt="Chat Profile"
                   className="profile-img"
                 />
@@ -41,7 +41,7 @@ const Whatsapp = (props) => {
 
             <Grid item xs={8}>
               <Typography color="inherit" variant="h6" className="chat-name">
-                {specialTags.chatgroupTitle}
+                {specialTags.chat_group_title}
               </Typography>
               <Typography
                 color="inherit"
@@ -60,7 +60,7 @@ const Whatsapp = (props) => {
           dir="ltr"
         >
           {currentParagraphs.map((step, i) => {
-            if (step.tags[0]?.includes('Speaker_self')) {
+            if (step.tags[0]?.includes('speaker_self')) {
               return (
                 <Box
                   key={step.text}
@@ -85,7 +85,8 @@ const Whatsapp = (props) => {
               return (
                 <Box key={step.text} my={2} mx={1} display="flex">
                   <Box className="chatbox-receiver" borderRadius={5} p={1}>
-                    <Typography key={i}>{step.text}</Typography>
+                    <Typography key={i} variant="overline">{(step.tags[0]?.includes('speaker_1')? specialTags.speaker_1_name :'they')}</Typography>
+                    <Typography key={i}>{ step.text }</Typography>
                   </Box>
                 </Box>
               )
