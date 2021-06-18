@@ -55,6 +55,7 @@ I should mention one more thing. One of my best friends is Zhihao -- we’ve liv
 Zhihao’s great! But he can also be... a lot, sometimes. You’ll see.
 So that’s me -- Aman. 
 And this is what it’s like, to be me.
+CHAPTER 1 #title
 
 -> aman_1_1_narration 
 
@@ -190,8 +191,8 @@ Awww... #speaker_self #emoji:heart.png
 So - did you decide...?  #speaker_1
 You know what.  #speaker_self
 I wasn’t sure up till this very moment, but I’ve decided now.  #speaker_self
-* I am going to cut my hair. I have to do this[.] -> aman_1_4 
-* I'll keep my hair. You were right dear[.] -> aman_1_9   
+* [I am going to cut my hair. I have to do this.] -> aman_1_4 #speaker_self
+* [I'll keep my hair. You were right dear.] -> aman_1_9_narration   #speaker_self
 
 
 === aman_1_4 ===
@@ -216,7 +217,7 @@ You sure ah, boy. #speaker_right
     Refund what? Haven't pay yet boy.   #speaker_right
 	Sorry. Sorry, I’ve changed my mind. Bye! #speaker_self	
     -> aman_1_9
-* Yes [,]I'm sure.
+* Yes [,]I'm sure. #speaker_self
 What style you want? Medium, or fade, or --   #speaker_right
 I’m going NS tomorrow, so just cut very short.   #speaker_self	
 #background:aman_barbershop_staring.jpg
@@ -288,7 +289,8 @@ Shit. shitshitshit.  #inner_monologue
 #speaker_1_name:Papa
 #speaker_2_name:Amma
 #speaker_3_name:Jothi
-* [I'm going to NS so I had to cut it.] Papa you don't understand what Army BMT is like! 
+I... #speaker_self
+* [I'm going to NS so I had to cut it.] Papa you don't understand what Army BMT is like! #speaker_self
     I had to cut it otherwise NS will be miserable for me - even more miserable than for the chinese boys. #speaker_self
     Nobody else in our family had to do Army BMT, and they all went to policy or SCDF so they didn't have to deal with this. #speaker_self
     If I didn't cut it, there's no time to wash my hair or turban in BMT! #speaker_self
@@ -318,7 +320,7 @@ Shit. shitshitshit.  #inner_monologue
 #knot:aman_1_6_narration
 #ui:narrator
 #background:aman_parade_square_bmt.jpg
-Enlistment Day.
+Enlistment Day. #title
 
 -> aman_1_6 
 
@@ -341,7 +343,7 @@ Wah lao eh! Now must procure helmet for you. Why you DAY ONE so troublesome? #sp
 Take this first and go sit down. Later I call you. #speaker_left
 Arrrrrggggh Zhihao was right. First day after cutting my hair, I already kena tekan by my parents and by the sergeant. #inner_monologue
 #left_character_image:lukman.png
-#left_character_name:Pte Wahid
+#left_character_name:Pte Lukman Wahid
 Hey, I overheard! You cut your hair? #speaker_left
 * [Mind your own business] Why does everyone care so much about my hair?  #speaker_self
     Whoa sorry. Didn't mean to kaypoh...  #speaker_left
@@ -355,9 +357,135 @@ Section 2. You? #speaker_left
 Eh. Same! #speaker_self
 Cool! Hopefully can be buddies. #speaker_left
 
+-> aman_1_7_narration
 
--> END
+
+=== aman_1_7_narration ===
+#knot:aman_1_7_narration
+#ui:narrator
+#background:aman_cookhouse.jpg
+Two months later, in the Halal section of the cookhouse.
+
+-> aman_1_7
+
+
+=== aman_1_7 ===
+#knot:aman_1_7
+#ui:scene
+#background:aman_cookhouse.jpg
+#left_character_image:lukman.png
+#left_character_name:Pte Lukman Wahid
+
+Can’t believe we’re passing out soon. Three months flew by, don’t you think? #speaker_left
+Ya man, what an experience. We should be proud of ourselves.  #speaker_self
+Where are you getting posted to? #speaker_left
+Signals man, ok la. I think quite slack. You?  #speaker_self
+#left_character_image:lukman_sad.png
+Storeman. #speaker_left
+So good! Every day can book out!  #speaker_self
+... #speaker_left
+Aren’t you happy?  #speaker_self
+Not really. I wanted to join OCS to become an officer, or at least SISPEC la, become a sergeant. #speaker_left 
+I thought I did really well in all my IPPT tests and training. But it’s still not enough, maybe. #speaker_left
+Did you speak to your sergeant? Tell him how you feel? #speaker_self
+Yes, I told him how badly I wanted to join and how others who did less well than me got into OCS. #speaker_left
+Then? #speaker_self
+He said he knows I am a good soldier, but it’s beyond his control. #speaker_left
+* [What does that mean?]
+    Aiya forget it la. Maybe it's because I’m Malay. So I can only be a driver or a storeman. #speaker_left
+    To become a leader as a minority cannot just be good, must be exceptional.  #speaker_left
+    Eh no la, that’s not true... #speaker_self
+    It’s true bro. You also know. #speaker_left
+* [Oh. Well that's life.]
+ - You know, I cut my hair before I enlisted because I didn’t want to stand out as the only guy with a turban.  #speaker_self
+ It’s funny that some of us want to blend in with the others. And some of us want to stand out. #speaker_self
+I’m not afraid of standing out.  #speaker_left
+You know what the stereotypes are. I want to break them.  #speaker_left
+I’m not lazy, I’m not laidback! I’ve been the most garang in the platoon.  #speaker_left
+And I will continue to be that. #speaker_left
+100 percent, bro. And I will always have your back.  #speaker_self
+Thanks buddy. #speaker_left
+
+-> aman_1_8_narration
+
+
+=== aman_1_8_narration ===
+#knot:aman_1_8_narration
+#ui:narrator
+#background:aman_parade_square_bmt.jpg
+BMT Passing Out Parade. #title
+My dad cried at the parade. He claims he didn't but I could see his eyes were wet when we hugged.
+Mum was just happy I survived, I think.
+Jothi made some snarky comments about by biceps being bigger than my brain now, but she seemed genuinely proud too. 
+Sel came too. My parents finally met her. And liked her.
+Lukman saw her and gave me a big wink, then he brought his mum over to say hi.
+We took so many photos that my phone battery died.
+My family went out for dinner that night.
+
+-> aman_1_8
+
+
+=== aman_1_8 ===
+#knot:aman_1_8
+#ui:scene
+#background:restaurant.jpg
+#left_character_image:papa.png
+#left_character_name:Papa
+#right_character_image:mama.png
+#right_character_name:Mama
+Our Aman looked so handsome at his passing out parade! #speaker_right
+You did it, son. I am proud of you. Of course, you would have looked more handsome wearing a turban instead of a beret. #speaker_left
+Enough motu, it’s not the time.  #speaker_right
+Aman, turban or no turban, you will always be my hero. #speaker_right
+Aman beta, now that the hardest part is over, you should start thinking about what you will do after NS.  #speaker_right
+* [I was thinking of trying my hand at theatre and short films, mum.]
+#right_character_image:jothi.png
+#right_character_name:Jothi    
+    A few biceps and suddenly you think you can be an action hero eh? #speaker_right
+    Haha, I think it's cool! Our next Diljit Dosanjh in the making! #speaker_right
+    That’s nice beta, now is the time to explore your interests and see what you like before school starts again.  #speaker_left
+    But don’t forget to spend time with Selinder! She's quite a lovely girl.  #speaker_left
+
+* [Oh er, this and that!]
+#right_character_image:jothi.png
+#right_character_name:Jothi    
+    You mean, “spend lots of time with Selinder”, right? #speaker_right
+- Ha, I must agree! I’m glad to have Aman back. #speaker_right
+If only I could freeze time here. #inner_monologue
+(aman_1_ending_1) With everything so simple, and pure... #inner_monologue
+VAR aman_1_ending_1 = true
+
+-> aman_2_intro
+
+
+=== aman_1_9_narration ===
+#knot:aman_1_9_narration
+#ui:narrator
+#background:aman_parade_square_bmt.jpg
+BMT Enlistment Day. #title
+
+-> aman_1_9
+
+
 === aman_1_9 ===
+#knot:aman_1_9
+#ui:scene
+#background:aman_parade_square_bmt.jpg
+#left_character_image:sergeant.png
+#left_character_name:Sergeant Wong
+PRIVATE SINGH! Ok, take this. Sit there with the rest. #speaker_left
+Thank you, sergeant. #speaker_self
+Ok, first interaction wasn't so bad #inner_monologue
+#left_character_image:lukman.png
+#left_character_name:Pte Lukman Wahid
+Hello! I’m Lukman. #speaker_left
+Hey, I’m Aman. Which section are you in? #speaker_self
+Section 2. You? #speaker_left
+Eh - same! #speaker_self
+Cool! Hopefully we can be buddies. #speaker_left
+Nice! You can help me tie my turban. #speaker_self
+Wait whut -- #speaker_left
+Haha just joking man. Anyway, I show you later! #speaker_self
 
 
 
@@ -368,10 +496,10 @@ Cool! Hopefully can be buddies. #speaker_left
 
 
 
+// CHAPTER 2 INTRODUCTION
 
-
-
-
+=== aman_2_intro ===
+CHAPTER 2
 
 
 

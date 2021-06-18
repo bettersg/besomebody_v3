@@ -85,7 +85,9 @@ const Whatsapp = (props) => {
               return (
                 <Box key={step.text} my={2} mx={1} display="flex">
                   <Box className="chatbox-receiver" borderRadius={5} p={1}>
-                    <Typography key={i} variant="overline">{(step.tags[0]?.includes('speaker_1')? specialTags.speaker_1_name :'they')}</Typography>
+                    <Typography key={i} variant="overline">{(step.tags[0]?.includes('speaker_1') ? specialTags.speaker_1_name : '')}</Typography>
+                    <Typography key={i} variant="overline">{(step.tags[0]?.includes('speaker_2') ? specialTags.speaker_2_name : '')}</Typography>
+                    <Typography key={i} variant="overline">{(step.tags[0]?.includes('speaker_3')? specialTags.speaker_3_name :'')}</Typography>
                     <Typography key={i}>{ step.text }</Typography>
                   </Box>
                 </Box>
