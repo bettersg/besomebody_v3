@@ -56,6 +56,10 @@ class Router extends Component {
             <InkController />
           </PrivateRoute>
 
+          <PrivateRoute path="/story/:name/:knotTag" exact>
+            <InkController />
+          </PrivateRoute>
+
           <Route path="/signup" exact>
             <SignUp />
           </Route>

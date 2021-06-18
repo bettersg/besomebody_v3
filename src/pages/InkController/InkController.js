@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Box, Container, Typography } from '@material-ui/core'
@@ -75,7 +74,7 @@ const InkController = () => {
   // ==============================================================
   // Get name param from the route path
   // ==============================================================
-  const { name } = useParams()
+  const { name , knotTag } = useParams()
 
   // ==============================================================
   // Get the ink json file, character id, and chapter id
@@ -93,7 +92,9 @@ const InkController = () => {
     paragraphs,
     specialTags,
     currentKnot,
+    startStoryFrom,
   } = useInkContext()
+
 
   // ==============================================================
   // Initialise the useInk hook within a useEffect to prevent multiple instances of initialising
@@ -107,7 +108,7 @@ const InkController = () => {
   // ==============================================================
   const [currentParagraphs, setCurrentParagraphs] = useState([])
 
-  useEffect(() => {
+  useEffect(() => {    
     if (currentKnot || paragraphs[paragraphs.length - 1]?.currentKnot) {
       const nextParagraphs = paragraphs.filter((paragraph) => {
         return paragraph.currentKnot === currentKnot
@@ -119,6 +120,8 @@ const InkController = () => {
     // Run this useEffect whenever paragraphs or currentKnot get updated
   }, [paragraphs, currentKnot])
 
+
+  
   /*
   // ===========
   // EXAMPLE
@@ -144,10 +147,11 @@ const InkController = () => {
           {name}
         </Typography>
       </Box>
-
-      {getUi({
+      
+      {        
+        getUi({
         currentParagraphs,
-        specialTags,
+        specialTags,        
       })}
 
       {/* Render event triggers */}

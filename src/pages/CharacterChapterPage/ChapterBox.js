@@ -87,6 +87,7 @@ export default function ChapterBox(props) {
 
         // States
         paragraphs,
+        currentParagraphs,
         specialTags,
         currentKnot,
         startStoryFrom,
@@ -137,13 +138,13 @@ const getUi = ({ currentParagraphs, specialTags }) => {
         return <DefaultInk currentParagraphs={currentParagraphs} />
     }
   }
-    const handleChapterStart = () => {
-        startStoryFrom(chaptDetails.knotTag);
-        getUi({
-            paragraphs,
-            specialTags,
-          })
-    }
+    // const handleChapterStart = () => {
+    //     startStoryFrom(chaptDetails.knotTag);
+    //     getUi({
+    //         currentParagraphs,
+    //         specialTags,
+    //       })
+    // }
   
     return (
         <Card className={classes.root} key={chaptDetails.number}>
@@ -173,9 +174,9 @@ const getUi = ({ currentParagraphs, specialTags }) => {
                         <Button size="small" variant="outlined" disabled >
                             Coming Soon
                         </Button> :
-                        <Button size="small" variant="contained" className="chaptBtn" onClick={ handleChapterStart()}>
+                        <Link to={"/story/" + name + "/" + chaptDetails.knotTag}><Button size="small" variant="contained" className="chaptBtn" >
                             PLAY
-                        </Button>
+                        </Button></Link>
                     }
                 </CardActions>
 
