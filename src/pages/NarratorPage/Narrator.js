@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-const Scene = (props) => {
+const Narrator = (props) => {
   const { currentParagraphs } = props
   const { getStory, choices, setChoice, specialTags } = useInkContext()
   const classes = useStyles({ image: specialTags.background })
@@ -48,7 +48,6 @@ const Scene = (props) => {
   }, [elementRef, currentParagraphs, choices])
 
   const step = currentParagraphs[currentParagraphs.length - 1]
-  
   return (
     <Fade in>
       <div>
@@ -64,7 +63,7 @@ const Scene = (props) => {
           {currentParagraphs.map((step) => {
             return ( */}
               <Box my={1} key={step.text} style={{  scrollSnapAlign:'start' }}>
-              <Fade in={step.text}>
+                <Fade in={step.text}>
                   <Typography>{step.text}</Typography>
                 </Fade>
               </Box>
@@ -113,4 +112,4 @@ const Scene = (props) => {
   )
 }
 
-export default Scene
+export default Narrator

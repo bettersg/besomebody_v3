@@ -9,6 +9,7 @@ import DefaultInk from '../DefaultInk'
 import Survey from '../SurveyPage/Survey'
 import { CHARACTER_MAP } from '../../models/storyMap'
 import { useInkContext } from '../../contexts/InkContext'
+import Narrator from '../NarratorPage/Narrator'
 
 import NadiaInk from '../../stories/nadid.ink.json'
 import AmanInk from '../../stories/aman_chapter1.ink.json'
@@ -50,6 +51,9 @@ const getUi = ({ currentParagraphs, specialTags }) => {
     }
     case 'whatsapp': {
       return <WhatsApp currentParagraphs={currentParagraphs} />
+    }
+    case 'narrator': {
+      return <Narrator currentParagraphs={currentParagraphs} />
     }
     case 'survey': {
       // TODO: update this component
