@@ -487,6 +487,211 @@ Nice! You can help me tie my turban. #speaker_self
 Wait whut -- #speaker_left
 Haha just joking man. Anyway, I show you later! #speaker_self
 
+-> aman_1_10_narration
+
+
+=== aman_1_10_narration ===
+#knot:aman_1_10_narration
+#ui:narrator
+#background:aman_bmt_bunks.jpg
+After a hard day's training...
+
+-> aman_1_10
+
+
+=== aman_1_10 ===
+#knot:aman_1_10
+#ui:scene
+#background:aman_bmt_bunks.jpg
+#left_character_image:lukman_shorts.png
+#left_character_name:Lukman
+Luk, you free ah? #speaker_self
+What’s up?  #speaker_left
+Help me can? I need to fold this turban to wear tomorrow. #speaker_self
+Cannn. Uh, how ah? Just fold it round and round? #speaker_left
+Ha, yes. Something like that. I have a neighbour who says it’s long enough to reach JB. #speaker_self
+And you’re uh... okay with him saying that? #speaker_left
+* [Not really]
+Honestly? It doesn’t feel great. #speaker_self
+Then why do you put up with it?  #speaker_left
+I guess it’s just easier than making it a whole -- thing.  #speaker_self
+He doesn’t mean any harm la, and he’s one of my oldest friends.  #speaker_self
+He’s just always said crap like that because I guess I never told him I don't like it, and it would be kind of awkward to get mad about it now. #speaker_self
+Sounds like you’re making excuses for him, bro...  #speaker_left
+* [Sure]
+Yeah, I guess. I mean he says a lot of insensitive crap, but I’m just used to it by now. #speaker_self
+Anyway he's an old friend. He doesn't mean any harm, and he's a good guy deep down.  #speaker_self
+You shouldn’t have to get used to it. You should tell him it’s insensitive.  #speaker_left
+I think I have la. It’s in one ear and out the other.  #speaker_self
+Sounds like you should shout louder, eh? #speaker_left
+- Anyway. This one how?  #speaker_left
+Just follow me. You fold into half first... yes, correct.   #speaker_self
+Then another half... yes, like that.   #speaker_self
+Then one third.   #speaker_self
+Now, hold tightly and I will fold towards you… Ok, done!  #speaker_self
+Wah steady. I fold my first turban. Ok! Now what bro? #speaker_left
+All good. I will tie by myself now. #speaker_self
+Sure ah? Ok, I’m going to say prayers - maghrib now. See you at dinner.  #speaker_left
+
+-> aman_1_11_narration
+
+
+=== aman_1_11_narration ===
+#knot:aman_1_11_narration
+#ui:narrator
+#background:aman_bmt_toilet.jpg
+Later that night, Aman is washing his hair.
+
+-> aman_1_11
+
+
+=== aman_1_11 ===
+#knot:aman_1_11
+#ui:scene
+#background:aman_bmt_toilet.jpg
+#left_character_image:aman_ravi.png
+#left_character_name:Pte Ravi
+#right_character_image:aman_soh.png
+#right_character_name:Pte Soh
+Ah Man, don’t wash your hair at night leh. We all cannot sleep seeing your long hair in the dark. So scary! #speaker_left
+Like hantu sia. #speaker_right
+* [Ignore]
+Pontianak! #speaker_right
+Woooooooooo! #speaker_left
+It’s all good, it’s all good... #inner_monologue
+Don’t make a scene. #inner_monologue
+* [Joke back]
+Pontia-- #speaker_right
+#background:aman_bmt_toilet_scary.jpg
+They want scary? I'll give them scary. #inner_monologue
+AaaaaahahahahAHAHAHAHA! Aahaha! WooooooahahahHAHAHAH! #speaker_self
+OuuuuuuuaahahahhAHHHAHA! WAHkakaKAKKAKA! #speaker_self
+@$*@$! -- What the -- #speaker_right
+HAHAHAHA Dei! That was brilliant la. #speaker_left
+#background:aman_bmt_toilet.jpg
+- Good night everybody.  #speaker_self
+
+
+-> aman_1_12_narration
+
+
+=== aman_1_12_narration ===
+#knot:aman_1_12_narration
+#ui:narrator
+#background:aman_outfield.jpg
+Tekong Field Camp, day 5.
+
+-> aman_1_12
+
+
+=== aman_1_12 ===
+#knot:aman_1_12
+#ui:scene
+#background:aman_outfield.jpg
+#left_character_image:lukman.png
+#left_character_name:Lukman
+You’ve been scratching your head all day. Must be very hot inside ah? #speaker_left
+Very, bro. Super itchy and uncomfortable. All the heat and sweat trapped inside. I feel like my head is a furnace. #speaker_self
+The powder baths don’t help? #speaker_left
+No, just sticks to the scalp and becomes more grimy. Gross! #speaker_self
+Just two more days. Endure. Then you can wash all you want.  #speaker_left
+Can use my herbal essence shampoo and be like shampoo ad. Hair can fling back and forth. #speaker_left
+Ha! Oh my god. Can’t wait. The others are gonna be like eeyer so dirty! #speaker_self
+Screw them. Let them say what they want. They don’t matter. #speaker_left
+You really are my buddy. I am so lucky to have you. #inner_monologue
+Anyway, I can’t believe we’re passing out soon. Three months just flew by. #speaker_left
+Ya man, what an experience. We should be proud of ourselves.  #speaker_self
+Where are you getting posted to? #speaker_left
+Signals man, ok la. I think quite slack. You?  #speaker_self
+#left_character_image:lukman_sad.png
+Storeman. #speaker_left
+So good! Every day can book out!  #speaker_self
+... #speaker_left
+Aren’t you happy?  #speaker_self
+Not really. I wanted to join OCS to become an officer, or at least SISPEC la, become a sergeant. #speaker_left 
+I thought I did really well in all my IPPT tests and training. But it’s still not enough, maybe. #speaker_left
+Did you speak to your sergeant? Tell him how you feel? #speaker_self
+Yes, I told him how badly I wanted to join and how others who did less well than me got into OCS. #speaker_left
+Then? #speaker_self
+He said he knows I am a good soldier, but it’s beyond his control. #speaker_left
+* [What does that mean?]
+    Aiya forget it la. Maybe it's because I’m Malay. So I can only be a driver or a storeman. #speaker_left
+    To become a leader as a minority cannot just be good, must be exceptional.  #speaker_left
+    Eh no la, that’s not true... #speaker_self
+    It’s true bro. You also know. #speaker_left
+* [Oh. Well that's life.]
+ - You know, I cut my hair before I enlisted because I didn’t want to stand out as the only guy with a turban.  #speaker_self
+ It’s funny that some of us want to blend in with the others. And some of us want to stand out. #speaker_self
+I’m not afraid of standing out.  #speaker_left
+You know what the stereotypes are. I want to break them.  #speaker_left
+I’m not lazy, I’m not laidback! I’ve been the most garang in the platoon.  #speaker_left
+And I will continue to be that. #speaker_left
+100 percent, bro. And I will always have your back.  #speaker_self
+Thanks buddy. #speaker_left
+
+ 
+-> aman_1_13_narration
+
+
+=== aman_1_13_narration ===
+#knot:aman_1_13_narration
+#ui:narrator
+#background:aman_parade_square_bmt.jpg
+BMT Passing Out Parade. #title
+My dad cried at the parade. He claims he didn't but I could see his eyes were wet when we hugged.
+Mum was just happy I survived, I think.
+Jothi made some snarky comments about by biceps being bigger than my brain now, but she seemed genuinely proud too. 
+Sel came too. My parents finally met her. And liked her.
+Lukman saw her and gave me a big wink, then he brought his mum over to say hi.
+We took so many photos that my phone battery died.
+My family went out for dinner that night.
+
+-> aman_1_13
+
+
+=== aman_1_13 ===
+#knot:aman_1_8
+#ui:scene
+#background:restaurant.jpg
+#left_character_image:papa.png
+#left_character_name:Papa
+#right_character_image:mama.png
+#right_character_name:Mama
+Our Aman looked so handsome at his passing out parade! #speaker_right
+You did it, son. I am proud of you.  #speaker_left
+Enough motu, it’s not the time.  #speaker_right
+Aman, turban or no turban, you will always be my hero. #speaker_right
+Aman beta, now that the hardest part is over, you should start thinking about what you will do after NS.  #speaker_right
+* [I was thinking of trying my hand at theatre and short films, mum.]
+#right_character_image:jothi.png
+#right_character_name:Jothi    
+    A few biceps and suddenly you think you can be an action hero eh? #speaker_right
+    Haha, I think it's cool! Our next Diljit Dosanjh in the making! #speaker_right
+    That’s nice beta, now is the time to explore your interests and see what you like before school starts again.  #speaker_left
+    But don’t forget to spend time with Selinder! She's quite a lovely girl.  #speaker_left
+
+* [Oh er, this and that!]
+#right_character_image:jothi.png
+#right_character_name:Jothi    
+    You mean, “spend lots of time with Selinder”, right? #speaker_right
+- Ha, I must agree! I’m glad to have Aman back. #speaker_right
+If only I could freeze time here. #inner_monologue
+(aman_1_ending_2) With everything so simple, and pure... #inner_monologue
+VAR aman_1_ending_2 = true
+
+-> aman_2_intro
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -497,6 +702,7 @@ Haha just joking man. Anyway, I show you later! #speaker_self
 
 
 // CHAPTER 2 INTRODUCTION
+-> aman_2_intro
 
 === aman_2_intro ===
 CHAPTER 2

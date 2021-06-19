@@ -19,7 +19,7 @@ We have been dating for about 2 years now, but in secret from most people. Gavin
     
 == found_out ==
 #knot:found_out
-#ui:narrator
+#ui:scene
 #background:school.jpg
     Initially, we were really careful. 
     I made sure that we never held hands in public, and nobody talked about us in school because we kept our distance. 
@@ -106,7 +106,7 @@ We have been dating for about 2 years now, but in secret from most people. Gavin
 
 == break_up ==
 #knot:break_up
-#ui:school
+#ui:scene
 #background:school.jpg
 #leftCharacter:
 #rightCharacter:
