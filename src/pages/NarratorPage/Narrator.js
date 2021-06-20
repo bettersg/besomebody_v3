@@ -17,22 +17,22 @@ const useStyles = makeStyles((theme) => ({
     background: theme.palette.grey[100],
     opacity: 0.9,
     position: 'relative',
-    top: '400px',
-    height: '100px',
+    top: '350px',
+    height: '150px',
     scrollSnapType: 'y mandatory',
   },
   choiceWrapper: {
     position: 'relative',
     opacity: 0.8,    
-    top: '450px',
+    top: '400px',
   }
 }))
 
 const Narrator = (props) => {
   const { currentParagraphs } = props
   const { getStory, choices, setChoice, specialTags } = useInkContext()
-  const classes = useStyles({ image: specialTags.background })
-
+  const classes = useStyles({ image: specialTags.background })  
+  
   // ========================================================
   // Help to scroll to bottom of the paragraphs render screen
   // ========================================================
@@ -46,8 +46,14 @@ const Narrator = (props) => {
       })
     }
   }, [elementRef, currentParagraphs, choices])
-
+  
+  
+  if (currentParagraphs.length < 1) {
+    getStory();
+  }
+   
   const step = currentParagraphs[currentParagraphs.length - 1]
+  
   return (
     <Fade in>
       <div>
@@ -59,18 +65,15 @@ const Narrator = (props) => {
           height={300}
           overflow="scroll"
           >
-          {/* {console.log(currentParagraphs)}
-          {currentParagraphs.map((step) => {
-            return ( */}
-              <Box my={1} key={step.text} style={{  scrollSnapAlign:'start' }}>
+        
+            { step && (
+              <Box my={1} key={step.text} style={{ scrollSnapAlign: 'start' }}>
                 <Fade in={step.text}>
                   <Typography>{step.text}</Typography>
                 </Fade>
               </Box>
-            {/* ) */}
-          {/* })} */}
-
-         
+              )
+            }         
 
           <div ref={elementRef} />
         </Box>

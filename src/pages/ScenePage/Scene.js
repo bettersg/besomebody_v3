@@ -17,14 +17,14 @@ const useStyles = makeStyles((theme) => ({
     background: theme.palette.grey[100],
     opacity: 0.9,
     position: 'relative',
-    top: '400px',
-    height: '100px',
+    top: '350px',
+    height: '150px',
     scrollSnapType: 'y mandatory',
   },
   choiceWrapper: {
     position: 'relative',
     opacity: 0.8,    
-    top: '450px',
+    top: '400px',
   }
 }))
 
@@ -47,6 +47,10 @@ const Scene = (props) => {
     }
   }, [elementRef, currentParagraphs, choices])
 
+  if (currentParagraphs.length < 1) {
+    getStory();
+  }
+   
   const step = currentParagraphs[currentParagraphs.length - 1]
   
   return (
@@ -60,18 +64,14 @@ const Scene = (props) => {
           height={300}
           overflow="scroll"
           >
-          {/* {console.log(currentParagraphs)}
-          {currentParagraphs.map((step) => {
-            return ( */}
-              <Box my={1} key={step.text} style={{  scrollSnapAlign:'start' }}>
-              <Fade in={step.text}>
+            {step && (
+              <Box my={1} key={step.text} style={{ scrollSnapAlign: 'start' }}>
+                <Fade in={step.text}>
                   <Typography>{step.text}</Typography>
                 </Fade>
               </Box>
-            {/* ) */}
-          {/* })} */}
-
-         
+              )
+            }
 
           <div ref={elementRef} />
         </Box>

@@ -93,6 +93,7 @@ export default function ChapterBox(props) {
         currentParagraphs,
         specialTags,
         currentKnot,
+        getStory,
         startStoryFrom,
         
     } = useInkContext()
