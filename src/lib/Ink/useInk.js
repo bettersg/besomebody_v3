@@ -14,7 +14,7 @@ const useInk = (json, character, chapter) => {
   const { currentUser } = useAuth()
 
   // Format a fixed saved data ID for firestore DB
-  const saveDataId = `${currentUser.id}-${character}-${chapter}`
+  const saveDataId = `${currentUser?.id}-${character}-${chapter}`
 
   // Initialise inkjs
   const inkStory = React.useMemo(() => initInk(Story, json), [json])
