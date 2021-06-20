@@ -1,3 +1,4 @@
+To Be Aman
 /*
 For cut-and-paste ease
 #knot:nadia_1_intro
@@ -8,10 +9,10 @@ For cut-and-paste ease
 #knot:aman_2_haircut_no
 #ui:scene
 #background:aman_school.jpg
-#left_character_image:zhihao_smiling.png -> can be left blank
-#left_character_name:Zhihao -> can be left blank
-#right_character_image:eric_angry.png -> can be left blank
-#right_character_name:Eric  -> can be left blank
+#speaker_left_image:zhihao_smiling.png -> can be left blank
+#speaker_left_name:Zhihao -> can be left blank
+#speaker_right_image:eric_angry.png -> can be left blank
+#speaker_right_name:Eric  -> can be left blank
 
 #knot:aman_2_haircut_no
 #ui:whatsapp
@@ -74,8 +75,8 @@ Zhi Hao and I are at a Sikh community event early on a Saturday morning.
 #knot:aman_1_1
 #ui:scene
 #background:aman_sikh_event_hall.jpg
-#left_character_image:zhihao_smiling.png
-#left_character_name:Zhihao
+#speaker_left_image:zhihao_smiling.png
+#speaker_left_name:Zhihao
 Oi! Focus la. You’re double-packing the fruits. #speaker_left
 Crap. Thanks. #speaker_self
 You okay? You’ve been so quiet this morning. PMS ah? #speaker_left
@@ -123,18 +124,18 @@ Later that night...
 #knot:aman_1_2
 #ui:scene
 #background:aman_bedroom.jpg
-#right_character_image:jothi_casual.png
-#right_character_name:Jothi
+#speaker_right_image:jothi_casual.png
+#speaker_right_name:Jothi
 
 
 Oh my god, can you like, KNOCK? #speaker_self
 If you need privacy, lock the door. Anyway, what are you doing? Examining your forehead lines? #speaker_right
-Told you to do your yoga face exercises before bed. It will keep you youthful and glowing, like moi. #speaker_right #right_character_image:jothi_laughing.png
+Told you to do your yoga face exercises before bed. It will keep you youthful and glowing, like moi. #speaker_right #speaker_right_image:jothi_laughing.png
 What do you want? #speaker_self
-Can I borrow your airpods? I sent mine for servicing. #speaker_right #right_character_image:jothi_casual.png
+Can I borrow your airpods? I sent mine for servicing. #speaker_right #speaker_right_image:jothi_casual.png
 Ya, it’s in the second drawer. Take and get out. #speaker_self
 #background:aman_drawer.jpg
-What is this? #speaker_right #right_character_image:jothi_concerned.png
+What is this? #speaker_right #speaker_right_image:jothi_concerned.png
 Nothing -- #speaker_self
 Don’t lie to me, what is this? #speaker_right
 Just take the airpods and go please, I have a lot of stuff to do -- #speaker_self
@@ -148,7 +149,7 @@ How could you even say that! Doesn’t this mean anything to you? How can you ta
 Sis, until and unless you keep a turban yourself, or even keep your hair longer than your shoulders, or have to do bloody NS, for God’s sake, you are not in a position to comment on or judge my life choices.  #speaker_self
 Don’t pretend to be so perfect. Neither of us are role models. #speaker_self
 Now, will you please take the airpods, and leave me alone? #speaker_self
-#right_character_image:jothi_sad.png
+#speaker_right_image:jothi_sad.png
 (Sighs.) Aman, I... #speaker_right
 ... I ...  #speaker_right
 
@@ -199,12 +200,12 @@ I wasn’t sure up till this very moment, but I’ve decided now.  #speaker_self
 #knot:aman_1_4
 #ui:scene
 #background:aman_barbershop.jpg
-#right_character_image:barber.png
-#right_character_name:Barber
+#speaker_right_image:barber.png
+#speaker_right_name:Barber
 Yes, boy?  #speaker_right
 Not crowded. Thank you, Waheguru. #inner_monologue
 I want to cut my hair. #speaker_self
-#right_character_image:barber_surprised.png
+#speaker_right_image:barber_surprised.png
 Cut beard or cut hair?   #speaker_right
 Don’t think. Just say it. Just say it.  #inner_monologue
 Cut everything.  #speaker_self
@@ -329,8 +330,8 @@ Enlistment Day. #title
 #knot:aman_1_6
 #ui:scene
 #background:aman_parade_square_bmt.jpg
-#left_character_image:aman_sergeant_confused.png
-#left_character_name:2SG Wong
+#speaker_left_image:aman_sergeant_confused.png
+#speaker_left_name:2SG Wong
 Private Singh? #speaker_left
 Oh no.... #inner_monologue
 Confirm you are Private Singh or not? Hello can answer? #speaker_left
@@ -342,8 +343,8 @@ Yes, sorry. #speaker_self
 Wah lao eh! Now must procure helmet for you. Why you DAY ONE so troublesome? #speaker_left
 Take this first and go sit down. Later I call you. #speaker_left
 Arrrrrggggh Zhihao was right. First day after cutting my hair, I already kena tekan by my parents and by the sergeant. #inner_monologue
-#left_character_image:lukman.png
-#left_character_name:Pte Lukman Wahid
+#speaker_left_image:lukman.png
+#speaker_left_name:Pte Lukman Wahid
 Hey, I overheard! You cut your hair? #speaker_left
 * [Mind your own business] Why does everyone care so much about my hair?  #speaker_self
     Whoa sorry. Didn't mean to kaypoh...  #speaker_left
@@ -373,14 +374,14 @@ Two months later, in the Halal section of the cookhouse.
 #knot:aman_1_7
 #ui:scene
 #background:aman_cookhouse.jpg
-#left_character_image:lukman.png
-#left_character_name:Pte Lukman Wahid
+#speaker_left_image:lukman.png
+#speaker_left_name:Pte Lukman Wahid
 
 Can’t believe we’re passing out soon. Three months flew by, don’t you think? #speaker_left
 Ya man, what an experience. We should be proud of ourselves.  #speaker_self
 Where are you getting posted to? #speaker_left
 Signals man, ok la. I think quite slack. You?  #speaker_self
-#left_character_image:lukman_sad.png
+#speaker_left_image:lukman_sad.png
 Storeman. #speaker_left
 So good! Every day can book out!  #speaker_self
 ... #speaker_left
@@ -429,26 +430,26 @@ My family went out for dinner that night.
 #knot:aman_1_8
 #ui:scene
 #background:restaurant.jpg
-#left_character_image:papa.png
-#left_character_name:Papa
-#right_character_image:mama.png
-#right_character_name:Mama
+#speaker_left_image:papa.png
+#speaker_left_name:Papa
+#speaker_right_image:mama.png
+#speaker_right_name:Mama
 Our Aman looked so handsome at his passing out parade! #speaker_right
 You did it, son. I am proud of you. Of course, you would have looked more handsome wearing a turban instead of a beret. #speaker_left
 Enough motu, it’s not the time.  #speaker_right
 Aman, turban or no turban, you will always be my hero. #speaker_right
 Aman beta, now that the hardest part is over, you should start thinking about what you will do after NS.  #speaker_right
 * [I was thinking of trying my hand at theatre and short films, mum.]
-#right_character_image:jothi.png
-#right_character_name:Jothi    
+#speaker_right_image:jothi.png
+#speaker_right_name:Jothi    
     A few biceps and suddenly you think you can be an action hero eh? #speaker_right
     Haha, I think it's cool! Our next Diljit Dosanjh in the making! #speaker_right
     That’s nice beta, now is the time to explore your interests and see what you like before school starts again.  #speaker_left
     But don’t forget to spend time with Selinder! She's quite a lovely girl.  #speaker_left
 
 * [Oh er, this and that!]
-#right_character_image:jothi.png
-#right_character_name:Jothi    
+#speaker_right_image:jothi.png
+#speaker_right_name:Jothi    
     You mean, “spend lots of time with Selinder”, right? #speaker_right
 - Ha, I must agree! I’m glad to have Aman back. #speaker_right
 If only I could freeze time here. #inner_monologue
@@ -471,13 +472,13 @@ BMT Enlistment Day. #title
 #knot:aman_1_9
 #ui:scene
 #background:aman_parade_square_bmt.jpg
-#left_character_image:sergeant.png
-#left_character_name:Sergeant Wong
+#speaker_left_image:sergeant.png
+#speaker_left_name:Sergeant Wong
 PRIVATE SINGH! Ok, take this. Sit there with the rest. #speaker_left
 Thank you, sergeant. #speaker_self
 Ok, first interaction wasn't so bad #inner_monologue
-#left_character_image:lukman.png
-#left_character_name:Pte Lukman Wahid
+#speaker_left_image:lukman.png
+#speaker_left_name:Pte Lukman Wahid
 Hello! I’m Lukman. #speaker_left
 Hey, I’m Aman. Which section are you in? #speaker_self
 Section 2. You? #speaker_left
@@ -503,8 +504,8 @@ After a hard day's training...
 #knot:aman_1_10
 #ui:scene
 #background:aman_bmt_bunks.jpg
-#left_character_image:lukman_shorts.png
-#left_character_name:Lukman
+#speaker_left_image:lukman_shorts.png
+#speaker_left_name:Lukman
 Luk, you free ah? #speaker_self
 What’s up?  #speaker_left
 Help me can? I need to fold this turban to wear tomorrow. #speaker_self
@@ -549,10 +550,10 @@ Later that night, Aman is washing his hair.
 #knot:aman_1_11
 #ui:scene
 #background:aman_bmt_toilet.jpg
-#left_character_image:aman_ravi.png
-#left_character_name:Pte Ravi
-#right_character_image:aman_soh.png
-#right_character_name:Pte Soh
+#speaker_left_image:aman_ravi.png
+#speaker_left_name:Pte Ravi
+#speaker_right_image:aman_soh.png
+#speaker_right_name:Pte Soh
 Ah Man, don’t wash your hair at night leh. We all cannot sleep seeing your long hair in the dark. So scary! #speaker_left
 Like hantu sia. #speaker_right
 * [Ignore]
@@ -588,8 +589,8 @@ Tekong Field Camp, day 5.
 #knot:aman_1_12
 #ui:scene
 #background:aman_outfield.jpg
-#left_character_image:lukman.png
-#left_character_name:Lukman
+#speaker_left_image:lukman.png
+#speaker_left_name:Lukman
 You’ve been scratching your head all day. Must be very hot inside ah? #speaker_left
 Very, bro. Super itchy and uncomfortable. All the heat and sweat trapped inside. I feel like my head is a furnace. #speaker_self
 The powder baths don’t help? #speaker_left
@@ -603,7 +604,7 @@ Anyway, I can’t believe we’re passing out soon. Three months just flew by. #
 Ya man, what an experience. We should be proud of ourselves.  #speaker_self
 Where are you getting posted to? #speaker_left
 Signals man, ok la. I think quite slack. You?  #speaker_self
-#left_character_image:lukman_sad.png
+#speaker_left_image:lukman_sad.png
 Storeman. #speaker_left
 So good! Every day can book out!  #speaker_self
 ... #speaker_left
@@ -653,26 +654,26 @@ My family went out for dinner that night.
 #knot:aman_1_8
 #ui:scene
 #background:restaurant.jpg
-#left_character_image:papa.png
-#left_character_name:Papa
-#right_character_image:mama.png
-#right_character_name:Mama
+#speaker_left_image:papa.png
+#speaker_left_name:Papa
+#speaker_right_image:mama.png
+#speaker_right_name:Mama
 Our Aman looked so handsome at his passing out parade! #speaker_right
 You did it, son. I am proud of you.  #speaker_left
 Enough motu, it’s not the time.  #speaker_right
 Aman, turban or no turban, you will always be my hero. #speaker_right
 Aman beta, now that the hardest part is over, you should start thinking about what you will do after NS.  #speaker_right
 * [I was thinking of trying my hand at theatre and short films, mum.]
-#right_character_image:jothi.png
-#right_character_name:Jothi    
+#speaker_right_image:jothi.png
+#speaker_right_name:Jothi    
     A few biceps and suddenly you think you can be an action hero eh? #speaker_right
     Haha, I think it's cool! Our next Diljit Dosanjh in the making! #speaker_right
     That’s nice beta, now is the time to explore your interests and see what you like before school starts again.  #speaker_left
     But don’t forget to spend time with Selinder! She's quite a lovely girl.  #speaker_left
 
 * [Oh er, this and that!]
-#right_character_image:jothi.png
-#right_character_name:Jothi    
+#speaker_right_image:jothi.png
+#speaker_right_name:Jothi    
     You mean, “spend lots of time with Selinder”, right? #speaker_right
 - Ha, I must agree! I’m glad to have Aman back. #speaker_right
 If only I could freeze time here. #inner_monologue
