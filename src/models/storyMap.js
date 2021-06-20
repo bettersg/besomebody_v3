@@ -172,7 +172,27 @@ export const CHARACTER_MAP = [
         title: "Study or Sonya",
         knotTag: "aman_1_6_narration",
         summary: "Aman wants to go overseas for uni, but his girlfriend Sonya is staying in Singapore.",
-        playable: false,
+        playable: true,
+        endings: [
+          {
+            endingId: 1,
+            title: "Stay",
+            knotTag: "aman_chapter3_ending_1",
+          },
+          {
+            endingId: 2,
+            title: "Leave",
+            knotTag: "aman_chapter3_ending_2",
+          },
+        ]
+      },
+      {
+        chapterId: 4,
+        number: 4,
+        title: "Outfield",
+        knotTag: "aman_1_10_narration",
+        summary: "Aman wants to go overseas for uni, but his girlfriend Sonya is staying in Singapore.",
+        playable: true,
         endings: [
           {
             endingId: 1,

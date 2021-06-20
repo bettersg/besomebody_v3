@@ -52,7 +52,7 @@ const getUi = ({ currentParagraphs, specialTags }) => {
     case 'whatsapp': {
       return <WhatsApp currentParagraphs={currentParagraphs} />
     }
-    case 'narrator': {
+    case 'narrator': {      
       return <Narrator currentParagraphs={currentParagraphs} />
     }
     case 'survey': {

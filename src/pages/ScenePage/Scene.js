@@ -4,6 +4,8 @@ import { Box, Button, Fade, Typography } from '@material-ui/core'
 import NextButton from "../../components/NextButton" 
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import { useInkContext } from '../../contexts/InkContext'
+import { useParams } from 'react-router-dom'
+
 
 const useStyles = makeStyles((theme) => ({
   paragraphWrapper: {
@@ -32,6 +34,7 @@ const Scene = (props) => {
   const { currentParagraphs } = props
   const { getStory, choices, setChoice, specialTags } = useInkContext()
   const classes = useStyles({ image: specialTags.background })
+  const { name } = useParams()
 
   // ========================================================
   // Help to scroll to bottom of the paragraphs render screen
@@ -52,7 +55,7 @@ const Scene = (props) => {
   }
    
   const step = currentParagraphs[currentParagraphs.length - 1]
-  // if step includes speaker left/right, set name here
+  // if step includes speaker left/right, set name here  
 
   return (
     <Fade in>
@@ -67,12 +70,18 @@ const Scene = (props) => {
           >
             {step && (
               <Box my={1} key={step.text} style={{ scrollSnapAlign: 'start' }}>
-                <Fade in={step.text}>               
-                  <Typography>{step.tags}: {step.text}</Typography>
-                </Fade>
+                <Typography variant="overline">
+                  {step.tags[0] === 'speaker_left' ? specialTags.speaker_left_name : null}
+                  {step.tags[0] === 'speaker_right' ? specialTags.speaker_right_name : null}
+                  {step.tags[0]==='speaker_self'? name:null}
+                  {step.tags[0]==='inner_monologue'? 'Inner Monologue':null}
+                </Typography>
+                <Fade in={step.text}>
+                    <Typography>{step.text}</Typography>
+                  </Fade>
               </Box>
               )
-            }
+            }            
 
           <div ref={elementRef} />
         </Box>
