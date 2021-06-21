@@ -1,0 +1,20 @@
+.ScenePage {
+    &__speaker {
+        &--left, &--right {
+            height: 200px !important; 
+            width: 40%; 
+            width: auto;
+        }
+        &--left {
+            position: absolute !important;
+            left: 0;
+            bottom: 310px; 
+        }
+        &--right {
+            position: absolute !important;
+            right: 0;
+            bottom: 310px; 
+        }
+        
+    }
+}
