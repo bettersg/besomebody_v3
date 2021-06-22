@@ -43,10 +43,13 @@ const getInkJson = (nameParam) => {
   }
 }
 
+
+
 const getUi = ({ currentParagraphs, specialTags }) => {
   switch (specialTags.ui) {
     case 'scene': {
       return <Scene currentParagraphs={currentParagraphs} />
+
     }
     case 'whatsapp': {
       return <WhatsApp currentParagraphs={currentParagraphs} />
@@ -94,6 +97,8 @@ const InkController = () => {
     currentKnot,    
   } = useInkContext()
 
+
+  // useEffect [specialtags] <- watch for changes to specialtags, and trigger save game 
 
   // // ==============================================================
   // // Initialise the useInk hook within a useEffect to prevent multiple instances of initialising
