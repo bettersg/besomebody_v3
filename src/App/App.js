@@ -16,6 +16,7 @@ import LaunchScreen from '../components/LaunchScreen'
 import Bar from '../components/Bar'
 import Router from '../Router'
 import SnackbarProvider from '../contexts/SnackbarContext'
+import { InkProvider } from '../contexts/InkContext'
 
 const initialState = {
   ready: false,
@@ -256,25 +257,29 @@ class App extends Component {
           {ready && (
             <AuthProvider>
               <SnackbarProvider>
-                <Router
-                  user={user}
-                  roles={roles}
-                  bar={
-                    <Bar
-                      performingAction={performingAction}
-                      theme={theme}
-                      user={user}
-                      userData={userData}
-                      roles={roles}
-                      onSignUpClick={() => this.openDialog('signUpDialog')}
-                      onSignInClick={() => this.openDialog('signInDialog')}
-                      onAboutClick={() => this.openDialog('aboutDialog')}
-                      onSettingsClick={() => this.openDialog('settingsDialog')}
-                      onSignOutClick={() => this.openDialog('signOutDialog')}
-                    />
-                  }
-                  openSnackbar={this.openSnackbar}
-                />
+                <InkProvider>
+                  <Router
+                    user={user}
+                    roles={roles}
+                    bar={
+                      <Bar
+                        performingAction={performingAction}
+                        theme={theme}
+                        user={user}
+                        userData={userData}
+                        roles={roles}
+                        onSignUpClick={() => this.openDialog('signUpDialog')}
+                        onSignInClick={() => this.openDialog('signInDialog')}
+                        onAboutClick={() => this.openDialog('aboutDialog')}
+                        onSettingsClick={() =>
+                          this.openDialog('settingsDialog')
+                        }
+                        onSignOutClick={() => this.openDialog('signOutDialog')}
+                      />
+                    }
+                    openSnackbar={this.openSnackbar}
+                  />
+                </InkProvider>
               </SnackbarProvider>
             </AuthProvider>
           )}

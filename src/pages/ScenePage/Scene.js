@@ -3,6 +3,9 @@ import React, { useEffect, useRef } from 'react'
 import { Box, Button, Fade, Typography } from '@material-ui/core'
 import NextButton from "../../components/NextButton" 
 import makeStyles from '@material-ui/core/styles/makeStyles'
+import { useInkContext } from '../../contexts/InkContext'
+import { useParams } from 'react-router-dom'
+
 
 const useStyles = makeStyles((theme) => ({
   paragraphWrapper: {
@@ -16,27 +19,22 @@ const useStyles = makeStyles((theme) => ({
     background: theme.palette.grey[100],
     opacity: 0.9,
     position: 'relative',
-    top: '400px',
-    height: '100px',
+    top: '350px',
+    height: '150px',
     scrollSnapType: 'y mandatory',
   },
   choiceWrapper: {
     position: 'relative',
     opacity: 0.8,    
-    top: '450px',
+    top: '400px',
   }
 }))
 
 const Scene = (props) => {
-  const {
-    currentParagraphs,
-    getStory, 
-    choices,
-    setChoice,
-    specialTags,
-    globalVariables,
-  } = props
+  const { currentParagraphs } = props
+  const { getStory, choices, setChoice, specialTags } = useInkContext()
   const classes = useStyles({ image: specialTags.background })
+  const { name } = useParams()
 
   // ========================================================
   // Help to scroll to bottom of the paragraphs render screen
@@ -52,6 +50,13 @@ const Scene = (props) => {
     }
   }, [elementRef, currentParagraphs, choices])
 
+  if (currentParagraphs.length < 1) {
+    getStory();
+  }
+   
+  const step = currentParagraphs[currentParagraphs.length - 1]
+  // if step includes speaker left/right, set name here  
+
   return (
     <Fade in>
       <div>
@@ -62,18 +67,21 @@ const Scene = (props) => {
           p={1}
           height={300}
           overflow="scroll"
-        >
-          {currentParagraphs.map((step) => {
-            return (
-              <Box my={1} key={step.text} style={{  scrollSnapAlign:'start' }}>
+          >
+            {step && (
+              <Box my={1} key={step.text} style={{ scrollSnapAlign: 'start' }}>
+                <Typography variant="overline">
+                  {step.tags[0] === 'speaker_left' ? specialTags.speaker_left_name : null}
+                  {step.tags[0] === 'speaker_right' ? specialTags.speaker_right_name : null}
+                  {step.tags[0]==='speaker_self'? name:null}
+                  {step.tags[0]==='inner_monologue'? 'Inner Monologue':null}
+                </Typography>
                 <Fade in={step.text}>
-                  <Typography>{step.text}</Typography>
-                </Fade>
+                    <Typography>{step.text}</Typography>
+                  </Fade>
               </Box>
-            )
-          })}
-
-         
+              )
+            }            
 
           <div ref={elementRef} />
         </Box>

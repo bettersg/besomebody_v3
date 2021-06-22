@@ -2,14 +2,17 @@ import React, { useEffect, useState } from 'react'
 import { Box, Button, Grid, TextField, Typography } from '@material-ui/core'
 import { Controller, useForm } from 'react-hook-form'
 import { useSnackbar } from '../../contexts/SnackbarContext'
+import { useInkContext } from '../../contexts/InkContext'
 
 const Survey = (props) => {
-  const { getStory, currentParagraphs } = props
+  const { currentParagraphs } = props
+  const { getStory } = useInkContext()
+
   // Snackbar Context
   const { setSnackbar } = useSnackbar()
 
   const [isLoading, setIsLoading] = useState(false)
- // get the survey id from special tags
+  // get the survey id from special tags
 
   // Init form
   const defaultValues = {

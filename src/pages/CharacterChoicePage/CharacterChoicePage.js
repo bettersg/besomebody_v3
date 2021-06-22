@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom'
+
 import CharacterAvatar from "./CharacterAvatar";
 import PlayerProfile from "./PlayerProfile";
 import Grid from "@material-ui/core/Grid";
@@ -15,6 +17,7 @@ import "../styles.css";
 import { useAuth } from '../../contexts/AuthContext';
 import { useSnackbar } from '../../contexts/SnackbarContext'
 import { CHARACTER_MAP } from '../../models/storyMap'
+import {getDbUser}  from '../../models/userModel.js';
 
 
 const CharacterChoice = () => {
@@ -23,6 +26,17 @@ const CharacterChoice = () => {
     // Auth Context
 	const { currentUser } = useAuth()
 	// TODO : fix the userInfo. firebase currentUser does not pass the profile fields properly.
+	const [userFromDb, setUserFromDb] = useState(null)
+  
+	useEffect(() => {
+	  const getUser = async () => {
+		const user = await getDbUser(currentUser.id)
+		return setUserFromDb(user)
+	  }
+  
+	  getUser()
+	}, [currentUser.id])
+
 
     const { setSnackbar } = useSnackbar()
 	
@@ -61,7 +75,7 @@ const CharacterChoice = () => {
 					<div className="App">
 						{/* user profile section  */}
 						<Box className="profileBox" px={3} m={5}>
-							<PlayerProfile userInfo={currentUser}/>
+							<PlayerProfile userInfo={userFromDb}/>
 						</Box> 
 
 						{/* your personas section  */}
@@ -91,9 +105,9 @@ const CharacterChoice = () => {
 						<Paper>
 							<Typography variant="h5"> Discover more </Typography>
 							<Typography variant="subtitle2">
-								{" "}
+								
 								Complete chapters and outcomes of your personas to unlock more
-								personas{" "}
+								personas
 							</Typography>
 							<Grid container spacing={3}>
 								{characters.map((persona,i) => {

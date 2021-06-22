@@ -56,6 +56,7 @@ class Router extends Component {
             <InkController />
           </PrivateRoute>
 
+
           <Route path="/signup" exact>
             <SignUp />
           </Route>

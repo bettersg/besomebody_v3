@@ -1,10 +1,11 @@
 import React from 'react'
-import { Box, Button, Divider, Typography } from '@material-ui/core'
-import SwipeableTemporaryDrawer from "./SiderComponent/SiderComponent"
-import NextButton from "../../components/NextButton" 
-import "./styles.scss"
+import { Box } from '@material-ui/core'
+import SwipeableTemporaryDrawer from './SiderComponent/SiderComponent'
+import NextButton from '../../components/NextButton'
+import './styles.scss'
+import { useInkContext } from '../../contexts/InkContext'
 
-const InkControls = (props) => {
+const InkControls = () => {
   const {
     isStoryStarted,
     hasSavedState,
@@ -15,7 +16,7 @@ const InkControls = (props) => {
     saveStory,
     loadSavedStory,
     resetSavedStory,
-  } = props
+  } = useInkContext()
 
   /* 
   // Call the savestory function when there is a boolean flag in the ink story called saveStory
@@ -23,33 +24,25 @@ const InkControls = (props) => {
     saveStory()
   }
   */
-  
+
   return (
     <div className="story">
-
       {getStory && (
         <Box width="100%">
-          <div className="game-menu"><SwipeableTemporaryDrawer/></div>
+          <div className="game-menu">
+            <SwipeableTemporaryDrawer />
+          </div>
           {/* <NextButton getStory={getStory}/> */}
         </Box>
       )}
-      </div>
+    </div>
   )
 }
 
-
-
-
-
-      
-            
 export default InkControls
 
-
-
-
-
-{/*    
+{
+  /*    
       // I removed and commented these out as our story is unlikely to present these functions directly to the user. They should be triggered by events at the back-end, rather than presented on the front-end.
       {isStoryStarted && resetStory && (
         <Box my={2}>
@@ -104,4 +97,5 @@ export default InkControls
     </div>
   )
 }
-*/ }
+*/
+}

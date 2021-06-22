@@ -1,40 +1,42 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Box, Container, Typography } from '@material-ui/core'
-import useInk from '../../lib/Ink/useInk'
 import NotFoundPage from '../../components/NotFoundPage'
 import WhatsApp from '../WhatsappPage/Whatsapp'
 import Scene from '../ScenePage/Scene'
 import InkControls from './InkControls'
 import DefaultInk from '../DefaultInk'
 import Survey from '../SurveyPage/Survey'
-import { STORY_MAP } from '../../models/storyMap'
-import MultipleChoiceQuiz from '../MiniGames/MultipleChoice/MultipleChoiceQuiz'
-import SwipeQuiz from '../MiniGames/Swipe/SwipeQuiz'
+import { CHARACTER_MAP } from '../../models/storyMap'
+import { useInkContext } from '../../contexts/InkContext'
+import Narrator from '../NarratorPage/Narrator'
+
+import NadiaInk from '../../stories/nadid.ink.json'
+import AmanInk from '../../stories/aman_chapter1.ink.json'
+
 
 const getInkJson = (nameParam) => {
   switch (nameParam) {
-    case 'nadid': {
-      const nadidStory = STORY_MAP.find((story) => story.id === 1)
-      const nadidChapter1 = nadidStory.chapters.find(
-        (chapter) => chapter.id === 1
-      )
-      const json = nadidChapter1.inkJson
+    case 'nadid': 
+    case 'nadia': {
+      const nadidStory = CHARACTER_MAP.find((story) => story.id === 1)
+      // const nadidChapter1 = nadidStory.chapters.find(
+        // (chapter) => chapter.id === 1)
+      // const json = nadidStory.jsonFile
       return {
-        inkJson: json,
-        character: nadidStory.id,
-        chapter: nadidChapter1.id,
+        inkJson: NadiaInk,
+        characterId: 1,
+        chapterId: 1,
       }
     }
     case 'aman': {
-      const aman = STORY_MAP.find((story) => story.id === 2)
-      const amanChapter1 = aman.chapters.find((chapter) => chapter.id === 1)
-      const json = amanChapter1.inkJson
+      const aman = CHARACTER_MAP.find((story) => story.id === 2)
+      // const amanChapter1 = aman.chapters.find((chapter) => chapter.id === 1)
+      // const json = aman.jsonFile
       return {
-        inkJson: json,
-        character: aman.id,
-        chapter: amanChapter1.id,
+        inkJson: AmanInk,
+        characterId: 2,
+        chapterId: 1,
       }
     }
     default: {
@@ -43,127 +45,74 @@ const getInkJson = (nameParam) => {
   }
 }
 
-const getUi = ({
-  currentParagraphs, 
-  choices,
-  specialTags,
-  globalVariables,
-  setChoice,
-  getStory,
-}) => {
+const getUi = ({ currentParagraphs, specialTags }) => {
   switch (specialTags.ui) {
     case 'scene': {
-      return (
-        <Scene
-          currentParagraphs={currentParagraphs}
-          getStory={getStory}
-          choices={choices}
-          setChoice={setChoice}
-          specialTags={specialTags}
-          globalVariables={globalVariables}
-        />
-      )
+      return <Scene currentParagraphs={currentParagraphs} />
     }
     case 'whatsapp': {
-      return (
-        <WhatsApp
-          currentParagraphs={currentParagraphs}
-          getStory={getStory}
-          choices={choices}
-          setChoice={setChoice}
-          specialTags={specialTags}
-          globalVariables={globalVariables}
-        />
-      )
+      return <WhatsApp currentParagraphs={currentParagraphs} />
+    }
+    case 'narrator': {      
+      return <Narrator currentParagraphs={currentParagraphs} />
     }
     case 'survey': {
-      // TODO: update this component 
-      return (
-        <Survey getStory={getStory} currentParagraphs={currentParagraphs} />
-      )
+      // TODO: update this component
+      return <Survey currentParagraphs={currentParagraphs} />
     }
 
-    case 'mcq': {
-      // TODO: update this component 
-      return (
-        <MultipleChoiceQuiz 
-          specialTags={specialTags}
-          getStory={getStory}/>
-      )
-    }
-
-    case 'swipe': {
-      // TODO: update this component 
-      return (
-        <SwipeQuiz 
-          specialTags={specialTags}
-          getStory={getStory}
-        />
-      )
-    }
-      
-      // case reflection  - return a reflection component with argument for survey id from ink
-      // <Reflection getstory surveyid />
-
+    // case reflection  - return a reflection component with argument for survey id from ink
+    // <Reflection getstory surveyid />
 
     case 'school': {
       return (
         // to remove school from nadia's story
-        <Scene
-          currentParagraphs={currentParagraphs}
-          getStory={getStory}
-          choices={choices}
-          setChoice={setChoice}
-          specialTags={specialTags}
-          globalVariables={globalVariables}
-        />
+        <Scene currentParagraphs={currentParagraphs} />
       )
     }
     default:
-      return (
-        <DefaultInk
-          currentParagraphs={currentParagraphs}
-          getStory={getStory}
-          choices={choices}
-          setChoice={setChoice}
-          specialTags={specialTags}
-          globalVariables={globalVariables}
-        />
-      )
+      return <DefaultInk currentParagraphs={currentParagraphs} />
   }
 }
 
 const InkController = () => {
-  const { name } = useParams()
+  // ==============================================================
+  // Get name param from the route path
+  // ==============================================================
+  const { name  } = useParams()
 
-  const { inkJson, character, chapter } = getInkJson(name)
+  // // ==============================================================
+  // // Get the ink json file, character id, and chapter id
+  // // ==============================================================
+  // const { inkJson, characterId, chapterId } = getInkJson(name)
 
+  // ==============================================================
+  // Get the useInk hook initialiser from the context, and other variables if needed
+  // ==============================================================
   const {
-    // States
-    isStoryStarted,
-    paragraphs,
-    choices,
-    specialTags,
-    globalVariables,
-    currentKnot,
-    hasSavedState,
+    // useInk hook initialiser
+    // initialiseUseInkHook,
 
-    // Methods
-    getStory,
-    setChoice,
-    resetStory,
-    startStoryFrom,
-    saveStory,
-    loadSavedStory,
-    resetSavedStory,
-  } = useInk(inkJson, character, chapter)
+    // States
+    paragraphs,
+    specialTags,
+    currentKnot,    
+  } = useInkContext()
+
+
+  // // ==============================================================
+  // // Initialise the useInk hook within a useEffect to prevent multiple instances of initialising
+  // // ==============================================================
+  // useEffect(() => {
+  //   initialiseUseInkHook(inkJson, characterId, chapterId)
+  // }, [])
 
   // ==============================================================
   // Filter paragraphs based on current knot
   // ==============================================================
   const [currentParagraphs, setCurrentParagraphs] = useState([])
 
-  useEffect(() => {
+  useEffect(() => {    
     if (currentKnot || paragraphs[paragraphs.length - 1]?.currentKnot) {
       const nextParagraphs = paragraphs.filter((paragraph) => {
         return paragraph.currentKnot === currentKnot
@@ -175,6 +124,8 @@ const InkController = () => {
     // Run this useEffect whenever paragraphs or currentKnot get updated
   }, [paragraphs, currentKnot])
 
+
+  
   /*
   // ===========
   // EXAMPLE
@@ -188,38 +139,27 @@ const InkController = () => {
     // MOCK CONDITION: Trigger this useEffect everytime global variables or the ui key in special tags updates
   }, [globalVariables, specialTags?.ui])
   */
-
-  if (!inkJson) {
-    return <NotFoundPage />
-  }
+// later need to do validation at chapter_box to make sure this is captured
+  // if (!inkJson) {
+  //   return <NotFoundPage />
+  // }
 
   return (
     <Container maxWidth="lg" className="ink-controller">
-      <Box >
-        <Typography variant="overline" className="name">{name}</Typography>
+      <Box>
+        <Typography variant="overline" className="name">
+          {name}
+        </Typography>
       </Box>
-
-      {getUi({
+      
+      {        
+        getUi({
         currentParagraphs,
-        getStory, 
-        choices,
-        specialTags,
-        globalVariables,
-        setChoice,
-        getStory,
+        specialTags,        
       })}
 
       {/* Render event triggers */}
-      <InkControls
-        isStoryStarted={isStoryStarted}
-        hasSavedState={hasSavedState}
-        getStory={getStory}
-        resetStory={resetStory}
-        startStoryFrom={startStoryFrom}
-        saveStory={saveStory}
-        loadSavedStory={loadSavedStory}
-        resetSavedStory={resetSavedStory}
-      />
+      <InkControls />
     </Container>
   )
 }

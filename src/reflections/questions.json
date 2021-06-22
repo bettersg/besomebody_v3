@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "type": "MULTI_CHOICE",
+    "body": "Which will you choose?",
+    "choices": [
+      {
+        "body": "The first one"
+      },
+      {
+        "body": "The second one"
+      },
+      {
+        "body": "The third one"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "type": "LIKERT_SCALE",
+    "body": "Which direction are you headed in?",
+    "leftChoice": {
+      "body": "I'm on the left!"
+    },
+    "rightChoice": {
+      "body": "I'm on the right!"
+    }
+  },
+  {
+    "id": 3,
+    "type": "OPEN",
+    "body": "What are your open-ended thoughts?"
+  }
+]
