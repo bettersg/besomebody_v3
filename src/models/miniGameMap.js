@@ -128,7 +128,7 @@ export const MINI_GAME_MAP = [
     },
   
     {
-      id: 2,
+      game_id: 2,
       ui: "swipe",
       questions: [
         {

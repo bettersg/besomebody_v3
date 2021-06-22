@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react';
-import data from './data/quiz-data.json';
 import QuestionPanel from './QuestionPanel';
 import './MultipleChoiceQuiz.css';
 import { useAuth } from '../../../contexts/AuthContext';
-import { createDbAnswers } from "../../../models/answerModel";
+import { createDbAnswers } from "../../../models/quizAnswerModel";
+import { useInkContext } from '../../../contexts/InkContext'
+import { MINI_GAME_MAP } from '../../../models/miniGameMap';
 
 export default function MultipleChoiceQuiz(props) {
 
-    const { getStory } = props
+    const { getStory, specialTags } = useInkContext();
+    const quiz = MINI_GAME_MAP.filter(x => x.game_id===parseInt(specialTags.game_id))[0];
     const { currentUser } = useAuth();
-
-    const [currentQuestion,setCurrentQuestion] = useState(data.questions[0])
+    const [currentQuestion,setCurrentQuestion] = useState(quiz.questions[0])
     const [currentQuestionNumber,setCurrentQuestionNumber] = useState(1)
     const [score,setScore] = useState(0)
     const [correctAnswered,setCorrectAnswered] = useState(0)
@@ -44,9 +45,9 @@ export default function MultipleChoiceQuiz(props) {
 
     const nextQuestion = () =>{
         let current = currentQuestionNumber+1;
-        if(current <= data.questions.length){
+        if(current <= quiz.questions.length){
             setCurrentQuestionNumber(current)
-            setCurrentQuestion(data.questions[current-1])
+            setCurrentQuestion(quiz.questions[current-1])
         }
     }
 
@@ -68,7 +69,7 @@ export default function MultipleChoiceQuiz(props) {
             <QuestionPanel 
                 question={currentQuestion}
                 nextQuestion={nextQuestion}
-                total={data.questions.length}
+                total={quiz.questions.length}
                 questionNo={currentQuestionNumber}
                 checkUserAnswer={checkUserAnswer}
                 score={score}

@@ -42,9 +42,9 @@ Barber: You sure ah, Singh? #speaker_right
 -> Aman_Chapter1_minigame
 
 === Aman_Chapter1_minigame ===
-#knot:minigame
-#ui:trueFalse
-#surveyid:17
+#knot:Aman_Chapter1_minigame
+#ui:mcq
+#game_id:1
     This is a test survey
 
 -> Aman_Chapter1_Haircut
@@ -73,12 +73,12 @@ Barber: ok here we go *snip snip*  #speaker_right
 
 Aman is in the public restroom after cutting his hair. Staring at his new reflection in the mirror. He takes out his phone to take a photo of himself and sends it to the Whatsapp family group. The image is quickly blue-ticked (everyone has seen it) but nobody replies. Aman puts the phone back into pocket and walks out, shoulders slumped. #speaker_self
 
--> Aman_Chapter1_MCQ
+-> Aman_Chapter2_minigame
 
-=== Aman_Chapter1_MCQ ===
-#knot:mcq
-#ui:multipleChoice
-#surveyid:17
+=== Aman_Chapter2_minigame ===
+#knot:Aman_Chapter2_minigame
+#ui:swipe
+#game_id:2
     This is a test survey
     
 

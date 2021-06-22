@@ -3,8 +3,9 @@ import TinderCard from 'react-tinder-card'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import { Button, Box, Typography } from '@material-ui/core'
-import MINI_GAME_MAP from '../../../models/miniGameMap'
+import { MINI_GAME_MAP } from '../../../models/miniGameMap'
 import { makeStyles } from '@material-ui/styles'
+import { useInkContext } from '../../../contexts/InkContext'
 const useStyles = makeStyles({
 
   header: {
@@ -31,14 +32,12 @@ const useStyles = makeStyles({
 
 });
 
-const questions = quizData.questions.reverse()
-const alreadyRemoved = []
-let cardsState = questions // This fixes issues with updating characters state forcing it to use the current state and not the state that was active when the card was created.
-
-function TrueFalseQuiz (props) {
-  const questions = quizData.questions.reverse()
-  const {getStory} = props
-
+function SwipeQuiz () {
+  const { getStory, specialTags } = useInkContext();
+  const quiz = MINI_GAME_MAP.filter(x => x.game_id===parseInt(specialTags.game_id))[0];
+  const questions = quiz.questions;
+  const alreadyRemoved = [];
+  let cardsState = questions; // This fixes issues with updating characters state forcing it to use the current state and not the state that was active when the card was created.
   const classes = useStyles();
 
   const [cards, setCards] = useState([])
@@ -48,27 +47,26 @@ function TrueFalseQuiz (props) {
     setCards(questions)
   },[])
 
-
   const childRefs = useMemo(() => Array(questions.length).fill(0).map(i => React.createRef()), [])
 
   const swiped = (direction, cardToDelete) => {
-    console.log('removing: ' + cardToDelete)
     setLastDirection(direction)
     alreadyRemoved.push(cardToDelete)
   }
 
-  const outOfFrame = (card) => {
-    cardsState = cardsState.filter(card => card.question !== card)
+  const outOfFrame = (correctAnswer) => {
+    cardsState = cardsState.filter(card => card.correctAnswer !== correctAnswer)
     setCards(cardsState)
   }
 
   const continueToStory = () => {
     getStory();
-}
+  }
 
   const swipe = (dir) => {
     const cardsLeft = cards.filter(card => !alreadyRemoved.includes(card.question))
     if (cardsLeft.length) {
+      
       const toBeRemoved = cardsLeft[cardsLeft.length - 1].question // Find the card object to be removed
       const index = questions.map(card => card.question).indexOf(toBeRemoved) // Find the index of which to make the reference to
       alreadyRemoved.push(toBeRemoved) // Make sure the next card gets removed next time if this card do not have time to exit the screen
@@ -94,7 +92,7 @@ function TrueFalseQuiz (props) {
             >
                <TinderCard 
               position="absolute"
-                ref={childRefs[index]} className='swipe' onSwipe={(dir) => swiped(dir, card.question)} onCardLeftScreen={() => outOfFrame(card.question)}>
+                ref={childRefs[index]} className='swipe' onSwipe={(dir) => swiped(dir, card.correctAnswer)} onCardLeftScreen={() => outOfFrame(card.correctAnswer)}>
                 <Card className={classes.card} variant="outlined">
                   <CardContent >
                   <h3>ANSWER: {card.correctAnswer}</h3>
@@ -104,7 +102,7 @@ function TrueFalseQuiz (props) {
               </TinderCard>
               <TinderCard 
               position="absolute"
-                ref={childRefs[index]} className='swipe' onSwipe={(dir) => swiped(dir, card.question)} onCardLeftScreen={() => outOfFrame(card.question)}>
+                ref={childRefs[index]} className='swipe' onSwipe={(dir) => swiped(dir, card.question)} >
                 <Card className={classes.card} variant="outlined">
                   <CardContent >
                   <h3>QUESTION {index+1}</h3>
@@ -136,4 +134,4 @@ function TrueFalseQuiz (props) {
   )
 }
 
-export default TrueFalseQuiz;
+export default SwipeQuiz;
