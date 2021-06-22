@@ -25,7 +25,6 @@ const CharacterChoice = () => {
 	
     // Auth Context
 	const { currentUser } = useAuth()
-	// TODO : fix the userInfo. firebase currentUser does not pass the profile fields properly.
 	const [userFromDb, setUserFromDb] = useState(null)
   
 	useEffect(() => {

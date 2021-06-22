@@ -58,7 +58,7 @@ export default function PlayerProfile(props) {
                 <Typography variant="subtitle2">My demographics:  {userInfo?.race}  </Typography>
             </Grid>
            </div>
-           <Grid container spacing={3}>
+           {/* <Grid container spacing={3}>
             <Grid item xs={4} style={{align:"center"}}>
               <Typography>3</Typography> 
               <Typography>Persona</Typography>
@@ -71,7 +71,7 @@ export default function PlayerProfile(props) {
               <Typography>8</Typography>  
               <Typography>Chapters</Typography>             
             </Grid>
-           </Grid>
+           </Grid> */}
            </Box>
           </Paper>
         </div>
