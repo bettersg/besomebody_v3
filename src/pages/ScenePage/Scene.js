@@ -16,14 +16,14 @@ const useStyles = makeStyles((theme) => ({
     height: '640px',
     bottom: 0, 
   },
-  textWrapper: {
-    background: theme.palette.grey[100],
-    opacity: 0.9,
-    position: 'relative',
-    top: '350px',
-    height: '150px',
-    scrollSnapType: 'y mandatory',
-  },
+  // textWrapper: {
+  //   background: theme.palette.grey[100],
+  //   opacity: 0.9,
+  //   position: 'relative',
+  //   top: '350px',
+  //   height: '150px',
+  //   scrollSnapType: 'y mandatory',
+  // },
   choiceWrapper: {
     position: 'relative',
     opacity: 0.8,    
@@ -57,21 +57,20 @@ const Scene = (props) => {
    
   const step = currentParagraphs[currentParagraphs.length - 1]
   // if step includes speaker left/right, set name here  
-  const speakerimg = "/images/test-man-talking.png"
+  const amanimg = "/images/test/avatar.png"
+  const otherimg = "/images/test/waiter.png"
 
   return (
     <Fade in>
       <div className="ScenePage">
         <div className="ScenePage__speaker">
-          {step.tags[0] === 'speaker_left' || 'speaker_self' ? <img src={speakerimg} className="ScenePage__speaker--left"/> : null}
-          {step.tags[0] === 'speaker_right' ? <img src={speakerimg} className="ScenePage__speaker--right"/> : null}
+          {step.tags[0] === 'speaker_left' || 'speaker_self' ? <img src={amanimg} className="ScenePage__speaker--left"/> : null}
+          {step.tags[0] === 'speaker_right' ? <img src={otherimg} className="ScenePage__speaker--right"/> : null}
           
         </div>
       <Box className={classes.paragraphWrapper}  height="100%">
-        <Box
-          className={classes.textWrapper}
-          p={1}
-          height={300}
+        <div
+          className={`ScenePage__textWrapper ${step.tags[0]==='inner_monologue'?"innerMonologue":"default"}`}
           overflow="scroll"
           >
             {step && (
@@ -90,19 +89,14 @@ const Scene = (props) => {
             }            
 
           <div ref={elementRef} />
-        </Box>
         {/* this if else is needed to toggle between "Next Button" and choices (if any) */}
         {choices.length > 0 ? 
-          <div  className={classes.choiceWrapper} >            
+          <div  className="ScenePage__choicesWrapper" >            
             {choices.map((choice) => (
               
               <Box
-                  mx={1}
                   key={choice.text}
-                  display="flex"
-                  justifyContent="center"
-                  my={1}
-                
+                  className="ScenePage__choicesWrapper__choices"
                 >
                   <Fade in={choice.text}>
                     <Button
@@ -118,9 +112,10 @@ const Scene = (props) => {
             ))}
           </div>
           : 
-          <NextButton getStory={getStory}/>
+          <NextButton getStory={getStory} />
 
         }
+        </div>
       </Box>
       
       </div>
