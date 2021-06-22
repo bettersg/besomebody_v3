@@ -3,7 +3,7 @@ import TinderCard from 'react-tinder-card'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import { Button, Box, Typography } from '@material-ui/core'
-import quizData from './data/quiz-data.json'
+import MINI_GAME_MAP from '../../../models/miniGameMap'
 import { makeStyles } from '@material-ui/styles'
 const useStyles = makeStyles({
 
@@ -36,7 +36,7 @@ const alreadyRemoved = []
 let cardsState = questions // This fixes issues with updating characters state forcing it to use the current state and not the state that was active when the card was created.
 
 function TrueFalseQuiz (props) {
-
+  const questions = quizData.questions.reverse()
   const {getStory} = props
 
   const classes = useStyles();

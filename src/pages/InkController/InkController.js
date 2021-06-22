@@ -11,7 +11,7 @@ import DefaultInk from '../DefaultInk'
 import Survey from '../SurveyPage/Survey'
 import { STORY_MAP } from '../../models/storyMap'
 import MultipleChoiceQuiz from '../MiniGames/MultipleChoice/MultipleChoiceQuiz'
-import TrueFalseQuiz from '../MiniGames/TrueFalse/TrueFalseQuiz'
+import SwipeQuiz from '../MiniGames/Swipe/SwipeQuiz'
 
 const getInkJson = (nameParam) => {
   switch (nameParam) {
@@ -83,17 +83,22 @@ const getUi = ({
       )
     }
 
-    case 'multipleChoice': {
+    case 'mcq': {
       // TODO: update this component 
       return (
-        <MultipleChoiceQuiz getStory={getStory}/>
+        <MultipleChoiceQuiz 
+          specialTags={specialTags}
+          getStory={getStory}/>
       )
     }
 
-    case 'trueFalse': {
+    case 'swipe': {
       // TODO: update this component 
       return (
-        <TrueFalseQuiz getStory={getStory}/>
+        <SwipeQuiz 
+          specialTags={specialTags}
+          getStory={getStory}
+        />
       )
     }
       
