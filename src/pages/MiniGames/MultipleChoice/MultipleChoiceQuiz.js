@@ -22,18 +22,21 @@ export default function MultipleChoiceQuiz(props) {
     },[])
 
     const saveUserAnswer = (userAns) => {
+        console.log(userAns);
         setUserAnswers([...userAnswers, {
-            id: currentQuestion.answers.map(x => x.title).indexOf(userAns),
-            title: userAns
+            answerId: currentQuestion.answers.filter(x => x.title)[0].answer_id,
+            questionId: currentQuestion.question_id,
         }])
     }
 
     const continueToStory = async () => {
         const answerDocs = {
             userId: currentUser.id,
+            gameId: quiz.game_id,
             answers: userAnswers,
             createdAt: new Date(),
         }
+        console.log(answerDocs);
         try {
             await createDbAnswers(answerDocs);
         } catch (err) {

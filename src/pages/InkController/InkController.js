@@ -64,7 +64,7 @@ const getUi = ({ currentParagraphs, specialTags }) => {
     }
 
     case 'mcq': {
-      return <MultipleChoiceQuiz currentParagraphs={currentParagraphs} />
+      return <MultipleChoiceQuiz quizId={specialTags.game_id}/>
     }
 
     case 'swipe': {
