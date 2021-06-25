@@ -16,11 +16,11 @@ import AmanInk from '../../stories/aman_chapter1.ink.json'
 
 const getInkJson = (nameParam) => {
   switch (nameParam) {
-    case 'nadid': 
+    case 'nadid':
     case 'nadia': {
       const nadidStory = CHARACTER_MAP.find((story) => story.id === 1)
       // const nadidChapter1 = nadidStory.chapters.find(
-        // (chapter) => chapter.id === 1)
+      // (chapter) => chapter.id === 1)
       // const json = nadidStory.jsonFile
       return {
         inkJson: NadiaInk,
@@ -52,7 +52,7 @@ const getUi = ({ currentParagraphs, specialTags }) => {
     case 'whatsapp': {
       return <WhatsApp currentParagraphs={currentParagraphs} />
     }
-    case 'narrator': {      
+    case 'narrator': {
       return <Narrator currentParagraphs={currentParagraphs} />
     }
     case 'survey': {
@@ -75,43 +75,23 @@ const getUi = ({ currentParagraphs, specialTags }) => {
 }
 
 const InkController = () => {
-  // ==============================================================
-  // Get name param from the route path
-  // ==============================================================
-  const { name  } = useParams()
-
-  // // ==============================================================
-  // // Get the ink json file, character id, and chapter id
-  // // ==============================================================
-  // const { inkJson, characterId, chapterId } = getInkJson(name)
-
-  // ==============================================================
-  // Get the useInk hook initialiser from the context, and other variables if needed
-  // ==============================================================
+  const { name } = useParams()
   const {
-    // useInk hook initialiser
-    // initialiseUseInkHook,
-
     // States
     paragraphs,
     specialTags,
-    currentKnot,    
+    currentKnot,
+
+    // Methods
+    saveStory,
   } = useInkContext()
-
-
-  // // ==============================================================
-  // // Initialise the useInk hook within a useEffect to prevent multiple instances of initialising
-  // // ==============================================================
-  // useEffect(() => {
-  //   initialiseUseInkHook(inkJson, characterId, chapterId)
-  // }, [])
 
   // ==============================================================
   // Filter paragraphs based on current knot
   // ==============================================================
   const [currentParagraphs, setCurrentParagraphs] = useState([])
 
-  useEffect(() => {    
+  useEffect(() => {
     if (currentKnot || paragraphs[paragraphs.length - 1]?.currentKnot) {
       const nextParagraphs = paragraphs.filter((paragraph) => {
         return paragraph.currentKnot === currentKnot
@@ -123,8 +103,18 @@ const InkController = () => {
     // Run this useEffect whenever paragraphs or currentKnot get updated
   }, [paragraphs, currentKnot])
 
+  // ==============================================================
+  // Save data when a knot change is detected
+  // ==============================================================
+  const [knot, setKnot] = useState(null)
 
-  
+  useEffect(() => {
+    if (currentKnot) setKnot(currentKnot)
+    if (knot !== currentKnot) saveStory()
+
+    // Run this useEffect whenever currentKnot gets updated
+  }, [currentKnot])
+
   /*
   // ===========
   // EXAMPLE
@@ -138,10 +128,6 @@ const InkController = () => {
     // MOCK CONDITION: Trigger this useEffect everytime global variables or the ui key in special tags updates
   }, [globalVariables, specialTags?.ui])
   */
-// later need to do validation at chapter_box to make sure this is captured
-  // if (!inkJson) {
-  //   return <NotFoundPage />
-  // }
 
   return (
     <Container maxWidth="lg" className="ink-controller">
@@ -150,11 +136,10 @@ const InkController = () => {
           {name}
         </Typography>
       </Box>
-      
-      {        
-        getUi({
+
+      {getUi({
         currentParagraphs,
-        specialTags,        
+        specialTags,
       })}
 
       {/* Render event triggers */}
