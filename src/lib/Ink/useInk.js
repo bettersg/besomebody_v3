@@ -50,17 +50,24 @@ const useInk = (json, character, chapter) => {
       }
     }
 
-    getSaveStates()
-  }, [])
+    // Reject activation of useInk if user is not logged in
+    if (currentUser) getSaveStates()
+  }, [currentUser])
+
+  // Reject activation of useInk if user is not logged in
+  if (!currentUser) return
 
   /**
    * To update special tags with:
    * - The content before the first colon in the tag as the key
    * - The content after the first colon in the tag as as the value
    * @param {Array<string>} tags
+   * @param {boolean} sameKnot
    */
-  const handleUpdateSpecialTags = (tags) => {
-    const nextSpecialTags = { ...specialTags }
+  const handleUpdateSpecialTags = (tags, sameKnot) => {
+    // If current step is within the same knot, accumulate the specialTags
+    // If not, reset the specialTags
+    const nextSpecialTags = sameKnot ? { ...specialTags } : {}
     tags.map((tag) => {
       const key = tag.substr(0, tag.indexOf(':'))
       const value = tag.substr(tag.indexOf(':') + 1)
@@ -75,8 +82,8 @@ const useInk = (json, character, chapter) => {
    * To fetch next sequence in story
    * - Set storyStarted to true if it is false
    * - Update globalVariables if there are global variables
-   * - Update specialTags if there are special tags
    * - Update currentKnot if chapter is retrieved
+   * - Update specialTags if there are special tags
    * - Update either choices or paragraphs state
    */
   const handleGetStory = async () => {
@@ -93,13 +100,15 @@ const useInk = (json, character, chapter) => {
     const currentGlobalVariables = inkStory.getGlobalVariables()
     if (currentGlobalVariables) setGlobalVariables(currentGlobalVariables)
 
-    // Update specialTags if there are special tags
-    const nextSpecialTags = nextStep.tags.filter((tag) => tag.includes(':'))
-    if (nextSpecialTags.length) handleUpdateSpecialTags(nextSpecialTags)
-
     // Update currentKnot if chapter is retrieved
     const nextCurrentKnot = nextStep.currentKnot
     if (nextCurrentKnot) setCurrentKnot(nextCurrentKnot)
+
+    // Update specialTags if there are special tags
+    const nextSpecialTags = nextStep.tags.filter((tag) => tag.includes(':'))
+    if (nextSpecialTags.length) {
+      handleUpdateSpecialTags(nextSpecialTags, nextCurrentKnot === currentKnot)
+    }
 
     // Update paragraphs
     const normalTags = nextStep.tags.filter((tag) => !tag.includes(':'))
