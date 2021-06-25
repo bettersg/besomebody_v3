@@ -43,7 +43,7 @@ VAR aman_mood = 10
 #background:aman_1_intro.jpg
 #music:aman_intro.mp3
 Aman Singh #Title
-Sat Sri Akaal! I am Aman Singh. 
+Sat Sri Akaal! I am Aman Singh Hello. 
 As a Sikh, I keep my turban and beard, and wear the steel bangle, or kara. 
 Those are usually the first things people notice about me. But there’s a lot more to me than that.
 I’ve recently completed my diploma in accountancy, and NS is just around the corner. That’s going to be ‘fun’...
@@ -57,6 +57,15 @@ Zhihao’s great! But he can also be... a lot, sometimes. You’ll see.
 So that’s me -- Aman. 
 And this is what it’s like, to be me.
 CHAPTER 1 #title
+
+-> Aman_Chapter2_minigame
+
+=== Aman_Chapter2_minigame ===
+#knot:Aman_Chapter2_minigame
+#ui:swipe
+#game_id:2
+Minigame
+
 
 -> aman_1_1_narration 
 
@@ -108,6 +117,14 @@ Anyway that kid cut hair since secondary school what. So no problem la. #speaker
 His parents are different. Anyway, focus la! We still have to deliver all of these bags to the rental block. #speaker_self
 Ok, but you go and think about it la. I really think you should just cut. Don’t make things harder for yourself.  #speaker_left
 
+-> Aman_Chapter1_minigame
+
+=== Aman_Chapter1_minigame ===
+#knot:Aman_Chapter1_minigame
+#ui:mcq
+#game_id:1
+Minigame
+
 -> aman_1_2_narration
 
 
@@ -152,6 +169,7 @@ Now, will you please take the airpods, and leave me alone? #speaker_self
 #speaker_right_image:jothi_sad.png
 (Sighs.) Aman, I... #speaker_right
 ... I ...  #speaker_right
+
 
 
 -> aman_1_3_narration

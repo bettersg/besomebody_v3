@@ -7,12 +7,15 @@ import Scene from '../ScenePage/Scene'
 import InkControls from './InkControls'
 import DefaultInk from '../DefaultInk'
 import Survey from '../SurveyPage/Survey'
+import MultipleChoiceQuiz from '../MiniGames/MultipleChoice/MultipleChoiceQuiz'
+import SwipeQuiz from '../MiniGames/Swipe/SwipeQuiz'
 import { CHARACTER_MAP } from '../../models/storyMap'
 import { useInkContext } from '../../contexts/InkContext'
 import Narrator from '../NarratorPage/Narrator'
 
 import NadiaInk from '../../stories/nadid.ink.json'
 import AmanInk from '../../stories/aman_chapter1.ink.json'
+
 
 const getInkJson = (nameParam) => {
   switch (nameParam) {
@@ -58,6 +61,14 @@ const getUi = ({ currentParagraphs, specialTags }) => {
     case 'survey': {
       // TODO: update this component
       return <Survey currentParagraphs={currentParagraphs} />
+    }
+
+    case 'mcq': {
+      return <MultipleChoiceQuiz quizId={specialTags.game_id}/>
+    }
+
+    case 'swipe': {
+      return <SwipeQuiz currentParagraphs={currentParagraphs} />
     }
 
     // case reflection  - return a reflection component with argument for survey id from ink
