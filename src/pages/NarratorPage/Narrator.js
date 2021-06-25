@@ -53,7 +53,8 @@ const Narrator = (props) => {
   }
    
   const step = currentParagraphs[currentParagraphs.length - 1]
-  
+  console.log(step)
+
   return (
     <Fade in>
       <div>
@@ -69,7 +70,11 @@ const Narrator = (props) => {
             { step && (
               <Box my={1} key={step.text} style={{ scrollSnapAlign: 'start' }}>
                 <Fade in={step.text}>
-                  <Typography>{step.text}</Typography>
+                  { step.tags[0] === 'title' ? 
+                    <Typography variant="h5" align="center">{step.text.toUpperCase()}</Typography> :
+                    <Typography>{step.text}</Typography>
+                  } 
+                  
                 </Fade>
               </Box>
               )

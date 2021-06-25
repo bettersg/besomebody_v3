@@ -63,7 +63,7 @@ const Scene = (props) => {
     <Fade in>
       <div className="ScenePage">
         <div className="ScenePage__speaker">
-          {step.tags[0] === 'speaker_left' || 'speaker_self' ? <img src={speakerimg} className="ScenePage__speaker--left"/> : null}
+          {step.tags[0] === 'speaker_left' ? <img src={speakerimg} className="ScenePage__speaker--left"/> : null}
           {step.tags[0] === 'speaker_right' ? <img src={speakerimg} className="ScenePage__speaker--right"/> : null}
           
         </div>

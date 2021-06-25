@@ -22,6 +22,7 @@ chapters []
   endings []
     endingId
     name
+    inkVar
  
 */
 
@@ -51,17 +52,17 @@ export const CHARACTER_MAP = [
           {
             endingId: 1,
             title: "Break Up",
-            knotTag: "nadia_chapter1_ending_1",
+            inkVar: "nadia_chapter1_ending_1",
           },
           {
             endingId: 2,
             title: "One Step at a Time",
-            knotTag: "nadia_chapter1_ending_2",
+            inkVar: "nadia_chapter1_ending_2",
           },
           {
             endingId: 3,
             title: "Stay Together",
-            knotTag: "nadia_chapter1_ending_3",
+            inkVar: "nadia_chapter1_ending_3",
           },
         ]
       },
@@ -76,12 +77,12 @@ export const CHARACTER_MAP = [
           {
             endingId: 1,
             title: "Scold Him",
-            knotTag: "nadia_chapter2_ending_1",
+            inkVar: "nadia_chapter2_ending_1",
           },
           {
             endingId: 2,
             title: "Walk Away",
-            knotTag: "nadia_chapter2_ending_2",
+            inkVar: "nadia_chapter2_ending_2",
           },
         ]
       },
@@ -96,12 +97,12 @@ export const CHARACTER_MAP = [
           {
             endingId: 1,
             title: "Public",
-            knotTag: "nadia_chapter3_ending_1",
+            inkVar: "nadia_chapter3_ending_1",
           },
           {
             endingId: 2,
             title: "Private",
-            knotTag: "nadia_chapter3_ending_2",
+            inkVar: "nadia_chapter3_ending_2",
           },
         ]
       },
@@ -124,65 +125,55 @@ export const CHARACTER_MAP = [
       {
         chapterId: 1,
         number: 1,
-        title: "Model Sikh",
+        title: "Duty Calls",
         knotTag: "aman_1_intro",
-        summary: "Aman gets a modelling offer, but only if he trims his beard.",
-        playable: true,
-        endings: [
-          {
-            endingId: 1,
-            title: "Trim Beard",
-            knotTag: "aman_chapter1_ending_1",
-          },
-          {
-            endingId: 2,
-            title: "Complain Online",
-            knotTag: "aman_chapter1_ending_2",
-          },
-          {
-            endingId: 3,
-            title: "Walk Away",
-            knotTag: "aman_chapter1_ending_3",
-          },
-        ]
-      },
-      {
-        chapterId: 2,
-        number: 2,
-        title: "The Barber",
-        knotTag: "aman_1_3",
-        summary: "Zhi Hao suggests Aman cut his hair for NS - should he?",
+        summary: "Aman prepares to enlist in National Service. Will he go in as he is, or take a big step to blend in?",
         playable: true,
         endings: [
           {
             endingId: 1,
             title: "Cut Hair",
-            knotTag: "aman_chapter2_ending_1",
+            inkVar: "aman_1_ending_1",
           },
           {
             endingId: 2,
             title: "Keep Hair",
-            knotTag: "aman_chapter2_ending_2",
+            inkVar: "aman_1_ending_2",
+          }, 
+        ]
+      },
+      {
+        chapterId: 2,
+        number: 2,
+        title: "To Be or Not To Be",
+        knotTag: "aman_2_intro",
+        summary: "Aman tries to crack the silver screen - but it’s even harder than he imagined.",
+        playable: true,
+        endings: [
+          {
+            endingId: 1,
+            title: "Movie Role",
+            inkVar: "aman_chapter2_ending_1",
           },
         ]
       },
       {
         chapterId: 3,
         number: 3,
-        title: "Study or Sonya",
-        knotTag: "aman_1_6_narration",
-        summary: "Aman wants to go overseas for uni, but his girlfriend Sonya is staying in Singapore.",
+        title: "Fight or Flight",
+        knotTag: "aman_2_6_narration",
+        summary: "All Aman wants is to celebrate with friends. Why does everything have to be so difficult?",
         playable: true,
         endings: [
           {
             endingId: 1,
             title: "Stay",
-            knotTag: "aman_chapter3_ending_1",
+            inkVar: "aman_chapter3_ending_1",
           },
           {
             endingId: 2,
             title: "Leave",
-            knotTag: "aman_chapter3_ending_2",
+            inkVar: "aman_chapter3_ending_2",
           },
         ]
       },
@@ -192,17 +183,17 @@ export const CHARACTER_MAP = [
         title: "Outfield",
         knotTag: "aman_1_10_narration",
         summary: "Aman wants to go overseas for uni, but his girlfriend Sonya is staying in Singapore.",
-        playable: true,
+        playable: false,
         endings: [
           {
             endingId: 1,
             title: "Stay",
-            knotTag: "aman_chapter3_ending_1",
+            inkVar: "aman_chapter3_ending_1",
           },
           {
             endingId: 2,
             title: "Leave",
-            knotTag: "aman_chapter3_ending_2",
+            inkVar: "aman_chapter3_ending_2",
           },
         ]
       },
