@@ -5,6 +5,7 @@ import NextButton from "../../components/NextButton"
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import { useInkContext } from '../../contexts/InkContext'
 import { useParams } from 'react-router-dom'
+import "./style.scss"
 
 
 const useStyles = makeStyles((theme) => ({
@@ -35,7 +36,7 @@ const Scene = (props) => {
   const { getStory, choices, setChoice, specialTags } = useInkContext()
   const classes = useStyles({ image: specialTags.background })
   const { name } = useParams()
-
+  
   // ========================================================
   // Help to scroll to bottom of the paragraphs render screen
   // ========================================================
@@ -56,11 +57,16 @@ const Scene = (props) => {
    
   const step = currentParagraphs[currentParagraphs.length - 1]
   // if step includes speaker left/right, set name here  
+  const speakerimg = "/images/test-man-talking.png"
 
   return (
     <Fade in>
-      <div>
-
+      <div className="ScenePage">
+        <div className="ScenePage__speaker">
+          {step.tags[0] === 'speaker_left' ? <img src={speakerimg} className="ScenePage__speaker--left"/> : null}
+          {step.tags[0] === 'speaker_right' ? <img src={speakerimg} className="ScenePage__speaker--right"/> : null}
+          
+        </div>
       <Box className={classes.paragraphWrapper}  height="100%">
         <Box
           className={classes.textWrapper}
