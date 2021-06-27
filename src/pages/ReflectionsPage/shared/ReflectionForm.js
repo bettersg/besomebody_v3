@@ -4,11 +4,10 @@ import { useSnackbar } from '../../../contexts/SnackbarContext';
 import { makeStyles } from '@material-ui/core/styles';
 import Question from './Question';
 import produce from "immer";
-import { createDbAnswers } from "../../../models/answerModel";
+import { createDbReflectionResponses } from "../../../models/reflectionResponseModel";
 
 import QUESTIONS from "../../../reflections/questions.json";
 import { useAuth } from '../../../contexts/AuthContext';
-import { firestore } from '../../../firebase';
 
 const useStyles = makeStyles({
   container: {
@@ -58,7 +57,7 @@ const ReflectionForm = ({ reflection }) => {
     });
     try {
       setIsLoading(true);
-      await createDbAnswers(answerDocs);
+      await createDbReflectionResponses(answerDocs);
     } catch (err) {
       setSnackbar({
         message: "Failed to submit!",
