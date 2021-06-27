@@ -1,4 +1,5 @@
 import { firestore } from '../firebase'
+import { getDbUser } from './userModel';
 
 export const createDbReflectionResponses = async (responses) => {
   try {
@@ -13,6 +14,14 @@ export const createDbReflectionResponses = async (responses) => {
   }
 }
 
+const populateDbUserOnReflectionResponse = async (reflectionResponse) => {
+  const user = await getDbUser(reflectionResponse.userId);
+  return {
+    ...reflectionResponse,
+    user,
+  }
+}
+
 export const getDbReflectionResponses = async ({
   reflectionId,
   questionId,
@@ -22,11 +31,24 @@ export const getDbReflectionResponses = async ({
       .where('reflectionId', '==', reflectionId)
       .where('questionId', '==', questionId)
       .get();
-    return snapshot.docs.map(doc => ({
+    const reflectionResponses = snapshot.docs.map(doc => ({
       ...doc.data(),
       id: doc.id,
     }));
+    return Promise.all(reflectionResponses.map(populateDbUserOnReflectionResponse))
   } catch (err) {
     throw new Error(`Error at getDbReflectionResponses: ${err}`)
   }
 };
+
+export const getDbReflectionResponse = async(id) => {
+  try {
+    const doc = await firestore.collection("reflectionResponses").doc(id).get();
+    return populateDbUserOnReflectionResponse({
+      ...doc,
+      id: doc.id,
+    });
+  } catch (err) {
+    throw new Error(`Error at getDbReflectionResponse: ${err}`);
+  }
+}
