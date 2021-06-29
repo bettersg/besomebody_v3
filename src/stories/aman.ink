@@ -27,6 +27,18 @@ For cut-and-paste ease
 #ui:email
 #to:Jeffrey Tan <jeffrey@hotmail.com>
 #subject:Job Application for Ravi
+
+
+FOR MINIGAMES:
+-> aman_2_minigame
+=== aman_2_minigame ===
+#knot:Aman_Chapter2_minigame
+#ui:swipe or mcq
+#game_id:2
+Minigame // must add some text
+-> aman_2_3 // point to next section of story
+
+
 */
 
 // DECLARE GLOBAL VARIABLES
@@ -246,6 +258,15 @@ You sure ah, boy. #speaker_right
 I look so different. 
 But this is the new me. 
 This is the start of a new chapter in my life.
+
+-> aman_1_minigame
+
+
+=== aman_1_minigame ===
+#knot:aman_1_minigame
+#ui:swipe
+#game_id:2
+Minigame 1 // must add some text
 
 -> aman_1_5 
 
