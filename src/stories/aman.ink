@@ -201,6 +201,16 @@ Sigh. Aman, I... #speaker_right
 #background:aman_bedroom.jpg
 One month later, Selinder and I are chatting.
 
+
+-> aman_1_minigame
+
+
+=== aman_1_minigame ===
+#knot:aman_1_minigame
+#ui:swipe
+#game_id:2
+Minigame 1 // must add some text
+
 -> aman_1_3
 
 
@@ -276,15 +286,6 @@ You sure ah, boy. #speaker_right
 I look so different. 
 But this is the new me. 
 This is the start of a new chapter in my life.
-
--> aman_1_minigame
-
-
-=== aman_1_minigame ===
-#knot:aman_1_minigame
-#ui:swipe
-#game_id:2
-Minigame 1 // must add some text
 
 -> aman_1_5 
 
