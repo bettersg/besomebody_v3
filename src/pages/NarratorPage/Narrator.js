@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     top: '400px',
   }
 }))
-
+ 
 const Narrator = (props) => {
   const { currentParagraphs } = props
   const { getStory, choices, setChoice, specialTags } = useInkContext()
