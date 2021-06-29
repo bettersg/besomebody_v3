@@ -1,0 +1,19 @@
+.message {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px !important;
+}
+.nextButton {
+  display: flex !important;
+  margin: 0 auto !important;
+  margin-top: 20px !important;
+}
+
+.nextButton:hover {
+  background: black !important;
+}
+.score-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}

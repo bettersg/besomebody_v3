@@ -36,7 +36,7 @@ const Scene = (props) => {
   const { getStory, choices, setChoice, specialTags } = useInkContext()
   const classes = useStyles({ image: specialTags.background })
   const { name } = useParams()
-
+  
   // ========================================================
   // Help to scroll to bottom of the paragraphs render screen
   // ========================================================

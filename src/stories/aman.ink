@@ -78,6 +78,15 @@ And this is what it’s like, to be me.
 CHAPTER 1 #title
 Duty Calls #title
 
+-> Aman_Chapter2_minigame
+
+=== Aman_Chapter2_minigame ===
+#knot:Aman_Chapter2_minigame
+#ui:swipe
+#game_id:2
+Minigame
+
+
 -> aman_1_1_narration 
 
 // START STORY
@@ -128,6 +137,14 @@ Anyway that kid cut hair since secondary school what. So no problem la. #speaker
 His parents are different. Anyway, focus la! We still have to deliver all of these bags to the rental block. #speaker_self
 Ok, but you go and think about it la. I really think you should just cut. Don’t make things harder for yourself.  #speaker_left
 
+-> Aman_Chapter1_minigame
+
+=== Aman_Chapter1_minigame ===
+#knot:Aman_Chapter1_minigame
+#ui:mcq
+#game_id:1
+Minigame
+
 -> aman_1_2_narration
 
 
@@ -172,6 +189,7 @@ Now, will you please take the airpods, and leave me alone? #speaker_self
 #speaker_right_image:jothi_sad.png
 Sigh. Aman, I... #speaker_right
 ... I ...  #speaker_right
+
 
 
 -> aman_1_3_narration
