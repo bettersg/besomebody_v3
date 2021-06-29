@@ -23,7 +23,7 @@ import {
 
 
   import "./style.scss"; 
-
+  import AudioPlayer from "../../music/Music"
 
   const EmailPage = (props) => {
     return (
@@ -41,7 +41,7 @@ import {
            
           </Grid>
           </div>
-          
+        <AudioPlayer/>  
         
         <Box border={1}>
         <div className="email-wrapper">

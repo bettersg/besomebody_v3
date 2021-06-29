@@ -14,6 +14,7 @@ import CharacterChoicePage from '../pages/CharacterChoicePage'
 import CharacterChapterPage from '../pages/CharacterChapterPage'
 import IntroPage from '../pages/IntroPage'
 import ProfileBuilderPage from '../pages/ProfileBuilderPage'
+import EmailPage from '../pages/EmailPage'
 
 class Router extends Component {
   render() {
@@ -72,6 +73,10 @@ class Router extends Component {
           <PrivateRoute path="/user/:userId">
             {user ? <UserPage /> : <Redirect to="/" />}
           </PrivateRoute>
+
+          <Route path="/email" exact>
+            <EmailPage />
+          </Route>
 
           <Route>
             <NotFoundPage />
