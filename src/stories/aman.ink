@@ -78,15 +78,6 @@ And this is what it’s like, to be me.
 CHAPTER 1 #title
 Duty Calls #title
 
--> Aman_Chapter2_minigame
-
-=== Aman_Chapter2_minigame ===
-#knot:Aman_Chapter2_minigame
-#ui:swipe
-#game_id:2
-Minigame
-
-
 -> aman_1_1_narration 
 
 // START STORY
