@@ -22,10 +22,6 @@ import { CHARACTER_MAP } from '../../models/storyMap'
 import NadiaInk from '../../stories/nadid.ink.json'
 import AmanInk from '../../stories/aman.ink.json'
 
-import WhatsApp from '../WhatsappPage/Whatsapp'
-import Scene from '../ScenePage/Scene'
-import DefaultInk from '../DefaultInk'
-import Survey from '../SurveyPage/Survey'
 
 
 import "./style.css"; 
@@ -111,33 +107,6 @@ export default function ChapterBox(props) {
         rows.push(<FiberManualRecordIcon style={{fontSize:8, color: "#E5E5E5", marginRight: 1}}/>);
     }
 
-
-    // const getUi = ({ currentParagraphs, specialTags }) => {
-    //     switch (specialTags.ui) {
-    //       case 'scene': {
-    //         return <Scene currentParagraphs={currentParagraphs} />
-    //       }
-    //       case 'whatsapp': {
-    //         return <WhatsApp currentParagraphs={currentParagraphs} />
-    //       }
-    //       case 'survey': {
-    //         // TODO: update this component
-    //         return <Survey currentParagraphs={currentParagraphs} />
-    //       }
-    
-    //       // case reflection  - return a reflection component with argument for survey id from ink
-    //       // <Reflection getstory surveyid />
-    
-    //       case 'school': {
-    //         return (
-    //           // to remove school from nadia's story
-    //           <Scene currentParagraphs={currentParagraphs} />
-    //         )
-    //       }
-    //       default:
-    //         return <DefaultInk currentParagraphs={currentParagraphs} />
-    //     }
-    //   }
 
     const handleChapterStart = () => {
         startStoryFrom(chaptDetails.knotTag);
