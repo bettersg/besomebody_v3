@@ -47,8 +47,8 @@ const LandingPage = () => {
       <section>
         <Container maxWidth="md">
           <Box py={8} textAlign="center">
-            <Typography variant="h3" component="h2" gutterBottom={true}>Be Somebody</Typography>
-            <Typography variant="h6" color="textSecondary" paragraph={true}>Introducing Singapore’s first interactive fiction game that challenges how we see race, religion, and background in others -- and ourselves.</Typography>
+            <Typography variant="h3" component="h2" gutterBottom={true}>To Be You</Typography>
+            <Typography variant="h6" color="textSecondary" paragraph={true}>This is the landing page for https://game.tobeyou.sg. Players who sign up on the pre-launch page will be given this link for them to start playing the game.</Typography>
           </Box>
           <Box mx="auto" width="75%" my={2}>
             <Link to="/intro"><Button variant="contained" fullWidth={true} color="primary"  >Start New Game</Button></Link>
@@ -57,7 +57,7 @@ const LandingPage = () => {
             <Link to="/login"><Button variant="contained" fullWidth={true} color="secondary" >Login to Resume Game</Button></Link>
             
           </Box>
-          More information about the game will go here. This is the landing page.
+          
         </Container>
       </section>
       

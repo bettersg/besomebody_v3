@@ -23,6 +23,12 @@ const Whatsapp = (props) => {
       })
     }
   }, [elementRef, currentParagraphs, choices])
+
+  // sound component to do the *ding*
+// import ding from "../music/ding.wav"
+  // import sound from "react-sound"
+// inside render will put <sound> object
+
   // TO DO: make whatsapp screen fit the screen and customise controls
   return (
     <Fade in>

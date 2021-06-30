@@ -68,7 +68,7 @@ const getUi = ({ currentParagraphs, specialTags }) => {
     }
 
     case 'swipe': {
-      return <SwipeQuiz currentParagraphs={currentParagraphs} />
+      return <SwipeQuiz  quizId={specialTags.game_id} />
     }
 
     // case reflection  - return a reflection component with argument for survey id from ink
