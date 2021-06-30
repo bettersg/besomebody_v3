@@ -14,7 +14,7 @@ export const getDbSavedStates = async (objId) => {
     const savedStates = await savedStatesRef.get()
 
     if (!savedStates.exists) {
-      return console.error(`No such saved state in Firestore: ${objId}`)
+      
     } else {
       return savedStates.data()
     }

@@ -17,7 +17,7 @@ import Grid from '@material-ui/core/Grid';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import { Link } from 'react-router-dom'
 import { useInkContext } from '../../contexts/InkContext'
-
+import { useAuth } from '../../contexts/AuthContext'
 import { CHARACTER_MAP } from '../../models/storyMap'
 import NadiaInk from '../../stories/nadid.ink.json'
 import AmanInk from '../../stories/aman.ink.json'
@@ -26,7 +26,7 @@ import WhatsApp from '../WhatsappPage/Whatsapp'
 import Scene from '../ScenePage/Scene'
 import DefaultInk from '../DefaultInk'
 import Survey from '../SurveyPage/Survey'
-
+import { getDbSavedStates } from '../../models/saveStateModel';
 
 import "./style.css"; 
 
@@ -68,19 +68,20 @@ const getInkJson = (nameParam) => {
 export default function ChapterBox(props) {
     const classes = useStyles();
     const { chaptDetails, total } = props
+    const [saveState,setSaveState] = useState(null);
+    const [isLoading,setIsLoading] = useState(true);
     const history = useHistory()
-
-
      // ==============================================================
     // Get name param from the route path
     // ==============================================================
     const { name } = useParams()
-
+    const { currentUser } = useAuth();
     // ==============================================================
     // Get the ink json file, character id, and chapter id
     // ==============================================================
-    const { inkJson, characterId, chapterId } = getInkJson(name)
-
+    const { inkJson, characterId } = getInkJson(name)
+    const chapterId = chaptDetails.chapterId;
+    const saveDataId = `${currentUser?.id}-${characterId}-${chapterId}`
     // ==============================================================
     // Get the useInk hook initialiser from the context, and other variables if needed
     // ==============================================================
@@ -95,14 +96,28 @@ export default function ChapterBox(props) {
         currentKnot,
         getStory,
         startStoryFrom,
-        
     } = useInkContext()
 
+    const getEndingsUnlocked = () => {
+        const propertyNames = Object.keys(saveState.globalVariables).filter(function (propertyName) {
+            return propertyName.indexOf( `${name}_${chapterId}_ending`) === 0;
+        });
+        return propertyNames;
+    }
+    
+    const getSaveStates = async () => {
+        const savedStateRes = await getDbSavedStates(saveDataId)
+        if (savedStateRes) {
+          setSaveState(savedStateRes)
+        }
+        setIsLoading(false)
+    }
     // ==============================================================
     // Initialise the useInk hook within a useEffect to prevent multiple instances of initialising
     // ==============================================================
     useEffect(() => {
-        initialiseUseInkHook(inkJson, characterId, chapterId)
+        initialiseUseInkHook(inkJson, characterId, chapterId);
+        if (currentUser) getSaveStates()
     }, [])
 
 
@@ -134,26 +149,29 @@ export default function ChapterBox(props) {
     //           <Scene currentParagraphs={currentParagraphs} />
     //         )
     //       }
-    //       default:
+//       default:
     //         return <DefaultInk currentParagraphs={currentParagraphs} />
     //     }
     //   }
 
     const handleChapterStart = () => {
+        initialiseUseInkHook(inkJson, characterId, chapterId);
         startStoryFrom(chaptDetails.knotTag);
         history.push("/story/" + name);
     }
-  
+
+
+   
     return (
+        
         <Card className={classes.root} key={chaptDetails.number}>
             <Grid container>
                 <Grid item xs={8}>
                     <CardContent> {/* TODO: this needs to be pulled from the player save data, not from the story*/}
-                        {chaptDetails.new == true ?
+                        {!isLoading&&saveState===null&&
                             <Typography variant="overline" className="newChapt">
                                 NEW
-                            </Typography> : 
-                            null
+                            </Typography> 
                         }
                         <span className="chaptText">Chapter {chaptDetails.number} of {total}</span>
 
@@ -164,7 +182,8 @@ export default function ChapterBox(props) {
                             {chaptDetails.summary}
                         </Typography>
                         {rows}
-                        <span className="chaptText" style={{marginLeft:"5px"}}>XXX of {chaptDetails.endings.length} endings unlocked</span>
+                        <span className="chaptText" style={{marginLeft:"5px"}}>
+                            {!isLoading&&saveState ? getEndingsUnlocked().length : 0} of {chaptDetails.endings.length} endings unlocked</span>
                     </CardContent>
                 </Grid>
                 <CardActions>

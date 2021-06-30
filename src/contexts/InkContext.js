@@ -9,6 +9,8 @@ export const useInkContext = () => {
 }
 
 export const InkProvider = ({ children }) => {
+
+
   const [useInkParams, setUseInkParams] = useState({
     inkJson: null,
     characterId: null,

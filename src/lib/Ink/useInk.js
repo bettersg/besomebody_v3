@@ -14,6 +14,8 @@ const useInk = (json, character, chapter) => {
   // Get current user info
   const { currentUser } = useAuth()
 
+  console.log(chapter);
+
   // Format a fixed saved data ID for firestore DB
   const saveDataId = `${currentUser?.id}-${character}-${chapter}`
 
@@ -164,8 +166,8 @@ const useInk = (json, character, chapter) => {
   const handleStartStoryFrom = (pathName) => {
     try {
       inkStory.startStoryFrom(pathName)
+      handleGetStory();
       setIsStoryStarted(true)
-      handleGetStory()
     } catch (err) {
       console.error(err)
     }
