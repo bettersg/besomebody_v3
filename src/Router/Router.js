@@ -57,6 +57,11 @@ class Router extends Component {
             <Login />
           </Route>
 
+          <Route path="/help" exact>
+            Help Screen
+          </Route>
+
+
           <Route path="/forget-password" exact>
             <ForgetPassword />
           </Route>

@@ -2,18 +2,20 @@ import React from "react";
 
 import PropTypes from "prop-types";
 
-import { Card, CardHeader } from "@material-ui/core";
+import { Paper } from "@material-ui/core";
 
 function UserCard(props) {
   const user = props.user;
 
   return (
-    <Card>
-      <CardHeader
-        title={`${user.firstName} ${user.lastName}`}
-        subheader={user.username}
-      />
-    </Card>
+    <Paper elevation={3} square={false} outlined>
+      <h1>{user.username}</h1>
+      Age: {user.age}<br />
+      Gender: {user.gender}<br />
+      Race: {user.race}<br />
+      Religion: {user.religion}<br />
+      Housing: {user.housing}<br />      
+    </Paper>
   );
 }
 

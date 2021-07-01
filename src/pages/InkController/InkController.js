@@ -142,11 +142,7 @@ const InkController = () => {
 
   return (
     <Container maxWidth="lg" className="ink-controller">
-      <Box>
-        <Typography variant="overline" className="name">
-          {name}
-        </Typography>
-      </Box>
+      
 
       {getUi({
         currentParagraphs,

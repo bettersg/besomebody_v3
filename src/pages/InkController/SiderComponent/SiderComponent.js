@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { useParams , Link } from 'react-router-dom'
+import { useParams , Link , useHistory } from 'react-router-dom'
 
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import { Avatar } from '@material-ui/core';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+
+import { useSnackbar } from '../../../contexts/SnackbarContext'
 
 import { useAuth } from '../../../contexts/AuthContext'
 import { getDbUser } from '../../../models/userModel.js';
@@ -24,7 +26,10 @@ const useStyles = makeStyles({
 
 export default function SwipeableTemporaryDrawer() {
   const classes = useStyles();
-  
+  const history = useHistory()
+  // Snackbar Context
+  const { setSnackbar } = useSnackbar()
+
   // for the side-nav swipeable drawer
   const [state, setState] = React.useState({
     left: false,    
@@ -60,6 +65,22 @@ export default function SwipeableTemporaryDrawer() {
     setExpanded(isExpanded ? panel : false);
   };
 
+  // for the Logout
+  const { logout } = useAuth()
+
+  const logoutUser = async () => {
+        try {          
+          await logout()
+          history.push('/')
+        } catch (err) {
+          setSnackbar({
+            message: `Failed to log out: ${err.message}`,
+            open: true,
+            type: 'error',
+          })
+        }       
+  }
+
 
   // the actual menu
   const list = (anchor) => (
@@ -73,8 +94,8 @@ export default function SwipeableTemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <div className="menu-username">
-      <Avatar alt={userFromDb?.username} src="/static/images/avatar/1.jpg" className="menu-avatar" />
-        {userFromDb?.username}
+      <Link to={"/user/"+userFromDb?.id}><Avatar alt={userFromDb?.username} src="/static/images/avatar/1.jpg" className="menu-avatar" />
+        {userFromDb?.username}</Link>
       </div>
       <div className="menu-description">
         <div>
@@ -93,15 +114,12 @@ export default function SwipeableTemporaryDrawer() {
         <Avatar alt="C" src="/" style={{marginRight:"15px"}}/>  <Link to={"/chapters/" + name}><span>Chapter Menu</span></Link>
       </div>
       <div className="menu-options">
-        <Avatar alt="H" src="/" style={{marginRight:"15px"}}/> <span>Help</span>
-      </div>
-      <div className="menu-options">
-        <Avatar alt="L" src="/" style={{marginRight:"15px"}}/> <span>Library</span>
+        <Avatar alt="H" src="/" style={{marginRight:"15px"}}/> <Link to={"/help" }><span>Help</span></Link>
       </div>
       <div className="menu-bottom">
         <hr/>
         <div className="menu-options">
-          <Avatar alt="A" src="/" style={{marginRight:"15px"}}/> <Link to={"/user/" + userFromDb?.id}><span>Account Settings</span></Link>
+          <Avatar alt="A" src="/" style={{marginRight:"15px"}}/> <Link onClick={logoutUser}><span>Sign Out</span></Link>
         </div>
       </div>
 

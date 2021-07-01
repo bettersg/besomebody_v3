@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link , useHistory } from "react-router-dom";
 
 import { Grid, Fab, Box } from "@material-ui/core";
 
@@ -31,6 +31,7 @@ function UserPage() {
   const [error, setError] = useState(null);
   const { userId } = useParams();
   const classes = useStyles();
+  const history = useHistory()
 
   useEffect(() => {
     return firestore
@@ -92,15 +93,17 @@ function UserPage() {
     );
   }
 
-  const hasProfile = user.firstName && user.lastName && user.username;
+  const hasProfile = user.email;
 
   if (hasProfile) {
     return (
-      <Grid className={classes.grid} container justify="center" spacing={5}>
-        <Grid item xs={4}>
-          <UserCard user={user} />
-        </Grid>
-      </Grid>
+      <>
+        <UserCard user={user} />
+        <br />
+        <Link to="/profilebuilder">Rebuild Your Profile</Link> <br />
+        <Link to="/">Back to Main Menu</Link> <br />
+        <Link onClick={() => history.goBack()}>Return to Game</Link>
+      </>       
     );
   }
 
