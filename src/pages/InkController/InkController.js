@@ -12,6 +12,7 @@ import SwipeQuiz from '../MiniGames/Swipe/SwipeQuiz'
 import { CHARACTER_MAP } from '../../models/storyMap'
 import { useInkContext } from '../../contexts/InkContext'
 import Narrator from '../NarratorPage/Narrator'
+import Reflection from '../ReflectionsPage/Reflection'
 
 import NadiaInk from '../../stories/nadid.ink.json'
 import AmanInk from '../../stories/aman_chapter1.ink.json'
@@ -61,6 +62,11 @@ const getUi = ({ currentParagraphs, specialTags }) => {
     case 'survey': {
       // TODO: update this component
       return <Survey currentParagraphs={currentParagraphs} />
+    }
+      
+    case 'chapter_reflection': {
+      // TODO: update this component
+      return <Reflection reflectionId={specialTags.reflection_id} />
     }
 
     case 'mcq': {

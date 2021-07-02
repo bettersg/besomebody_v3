@@ -180,8 +180,8 @@ Sigh. Aman, I... #speaker_right
 
 === aman_1_minigame ===
 #knot:aman_1_minigame
-#ui:swipe
-#game_id:3
+#ui:mcq
+#game_id:1
 Minigame 1 // must add some text
 
 -> aman_1_3_narration
@@ -191,6 +191,7 @@ Minigame 1 // must add some text
 #knot:aman_1_3_narration
 #ui:narrator
 #background:new_message_notification.jpg
+.
 One month later, Selinder and I are chatting.
 
 
@@ -206,7 +207,7 @@ One month later, Selinder and I are chatting.
 #speaker_1_name:Selinder
 #timestamp:23.34
 Babe, I’m sorry, I think I’m going to do it. #speaker_self
-Jaan, don’t do anything rash. #speaker_1
+Jaan (dear), don’t do anything rash. #speaker_1
 Think of what this means for your faith and your identity. And your family. #speaker_1
 And I think you're handsome already! #speaker_1
 ... #speaker_1
@@ -223,9 +224,15 @@ Awww... #speaker_self #emoji:heart.png
 So - did you decide...?  #speaker_1
 You know what.  #speaker_self
 I wasn’t sure up till this very moment, but I’ve decided now.  #speaker_self
-+ [I am going to cut my hair. I have to do this.] -> aman_1_4 #speaker_self
++ [I am going to cut my hair. I have to do this.] -> aman_1_4_narration #speaker_self
 + [I'll keep my hair. You were right dear.] -> aman_1_9_narration   #speaker_self
 
+=== aman_1_4_narration ===
+#knot:aman_1_4_narration
+#ui:narrator
+#background:aman_barbershop.jpg
+The next morning, while my family was still asleep....
+-> aman_1_4
 
 === aman_1_4 ===
 #knot:aman_1_4
@@ -494,8 +501,9 @@ With everything so simple, and pure... #inner_monologue
 #ending:aman_1_ending_1
 // multiple ways to record the ending so that we can check in ink later if the player chose this ending or the other one. this knot is not presented to the user in the game.
 ~ aman_1_ending = 1
--> aman_2_intro
 
+-> aman_1_reflection
+ 
 
 === aman_1_9_narration ===
 #knot:aman_1_9_narration
@@ -723,6 +731,19 @@ With everything so simple, and pure... #inner_monologue
 #ending:aman_1_ending_2
 ~ aman_1_ending = 2
 // mulitple ways to record the ending so that we can check in ink later if the player chose this ending or the other one. this knot is not presented to the user in the game.
+
+
+-> aman_1_reflection
+
+
+=== aman_1_reflection ===
+#knot:aman_1_reflection
+#ui:chapter_reflection
+#reflection_id:1 
+Reflection 1
+
+
+
 
 -> aman_2_intro
 

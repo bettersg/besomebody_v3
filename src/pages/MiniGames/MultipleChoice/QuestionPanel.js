@@ -118,7 +118,7 @@ export default function QuestionPanel({question, nextQuestion, total, questionNo
       setMessage('Wrong! '+explanation)
     }
   }
-  console.log(userAnswers);
+  // console.log(userAnswers);
   const classes = useStyles();
 
   return (

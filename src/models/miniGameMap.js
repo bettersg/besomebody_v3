@@ -6,149 +6,82 @@ export const MINI_GAME_MAP = [
         {
           question_id: 1,
           question:
-            "How many times do Muslims have to perform Hajj in their lifetime?",
+            "Sikh men usually have the same last name: Singh",
           type: "text",
           correctAnswer:
-            "Once in their lifetime, if they are physically and financially able",
+            "True",
           explanation:
-            "Pilgrimage is viewed as a particularly meritorious activity. ",
+            "Guru Gobind Singh wanted to create an egalitarian society, and in South Asia, different last names often had socioeconomic and caste-associations. The word Singh means Lion and the word Kaur denotes royalty – a sovereign princess.",
           answers: [
             {
               answer_id: 1,
-              title: "Every year",
+              title: "True",
             },
             {
               answer_id: 2,
-              title: "Once in five years",
-            },
-            {
-              answer_id: 3,
-              title: "Once in a decade",
-            },
-            {
-              answer_id: 4,
-              title:
-                "Once in their lifetime, if they are physically and financially able",
+              title: "False",
             },
           ],
         },
         {
           question_id: 2,
           question:
-            "How long do Muslims fast every day during the month of Ramadhan?",
-          correctAnswer: "Muslims fast from dawn to sunset",
-          explanation: "Sawm (fasting) begins with dawn and ends with sunset.",
+            "Which types of baptised (initiated) Sikhs are allowed to shave their body hair?",
+          correctAnswer: "No Sikhs are allowed",
+          explanation: "Initiated Sikhs (male or female) are not supposed to cut hair from any part of their body",
           type: "image",
           answers: [
             {
               answer_id: 5,
               imageUrl: "stan.jpeg",
-              title: "During the nights",
+              title: "Male Sikhs below the age of 12",
             },
             {
               answer_id: 6,
               imageUrl: "malcolm.jpg",
-              title: "Afternoon till sunset",
+              title: "Female Sikhs after puberty",
             },
             {
               answer_id: 7,
               imageUrl: "robert.jpg",
-              title: "Month of Ramadhan",
+              title: "No Sikhs are allowed",
             },
             {
               answer_id: 8,
               imageUrl: "bilius.jpg",
-              title: "Dawn to sunset",
+              title: "All Sikhs are allowed",
             },
           ],
         },
         {
           question_id: 3,
           question:
-            "How many times do Muslims have to perform Hajj in their lifetime?",
+            "In Singapore, are Sikhs allowed to wear the Kirpan (a religious dagger)?",
           type: "text",
           correctAnswer:
-            "Once in their lifetime, if they are physically and financially able",
+          "Yes, under certain conditions",
           explanation:
-            "Pilgrimage is viewed as a particularly meritorious activity. ",
+            "Singaporean law has made allowances to ensure Sikhs can carry the kirpan in public (under some specific conditions), since 2012. ",
           answers: [
             {
               answer_id: 9,
-              title: "Every year",
+              title: "Yes, without constraint.",
             },
             {
               answer_id: 10,
-              title: "Once in five years",
+              title: "Yes, under certain conditions",
             },
             {
               answer_id: 11,
-              title: "Once in a decade",
+              title: "No, it is an illegal weapon",
             },
             {
               answer_id: 12,
               title:
-                "Once in their lifetime, if they are physically and financially able",
+                "No, they carry an image of it instead",
             },
           ],
-        },
-        {
-          question_id: 4,
-          question:
-            "How many times do Muslims have to perform Hajj in their lifetime?",
-          type: "text",
-          correctAnswer:
-            "Once in their lifetime, if they are physically and financially able",
-          explanation:
-            "Pilgrimage is viewed as a particularly meritorious activity. ",
-          answers: [
-            {
-              answer_id: 13,
-              title: "Every year",
-            },
-            {
-              answer_id: 14,
-              title: "Once in five years",
-            },
-            {
-              answer_id: 15,
-              title: "Once in a decade",
-            },
-            {
-              answer_id: 15,
-              title:
-                "Once in their lifetime, if they are physically and financially able",
-            },
-          ],
-        },
-        {
-          question_id: 5,
-          question:
-            "How many times do Muslims have to perform Hajj in their lifetime?",
-          type: "text",
-          correctAnswer:
-            "Once in their lifetime, if they are physically and financially able",
-          explanation:
-            "Pilgrimage is viewed as a particularly meritorious activity. ",
-          answers: [
-            {
-              answer_id: 16,
-              title: "Every year",
-            },
-            {
-              answer_id: 17,
-              title: "Once in five years",
-            },
-            {
-              answer_id: 18,
-              title: "Once in a decade",
-            },
-            {
-              answer_id: 19,
-              title:
-                "Once in their lifetime, if they are physically and financially able",
-            },
-          ],
-        },
+        },  
       ],
     },
   

@@ -27,6 +27,8 @@ const useStyles = makeStyles({
 export default function SwipeableTemporaryDrawer() {
   const classes = useStyles();
   const history = useHistory()
+  const { name  } = useParams()
+
   // Snackbar Context
   const { setSnackbar } = useSnackbar()
 
@@ -45,7 +47,6 @@ export default function SwipeableTemporaryDrawer() {
 
 
   // for the user profile
-  const { name  } = useParams()
   const { currentUser } = useAuth()
   const [userFromDb, setUserFromDb] = useState(null)
 
