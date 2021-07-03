@@ -48,7 +48,11 @@ export const CHARACTER_MAP = [
         knotTag: "nadia_1_intro",
         summary: "Nadia gets cornered by her father about being with Gavin. What should she do?",
         playable: true,
-        images : ["cat.jpg", "dog.jpg"],
+        images: [
+          "/images/nadia_1_intro.jpg",
+          "/images/nadia_1_night_street.jpg",
+          "/images/nadia_1_hdb_carpark.jpg",
+        ],
         endings: [
           {
             endingId: 1,
