@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Link as RouterLink, useHistory } from 'react-router-dom'
-
+import { Link } from 'react-router-dom'
+import loadImage from 'image-promise';
 
 import { 
     makeStyles, 
@@ -15,17 +16,16 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
-import { Link } from 'react-router-dom'
+
+import PacmanLoader from "react-spinners/PacmanLoader";
+
 import { useInkContext } from '../../contexts/InkContext'
+
+
 
 import { CHARACTER_MAP } from '../../models/storyMap'
 import NadiaInk from '../../stories/nadia.ink.json'
 import AmanInk from '../../stories/aman.ink.json'
-
-// import WhatsApp from '../WhatsappPage/Whatsapp'
-// import Scene from '../ScenePage/Scene'
-// import DefaultInk from '../DefaultInk'
-// import Survey from '../SurveyPage/Survey'
 
 
 import "./style.css"; 
@@ -69,6 +69,9 @@ export default function ChapterBox(props) {
     const { chaptDetails, total } = props
     const history = useHistory()
 
+    // used for the image preloader
+    const [isLoading, setIsLoading] = useState(false)
+
 
      // ==============================================================
     // Get name param from the route path
@@ -111,34 +114,20 @@ export default function ChapterBox(props) {
     }
 
 
-    // const getUi = ({ currentParagraphs, specialTags }) => {
-    //     switch (specialTags.ui) {
-    //       case 'scene': {
-    //         return <Scene currentParagraphs={currentParagraphs} />
-    //       }
-    //       case 'whatsapp': {
-    //         return <WhatsApp currentParagraphs={currentParagraphs} />
-    //       }
-    //       case 'survey': {
-    //         // TODO: update this component
-    //         return <Survey currentParagraphs={currentParagraphs} />
-    //       }
-    
-    //       // case reflection  - return a reflection component with argument for survey id from ink
-    //       // <Reflection getstory surveyid />
-    
-    //       case 'school': {
-    //         return (
-    //           // to remove school from nadia's story
-    //           <Scene currentParagraphs={currentParagraphs} />
-    //         )
-    //       }
-    //       default:
-    //         return <DefaultInk currentParagraphs={currentParagraphs} />
-    //     }
-    //   }
-
     const handleChapterStart = () => {
+        setIsLoading(true);
+        console.log(chaptDetails.images);
+        loadImage(chaptDetails.images)
+        .then(function (allImgs) {
+            console.log(allImgs.length, 'images loaded!', allImgs);
+        })
+        .catch(function (err) {
+            console.error('One or more images have failed to load :(');
+            console.error(err.errored);
+            console.info('But these loaded fine:');
+            console.info(err.loaded);
+        });
+        setIsLoading(false);
         startStoryFrom(chaptDetails.knotTag);
         history.push("/story/" + name);
     }
@@ -166,17 +155,24 @@ export default function ChapterBox(props) {
                         <span className="chaptText" style={{marginLeft:"5px"}}>XXX of {chaptDetails.endings.length} endings unlocked</span>
                     </CardContent>
                 </Grid>
-                <CardActions>
-                    {chaptDetails.playable == false ? 
-                        <Button size="small" variant="outlined" disabled >
-                            Coming Soon
-                        </Button> :
-                        <Button size="small" variant="contained" className="chaptBtn" onClick ={() => handleChapterStart()}>
-                            PLAY
-                        </Button>
-                    }
-                </CardActions>
-
+                {isLoading ? 
+                    <div className="spinner-div">
+                        <PacmanLoader color="#e5e5e5" loading={isLoading} size={80} />
+                    </div>
+                    
+                    :
+                
+                    <CardActions>
+                        {chaptDetails.playable == false ? 
+                            <Button size="small" variant="outlined" disabled >
+                                Coming Soon
+                            </Button> :
+                            <Button size="small" variant="contained" className="chaptBtn" onClick ={() => handleChapterStart()}>
+                                PLAY
+                            </Button>
+                        }
+                    </CardActions>
+                }
             </Grid>
         </Card>
     );

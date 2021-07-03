@@ -53,7 +53,7 @@ const Narrator = (props) => {
   }
    
   const step = currentParagraphs[currentParagraphs.length - 1]
-  console.log(step)
+  // console.log(step)
 
   return (
     <Fade in>

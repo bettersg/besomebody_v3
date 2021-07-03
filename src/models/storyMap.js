@@ -48,6 +48,7 @@ export const CHARACTER_MAP = [
         knotTag: "nadia_1_intro",
         summary: "Nadia gets cornered by her father about being with Gavin. What should she do?",
         playable: true,
+        images : ["cat.jpg", "dog.jpg"],
         endings: [
           {
             endingId: 1,
@@ -72,7 +73,8 @@ export const CHARACTER_MAP = [
         title: "School Bullies",
         knotTag: "nadia_1_1",
         summary: "Zhi Hao teases Nadia - should she tell him off?",
-        playable: true,
+        playable: false,
+        images : ["cat.jpg", "dog.jpg"],
         endings: [
           {
             endingId: 1,
@@ -129,6 +131,15 @@ export const CHARACTER_MAP = [
         knotTag: "aman_1_intro",
         summary: "Aman prepares to enlist in National Service. Will he go in as he is, or take a big step to blend in?",
         playable: true,
+        images: [
+          "/images/aman_1_intro.jpg",
+          "/images/aman_barbershop_floor.jpg",
+          "/images/aman_barbershop.jpg",
+          "/images/aman_bedroom.jpg",
+          "/images/aman_drawer.jpg",          
+          "/images/aman_sikh_event_hall.jpg",
+          "/images/whatsapp.png",
+        ],
         endings: [
           {
             endingId: 1,
@@ -149,6 +160,7 @@ export const CHARACTER_MAP = [
         knotTag: "aman_2_intro",
         summary: "Aman tries to crack the silver screen - but it’s even harder than he imagined.",
         playable: true,
+        images : ["cat.jpg", "dog.jpg"],
         endings: [
           {
             endingId: 1,
@@ -163,7 +175,8 @@ export const CHARACTER_MAP = [
         title: "Fight or Flight",
         knotTag: "aman_2_6_narration",
         summary: "All Aman wants is to celebrate with friends. Why does everything have to be so difficult?",
-        playable: true,
+        playable: false,
+        images : ["cat.jpg", "dog.jpg"],
         endings: [
           {
             endingId: 1,
@@ -184,6 +197,8 @@ export const CHARACTER_MAP = [
         knotTag: "aman_1_10_narration",
         summary: "Aman wants to go overseas for uni, but his girlfriend Sonya is staying in Singapore.",
         playable: false,
+        images : ["cat.jpg", "dog.jpg"],
+
         endings: [
           {
             endingId: 1,

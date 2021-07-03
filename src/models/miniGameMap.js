@@ -211,6 +211,66 @@ export const MINI_GAME_MAP = [
           ],
         },
       ],
-    },
+  },
+  {
+    game_id: 3,
+    ui: "swipe",
+    questions: [
+      {
+        question_id: 7,
+        question: "Sikh men usually have the same last name: Singh",
+        type: "text",
+        explanation:
+          "Guru Gobind Singh wanted to create an egalitarian society, and in South Asia, different last names often had socioeconomic and caste-associations. The word Singh means Lion and the word Kaur denotes royalty – a sovereign princess.",
+        correctAnswer: "true",
+        answers: [
+          {
+            answer_id: 20,
+            title: "TRUE",
+          },
+          {
+            answer_id: 21,
+            title: "FALSE",
+          },
+        ],
+      },
+      {
+        question_id: 8,
+        question: "Sikh women who have been initiated (baptised) are allowed to shave",
+        correctAnswer: "FALSE",
+        explanation:
+          "Initiated Sikhs are not supposed to cut hair from any part of their body",
+        type: "text",
+        answers: [
+          {
+            answer_id: 22,
+            title: "TRUE",
+          },
+          {
+            answer_id: 23,
+            title: "FALSE",
+          },
+        ],
+      },
+      {
+        question_id: 9,
+        question: "In Singapore, Sikhs are not allowed to wear the Kirpan (a religious dagger).",
+        correctAnswer: "FALSE",
+        explanation:
+          "Singaporean law has made allowances to ensure Sikhs can carry the kirpan in public (under some specific conditions), since 2012.",
+        type: "text",
+        answers: [
+          {
+            answer_id: 24,
+            title: "TRUE",
+          },
+          {
+            answer_id: 25,
+            title: "FALSE",
+          },
+        ],
+      },
+    ],
+  },
   ];
   
