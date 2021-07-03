@@ -13,15 +13,14 @@ import { CHARACTER_MAP } from '../../models/storyMap'
 import { useInkContext } from '../../contexts/InkContext'
 import Narrator from '../NarratorPage/Narrator'
 
-import NadiaInk from '../../stories/nadid.ink.json'
-import AmanInk from '../../stories/aman_chapter1.ink.json'
+import NadiaInk from '../../stories/nadia.ink.json'
+import AmanInk from '../../stories/aman.ink.json'
 
 
 const getInkJson = (nameParam) => {
   switch (nameParam) {
-    case 'nadid':
     case 'nadia': {
-      const nadidStory = CHARACTER_MAP.find((story) => story.id === 1)
+      const nadiaStory = CHARACTER_MAP.find((story) => story.id === 1)
       // const nadidChapter1 = nadidStory.chapters.find(
       // (chapter) => chapter.id === 1)
       // const json = nadidStory.jsonFile
@@ -97,6 +96,7 @@ const InkController = () => {
     saveStory,
   } = useInkContext()
 
+  
   // ==============================================================
   // Filter paragraphs based on current knot
   // ==============================================================

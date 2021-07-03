@@ -1,5 +1,5 @@
-import NadiaInk from '../stories/nadid.ink.json'
-import AmanInk from '../stories/aman_chapter1.ink.json'
+import NadiaInk from '../stories/nadia.ink.json'
+import AmanInk from '../stories/aman.ink.json'
 
 // TODO: Update with other properties such as character image, character bio, chapter summary, etc
 /* 
@@ -33,7 +33,7 @@ export const CHARACTER_MAP = [
     linkName: "nadia",
     profileImage: "https://images.generated.photos/mOW1TlV_t3f-cxpA6Ud9Bj-fleXjDLGQC9f0oI0R24E/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAwMzMwMjIuanBn.jpg",
     description: "Nadia wants to become a doctor - but will love and religion get in the way?",
-    jsonLink: '../stories/nadid.ink.json',
+    jsonLink: '../stories/nadia.ink.json',
     jsonFile: NadiaInk,
     playable: true,
     variables: {
@@ -44,26 +44,26 @@ export const CHARACTER_MAP = [
       {
         chapterId: 1,
         number: 1,
-        title: "Caught with Gavin",
-        knotTag: "nadid_chapter6",
-        summary: "Nadia gets caught by her father holding hands with Gavin. What should she do?",
+        title: "Study Buddy",
+        knotTag: "nadia_1_intro",
+        summary: "Nadia gets cornered by her father about being with Gavin. What should she do?",
         playable: true,
         images : ["cat.jpg", "dog.jpg"],
         endings: [
           {
             endingId: 1,
             title: "Break Up",
-            inkVar: "nadia_chapter1_ending_1",
+            inkVar: "nadia_1_ending_1",
           },
           {
             endingId: 2,
             title: "One Step at a Time",
-            inkVar: "nadia_chapter1_ending_2",
+            inkVar: "nadia_1_ending_2",
           },
           {
             endingId: 3,
             title: "Stay Together",
-            inkVar: "nadia_chapter1_ending_3",
+            inkVar: "nadia_1_ending_3",
           },
         ]
       },
@@ -71,7 +71,7 @@ export const CHARACTER_MAP = [
         chapterId: 2,
         number: 2,
         title: "School Bullies",
-        knotTag: "whatsapp",
+        knotTag: "nadia_1_1",
         summary: "Zhi Hao teases Nadia - should she tell him off?",
         playable: false,
         images : ["cat.jpg", "dog.jpg"],
@@ -117,7 +117,7 @@ export const CHARACTER_MAP = [
     linkName: "aman",
     profileImage: "https://images.generated.photos/7PFNUmz7LLOsqCFQwANR09dLK1EWwS_r0XyJeh59CIQ/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAzOTI3MzIuanBn.jpg",
     description: "Aman wants to model and study overseas - but will his culture make things harder?",
-    jsonLink: '../stories/aman_chapter1.ink.json',
+    jsonLink: '../stories/aman.ink.json',
     jsonFile: AmanInk,
     playable: true,
     variables: {
@@ -220,7 +220,7 @@ export const CHARACTER_MAP = [
     linkName: "",
     profileImage: "https://images.generated.photos/DQHHu8JTFXU0kjR5resS59oVA1OzC7RNlSleKxeFWSI/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAyMzk4NzguanBn.jpg",
     description: "Zaina is a great teacher - but can she balance her family, her career, and her feelings?",
-    jsonLink: '../stories/nadid.ink.json',
+    jsonLink: '../stories/nadia.ink.json',
     playable: false,
   }, 
   {
@@ -229,7 +229,7 @@ export const CHARACTER_MAP = [
     linkName: "",
     profileImage: "https://images.generated.photos/rB_1dF254abgibQU0cuxULnYB5RLI94A10C4YYnWbMA/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA4NzY5NTIuanBn.jpg",
     description: "Zhi Hao seems to have an easy life - but will his hidden struggles derail his friendships?",
-    jsonLink: '../stories/nadid.ink.json',
+    jsonLink: '../stories/nadia.ink.json',
     playable: false,
   }, 
   {
@@ -238,7 +238,7 @@ export const CHARACTER_MAP = [
     linkName: "",
     profileImage: "https://images.generated.photos/Dz5nY_-KvnFjqXQCKJDd1-eFgiIRmKQ3OErG7kRIHjg/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA3Mzk2MzkuanBn.jpg",
     description: "Marie has a storyline, and it will be awesome - but we don't know what it is yet.",
-    jsonLink: '../stories/nadid.ink.json',
+    jsonLink: '../stories/nadia.ink.json',
     playable: false,
   }, 
 ];
@@ -256,7 +256,7 @@ export const CHARACTER_MAP = [
 //           endingUnlocked: 0, 
 //           endingAvail: 3,
 //           replay: false,
-//           knot_link: "/story/nadid",
+//           knot_link: "/story/nadia",
 //           chapter_summary: "This is a summary of what happened"
 //       }, 
 //       {
@@ -291,19 +291,19 @@ export const CHARACTER_MAP = [
 //       {
 //         id: 1,
 //         name: 'Family Matters',
-//         inkJson: NadidInk,
+//         inkJson: nadiaInk,
 //         endings: [
 //           {
 //             id: 1,
-//             name: "Nadid's Happy Ending",
+//             name: "nadia's Happy Ending",
 //           },
 //           {
 //             id: 2,
-//             name: "Nadid's Sad Ending",
+//             name: "nadia's Sad Ending",
 //           },
 //           {
 //             id: 3,
-//             name: "Nadid's Neutral & Gavin's Happy Ending",
+//             name: "nadia's Neutral & Gavin's Happy Ending",
 //           },
 //         ],
 //       },

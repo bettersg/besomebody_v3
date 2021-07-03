@@ -24,9 +24,8 @@ import { useInkContext } from '../../contexts/InkContext'
 
 
 import { CHARACTER_MAP } from '../../models/storyMap'
-import NadiaInk from '../../stories/nadid.ink.json'
+import NadiaInk from '../../stories/nadia.ink.json'
 import AmanInk from '../../stories/aman.ink.json'
-
 
 
 import "./style.css"; 
@@ -42,8 +41,7 @@ const useStyles = makeStyles({
 
 
 const getInkJson = (nameParam) => {
-    switch (nameParam) {
-      case 'nadid': 
+    switch (nameParam) {      
       case 'nadia': {                
         return {
           inkJson: NadiaInk,
