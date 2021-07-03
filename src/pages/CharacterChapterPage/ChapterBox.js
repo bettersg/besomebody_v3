@@ -19,13 +19,13 @@ import { Link } from 'react-router-dom'
 import { useInkContext } from '../../contexts/InkContext'
 
 import { CHARACTER_MAP } from '../../models/storyMap'
-import NadiaInk from '../../stories/nadid.ink.json'
+import NadiaInk from '../../stories/nadia.ink.json'
 import AmanInk from '../../stories/aman.ink.json'
 
-import WhatsApp from '../WhatsappPage/Whatsapp'
-import Scene from '../ScenePage/Scene'
-import DefaultInk from '../DefaultInk'
-import Survey from '../SurveyPage/Survey'
+// import WhatsApp from '../WhatsappPage/Whatsapp'
+// import Scene from '../ScenePage/Scene'
+// import DefaultInk from '../DefaultInk'
+// import Survey from '../SurveyPage/Survey'
 
 
 import "./style.css"; 
@@ -41,8 +41,7 @@ const useStyles = makeStyles({
 
 
 const getInkJson = (nameParam) => {
-    switch (nameParam) {
-      case 'nadid': 
+    switch (nameParam) {      
       case 'nadia': {                
         return {
           inkJson: NadiaInk,
