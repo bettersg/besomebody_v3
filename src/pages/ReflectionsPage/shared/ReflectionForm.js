@@ -1,4 +1,6 @@
 import React, { useState, useMemo } from 'react';
+import { useParams  , useHistory } from 'react-router-dom'
+
 import { Box, Typography, Button, CircularProgress } from '@material-ui/core'
 import { useSnackbar } from '../../../contexts/SnackbarContext';
 import { makeStyles } from '@material-ui/core/styles';
@@ -34,6 +36,8 @@ const ReflectionForm = ({ reflection }) => {
   const { currentUser } = useAuth();
   const { setSnackbar } = useSnackbar();
   const [isLoading, setIsLoading] = useState(false);
+  const history = useHistory()
+  const { name  } = useParams()
 
   const questions = useMemo(
     () => reflection
@@ -66,6 +70,7 @@ const ReflectionForm = ({ reflection }) => {
       })
     } finally {
       setIsLoading(false);
+      history.push("/chapters/" + name)
     }
   }
 

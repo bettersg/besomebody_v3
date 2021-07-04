@@ -44,7 +44,7 @@ const School = (props) => {
     }
   }, [elementRef, currentParagraphs, choices])
 
-  console.log(choices)
+  // console.log(choices)
 
   return (
     <Fade in>
@@ -85,8 +85,8 @@ const School = (props) => {
                           className="next-button"
                         >
                           <Typography variant="caption">next</Typography>
-                          {console.log("choices")}
-                          {console.log(choice.length==0)}
+                          {/* {console.log("choices")}
+                          {console.log(choice.length==0)} */}
                         </Button>
                       : 
                       <Button
@@ -96,8 +96,8 @@ const School = (props) => {
                           className="next-button"
                         >
                           <Typography variant="caption">{choice.text}</Typography>
-                          {console.log("choices")}
-                          {console.log(choice.length==0)}
+                          {/* {console.log("choices")}
+                          {console.log(choice.length==0)} */}
                         </Button>
                   }
                 </Fade>
