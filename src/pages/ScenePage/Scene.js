@@ -56,16 +56,13 @@ const Scene = (props) => {
   }
    
   const step = currentParagraphs[currentParagraphs.length - 1]
-  // if step includes speaker left/right, set name here  
-  const amanimg = "/images/test/avatar.png"
-  const otherimg = "/images/test/waiter.png"
 
   return (
     <Fade in>
       <div className="ScenePage">
         <div className="ScenePage__speaker">
-          {step.tags[0] === 'speaker_left' || 'speaker_self' ? <img src={amanimg} className="ScenePage__speaker--left"/> : null}
-          {step.tags[0] === 'speaker_right' ? <img src={otherimg} className="ScenePage__speaker--right"/> : null}
+          {step.tags[0] === 'speaker_left' ? <img src={specialTags.speaker_left_image} className="ScenePage__speaker--left"/> : null}
+          {step.tags[0] === 'speaker_right' ? <img src={specialTags.speaker_right_image} className="ScenePage__speaker--right"/> : null}
           
         </div>
       <Box className={classes.paragraphWrapper}  height="100%">
