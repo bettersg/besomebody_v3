@@ -60,7 +60,7 @@ const Scene = (props) => {
   const speakerimg = "/images/test-man-talking.png"
 
   return (
-    <Fade in>
+    <Fade  in={true} timeout={500}>
       <div className="ScenePage">
         <div className="ScenePage__speaker">
           {step.tags[0] === 'speaker_left' ? <img src={speakerimg} className="ScenePage__speaker--left"/> : null}
@@ -82,7 +82,7 @@ const Scene = (props) => {
                   {step.tags[0]==='speaker_self'? name:null}
                   {step.tags[0]==='inner_monologue'? 'Inner Monologue':null}
                 </Typography>
-                <Fade in={step.text}>
+                <Fade in={step.text}  timeout={500}>
                     <Typography>{step.text}</Typography>
                   </Fade>
               </Box>
@@ -104,7 +104,7 @@ const Scene = (props) => {
                   my={1}
                 
                 >
-                  <Fade in={choice.text}>
+                  <Fade in={choice.text}  timeout={800}>
                     <Button
                       variant="contained"
                       color="primary"

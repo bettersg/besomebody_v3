@@ -120,7 +120,7 @@ export default function SwipeableTemporaryDrawer() {
       <div className="menu-bottom">
         <hr/>
         <div className="menu-options">
-          <Avatar alt="A" src="/" style={{marginRight:"15px"}}/> <Link onClick={logoutUser}><span>Sign Out</span></Link>
+          <Avatar alt="A" src="/" style={{marginRight:"15px"}}/> <Link to="/" onClick={logoutUser}><span>Sign Out</span></Link>
         </div>
       </div>
 
@@ -138,7 +138,7 @@ export default function SwipeableTemporaryDrawer() {
             onClose={toggleDrawer(anchor, false)}
             onOpen={toggleDrawer(anchor, true)}
             className="menu-drawer"
-            containerStyle={{height: 'calc(100% - 64px)', top: 64}}
+            // containerStyle={{height: 'calc(100% - 64px)', top: 64}}
           >
             {list(anchor)}
           </SwipeableDrawer>

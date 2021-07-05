@@ -47,7 +47,7 @@ const WhatsApp = (props) => {
   }, [elementRef, currentParagraphs, choices])
 
   return (
-    <Fade in>
+    <Fade in={true} timeout={500}>
       <Box className={classes.paragraphWrapper} pb={3}>
         <Box className={classes.whatsappHeader} p={1} mb={3}>
           <Grid container alignItems="center">
