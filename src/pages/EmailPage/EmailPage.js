@@ -21,7 +21,6 @@ import {
   import SignalCellularAltIcon from '@material-ui/icons/SignalCellularAlt';
   import Battery90Icon from '@material-ui/icons/Battery90';
 
-
   import "./style.scss"; 
   import AudioPlayer from "../../music/Music"
 
@@ -41,7 +40,7 @@ import {
            
           </Grid>
           </div>
-        <AudioPlayer/>  
+        <AudioPlayer />  
         
         <Box border={1}>
         <div className="email-wrapper">

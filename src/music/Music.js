@@ -1,19 +1,25 @@
-import Music1 from './To Be You_music v2_loop 1.wav'
-import Music2 from './To Be You_music v2_loop 2.wav'
-import Music3 from './To Be You_music v2_loop 3.wav'
+import Music1 from './tobeyou_intro.mp3'
 import React from 'react'
 import Sound from 'react-sound'
+import ReactAudioPlayer from 'react-audio-player';
 
 
 class AudioPlayer extends React.Component {
   render() {
     return (
-        <Sound
-            url={Music1}
-            playStatus={Sound.status.PLAYING}
-            volume={100}
-            loop={true}
-            />
+        <ReactAudioPlayer
+          src={Music1}
+          autoPlay={true}
+          preload={'metadata'}
+          loop={true}
+        />
+        // <Sound
+        //     url={Music1}
+        //     playStatus={Sound.status.PLAYING}
+        //     volume={100}
+        //     loop={true}
+        //     autoLoad={true}
+        //     />
     );
   }
 }

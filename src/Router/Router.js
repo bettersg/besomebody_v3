@@ -15,6 +15,7 @@ import CharacterChapterPage from '../pages/CharacterChapterPage'
 import IntroPage from '../pages/IntroPage'
 import ProfileBuilderPage from '../pages/ProfileBuilderPage'
 import EmailPage from '../pages/EmailPage'
+import AudioPlayer from "../music/Music"
 
 class Router extends Component {
   render() {
@@ -27,6 +28,7 @@ class Router extends Component {
 
         <Switch>
           <Route path="/" exact>
+            <AudioPlayer/>
             {user ? <CharacterChoicePage /> : <LandingPage />}
           </Route>
 
@@ -40,6 +42,7 @@ class Router extends Component {
 
           <PrivateRoute path="/chapters/:name" exact>
             <CharacterChapterPage />
+            <AudioPlayer/>
           </PrivateRoute>
 
           <PrivateRoute path="/story/:name" exact>
