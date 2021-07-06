@@ -7,7 +7,39 @@ import ChapterComplete from './chapter/ChapterComplete';
 import StoryComplete from './story/StoryComplete';
 import { REFLECTION_PAGE_FORM, REFLECTION_PAGE_STORY_COMPLETE, REFLECTION_PAGE_CHAPTER_COMPLETE, REFLECTION_PAGE_CHAPTER_REFLECTION_RESPONSES } from './constants';
 
-const Reflection = ({ reflectionId: propsReflectionId }) => {
+import { updateDbUser } from '../../models/userModel'
+import { useAuth } from '../../contexts/AuthContext'
+
+import { useSnackbar } from '../../contexts/SnackbarContext'
+
+
+
+const Reflection = ({ reflectionId: propsReflectionId , globalVariables}) => {
+  // console.log("test1:", globalVariables);
+
+  const { currentUser } = useAuth();
+  
+  const { setSnackbar } = useSnackbar();
+
+  useEffect(() => {
+    // console.log("test2:",globalVariables);
+
+    const updateUserSaveGame = async () => {
+      const saveStateData = [globalVariables];
+      try {
+        await updateDbUser(globalVariables, currentUser.id);
+      } catch (err) {
+        setSnackbar({
+          message: `There was an error: ${err.message}`,
+          open: true,
+          type: 'error',
+        })
+      }
+      // setIsLoading(false);
+    }
+    updateUserSaveGame();
+  },[])
+
   const reflectionId = typeof propsReflectionId === "string" ? parseInt(propsReflectionId, 10) : propsReflectionId;
 
   const [page, setPage] = useState(REFLECTION_PAGE_CHAPTER_COMPLETE);

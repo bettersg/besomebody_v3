@@ -47,7 +47,7 @@ const getInkJson = (nameParam) => {
   }
 }
 
-const getUi = ({ currentParagraphs, specialTags }) => {
+const getUi = ({ currentParagraphs, specialTags , globalVariables}) => {
   switch (specialTags.ui) {
     case 'scene': {
       return <Scene currentParagraphs={currentParagraphs} />
@@ -64,8 +64,8 @@ const getUi = ({ currentParagraphs, specialTags }) => {
     }
       
     case 'chapter_reflection': {
-      // TODO: update this component
-      return <Reflection reflectionId={specialTags.reflection_id} />
+      // TODO: update this component -> save game here?
+      return <Reflection reflectionId={specialTags.reflection_id} globalVariables={globalVariables} />
     }
 
     case 'mcq': {
@@ -97,7 +97,7 @@ const InkController = () => {
     paragraphs,
     specialTags,
     currentKnot,
-
+    globalVariables,
     // Methods
     saveStory,
   } = useInkContext()
@@ -153,6 +153,7 @@ const InkController = () => {
       {getUi({
         currentParagraphs,
         specialTags,
+        globalVariables,
       })}
 
       {/* Render event triggers */}

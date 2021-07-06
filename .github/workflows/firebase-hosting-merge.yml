@@ -15,7 +15,7 @@ jobs:
       REACT_APP_THEME_PRIMARY_COLOR: blue
       REACT_APP_THEME_SECONDARY_COLOR: red
       REACT_APP_THEME_DARK: false
-      REACT_APP_SENTRY_DSN: https://bb146ffc4f074171bcf4a41bba43de17@o374848.ingest.sentry.io/5193525
+      REACT_APP_SENTRY_DSN: https://3087787eef3247a1a3f357f7432d8974@o912217.ingest.sentry.io/5849050
       REACT_APP_FIREBASE_API_KEY: ${{ secrets.REACT_APP_FIREBASE_API_KEY }}
       REACT_APP_FIREBASE_AUTH_DOMAIN: besomebody.firebaseapp.com
       REACT_APP_FIREBASE_PROJECT_ID: besomebody

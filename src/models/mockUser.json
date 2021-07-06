@@ -1,6 +1,12 @@
 {
   "id": "asd2312dasd123123asd",
   "email": "test@email.com",
+  "demographic1":"1",
+  "demographic2":"1",
+  "demographic3":"1",
+  "demographic4":"1",
+  "demographic5":"1",
+  "demographic6":"1",
   "achievements": [
     {
       "createdAt": "Firebase timestamp",
@@ -17,8 +23,12 @@
           "id": 2,
           "completedAt": "Firebase timestamp"
         }
-      ]
+      ],
+      // globalVariables: [
+      //   {aman_mood: 10, aman_1_ending: 2, aman_2_ending: 0, aman_3_ending: 0, aman_4_ending: 0, …}
+      // ]
     },
+    
     {
       "createdAt": "Firebase timestamp",
       "updatedAt": "Firebase timestamp",

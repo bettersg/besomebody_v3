@@ -42,14 +42,25 @@ Minigame // must add some text
 */
 
 // DECLARE GLOBAL VARIABLES
+VAR character_id = 1 
+VAR chapter_id = 1
+
 VAR aman_mood = 10
 VAR aman_1_ending = 0 
 VAR aman_2_ending = 0 
 VAR aman_3_ending = 0 
 VAR aman_4_ending = 0 
 VAR aman_5_ending = 0 
-
-
+// VAR aman_2_1c_overcharge = 0
+// VAR aman_2_2_confide = 0
+// VAR aman_2_5_change_look= 0
+// VAR aman_2_6_secret= 0
+// VAR aman_3_1_drink= 0
+// VAR ending_id = 1;
+ 
+ 
+ 
+ 
 -> aman_1_intro
 
 // CHARACTER INTRODUCTION
@@ -769,6 +780,7 @@ Reflection 1
 #ui:narrator
 #background:aman_1_intro.jpg
 #music:aman_intro.mp3
+~ chapter_id = 2
 .
 Chapter 2 #title
 To Be or Not To Be #title
@@ -1531,6 +1543,7 @@ Thank you God, for helping me get this part.  #inner_monologue
 #ui:narrator
 #background:aman_1_intro.jpg
 #music:aman_intro.mp3
+~ chapter_id = 3
 .
 Chapter 3 #title
 Fight or Flight  #title
