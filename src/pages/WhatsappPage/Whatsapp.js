@@ -23,9 +23,15 @@ const Whatsapp = (props) => {
       })
     }
   }, [elementRef, currentParagraphs, choices])
+
+  // sound component to do the *ding*
+// import ding from "../music/ding.wav"
+  // import sound from "react-sound"
+// inside render will put <sound> object
+
   // TO DO: make whatsapp screen fit the screen and customise controls
   return (
-    <Fade in>
+    <Fade in={true} timeout={500}>
       <Box className="paragraph-wrapper" pb={3}>
         <Box className="whatsapp-header" p={1} mb={3}>
           <Grid container alignItems="center">
@@ -69,31 +75,33 @@ const Whatsapp = (props) => {
                   display="flex"
                   justifyContent="flex-end"
                 >
-                  <Fade in={step.text} key={i}>
+                  <Fade in={step.text} key={step.text} timeout={300}>
                     <Box
                       className="chatbox-sender"
                       borderRadius={5}
                       p={1}
-                      key={i}
+                      key={step.text}
                     >
-                      <Typography key={i}>{step.text}</Typography>
+                      <Typography key={step.text}>{step.text}</Typography>
                     </Box>
                   </Fade>
                 </Box>
               )
             } else if (step.tags[0]?.includes('speaker')) {     // this is needed to avoid rendering inner_monologue
               return (
-                <Box key={step.text} my={2} mx={1} display="flex">
-                  <Box className="chatbox-receiver" borderRadius={5} p={1}>                    
-                    <Typography key={i} variant="overline">
-                      {(step.tags[0]?.includes('speaker_1') ? specialTags.speaker_1_name : null)}
-                      {(step.tags[0]?.includes('speaker_2') ? specialTags.speaker_2_name : null)}
-                      {(step.tags[0]?.includes('speaker_3') ? specialTags.speaker_3_name : null)}
-                      {(step.tags[0]?.includes('speaker_4') ? specialTags.speaker_4_name : null)}
-                    </Typography> 
-                    <Typography key={i}>{ step.text }</Typography>
+                <Fade in={step.text} key={step.text} timeout={300}>
+                  <Box key={step.text} my={2} mx={1} display="flex">
+                    <Box className="chatbox-receiver" borderRadius={5} p={1}>                    
+                      <Typography key={step.text}  variant="overline">
+                        {(step.tags[0]?.includes('speaker_1') ? specialTags.speaker_1_name : null)}
+                        {(step.tags[0]?.includes('speaker_2') ? specialTags.speaker_2_name : null)}
+                        {(step.tags[0]?.includes('speaker_3') ? specialTags.speaker_3_name : null)}
+                        {(step.tags[0]?.includes('speaker_4') ? specialTags.speaker_4_name : null)}
+                      </Typography> 
+                      <Typography key={step.text}>{ step.text }</Typography>
+                    </Box>
                   </Box>
-                </Box>
+                </Fade>
               )
             }
           })}

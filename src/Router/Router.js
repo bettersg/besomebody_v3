@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { BrowserRouter, Switch, Redirect, Route , Link } from 'react-router-dom'
-
+import { BrowserRouter, Switch, Redirect, Route } from 'react-router-dom'
 import AdminPage from '../components/AdminPage'
 import UserPage from '../components/UserPage'
 import NotFoundPage from '../components/NotFoundPage'
@@ -9,15 +8,13 @@ import PrivateRoute from '../components/PrivateRoute'
 import SignUp from '../pages/SignUp/SignUp'
 import Login from '../pages/Login/Login'
 import ForgetPassword from '../pages/ForgetPassword/ForgetPassword'
-
 import InkController from '../pages/InkController/InkController'
-
 import LandingPage from '../pages/LandingPage'
-import CharacterChoicePage from "../pages/CharacterChoicePage"
-import CharacterChapterPage from "../pages/CharacterChapterPage"
-import IntroPage from "../pages/IntroPage"
-import ProfileBuilderPage from "../pages/ProfileBuilderPage"
- 
+import CharacterChoicePage from '../pages/CharacterChoicePage'
+import CharacterChapterPage from '../pages/CharacterChapterPage'
+import IntroPage from '../pages/IntroPage'
+import ProfileBuilderPage from '../pages/ProfileBuilderPage'
+
 class Router extends Component {
   render() {
     // Properties
@@ -26,48 +23,44 @@ class Router extends Component {
     return (
       <BrowserRouter basename={process.env.REACT_APP_BASENAME}>
         {/* {bar} // TODO: implement "bar" as a menubar above the game components below */}
-        
+
         <Switch>
-          <Route path="/" exact>            
-              {user ?
-                (
-                  <CharacterChoicePage />
-                )
-                :
-                (
-                    <LandingPage />  
-                )
-              }            
+          <Route path="/" exact>
+            {user ? <CharacterChoicePage /> : <LandingPage />}
           </Route>
 
-          <Route path="/intro" exact>                        
-            <IntroPage />             
+          <Route path="/intro" exact>
+            <IntroPage />
           </Route>
-          
+
           <PrivateRoute path="/characterchoice" exact>
             <CharacterChoicePage />
           </PrivateRoute>
- 
+
           <PrivateRoute path="/chapters/:name" exact>
             <CharacterChapterPage />
           </PrivateRoute>
-        
+
           <PrivateRoute path="/story/:name" exact>
             <InkController />
           </PrivateRoute>
-
 
           <Route path="/signup" exact>
             <SignUp />
           </Route>
 
-          <PrivateRoute path="/profilebuilder" exact>                     
-            <ProfileBuilderPage />             
-          </PrivateRoute>   
+          <PrivateRoute path="/profilebuilder" exact>
+            <ProfileBuilderPage />
+          </PrivateRoute>
 
-          <Route path="/login" exact>            
+          <Route path="/login" exact>
             <Login />
           </Route>
+
+          <Route path="/help" exact>
+            Help Screen
+          </Route>
+
 
           <Route path="/forget-password" exact>
             <ForgetPassword />
@@ -90,7 +83,6 @@ class Router extends Component {
           </Route>
         </Switch>
       </BrowserRouter>
-        
     )
   }
 }

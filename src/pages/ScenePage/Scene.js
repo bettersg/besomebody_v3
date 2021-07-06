@@ -36,7 +36,7 @@ const Scene = (props) => {
   const { getStory, choices, setChoice, specialTags } = useInkContext()
   const classes = useStyles({ image: specialTags.background })
   const { name } = useParams()
-
+  
   // ========================================================
   // Help to scroll to bottom of the paragraphs render screen
   // ========================================================
@@ -58,7 +58,7 @@ const Scene = (props) => {
   const step = currentParagraphs[currentParagraphs.length - 1]
 
   return (
-    <Fade in>
+    <Fade  in={true} timeout={500}>
       <div className="ScenePage">
         <div className="ScenePage__speaker">
           {step.tags[0] === 'speaker_left' ? <img src={specialTags.speaker_left_image} className="ScenePage__speaker--left"/> : null}
@@ -78,7 +78,7 @@ const Scene = (props) => {
                   {step.tags[0]==='speaker_self'? name:null}
                   {step.tags[0]==='inner_monologue'? 'Inner Monologue':null}
                 </Typography>
-                <Fade in={step.text}>
+                <Fade in={step.text}  timeout={500}>
                     <Typography>{step.text}</Typography>
                   </Fade>
               </Box>
@@ -95,7 +95,7 @@ const Scene = (props) => {
                   key={choice.text}
                   className="ScenePage__choicesWrapper__choices"
                 >
-                  <Fade in={choice.text}>
+                  <Fade in={choice.text}  timeout={800}>
                     <Button
                       variant="contained"
                       color="primary"

@@ -67,8 +67,8 @@ const ProfileBuilderTemp = () => {
         // TODO: Validation
         // TODO: Handle Others = custom string
 
-        console.log(formData);
-        console.log(formData.gender);
+        // console.log(formData);
+        // console.log(formData.gender);
         // change this to a try / catch err
         updateDbUser(formData, currentUser.id);
 

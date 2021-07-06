@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     top: '400px',
   }
 }))
-
+ 
 const Narrator = (props) => {
   const { currentParagraphs } = props
   const { getStory, choices, setChoice, specialTags } = useInkContext()
@@ -53,9 +53,10 @@ const Narrator = (props) => {
   }
    
   const step = currentParagraphs[currentParagraphs.length - 1]
-  
+  // console.log(step)
+
   return (
-    <Fade in>
+    <Fade in={true} timeout={500}>
       <div>
 
       <Box className={classes.paragraphWrapper}  height="100%">
@@ -68,8 +69,12 @@ const Narrator = (props) => {
         
             { step && (
               <Box my={1} key={step.text} style={{ scrollSnapAlign: 'start' }}>
-                <Fade in={step.text}>
-                  <Typography>{step.text}</Typography>
+                <Fade in={step.text?true:false} timeout={500}>
+                  { step.tags[0] === 'title' ? 
+                    <Typography variant="h5" align="center">{step.text.toUpperCase()}</Typography> :
+                    <Typography>{step.text}</Typography>
+                  } 
+                  
                 </Fade>
               </Box>
               )
@@ -90,7 +95,7 @@ const Narrator = (props) => {
                   my={1}
                 
                 >
-                  <Fade in={choice.text}>
+                  <Fade in={choice.text?true:false} timeout={700}>
                     <Button
                       variant="contained"
                       color="primary"

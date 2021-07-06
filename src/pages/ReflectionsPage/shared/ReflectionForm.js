@@ -1,14 +1,15 @@
 import React, { useState, useMemo } from 'react';
+import { useParams  , useHistory } from 'react-router-dom'
+
 import { Box, Typography, Button, CircularProgress } from '@material-ui/core'
 import { useSnackbar } from '../../../contexts/SnackbarContext';
 import { makeStyles } from '@material-ui/core/styles';
 import Question from './Question';
 import produce from "immer";
-import { createDbAnswers } from "../../../models/answerModel";
+import { createDbReflectionResponses } from "../../../models/reflectionResponseModel";
 
 import QUESTIONS from "../../../reflections/questions.json";
 import { useAuth } from '../../../contexts/AuthContext';
-import { firestore } from '../../../firebase';
 
 const useStyles = makeStyles({
   container: {
@@ -35,6 +36,8 @@ const ReflectionForm = ({ reflection }) => {
   const { currentUser } = useAuth();
   const { setSnackbar } = useSnackbar();
   const [isLoading, setIsLoading] = useState(false);
+  const history = useHistory()
+  const { name  } = useParams()
 
   const questions = useMemo(
     () => reflection
@@ -58,7 +61,7 @@ const ReflectionForm = ({ reflection }) => {
     });
     try {
       setIsLoading(true);
-      await createDbAnswers(answerDocs);
+      await createDbReflectionResponses(answerDocs);
     } catch (err) {
       setSnackbar({
         message: "Failed to submit!",
@@ -67,6 +70,7 @@ const ReflectionForm = ({ reflection }) => {
       })
     } finally {
       setIsLoading(false);
+      history.push("/chapters/" + name)
     }
   }
 
