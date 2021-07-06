@@ -24,6 +24,8 @@ chapters []
     name
     inkVar
  
+ -> to add the primary colour and secondary colour info for each character based on the UI design.
+ 
 */
 
 export const CHARACTER_MAP = [
@@ -31,7 +33,7 @@ export const CHARACTER_MAP = [
     characterId: 1,
     name: "Nadia Ibrahim",
     linkName: "nadia",
-    profileImage: "https://images.generated.photos/mOW1TlV_t3f-cxpA6Ud9Bj-fleXjDLGQC9f0oI0R24E/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAwMzMwMjIuanBn.jpg",
+    profileImage: "/images/nadia_profile.png",
     description: "Nadia wants to become a doctor - but will love and religion get in the way?",
     jsonLink: '../stories/nadia.ink.json',
     jsonFile: NadiaInk,
