@@ -1,3 +1,5 @@
+@import '../../../scss/global/global';
+
 .menu-wrapper {
     max-height: 100vh; 
     @media screen and (min-device-width:481px){
@@ -61,7 +63,10 @@
         color: grey;
     }
     .chapter-num {
-        font-weight: 700;
+        @include h1-new; 
+        // @include inter900; 
+        color: $aqua100;
+        // font-weight: 700;
     }
     .resume {
         margin-top: 17px;

@@ -1,0 +1,13 @@
+$default-gutter: 16px;
+// might not need this for the game since it is fixed pixels
+@function rem-calc($pixels, $gutter: $default-gutter) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($gutter)) {
+    $gutter: $gutter * 1px;
+  }
+
+  @return ($pixels / $gutter) * 1rem;
+}
