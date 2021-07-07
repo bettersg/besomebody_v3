@@ -1,6 +1,8 @@
 @import "../../../scss/global/global";
 
 .SideMenu {
+  // margin: auto; 
+  overflow-y: hidden;
   width: 310px !important; 
   &__top {
     padding: 41px 23px 25px 27px;
@@ -91,37 +93,5 @@
       background-color: red;
       box-shadow: 3px 3px 5px lightgrey;
     }
-  }
-
-  .menu-drawer {
-    height: 100%;
-
-    background-color: honeydew;
-    overflow-y: hidden;
-  }
-
-  .MuiPaper-root
-    .MuiDrawer-paper
-    .MuiDrawer-paperAnchorLeft
-    .MuiPaper-elevation16 {
-    left: auto;
-  }
-
-  .MuiDrawer-paperAnchorLeft {
-    left: auto;
-  }
-  .MuiDrawer-paper {
-    z-index: 1 !important;
-  }
-}
-#menu-items {
-
-  .menu-bottom {
-    // margin-top: 50vh;
-  }
-  hr {
-    width: 100%;
-    margin: 0% !important;
-    padding: 0% !important;
   }
 }

@@ -2,12 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams , Link , useHistory } from 'react-router-dom'
 import SVG from 'react-inlinesvg';
 
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import { Avatar } from '@material-ui/core';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-
 import { useSnackbar } from '../../../contexts/SnackbarContext'
 
 import { useAuth } from '../../../contexts/AuthContext'
@@ -17,24 +12,13 @@ import { getDbUser } from '../../../models/userModel.js';
 import { CHARACTER_MAP } from '../../../models/storyMap';
 import { MENU_ITEMS } from './constants';
 
-
 import "./style.scss"; 
 
-const useStyles = makeStyles({
-  list: {
-    width: "310px",
-  },
-  fullList: {
-    width: "310px",
-  },
-});
-
 export default function SwipeableTemporaryDrawer() {
-  const classes = useStyles();
   const history = useHistory(); 
   const { name  } = useParams(); 
   const persona = CHARACTER_MAP.find((character) => character.linkName === name); 
-  // console.log(persona)
+  console.log(persona)
   // console.log(persona.chapters.map((chapt, i) => {return (chapt.num)}))
 
   // Snackbar Context
@@ -49,7 +33,6 @@ export default function SwipeableTemporaryDrawer() {
     if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
     }
-
     setState({ ...state, [anchor]: open });
   };
 
@@ -65,14 +48,6 @@ export default function SwipeableTemporaryDrawer() {
 	  }
 	  getUser()
 	}, [currentUser.id])
-
-
-  // for the accordion
-  const [expanded, setExpanded] = React.useState(false);
-
-  const handleChange = (panel) => (event, isExpanded) => {
-    setExpanded(isExpanded ? panel : false);
-  };
 
   // for the Logout
   const { logout } = useAuth()
@@ -94,6 +69,7 @@ export default function SwipeableTemporaryDrawer() {
   // the actual menu
   const list = (anchor) => (
     <div
+    
       id="menu-items"
       role="presentation"
       className="SideMenu"
@@ -122,7 +98,6 @@ export default function SwipeableTemporaryDrawer() {
             </div>
           )}
         </div>
-
       </div>
 
       <hr />
@@ -133,13 +108,6 @@ export default function SwipeableTemporaryDrawer() {
           <Link to="/" className="SideMenu__menuitems__label" onClick={logoutUser}><span>Sign Out</span></Link>
         </div>
       </div>
-
-      
-      <div className="menu-bottom">
-        <div className="menu-options">
-        </div>
-      </div>
-
     </div>
   );
 
@@ -148,16 +116,14 @@ export default function SwipeableTemporaryDrawer() {
       {['left'].map((anchor) => (
         <React.Fragment key={anchor}>
           <img src="/commons/home.svg" onClick={toggleDrawer(anchor, true)} className="menu-button" />
-          <SwipeableDrawer
-            anchor={anchor}
-            open={state[anchor]}
-            onClose={toggleDrawer(anchor, false)}
-            onOpen={toggleDrawer(anchor, true)}
-            className="menu-drawer"
-            // containerStyle={{height: 'calc(100% - 64px)', top: 64}}
-          >
-            {list(anchor)}
-          </SwipeableDrawer>
+            <SwipeableDrawer
+              anchor={anchor}
+              open={state[anchor]}
+              onClose={toggleDrawer(anchor, false)}
+              onOpen={toggleDrawer(anchor, true)}
+            >
+              {list(anchor)}
+            </SwipeableDrawer>
         </React.Fragment>
       ))}
     </div>
