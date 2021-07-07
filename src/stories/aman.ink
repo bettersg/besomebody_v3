@@ -48,7 +48,13 @@ VAR aman_2_ending = 0
 VAR aman_3_ending = 0 
 VAR aman_4_ending = 0 
 VAR aman_5_ending = 0 
-
+VAR character_id = 2
+VAR chapter_id = 1
+// VAR aman_2_1c_overcharge = 1
+// VAR aman_2_2_confide = 1
+// VAR aman_2_5_change_look = 0
+// VAR aman_2_6_secret = 0
+// VAR aman_3_1_drink = 1
 
 -> aman_1_intro
 
@@ -770,6 +776,7 @@ Reflection 1
 #background:aman_1_intro.jpg
 #music:aman_intro.mp3
 .
+~ chapter_id = 2
 Chapter 2 #title
 To Be or Not To Be #title
 I am finally done with NS, what an adventure! 
@@ -1532,6 +1539,7 @@ Thank you God, for helping me get this part.  #inner_monologue
 #background:aman_1_intro.jpg
 #music:aman_intro.mp3
 .
+~ chapter_id = 3
 Chapter 3 #title
 Fight or Flight  #title
 
