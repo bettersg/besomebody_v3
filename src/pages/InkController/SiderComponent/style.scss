@@ -1,8 +1,9 @@
 @import "../../../scss/global/global";
 
 .SideMenu {
-  // margin: auto; 
-  overflow-y: hidden;
+  // margin: auto;
+  z-index: 1500; 
+  overflow: hidden !important;
   width: 310px !important; 
   &__background {
     img {
@@ -10,6 +11,8 @@
     }
   }
   &__top {
+    overflow: hidden;
+
     z-index: 1200 !important;
     padding: 41px 23px 25px 27px;
     position: absolute;
@@ -54,7 +57,15 @@
   }
 
   &__bottom {
-    padding-top: 28px;
+    overflow: hidden;
+    padding-top: 27px;
+    .SideMenu {
+      &__menuitems {
+        &__item {
+          margin-bottom: 0px;
+        }
+      }
+    }
   }
   &__menuitems {
     &__item {
@@ -111,4 +122,8 @@
       box-shadow: 3px 3px 5px lightgrey;
     }
   }
+}
+
+.MuiDrawer-paper {
+  overflow-y: hidden !important;
 }

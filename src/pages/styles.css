@@ -127,7 +127,7 @@ body {
   bottom: 0; 
   height: 350px; 
   position: absolute;
-  z-index: 10000; 
+  z-index: 1000; 
   display: block;
   /* test next */
   /* background-color: darkblue;
