@@ -1,97 +1,127 @@
-@import '../../../scss/global/global';
+@import "../../../scss/global/global";
 
-.menu-wrapper {
-    max-height: 100vh; 
-    @media screen and (min-device-width:481px){
-        max-height: 660px; 
-    }
-    .menu-button {
-        position: absolute;
-        color: rgba(243, 243, 243, 0.83);
-        height: 35px;
-        width: 35px; 
-        opacity: 0.5;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        &:active {
-            background-color: grey;
-            box-shadow: 3px 3px 5px lightgrey;
-            -webkit-transition: 0.35s;
-        }
-        &:focus {
-            background-color: red;
-            box-shadow: 3px 3px 5px lightgrey;
-        }
-    }
-
-    
-    .menu-drawer {
-        height: 100%;
-        
-        background-color: honeydew;
-        overflow-y: hidden;
-    }
-    
-    .MuiPaper-root .MuiDrawer-paper .MuiDrawer-paperAnchorLeft .MuiPaper-elevation16 {
-        left: auto;
-    }
-    
-    .MuiDrawer-paperAnchorLeft {
-        left: auto;
-    }
-    .MuiDrawer-paper {
-        z-index: 1 !important;
-    }
-    
-}
-#menu-items {
-    height: 100vh;
-    .menu-username {
-        padding: 0 20px;
-        padding-top: 20px;
-        display: flex;
-        align-items: center;
-    }
-    .menu-description {
-        padding: 20px; 
+.SideMenu {
+  width: 310px !important; 
+  &__top {
+    padding: 41px 23px 25px 27px;
+    .SideMenu {
+      &__current {
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 56px;
+        color: $aqua40;
+      }
+      &__gameDetails {
+        font-size: 48px;
+        font-weight: 900;
+        text-transform: capitalize;
+        margin-bottom: 14px;
+        color: $aqua20;
+      }
+      &__playSection {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        margin-bottom: 61px;
+        &--timeLeft {
+          font-size: 14px;
+          font-weight: 700;
+          color: $aqua80;
+        }
+        &--playButton {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          height: 50px; 
+          width: 50px;
+        }
+      }
     }
-    .arrow-icon {
-        color: grey;
-    }
-    .chapter-num {
-        @include h1-new; 
-        // @include inter900; 
-        color: $aqua100;
-        // font-weight: 700;
-    }
-    .resume {
-        margin-top: 17px;
-        font-size: smaller;
-    }
-    .menu-avatar {
-        padding: 0 20px;
-        height: 48px;
-        width: 48px;
-        margin-right: 15px;
-    }
-    .menu-options {
-        height: 30px;
-        padding: 0 20px;
-        margin-top: 20px; 
-        display: flex;
-        align-items: center;
-    }
-    .menu-bottom {
-        margin-top: 50vh; 
-    }
-    hr {
-        width: 100%; 
-        margin: 0% !important;
-        padding: 0% !important;
-    }
+  }
 
+  &__bottom {
+    padding: 28px 0 26px 26px;
+  }
+  &__menuitems {
+    &__item {
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+    }
+    &__icons {
+      margin-right: 23px;
+      width: 20px;
+    }
+    &__label {
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      color: $white;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  hr {
+    width: 310px; 
+    color: #172153;
+  }
+}
+
+.menu-wrapper {
+  max-height: 100vh;
+  @media screen and (min-device-width: 481px) {
+    max-height: 660px;
+  }
+  .menu-button {
+    position: absolute;
+    color: rgba(243, 243, 243, 0.83);
+    height: 35px;
+    width: 35px;
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:active {
+      background-color: grey;
+      box-shadow: 3px 3px 5px lightgrey;
+      -webkit-transition: 0.35s;
+    }
+    &:focus {
+      background-color: red;
+      box-shadow: 3px 3px 5px lightgrey;
+    }
+  }
+
+  .menu-drawer {
+    height: 100%;
+
+    background-color: honeydew;
+    overflow-y: hidden;
+  }
+
+  .MuiPaper-root
+    .MuiDrawer-paper
+    .MuiDrawer-paperAnchorLeft
+    .MuiPaper-elevation16 {
+    left: auto;
+  }
+
+  .MuiDrawer-paperAnchorLeft {
+    left: auto;
+  }
+  .MuiDrawer-paper {
+    z-index: 1 !important;
+  }
+}
+#menu-items {
+
+  .menu-bottom {
+    // margin-top: 50vh;
+  }
+  hr {
+    width: 100%;
+    margin: 0% !important;
+    padding: 0% !important;
+  }
 }

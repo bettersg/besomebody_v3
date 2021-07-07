@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams , Link , useHistory } from 'react-router-dom'
+import SVG from 'react-inlinesvg';
 
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
@@ -12,15 +13,19 @@ import { useSnackbar } from '../../../contexts/SnackbarContext'
 import { useAuth } from '../../../contexts/AuthContext'
 import { getDbUser } from '../../../models/userModel.js';
 
+// Constants
+import { CHARACTER_MAP } from '../../../models/storyMap';
+import { MENU_ITEMS } from './constants';
+
 
 import "./style.scss"; 
 
 const useStyles = makeStyles({
   list: {
-    width: 250,
+    width: "310px",
   },
   fullList: {
-    width: 'auto',
+    width: "310px",
   },
 });
 
@@ -86,41 +91,49 @@ export default function SwipeableTemporaryDrawer() {
   // the actual menu
   const list = (anchor) => (
     <div
-      className={clsx(classes.list, {
-        [classes.fullList]: anchor === 'top' || anchor === 'bottom',
-      })}
       id="menu-items"
       role="presentation"
+      className="SideMenu"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
+      style={{backgroundColor:"#664EFC"}}
     >
-      <div className="menu-username">
-      <Link to={"/user/"+userFromDb?.id}><Avatar alt={userFromDb?.username} src="/static/images/avatar/1.jpg" className="menu-avatar" />
-        {userFromDb?.username}</Link>
-      </div>
-      <div className="menu-description">
-        <div>
-          <div>You’re currently playing:</div>
-          <div className="chapter-num">{name.toUpperCase()} </div>          
+      <div className="SideMenu__top" >
+        <div className="SideMenu__current">Currently Playing</div>
+        <div className="SideMenu__gameDetails">
+          {name},
+          <br/> Chapter 2
         </div>
-        <div>
-          <ArrowForwardIosIcon className="arrow-icon"/>
+        <div className="SideMenu__playSection">
+          <div className="SideMenu__playSection--timeLeft">Time left in chapter: 3mins</div>
+          <div className="SideMenu__playSection--playButton" style={{backgroundColor: "#FC684F"}}>
+            <SVG src="/side_menu/play-button.svg" />
+          </div>
+        </div>
+        
+        <div className="SideMenu__menuitems" >
+          {MENU_ITEMS.map((content) => 
+            <div className="SideMenu__menuitems__item">
+              <SVG src={content.src} className="SideMenu__menuitems__icons"/>
+              <Link to="/" className="SideMenu__menuitems__label"><span>{content.label}</span></Link>
+            </div>
+          )}
+        </div>
+
+      </div>
+
+      <hr />
+      
+      <div className="SideMenu__bottom">
+        <div className="SideMenu__menuitems__item" >
+          <SVG src="/side_menu/logout.svg" className="SideMenu__menuitems__icons"/>
+          <Link to="/" className="SideMenu__menuitems__label" onClick={logoutUser}><span>Sign Out</span></Link>
         </div>
       </div>
-      <hr/>
-      <div className="menu-options">
-       <Avatar alt="C" src="/" style={{marginRight:"15px"}}/>  <Link to="/"><span>Character Selection</span></Link>
-      </div>
-      <div className="menu-options">
-        <Avatar alt="C" src="/" style={{marginRight:"15px"}}/>  <Link to={"/chapters/" + name}><span>Chapter Menu</span></Link>
-      </div>
-      <div className="menu-options">
-        <Avatar alt="H" src="/" style={{marginRight:"15px"}}/> <Link to={"/help" }><span>Help</span></Link>
-      </div>
+
+      
       <div className="menu-bottom">
-        <hr/>
         <div className="menu-options">
-          <Avatar alt="A" src="/" style={{marginRight:"15px"}}/> <Link to="/" onClick={logoutUser}><span>Sign Out</span></Link>
         </div>
       </div>
 
