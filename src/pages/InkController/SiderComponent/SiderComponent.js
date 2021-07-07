@@ -31,8 +31,11 @@ const useStyles = makeStyles({
 
 export default function SwipeableTemporaryDrawer() {
   const classes = useStyles();
-  const history = useHistory()
-  const { name  } = useParams()
+  const history = useHistory(); 
+  const { name  } = useParams(); 
+  const persona = CHARACTER_MAP.find((character) => character.linkName === name); 
+  // console.log(persona)
+  // console.log(persona.chapters.map((chapt, i) => {return (chapt.num)}))
 
   // Snackbar Context
   const { setSnackbar } = useSnackbar()
