@@ -75,9 +75,19 @@ export default function SwipeableTemporaryDrawer() {
       className="SideMenu"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
-      style={{backgroundColor:"#664EFC"}}
     >
-      <div className="SideMenu__top" >
+      <div className="SideMenu__background">
+        <img src={persona.profileImage} />
+      </div>
+      
+      {/* <div className="SideMenu__top" style={{backgroundColor:persona.primaryColour}}> */}
+      <div 
+        className="SideMenu__top" 
+        style={{
+          backgroundImage:`linear-gradient(to bottom, 
+            ${persona.primaryColour+"B3"}, ${persona.primaryColour} 50%)`
+        }}
+      >
         <div className="SideMenu__current">Currently Playing</div>
         <div className="SideMenu__gameDetails">
           {name},
@@ -85,7 +95,7 @@ export default function SwipeableTemporaryDrawer() {
         </div>
         <div className="SideMenu__playSection">
           <div className="SideMenu__playSection--timeLeft">Time left in chapter: 3mins</div>
-          <div className="SideMenu__playSection--playButton" style={{backgroundColor: "#FC684F"}}>
+          <div className="SideMenu__playSection--playButton" style={{backgroundColor: persona.secondaryColour}}>
             <SVG src="/side_menu/play-button.svg" />
           </div>
         </div>
@@ -98,16 +108,17 @@ export default function SwipeableTemporaryDrawer() {
             </div>
           )}
         </div>
-      </div>
-
       <hr />
-      
       <div className="SideMenu__bottom">
         <div className="SideMenu__menuitems__item" >
           <SVG src="/side_menu/logout.svg" className="SideMenu__menuitems__icons"/>
           <Link to="/" className="SideMenu__menuitems__label" onClick={logoutUser}><span>Sign Out</span></Link>
         </div>
       </div>
+      </div>
+
+
+      
     </div>
   );
 

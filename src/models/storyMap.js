@@ -37,8 +37,8 @@ export const CHARACTER_MAP = [
     description: "Nadia wants to become a doctor - but will love and religion get in the way?",
     jsonLink: '../stories/nadia.ink.json',
     jsonFile: NadiaInk,
-    primaryColour: '#ff0000',
-    secondaryColour: '#ffff00',
+    primaryColour: '#664EFC',
+    secondaryColour: '#FC684F',
     playable: true,
     variables: {
       nadia_mood: 5,

@@ -4,8 +4,20 @@
   // margin: auto; 
   overflow-y: hidden;
   width: 310px !important; 
+  &__background {
+    img {
+      width: 310px; 
+    }
+  }
   &__top {
+    z-index: 1200 !important;
     padding: 41px 23px 25px 27px;
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    // height: 568px;
+    width: 310px; 
+    // background-color: black !important;
     .SideMenu {
       &__current {
         font-size: 15px;
@@ -42,7 +54,7 @@
   }
 
   &__bottom {
-    padding: 28px 0 26px 26px;
+    padding-top: 28px;
   }
   &__menuitems {
     &__item {
@@ -67,6 +79,7 @@
   hr {
     width: 310px; 
     color: #172153;
+    margin-left: -27px;
   }
 }
 
