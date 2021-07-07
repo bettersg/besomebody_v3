@@ -24,6 +24,8 @@ chapters []
     name
     inkVar
  
+ -> to add the primary colour and secondary colour info for each character based on the UI design.
+ 
 */
 
 export const CHARACTER_MAP = [
@@ -31,10 +33,12 @@ export const CHARACTER_MAP = [
     characterId: 1,
     name: "Nadia Ibrahim",
     linkName: "nadia",
-    profileImage: "https://images.generated.photos/mOW1TlV_t3f-cxpA6Ud9Bj-fleXjDLGQC9f0oI0R24E/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAwMzMwMjIuanBn.jpg",
+    profileImage: "/images/nadia_profile.png",
     description: "Nadia wants to become a doctor - but will love and religion get in the way?",
     jsonLink: '../stories/nadia.ink.json',
     jsonFile: NadiaInk,
+    primaryColour: '#ff0000',
+    secondaryColour: '#ffff00',
     playable: true,
     variables: {
       nadia_mood: 5,
@@ -48,7 +52,11 @@ export const CHARACTER_MAP = [
         knotTag: "nadia_1_intro",
         summary: "Nadia gets cornered by her father about being with Gavin. What should she do?",
         playable: true,
-        images : ["cat.jpg", "dog.jpg"],
+        images: [
+          "/images/nadia_1_intro.jpg",
+          "/images/nadia_1_night_street.jpg",
+          "/images/nadia_1_hdb_carpark.jpg",
+        ],
         endings: [
           {
             endingId: 1,
@@ -119,6 +127,8 @@ export const CHARACTER_MAP = [
     description: "Aman wants to model and study overseas - but will his culture make things harder?",
     jsonLink: '../stories/aman.ink.json',
     jsonFile: AmanInk,
+    primaryColour: '#0000cc',
+    secondaryColour: '#cc00cc',
     playable: true,
     variables: {
       aman_mood: 5,
