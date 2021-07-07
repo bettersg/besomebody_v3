@@ -204,12 +204,141 @@ Yeah she messaged me earlier just now.  #speaker_self
 Said she had something to pass to me. Do you know anything about it? #speaker_self
 No, she didn't say. #speaker_left
 ... is that a new sweater? #speaker_left
+ 
+-> nadia_1_2_narration 
 
 
+=== nadia_1_2_narration ===
+#knot:nadia_1_2_narration
+#ui:narrator
+#background:nadia_1_clothes.jpg
+Friday morning, packing my school bag for PE class.
+Track pants or PE shorts? Track pants la. The teacher said it was ok...
+-> nadia_1_1
 
 
+=== nadia_1_2 ===
+#knot:nadia_1_2
+#ui:scene
+#background:nadia_1_school.jpg
+#speaker_right_image:nadia_chloe.png
+#speaker_right_name:Chloe
+Want some SPF? #speaker_right
+Yeah sure, just a bit. #speaker_self
+I just don’t want to get too tanned, you know?  #speaker_right
+Never too young to start sun protection, that's what my mom always says — oh! #speaker_right
+Yes Chloe, I know, the penetrating and damaging rays of UV —  #speaker_self
+No, I mean, how come you're wearing track pants? #speaker_right
+It's not weird, right? #speaker_self
++ [I feel more comfortable in these, actually] -> nadia_1_2a
++ [Hahaha maybe I just need more UV protection for my legz!] -> nadia_1_2b
++ [My mum got them for me] -> nadia_1_2c
+
+= nadia_1_2a
+I feel more comfortable in these, actually. My mom just got them for me. #speaker_self
+Really? It looks a bit warm, don't you think? #speaker_right
+Yeah they are, a bit. But that's just the material. #speaker_self
+Well, do you want to borrow my shorts? I have an extra pair. #speaker_right
+No, it's okay — #speaker_self
+It's clean, don't worry. I brought them for hockey later — #speaker_right
+No, as in, I FEEL more comfortable in these pants, and not.. shorts. #speaker_self
+I don't understand. You just said they were warm and not comfortable. #speaker_right
+Wait, is this about, like, showing too much? #speaker_right
+Something like that. #speaker_self
+Oh. You know you have nothing to be ashamed of right? #speaker_right
+All bodies are beautiful, and honestly, you have GREAT legs — #speaker_right
+Hahaha...Ok, ok you don't have to go all Body Shop female empowerment, I get it. #speaker_self
+But that's not what I mean. #speaker_self
+What do you mean then? #speaker_right
+I just.. don't like showing so much skin. #speaker_self
+And you're right, thank you, I DO have great legs.  #speaker_self
+But I think I don't like being super conscious — #speaker_self
+— Nadia, you are hardly a narcissist. Your IG is cat pictures. #speaker_right
+And cats are great. #speaker_self
+But my point is, I like being modest. I like covering up. It.. quiets my mind. #speaker_self
+I CARE about how I look, but I would like to care a bit less. You know? #speaker_self
+So you can focus on other things. #speaker_right
+Yes, exactly. Figure out who I am, in my head, in my heart. #speaker_self
+Ahem, Gavin. #speaker_right
+What I want to do after A's.. Everything else — #speaker_self
+— is fluff. Ok I get it. It's like that in hockey too when we're training for A Divs.  #speaker_right
+Clarity. Mental discipline. #speaker_right
+Yeah, clarity. I think that's what religion is about. And discipline with self. #speaker_self
+At least, that's what I think of being Muslim. #speaker_self
+Will you wear a hijab one day? Or is it tudung? Did I get that right? #speaker_right
+Both names are okay. My mom started wearing a tudung when I was in primary school. #speaker_self
+I wear a tudung also actually. Most times. Sometimes. #speaker_self
+Can sometimes?? #speaker_right
+(Laughs) I don't know Chloe, I am also figuring it out. #speaker_self
+I had no idea you wear a tudung outside of school.. #speaker_right
+Well, we're always in school really. #speaker_self
+Do you think the other Malay girls in school also wear a tudung? #speaker_right
+Chloe, there are only two other Malay people in this school, and they are GUYS. #speaker_self
+Really?? That's true huh.. #speaker_right
+Yup! Now can we go? I don't need Mrs. Ee to shoot us her laser eyes for being late. That woman — #speaker_self
+— is permanently on PMS. #speaker_right
+
+-> nadia_1_3_narration
+
+= nadia_1_2b
+Track pants! Immediate protection against the sun, SPF 1500 guaranteed. #speaker_self
+Haha, very funny Nad. Just because I don’t want to get too dark.. #speaker_right
+It's true though! And for fighting off mosquitoes. #speaker_self
+Ok but seriously though, what’s up? Is it your parents again? #speaker_right
+I don’t mind really — #speaker_self
+You always say that. #speaker_right
+So what? #speaker_self
+So.. listen, your parents are great. #speaker_right
+But you gotta admit that they’re a bit controlling. #speaker_right
+Like your mom not wanting you to get “too tanned”? “Too dark?” #speaker_self
+Exactly. You have to draw the line with moms. #speaker_right
+You were fine wearing shorts for PE, why are they making such a fuss?  #speaker_right
+It’s a uniform for a reason. #speaker_right
+Ok, but I did get them in the same colour as our school shorts. #speaker_self
+Wait, you bought them? This was your idea? #speaker_right
+Yes, it was my idea Chloe. And they’re just track pants.  #speaker_self
+My mom brought it up, I liked the idea, cleared it with the Teachers. Voila. #speaker_self
+I guess I just didn’t realise.. #speaker_right
+What do you mean? #speaker_self
+Nothing. I didn’t think you were that conservative too. #speaker_right
+What did you think then? #speaker_self
+I don’t know. That you were more modern. I mean, you’re not like other Malays. #speaker_right
+Right. #speaker_self
+Anyway, let’s go. The last time I was late, Mrs Ee made me run extra laps. #speaker_right
 
 
+-> nadia_1_3_narration
+
+= nadia_1_2c
+My mom got them for me. They look ok? #speaker_self
+How did you find the exact navy colour of our shorts… #speaker_right
+A lot of hunting and endless picture sending on WhatsApp. #speaker_self
+Sounds like an island-wide fashion hunt. #speaker_right
+Almost. Was just a random idea I had, and she just wanted to help. A lot. #speaker_self
+You don’t seem that keen on it though? #speaker_right
+I am! I just feel.. weird. #speaker_self
+(Getting impatient) They look fine though! And you don’t look weird. #speaker_right
+I won’t stick out? #speaker_self
+Well — #speaker_right
+— see, that’s what I thought!! #speaker_self
+I’m not going to lie, but is it that big a deal? Do you want to borrow some shorts instead? #speaker_right
+No. It’s not a big deal. #speaker_self
+And it’s just PE. #speaker_right
+Just PE. #speaker_self
+Feeling better now? #speaker_right
+Yeah. Just wishing I wasn’t like, one of the three Malay students in our year. #speaker_self
+I know. Are you friends with them actually? You never mention them. #speaker_right
+Kinda, I only see them at Malay class and that’s it. #speaker_self
+Well! That’s good news for Gavin. #speaker_right
+Hey! We’re just friends. #speaker_self
+If you say so. #speaker_right
+And he’s not the jealous kind. #speaker_self
+Definitely not. OKAY let’s go before they make us run extra laps! #speaker_right
+
+-> nadia_1_3_narration
+
+
+=== nadia_1_3_narration ===
 
 
 -> END
