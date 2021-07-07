@@ -83,24 +83,28 @@
   }
 }
 
-.menu-wrapper {
-  max-height: 100vh;
-  @media screen and (min-device-width: 481px) {
-    max-height: 660px;
-  }
-  .menu-button {
+.MenuWrapper {
+  &__menuButton {
     position: absolute;
+    top: 16px; 
+    left: 16px; 
     color: rgba(243, 243, 243, 0.83);
-    height: 35px;
-    width: 35px;
+    height: 48px;
+    width: 48px;
     opacity: 0.5;
     display: flex;
     justify-content: center;
     align-items: center;
-    &:active {
-      background-color: grey;
-      box-shadow: 3px 3px 5px lightgrey;
-      -webkit-transition: 0.35s;
+    &:active, &:hover {
+      .MenuWrapper {
+        &__menuButton {
+          #menu-button { 
+            #circle {
+              fill: grey !important; 
+            }
+          }
+        }
+      }
     }
     &:focus {
       background-color: red;
