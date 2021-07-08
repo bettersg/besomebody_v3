@@ -226,7 +226,7 @@ I know this is your decision in the end. #speaker_1
 I mean, I know what I wish you would choose. #speaker_1
 But I will support you, no matter what. #speaker_1
 You’re the best.  #speaker_self
-Awww... #speaker_self #emoji:heart.png
+Awww... 😍 #speaker_self
 So - did you decide...?  #speaker_1
 You know what.  #speaker_self
 I wasn’t sure up till this very moment, but I’ve decided now.  #speaker_self
@@ -844,7 +844,7 @@ Will you be thinking of me as much when you’re in Australia? #speaker_1
 + [Even more!]
     Absence makes the heart grow fonder, you know that right? #speaker_self
     I am so happy to hear you say that.  #speaker_1
-    muah #speaker_1 #emoji:kiss.png
+    😘 😘 😘 #speaker_1 
     I know long distance is tough, but I’m committed to you babe. #speaker_self
     Same, jaan (dear).  #speaker_1
 
@@ -860,7 +860,7 @@ Will you be thinking of me as much when you’re in Australia? #speaker_1
     That is not what I would have liked to hear, but I appreciate that you are always honest with me. #speaker_1
     To be honest, I have been thinking and worrying along the same lines too.  #speaker_1
     But we can deal with things one step at a time. Right? #speaker_1
-    Yes!  #speaker_1  #emoji:heart.png
+    Yes! ❤️  #speaker_1 
 
 - Okay I’m leaving my place now, see you soon <3 #speaker_1
 
@@ -890,7 +890,8 @@ I’ve applied to dozens of casting calls in the past month, but nobody replies.
 #speaker_1_name:Unknown Number
 Hi, this is Elsa from Everyday Productions! We got your email. #speaker_1
 Can you send me your unedited full body pic, close up shot and side shots pls. And also your per day rate. #speaker_1
-Hi Elsa, thanks for getting back to me! Please see my photos attached. #speaker_self  #emoji:attachment.png 
+Hi Elsa, thanks for getting back to me! Please see my photos attached.  #speaker_self  
+📎photo1.jpg 📎photo2.jpg  #speaker_self  
 
 #ui:scene
 #background:aman_1_intro.jpg
@@ -1040,8 +1041,8 @@ Well, I can always order something non-alcoholic.  #inner_monologue
 #speaker_1_name:Zhihao
 Yes onz. See you. #speaker_self
 What you doing anyway? #speaker_1
-Thinking of you.  #speaker_self #emoji:heart-eyes.png 
-Uh... #speaker_1 #emoji:vomit.png
+Thinking of you. 😍  #speaker_self
+🤢 🤮 #speaker_1
 #ui:scene
 #background:aman_home.jpg
 #speaker_left_image:aman_mother.png
@@ -1073,7 +1074,7 @@ Let me be honest with you... #speaker_1
 {not aman_2_1c_overcharge: Your rates were actually surprisingly low... but...} #speaker_1
 Look-wise, they prefer someone with more clean look.  #speaker_1
 No offence yup. Just that more relatable without turban and long beard.  #speaker_1
-All the best ya. #speaker_1 #emoji:smiley
+😁 All the best ya. #speaker_1
 + I see. Fine. Bye[.] #speaker_self
 + Ah ok thanks[!] Hope you’ll keep me in mind if other roles come up! #speaker_self
 - Bye! #speaker_1
@@ -1117,7 +1118,7 @@ The phone rings. It's Selinder.
 #speaker_left_name:Selinder
 Hi jaan (dear), how are you? What are you doing? #speaker_left
 Just turning in for the night. How about you? #speaker_self
-Thinking of you. #speaker_left #emoji:heart.png
+Thinking of you. ❤️  #speaker_left
 Weird, I told Zhihao the same thing just now, but he didn’t seem touched. #speaker_self
 Ha! You boys are a riot. #speaker_left
 + [I had a bad day] -> aman_2_4_bad_day

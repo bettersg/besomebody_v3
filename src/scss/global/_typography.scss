@@ -1,0 +1,33 @@
+@import './spacing';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+$inter: 'Inter', sans-serif;
+$staatliches: 'Staatliches', cursive;
+
+/* Take note */
+// spaces in figma replace with "-"
+// $inter is the inter font, can adjust font weight accordingly
+
+// inter fonts
+@mixin h1-new {
+    font-family: $inter; 
+    font-style: normal;
+    font-weight: 900;
+    font-size: 72px;
+    line-height: 90%;
+    letter-spacing: -0.02em;
+    color: #000000; 
+}
+
+// staatliches fonts
+@mixin h1 {
+    font-family: $staatliches;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 90%;
+    letter-spacing: 0.02em;
+    color: #000000;
+}
+
