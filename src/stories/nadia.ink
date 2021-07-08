@@ -222,7 +222,7 @@ No, she didn't say. #speaker_left
 #background:nadia_1_clothes.jpg
 Friday morning, packing my school bag for PE class.
 Track pants or PE shorts? Track pants la. The teacher said it was ok...
--> nadia_1_1
+-> nadia_1_2
 
 
 === nadia_1_2 ===
