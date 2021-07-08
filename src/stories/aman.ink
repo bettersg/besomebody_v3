@@ -19,8 +19,8 @@ For cut-and-paste ease
 #background:whatsapp.png
 #chat_group_title:Gavin Wong
 #chat_group_image:gavin_profile.jpg
-#speaker1_name:Gavin
-#speaker2_name:Eric -> can be left blank
+#speaker_1_name:Gavin
+#speaker_2_name:Eric -> can be left blank
 #timestamp:21.34
 
 #knot:aman_2_haircut_no
@@ -101,7 +101,7 @@ Zhi Hao and I are at a Sikh community event early on a Saturday morning.
 #knot:aman_1_1
 #ui:scene
 #background:aman_sikh_event_hall.jpg
-#speaker_left_image:zhihao_smiling.png
+#speaker_left_image:zhihao.png
 #speaker_left_name:Zhihao
 Oi! Focus la. You’re double-packing the fruits. #speaker_left
 Crap. Thanks. #speaker_self
@@ -1568,7 +1568,7 @@ Selinder, Lukman (and his girlfriend Sammy, who is Chinese), and Zhihao are all 
 #knot:aman_3_1
 #ui:scene
 #background:restaurant.jpg
-#speaker_left_image:zhihao_smiling.png 
+#speaker_left_image:zhihao.png 
 #speaker_left_name:Zhihao 
 #speaker_right_image:lukman.png 
 #speaker_right_name:Lukman  
@@ -1668,7 +1668,7 @@ Ain’t gonna veto that... #speaker_self
 #background:whatsapp.png
 #chat_group_title:Jothi
 #chat_group_image:jothi.jpg
-#speaker1_name:Jothi
+#speaker_1_name:Jothi
 #timestamp:22.17
 Come home. Now. #speaker_1
 I'm celebrating with my friends! What happened? #speaker_self

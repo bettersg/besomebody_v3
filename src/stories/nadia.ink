@@ -19,8 +19,8 @@ For cut-and-paste ease
 #background:whatsapp.png
 #chat_group_title:Gavin Wong
 #chat_group_image:gavin_profile.jpg
-#speaker1_name:Gavin
-#speaker2_name:Eric -> can be left blank
+#speaker_1_name:Gavin
+#speaker_2_name:Eric -> can be left blank
 #timestamp:21.34
 
 #knot:nadia_2_haircut_no
@@ -123,7 +123,7 @@ Crap! I'm still WEARING his hoodie.  #inner_monologue
 #background:whatsapp.png
 #chat_group_title:Gavin
 #chat_group_image:gavin_profile.jpg
-#speaker1_name:Gavin
+#speaker_1_name:Gavin
 I'm sorry!! Your hoodie is still with me 😳 #speaker_self
 💩 #speaker_1
 yaaa forgot about night study today, didn't bring the winter wear #speaker_self
@@ -177,7 +177,7 @@ I know, I know. #speaker_left
 #background:whatsapp.png
 #chat_group_title:Gavin
 #chat_group_image:gavin_profile.jpg
-#speaker1_name:Gavin
+#speaker_1_name:Gavin
 Need me to bring any of my notes from last term tomorrow? #speaker_self
 Nah all good #speaker_1
 and your hoodie #speaker_self
@@ -188,6 +188,11 @@ looks cute on you. I like it. #speaker_1
 -> nadia_1_1d
 
 === nadia_1_1c ===
+#knot:nadia_1_1c
+#ui:scene
+#background:nadia_1_car.jpg
+#speaker_left_image:nadia_abah.png
+#speaker_left_name:Abah
 Oh look! Just in time, Misteri Jam 12..  #speaker_self
 You and your radio ghost stories. #speaker_left
 Abah, you don't pretend! You love these as much as I do.  #speaker_self
@@ -198,6 +203,7 @@ Ya, my electricity bill also win. #speaker_left
 -> nadia_1_1d
 
 === nadia_1_1d ===
+#knot:nadia_1_1d
 #ui:scene
 #background:nadia_1_hdb_carpark.jpg
 Later go say goodnight to your mother ok?  #speaker_left
@@ -360,7 +366,7 @@ A message from Gavin!
 #background:whatsapp.png
 #chat_group_title:Gavin
 #chat_group_image:gavin_profile.jpg
-#speaker1_name:Gavin
+#speaker_1_name:Gavin
 #timestamp:16.14
 Where u at? #speaker_1
 Canteen! Having early dinner, super hungry after PE #speaker_self
@@ -390,7 +396,7 @@ A message from Azlin
 #background:whatsapp.png
 #chat_group_title:Azlin
 #chat_group_image:azlin_profile.jpg
-#speaker1_name:Azlin
+#speaker_1_name:Azlin
 #timestamp:16.18
 nad what time are you gg to be home today? #speaker_1
 Probs be at night study again. What’s up? #speaker_self
@@ -629,7 +635,7 @@ I’m not imagining it, right? I need to talk to a voice of reason!
 #background:whatsapp.png
 #chat_group_title:Azlin
 #chat_group_image:nadia_azlin.jpg
-#speaker1_name:Azlin
+#speaker_1_name:Azlin
 #timestamp:17:25
 Hallo are you still at my place? Am just leaving school #speaker_self
 ala i left already :( #speaker_1
@@ -730,7 +736,7 @@ Really? It’s just how we are. K, maintain... #inner_monologue
 #background:whatsapp.png
 #chat_group_title:Azlin
 #chat_group_image:nadia_azlin.jpg
-#speaker1_name:Azlin
+#speaker_1_name:Azlin
 No la. Where got.  #speaker_self
 We’re good friends what. Friends sometimes fight. What matters is how we make up after. #speaker_self
 “make up” #speaker_1
