@@ -69,12 +69,12 @@ export default function SwipeableTemporaryDrawer() {
   // the actual menu
   const list = (anchor) => (
     <div
-    
       id="menu-items"
       role="presentation"
       className="SideMenu"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
+      style={{backgroundColor:persona.primaryColour, height: "100%"}}
     >
       <div className="SideMenu__background">
         <img src={persona.profileImage} />
