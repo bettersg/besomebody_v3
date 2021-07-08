@@ -20,6 +20,17 @@ $staatliches: 'Staatliches', cursive;
     color: #000000; 
 }
 
+@mixin p2-normal-body {
+    font-family: Inter;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 160%;
+
+	/* identical to box height, or 32px */
+	color: #000000;
+}
+
 // staatliches fonts
 @mixin h1 {
     font-family: $staatliches;
@@ -29,5 +40,19 @@ $staatliches: 'Staatliches', cursive;
     line-height: 90%;
     letter-spacing: 0.02em;
     color: #000000;
+}
+
+@mixin h4 {
+    font-family: Staatliches;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 22px;
+	line-height: 27px;
+	/* identical to box height */
+
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+
+	color: #000000;
 }
 

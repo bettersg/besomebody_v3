@@ -1,28 +1,61 @@
 // variables
 
-// APP colours
+// APP colours =======================
 
 // midnight
 $midnight100: #172153; 
+$midnight80: #464E75;
+$midnight60: #747A98;
+$midnight40: #A2A6BA;
+$midnight20: #D1D3DD;
+$midnight10: #E8E9EE;
+$dark1: #072435;
+$dark2: #000A11;
 
 // aqua
-$aqua10: rgba(236, 250, 251, 1); 
-$aqua20: rgba(216, 244, 246, 1); 
-$aqua40: rgba(177, 234, 238, 1); 
-$aqua80: #64D5DC; 
-$aqua100: rgba(61, 202, 211, 1); 
+$aqua10: #ecfafb; 
+$aqua20: #d8f4f6; 
+$aqua40: #b1eaee; 
+$aqua60: #8ADFE5;
+$aqua80: #64D5DC;
+$aqua100: #3dcad3; 
+$aqua1: #19A3AD;
+$aqua2: #0B6E7D;
+$aquaBase: #00F0FF;
 
 // lapis
 $lapis100: #6C70DD; 
+$lapis80: #898DE4;
+$lapis60: #A7A9EB;
+$lapis40: #C4C6F1;
+$lapis20: #E2E2F8;
+$lapis10: #F0F1FC;
+$lapisDark1: #4F4DBE;
+$lapisDark2: #3D349D;
+$lapisBase: #664EFC;
 
 // tangerine
 $tangerine100: #FC684F; 
+$tangerine80: #FF8944;
+$tangerine60: #FFA674;
+$tangerine20: #FEE1DC;
+$tangerine10: #FFF0ED;
+$tangerineDark1: #D12419;
+$tangerineDark2: #AB0601;
+$tangerineBase: #FF3715;
 
 // lemongrass
 $lemongrass100: #CFEC5A; 
+$lemongrass180: #D8F07B;
+$lemongrassDark2: #5D931A;
+$lemongrassBase: #C4FF47;
 
 // chicky
 $chicky100: #FFE55E; 
+$chicky40: #FFF5BE;
+$chickyDark1: #FFBB0B;
+$chickyDark2: #8A5C00;
+$chickyBase: #FFE141;
 
 // white
 $white: white; 
