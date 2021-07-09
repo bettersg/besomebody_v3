@@ -18,15 +18,9 @@ For cut-and-paste ease
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Gavin Wong
-<<<<<<< Updated upstream
-#chat_group_image:gavin_profile.jpg
-#speaker1_name:Gavin
-#speaker2_name:Eric -> can be left blank
-=======
 #chat_group_image:cha_nadia_gavinprofileicon.jpg
 #speaker_1_name:Gavin
 #speaker_2_name:Eric -> can be left blank
->>>>>>> Stashed changes
 #timestamp:21.34
 
 #knot:nadia_2_haircut_no
