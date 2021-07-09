@@ -9,18 +9,24 @@ For cut-and-paste ease
 #knot:nadia_2_haircut_no
 #ui:scene
 #background:nadia_school.jpg
-#speaker_left_image:zhihao_smiling.png -> can be left blank
+#speaker_left_image:cha_nadia_zhihaosmiling.png -> can be left blank
 #speaker_left_name:Zhihao -> can be left blank
-#speaker_right_image:eric_angry.png -> can be left blank
+#speaker_right_image:cha_nadia_ericangry.png -> can be left blank
 #speaker_right_name:Eric  -> can be left blank
 
 #knot:nadia_2_haircut_no
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Gavin Wong
+<<<<<<< Updated upstream
 #chat_group_image:gavin_profile.jpg
 #speaker1_name:Gavin
 #speaker2_name:Eric -> can be left blank
+=======
+#chat_group_image:cha_nadia_gavinprofileicon.jpg
+#speaker_1_name:Gavin
+#speaker_2_name:Eric -> can be left blank
+>>>>>>> Stashed changes
 #timestamp:21.34
 
 #knot:nadia_2_haircut_no
@@ -735,14 +741,14 @@ No la. Where got.  #speaker_self
 We’re good friends what. Friends sometimes fight. What matters is how we make up after. #speaker_self
 “make up” #speaker_1
 ...or make out?  #speaker_1
-OMG.  #speaker_self
-ARE.  #speaker_self
-U.  #speaker_self
-STILL.  #speaker_self
-ON.  #speaker_self
-GAVIN.  #speaker_self
-GIVE UP LA.  #speaker_self
-MAMPOS. #speaker_self
+OMG.  #speaker_1
+ARE.  #speaker_1
+U.   #speaker_1
+STILL.   #speaker_1
+ON.   #speaker_1
+GAVIN.   #speaker_1
+GIVE UP LA.  #speaker_1
+MAMPOS. #speaker_1
 + [No la. We’re just friends]
     ~ nadia_1_ending = 3
     No la. We’re just friends. He’s nice. So I’m nice back.  #speaker_self
@@ -823,7 +829,7 @@ MAMPOS. #speaker_self
 .
 ~ chapter_id = 2
 CHAPTER 2 #title
-Study Buddy #title
+The Mall #title
 
 -> nadia_2_1_narration 
 
@@ -831,17 +837,20 @@ Study Buddy #title
 === nadia_2_1_narration ===
 #knot:nadia_2_1_narration
 #ui:narrator
-#background:nadia_1_night_street.jpg
-blah
+#background:nadia_shoppingmall.jpg
+3:10pm in the mall with Gavin
 -> nadia_2_1
 
 
 === nadia_2_1 ===
 #knot:nadia_2_1
 #ui:scene
-#background:nadia_1_car.jpg
-#speaker_left_image:nadia_abah.png
-#speaker_left_name:Abah
+#background:nadia_shoppingmall.jpg
+#speaker_left_image:cha_nadia_gavin.png
+#speaker_left_name:Gavin
+Hi so sorry I’m late! #speaker_self
+Hey! You look nice. #speaker_left
+Oh! He’s reaching out for a hug. #inner_monologue
 
 
 -> END
