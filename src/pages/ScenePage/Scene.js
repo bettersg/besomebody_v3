@@ -22,7 +22,22 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     opacity: 0.8,    
     top: '400px',
-  }
+  }, 
+  choicesButton: {
+    width: "330px", 
+    height: "48px", 
+    margin: "auto", 
+    borderRadius: "24px", 
+    border: "solid 1px #3DCAD328", 
+    backgroundColor: "white", 
+    color: "#0B6E7D", 
+    marginBottom: "12px", 
+    '&:hover': {
+      backgroundColor: '#B1EAEE',
+      borderColor: '#B1EAEE',
+      boxShadow: 'none',
+    },
+  },
 }))
 
 const Scene = (props) => {
@@ -82,7 +97,7 @@ const Scene = (props) => {
                         step.tags[0]==='speaker_self' ? "ScenePage__name" : "ScenePage__noName"}`}
                     style={{backgroundColor:persona.primaryColour}}
                   >
-                    {console.log(step.tags[0])}
+                    {/* {console.log(step.tags[0])} */}
                     {step.tags[0] === 'speaker_left' ? specialTags.speaker_left_name : null}
                     {step.tags[0] === 'speaker_right' ? specialTags.speaker_right_name : null}
                     {step.tags[0]==='speaker_self'? name:null}
@@ -91,46 +106,108 @@ const Scene = (props) => {
                   <Fade in>
                     <div>
                       {/* this is gradient div for inner monologue */}
-                      <div className={step.tags[0]==='inner_monologue'?"ScenePage__story__innerMono":null}></div>
-                      <div className={`ScenePage__story__text ${step.tags[0]==='inner_monologue'?"innerMonologue":"default"}`}>
-                        <div>{step.tags[0]==='inner_monologue'? 'INNER MONOLOGUE':null}</div>
-                        {step.text}
+                      <div 
+                        className={step.tags[0]==='inner_monologue'?"ScenePage__story__innerMono":null}
+                        style={{background: `linear-gradient(180deg, rgba(79, 77, 190, 0) 13.02%, ${persona.primaryColour} 100%)`}}
+                      ></div>
+                      <div 
+                        className={`ScenePage__story__text ${step.tags[0]==='inner_monologue'?"innerMonologue":"default"}`}
+                        style={{background: step.tags[0]==='inner_monologue'?`linear-gradient(180deg, ${persona.primaryColour} 44.7%, ${persona.primaryColour} 100%)`:"white"}}
+                      >
+                        <div style={{marginLeft:"24px"}}>{step.tags[0]==='inner_monologue'? 'INNER MONOLOGUE':null}</div>
+                        <div className="ScenePage__story__text--line">{step.text}</div>
+
+
+                        {/* this if else is needed to toggle between "Next Button" and choices (if any) */}
+                        <div 
+                          style={{
+                            backgroundColor:`${step.tags[0]==='inner_monologue'?persona.primaryColour:"white"}`, 
+                            // background: `${step.tags[0]!=='inner_monologue'?"background: linear-gradient(180deg, #B1EAEE 0%, #D1D3DD 100%)":null}`, 
+                            background: "linear-gradient(180deg, #B1EAEE00 0%, #D1D3DD 100%)", 
+                            paddingTop: `${choices.length > 0?"62px":null}`,
+                            // background: `${step.tags[0]!=='inner_monologue'?"linear-gradient(180deg, rgba(177, 234, 238, 0) 0%, #D1D3DD 100%);":null}`
+                          }}
+                        >
+                          {choices.length > 0 ? 
+                            <div  className="ScenePage__choicesWrapper" >            
+                              {choices.map((choice) => (
+                                
+                                <Box
+                                    key={choice.text}
+                                    className="ScenePage__choicesWrapper__choices"
+                                  >
+                                    <Fade in={choice.text}  timeout={800}>
+                                      <Button
+                                        variant="contained"
+                                        color="primary"
+                                        onClick={() => setChoice(choice.index)}
+                                        className={classes.choicesButton}
+                                      >
+                                        <Typography variant="caption">{choice.text}</Typography>
+                                      </Button>
+                                    </Fade>
+                                  </Box>
+                                  
+                              ))}
+                            </div>
+                            : 
+                            <NextButton getStory={getStory} />
+
+                          }
+
+                        </div>
                       </div>
+                      
                     </div>
                     </Fade>
+
+                    {/* this if else is needed to toggle between "Next Button" and choices (if any)
+                    <div 
+                      style={{
+                        backgroundColor:`${step.tags[0]==='inner_monologue'?persona.primaryColour:"white"}`, 
+                        background: `${step.tags[0]!=='inner_monologue'?"linear-gradient(180deg, rgba(177, 234, 238, 0) 0%, #D1D3DD 100%)":null}`, 
+                        paddingTop: `${choices.length > 0?"62px":null}`,
+                        // background: `${step.tags[0]!=='inner_monologue'?"linear-gradient(180deg, rgba(177, 234, 238, 0) 0%, #D1D3DD 100%);":null}`
+                      }}
+                    >
+                      {choices.length > 0 ? 
+                        <div  className="ScenePage__choicesWrapper" >            
+                          {choices.map((choice) => (
+                            
+                            <Box
+                                key={choice.text}
+                                className="ScenePage__choicesWrapper__choices"
+                              >
+                                <Fade in={choice.text}  timeout={800}>
+                                  <Button
+                                    variant="contained"
+                                    color="primary"
+                                    onClick={() => setChoice(choice.index)}
+                                    className={classes.choicesButton}
+                                  >
+                                    <Typography variant="caption">{choice.text}</Typography>
+                                  </Button>
+                                </Fade>
+                              </Box>
+                              
+                          ))}
+                        </div>
+                        : 
+                        <NextButton getStory={getStory} />
+
+                      }
+
+                    </div> */}
                 </div>
+
+
 
               </div>
               )
             }            
 
           <div ref={elementRef} />
-        {/* this if else is needed to toggle between "Next Button" and choices (if any) */}
-        {choices.length > 0 ? 
-          <div  className="ScenePage__choicesWrapper" >            
-            {choices.map((choice) => (
-              
-              <Box
-                  key={choice.text}
-                  className="ScenePage__choicesWrapper__choices"
-                >
-                  <Fade in={choice.text}  timeout={800}>
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      onClick={() => setChoice(choice.index)}
-                    >
-                      <Typography variant="caption">{choice.text}</Typography>
-                    </Button>
-                  </Fade>
-                </Box>
-                
-            ))}
-          </div>
-          : 
-          <NextButton getStory={getStory} />
-
-        }
+        
         </div>
       </Box>
       

@@ -42,8 +42,7 @@
       background: linear-gradient(180deg, rgba(79, 77, 190, 0) 13.02%, #4F4DBE 100%);
     }
     &__text {
-      height: 200px; 
-      padding: 32px 24px 28px 24px;
+      min-height: 200px; 
       &.default {
         background: $white;
         box-shadow: 0px -8px 24px 0px #0000001F; 
@@ -52,17 +51,20 @@
         background: linear-gradient(180deg, #4F4DBE 44.7%, #664EFC 100%);
         color: white;
       }
+      &--line {
+        padding: 32px 24px 28px 24px;
+      }
     }
   }
   &__choicesWrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: absolute;
-    bottom: 0;
+    // position: absolute;
+    // bottom: 0;
     &__choices {
       padding: 5px;
-      margin: auto;
+      display: flex;
     }
   }
 }
