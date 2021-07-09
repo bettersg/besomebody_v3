@@ -19,6 +19,7 @@
   }
 
   &__name {
+    @include inter-name; 
     color: $white;
     height: 35px;
     width: 95px; 
@@ -28,31 +29,29 @@
     border-radius: 24px;
     text-transform: capitalize;
     position: relative;
-    bottom: 20px;
+    bottom: -20px;
     margin-left: 20px;
-  }
-  &__noName {
-    margin-bottom: 32px;
   }
 
   &__story {
     position: absolute; 
     bottom: 0;
     width: 100%; 
-    height: 200px; 
-    // padding: 5px 10px; 
-    // border-radius: 10px 10px 0 0 ;
+    &__innerMono {
+      height: 48px; 
+      background: linear-gradient(180deg, rgba(79, 77, 190, 0) 13.02%, #4F4DBE 100%);
+    }
     &__text {
-      margin: 0px 24px 28px 24px;
-    }
-    &.default {
-      background: $white;
-      box-shadow: 0px -8px 24px 0px #0000001F; //box shadows all not working now 
-    }
-    &.innerMonologue {
-      background: linear-gradient(180deg, #4F4DBE 44.7%, #664EFC 100%);
-      box-shadow: 0px -8px 24px rgba(0, 0, 0, 0.88);
-      color: white;
+      height: 200px; 
+      padding: 32px 24px 28px 24px;
+      &.default {
+        background: $white;
+        box-shadow: 0px -8px 24px 0px #0000001F; 
+      }
+      &.innerMonologue {
+        background: linear-gradient(180deg, #4F4DBE 44.7%, #664EFC 100%);
+        color: white;
+      }
     }
   }
   &__choicesWrapper {

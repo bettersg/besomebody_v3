@@ -72,20 +72,31 @@ const Scene = (props) => {
                   // my={1} 
                   key={step.text} 
                   style={{ scrollSnapAlign: 'start' }}
-                  className={`ScenePage__story ${step.tags[0]==='inner_monologue'?"innerMonologue":"default"}`}
+                  className={`ScenePage__story`}
 
                 >
                   <div 
-                    className={`${step.tags[0] !== "speaker_left" && step.tags[0] !== 'speaker_right' && step.tags[0]!=='speaker_self' ? "ScenePage__noName" : "ScenePage__name"}`}
+                    className={`
+                      ${(step.tags[0] === "speaker_left" && specialTags.speaker_left_name) || 
+                        (step.tags[0] === 'speaker_right' && specialTags.speaker_right_name) || 
+                        step.tags[0]==='speaker_self' ? "ScenePage__name" : "ScenePage__noName"}`}
                     style={{backgroundColor:persona.primaryColour}}
                   >
+                    {console.log(step.tags[0])}
                     {step.tags[0] === 'speaker_left' ? specialTags.speaker_left_name : null}
                     {step.tags[0] === 'speaker_right' ? specialTags.speaker_right_name : null}
                     {step.tags[0]==='speaker_self'? name:null}
-                    {/* {step.tags[0]==='inner_monologue'? 'Inner Monologue':null} */}
                   </div>
-                  <Fade in={step.text}  timeout={500}>
-                      <div className="ScenePage__story__text">{step.text}</div>
+                  {/* <Fade in={step.text}  timeout={500}> */}
+                  <Fade in>
+                    <div>
+                      {/* this is gradient div for inner monologue */}
+                      <div className={step.tags[0]==='inner_monologue'?"ScenePage__story__innerMono":null}></div>
+                      <div className={`ScenePage__story__text ${step.tags[0]==='inner_monologue'?"innerMonologue":"default"}`}>
+                        <div>{step.tags[0]==='inner_monologue'? 'INNER MONOLOGUE':null}</div>
+                        {step.text}
+                      </div>
+                    </div>
                     </Fade>
                 </div>
 
