@@ -7,6 +7,8 @@ import { useInkContext } from '../../contexts/InkContext'
 import { useParams } from 'react-router-dom'
 import "./style.scss"
 
+import { CHARACTER_MAP } from '../../models/storyMap';
+
 
 const useStyles = makeStyles((theme) => ({
   paragraphWrapper: {
@@ -16,14 +18,6 @@ const useStyles = makeStyles((theme) => ({
     height: '640px',
     bottom: 0, 
   },
-  // textWrapper: {
-  //   background: theme.palette.grey[100],
-  //   opacity: 0.9,
-  //   position: 'relative',
-  //   top: '350px',
-  //   height: '150px',
-  //   scrollSnapType: 'y mandatory',
-  // },
   choiceWrapper: {
     position: 'relative',
     opacity: 0.8,    
@@ -36,6 +30,8 @@ const Scene = (props) => {
   const { getStory, choices, setChoice, specialTags } = useInkContext()
   const classes = useStyles({ image: specialTags.background })
   const { name } = useParams()
+  const persona = CHARACTER_MAP.find((character) => character.linkName === name); 
+
   
   // ========================================================
   // Help to scroll to bottom of the paragraphs render screen
@@ -67,21 +63,33 @@ const Scene = (props) => {
         </div>
       <Box className={classes.paragraphWrapper}  height="100%">
         <div
-          className={`ScenePage__textWrapper ${step.tags[0]==='inner_monologue'?"innerMonologue":"default"}`}
           overflow="scroll"
+
           >
             {step && (
-              <Box my={1} key={step.text} style={{ scrollSnapAlign: 'start' }}>
-                <Typography variant="overline">
-                  {step.tags[0] === 'speaker_left' ? specialTags.speaker_left_name : null}
-                  {step.tags[0] === 'speaker_right' ? specialTags.speaker_right_name : null}
-                  {step.tags[0]==='speaker_self'? name:null}
-                  {step.tags[0]==='inner_monologue'? 'Inner Monologue':null}
-                </Typography>
-                <Fade in={step.text}  timeout={500}>
-                    <Typography>{step.text}</Typography>
-                  </Fade>
-              </Box>
+              <div>
+                <div  
+                  // my={1} 
+                  key={step.text} 
+                  style={{ scrollSnapAlign: 'start' }}
+                  className={`ScenePage__story ${step.tags[0]==='inner_monologue'?"innerMonologue":"default"}`}
+
+                >
+                  <div 
+                    className={`${step.tags[0] !== "speaker_left" && step.tags[0] !== 'speaker_right' && step.tags[0]!=='speaker_self' ? "ScenePage__noName" : "ScenePage__name"}`}
+                    style={{backgroundColor:persona.primaryColour}}
+                  >
+                    {step.tags[0] === 'speaker_left' ? specialTags.speaker_left_name : null}
+                    {step.tags[0] === 'speaker_right' ? specialTags.speaker_right_name : null}
+                    {step.tags[0]==='speaker_self'? name:null}
+                    {/* {step.tags[0]==='inner_monologue'? 'Inner Monologue':null} */}
+                  </div>
+                  <Fade in={step.text}  timeout={500}>
+                      <div className="ScenePage__story__text">{step.text}</div>
+                    </Fade>
+                </div>
+
+              </div>
               )
             }            
 

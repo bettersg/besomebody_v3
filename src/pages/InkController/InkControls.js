@@ -16,6 +16,7 @@ const InkControls = () => {
     saveStory,
     loadSavedStory,
     resetSavedStory,
+    globalVariables,
   } = useInkContext()
 
   /* 
@@ -30,7 +31,7 @@ const InkControls = () => {
       {getStory && (
         <Box width="100%">
           <div className="game-menu">
-            <SwipeableTemporaryDrawer />
+            <SwipeableTemporaryDrawer globalVariables={ globalVariables } />
           </div>
           {/* <NextButton getStory={getStory}/> */}
         </Box>
