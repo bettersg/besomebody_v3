@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom'
 
 import ProfileAvatar from "./ProfileAvatar"
@@ -14,12 +14,26 @@ import Button from '@material-ui/core/Button';
 import ChapterBox from "./ChapterBox"
 import NavBar from "./NavBar"
 import { CHARACTER_MAP } from '../../models/storyMap'
+import { getDbUser, updateDbUser }  from '../../models/userModel.js';
+import { useAuth } from '../../contexts/AuthContext';
 
 
 import "../styles.css";
 
 const CharacterChapterPage = () => {
     const { name } = useParams();
+    const { currentUser } = useAuth();
+
+    const [userFromDb, setUserFromDb] = useState(null)
+  
+	useEffect(() => {
+	  const getUser = async () => {
+		const user = await getDbUser(currentUser.id)
+		return setUserFromDb(user)
+	  }
+	  getUser()
+	}, [currentUser.id])
+
 
     const persona = CHARACTER_MAP.find((character) => character.linkName === name);
     // const chapters = STORY_MAP.find((character) => character.id === 1);    
@@ -35,11 +49,11 @@ const CharacterChapterPage = () => {
                     <ProfileAvatar avatarInfo={persona} />                   
                 </Box>
                 <div style={{paddingBottom:"20%"}}>
-                    {persona.chapters.length > 0 
+                    {persona.chapters.length > 0 && userFromDb
                         ? persona.chapters.map((chapt,i) => {
                             return (
                                 <div style={{display: "flex", justifyContent: "center"}}  key={i}>
-                                    <ChapterBox chaptDetails={chapt} total={persona.chapters.length} key={i} />
+                                    <ChapterBox chaptDetails={chapt} total={persona.chapters.length} key={i} user={userFromDb}/>
                                 </div>
                             )
                         })

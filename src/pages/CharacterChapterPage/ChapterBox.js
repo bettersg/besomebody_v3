@@ -27,7 +27,6 @@ import Scene from '../ScenePage/Scene'
 import DefaultInk from '../DefaultInk'
 import Survey from '../SurveyPage/Survey'
 import { getDbSavedStates } from '../../models/saveStateModel';
-
 import "./style.css"; 
 
 const useStyles = makeStyles({
@@ -67,7 +66,7 @@ const getInkJson = (nameParam) => {
 
 export default function ChapterBox(props) {
     const classes = useStyles();
-    const { chaptDetails, total } = props
+    const { chaptDetails, total, user } = props
     const [saveState,setSaveState] = useState(null);
     const [isLoading,setIsLoading] = useState(true);
     const history = useHistory()
@@ -96,14 +95,13 @@ export default function ChapterBox(props) {
         currentKnot,
         getStory,
         startStoryFrom,
-    } = useInkContext()
+    } = useInkContext();
 
     const getEndingsUnlocked = () => {
-        const propertyNames = Object.keys(saveState.globalVariables).filter(function (propertyName) {
-            return propertyName.indexOf( `${name}_${chapterId}_ending`) === 0;
-        });
-        return propertyNames;
+        const achievements = user.achievements.filter(achievement => achievement.character===characterId&&achievement.chapter===chapterId);
+        return achievements.length ? achievements[0].endings.length : 0;
     }
+
     
     const getSaveStates = async () => {
         const savedStateRes = await getDbSavedStates(saveDataId)
@@ -119,7 +117,6 @@ export default function ChapterBox(props) {
         initialiseUseInkHook(inkJson, characterId, chapterId);
         if (currentUser) getSaveStates()
     }, [])
-
 
     var rows = []; 
     for (var j = 0; j < chaptDetails.endings.length; j++) {
@@ -183,7 +180,7 @@ export default function ChapterBox(props) {
                         </Typography>
                         {rows}
                         <span className="chaptText" style={{marginLeft:"5px"}}>
-                            {!isLoading&&saveState ? getEndingsUnlocked().length : 0} of {chaptDetails.endings.length} endings unlocked</span>
+                            {!isLoading ? getEndingsUnlocked() : 0} of {chaptDetails.endings.length} endings unlocked</span>
                     </CardContent>
                 </Grid>
                 <CardActions>
