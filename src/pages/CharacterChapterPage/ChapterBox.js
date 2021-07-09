@@ -116,7 +116,7 @@ export default function ChapterBox(props) {
 
     const handleChapterStart = () => {
         setIsLoading(true);
-        console.log(chaptDetails.images);
+        // console.log(chaptDetails.images);
         loadImage(chaptDetails.images)
         .then(function (allImgs) {
             console.log(allImgs.length, 'images loaded!', allImgs);

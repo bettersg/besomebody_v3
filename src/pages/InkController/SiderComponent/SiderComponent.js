@@ -10,16 +10,17 @@ import { getDbUser } from '../../../models/userModel.js';
 
 // Constants
 import { CHARACTER_MAP } from '../../../models/storyMap';
-import { MENU_ITEMS } from './constants';
+// import { MENU_ITEMS } from './constants';
 
 import "./style.scss"; 
 
-export default function SwipeableTemporaryDrawer() {
+export default function SwipeableTemporaryDrawer(props) {
   const history = useHistory(); 
-  const { name  } = useParams(); 
+  const { name } = useParams();
+  const { globalVariables } = props
   const persona = CHARACTER_MAP.find((character) => character.linkName === name); 
-  console.log(persona)
-  // console.log(persona.chapters.map((chapt, i) => {return (chapt.num)}))
+  
+  // console.log(persona)
 
   // Snackbar Context
   const { setSnackbar } = useSnackbar()
@@ -91,22 +92,37 @@ export default function SwipeableTemporaryDrawer() {
         <div className="SideMenu__current">Currently Playing</div>
         <div className="SideMenu__gameDetails">
           {name},
-          <br/> Chapter 2
+          <br/> Chapter {globalVariables.chapter_id}
         </div>
         <div className="SideMenu__playSection">
-          <div className="SideMenu__playSection--timeLeft">Time left in chapter: 3mins</div>
+          {/* <div className="SideMenu__playSection--timeLeft">Time left in chapter: 3mins</div> */}
           <div className="SideMenu__playSection--playButton" style={{backgroundColor: persona.secondaryColour}}>
             <SVG src="/side_menu/play-button.svg" />
           </div>
         </div>
         
         <div className="SideMenu__menuitems" >
-          {MENU_ITEMS.map((content) => 
-            <div className="SideMenu__menuitems__item">
-              <SVG src={content.src} className="SideMenu__menuitems__icons"/>
-              <Link to="/" className="SideMenu__menuitems__label"><span>{content.label}</span></Link>
-            </div>
-          )}
+          {/* I know why you did it as a map, but this makes it very hard to pass in dynamic values to the links. I've reverted it to individual links */}
+          <div className="SideMenu__menuitems__item">
+            <SVG src="/side_menu/icon.svg" className="SideMenu__menuitems__icons"/>
+            <Link to="/" className="SideMenu__menuitems__label"><span>Character Menu</span></Link>
+          </div>
+
+          <div className="SideMenu__menuitems__item">
+            <SVG src="/side_menu/heart.svg" className="SideMenu__menuitems__icons"/>
+            <Link to={"/chapters/"+ name} className="SideMenu__menuitems__label"><span>Chapter Menu</span></Link>
+          </div>
+
+          <div className="SideMenu__menuitems__item">
+            <SVG src="/side_menu/profile.svg" className="SideMenu__menuitems__icons"/>
+            <Link to={"/user/" + currentUser.id} className="SideMenu__menuitems__label"><span>Account Menu</span></Link>
+          </div>
+
+          <div className="SideMenu__menuitems__item">
+            <SVG src="/side_menu/help.svg" className="SideMenu__menuitems__icons"/>
+            <Link to="/help" className="SideMenu__menuitems__label"><span>Help</span></Link>
+          </div>
+
         </div>
       <hr />
       <div className="SideMenu__bottom">
