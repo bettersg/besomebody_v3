@@ -22,7 +22,7 @@
     @include inter-name; 
     color: $white;
     height: 35px;
-    width: 95px; 
+    padding: 4px 16px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,6 +31,7 @@
     position: relative;
     bottom: -20px;
     margin-left: 20px;
+    white-space: nowrap;
   }
 
   &__story {

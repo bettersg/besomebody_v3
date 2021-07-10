@@ -47,7 +47,13 @@ const Scene = (props) => {
   const { name } = useParams()
   const persona = CHARACTER_MAP.find((character) => character.linkName === name); 
 
-  
+  function displayTextWidth(text, font) {
+    let canvas = displayTextWidth.canvas || (displayTextWidth.canvas = document.createElement("canvas"));
+    let context = canvas.getContext("2d");
+    context.font = font;
+    let metrics = context.measureText(text);
+    return metrics.width+32;
+  }
   // ========================================================
   // Help to scroll to bottom of the paragraphs render screen
   // ========================================================
@@ -95,9 +101,17 @@ const Scene = (props) => {
                       ${(step.tags[0] === "speaker_left" && specialTags.speaker_left_name) || 
                         (step.tags[0] === 'speaker_right' && specialTags.speaker_right_name) || 
                         step.tags[0]==='speaker_self' ? "ScenePage__name" : "ScenePage__noName"}`}
-                    style={{backgroundColor:persona.primaryColour}}
+                    style={{
+                      backgroundColor:persona.primaryColour, 
+                      width: displayTextWidth(step.tags[0] === "speaker_left"?specialTags.speaker_left_name :
+                            step.tags[0] === 'speaker_right'?specialTags.speaker_right_name :
+                            step.tags[0]==='speaker_self'?name : "", "bold 22px Inter")
+                    }}
                   >
                     {/* {console.log(step.tags[0])} */}
+                    {console.log(displayTextWidth(step.tags[0] === "speaker_left"?specialTags.speaker_left_name.length :
+                            step.tags[0] === 'speaker_right'?specialTags.speaker_right_name.length :
+                            step.tags[0]==='speaker_self'?name.length : "0px", "800 22pt inter"))}
                     {step.tags[0] === 'speaker_left' ? specialTags.speaker_left_name : null}
                     {step.tags[0] === 'speaker_right' ? specialTags.speaker_right_name : null}
                     {step.tags[0]==='speaker_self'? name:null}
