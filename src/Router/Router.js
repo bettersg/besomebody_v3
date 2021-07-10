@@ -24,11 +24,12 @@ class Router extends Component {
 
     return (
       <BrowserRouter basename={process.env.REACT_APP_BASENAME}>
-        {/* {bar} // TODO: implement "bar" as a menubar above the game components below */}
+        <Switch>
+          <Route path={["/", "/intro", "/characterchoice", "/chapters/:name"]} exact component={AudioPlayer} />
+        </Switch>
 
         <Switch>
           <Route path="/" exact>
-            <AudioPlayer/>
             {user ? <CharacterChoicePage /> : <LandingPage />}
           </Route>
 
@@ -42,7 +43,6 @@ class Router extends Component {
 
           <PrivateRoute path="/chapters/:name" exact>
             <CharacterChapterPage />
-            <AudioPlayer/>
           </PrivateRoute>
 
           <PrivateRoute path="/story/:name" exact>
