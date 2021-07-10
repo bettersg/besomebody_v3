@@ -17,6 +17,11 @@
       bottom: 100px;
     }
   }
+  &__nameWrapper {
+    position: relative;
+    top: -20px;
+    width: 100%; 
+  }
 
   &__name {
     @include inter-name; 
@@ -30,8 +35,9 @@
     text-transform: capitalize;
     position: relative;
     bottom: -20px;
-    margin-left: 20px;
+    margin: 0px 20px;
     white-space: nowrap;
+
   }
 
   &__story {

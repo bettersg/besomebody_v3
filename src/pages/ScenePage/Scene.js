@@ -96,26 +96,29 @@ const Scene = (props) => {
                   className={`ScenePage__story`}
 
                 >
-                  <div 
-                    className={`
-                      ${(step.tags[0] === "speaker_left" && specialTags.speaker_left_name) || 
-                        (step.tags[0] === 'speaker_right' && specialTags.speaker_right_name) || 
-                        step.tags[0]==='speaker_self' ? "ScenePage__name" : "ScenePage__noName"}`}
-                    style={{
-                      backgroundColor:persona.primaryColour, 
-                      width: displayTextWidth(step.tags[0] === "speaker_left"?specialTags.speaker_left_name :
-                            step.tags[0] === 'speaker_right'?specialTags.speaker_right_name :
-                            step.tags[0]==='speaker_self'?name : "", "bold 22px Inter")
-                    }}
-                  >
-                    {/* {console.log(step.tags[0])} */}
-                    {console.log(displayTextWidth(step.tags[0] === "speaker_left"?specialTags.speaker_left_name.length :
-                            step.tags[0] === 'speaker_right'?specialTags.speaker_right_name.length :
-                            step.tags[0]==='speaker_self'?name.length : "0px", "800 22pt inter"))}
-                    {step.tags[0] === 'speaker_left' ? specialTags.speaker_left_name : null}
-                    {step.tags[0] === 'speaker_right' ? specialTags.speaker_right_name : null}
-                    {step.tags[0]==='speaker_self'? name:null}
-                  </div>
+                  {/* <div className="ScenePage__nameWrapper"> */}
+                    <div 
+                      className={`
+                        ${(step.tags[0] === "speaker_left" && specialTags.speaker_left_name) || 
+                          (step.tags[0] === 'speaker_right' && specialTags.speaker_right_name) || 
+                          step.tags[0]==='speaker_self' ? "ScenePage__name" : "ScenePage__noName"}`}
+                      style={{
+                        backgroundColor:persona.primaryColour, 
+                        width: displayTextWidth(step.tags[0] === "speaker_left"?specialTags.speaker_left_name :
+                              step.tags[0] === 'speaker_right'?specialTags.speaker_right_name :
+                              step.tags[0]==='speaker_self'?name : "", "bold 22px Inter"),
+                        float: step.tags[0] === 'speaker_right'?"right":null, 
+                        top: step.tags[0] === 'speaker_right'?"-20px":null, 
+                        bottom: step.tags[0] === 'speaker_right'?null:"-20px", 
+                      }}
+                    >
+                      {/* {console.log(step.tags[0])} */}
+                      {step.tags[0] === 'speaker_left' ? specialTags.speaker_left_name : null}
+                      {step.tags[0] === 'speaker_right' ? specialTags.speaker_right_name : null}
+                      {step.tags[0]==='speaker_self'? name:null}
+                    </div>
+
+                  {/* </div> */}
                   {/* <Fade in={step.text}  timeout={500}> */}
                   <Fade in>
                     <div>
