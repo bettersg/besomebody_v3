@@ -10,11 +10,17 @@
       position: absolute !important;
       left: 0;
       bottom: 100px;
+      &.nonSpeaker {
+        filter: brightness(30%);
+      }
     }
     &--right {
       position: absolute !important;
       right: 0;
       bottom: 100px;
+      &.nonSpeaker {
+        filter: brightness(30%);
+      }
     }
   }
   &__nameWrapper {

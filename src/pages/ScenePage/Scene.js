@@ -47,12 +47,25 @@ const Scene = (props) => {
   const { name } = useParams()
   const persona = CHARACTER_MAP.find((character) => character.linkName === name); 
 
+  // functions 
+
   function displayTextWidth(text, font) {
     let canvas = displayTextWidth.canvas || (displayTextWidth.canvas = document.createElement("canvas"));
     let context = canvas.getContext("2d");
     context.font = font;
     let metrics = context.measureText(text);
     return metrics.width+32;
+  }
+
+  function checkSpeakerInCurrentParagraphs () {
+    var allChar = []
+    currentParagraphs.map(content => {
+      if (!allChar.includes(content.tags[0])) {
+        allChar.push(content.tags[0])
+      }
+    }) 
+    return (allChar)
+    // console.log(allChar)
   }
   // ========================================================
   // Help to scroll to bottom of the paragraphs render screen
@@ -77,6 +90,10 @@ const Scene = (props) => {
   return (
     <Fade  in={true} timeout={500}>
       <div className="ScenePage">
+        <div className="ScenePage__nonSpeaker">
+          {checkSpeakerInCurrentParagraphs().includes('speaker_left')  ? <img src={"/images/" + specialTags.speaker_left_image} className="ScenePage__speaker--left nonSpeaker"/> : null}
+          {checkSpeakerInCurrentParagraphs().includes('speaker_right') ? <img src={"/images/" + specialTags.speaker_right_image} className="ScenePage__speaker--right nonSpeaker"/> : null}
+        </div>
         <div className="ScenePage__speaker">
           {step.tags[0] === 'speaker_left' ? <img src={"/images/" + specialTags.speaker_left_image} className="ScenePage__speaker--left"/> : null}
           {step.tags[0] === 'speaker_right' ? <img src={"/images/" + specialTags.speaker_right_image} className="ScenePage__speaker--right"/> : null}
@@ -97,6 +114,7 @@ const Scene = (props) => {
 
                 >
                   {/* <div className="ScenePage__nameWrapper"> */}
+                  <Fade in={step.text}  timeout={900}>
                     <div 
                       className={`
                         ${(step.tags[0] === "speaker_left" && specialTags.speaker_left_name) || 
@@ -112,15 +130,17 @@ const Scene = (props) => {
                         bottom: step.tags[0] === 'speaker_right'?null:"-20px", 
                       }}
                     >
-                      {/* {console.log(step.tags[0])} */}
+                      {console.log(currentParagraphs)}
                       {step.tags[0] === 'speaker_left' ? specialTags.speaker_left_name : null}
                       {step.tags[0] === 'speaker_right' ? specialTags.speaker_right_name : null}
                       {step.tags[0]==='speaker_self'? name:null}
                     </div>
 
+                  </Fade>
+
                   {/* </div> */}
-                  {/* <Fade in={step.text}  timeout={500}> */}
-                  <Fade in>
+                  <Fade in={step.text}  timeout={500}>
+                  {/* <Fade in> */}
                     <div>
                       {/* this is gradient div for inner monologue */}
                       <div 
