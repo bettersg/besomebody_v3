@@ -123,7 +123,7 @@ const Scene = (props) => {
                           style={{
                             backgroundColor:`${step.tags[0]==='inner_monologue'?persona.primaryColour:"white"}`, 
                             // background: `${step.tags[0]!=='inner_monologue'?"background: linear-gradient(180deg, #B1EAEE 0%, #D1D3DD 100%)":null}`, 
-                            background: "linear-gradient(180deg, #B1EAEE00 0%, #D1D3DD 100%)", 
+                            background: "linear-gradient(180deg, rgba(177, 234, 238, 0), rgba(177, 234, 238, 50%), #D1D3DD", 
                             paddingTop: `${choices.length > 0?"62px":null}`,
                             // background: `${step.tags[0]!=='inner_monologue'?"linear-gradient(180deg, rgba(177, 234, 238, 0) 0%, #D1D3DD 100%);":null}`
                           }}
