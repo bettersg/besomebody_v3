@@ -26,6 +26,7 @@ const Reflection = ({ reflectionId: propsReflectionId , globalVariables}) => {
 
     const updateUserSaveGame = async () => {
       const saveStateData = [globalVariables];
+      // const saveStateData = [someAchievementsShape] -- RYAN to fix
       try {
         await updateDbUser(globalVariables, currentUser.id);
       } catch (err) {
