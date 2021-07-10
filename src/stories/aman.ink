@@ -42,15 +42,20 @@ Minigame // must add some text
 */
 
 // DECLARE GLOBAL VARIABLES
-VAR character_id = 1 
-VAR chapter_id = 1
+VAR character_id = 2
+VAR chapter_id = 0
 
 VAR aman_mood = 10
-VAR aman_1_ending = 0 
-VAR aman_2_ending = 0 
-VAR aman_3_ending = 0 
-VAR aman_4_ending = 0 
-VAR aman_5_ending = 0 
+VAR chapter_1_ending = 0 
+VAR chapter_2_ending = 0 
+VAR chapter_3_ending = 0 
+VAR chapter_4_ending = 0 
+VAR chapter_5_ending = 0 
+VAR chapter_6_ending = 0 
+VAR chapter_7_ending = 0 
+VAR chapter_8_ending = 0 
+VAR chapter_9_ending = 0 
+
 // VAR aman_2_1c_overcharge = 0
 // VAR aman_2_2_confide = 0
 // VAR aman_2_5_change_look= 0
@@ -72,6 +77,7 @@ VAR aman_5_ending = 0
 #background:aman_1_intro.jpg
 #music:aman_intro.mp3
 .
+~ chapter_id = 1
 Aman Singh #title
 Sat Sri Akaal! I am Aman Singh. 
 As a Sikh, I keep my turban and beard, and wear the steel bangle, or kara. 
@@ -505,13 +511,13 @@ Aman beta, now that the hardest part is over, you should start thinking about wh
 If only I could freeze time here. #inner_monologue
 With everything so simple, and pure... #inner_monologue
 
--> aman_1_ending_1
+-> chapter_1_ending_1
 
-=== aman_1_ending_1 ===
-#knot:aman_1_ending_1
-#ending:aman_1_ending_1
+=== chapter_1_ending_1 ===
+#knot:chapter_1_ending_1
+#ending:chapter_1_ending_1
 // multiple ways to record the ending so that we can check in ink later if the player chose this ending or the other one. this knot is not presented to the user in the game.
-~ aman_1_ending = 1
+~ chapter_1_ending = 1
 
 -> aman_1_reflection
  
@@ -735,12 +741,12 @@ Aman beta, now that the hardest part is over, you should start thinking about wh
 If only I could freeze time here. #inner_monologue
 With everything so simple, and pure... #inner_monologue
 
--> aman_1_ending_2
+-> chapter_1_ending_2
 
-=== aman_1_ending_2 ===
-#knot:aman_1_ending_2
-#ending:aman_1_ending_2
-~ aman_1_ending = 2
+=== chapter_1_ending_2 ===
+#knot:chapter_1_ending_2
+#ending:chapter_1_ending_2
+~ chapter_1_ending = 2
 // mulitple ways to record the ending so that we can check in ink later if the player chose this ending or the other one. this knot is not presented to the user in the game.
 
 
@@ -806,9 +812,9 @@ Two months after finishing NS.
 #knot:aman_2_1
 #ui:scene
 #background:aman_bedroom.jpg
-{aman_1_ending_1: -> aman_2_1_ending1 }
-{aman_1_ending_2: -> aman_2_1_ending2 }
-{not aman_1_ending_2 && not aman_1_ending_1: -> aman_2_1_ending1}        // ONLY FOR DEBUGGING. REMOVE IN PRODUCTION
+{chapter_1_ending_1: -> aman_2_1_ending1 }
+{chapter_1_ending_2: -> aman_2_1_ending2 }
+{not chapter_1_ending_2 && not chapter_1_ending_1: -> aman_2_1_ending1}        // ONLY FOR DEBUGGING. REMOVE IN PRODUCTION
 
 
 = aman_2_1_ending1 
@@ -1213,8 +1219,8 @@ This sucks. Only three more months before I leave for Melbourne, and I haven’t
 Maybe - maybe if I changed my look? Slick my hair back, and wear it in a ponytail instead... #inner_monologue
 + [Change my look] -> aman_2_6_narration
 + [Keep my look] 
-    {aman_1_ending_1: I cut my hair for NS, and it didn't make life easier. I won't change my look again. } #inner_monologue
-    {not aman_1_ending_1: I didn't even cut my hair to make life easy for NS - I'm not going to change my look now. } #inner_monologue
+    {chapter_1_ending_1: I cut my hair for NS, and it didn't make life easier. I won't change my look again. } #inner_monologue
+    {not chapter_1_ending_1: I didn't even cut my hair to make life easy for NS - I'm not going to change my look now. } #inner_monologue
     I remember what Ma used to say, when I got bullied in school. #inner_monologue
     Sikhs are courageous, and face their challenges head on. Never giving up. Always remaining in chardikala (optimism). #inner_monologue
     I won’t give up. I’ll keep trying, just as I am. #inner_monologue
@@ -1261,8 +1267,8 @@ Wearing a cap instead of a turban. #speaker_self
 They ask you take out your turban? #speaker_left
 Not they ask. But it’s hard to get roles with a turban.   #speaker_self
 So I’ve been sending out my pics with my hair tied back.  #speaker_self
-{aman_1_ending_1: -> aman_2_6_cut_hair}
-{not aman_1_ending_1: -> aman_2_6_keep_hair}
+{chapter_1_ending_1: -> aman_2_6_cut_hair}
+{not chapter_1_ending_1: -> aman_2_6_keep_hair}
 
 = aman_2_6_cut_hair
 Wah lau eh. Funny la you. That time before NS, you cut your hair, then you decide to keep long again.  #speaker_left
@@ -1380,8 +1386,8 @@ Can you come down for an audition next Tuesday at 10am? #speaker_1
 Oh and one more thing, we need our character to have a turban and a full beard.  #speaker_1
 You’re okay not to cut your hair or trim your beard for a while, right? #speaker_1
 
-{aman_1_ending_1: -> aman_2_7_cut_hair}
-{not aman_1_ending_1: -> aman_2_7_keep_hair}    // this should actually be aman_1_ending_2 but it breaks unless you play the entire game in one sitting. need to pull from savegame?
+{chapter_1_ending_1: -> aman_2_7_cut_hair}
+{not chapter_1_ending_1: -> aman_2_7_keep_hair}    // this should actually be chapter_1_ending_2 but it breaks unless you play the entire game in one sitting. need to pull from savegame?
 
 = aman_2_7_cut_hair
 #ui:scene
@@ -1502,19 +1508,19 @@ Who are you going to tell next?! #speaker_right
 
 So this is happiness! #inner_monologue
 Thank you God, for helping me get this part.  #inner_monologue
-{aman_1_ending_1: 
+{chapter_1_ending_1: 
     I am so glad I didn’t have to change anything about myself. #inner_monologue
     } 
-{aman_1_ending_2: 
+{chapter_1_ending_2: 
     This just reinforces that I can just be me and still succeed in life. #inner_monologue
     } 
 
--> aman_2_ending_1
+-> chapter_2_ending_1
 
-=== aman_2_ending_1 ===
-#knot:aman_2_ending_1
-#ending:aman_2_ending_1
-~ aman_2_ending = 1
+=== chapter_2_ending_1 ===
+#knot:chapter_2_ending_1
+#ending:chapter_2_ending_1
+~ chapter_2_ending = 1
 // multiple ways to record the ending so that we can check in ink later if the player chose this ending or the other one. this knot is not presented to the user in the game.
 
 -> aman_3_intro
@@ -1655,7 +1661,7 @@ Aman, I must say, I’m actually very happy for you. Applied so many times. Fina
 //     And the best part is that you didn’t have to change your look at all. #speaker_right
 // } 
 // I always knew that Aman had these amazing acting talents! #speaker_right
-// {aman_1_ending_1: 
+// {chapter_1_ending_1: 
 //     Haha! I remember once in BMT, he pushed his hair in front of his face and pretended to be a pontianak. 
 //     Scared the crap out of all the bunkmates!
 // }
@@ -1776,10 +1782,10 @@ If I am chilling with my friends, celebrating a small victory of my own, how is 
 #speaker_left_image:aman_dad_furious.png
 Nowadays, you’ve learnt to talk back eh? One acting job and you think you’re some big shot? #speaker_left
 No dad, I just know what you all want from me. When you asked me to keep my turban, I listened -- #speaker_self
-{aman_1_ending_1: 
+{chapter_1_ending_1: 
     Only AFTER you cut your hair in the first place! #speaker_left	
 }
-{not aman_1_ending_1: 
+{not chapter_1_ending_1: 
     Of COURSE you should keep your turban, you are Sikh! #speaker_left	
 }
 I didn’t even ASK to keep a turban! It was put on me since young! #speaker_self
