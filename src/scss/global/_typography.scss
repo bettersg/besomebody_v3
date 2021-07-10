@@ -29,6 +29,16 @@ $staatliches: 'Staatliches', cursive;
     text-align: center;
 }
 
+@mixin inter-narrator {
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 33px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
 @mixin p2-normal-body {
     font-family: $inter;
 	font-style: normal;
