@@ -188,6 +188,11 @@ looks cute on you. I like it. #speaker_1
 -> nadia_1_1d
 
 === nadia_1_1c ===
+#knot:nadia_1_1c
+#ui:scene
+#background:nadia_1_car.jpg
+#speaker_left_image:nadia_abah.png
+#speaker_left_name:Abah
 Oh look! Just in time, Misteri Jam 12..  #speaker_self
 You and your radio ghost stories. #speaker_left
 Abah, you don't pretend! You love these as much as I do.  #speaker_self
@@ -198,6 +203,7 @@ Ya, my electricity bill also win. #speaker_left
 -> nadia_1_1d
 
 === nadia_1_1d ===
+#knot:nadia_1_1d
 #ui:scene
 #background:nadia_1_hdb_carpark.jpg
 Later go say goodnight to your mother ok?  #speaker_left
@@ -216,7 +222,7 @@ No, she didn't say. #speaker_left
 #background:nadia_1_clothes.jpg
 Friday morning, packing my school bag for PE class.
 Track pants or PE shorts? Track pants la. The teacher said it was ok...
--> nadia_1_1
+-> nadia_1_2
 
 
 === nadia_1_2 ===

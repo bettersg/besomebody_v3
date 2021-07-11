@@ -14,11 +14,12 @@ import CharacterChoicePage from '../pages/CharacterChoicePage'
 import CharacterChapterPage from '../pages/CharacterChapterPage'
 import IntroPage from '../pages/IntroPage'
 import ProfileBuilderPage from '../pages/ProfileBuilderPage'
+import Help from '../pages/HelpPage/HelpPage'
 
 class Router extends Component {
   render() {
     // Properties
-    const { user, roles, bar } = this.props
+    const { user, roles } = this.props
 
     return (
       <BrowserRouter basename={process.env.REACT_APP_BASENAME}>
@@ -58,7 +59,7 @@ class Router extends Component {
           </Route>
 
           <Route path="/help" exact>
-            Help Screen
+            <Help />
           </Route>
 
 

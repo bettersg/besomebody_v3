@@ -37,8 +37,8 @@ export const CHARACTER_MAP = [
     description: "Nadia wants to become a doctor - but will love and religion get in the way?",
     jsonLink: '../stories/nadia.ink.json',
     jsonFile: NadiaInk,
-    primaryColour: '#ff0000',
-    secondaryColour: '#ffff00',
+    primaryColour: '#FB5A3F',
+    secondaryColour: '#664EFC',
     playable: true,
     variables: {
       nadia_mood: 5,
@@ -127,8 +127,8 @@ export const CHARACTER_MAP = [
     description: "Aman wants to model and study overseas - but will his culture make things harder?",
     jsonLink: '../stories/aman.ink.json',
     jsonFile: AmanInk,
-    primaryColour: '#0000cc',
-    secondaryColour: '#cc00cc',
+    primaryColour: '#19A3AD',
+    secondaryColour: '#FFBB0B',
     playable: true,
     variables: {
       aman_mood: 5,

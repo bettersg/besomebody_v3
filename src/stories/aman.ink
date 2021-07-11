@@ -19,8 +19,8 @@ For cut-and-paste ease
 #background:whatsapp.png
 #chat_group_title:Gavin Wong
 #chat_group_image:gavin_profile.jpg
-#speaker1_name:Gavin
-#speaker2_name:Eric -> can be left blank
+#speaker_1_name:Gavin
+#speaker_2_name:Eric -> can be left blank
 #timestamp:21.34
 
 #knot:aman_2_haircut_no
@@ -48,7 +48,13 @@ VAR aman_2_ending = 0
 VAR aman_3_ending = 0 
 VAR aman_4_ending = 0 
 VAR aman_5_ending = 0 
-
+VAR character_id = 2
+VAR chapter_id = 1
+// VAR aman_2_1c_overcharge = 1
+// VAR aman_2_2_confide = 1
+// VAR aman_2_5_change_look = 0
+// VAR aman_2_6_secret = 0
+// VAR aman_3_1_drink = 1
 
 -> aman_1_intro
 
@@ -180,8 +186,8 @@ Sigh. Aman, I... #speaker_right
 
 === aman_1_minigame ===
 #knot:aman_1_minigame
-#ui:swipe
-#game_id:3
+#ui:mcq
+#game_id:1
 Minigame 1 // must add some text
 
 -> aman_1_3_narration
@@ -207,7 +213,7 @@ One month later, Selinder and I are chatting at night.
 #speaker_1_name:Selinder
 #timestamp:23.34
 Babe, I’m sorry, I think I’m going to do it. #speaker_self
-Jaan, don’t do anything rash. #speaker_1
+Jaan (dear), don’t do anything rash. #speaker_1
 Think of what this means for your faith and your identity. And your family. #speaker_1
 And I think you're handsome already! #speaker_1
 ... #speaker_1
@@ -224,7 +230,7 @@ Awww... 😍 #speaker_self
 So - did you decide...?  #speaker_1
 You know what.  #speaker_self
 I wasn’t sure up till this very moment, but I’ve decided now.  #speaker_self
-+ [I am going to cut my hair. I have to do this.] -> aman_1_4 #speaker_self
++ [I am going to cut my hair. I have to do this.] -> aman_1_4_narration #speaker_self
 + [I'll keep my hair. You were right dear.] -> aman_1_9_narration   #speaker_self
 
 === aman_1_4_narration ===
@@ -505,8 +511,9 @@ With everything so simple, and pure... #inner_monologue
 #ending:aman_1_ending_1
 // multiple ways to record the ending so that we can check in ink later if the player chose this ending or the other one. this knot is not presented to the user in the game.
 ~ aman_1_ending = 1
--> aman_2_intro
 
+-> aman_1_reflection
+ 
 
 === aman_1_9_narration ===
 #knot:aman_1_9_narration
@@ -735,6 +742,19 @@ With everything so simple, and pure... #inner_monologue
 ~ aman_1_ending = 2
 // mulitple ways to record the ending so that we can check in ink later if the player chose this ending or the other one. this knot is not presented to the user in the game.
 
+
+-> aman_1_reflection
+
+
+=== aman_1_reflection ===
+#knot:aman_1_reflection
+#ui:chapter_reflection
+#reflection_id:1 
+Reflection 1
+
+
+
+
 -> aman_2_intro
 
 
@@ -760,6 +780,7 @@ With everything so simple, and pure... #inner_monologue
 #background:aman_1_intro.jpg
 #music:aman_intro.mp3
 .
+~ chapter_id = 2
 Chapter 2 #title
 To Be or Not To Be #title
 I am finally done with NS, what an adventure! 
@@ -1523,6 +1544,7 @@ Thank you God, for helping me get this part.  #inner_monologue
 #background:aman_1_intro.jpg
 #music:aman_intro.mp3
 .
+~ chapter_id = 3
 Chapter 3 #title
 Fight or Flight  #title
 
@@ -1550,7 +1572,7 @@ Selinder, Lukman (and his girlfriend Sammy, who is Chinese), and Zhihao are all 
 #knot:aman_3_1
 #ui:scene
 #background:restaurant.jpg
-#speaker_left_image:zhihao_smiling.png 
+#speaker_left_image:zhihao.png 
 #speaker_left_name:Zhihao 
 #speaker_right_image:lukman.png 
 #speaker_right_name:Lukman  
@@ -1650,7 +1672,7 @@ Ain’t gonna veto that... #speaker_self
 #background:whatsapp.png
 #chat_group_title:Jothi
 #chat_group_image:jothi.jpg
-#speaker1_name:Jothi
+#speaker_1_name:Jothi
 #timestamp:22.17
 Come home. Now. #speaker_1
 I'm celebrating with my friends! What happened? #speaker_self
