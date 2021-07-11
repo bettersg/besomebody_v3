@@ -9,16 +9,16 @@ For cut-and-paste ease
 #knot:nadia_2_haircut_no
 #ui:scene
 #background:nadia_school.jpg
-#speaker_left_image:zhihao_smiling.png -> can be left blank
+#speaker_left_image:cha_nadia_zhihaosmiling.png -> can be left blank
 #speaker_left_name:Zhihao -> can be left blank
-#speaker_right_image:eric_angry.png -> can be left blank
+#speaker_right_image:cha_nadia_ericangry.png -> can be left blank
 #speaker_right_name:Eric  -> can be left blank
 
 #knot:nadia_2_haircut_no
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Gavin Wong
-#chat_group_image:gavin_profile.jpg
+#chat_group_image:cha_nadia_gavinprofileicon.jpg
 #speaker_1_name:Gavin
 #speaker_2_name:Eric -> can be left blank
 #timestamp:21.34
@@ -59,7 +59,7 @@ VAR character_id = 1
 === nadia_1_intro ===
 #knot:nadia_1_intro
 #ui:narrator
-#background:nadia_1_intro.jpg
+#background:bg_nadia_intro.jpg
 #music:nadia_intro.mp3
 .
 VAR chapter_id = 1
@@ -78,7 +78,7 @@ Study Buddy #title
 === nadia_1_1_narration ===
 #knot:nadia_1_1_narration
 #ui:narrator
-#background:nadia_1_night_street.jpg
+#background:bg_nadia_nightstreet.jpg
 9:45pm, on a Thursday night outside school.
 Abah (pa) is in the car, waiting for me.
 -> nadia_1_1
@@ -87,8 +87,8 @@ Abah (pa) is in the car, waiting for me.
 === nadia_1_1 ===
 #knot:nadia_1_1
 #ui:scene
-#background:nadia_1_car.jpg
-#speaker_left_image:nadia_abah.png
+#background:bg_nadia_fathercarnight.jpg
+#speaker_left_image:cha_nadia_rahman.png
 #speaker_left_name:Abah
 Hi abah #speaker_self
 Nadia dah makan? (Have you eaten?) #speaker_left
@@ -108,7 +108,7 @@ It's a message from Gavin!
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Gavin
-#chat_group_image:gavin_profile.jpg
+#chat_group_image:ico_nadia_gavin.jpg
 #speaker_1_name:Gavin
 #timestamp:21.49
 help #speaker_1
@@ -116,14 +116,14 @@ this bus is blasting the AC #speaker_1
 is so cold 🥶 🥶 🥶 #speaker_1 #emoji:ice_cubes.png
 
 #ui:scene
-#background:nadia_1_car.jpg
+#background:bg_nadia_fathercarnight.jpg
 Crap! I'm still WEARING his hoodie.  #inner_monologue
 
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Gavin
-#chat_group_image:gavin_profile.jpg
-#speaker_1_name:Gavin
+#chat_group_image:ico_nadia_gavin.jpg
+#speaker1_name:Gavin
 I'm sorry!! Your hoodie is still with me 😳 #speaker_self
 💩 #speaker_1
 yaaa forgot about night study today, didn't bring the winter wear #speaker_self
@@ -136,8 +136,8 @@ no #speaker_1
 yes. it is very entertaining. #speaker_1
 
 #ui:scene
-#background:nadia_1_car.jpg
-#speaker_left_image:nadia_abah.png
+#background:bg_nadia_fathercarnight.jpg
+#speaker_left_image:cha_nadia_rahman.png
 #speaker_left_name:Abah
 How many of you doing this "night study"? Quite a lot of people just now eh. #speaker_left
 Depends… Last year before promo exams, both the canteen and library got packed. #speaker_self
@@ -176,8 +176,8 @@ I know, I know. #speaker_left
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Gavin
-#chat_group_image:gavin_profile.jpg
-#speaker_1_name:Gavin
+#chat_group_image:ico_nadia_gavin.jpg
+#speaker1_name:Gavin
 Need me to bring any of my notes from last term tomorrow? #speaker_self
 Nah all good #speaker_1
 and your hoodie #speaker_self
@@ -228,8 +228,8 @@ Track pants or PE shorts? Track pants la. The teacher said it was ok...
 === nadia_1_2 ===
 #knot:nadia_1_2
 #ui:scene
-#background:nadia_1_school.jpg
-#speaker_right_image:nadia_chloe.png
+#background:bg_nadia_schoolbathroom.jpg
+#speaker_right_image:cha_nadia_chloe.png
 #speaker_right_name:Chloe
 Want some SPF? #speaker_right
 Yeah sure, just a bit. #speaker_self
@@ -349,7 +349,7 @@ Definitely not. OKAY let’s go before they make us run extra laps! #speaker_rig
 === nadia_1_3_narration ===
 #knot:nadia_1_3_narration
 #ui:narrator
-#background:nadia_1_school.jpg
+#background:bg_nadia_schoolcanteen.jpg
 In the quiet window of time after class hours, I’m by myself in the canteen, grabbing a meal. 
 After all of that PE, I’m starving.
 
@@ -365,16 +365,16 @@ A message from Gavin!
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Gavin
-#chat_group_image:gavin_profile.jpg
-#speaker_1_name:Gavin
+#chat_group_image:ico_nadia_gavin.jpg
+#speaker1_name:Gavin
 #timestamp:16.14
 Where u at? #speaker_1
 Canteen! Having early dinner, super hungry after PE #speaker_self
 💩 bo jio #speaker_1
 Ownself never ask earlier #speaker_self
 #ui:scene
-#background:nadia_1_school.jpg
-#speaker_left_image:nadia_gavin.png
+#background:bg_nadia_schoolcanteen.jpg
+#speaker_left_image:cha_nadia_gavin.png
 #speaker_left_name:Gavin
 Hey loner. #speaker_left
 I have friends. #speaker_self
@@ -395,8 +395,8 @@ A message from Azlin
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Azlin
-#chat_group_image:azlin_profile.jpg
-#speaker_1_name:Azlin
+#chat_group_image:ico_nadia_azlin.jpg
+#speaker1_name:Azlin
 #timestamp:16.18
 nad what time are you gg to be home today? #speaker_1
 Probs be at night study again. What’s up? #speaker_self
@@ -410,8 +410,8 @@ heh no promises. see u if i do :) #speaker_1
 === nadia_1_3_part2 ===
 #knot:nadia_1_3_part2
 #ui:scene
-#background:nadia_1_school.jpg
-#speaker_left_image:nadia_gavin.png
+#background:bg_nadia_schoolcanteen.jpg
+#speaker_left_image:cha_nadia_gavin.png
 #speaker_left_name:Gavin
 Ok I’m back, what did I miss! Is that Chloe? #speaker_left
 No, it’s my cousin. Chloe’s at a hockey thing. What are you having? #speaker_self
@@ -623,7 +623,7 @@ K, let me do some research and then I’ll text you the time and place to meet. 
 === nadia_1_4_narration ===
 #knot:nadia_1_4_narration 
 #ui:narrator
-#background:nadia_1_bus.jpg
+#background:bg_nadia_bus.jpg
 On my way home, and I’m still poring over what happened in the canteen with Gavin. 
 I’m not imagining it, right? I need to talk to a voice of reason!
 
@@ -634,8 +634,8 @@ I’m not imagining it, right? I need to talk to a voice of reason!
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Azlin
-#chat_group_image:nadia_azlin.jpg
-#speaker_1_name:Azlin
+#chat_group_image:ico_nadia_azlin.jpg
+#speaker1_name:Azlin
 #timestamp:17:25
 Hallo are you still at my place? Am just leaving school #speaker_self
 ala i left already :( #speaker_1
@@ -730,25 +730,25 @@ ooo...at least u moved on from that gavin. dat one was like hopeless la 😂 #sp
 lol #speaker_self
 always leading u on then you go gaga. then nanti, go and do something to make u angry.  #speaker_1
 #ui:scene
-#background:nadia_1_bus.jpg
+#background:bg_nadia_bus.jpg
 Really? It’s just how we are. K, maintain... #inner_monologue
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Azlin
-#chat_group_image:nadia_azlin.jpg
-#speaker_1_name:Azlin
+#chat_group_image:ico_nadia_azlin.jpg
+#speaker1_name:Azlin
 No la. Where got.  #speaker_self
 We’re good friends what. Friends sometimes fight. What matters is how we make up after. #speaker_self
 “make up” #speaker_1
 ...or make out?  #speaker_1
-OMG.  #speaker_self
-ARE.  #speaker_self
-U.  #speaker_self
-STILL.  #speaker_self
-ON.  #speaker_self
-GAVIN.  #speaker_self
-GIVE UP LA.  #speaker_self
-MAMPOS. #speaker_self
+OMG.  #speaker_1
+ARE.  #speaker_1
+U.   #speaker_1
+STILL.   #speaker_1
+ON.   #speaker_1
+GAVIN.   #speaker_1
+GIVE UP LA.  #speaker_1
+MAMPOS. #speaker_1
 + [No la. We’re just friends]
     ~ nadia_1_ending = 3
     No la. We’re just friends. He’s nice. So I’m nice back.  #speaker_self
@@ -829,7 +829,7 @@ MAMPOS. #speaker_self
 .
 ~ chapter_id = 2
 CHAPTER 2 #title
-Study Buddy #title
+The Mall #title
 
 -> nadia_2_1_narration 
 
@@ -837,17 +837,20 @@ Study Buddy #title
 === nadia_2_1_narration ===
 #knot:nadia_2_1_narration
 #ui:narrator
-#background:nadia_1_night_street.jpg
-blah
+#background:nadia_shoppingmall.jpg
+3:10pm in the mall with Gavin
 -> nadia_2_1
 
 
 === nadia_2_1 ===
 #knot:nadia_2_1
 #ui:scene
-#background:nadia_1_car.jpg
-#speaker_left_image:nadia_abah.png
-#speaker_left_name:Abah
+#background:nadia_shoppingmall.jpg
+#speaker_left_image:cha_nadia_gavin.png
+#speaker_left_name:Gavin
+Hi so sorry I’m late! #speaker_self
+Hey! You look nice. #speaker_left
+Oh! He’s reaching out for a hug. #inner_monologue
 
 
 -> END
