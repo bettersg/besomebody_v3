@@ -5,12 +5,17 @@ import NextButton from "../../components/NextButton"
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import { useInkContext } from '../../contexts/InkContext'
 
+import "./style.scss"
+
 const useStyles = makeStyles((theme) => ({
   paragraphWrapper: {
     backgroundImage: ({ image }) => `url('/images/${image}')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    height: '640px',
+    height: '100vh',
+    [theme.breakpoints.up('md')]: {
+      height: '660px',
+    },
     bottom: 0, 
   },
   textWrapper: {
@@ -56,67 +61,60 @@ const Narrator = (props) => {
   // console.log(step)
 
   return (
-    <Fade in={true} timeout={500}>
-      <div>
+    <div>
+        <Fade in={true} timeout={700}>
 
-      <Box className={classes.paragraphWrapper}  height="100%">
-        <Box
-          className={classes.textWrapper}
-          p={1}
-          height={300}
-          overflow="scroll"
-          >
-        
-            { step && (
-              <Box my={1} key={step.text} style={{ scrollSnapAlign: 'start' }}>
-                <Fade in={step.text?true:false} timeout={500}>
-                  { step.tags[0] === 'title' ? 
-                    <Typography variant="h5" align="center">{step.text.toUpperCase()}</Typography> :
-                    <Typography>{step.text}</Typography>
-                  } 
-                  
-                </Fade>
-              </Box>
-              )
-            }         
+        <Box className={classes.paragraphWrapper}  height="100%">
+          { step && (
+            <Fade in={step.text} timeout={700}>
+              <div className="Narrator__text">
+                { step.tags[0] === 'title' ? 
+                  step.text.toUpperCase():
+                  step.text
+                } 
+              </div>
+            </Fade>
+
+            
+            )
+          }   
 
           <div ref={elementRef} />
-        </Box>
-        {/* this if else is needed to toggle between "Next Button" and choices (if any) */}
-        {choices.length > 0 ? 
-          <div  className={classes.choiceWrapper} >            
-            {choices.map((choice) => (
-              
-              <Box
-                  mx={1}
-                  key={choice.text}
-                  display="flex"
-                  justifyContent="center"
-                  my={1}
+          {/* this if else is needed to toggle between "Next Button" and choices (if any) */}
+          {choices.length > 0 ? 
+            <div  className={classes.choiceWrapper} >            
+              {choices.map((choice) => (
                 
-                >
-                  <Fade in={choice.text?true:false} timeout={700}>
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      onClick={() => setChoice(choice.index)}
-                    >
-                      <Typography variant="caption">{choice.text}</Typography>
-                    </Button>
-                  </Fade>
-                </Box>
-                
-            ))}
-          </div>
-          : 
-          <NextButton getStory={getStory}/>
+                <Box
+                    mx={1}
+                    key={choice.text}
+                    display="flex"
+                    justifyContent="center"
+                    my={1}
+                  
+                  >
+                    <Fade in={choice.text?true:false} timeout={700}>
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        onClick={() => setChoice(choice.index)}
+                      >
+                        <Typography variant="caption">{choice.text}</Typography>
+                      </Button>
+                    </Fade>
+                  </Box>
+                  
+              ))}
+            </div>
+            : 
+            <NextButton getStory={getStory}/>
 
-        }
+          }
       </Box>
       
+    </Fade>
       </div>
         
-    </Fade>
   )
 }
 

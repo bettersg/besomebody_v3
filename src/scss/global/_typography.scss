@@ -17,18 +17,43 @@ $staatliches: 'Staatliches', cursive;
     font-size: 72px;
     line-height: 90%;
     letter-spacing: -0.02em;
-    color: #000000; 
+}
+
+@mixin inter-name {
+    font-family: $inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+@mixin inter-whatsappName {
+    font-family: $inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+@mixin inter-narrator {
+    font-family: $inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 33px;
+    letter-spacing: 0em;
+    text-align: center;
 }
 
 @mixin p2-normal-body {
-    font-family: Inter;
+    font-family: $inter;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 20px;
-	line-height: 160%;
-
-	/* identical to box height, or 32px */
-	color: #000000;
 }
 
 // staatliches fonts
@@ -39,20 +64,16 @@ $staatliches: 'Staatliches', cursive;
     font-size: 72px;
     line-height: 90%;
     letter-spacing: 0.02em;
-    color: #000000;
 }
 
 @mixin h4 {
-    font-family: Staatliches;
+    font-family: $staatliches;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 22px;
 	line-height: 27px;
 	/* identical to box height */
-
 	letter-spacing: 0.12em;
 	text-transform: uppercase;
-
-	color: #000000;
 }
 

@@ -34,7 +34,10 @@ const DefaultInk = (props) => {
           </Box>
         )
       })}
-      <NextButton getStory={getStory} />
+      <NextButton getStory={getStory} 
+              // style={{display:"none"}}
+
+      />
     </Box>
   )
 }

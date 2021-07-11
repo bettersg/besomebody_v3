@@ -15,74 +15,96 @@ import CharacterChapterPage from '../pages/CharacterChapterPage'
 import IntroPage from '../pages/IntroPage'
 import ProfileBuilderPage from '../pages/ProfileBuilderPage'
 import Help from '../pages/HelpPage/HelpPage'
-
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 class Router extends Component {
   render() {
     // Properties
     const { user, roles } = this.props
+    const InterFont = "'Inter', sans-serif"
+    const theme = createTheme({
+      typography: {
+        fontFamily: 'Inter, sans-serif',
+      },
+
+      overrides: {
+        MuiCssBaseline: {
+          '@global': {
+            '@font-face': [InterFont],
+          },
+        },
+        MuiContainer: {
+          maxWidthLg: {
+            margin: "0px", 
+            padding: "0px", 
+          }
+        }, 
+      },
+    });
 
     return (
       <BrowserRouter basename={process.env.REACT_APP_BASENAME}>
         {/* {bar} // TODO: implement "bar" as a menubar above the game components below */}
+        <ThemeProvider theme={theme}>
+          <Switch>
+            <Route path="/" exact>
+              {user ? <CharacterChoicePage /> : <LandingPage />}
+            </Route>
 
-        <Switch>
-          <Route path="/" exact>
-            {user ? <CharacterChoicePage /> : <LandingPage />}
-          </Route>
+            <Route path="/intro" exact>
+              <IntroPage />
+            </Route>
 
-          <Route path="/intro" exact>
-            <IntroPage />
-          </Route>
+            <PrivateRoute path="/characterchoice" exact>
+              <CharacterChoicePage />
+            </PrivateRoute>
 
-          <PrivateRoute path="/characterchoice" exact>
-            <CharacterChoicePage />
-          </PrivateRoute>
+            <PrivateRoute path="/chapters/:name" exact>
+              <CharacterChapterPage />
+            </PrivateRoute>
 
-          <PrivateRoute path="/chapters/:name" exact>
-            <CharacterChapterPage />
-          </PrivateRoute>
+            <PrivateRoute path="/story/:name" exact>
+              <InkController />
+            </PrivateRoute>
 
-          <PrivateRoute path="/story/:name" exact>
-            <InkController />
-          </PrivateRoute>
+            <Route path="/signup" exact>
+              <SignUp />
+            </Route>
 
-          <Route path="/signup" exact>
-            <SignUp />
-          </Route>
+            <PrivateRoute path="/profilebuilder" exact>
+              <ProfileBuilderPage />
+            </PrivateRoute>
 
-          <PrivateRoute path="/profilebuilder" exact>
-            <ProfileBuilderPage />
-          </PrivateRoute>
+            <Route path="/login" exact>
+              <Login />
+            </Route>
 
-          <Route path="/login" exact>
-            <Login />
-          </Route>
-
-          <Route path="/help" exact>
-            <Help />
-          </Route>
+            <Route path="/help" exact>
+              <Help />
+            </Route>
 
 
-          <Route path="/forget-password" exact>
-            <ForgetPassword />
-          </Route>
+            <Route path="/forget-password" exact>
+              <ForgetPassword />
+            </Route>
 
-          <PrivateRoute path="/admin">
-            {user && roles.includes('admin') ? (
-              <AdminPage />
-            ) : (
-              <Redirect to="/" />
-            )}
-          </PrivateRoute>
+            <PrivateRoute path="/admin">
+              {user && roles.includes('admin') ? (
+                <AdminPage />
+              ) : (
+                <Redirect to="/" />
+              )}
+            </PrivateRoute>
 
-          <PrivateRoute path="/user/:userId">
-            {user ? <UserPage /> : <Redirect to="/" />}
-          </PrivateRoute>
+            <PrivateRoute path="/user/:userId">
+              {user ? <UserPage /> : <Redirect to="/" />}
+            </PrivateRoute>
 
-          <Route>
-            <NotFoundPage />
-          </Route>
-        </Switch>
+            <Route>
+              <NotFoundPage />
+            </Route>
+          </Switch>
+
+        </ThemeProvider>
       </BrowserRouter>
     )
   }
