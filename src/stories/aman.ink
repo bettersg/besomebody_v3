@@ -59,14 +59,14 @@ VAR chapter_id = 1
 -> aman_1_intro
 
 // CHARACTER INTRODUCTION
-
+ 
 
 === aman_1_intro ===
 #knot:aman_1_intro
 #ui:narrator
 #background:bg_aman_intro.jpg
 #music:aman_intro.mp3
-.
+..
 Aman Singh #title
 Sat Sri Akaal! I am Aman Singh. 
 As a Sikh, I keep my turban and beard, and wear the steel bangle, or kara. 
