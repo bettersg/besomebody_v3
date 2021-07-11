@@ -58,7 +58,7 @@ VAR aman_5_ending = 0
 === aman_1_intro ===
 #knot:aman_1_intro
 #ui:narrator
-#background:aman_1_intro.jpg
+#background:bg_aman_intro.jpg
 #music:aman_intro.mp3
 .
 Aman Singh #title
@@ -86,7 +86,7 @@ Duty Calls #title
 === aman_1_1_narration ===
 #knot:aman_1_1_narration
 #ui:narrator
-#background:aman_sikh_event_hall.jpg
+#background:bg_aman_sikh_event_hall.jpg
 Zhi Hao and I are at a Sikh community event early on a Saturday morning.
 -> aman_1_1
 
@@ -94,8 +94,8 @@ Zhi Hao and I are at a Sikh community event early on a Saturday morning.
 === aman_1_1 ===
 #knot:aman_1_1
 #ui:scene
-#background:aman_sikh_event_hall.jpg
-#speaker_left_image:zhihao_smiling.png
+#background:bg_aman_sikh_event_hall.jpg
+#speaker_left_image:cha_aman_zhihao_joking.png
 #speaker_left_name:Zhihao
 Oi! Focus la. You’re double-packing the fruits. #speaker_left
 Crap. Thanks. #speaker_self
@@ -134,7 +134,7 @@ Ok, but you go and think about it la. I really think you should just cut. Don’
 === aman_1_2_narration ===
 #knot:aman_1_2_narration
 #ui:narrator
-#background:aman_mirror.jpg
+#background:bg_aman_bedroom.jpg
 Later that night...
 
 -> aman_1_2
@@ -143,18 +143,18 @@ Later that night...
 === aman_1_2 ===
 #knot:aman_1_2
 #ui:scene
-#background:aman_bedroom.jpg
-#speaker_right_image:jothi_casual.png
+#background:bg_aman_bedroom.jpg
+#speaker_right_image:cha_aman_jothi_casual.png
 #speaker_right_name:Jothi
 
 
 Oh my god, can you like, KNOCK? #speaker_self
 If you need privacy, lock the door. Anyway, what are you doing? Examining your forehead lines? #speaker_right
-Told you to do your yoga face exercises before bed. It will keep you youthful and glowing, like moi. #speaker_right #speaker_right_image:jothi_laughing.png
+Told you to do your yoga face exercises before bed. It will keep you youthful and glowing, like moi. #speaker_right #speaker_right_image:cha_aman_jothi_laughing.png
 What do you want? #speaker_self
 Can I borrow your airpods? I sent mine for servicing. #speaker_right #speaker_right_image:jothi_casual.png
 Ya, it’s in the second drawer. Take and get out. #speaker_self
-#background:aman_drawer.jpg
+#background:bg_aman_drawerscissors.jpg
 What is this? #speaker_right #speaker_right_image:jothi_concerned.png
 Nothing -- #speaker_self
 Don’t lie to me, what is this? #speaker_right
@@ -169,7 +169,7 @@ How could you even say that! Doesn’t this mean anything to you? How can you ta
 Sis, until and unless you keep a turban yourself, or even keep your hair longer than your shoulders, or have to do bloody NS, for God’s sake, you are not in a position to comment on or judge my life choices.  #speaker_self
 Don’t pretend to be so perfect. Neither of us are role models. #speaker_self
 Now, will you please take the airpods, and leave me alone? #speaker_self
-#speaker_right_image:jothi_sad.png
+#speaker_right_image:cha_aman_jothi_sad.png
 Sigh. Aman, I... #speaker_right
 ... I ...  #speaker_right
 
@@ -191,7 +191,8 @@ Minigame 1 // must add some text
 #knot:aman_1_3_narration
 #ui:narrator
 #background:new_message_notification.jpg
-One month later, Selinder and I are chatting.
+.
+One month later, Selinder and I are chatting at night.
 
 
 -> aman_1_3
@@ -202,7 +203,7 @@ One month later, Selinder and I are chatting.
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Selinder
-#chat_group_image:selinder_profile.jpg
+#chat_group_image:ico_aman_selinder.jpg
 #speaker_1_name:Selinder
 #timestamp:23.34
 Babe, I’m sorry, I think I’m going to do it. #speaker_self
@@ -226,12 +227,19 @@ I wasn’t sure up till this very moment, but I’ve decided now.  #speaker_self
 + [I am going to cut my hair. I have to do this.] -> aman_1_4 #speaker_self
 + [I'll keep my hair. You were right dear.] -> aman_1_9_narration   #speaker_self
 
+=== aman_1_4_narration ===
+#knot:aman_1_4_narration
+#ui:narrator
+#background:bg_aman_barbershopoutside.jpg
+The next morning, while my family was still asleep....
+-> aman_1_4
+
 
 === aman_1_4 ===
 #knot:aman_1_4
 #ui:scene
-#background:aman_barbershop.jpg
-#speaker_right_image:barber.png
+#background:bg_aman_barbershopinside.jpg
+#speaker_right_image:cha_aman_barber.png
 #speaker_right_name:Barber
 Yes, boy?  #speaker_right
 Not crowded. Thank you, Waheguru. #inner_monologue
@@ -241,7 +249,7 @@ Cut beard or cut hair?   #speaker_right
 Don’t think. Just say it. Just say it.  #inner_monologue
 Cut everything.  #speaker_self
 Ok. Sit. #speaker_right
-#background:aman_mirror_barbershop.jpg
+#background:bg_aman_mirrorbarbershop.jpg
 You sure ah, boy. #speaker_right
 + [No] I uh ... ummm   #speaker_self
     Well?  #speaker_right
@@ -252,9 +260,9 @@ You sure ah, boy. #speaker_right
 + Yes [,]I'm sure. #speaker_self
     What style you want? Medium, or fade, or --   #speaker_right
     I’m going NS tomorrow, so just cut very short.   #speaker_self	
-    #background:aman_barbershop_staring.jpg
+    #background:bg_aman_barbershopcrowdstaring.jpg
     Ok.  #speaker_right
-    #background:aman_barbershop_floor.jpg
+    #background:bg_aman_barbershophairfloor.jpg
     You want to keep? #speaker_right
     Huh? #speaker_self	
     Some Singh customer ask to keep their hair. I can put in plastic bag for you.  #speaker_right
@@ -265,7 +273,7 @@ You sure ah, boy. #speaker_right
 === aman_1_5_narration ===
 #knot:aman_1_5_narration
 #ui:narrator
-#background:aman_outside_barber.jpg
+#background:bg_aman_barbershopoutside.jpg
 I look so different. 
 But this is the new me. 
 This is the start of a new chapter in my life.
@@ -279,7 +287,7 @@ This is the start of a new chapter in my life.
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Family
-#chat_group_image:aman_family.jpg
+#chat_group_image:ico_aman_family.jpg
 #speaker_1_name:Papa
 #speaker_2_name:Amma
 #speaker_3_name:Jothi
@@ -293,10 +301,13 @@ Aman - please tell amma you want to order something for dinner! Side with me! #s
 Let the boy make up his own mind Jothi! He's going to be a real man soon! #speaker_1
 Aman? #speaker_1
 + [Send them a selfie of your haircut]
-- ... #speaker_self #emoji:aman_haircut_selfie.png
+    - This is what I look like after my haircut #emoji:aman_haircut_selfie.png #speaker_self 
++ [Tell your family that you cut your hair]
+    I cut my hair to prepare NS today. It's very short now.    #speaker_self 
+- ... #speaker_self 
 
 #ui:scene
-#background:aman_barbershop.jpg
+#background:bg_aman_barbershopoutside.jpg
 Why isn’t anyone saying anything? #inner_monologue
 They've all seen it. Why don't the reply? #inner_monologue
 I don’t care what they think. Do I care what they think? #inner_monologue
@@ -304,7 +315,7 @@ I don’t care what they think. Do I care what they think? #inner_monologue
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Family
-#chat_group_image:aman_family.jpg
+#chat_group_image:ico_aman_family.jpg
 #speaker_1_name:Papa
 #speaker_2_name:Amma
 #speaker_3_name:Jothi
@@ -312,8 +323,8 @@ I don’t care what they think. Do I care what they think? #inner_monologue
 You will regret it, son. #speaker_1
 
 #ui:scene
-#background:aman_barbershop.jpg
-Shit. shitshitshit.  #inner_monologue
+#background:bg_aman_barbershopoutside.jpg
+damnit. aaaaargh.  #inner_monologue
 
 #ui:whatsapp
 #background:whatsapp.png
@@ -352,7 +363,7 @@ I... #speaker_self
 === aman_1_6_narration ===
 #knot:aman_1_6_narration
 #ui:narrator
-#background:aman_parade_square_bmt.jpg
+#background:bg_aman_bmtparadesquare.jpg
 Enlistment Day for NS. #title
 
 -> aman_1_6 
@@ -361,8 +372,8 @@ Enlistment Day for NS. #title
 === aman_1_6 ===
 #knot:aman_1_6
 #ui:scene
-#background:aman_parade_square_bmt.jpg
-#speaker_left_image:aman_sergeant_confused.png
+#background:bg_aman_bmtparadesquare.jpg
+#speaker_left_image:cha_aman_sergeant_confused.png
 #speaker_left_name:2SG Wong
 Private Singh? #speaker_left
 Oh no.... #inner_monologue
@@ -375,7 +386,7 @@ Yes, sorry. #speaker_self
 Wah lao eh! Now must procure helmet for you. Why you DAY ONE so troublesome? #speaker_left
 Take this first and go sit down. Later I call you. #speaker_left
 Arrrrrggggh Zhihao was right. First day after cutting my hair, I already kena tekan by my parents and by the sergeant. #inner_monologue
-#speaker_left_image:lukman.png
+#speaker_left_image:cha_aman_lukman.png
 #speaker_left_name:Pte Lukman Wahid
 Hey, I overheard! You cut your hair? #speaker_left
 + [Mind your own business] Why does everyone care so much about my hair?  #speaker_self
@@ -396,7 +407,7 @@ Cool! Hopefully can be buddies. #speaker_left
 === aman_1_7_narration ===
 #knot:aman_1_7_narration
 #ui:narrator
-#background:aman_cookhouse.jpg
+#background:bg_aman_bmtcookhouse.jpg.jpg
 Two months later, in the Halal section of the cookhouse.
 
 -> aman_1_7
@@ -405,15 +416,15 @@ Two months later, in the Halal section of the cookhouse.
 === aman_1_7 ===
 #knot:aman_1_7
 #ui:scene
-#background:aman_cookhouse.jpg
-#speaker_left_image:lukman.png
+#background:bg_aman_bmtcookhouse.jpg.jpg
+#speaker_left_image:cha_aman_lukman.png
 #speaker_left_name:Pte Lukman Wahid
 
 Can’t believe we’re passing out soon. Three months flew by, don’t you think? #speaker_left
 Ya man, what an experience. We should be proud of ourselves.  #speaker_self
 Where are you getting posted to? #speaker_left
 Signals man, ok la. I think quite slack. You?  #speaker_self
-#speaker_left_image:lukman_sad.png
+#speaker_left_image:cha_aman_lukman_sad.png
 Storeman. #speaker_left
 So good! Every day can book out!  #speaker_self
 ... #speaker_left
@@ -445,7 +456,7 @@ Thanks buddy. #speaker_left
 === aman_1_8_narration ===
 #knot:aman_1_8_narration
 #ui:narrator
-#background:aman_parade_square_bmt.jpg
+#background:bg_aman_bmtparadesquare.jpg
 BMT Passing Out Parade. #title
 My dad cried at the parade. He claims he didn't but I could see his eyes were wet when we hugged.
 Mum was just happy I survived, I think.
@@ -461,10 +472,10 @@ My family went out for dinner that night.
 === aman_1_8 ===
 #knot:aman_1_8
 #ui:scene
-#background:restaurant.jpg
-#speaker_left_image:papa.png
-#speaker_left_name:Pa
-#speaker_right_image:mama.png
+#background:bg_aman_indianrestaurant.jpg
+#speaker_left_image:cha_aman_papa.png
+#speaker_left_name:Papa
+#speaker_right_image:cha_aman_mama.png
 #speaker_right_name:Mama
 Our Aman looked so handsome at his passing out parade! #speaker_right
 You did it, son. I am proud of you. Of course, you would have looked more handsome wearing a turban instead of a beret. #speaker_left
@@ -472,7 +483,7 @@ Enough motu, it’s not the time.  #speaker_right
 Aman, turban or no turban, you will always be my hero. #speaker_right
 Aman beta, now that the hardest part is over, you should start thinking about what you will do after NS.  #speaker_right
 + [I was thinking of trying my hand at theatre and short films, mum.]
-    #speaker_right_image:jothi.png
+    #speaker_right_image:cha_aman_jothi.png
     #speaker_right_name:Jothi    
     A few biceps and suddenly you think you can be an action hero eh? #speaker_right
     Haha, I think it's cool! Our next Diljit Dosanjh in the making! #speaker_right
@@ -480,7 +491,7 @@ Aman beta, now that the hardest part is over, you should start thinking about wh
     But don’t forget to spend time with Selinder! She's quite a lovely girl.  #speaker_left
 
 + [Oh er, this and that!]
-    #speaker_right_image:jothi.png
+    #speaker_right_image:cha_aman_jothi.png
     #speaker_right_name:Jothi    
     You mean, “spend lots of time with Selinder”, right? #speaker_right
 - Ha, I must agree! I’m glad to have Aman back. #speaker_right
@@ -500,7 +511,7 @@ With everything so simple, and pure... #inner_monologue
 === aman_1_9_narration ===
 #knot:aman_1_9_narration
 #ui:narrator
-#background:aman_parade_square_bmt.jpg
+#background:bg_aman_bmtparadesquare.jpg
 BMT Enlistment Day. #title
 
 -> aman_1_9
@@ -509,13 +520,13 @@ BMT Enlistment Day. #title
 === aman_1_9 ===
 #knot:aman_1_9
 #ui:scene
-#background:aman_parade_square_bmt.jpg
-#speaker_left_image:sergeant.png
+#background:bg_aman_bmtparadesquare.jpg
+#speaker_left_image:cha_aman_sergeant.png
 #speaker_left_name:Sergeant Wong
 PRIVATE SINGH! Ok, take this. Sit there with the rest. #speaker_left
 Thank you, sergeant. #speaker_self
 Ok, first interaction wasn't so bad #inner_monologue
-#speaker_left_image:lukman.png
+#speaker_left_image:cha_aman_lukman.png
 #speaker_left_name:Pte Lukman Wahid
 Hello! I’m Lukman. #speaker_left
 Hey, I’m Aman. Which section are you in? #speaker_self
@@ -532,7 +543,7 @@ Haha just joking man. Anyway, I show you later! #speaker_self
 === aman_1_10_narration ===
 #knot:aman_1_10_narration
 #ui:narrator
-#background:aman_bmt_bunks.jpg
+#background:bg_aman_bmtbunk.jpg
 After a hard day's training...
 
 -> aman_1_10
@@ -541,8 +552,8 @@ After a hard day's training...
 === aman_1_10 ===
 #knot:aman_1_10
 #ui:scene
-#background:aman_bmt_bunks.jpg
-#speaker_left_image:lukman_shorts.png
+#background:bg_aman_bmtbunk.jpg
+#speaker_left_image:cha_aman_lukman.png
 #speaker_left_name:Lukman
 Luk, you free ah? #speaker_self
 What’s up?  #speaker_left
@@ -578,7 +589,7 @@ Sure ah? Ok, I’m going to say prayers - maghrib now. See you at dinner.  #spea
 === aman_1_11_narration ===
 #knot:aman_1_11_narration
 #ui:narrator
-#background:aman_bmt_toilet.jpg
+#background:bg_aman_bmttoilet.jpg
 Later that night, right after I wash my hair.
 
 -> aman_1_11
@@ -587,11 +598,11 @@ Later that night, right after I wash my hair.
 === aman_1_11 ===
 #knot:aman_1_11
 #ui:scene
-#background:aman_bmt_toilet.jpg
-#speaker_left_image:aman_ravi.png
-#speaker_left_name:Pte Ravi
-#speaker_right_image:aman_soh.png
-#speaker_right_name:Pte Soh
+#background:bg_aman_bmttoilet.jpg
+#speaker_left_image:cha_aman_nsf1.png
+#speaker_left_name:NSF Arun
+#speaker_right_image:cha_aman_nsf2.png
+#speaker_right_name:NSF Soh
 Ah Man, don’t wash your hair at night leh. We all cannot sleep seeing your long hair in the dark. So scary! #speaker_left
 Like hantu sia. #speaker_right
 + [Ignore]
@@ -601,13 +612,13 @@ Like hantu sia. #speaker_right
     Don’t make a scene. #inner_monologue
 + [Joke back]
     Pontia-- #speaker_right
-    #background:aman_bmt_toilet_scary.jpg
+    #background:bg_aman_bmttoiletscary.jpg
     They want scary? I'll give them scary. #inner_monologue
     AaaaaahahahahAHAHAHAHA! Aahaha! WooooooahahahHAHAHAH! #speaker_self
     OuuuuuuuaahahahhAHHHAHA! WAHkakaKAKKAKA! #speaker_self
     @$*@$! -- What the -- #speaker_right
     HAHAHAHA Dei! That was brilliant la. #speaker_left
-#background:aman_bmt_toilet.jpg
+#background:bg_aman_bmttoilet.jpg
 - Good night everybody.  #speaker_self
 
 
@@ -617,7 +628,7 @@ Like hantu sia. #speaker_right
 === aman_1_12_narration ===
 #knot:aman_1_12_narration
 #ui:narrator
-#background:aman_outfield.jpg
+#background:bg_aman_bmtcamp.jpg
 Tekong Field Camp, day 5.
 
 -> aman_1_12
@@ -626,8 +637,8 @@ Tekong Field Camp, day 5.
 === aman_1_12 ===
 #knot:aman_1_12
 #ui:scene
-#background:aman_outfield.jpg
-#speaker_left_image:lukman.png
+#background:bg_aman_bmtcamp.jpg
+#speaker_left_image:cha_aman_lukman.png
 #speaker_left_name:Lukman
 You’ve been scratching your head all day. Must be very hot inside ah? #speaker_left
 Very, bro. Super itchy and uncomfortable. All the heat and sweat trapped inside. I feel like my head is a furnace. #speaker_self
@@ -642,7 +653,7 @@ Anyway, I can’t believe we’re passing out soon. Three months just flew by. #
 Ya man, what an experience. We should be proud of ourselves.  #speaker_self
 Where are you getting posted to? #speaker_left
 Signals man, ok la. I think quite slack. You?  #speaker_self
-#speaker_left_image:lukman_sad.png
+#speaker_left_image:cha_aman_lukman_sad.png
 Storeman. #speaker_left
 So good! Every day can book out!  #speaker_self
 ... #speaker_left
@@ -675,7 +686,7 @@ Thanks buddy. #speaker_left
 === aman_1_13_narration ===
 #knot:aman_1_13_narration
 #ui:narrator
-#background:aman_parade_square_bmt.jpg
+#background:bg_aman_bmtcampoutside.jpg
 BMT Passing Out Parade. #title
 My dad cried at the parade. He claims he didn't but I could see his eyes were wet when we hugged.
 Mum was just happy I survived, I think.
@@ -691,10 +702,10 @@ My family went out for dinner that night.
 === aman_1_13 ===
 #knot:aman_1_13
 #ui:scene
-#background:restaurant.jpg
-#speaker_left_image:aman_dad.png
-#speaker_left_name:Pa
-#speaker_right_image:aman_mum.png
+#background:bg_aman_indianrestaurant.jpg
+#speaker_left_image:cha_aman_papa.png
+#speaker_left_name:Papa
+#speaker_right_image:cha_aman_mama.png
 #speaker_right_name:Mama
 Our Aman looked so handsome at his passing out parade! #speaker_right
 You did it, son. I am proud of you.  #speaker_left
