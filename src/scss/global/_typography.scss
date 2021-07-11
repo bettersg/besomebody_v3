@@ -29,8 +29,18 @@ $staatliches: 'Staatliches', cursive;
     text-align: center;
 }
 
+@mixin inter-whatsappName {
+    font-family: $inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
 @mixin inter-narrator {
-    font-family: Inter;
+    font-family: $inter;
     font-size: 22px;
     font-style: normal;
     font-weight: 600;
@@ -44,7 +54,6 @@ $staatliches: 'Staatliches', cursive;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 20px;
-	line-height: 160%;
 }
 
 // staatliches fonts
