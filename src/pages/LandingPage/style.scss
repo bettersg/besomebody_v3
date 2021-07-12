@@ -1,0 +1,84 @@
+@import "../../scss/global/global"; 
+.ScenePage {
+  &__speaker {
+    &--left, &--right {
+      // height: 200px !important;
+      // width: 40%;
+      width: auto;
+    }
+    &--left {
+      position: absolute !important;
+      left: 0;
+      bottom: 80px;
+      &.nonSpeaker {
+        filter: brightness(30%);
+      }
+    }
+    &--right {
+      position: absolute !important;
+      right: 0;
+      bottom: 100px;
+      &.nonSpeaker {
+        filter: brightness(30%);
+      }
+    }
+  }
+  &__nameWrapper {
+    position: relative;
+    top: -20px;
+    width: 100%; 
+    background-color: $lapisBase;
+  }
+
+  &__name {
+    @include inter-name; 
+    color: $white;
+    height: 35px;
+    padding: 4px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    text-transform: capitalize;
+    position: relative;
+    bottom: -20px;
+    margin: 0px 20px;
+    white-space: nowrap;
+
+  }
+
+  &__story {
+    position: absolute; 
+    bottom: 0;
+    width: 100%; 
+    &__innerMono {
+      height: 48px; 
+      background: linear-gradient(180deg, rgba(79, 77, 190, 0) 13.02%, #4F4DBE 100%);
+    }
+    &__text {
+      min-height: 200px; 
+      &.default {
+        background: $white;
+        box-shadow: 0px -8px 24px 0px #0000001F; 
+      }
+      &.innerMonologue {
+        background: linear-gradient(180deg, #4F4DBE 44.7%, #664EFC 100%);
+        color: white;
+      }
+      &--line {
+        padding: 32px 24px 28px 24px;
+      }
+    }
+  }
+  &__choicesWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // position: absolute;
+    // bottom: 0;
+    &__choices {
+      padding: 5px;
+      display: flex;
+    }
+  }
+}

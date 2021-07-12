@@ -7,6 +7,7 @@ import {
   Card,
   CardContent,
   CardHeader,
+  CardActions,
   Grid,
   Link,
   TextField,
@@ -22,7 +23,39 @@ const useStyles = makeStyles((theme) => ({
   link: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
-    color: theme.palette.primary.main,
+    
+  },
+  background: {
+    backgroundImage: ({ image }) => `url('/images/bg_launch.png')`,    
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    height: '100vh',
+    [theme.breakpoints.up('md')]: {
+      height: '660px',
+    },
+    bottom: 0, 
+
+  },
+  card: {
+    background: "rgba(255,255,255,0.9)",    
+    paddingBottom: 30,
+  },
+  header: {
+    marginTop: 100,
+  },
+  btn: {
+    padding: '10px 50px',
+    borderRadius: '40px',
+    marginBottom: '20px',
+    background: '#664EFC',
+    backgroundColor: '#664EFC',
+    textDecoration: 'none',
+    color: '#ffffff',
+    fontWeight: '700',
+    '&:hover': {
+      backgroundColor: '#6C70DD',      
+      boxShadow: 'none',      
+    },
   },
 }))
 
@@ -120,20 +153,21 @@ const SignUp = () => {
   }
 
   return (
-    <Box>
-      <Box maxWidth={700} mx="auto" mt={10}>
-        <Card>
+    <Box className={classes.background}>
+      <Box  mx="auto">
+        <Card raised={true}  className={classes.card}>
           <CardHeader
             title="Sign Up"
             titleTypographyProps={{ variant: 'h4', align: 'center' }}
+            class={classes.header}
           />
           <CardContent>
             <form onSubmit={handleSubmit(beforeSubmit)}>
               <Grid container spacing={1}>
-                <Grid item xs={2}>
-                  <Typography variant="body1">Email:</Typography>
+                <Grid item xs={3}>
+                  <Typography variant="caption">Email:</Typography>
                 </Grid>
-                <Grid item xs={10}>
+                <Grid item xs={9}>
                   <Controller
                     as={TextField}
                     control={control}
@@ -144,10 +178,10 @@ const SignUp = () => {
                     fullWidth
                   />
                 </Grid>
-                <Grid item xs={2}>
-                  <Typography variant="body1">Password:</Typography>
+                <Grid item xs={3}>
+                  <Typography variant="caption">Password:</Typography>
                 </Grid>
-                <Grid item xs={10}>
+                <Grid item xs={9}>
                   <Controller
                     as={TextField}
                     control={control}
@@ -158,10 +192,10 @@ const SignUp = () => {
                     fullWidth
                   />
                 </Grid>
-                <Grid item xs={2}>
-                  <Typography variant="body1">Confirm Password:</Typography>
+                <Grid item xs={3}>
+                  <Typography variant="caption">Confirm Password:</Typography>
                 </Grid>
-                <Grid item xs={10}>
+                <Grid item xs={9}>
                   <Controller
                     as={TextField}
                     control={control}
@@ -178,26 +212,31 @@ const SignUp = () => {
                 <Button
                   type="submit"
                   variant="contained"
-                  color="primary"
+                  className={classes.btn}
                   disabled={isSubmitting || isLoading}
                 >
                   Submit
                 </Button>
               </Box>
             </form>
+
+            
           </CardContent>
+          <CardActions>
+            <Box maxWidth={700} mt={3} mx="auto">
+            <Typography variant="body2" align="center">
+              Already have an account?
+            </Typography>
+            <Typography variant="body2" color="primary" align="center">
+              <Link to="/login" component={RouterLink} className={classes.link}>
+                Log In
+              </Link>
+            </Typography>
+            </Box>
+          </CardActions>
         </Card>
 
-        <Box maxWidth={700} mt={3} mx="auto">
-          <Typography variant="body2" align="center">
-            Already have an account?
-          </Typography>
-          <Typography variant="body2" color="primary" align="center">
-            <Link to="/login" component={RouterLink} className={classes.link}>
-              Log In
-            </Link>
-          </Typography>
-        </Box>
+       
       </Box>
     </Box>
   )
