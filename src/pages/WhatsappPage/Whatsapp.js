@@ -27,7 +27,7 @@ const Whatsapp = (props) => {
 
   const useStyles = makeStyles((theme) => ({
     WhatsappWrapper: {
-      backgroundImage: `url('/whatsapp_page/chat-background.png')`,
+      backgroundImage: `url('/images/bg_ui_whatsapp.png')`,
       height: '90vh',
       [theme.breakpoints.up('md')]: {
         height: '660px',
@@ -68,7 +68,7 @@ const Whatsapp = (props) => {
           dir="ltr"
           >
           {currentParagraphs.map((step, i) => {
-            {console.log(step.tags[0])}
+            
             if (step.tags[0]?.includes('speaker_self')) {
               return (
                 <Box

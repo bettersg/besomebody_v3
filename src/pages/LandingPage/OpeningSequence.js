@@ -108,7 +108,7 @@ const OpeningSequence = () => {
         </div>
       <Box className={classes.paragraphWrapper}  height="100%">
           <div>
-          {introParagraphs.steps.slice(step - 1, step).map((step, index) => (
+          {introParagraphs.map((step, index) => (
                
                 <div>
                   <div

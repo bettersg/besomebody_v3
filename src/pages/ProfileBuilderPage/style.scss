@@ -1,0 +1,240 @@
+@import "../../scss/global/global"; 
+
+// html, body {
+//     height: 100%; 
+// }
+.Whatsapp {
+    &__header {
+        height: 64px;
+        background-color: $midnight100;
+        display: flex;
+        padding: 14px 20px; 
+        &--profile {
+            height: 36px; 
+            width: 36px; 
+            border-radius: 50%;
+            margin-right: 12px;
+        }
+        &__description {
+            color: $white;
+            &--name {
+                @include inter-whatsappName; 
+            }
+            &--status {
+                @include p2-normal-body; 
+                font-size: 12px !important;
+            }
+        }
+    }
+    &__messages {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        height: 77.3vh; 
+        @media screen and (min-device-width:481px) {
+            height: 535px; 
+        }
+        > div {
+            scroll-snap-align: end;
+        }
+        &--sender {
+            background: #C9F3F9;
+            width: 304px; 
+            padding: 12px;
+        }
+        &--receiver {
+            background: $white;
+            width: 304px; 
+            padding: 12px; 
+        }
+        &.choices {
+            transition: height 0.4s; 
+            height: 55.3vh; 
+            @media screen and (min-device-width:481px) {
+                height: 365px; 
+            }
+        }
+    }
+    &__sendWrapper {
+        background-color: $dark1;
+        padding: 10px 16px; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 64px; 
+        &__sendButton {
+            border-radius: 48px;
+            padding: 12px 16px; 
+            width: 85%; 
+            display: flex;
+            align-items: center;
+            height: 44px; 
+            color: $white;
+            font-size: 14px;
+            opacity: 80%;
+            background-color: $midnight80;
+            &.choice {
+                border: $aqua100 solid 2px;
+                background-color: transparent;
+                color: white; 
+            }
+            &--right {
+                background-color: $aqua100;
+                border-radius: 30px;
+                height: 40px;
+                width: 40px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+            }
+        }
+
+    }
+    &__choicesWrapper {
+        height: 170px; 
+        overflow-y: scroll;
+        transition: height 0.4s; 
+        background-color: $dark1;
+
+        animation:opac 0.9s;
+        @keyframes opac{
+            from{opacity:0} 
+            to{opacity:1}
+        }
+        .choices {
+            border-radius: 12px;
+            margin: 10px; 
+            padding: 13px 20px;
+            text-align: center;
+            background-color: $aqua1;
+            color: white;
+            cursor: pointer;
+            &:hover {
+                background-color: rgba(29, 191, 123, 0.4);
+            }
+    
+        }
+    }
+}
+
+// .whatsapp-box {
+//     width: 100%; 
+//     overflow: hidden;
+//     padding-right: 20px;
+//     img {
+//         border-radius: 50%; 
+//         width: 54px; 
+//         height: 54px; 
+//     }
+// }
+
+// .text-area > div {
+//     scroll-snap-align: end;
+    
+// }
+
+// .text-area {
+//     // background-color: #808080;
+//     overflow-y: scroll;
+//     transition: height 0.4s; 
+//     height: 66.1vh; 
+//     scroll-snap-type: y mandatory;
+
+
+//     @media screen and (min-device-width:481px) {
+//         height: 360px; 
+//     }
+
+//     &.full {
+//         transition: height 0.4s; 
+//         height: 66.1vh; 
+//         @media screen and (min-device-width:481px) {
+//             height: 360px; 
+//         }
+//     }
+// }
+// .choices-wrapper {
+//     height: 170px; 
+//     overflow-y: scroll;
+//     transition: height 0.4s; 
+//     background-color: #414141;
+
+//     animation:opac 0.9s;
+    
+
+//     // display: none;
+//     // z-index: -1;
+//     &.no-choices {
+//         // display: none;
+//         height: 0;
+//         transition: height 0.5s; 
+//     }
+    
+//     // .choices-title {
+//     //     text-align: center;
+//     //     font-weight: 800;
+//     // }
+//     .choices {
+//         border-radius: 12px;
+//         margin: 10px; 
+//         padding: 10px;
+//         text-align: center;
+//         background-color: rgba(29, 191, 123, 0.4);
+//         color: white;
+//         cursor: pointer;
+//         &:hover {
+//             background-color: rgb(91, 158, 102);
+//         }
+
+//     }
+// }
+// @keyframes opac{
+//     from{opacity:0} 
+//     to{opacity:1}
+// }
+// .send-wrapper {
+//     padding: 10px 10px; 
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     color: grey; 
+//     border-top: solid grey 0.1px;
+//     height: 60px; 
+//     background-color: #333333;
+
+//     // position: absolute;
+//     // bottom: 20px; 
+//     right: 0; 
+//     left: 0;
+//     &__send-button {
+//         border-radius: 20px;
+//         width: 280px; 
+//         color: rgb(184, 184, 184);
+//         display: flex;
+//         align-items: center;
+//         padding-left: 10px; 
+//         height: 40px; 
+//         background-color: #666666;
+//         &.choice {
+//             border: #1DBF7B solid 2px;
+//             background-color: transparent;
+//             color: white; 
+//         }
+//     }
+//     .send-button-right {
+//         background-color: #1DBF7B;
+//         border-radius: 30px;
+//         height: 40px;
+//         width: 40px;
+//         text-align: center;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         color: white;
+//     }
+//     .wa-sticker {
+//         width: 6%;
+//         height: 6%;
+//     }
+// }
