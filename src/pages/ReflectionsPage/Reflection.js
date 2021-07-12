@@ -7,7 +7,9 @@ import ChapterComplete from './chapter/ChapterComplete';
 import StoryComplete from './story/StoryComplete';
 import { REFLECTION_PAGE_FORM, REFLECTION_PAGE_STORY_COMPLETE, REFLECTION_PAGE_CHAPTER_COMPLETE, REFLECTION_PAGE_CHAPTER_REFLECTION_RESPONSES } from './constants';
 
-const Reflection = ({ getStory, reflectionId }) => {
+const Reflection = ({ reflectionId: propsReflectionId }) => {
+  const reflectionId = typeof propsReflectionId === "string" ? parseInt(propsReflectionId, 10) : propsReflectionId;
+
   const [page, setPage] = useState(REFLECTION_PAGE_CHAPTER_COMPLETE);
 
   useEffect(() => {
@@ -24,10 +26,10 @@ const Reflection = ({ getStory, reflectionId }) => {
       return <ChapterComplete setPage={setPage} />
     case REFLECTION_PAGE_CHAPTER_REFLECTION_RESPONSES:
       return <ChapterReflectionResponses reflectionId={reflectionId} setPage={setPage} />
-    case REFLECTION_PAGE_STORY_COMPLETE:
-      return <StoryComplete setPage={setPage} />
+    // case REFLECTION_PAGE_STORY_COMPLETE:
+    //   return <StoryComplete setPage={setPage} />
     case REFLECTION_PAGE_FORM:
-      return <ReflectionForm reflection={reflection} />;
+      return reflection ? <ReflectionForm reflection={reflection} /> : null;
     default:
       return null;
   }

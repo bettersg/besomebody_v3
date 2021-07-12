@@ -1,5 +1,5 @@
-import NadiaInk from '../stories/nadid.ink.json'
-import AmanInk from '../stories/aman_chapter1.ink.json'
+import NadiaInk from '../stories/nadia.ink.json'
+import AmanInk from '../stories/aman.ink.json'
 
 // TODO: Update with other properties such as character image, character bio, chapter summary, etc
 /* 
@@ -22,6 +22,9 @@ chapters []
   endings []
     endingId
     name
+    inkVar
+ 
+ -> to add the primary colour and secondary colour info for each character based on the UI design.
  
 */
 
@@ -30,10 +33,12 @@ export const CHARACTER_MAP = [
     characterId: 1,
     name: "Nadia Ibrahim",
     linkName: "nadia",
-    profileImage: "https://images.generated.photos/mOW1TlV_t3f-cxpA6Ud9Bj-fleXjDLGQC9f0oI0R24E/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAwMzMwMjIuanBn.jpg",
+    profileImage: "/images/nadia_profile.png",
     description: "Nadia wants to become a doctor - but will love and religion get in the way?",
-    jsonLink: '../stories/nadid.ink.json',
+    jsonLink: '../stories/nadia.ink.json',
     jsonFile: NadiaInk,
+    primaryColour: '#FB5A3F',
+    secondaryColour: '#664EFC',
     playable: true,
     variables: {
       nadia_mood: 5,
@@ -43,25 +48,30 @@ export const CHARACTER_MAP = [
       {
         chapterId: 1,
         number: 1,
-        title: "Caught with Gavin",
-        knotTag: "nadid_chapter6",
-        summary: "Nadia gets caught by her father holding hands with Gavin. What should she do?",
+        title: "Study Buddy",
+        knotTag: "nadia_1_intro",
+        summary: "Nadia gets cornered by her father about being with Gavin. What should she do?",
         playable: true,
+        images: [
+          "/images/nadia_1_intro.jpg",
+          "/images/nadia_1_night_street.jpg",
+          "/images/nadia_1_hdb_carpark.jpg",
+        ],
         endings: [
           {
             endingId: 1,
             title: "Break Up",
-            knotTag: "nadia_chapter1_ending_1",
+            inkVar: "nadia_1_ending_1",
           },
           {
             endingId: 2,
             title: "One Step at a Time",
-            knotTag: "nadia_chapter1_ending_2",
+            inkVar: "nadia_1_ending_2",
           },
           {
             endingId: 3,
             title: "Stay Together",
-            knotTag: "nadia_chapter1_ending_3",
+            inkVar: "nadia_1_ending_3",
           },
         ]
       },
@@ -69,19 +79,20 @@ export const CHARACTER_MAP = [
         chapterId: 2,
         number: 2,
         title: "School Bullies",
-        knotTag: "whatsapp",
+        knotTag: "nadia_1_1",
         summary: "Zhi Hao teases Nadia - should she tell him off?",
-        playable: true,
+        playable: false,
+        images : ["cat.jpg", "dog.jpg"],
         endings: [
           {
             endingId: 1,
             title: "Scold Him",
-            knotTag: "nadia_chapter2_ending_1",
+            inkVar: "nadia_chapter2_ending_1",
           },
           {
             endingId: 2,
             title: "Walk Away",
-            knotTag: "nadia_chapter2_ending_2",
+            inkVar: "nadia_chapter2_ending_2",
           },
         ]
       },
@@ -96,12 +107,12 @@ export const CHARACTER_MAP = [
           {
             endingId: 1,
             title: "Public",
-            knotTag: "nadia_chapter3_ending_1",
+            inkVar: "nadia_chapter3_ending_1",
           },
           {
             endingId: 2,
             title: "Private",
-            knotTag: "nadia_chapter3_ending_2",
+            inkVar: "nadia_chapter3_ending_2",
           },
         ]
       },
@@ -114,8 +125,10 @@ export const CHARACTER_MAP = [
     linkName: "aman",
     profileImage: "https://images.generated.photos/7PFNUmz7LLOsqCFQwANR09dLK1EWwS_r0XyJeh59CIQ/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAzOTI3MzIuanBn.jpg",
     description: "Aman wants to model and study overseas - but will his culture make things harder?",
-    jsonLink: '../stories/aman_chapter1.ink.json',
+    jsonLink: '../stories/aman.ink.json',
     jsonFile: AmanInk,
+    primaryColour: '#19A3AD',
+    secondaryColour: '#FFBB0B',
     playable: true,
     variables: {
       aman_mood: 5,
@@ -124,65 +137,66 @@ export const CHARACTER_MAP = [
       {
         chapterId: 1,
         number: 1,
-        title: "Model Sikh",
+        title: "Duty Calls",
         knotTag: "aman_1_intro",
-        summary: "Aman gets a modelling offer, but only if he trims his beard.",
+        summary: "Aman prepares to enlist in National Service. Will he go in as he is, or take a big step to blend in?",
         playable: true,
+        images: [
+          "/images/aman_1_intro.jpg",
+          "/images/aman_barbershop_floor.jpg",
+          "/images/aman_barbershop.jpg",
+          "/images/aman_bedroom.jpg",
+          "/images/aman_drawer.jpg",          
+          "/images/aman_sikh_event_hall.jpg",
+          "/images/whatsapp.png",
+        ],
         endings: [
           {
             endingId: 1,
-            title: "Trim Beard",
-            knotTag: "aman_chapter1_ending_1",
+            title: "Cut Hair",
+            inkVar: "aman_1_ending_1",
           },
           {
             endingId: 2,
-            title: "Complain Online",
-            knotTag: "aman_chapter1_ending_2",
-          },
-          {
-            endingId: 3,
-            title: "Walk Away",
-            knotTag: "aman_chapter1_ending_3",
-          },
+            title: "Keep Hair",
+            inkVar: "aman_1_ending_2",
+          }, 
         ]
       },
       {
         chapterId: 2,
         number: 2,
-        title: "The Barber",
-        knotTag: "aman_1_3",
-        summary: "Zhi Hao suggests Aman cut his hair for NS - should he?",
+        title: "To Be or Not To Be",
+        knotTag: "aman_2_intro",
+        summary: "Aman tries to crack the silver screen - but it’s even harder than he imagined.",
         playable: true,
+        images : ["cat.jpg", "dog.jpg"],
         endings: [
           {
             endingId: 1,
-            title: "Cut Hair",
-            knotTag: "aman_chapter2_ending_1",
-          },
-          {
-            endingId: 2,
-            title: "Keep Hair",
-            knotTag: "aman_chapter2_ending_2",
+            title: "Movie Role",
+            inkVar: "aman_chapter2_ending_1",
           },
         ]
       },
       {
         chapterId: 3,
         number: 3,
-        title: "Study or Sonya",
-        knotTag: "aman_1_6_narration",
-        summary: "Aman wants to go overseas for uni, but his girlfriend Sonya is staying in Singapore.",
-        playable: true,
+        title: "Fight or Flight",
+        knotTag: "aman_2_6_narration",
+        summary: "All Aman wants is to celebrate with friends. Why does everything have to be so difficult?",
+        playable: false,
+        images : ["cat.jpg", "dog.jpg"],
         endings: [
           {
             endingId: 1,
             title: "Stay",
-            knotTag: "aman_chapter3_ending_1",
+            inkVar: "aman_chapter3_ending_1",
           },
           {
             endingId: 2,
             title: "Leave",
-            knotTag: "aman_chapter3_ending_2",
+            inkVar: "aman_chapter3_ending_2",
           },
         ]
       },
@@ -192,17 +206,19 @@ export const CHARACTER_MAP = [
         title: "Outfield",
         knotTag: "aman_1_10_narration",
         summary: "Aman wants to go overseas for uni, but his girlfriend Sonya is staying in Singapore.",
-        playable: true,
+        playable: false,
+        images : ["cat.jpg", "dog.jpg"],
+
         endings: [
           {
             endingId: 1,
             title: "Stay",
-            knotTag: "aman_chapter3_ending_1",
+            inkVar: "aman_chapter3_ending_1",
           },
           {
             endingId: 2,
             title: "Leave",
-            knotTag: "aman_chapter3_ending_2",
+            inkVar: "aman_chapter3_ending_2",
           },
         ]
       },
@@ -214,7 +230,7 @@ export const CHARACTER_MAP = [
     linkName: "",
     profileImage: "https://images.generated.photos/DQHHu8JTFXU0kjR5resS59oVA1OzC7RNlSleKxeFWSI/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAyMzk4NzguanBn.jpg",
     description: "Zaina is a great teacher - but can she balance her family, her career, and her feelings?",
-    jsonLink: '../stories/nadid.ink.json',
+    jsonLink: '../stories/nadia.ink.json',
     playable: false,
   }, 
   {
@@ -223,7 +239,7 @@ export const CHARACTER_MAP = [
     linkName: "",
     profileImage: "https://images.generated.photos/rB_1dF254abgibQU0cuxULnYB5RLI94A10C4YYnWbMA/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA4NzY5NTIuanBn.jpg",
     description: "Zhi Hao seems to have an easy life - but will his hidden struggles derail his friendships?",
-    jsonLink: '../stories/nadid.ink.json',
+    jsonLink: '../stories/nadia.ink.json',
     playable: false,
   }, 
   {
@@ -232,7 +248,7 @@ export const CHARACTER_MAP = [
     linkName: "",
     profileImage: "https://images.generated.photos/Dz5nY_-KvnFjqXQCKJDd1-eFgiIRmKQ3OErG7kRIHjg/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA3Mzk2MzkuanBn.jpg",
     description: "Marie has a storyline, and it will be awesome - but we don't know what it is yet.",
-    jsonLink: '../stories/nadid.ink.json',
+    jsonLink: '../stories/nadia.ink.json',
     playable: false,
   }, 
 ];
@@ -250,7 +266,7 @@ export const CHARACTER_MAP = [
 //           endingUnlocked: 0, 
 //           endingAvail: 3,
 //           replay: false,
-//           knot_link: "/story/nadid",
+//           knot_link: "/story/nadia",
 //           chapter_summary: "This is a summary of what happened"
 //       }, 
 //       {
@@ -285,19 +301,19 @@ export const CHARACTER_MAP = [
 //       {
 //         id: 1,
 //         name: 'Family Matters',
-//         inkJson: NadidInk,
+//         inkJson: nadiaInk,
 //         endings: [
 //           {
 //             id: 1,
-//             name: "Nadid's Happy Ending",
+//             name: "nadia's Happy Ending",
 //           },
 //           {
 //             id: 2,
-//             name: "Nadid's Sad Ending",
+//             name: "nadia's Sad Ending",
 //           },
 //           {
 //             id: 3,
-//             name: "Nadid's Neutral & Gavin's Happy Ending",
+//             name: "nadia's Neutral & Gavin's Happy Ending",
 //           },
 //         ],
 //       },

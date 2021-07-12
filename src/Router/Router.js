@@ -12,79 +12,106 @@ import InkController from '../pages/InkController/InkController'
 import LandingPage from '../pages/LandingPage'
 import CharacterChoicePage from '../pages/CharacterChoicePage'
 import CharacterChapterPage from '../pages/CharacterChapterPage'
-import IntroPage from '../pages/IntroPage'
+import IntroMaster from '../pages/LandingPage/IntroMaster'
 import ProfileBuilderPage from '../pages/ProfileBuilderPage'
-import EmailPage from '../pages/EmailPage'
 import AudioPlayer from "../music/Music"
-
+import Help from '../pages/HelpPage/HelpPage'
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 class Router extends Component {
   render() {
     // Properties
-    const { user, roles, bar } = this.props
+    const { user, roles } = this.props
+    const InterFont = "'Inter', sans-serif"
+    const theme = createTheme({
+      typography: {
+        fontFamily: 'Inter, sans-serif',
+      },
+
+      overrides: {
+        MuiCssBaseline: {
+          '@global': {
+            '@font-face': [InterFont],
+          },
+        },
+        MuiContainer: {
+          maxWidthLg: {
+            margin: "0px", 
+            padding: "0px", 
+          }
+        }, 
+      },
+    });
 
     return (
       <BrowserRouter basename={process.env.REACT_APP_BASENAME}>
-        <Switch>
-          <Route path={["/", "/intro", "/characterchoice", "/chapters/:name"]} exact component={AudioPlayer} />
-        </Switch>
 
-        <Switch>
-          <Route path="/" exact>
-            {user ? <CharacterChoicePage /> : <LandingPage />}
-          </Route>
+        {/* {bar} // TODO: implement "bar" as a menubar above the game components below */}
+        <ThemeProvider theme={theme}>
+          <Switch>
+            <Route path={["/", "/intro", "/profilebuilder", "/signup" , "/login", "/help", "/characterchoice", "/chapters/:name"]} exact component={AudioPlayer} />
+          </Switch>
 
-          <Route path="/intro" exact>
-            <IntroPage />
-          </Route>
+          <Switch>
+            <Route path="/" exact>
+              {user ? <CharacterChoicePage /> : <LandingPage />}
+            </Route>
 
-          <PrivateRoute path="/characterchoice" exact>
-            <CharacterChoicePage />
-          </PrivateRoute>
+            <Route path="/intro" exact>
+              <IntroMaster />
+            </Route>
 
-          <PrivateRoute path="/chapters/:name" exact>
-            <CharacterChapterPage />
-          </PrivateRoute>
+            <PrivateRoute path="/characterchoice" exact>
+              <CharacterChoicePage />
+            </PrivateRoute>
 
-          <PrivateRoute path="/story/:name" exact>
-            <InkController />
-          </PrivateRoute>
+            <PrivateRoute path="/chapters/:name" exact>
+              <CharacterChapterPage />
+            </PrivateRoute>
 
-          <Route path="/signup" exact>
-            <SignUp />
-          </Route>
+            <PrivateRoute path="/story/:name" exact>
+              <InkController />
+            </PrivateRoute>
 
-          <PrivateRoute path="/profilebuilder" exact>
-            <ProfileBuilderPage />
-          </PrivateRoute>
+            <Route path="/signup" exact>
+              <SignUp />
+            </Route>
 
-          <Route path="/login" exact>
-            <Login />
-          </Route>
+            <PrivateRoute path="/profilebuilder" exact>
+              <ProfileBuilderPage />
+            </PrivateRoute>
 
-          <Route path="/forget-password" exact>
-            <ForgetPassword />
-          </Route>
+            <Route path="/login" exact>
+              <Login />
+            </Route>
 
-          <PrivateRoute path="/admin">
-            {user && roles.includes('admin') ? (
-              <AdminPage />
-            ) : (
-              <Redirect to="/" />
-            )}
-          </PrivateRoute>
+            <Route path="/help" exact>
+              <Help />
+            </Route>
 
-          <PrivateRoute path="/user/:userId">
-            {user ? <UserPage /> : <Redirect to="/" />}
-          </PrivateRoute>
 
-          <Route path="/email" exact>
-            <EmailPage />
-          </Route>
+            <Route path="/forget-password" exact>
+              <ForgetPassword />
+            </Route>
 
-          <Route>
-            <NotFoundPage />
-          </Route>
-        </Switch>
+            <PrivateRoute path="/admin">
+              {user && roles.includes('admin') ? (
+                <AdminPage />
+              ) : (
+                <Redirect to="/" />
+              )}
+            </PrivateRoute>
+
+            <PrivateRoute path="/user/:userId">
+              {user ? <UserPage /> : <Redirect to="/" />}
+            </PrivateRoute>
+
+            <Route>
+              <NotFoundPage />
+            </Route>
+          </Switch>
+
+        </ThemeProvider>
+
       </BrowserRouter>
     )
   }

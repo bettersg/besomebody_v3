@@ -22,7 +22,7 @@ export default function MultipleChoiceQuiz(props) {
     },[])
 
     const saveUserAnswer = (userAns) => {
-        console.log(userAns);
+        // console.log(userAns);
         setUserAnswers([...userAnswers, {
             answerId: currentQuestion.answers.filter(x => x.title)[0].answer_id,
             questionId: currentQuestion.question_id,
@@ -36,7 +36,7 @@ export default function MultipleChoiceQuiz(props) {
             answers: userAnswers,
             createdAt: new Date(),
         }
-        console.log(answerDocs);
+        // console.log(answerDocs);
         try {
             await createDbAnswers(answerDocs);
         } catch (err) {
@@ -55,8 +55,8 @@ export default function MultipleChoiceQuiz(props) {
     }
 
     const checkUserAnswer = (userAns) =>{
-        console.log(userAns)
-        console.log(currentQuestion.correctAnswer)
+        // console.log(userAns)
+        // console.log(currentQuestion.correctAnswer)
         saveUserAnswer(userAns)
         if(currentQuestion.correctAnswer==userAns){
             setCorrectAnswered(correctAnswered+1)

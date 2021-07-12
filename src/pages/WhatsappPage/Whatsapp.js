@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useRef } from 'react'
 import { Box, Fade, Grid, Typography } from '@material-ui/core'
+import makeStyles from '@material-ui/core/styles/makeStyles'
 import NextButton from '../../components/NextButton'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import './style.scss'
@@ -23,99 +24,108 @@ const Whatsapp = (props) => {
       })
     }
   }, [elementRef, currentParagraphs, choices])
+
+  const useStyles = makeStyles((theme) => ({
+    WhatsappWrapper: {
+      backgroundImage: `url('/whatsapp_page/chat-background.png')`,
+      height: '90vh',
+      [theme.breakpoints.up('md')]: {
+        height: '660px',
+      },
+      width: "100%", 
+    }
+  }))
+
+  const classes = useStyles()  
+  var currentSpeaker = ""
+
+
+  // sound component to do the *ding*
+// import ding from "../music/ding.wav"
+  // import sound from "react-sound"
+// inside render will put <sound> object
+
   // TO DO: make whatsapp screen fit the screen and customise controls
   return (
-    <Fade in>
-      <Box className="paragraph-wrapper" pb={3}>
-        <Box className="whatsapp-header" p={1} mb={3}>
-          <Grid container alignItems="center">
-            <Grid item xs={2}>
-              <Box className="whatsapp-box">
-                <img
-                  src={`/images/${specialTags.chat_group_image}`}
-                  alt="Chat Profile"
-                  className="profile-img"
-                />
-              </Box>
-            </Grid>
-
-            <Grid item xs={8}>
-              <Typography color="inherit" variant="h6" className="chat-name">
-                {specialTags.chat_group_title}
-              </Typography>
-              <Typography
-                color="inherit"
-                variant="subtitle2"
-                className="online-status"
-              >
-                online
-              </Typography>
-            </Grid>
-
-            <Grid item xs={2} />
-          </Grid>
-        </Box>
+    <Fade in={true} timeout={500}>
+      <Box className={classes.WhatsappWrapper}>
+        {/* Whatsapp Header */}
+        <div className="Whatsapp__header">
+          <img 
+            src={`/images/${specialTags.chat_group_image}`}
+            alt="Chat Profile"
+            className="Whatsapp__header--profile"
+          />
+          <div className="Whatsapp__header__description">
+            <div className="Whatsapp__header__description--name">{specialTags.chat_group_title}</div>
+            <div className="Whatsapp__header__description--status">Online</div>
+          </div>
+        </div>
+        
+        
         <Box
-          className={`text-area ${choices.length === 0 ? 'full' : ''}`}
+          className={`Whatsapp__messages ${choices.length > 0 ? 'choices' : ''}`}
           dir="ltr"
-        >
+          >
           {currentParagraphs.map((step, i) => {
+            {console.log(step.tags[0])}
             if (step.tags[0]?.includes('speaker_self')) {
               return (
                 <Box
                   key={step.text}
-                  my={2}
                   mx={1}
                   display="flex"
                   justifyContent="flex-end"
                 >
-                  <Fade in={step.text} key={i}>
+                  <Fade in={step.text} key={step.text} timeout={300}>
                     <Box
-                      className="chatbox-sender"
+                      className="Whatsapp__messages--sender"
+                      m={1}
                       borderRadius={5}
-                      p={1}
-                      key={i}
+                      key={step.text}
                     >
-                      <Typography key={i}>{step.text}</Typography>
+                      <Typography key={step.text}>{step.text}</Typography>
                     </Box>
                   </Fade>
                 </Box>
-              )
+              ) 
             } else if (step.tags[0]?.includes('speaker')) {     // this is needed to avoid rendering inner_monologue
               return (
-                <Box key={step.text} my={2} mx={1} display="flex">
-                  <Box className="chatbox-receiver" borderRadius={5} p={1}>                    
-                    <Typography key={i} variant="overline">
-                      {(step.tags[0]?.includes('speaker_1') ? specialTags.speaker_1_name : null)}
-                      {(step.tags[0]?.includes('speaker_2') ? specialTags.speaker_2_name : null)}
-                      {(step.tags[0]?.includes('speaker_3') ? specialTags.speaker_3_name : null)}
-                      {(step.tags[0]?.includes('speaker_4') ? specialTags.speaker_4_name : null)}
-                    </Typography> 
-                    <Typography key={i}>{ step.text }</Typography>
+                <Fade in={step.text} key={step.text} timeout={300}>
+                  <Box key={step.text} my={2} mx={1} display="flex">
+                    <Box className="Whatsapp__messages--receiver" borderRadius={5} p={1}>                    
+                      <Typography key={step.text}  variant="overline">
+                        {(step.tags[0]?.includes('speaker_1') ? specialTags.speaker_1_name : null)}
+                        {(step.tags[0]?.includes('speaker_2') ? specialTags.speaker_2_name : null)}
+                        {(step.tags[0]?.includes('speaker_3') ? specialTags.speaker_3_name : null)}
+                        {(step.tags[0]?.includes('speaker_4') ? specialTags.speaker_4_name : null)}
+                      </Typography> 
+                      <Typography key={step.text}>{ step.text }</Typography>
+                    </Box>
                   </Box>
-                </Box>
+                </Fade>
               )
             }
           })}
           <div ref={elementRef} />
-        </Box>
+        </Box> 
 
-        <Box className="send-wrapper">
+        <Box className="Whatsapp__sendWrapper">
           <Box
-            className={`send-wrapper__send-button ${
+            className={`Whatsapp__sendWrapper__sendButton ${
               choices.length === 0 ? '' : 'choice'
             }`}
           >
             Choose your reply...
           </Box>
-          <Box className="send-button-right">
+          <Box className="Whatsapp__sendWrapper__sendButton--right">
             <ExpandMoreIcon />
           </Box>
         </Box>
         {/* this if else is needed to toggle between "Next Button" and choices (if any) */}
         {choices.length > 0 ? (
           <Box
-            className={`choices-wrapper ${
+            className={`Whatsapp__choicesWrapper ${
               choices.length === 0 ? 'no-choices' : 'w3-animate-fading'
             }`}
           >

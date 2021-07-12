@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link , useHistory } from "react-router-dom";
 
 import { Grid, Fab, Box } from "@material-ui/core";
 
@@ -18,10 +18,17 @@ import UserCard from "../UserCard";
 import { ReactComponent as ErrorIllustration } from "../../illustrations/error.svg";
 import { ReactComponent as NoDataIllustration } from "../../illustrations/no-data.svg";
 
+import { useAuth } from '../../contexts/AuthContext'
+import { useSnackbar } from '../../contexts/SnackbarContext'
+
+
 const useStyles = makeStyles({
-  grid: {
-    margin: 0,
-    width: "100%",
+  root: {
+    background: '#eeeeee',
+    borderRadius: 3,
+    color: 'black',
+    height: 200,
+    padding: '50px 30px',
   },
 });
 
@@ -31,6 +38,10 @@ function UserPage() {
   const [error, setError] = useState(null);
   const { userId } = useParams();
   const classes = useStyles();
+  const history = useHistory()
+  const { logout, resetPassword } = useAuth()
+  const { setSnackbar } = useSnackbar()
+
 
   useEffect(() => {
     return firestore
@@ -92,15 +103,55 @@ function UserPage() {
     );
   }
 
-  const hasProfile = user.firstName && user.lastName && user.username;
+  const hasProfile = user.email;
+
+
+  const handleResetPassword = async () => {
+    try {          
+      await resetPassword(user.email)
+      setSnackbar({
+        message: `We have sent you a reset password link`,
+        open: true,
+        type: 'success',
+      })
+      
+    } catch (err) {
+      setSnackbar({
+        message: `Failed to log out: ${err.message}`,
+        open: true,
+        type: 'error',
+      })
+    }       
+  }
+  
+  const logoutUser = async () => {
+        try {          
+          await logout()
+          history.push('/')
+        } catch (err) {
+          setSnackbar({
+            message: `Failed to log out: ${err.message}`,
+            open: true,
+            type: 'error',
+          })
+        }       
+  }
+
 
   if (hasProfile) {
     return (
-      <Grid className={classes.grid} container justify="center" spacing={5}>
-        <Grid item xs={4}>
-          <UserCard user={user} />
-        </Grid>
-      </Grid>
+      <Box >
+        <UserCard user={user} />
+        <br />
+        <Box className={classes.root}>
+          <Link to="/">Back to Main Menu</Link> <br />
+          <Link onClick={() => history.goBack()}>Return to Game</Link> <br />
+          <hr />
+          <Link onClick={() => handleResetPassword()}>Reset your password</Link> <br />
+          <Link to="/profilebuilder">Rebuild Your Profile</Link> <br />
+          <Link to="/" onClick={logoutUser}><span>Sign Out</span></Link> <br />
+        </Box>
+      </Box>       
     );
   }
 

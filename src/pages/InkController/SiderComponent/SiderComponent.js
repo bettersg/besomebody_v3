@@ -1,117 +1,161 @@
-import React from 'react';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import { Avatar } from '@material-ui/core';
+import React, { useState, useEffect } from 'react';
+import { useParams , Link , useHistory } from 'react-router-dom'
+import SVG from 'react-inlinesvg';
+
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-import MenuIcon from '@material-ui/icons/Menu';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import { useSnackbar } from '../../../contexts/SnackbarContext'
+
+import { useAuth } from '../../../contexts/AuthContext'
+import { getDbUser } from '../../../models/userModel.js';
+
+// Constants
+import { CHARACTER_MAP } from '../../../models/storyMap';
+// import { MENU_ITEMS } from './constants';
 
 import "./style.scss"; 
 
-const useStyles = makeStyles({
-  list: {
-    width: 250,
-  },
-  fullList: {
-    width: 'auto',
-  },
-});
+export default function SwipeableTemporaryDrawer(props) {
+  const history = useHistory(); 
+  const { name } = useParams();
+  const { globalVariables } = props
+  const persona = CHARACTER_MAP.find((character) => character.linkName === name); 
+  
+  // console.log(persona)
 
-export default function SwipeableTemporaryDrawer() {
-  const classes = useStyles();
+  // Snackbar Context
+  const { setSnackbar } = useSnackbar()
+
+  // for the side-nav swipeable drawer
   const [state, setState] = React.useState({
-    left: false,
-    
+    left: false,    
   });
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
     }
-
     setState({ ...state, [anchor]: open });
   };
 
+
+  // for the user profile
+  const { currentUser } = useAuth()
+  const [userFromDb, setUserFromDb] = useState(null)
+
+	useEffect(() => {
+	  const getUser = async () => {
+		const user = await getDbUser(currentUser.id)
+		return setUserFromDb(user)
+	  }
+	  getUser()
+	}, [currentUser.id])
+
+  // for the Logout
+  const { logout } = useAuth()
+
+  const logoutUser = async () => {
+        try {          
+          await logout()
+          history.push('/')
+        } catch (err) {
+          setSnackbar({
+            message: `Failed to log out: ${err.message}`,
+            open: true,
+            type: 'error',
+          })
+        }       
+  }
+
+
+  // the actual menu
   const list = (anchor) => (
     <div
-      className={clsx(classes.list, {
-        [classes.fullList]: anchor === 'top' || anchor === 'bottom',
-      })}
       id="menu-items"
       role="presentation"
+      className="SideMenu"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
+      style={{backgroundColor:persona.primaryColour, height: "100%"}}
     >
-      <div className="menu-username">
-        <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" className="menu-avatar" />
-        username
+      <div className="SideMenu__background">
+        <img src={persona.profileImage} />
       </div>
-      <div className="menu-description">
-        <div>
-          <div>You’re 48% through</div>
-          <div className="chapter-num">Nadia, Chapter 2</div>
-          <div className="resume"> Resume Game </div>
+      
+      {/* <div className="SideMenu__top" style={{backgroundColor:persona.primaryColour}}> */}
+      <div 
+        className="SideMenu__top" 
+        style={{
+          backgroundImage:`linear-gradient(to bottom, 
+            ${persona.primaryColour+"B3"}, ${persona.primaryColour} 50%)`
+        }}
+      >
+        <div className="SideMenu__current">Currently Playing</div>
+        <div className="SideMenu__gameDetails">
+          {name},
+          <br/> Chapter {globalVariables.chapter_id}
         </div>
-        <div>
-          <ArrowForwardIosIcon className="arrow-icon"/>
+        <div className="SideMenu__playSection">
+          {/* <div className="SideMenu__playSection--timeLeft">Time left in chapter: 3mins</div> */}
+          <div className="SideMenu__playSection--playButton" style={{backgroundColor: persona.secondaryColour}}>
+            <SVG src="/side_menu/play-button.svg" />
+          </div>
         </div>
+        
+        <div className="SideMenu__menuitems" >
+          {/* I know why you did it as a map, but this makes it very hard to pass in dynamic values to the links. I've reverted it to individual links */}
+          <div className="SideMenu__menuitems__item">
+            <SVG src="/side_menu/icon.svg" className="SideMenu__menuitems__icons"/>
+            <Link to="/" className="SideMenu__menuitems__label"><span>Character Menu</span></Link>
+          </div>
 
-      </div>
-      <hr/>
-      <div className="menu-options">
-        <Avatar alt="c" src="/" style={{marginRight:"15px"}}/> <span>Character Menu</span>
-      </div>
-      <div className="menu-options">
-        <Avatar alt="c" src="/" style={{marginRight:"15px"}}/> <span>Help</span>
-      </div>
-      <div className="menu-options">
-        <Avatar alt="c" src="/" style={{marginRight:"15px"}}/> <span>Library</span>
-      </div>
-      <div className="menu-bottom">
-        <hr/>
-        <div className="menu-options">
-          <Avatar alt="c" src="/" style={{marginRight:"15px"}}/> <span>Library</span>
+          <div className="SideMenu__menuitems__item">
+            <SVG src="/side_menu/heart.svg" className="SideMenu__menuitems__icons"/>
+            <Link to={"/chapters/"+ name} className="SideMenu__menuitems__label"><span>Chapter Menu</span></Link>
+          </div>
+
+          <div className="SideMenu__menuitems__item">
+            <SVG src="/side_menu/profile.svg" className="SideMenu__menuitems__icons"/>
+            <Link to={"/user/" + currentUser.id} className="SideMenu__menuitems__label"><span>Account Menu</span></Link>
+          </div>
+
+          <div className="SideMenu__menuitems__item">
+            <SVG src="/side_menu/help.svg" className="SideMenu__menuitems__icons"/>
+            <Link to="/help" className="SideMenu__menuitems__label"><span>Help</span></Link>
+          </div>
+
+        </div>
+      <hr />
+      <div className="SideMenu__bottom">
+        <div className="SideMenu__menuitems__item" >
+          <SVG src="/side_menu/logout.svg" className="SideMenu__menuitems__icons"/>
+          <Link to="/" className="SideMenu__menuitems__label" onClick={logoutUser}><span>Sign Out</span></Link>
         </div>
       </div>
+      </div>
 
-      {/* orginal */}
-      {/* <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List> */}
+
+      
     </div>
   );
 
   return (
-    <div className="menu-wrapper">
+    <div className="MenuWrapper">
       {['left'].map((anchor) => (
         <React.Fragment key={anchor}>
-          <img src="/commons/home.svg" onClick={toggleDrawer(anchor, true)} className="menu-button" />
-          <SwipeableDrawer
-            anchor={anchor}
-            open={state[anchor]}
-            onClose={toggleDrawer(anchor, false)}
-            onOpen={toggleDrawer(anchor, true)}
-            className="menu-drawer"
-            containerStyle={{height: 'calc(100% - 64px)', top: 64}}
-          >
-            {list(anchor)}
-          </SwipeableDrawer>
+          <SVG src="/side_menu/menu-icon.svg" onClick={toggleDrawer(anchor, true)} className="MenuWrapper__menuButton" />
+            <SwipeableDrawer
+              anchor={anchor}
+              open={state[anchor]}
+              onClose={toggleDrawer(anchor, false)}
+              onOpen={toggleDrawer(anchor, true)}
+            >
+              {list(anchor)}
+            </SwipeableDrawer>
         </React.Fragment>
       ))}
     </div>
   );
 }
+
+
+ 

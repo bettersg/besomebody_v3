@@ -12,16 +12,16 @@ import SwipeQuiz from '../MiniGames/Swipe/SwipeQuiz'
 import { CHARACTER_MAP } from '../../models/storyMap'
 import { useInkContext } from '../../contexts/InkContext'
 import Narrator from '../NarratorPage/Narrator'
+import Reflection from '../ReflectionsPage/Reflection'
 
-import NadiaInk from '../../stories/nadid.ink.json'
-import AmanInk from '../../stories/aman_chapter1.ink.json'
+import NadiaInk from '../../stories/nadia.ink.json'
+import AmanInk from '../../stories/aman.ink.json'
 
 
 const getInkJson = (nameParam) => {
   switch (nameParam) {
-    case 'nadid':
     case 'nadia': {
-      const nadidStory = CHARACTER_MAP.find((story) => story.id === 1)
+      const nadiaStory = CHARACTER_MAP.find((story) => story.id === 1)
       // const nadidChapter1 = nadidStory.chapters.find(
       // (chapter) => chapter.id === 1)
       // const json = nadidStory.jsonFile
@@ -62,13 +62,18 @@ const getUi = ({ currentParagraphs, specialTags }) => {
       // TODO: update this component
       return <Survey currentParagraphs={currentParagraphs} />
     }
+      
+    case 'chapter_reflection': {
+      // TODO: update this component
+      return <Reflection reflectionId={specialTags.reflection_id} />
+    }
 
     case 'mcq': {
       return <MultipleChoiceQuiz quizId={specialTags.game_id}/>
     }
 
     case 'swipe': {
-      return <SwipeQuiz currentParagraphs={currentParagraphs} />
+      return <SwipeQuiz  quizId={specialTags.game_id} />
     }
 
     // case reflection  - return a reflection component with argument for survey id from ink
@@ -97,6 +102,7 @@ const InkController = () => {
     saveStory,
   } = useInkContext()
 
+  
   // ==============================================================
   // Filter paragraphs based on current knot
   // ==============================================================
@@ -142,11 +148,7 @@ const InkController = () => {
 
   return (
     <Container maxWidth="lg" className="ink-controller">
-      <Box>
-        <Typography variant="overline" className="name">
-          {name}
-        </Typography>
-      </Box>
+      
 
       {getUi({
         currentParagraphs,
