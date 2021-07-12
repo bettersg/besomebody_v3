@@ -2,12 +2,6 @@ import React, { useState } from 'react'
 import {
   Box,
   Button,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogContentText,
-  DialogTitle,
-  Snackbar,
   Typography,
   Container,
 } from '@material-ui/core'

@@ -12,7 +12,7 @@ import InkController from '../pages/InkController/InkController'
 import LandingPage from '../pages/LandingPage'
 import CharacterChoicePage from '../pages/CharacterChoicePage'
 import CharacterChapterPage from '../pages/CharacterChapterPage'
-import IntroPage from '../pages/IntroPage'
+import IntroMaster from '../pages/LandingPage/IntroMaster'
 import ProfileBuilderPage from '../pages/ProfileBuilderPage'
 import Help from '../pages/HelpPage/HelpPage'
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
@@ -51,7 +51,7 @@ class Router extends Component {
             </Route>
 
             <Route path="/intro" exact>
-              <IntroPage />
+              <IntroMaster />
             </Route>
 
             <PrivateRoute path="/characterchoice" exact>
