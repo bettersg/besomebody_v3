@@ -123,7 +123,7 @@ Crap! I'm still WEARING his hoodie.  #inner_monologue
 #background:whatsapp.png
 #chat_group_title:Gavin
 #chat_group_image:ico_nadia_gavin.jpg
-#speaker1_name:Gavin
+#speaker_1_name:Gavin
 I'm sorry!! Your hoodie is still with me 😳 #speaker_self
 💩 #speaker_1
 yaaa forgot about night study today, didn't bring the winter wear #speaker_self
@@ -177,7 +177,7 @@ I know, I know. #speaker_left
 #background:whatsapp.png
 #chat_group_title:Gavin
 #chat_group_image:ico_nadia_gavin.jpg
-#speaker1_name:Gavin
+#speaker_1_name:Gavin
 Need me to bring any of my notes from last term tomorrow? #speaker_self
 Nah all good #speaker_1
 and your hoodie #speaker_self
@@ -366,7 +366,7 @@ A message from Gavin!
 #background:whatsapp.png
 #chat_group_title:Gavin
 #chat_group_image:ico_nadia_gavin.jpg
-#speaker1_name:Gavin
+#speaker_1_name:Gavin
 #timestamp:16.14
 Where u at? #speaker_1
 Canteen! Having early dinner, super hungry after PE #speaker_self
@@ -396,7 +396,7 @@ A message from Azlin
 #background:whatsapp.png
 #chat_group_title:Azlin
 #chat_group_image:ico_nadia_azlin.jpg
-#speaker1_name:Azlin
+#speaker_1_name:Azlin
 #timestamp:16.18
 nad what time are you gg to be home today? #speaker_1
 Probs be at night study again. What’s up? #speaker_self
@@ -506,7 +506,6 @@ Char siu! #speaker_left
 Yes, that one! With char siu in the picture, then all becomes VERY not halal. #speaker_self
 Ok, what about “No Pork, No Lard”?  #speaker_left
 My sister’s friends are chill with that. When they come over to hang out, my mum makes bee hoon. #speaker_left
-NADIA (Inner monologue)
 I really can’t speak for others.. #inner_monologue
 It depends. #speaker_left
 Yeah. And I can’t judge.  #speaker_self
@@ -635,7 +634,7 @@ I’m not imagining it, right? I need to talk to a voice of reason!
 #background:whatsapp.png
 #chat_group_title:Azlin
 #chat_group_image:ico_nadia_azlin.jpg
-#speaker1_name:Azlin
+#speaker_1_name:Azlin
 #timestamp:17:25
 Hallo are you still at my place? Am just leaving school #speaker_self
 ala i left already :( #speaker_1
@@ -718,7 +717,8 @@ u have a type nad #speaker_1
     Sigh a bit late for that #speaker_self
 - just.. remember who you are okay? #speaker_1
 
--> nadia_2_intro
+
+-> nadia_1_reflection
 
 = nadia_1_4b
 Ya, I’ve known him for awhile. We go to study group together. #speaker_self
@@ -736,7 +736,7 @@ Really? It’s just how we are. K, maintain... #inner_monologue
 #background:whatsapp.png
 #chat_group_title:Azlin
 #chat_group_image:ico_nadia_azlin.jpg
-#speaker1_name:Azlin
+#speaker_1_name:Azlin
 No la. Where got.  #speaker_self
 We’re good friends what. Friends sometimes fight. What matters is how we make up after. #speaker_self
 “make up” #speaker_1
@@ -802,6 +802,19 @@ MAMPOS. #speaker_1
     Yes? 😬 #speaker_self
     dun gatal gatal with these boys la. just focus on your studies. only 4 more months to a levels kan.  #speaker_1
 - just.. remember who u are, okay?  #speaker_1
+
+
+
+
+-> nadia_1_reflection
+
+
+=== nadia_1_reflection ===
+#knot:nadia_1_reflection
+#ui:chapter_reflection
+#reflection_id:2
+Reflection 1
+
 
 
 -> nadia_2_intro
