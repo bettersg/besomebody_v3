@@ -21,9 +21,8 @@ import {
   import SignalCellularAltIcon from '@material-ui/icons/SignalCellularAlt';
   import Battery90Icon from '@material-ui/icons/Battery90';
 
-
   import "./style.scss"; 
-
+  import AudioPlayer from "../../music/Music"
 
   const EmailPage = (props) => {
     return (
@@ -41,7 +40,7 @@ import {
            
           </Grid>
           </div>
-          
+        <AudioPlayer />  
         
         <Box border={1}>
         <div className="email-wrapper">
