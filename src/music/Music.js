@@ -1,6 +1,6 @@
 import Music1 from './tobeyou_intro.mp3'
 import React from 'react'
-import Sound from 'react-sound'
+// import Sound from 'react-sound'
 import ReactAudioPlayer from 'react-audio-player';
 
 
