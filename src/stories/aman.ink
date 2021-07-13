@@ -56,6 +56,27 @@ VAR chapter_id = 1
 // VAR aman_2_6_secret = 0
 // VAR aman_3_1_drink = 1
 
+<<<<<<< Updated upstream
+=======
+VAR aman_mood = 10
+VAR chapter_1_ending = 0 
+VAR chapter_2_ending = 0 
+VAR chapter_3_ending = 0 
+VAR chapter_4_ending = 0 
+VAR chapter_5_ending = 0 
+VAR chapter_6_ending = 0 
+VAR chapter_7_ending = 0 
+VAR chapter_8_ending = 0 
+VAR chapter_9_ending = 0 
+
+// VAR aman_2_1c_overcharge = 0
+// VAR aman_2_2_confide = 0
+// VAR aman_2_5_change_look= 0
+// VAR aman_2_6_secret= 0
+// VAR aman_3_1_drink= 0
+// VAR ending_id = 1;
+
+>>>>>>> Stashed changes
 -> aman_1_intro
 
 // CHARACTER INTRODUCTION
@@ -106,11 +127,11 @@ Zhi Hao and I are at a Sikh community event early on a Saturday morning.
 Oi! Focus la. You’re double-packing the fruits. #speaker_left
 Crap. Thanks. #speaker_self
 You okay? You’ve been so quiet this morning. PMS ah? #speaker_left
-+ [I'm just nervous] Stop it lah. I'm just nervous about enlistment. When are you going in?
++ [I'm just nervous] Stop it lah. I'm just nervous about enlistment. When are you going in? #speaker_self
     Two months more. You? #speaker_left
     Next month. Quite nervous sia. #speaker_self
     Why ah? Oh - because you posted army right? #speaker_left
-+ Haha must be lah[.] Anyway, thanks for doing this ya. I know volunteering is not the most exciting way to spend your weekend.
++ Haha must be lah[.] Anyway, thanks for doing this ya. I know volunteering is not the most exciting way to spend your weekend. #speaker_self
     It’s ok, good karma. Anyway, I know you’re enlisting soon, so can’t hang out already. Next month going in already right? #speaker_left
     Uh - yeah. #speaker_self
     You sound like you got handed death sentence. Why? Because going army right? #speaker_left
@@ -156,7 +177,11 @@ Later that night...
 
 Oh my god, can you like, KNOCK? #speaker_self
 If you need privacy, lock the door. Anyway, what are you doing? Examining your forehead lines? #speaker_right
+<<<<<<< Updated upstream
 Told you to do your yoga face exercises before bed. It will keep you youthful and glowing, like moi. #speaker_right #speaker_right_image:cha_aman_jothi_laughing.png
+=======
+Told you to do your yoga face exercises before bed. It will keep you youthful and glowing, like moi. #speaker_right 
+>>>>>>> Stashed changes
 What do you want? #speaker_self
 Can I borrow your airpods? I sent mine for servicing. #speaker_right #speaker_right_image:jothi_casual.png
 Ya, it’s in the second drawer. Take and get out. #speaker_self
@@ -172,7 +197,8 @@ You’ve been cutting your hair, haven’t you? #speaker_right
     You better not do anything stupid. Papa will kick you out. #speaker_right
 - Let him. I’m going to enlist anyway. I’ll just stay in camp. #speaker_self
 How could you even say that! Doesn’t this mean anything to you? How can you take this so lightly? #speaker_right
-Sis, until and unless you keep a turban yourself, or even keep your hair longer than your shoulders, or have to do bloody NS, for God’s sake, you are not in a position to comment on or judge my life choices.  #speaker_self
+Sis, until and unless you keep a turban yourself, or even keep your hair longer than your shoulders... #speaker_self
+...or have to do bloody NS, for God’s sake, you are NOT in a position to comment on or judge my life choices.  #speaker_self
 Don’t pretend to be so perfect. Neither of us are role models. #speaker_self
 Now, will you please take the airpods, and leave me alone? #speaker_self
 #speaker_right_image:cha_aman_jothi_sad.png
@@ -188,7 +214,7 @@ Sigh. Aman, I... #speaker_right
 #knot:aman_1_minigame
 #ui:mcq
 #game_id:1
-Minigame 1 // must add some text
+Why was Jothi so concerned about this? // must add some text
 
 -> aman_1_3_narration
 
@@ -307,7 +333,11 @@ Aman - please tell amma you want to order something for dinner! Side with me! #s
 Let the boy make up his own mind Jothi! He's going to be a real man soon! #speaker_1
 Aman? #speaker_1
 + [Send them a selfie of your haircut]
+<<<<<<< Updated upstream
     - This is what I look like after my haircut #emoji:aman_haircut_selfie.png #speaker_self 
+=======
+    This is what I look like after my haircut  💇🏾‍♂️  [📎selfie.jpg]  #emoji:aman_haircut_selfie.png #speaker_self 
+>>>>>>> Stashed changes
 + [Tell your family that you cut your hair]
     I cut my hair to prepare NS today. It's very short now.    #speaker_self 
 - ... #speaker_self 
