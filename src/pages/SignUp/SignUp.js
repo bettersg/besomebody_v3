@@ -96,35 +96,35 @@ const SignUp = () => {
     switch (true) {
       case !values.email: {
         return setSnackbar({
-          message: 'Email is required',
+          message: 'You did not input your Email',
           open: true,
           type: 'error',
         })
       }
       case !values.password: {
         return setSnackbar({
-          message: 'Password is required',
+          message: 'You did not input a Password',
           open: true,
           type: 'error',
         })
       }
       case values.password.length < 6: {
         return setSnackbar({
-          message: 'Password should be at least 6 characters',
+          message: 'Password should be > 6 characters',
           open: true,
           type: 'error',
         })
       }
       case !values.confirmPassword: {
         return setSnackbar({
-          message: 'Confirm password is required',
+          message: 'You did not confirm your password',
           open: true,
           type: 'error',
         })
       }
       case values.confirmPassword !== values.password: {
         return setSnackbar({
-          message: 'Passwords do not match',
+          message: 'The passwords do not match',
           open: true,
           type: 'error',
         })
@@ -173,7 +173,7 @@ const SignUp = () => {
                     control={control}
                     name="email"
                     type="email"
-                    placeholder="Enter your email here"
+                    placeholder="your@emailaddress.com"
                     required
                     fullWidth
                   />
@@ -187,7 +187,7 @@ const SignUp = () => {
                     control={control}
                     name="password"
                     type="password"
-                    placeholder="Enter your password here"
+                    placeholder="Password > 6 characters"
                     required
                     fullWidth
                   />
@@ -201,7 +201,7 @@ const SignUp = () => {
                     control={control}
                     name="confirmPassword"
                     type="password"
-                    placeholder="Enter your confirm password here"
+                    placeholder="Repeat the password"
                     required
                     fullWidth
                   />
