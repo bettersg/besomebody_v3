@@ -98,8 +98,9 @@
 .MenuWrapper {
   &__menuButton {
     position: absolute;
+    cursor: pointer; 
     top: 16px; 
-    left: 16px; 
+    right: 16px; 
     color: rgba(243, 243, 243, 0.83);
     height: 48px;
     width: 48px;

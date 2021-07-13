@@ -61,7 +61,7 @@ VAR character_id = 1
 #ui:narrator
 #background:bg_nadia_intro.jpg
 #music:nadia_intro.mp3
-.
+..
 VAR chapter_id = 1
 Nadia Binte Rahim #title
 This is where I tell the player about myself, to help them understand my age, background, profile etc. We must explain to them who she is so that they can start to assume her identity.
@@ -228,7 +228,7 @@ Track pants or PE shorts? Track pants la. The teacher said it was ok...
 === nadia_1_2 ===
 #knot:nadia_1_2
 #ui:scene
-#background:bg_nadia_schoolbathroom.jpg
+#background:bg_nadia_girlsbathroom.jpg
 #speaker_right_image:cha_nadia_chloe.png
 #speaker_right_name:Chloe
 Want some SPF? #speaker_right

@@ -114,7 +114,6 @@ const Scene = (props) => {
 
                 >
                   {/* <div className="ScenePage__nameWrapper"> */}
-                  <Fade in={step.text}  timeout={900}>
                     <div 
                       className={`
                         ${(step.tags[0] === "speaker_left" && specialTags.speaker_left_name) || 
@@ -130,16 +129,15 @@ const Scene = (props) => {
                         bottom: step.tags[0] === 'speaker_right'?null:"-20px", 
                       }}
                     >
-                      {console.log(currentParagraphs)}
+                      {/* {console.log(currentParagraphs)} */}
                       {step.tags[0] === 'speaker_left' ? specialTags.speaker_left_name : null}
                       {step.tags[0] === 'speaker_right' ? specialTags.speaker_right_name : null}
                       {step.tags[0]==='speaker_self'? name:null}
                     </div>
 
-                  </Fade>
 
                   {/* </div> */}
-                  <Fade in={step.text}  timeout={500}>
+                  {/* <Fade in={step.text}  timeout={500}> */}
                   {/* <Fade in> */}
                     <div>
                       {/* this is gradient div for inner monologue */}
@@ -196,7 +194,7 @@ const Scene = (props) => {
                       </div>
                       
                     </div>
-                    </Fade>
+                    {/* </Fade> */}
 
                     {/* this if else is needed to toggle between "Next Button" and choices (if any)
                     <div 

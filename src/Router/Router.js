@@ -14,6 +14,7 @@ import CharacterChoicePage from '../pages/CharacterChoicePage'
 import CharacterChapterPage from '../pages/CharacterChapterPage'
 import IntroMaster from '../pages/LandingPage/IntroMaster'
 import ProfileBuilderPage from '../pages/ProfileBuilderPage'
+import AudioPlayer from "../music/Music"
 import Help from '../pages/HelpPage/HelpPage'
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 class Router extends Component {
@@ -43,8 +44,13 @@ class Router extends Component {
 
     return (
       <BrowserRouter basename={process.env.REACT_APP_BASENAME}>
+
         {/* {bar} // TODO: implement "bar" as a menubar above the game components below */}
         <ThemeProvider theme={theme}>
+          <Switch>
+            <Route path={["/", "/intro", "/profilebuilder", "/signup" , "/login", "/help", "/characterchoice", "/chapters/:name"]} exact component={AudioPlayer} />
+          </Switch>
+
           <Switch>
             <Route path="/" exact>
               {user ? <CharacterChoicePage /> : <LandingPage />}
@@ -105,6 +111,7 @@ class Router extends Component {
           </Switch>
 
         </ThemeProvider>
+
       </BrowserRouter>
     )
   }
