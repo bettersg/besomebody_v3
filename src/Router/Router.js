@@ -13,6 +13,7 @@ import ForgetPassword from '../pages/ForgetPassword/ForgetPassword'
 import InkController from '../pages/InkController/InkController'
 import LandingPage from '../pages/LandingPage'
 import CharacterChoicePage from '../pages/CharacterChoicePage'
+import { CharacterChoicePage2 } from '../pages/CharacterChoicePage2'
 import CharacterChapterPage from '../pages/CharacterChapterPage'
 import IntroMaster from '../pages/LandingPage/IntroMaster'
 import ProfileBuilderPage from '../pages/ProfileBuilderPage'
@@ -69,7 +70,7 @@ class Router extends Component {
             </Route>
 
             <PrivateRoute path="/characterchoice" exact>
-              <CharacterChoicePage />
+              <CharacterChoicePage2 />
             </PrivateRoute>
 
             <PrivateRoute path="/chapters/:name" exact>

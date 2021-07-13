@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+<link rel="stylesheet" href="..\ToBeYou\styles\_variables.scss">
+
+<style type="text/css">
+body{
+  margin: 0;
+  background-color: #F0F1FC;
+  font-family: Inter;
+}
+
+hr{
+  background-color: #F0F1FC;
+  border-top: 8px;
+}
+
+article{
+  padding: 0px 0px 20px 0px;
+}
+
+
+.profile_buttons_right{
+  float: right;
+  padding: 0 10px 0 0;
+}
+
+.profile_tile{
+  padding: 5px 0px 0px 10px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #26248F;
+}
+
+.profile_tile_right:after{
+  float: right;
+  padding:0px 0px 0px 0px;
+}
+
+#image_post{
+  width: 100%;
+  height: auto;
+}
+
+/* Profile - styling */
+ul{
+  list-style: none;
+}
+
+li{
+  display: inline-block;
+  margin: 0 20px 0 -20px;
+}
+
+/* Profile - scrollable */
+div.scrollmenu{
+  white-space: nowrap;
+  overflow: auto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: center;
+}
+
+button{
+  border: none;
+  background-color: white;
+}
+
+
+.play_button{
+  border: none;
+  background-color: white;
+  background: #664EFC;
+  border-radius: 24px;
+  width: 104px;
+  height: 40px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+}
+
+/* Continue Playing Banner - styling*/
+#CharacterChoicePage__banner{
+  background-color: #FC684F;
+  height: 162px;
+  width: 100%;
+}
+
+#banner_img {
+    height: 100%;
+    overflow: hidden;
+    color: #FFFFFF
+ }
+
+.banner_color{
+    background: rgba(39,62,84,0.82);
+    overflow: hidden;
+    height: 100%;
+    z-index: 2;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+}
+
+.grid-container > div {
+  text-align: left;
+  padding: 20px 0 0 20px;
+}
+
+.item1_continuePlaying {
+  grid-column: 1 / 6;  
+  text-transform: uppercase;
+  color: #3D349D;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 11px;
+  line-height: 13px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.item2_characterName {
+  grid-column: 1 / 6;
+  grid-row: 2 / 6;
+  color: white;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 68px;
+  letter-spacing: -2px;
+}
+
+.item3_chapterTimeLeft {
+  grid-column: 1 / 6;
+  color: white;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.item4_playButton {
+  grid-column: 6 / 7;
+  grid-row: 1 / 7;
+}
+
+
+/* Character Card */
+/* Create two equal columns that floats next to each other */
+.characterCard{
+  background-color: #fff;
+}
+
+.profile_buttons {
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+  padding: 10px 0px 0px 10px;  
+}
+
+.profile_buttons #navRight {
+  float: right;
+}
+
+.profile_Name{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 5%;
+}
+
+.profile_status{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  color: #3835C1;
+  opacity: 0.6;
+}
+
+.column {
+  float: left;
+  padding: 10px 0px 0px 20px;
+}
+
+.likes{
+  padding: 5px 0px 0px 10px; 
+  font-weight: 700; 
+}
+
+.post_caption{
+  padding: 0px 0px 0px 10px;
+}
+
+.vertical-center{
+  margin: 0px;
+  top: 50%;
+}
+
+.card_profile_pic{
+ padding-top: 5px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Start of Game Menu -->
+
+<section id="game_menu" style="background-color: white;">
+
+<!-- Profiles (Insta stories thing) -->
+<div class="scrollmenu">
+  <div>
+    <ul>
+      <li>
+        <div>
+          <button>
+            <div>
+              <img src="..\ToBeYou\images\profile.png">
+            </div>
+            <div>Nadia</div>
+          </button>
+        </div>
+      </li>
+      
+      <li>
+        <div>
+          <button>
+            <div>
+              <img src="..\ToBeYou\images\profile.png">
+            </div>
+            <div>Aman</div>
+          </button>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <button>
+            <div>
+              <img src="..\ToBeYou\images\profile.png">
+            </div>
+            <div>Ravi</div>
+          </button>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <button>
+            <div>
+              <img src="..\ToBeYou\images\profile.png">
+            </div>
+            <div>Zhihao </div>
+          </button>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <button>
+            <div>
+              <img src="..\ToBeYou\images\profile.png">
+            </div>
+            <div>Gaurav</div>
+          </button>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <button>
+            <div>
+              <img src="..\ToBeYou\images\profile.png">
+            </div>
+            <div>Zi Kun</div>
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Continue Playing Banner -->
+<div id="CharacterChoices__banner">
+  <div class="grid-container">
+  <div class="item1_continuePlaying">Continue Playing</div>
+
+  <div class="item2_characterName">Nadia</div>  
+
+  <div class="item4_playButton">
+    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="25" cy="25" r="25" fill="#664EFC"/>
+      <path d="M34.0278 25L20.4862 35.8253V14.1747L34.0278 25Z" fill="white"/>
+    </svg>
+  </div>
+</div>
+
+<br> <!-- remove this bad code later -->
+
+</section>
+<!-- End of Game Menu -->
+ 
+<!-- Character card -->
+<div class="characterCard">
+  <article>
+    <header>
+      <div class="column">
+        <div class="card_profile_pic">
+          <a href="">
+            <img src="..\ToBeYou\images\profile_small.png">
+          </a>
+        </div>
+      </div>
+
+      <div class="column">
+        <p class="profile_Name">Nadia</p>
+        <p class="profile_status">Not played</p>
+      </div>
+    </header>
+
+    <div>
+      <img id="image_post" src="..\ToBeYou\images\nadia.png">
+    </div>
+
+    <div class="profile_buttons">
+      <a href="">
+          <img src="..\ToBeYou\images\heart.png" width="24px" height="24px">
+      </a>
+
+      <div class="profile_buttons_right">
+        <a href="">
+          <img src="..\ToBeYou\images\share.png" width="24px" height="24px">
+        </a>
+      </div>
+    </div>
+
+    <div class="likes">
+      <p>## likes</p>
+    </div>
+
+    <div class="post_caption">
+      <p><b>(Character Name)</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a turpis eget est iaculis dapibus. Fusce vulputate ipsum id augue rhoncus congue.</p>
+    </div>
+
+    <div>
+      <table width="100%">
+        <tr>
+          <td class="profile_tile">
+            <p>Discover Nadia's story</p>
+          </td>
+          <td class="vertical-center" align="right" style="padding-right: 10px;">
+            <div>
+              <button class="play_button">Play</button>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  </article>
+</div>
+
+<hr>
+
+<!-- Character card -->
+<div class="characterCard">
+  <article>
+    <header>
+      <div class="column">
+        <div class="card_profile_pic">
+          <img src="..\ToBeYou\images\profile_small.png">
+        </div>
+      </div>
+
+      <div class="column">
+        <p class="profile_Name">Aman</p>
+        <p class="profile_status">Chapter 1 Outcome 1 of 3</p>
+      </div>
+    </header>
+
+    <div>
+      <img id="image_post" src="..\ToBeYou\images\aman.png">
+    </div>
+
+    <div class="profile_buttons">
+      <a href="">
+          <img src="..\ToBeYou\images\heart.png" width="24px" height="24px">
+      </a>
+
+      <div class="profile_buttons_right">
+        <a href="">
+          <img src="..\ToBeYou\images\share.png" width="24px" height="24px">
+        </a>
+      </div>
+    </div>
+
+    <div class="likes">
+      <p>## likes</p>
+    </div>
+
+    <div class="post_caption">
+      <p><b>(Character Name)</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a turpis eget est iaculis dapibus. Fusce vulputate ipsum id augue rhoncus congue.</p>
+    </div>
+
+    <div>
+      <table width="100%">
+        <tr>
+          <td class="profile_tile">
+            <p>Discover Nadia's story</p>
+            <p>Replay Aman's Chapter 1</p>
+          </td>
+
+          <td class="vertical-center" align="right" style="padding-right: 10px;">
+            <div>
+              <button class="play_button">Play</button>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  </article>
+</div>
+
+<hr>
+
+</body>
+</html>
