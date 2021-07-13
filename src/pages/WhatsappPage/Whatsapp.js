@@ -40,7 +40,7 @@ const Whatsapp = (props) => {
   // }, []);
   const useStyles = makeStyles((theme) => ({
     WhatsappWrapper: {
-      backgroundImage: `url('/whatsapp_page/chat-background.png')`,
+      backgroundImage: `url('/images/bg_ui_whatsapp.png')`,
       height: '90vh',
       [theme.breakpoints.up('md')]: {
         height: '660px',

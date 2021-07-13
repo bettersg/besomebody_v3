@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import {
     Box,
     Button,     
+    Fade,    
     FormLabel,
     FormControlLabel,
+    Grid,
     Checkbox,
     RadioGroup,
     Radio,
@@ -11,16 +13,69 @@ import {
     Typography,
     Container,
 } from '@material-ui/core'
-import { useAuth } from '../../contexts/AuthContext'
 import { Link , useHistory } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles'
-import {  updateDbUser } from '../../models/userModel'
+import { useAuth } from '../../contexts/AuthContext'
+import { updateDbUser } from '../../models/userModel'
 import { useSnackbar } from '../../contexts/SnackbarContext'
-  
+import NextButton from '../../components/NextButton'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import { Steps, Step } from "react-step-builder";
+import Step0 from './Step0'
+import Step1 from './Step1'
+import Step2 from './Step2'
+import Step3 from './Step3'
+import Step4 from './Step4'
+import Step5 from './Step5'
+import Step6 from './Step6'
+import Step7 from './Step7'
+
+
+import './style.scss'
+
+
+const profileParagraphs = {
+  steps:  [
+  {
+    step:1,
+      "text": "I'll need to understand you better by asking a few personal questions. We only use the data to make the game more relevant to you, and we will not share the data with anybody. If you're not comfortable answering any of these questions, you can just skip that question.",
+      "choices": null,
+     "tags": "speaker"
+  },
+  { step:2,
+    "text": "If you're not comfortable answering any of these questions, you can just skip that question.",
+    "choices": null,
+    "tags": "speaker",
+  },
+  { step:3,
+    "text": "First, what ethnicity or racial group do you identify as? If it's a complex one, just type under OTHER.",
+    "tags": "speaker",
+    "choices": ["Chinese", "Indian", "Malay", "Other"],
+    "tags": "speaker"
+  },
+  { step:4,
+    "text": "Ok, ok - you're clearly excited to play. You'll find out more about me as you play the game, but first, I would like to find out more about you.",
+    "choices": null,
+    "tags": "speaker"
+  },
+  { step:5,
+    "text": "To play the game, we'll need to create an account for you using your email address and a password. We will only use this to save your game, and we won't use it for anything else.",
+    "choices": null,
+    "tags": "speaker"
+  },
+]}
 
 
 const useStyles = makeStyles((theme) => ({
-    link: {
+  WhatsappWrapper: {
+    backgroundImage: `url('/images/bg_ui_whatsapp.png')`,
+    height: '90vh',
+    [theme.breakpoints.up('md')]: {
+      height: '660px',
+    },
+    width: "100%", 
+  },
+  link: {
       marginLeft: theme.spacing(1),
       marginRight: theme.spacing(1),
       color: theme.palette.primary.main,
@@ -34,170 +89,148 @@ const useStyles = makeStyles((theme) => ({
 
 const ProfileBuilderPage = () => {
 
-    const history = useHistory()
+    // const history = useHistory()
     
     const classes = useStyles()
+    
+    // const [step, setStep] = useState(1)
+    // const [values, setValues] = useState({})
     
     // Auth Context
     const { currentUser } = useAuth()  
     
-    const { setSnackbar } = useSnackbar()
+    // const { setSnackbar } = useSnackbar()
 
     // form submission in progress
-    const [isLoading, setIsLoading] = useState(false)
+    // const [isLoading, setIsLoading] = useState(false)
 
-    const initialFormData = Object.freeze({
-        age: "",
-        gender: "",
-        race: "",
-        religion: "",
-        housing: "",
-        username:"",
-    });
+    // const initialFormData = Object.freeze({
+    //     age: "",
+    //     gender: "",
+    //     race: "",
+    //     religion: "",
+    //     housing: "",
+    //     username:"",
+    // });
   
-    const [formData, updateFormData] = React.useState(initialFormData);
+    // const [formData, updateFormData] = React.useState(initialFormData);
 
-    const handleChange = (e) => {
-        updateFormData({
-          ...formData,
+    // const handleChange = (e) => {
+    //     updateFormData({
+    //       ...formData,
     
-          // Trimming any whitespace and convert to uppercase for standardisation
-          [e.target.name]: e.target.value.trim().toUpperCase()
-        });        
-    };
- 
+    //       // Trimming any whitespace and convert to uppercase for standardisation
+    //       [e.target.name]: e.target.value.trim().toUpperCase()
+    //     });        
+    // };
+    // const formData = {
+    //   age: props.state.age,
+    //   gender: props.state.gender.toUpperCase(),
+    //   race: props.state.race.toUpperCase(),
+    //   religion: props.state.religion.toUpperCase(),
+    //   housing: props.state.housing.toUpperCase(),
+    //   username: props.state.username,
+    //   }
   
-    const handleSubmit = async (e) => {
-        e.preventDefault()
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault()
          
-        // console.log(formData);        
+    //     // console.log(formData);        
         
-        try {
-          setIsLoading(true)          
-          await updateDbUser(formData, currentUser.id)
-          history.push('/')  // redirect to root which will be the characterchoice page now.
+    //     try {
+    //       setIsLoading(true)          
+    //       await updateDbUser(formData, currentUser.id)
+    //       history.push('/')  // redirect to root which will be the characterchoice page now.
          
-        } catch (err) {
-          setSnackbar({
-            message: `There was an error: ${err.message}`,
-            open: true,
-            type: 'error',
-          })
-        }
-        setIsLoading(false)      
+    //     } catch (err) {
+    //       setSnackbar({
+    //         message: `There was an error: ${err.message}`,
+    //         open: true,
+    //         type: 'error',
+    //       })
+    //     }
+    //     setIsLoading(false)      
  
+    // };
+  
+    
+      
+    const Navigation = (props) => {
+      // console.log({ props });
+      return (
+        //  <Button type="primary" onClick={props.prev} style={{ marginRight: 10 }}>
+        //       Previous
+        //     </Button> */}
+        //     {/* <Button type="primary" onClick={props.next}>
+        //       Next
+        //   </Button> 
+           
+          <div onClick={props.next}>
+            <Box className="Whatsapp__sendWrapper">
+              <Box
+                className={`Whatsapp__sendWrapper__sendButton choice'
+                }`}
+              >
+                Click to Continue...
+              </Box>
+              <Box className="Whatsapp__sendWrapper__sendButton--right">
+                <ExpandMoreIcon />
+              </Box>
+            </Box>
+          </div>      
+      
+      );
     };
+    const config = {
+      navigation: {
+        component: Navigation, // a React component with special props provided automatically
+        location: "after" // or before
+      }
+    };
+ 
+
+  return (
+  <Fade in={true} timeout={500}>
+    <Box className={classes.WhatsappWrapper}>
+    <div className="Whatsapp__header">
+      <img 
+        src="/images/ico_nadia.png"
+        alt="Chat Profile"
+        className="Whatsapp__header--profile"
+      />
+      <div className="Whatsapp__header__description">
+        <div className="Whatsapp__header__description--name">Nadia Binte Rahim</div>
+        <div className="Whatsapp__header__description--status">Online</div>
+      </div>
+    </div>    
+  
+    
+    {/* 
+      render the form steps and pass required props in
+    */}
+      <Steps config={config}>
+        <Step title="Intro" component={Step0} />
+        <Step title="Age" component={Step1} />
+        <Step title="Gender" component={Step2} />
+        <Step title="Race" component={Step3} />
+        <Step title="Religion" component={Step4} />
+        <Step title="Housing" component={Step5} />
+        <Step title="Username" component={Step6} />
+        <Step title="Confirmation" component={Step7} />
+      </Steps>
+
     
 
-    return (
-    <Box className={classes.wrapper}>
-      <section>
-        <Container maxWidth="md">
-          <Box py={2} textAlign="center">
-            <Typography variant="h3" component="h2" gutterBottom={true}>Profile Builder </Typography>
-              <Typography variant="h6" color="textSecondary" paragraph={true}>The form to build the user profile / demographics goes here, and this will push to the UserDB model </Typography>
-              <Typography variant="body" color="textSecondary" paragraph={true}> All fields are recommended but not compulsory { currentUser.id }</Typography>
-          </Box>
-          <Box mx="auto" width="75%" my={4}>
-            <form onSubmit={handleSubmit}>
-              
 
-              <Box my={4}>
-                <FormLabel component="legend">Age</FormLabel>                               
-                <RadioGroup aria-label="age"  name="age" onChange={handleChange}  >
-                    <FormControlLabel value="16" control={<Radio />} label="Under 16" />
-                    <FormControlLabel value="19" control={<Radio />} label="16 to 19" />
-                    <FormControlLabel value="20" control={<Radio />} label="20-29" />
-                    <FormControlLabel value="30" control={<Radio />} label="30-39" />
-                    <FormControlLabel value="40" control={<Radio />} label="40-49" />
-                    <FormControlLabel value="50" control={<Radio />} label="50-59" />
-                    <FormControlLabel value="60" control={<Radio />} label="Above 60" />  
-                </RadioGroup>                
-              </Box>
 
-              <Box my={4}>
-                <FormLabel component="legend">Gender</FormLabel>                              
-                <RadioGroup aria-label="gender" name="gender"  onChange={handleChange} >
-                  <FormControlLabel value="MALE" control={<Radio />} label="Male" />
-                  <FormControlLabel value="FEMALE" control={<Radio />} label="Female" />
-                  <FormControlLabel value="OTHER" control={<Radio />} label="Other" />
-                    {formData.gender === 'OTHER' && <input type="text" placeholder="Other" name="gender" onBlur={handleChange} ></input>}
-                  {/* Using onBlur instead of onChange because once changed, the text field disappears. So need to capture the data only once the user moves away. */ }
-                </RadioGroup>
-              </Box>
+        
 
-              <Box my={4}>
-                <FormLabel component="legend">Race</FormLabel>                              
-                <RadioGroup aria-label="race" name="race"  onChange={handleChange} >
-                  <FormControlLabel value="CHINESE" control={<Radio />} label="Chinese" />
-                  <FormControlLabel value="MALAY" control={<Radio />} label="Malay" />
-                  <FormControlLabel value="INDIAN" control={<Radio />} label="Indian" />
-                  <FormControlLabel value="OTHER" control={<Radio />} label="Other" />
-                  {formData.race === 'OTHER' && <input type="text" placeholder="e.g. Chinese-Indian , Eurasian" name="race" onBlur={handleChange} ></input>} 
-                </RadioGroup>
-              </Box>                
-
-              <Box my={4}>
-                <FormLabel component="legend">Religion</FormLabel>                              
-                <RadioGroup aria-label="religion" name="religion"  onChange={handleChange} >
-                  <FormControlLabel value="CHRISTIAN" control={<Radio />} label="Christian" />
-                  <FormControlLabel value="HINDU" control={<Radio />} label="Hindu" />
-                  <FormControlLabel value="BUDDHIST" control={<Radio />} label="Buddhist" />
-                  <FormControlLabel value="TAOIST" control={<Radio />} label="Taoist" />
-                  <FormControlLabel value="MUSLIM" control={<Radio />} label="Muslim" />
-                  <FormControlLabel value="SIKH" control={<Radio />} label="Sikh" />
-                  <FormControlLabel value="FREE-THINKER" control={<Radio />} label="Free-thinker" />                  
-                  <FormControlLabel value="OTHER" control={<Radio />} label="Other" />
-                  {formData.religion === 'OTHER' && <input type="text" placeholder="e.g. Chinese-Indian , Eurasian" name="religion" onBlur={handleChange} ></input>} 
-                </RadioGroup>
-              </Box>    
-               
-              <Box my={4}>
-                <FormLabel component="legend">Housing Type</FormLabel>                              
-                <RadioGroup aria-label="housing" name="housing"  onChange={handleChange} >
-                  <FormControlLabel value="HDB" control={<Radio />} label="HDB" />
-                  <FormControlLabel value="CONDO" control={<Radio />} label="Condominium" />
-                  <FormControlLabel value="LANDED" control={<Radio />} label="Landed" />                                     
-                  <FormControlLabel value="OTHER" control={<Radio />} label="Other" />
-                  {formData.housing === 'OTHER' && <input type="text" placeholder="e.g. Bungalow" name="housing" onBlur={handleChange} ></input>} 
-                </RadioGroup>
-              </Box>     
-
-              <Box my={4}>
-                <FormLabel component="legend">Preferred Username </FormLabel>                              
-                  <input type="text" placeholder="e.g. FLYBOY21" name="username" onBlur={handleChange} ></input>                 
-              </Box> 
-              
-              <Box my={4}>
-                <Typography variant="body2">Your submitted profile is:</Typography>
-                <div>Age: {formData.age}</div>
-                <div>Gender: {formData.gender.toUpperCase()}</div>
-                <div>Race: {formData.race.toUpperCase()}</div>
-                <div>Religion: {formData.religion.toUpperCase()}</div>
-                <div>Housing Type: {formData.housing.toUpperCase()}</div>
-                <div>Username: {formData.username.toUpperCase()}</div>                
-              </Box>
-              
-              
-              <Button
-                  type="submit"
-                  variant="contained"
-                  color="primary"
-                  disabled={isLoading}
-                >
-                  Submit - then Start the game
-              </Button>
-
-            </form>
-            
-          </Box>
-         
-        </Container>
-      </section>
-      
        
-    </Box>
-    );
+      </Box>
+  </Fade>
+  );
 }
  
+
+
 export default ProfileBuilderPage;

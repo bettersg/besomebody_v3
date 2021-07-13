@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { BrowserRouter, Switch, Redirect, Route } from 'react-router-dom'
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
+
 import AdminPage from '../components/AdminPage'
 import UserPage from '../components/UserPage'
 import NotFoundPage from '../components/NotFoundPage'
@@ -14,8 +16,13 @@ import CharacterChoicePage from '../pages/CharacterChoicePage'
 import CharacterChapterPage from '../pages/CharacterChapterPage'
 import IntroMaster from '../pages/LandingPage/IntroMaster'
 import ProfileBuilderPage from '../pages/ProfileBuilderPage'
+import AudioPlayer from "../music/Music"
 import Help from '../pages/HelpPage/HelpPage'
-import { createTheme, ThemeProvider } from '@material-ui/core/styles';
+import Music1 from '../music/tobeyou_intro.mp3'
+import Music2 from '../music/tobeyou_outro.mp3'
+
+
+
 class Router extends Component {
   render() {
     // Properties
@@ -43,8 +50,15 @@ class Router extends Component {
 
     return (
       <BrowserRouter basename={process.env.REACT_APP_BASENAME}>
+
         {/* {bar} // TODO: implement "bar" as a menubar above the game components below */}
         <ThemeProvider theme={theme}>
+          <Switch>
+            <Route path={["/", "/intro", "/profilebuilder", "/signup", "/login", "/help", "/characterchoice", "/chapters/:name"]} exact>              
+              <AudioPlayer Music={Music1} />
+            </Route>
+          </Switch>
+
           <Switch>
             <Route path="/" exact>
               {user ? <CharacterChoicePage /> : <LandingPage />}
@@ -105,6 +119,7 @@ class Router extends Component {
           </Switch>
 
         </ThemeProvider>
+
       </BrowserRouter>
     )
   }
