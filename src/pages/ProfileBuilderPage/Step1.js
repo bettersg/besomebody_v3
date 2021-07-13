@@ -25,35 +25,23 @@ function Step1(props) {
                   <Typography key={props.order} variant="overline" >
                     Nadia
                   </Typography> 
-                  <Typography key={props.order}> First up - what's your age?</Typography>
-                  
+                  <Typography key={props.order}> First up - how young are you?</Typography>
+                  <RadioGroup aria-label="age"  name="age" onChange={props.handleChange}  >
+                    <FormControlLabel value="16" control={<Radio />} label="Under 16" />
+                    <FormControlLabel value="19" control={<Radio />} label="16 to 19" />
+                    <FormControlLabel value="20" control={<Radio />} label="20-29" />
+                    <FormControlLabel value="30" control={<Radio />} label="30-39" />
+                    <FormControlLabel value="40" control={<Radio />} label="40-49" />
+                    <FormControlLabel value="50" control={<Radio />} label="50-59" />
+                    <FormControlLabel value="60" control={<Radio />} label="Above 60" />  
+                  </RadioGroup> 
                 </Box>
               </Box>
               
             </Fade>
            
       </Box>
-        <div>
-            <Box className="Whatsapp__sendWrapper">
-              <Box
-                className={`Whatsapp__choicesWrapper w3-animate-fading'
-                }`}
-              >
-                 <RadioGroup aria-label="age"  name="age" onChange={props.handleChange}  >
-                  <FormControlLabel value="16" control={<Radio />} label="Under 16" />
-                  <FormControlLabel value="19" control={<Radio />} label="16 to 19" />
-                  <FormControlLabel value="20" control={<Radio />} label="20-29" />
-                  <FormControlLabel value="30" control={<Radio />} label="30-39" />
-                  <FormControlLabel value="40" control={<Radio />} label="40-49" />
-                  <FormControlLabel value="50" control={<Radio />} label="50-59" />
-                  <FormControlLabel value="60" control={<Radio />} label="Above 60" />  
-              </RadioGroup> 
-              </Box>
-              <Box className="Whatsapp__sendWrapper__sendButton--right"  onClick={props.next}>
-                <ExpandMoreIcon />
-              </Box>
-            </Box>
-          </div>    
+        
               
       </>
     );

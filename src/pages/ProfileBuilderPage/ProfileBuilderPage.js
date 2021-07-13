@@ -171,7 +171,7 @@ const ProfileBuilderPage = () => {
                 className={`Whatsapp__sendWrapper__sendButton choice'
                 }`}
               >
-                Choose your reply...
+                Click to Continue...
               </Box>
               <Box className="Whatsapp__sendWrapper__sendButton--right">
                 <ExpandMoreIcon />
