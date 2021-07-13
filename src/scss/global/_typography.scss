@@ -49,6 +49,16 @@ $staatliches: 'Staatliches', cursive;
     text-align: center;
 }
 
+@mixin inter-whatsapp {
+    font-family: $inter;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
 @mixin p2-normal-body {
     font-family: $inter;
 	font-style: normal;

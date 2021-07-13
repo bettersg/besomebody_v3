@@ -40,17 +40,39 @@
             background: #C9F3F9;
             width: 304px; 
             padding: 12px;
+            border-radius: 12px 3px 3px 12px;
+            margin-bottom: 4px;
+            &.newSpeaker { 
+                border-radius: 12px 12px 3px 12px;
+            }
         }
         &--receiver {
             background: $white;
             width: 304px; 
             padding: 12px; 
+            margin-bottom: 4px;
+            margin-left: 16px;
+            border-radius: 3px 12px 12px 3px;
+            &.newSpeaker { 
+                border-radius: 12px 12px 12px 3px;
+            }
+            
+            &--name {
+                @include inter-whatsapp; 
+                text-transform: capitalize;
+                margin-bottom: 4px;
+            }
         }
         &.choices {
             transition: height 0.4s; 
             height: 55.3vh; 
             @media screen and (min-device-width:481px) {
-                height: 365px; 
+                height: 350px; 
+            }
+        }
+        &--sender, &--receiver {
+            &.newSpeaker {
+                margin-top: 20px; 
             }
         }
     }
@@ -61,6 +83,7 @@
         justify-content: space-between;
         align-items: center;
         height: 64px; 
+        margin-top: 20px;
         &__sendButton {
             border-radius: 48px;
             padding: 12px 16px; 

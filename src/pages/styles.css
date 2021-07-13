@@ -5,6 +5,7 @@
 html, body {
   height: 100%;
   width: 100%; 
+  background-image: url("../section1_bg.png");
 }
 @media screen and (min-device-width:481px) {
   html {
@@ -52,6 +53,8 @@ html, body {
 
   body {
     height: 660px !important;
+    background: white;
+
   }
 }
 
