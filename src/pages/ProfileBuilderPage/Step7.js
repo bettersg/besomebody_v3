@@ -30,7 +30,8 @@ function Step7(props) {
     race: props.state.race? props.state.race.toUpperCase():null,
     religion: props.state.religion?props.state.religion.toUpperCase():null,
     housing: props.state.housing?props.state.housing.toUpperCase():null,
-    username: props.state.username?props.state.username:null,
+    username: props.state.username ? props.state.username : null,
+    timestamp: Date.now(),
     }
 
   const handleSubmit = async (e) => {
@@ -64,7 +65,8 @@ function Step7(props) {
       <div>Race: {props.state.race?props.state.race.toUpperCase():null}</div>
       <div>Religion: {props.state.religion?props.state.religion.toUpperCase():null}</div>
       <div>Housing Type: {props.state.housing?props.state.housing.toUpperCase():null}</div>
-      <div>Username: {props.state.username?props.state.username:null}</div>                
+      <div>Username: {props.state.username?props.state.username:null}</div>   
+             
     </Box>
     
     <Button

@@ -165,7 +165,7 @@ const ProfileBuilderPage = () => {
         //       Next
         //   </Button> 
            
-          <div className={classes.nextButton} onClick={props.next}>
+          <div onClick={props.next}>
             <Box className="Whatsapp__sendWrapper">
               <Box
                 className={`Whatsapp__sendWrapper__sendButton choice'
