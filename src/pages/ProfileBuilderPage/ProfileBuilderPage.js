@@ -67,7 +67,7 @@ const profileParagraphs = {
 
 
 const useStyles = makeStyles((theme) => ({
-  WhatsappWrapper: {
+  PBWhatsappWrapper: {
     backgroundImage: `url('/images/bg_ui_whatsapp.png')`,
     height: '90vh',
     [theme.breakpoints.up('md')]: {
@@ -165,18 +165,18 @@ const ProfileBuilderPage = () => {
         //       Next
         //   </Button> 
            
-          <div onClick={props.next}>
-            <Box className="Whatsapp__sendWrapper">
+          <div onClick={props.next} className="PBWhatsapp__nextButton">
+            {/* <Box className="PBWhatsapp__sendWrapper">
               <Box
-                className={`Whatsapp__sendWrapper__sendButton choice'
+                className={`PBWhatsapp__sendWrapper__sendButton choice'
                 }`}
               >
                 Click to Continue...
               </Box>
-              <Box className="Whatsapp__sendWrapper__sendButton--right">
+              <Box className="PBWhatsapp__sendWrapper__sendButton--right">
                 <ExpandMoreIcon />
               </Box>
-            </Box>
+            </Box> */}
           </div>      
       
       );
@@ -191,16 +191,16 @@ const ProfileBuilderPage = () => {
 
   return (
   <Fade in={true} timeout={500}>
-    <Box className={classes.WhatsappWrapper}>
-    <div className="Whatsapp__header">
+    <Box className={classes.PBWhatsappWrapper}>
+    <div className="PBWhatsapp__header">
       <img 
         src="/images/ico_nadia.png"
         alt="Chat Profile"
-        className="Whatsapp__header--profile"
+        className="PBWhatsapp__header--profile"
       />
-      <div className="Whatsapp__header__description">
-        <div className="Whatsapp__header__description--name">Nadia Binte Rahim</div>
-        <div className="Whatsapp__header__description--status">Online</div>
+      <div className="PBWhatsapp__header__description">
+        <div className="PBWhatsapp__header__description--name">Nadia Binte Rahim</div>
+        <div className="PBWhatsapp__header__description--status">Online</div>
       </div>
     </div>    
   
