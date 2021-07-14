@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
-export const CharacterChoicePage = () => {
+const CharacterChoicePage = () => {
     const classes = useStyles()  
 
     // Auth Context
@@ -130,3 +130,5 @@ export const CharacterChoicePage = () => {
         </Box>
     )
 }
+
+export default CharacterChoicePage;
