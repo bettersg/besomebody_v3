@@ -73,7 +73,11 @@ export const CharacterChoicePage = () => {
             </div>
 
             {/* <!-- Continue Playing Banner --> */}
-            <div className="CharacterChoices__banner">
+            <div 
+                className="CharacterChoices__banner"
+                style={{backgroundImage:`url(/character_choice_page/nadia.png)`}}
+            >
+                
                 <div className="grid-container">
                     <div>
                         <div className="item1_continuePlaying">Continue Playing</div>
@@ -95,7 +99,7 @@ export const CharacterChoicePage = () => {
                     ( persona.playable == true ? 
                         <div className="CharacterChoices__card">
                             <div className="CharacterChoices__card__feed">
-                                <a href=""><img className="CharacterChoices__card__feed--profilePic" src="/character_choice_page/profile_icon_small.png"/></a>
+                                <a href=""><img className="CharacterChoices__card__feed--profilePic" src={persona.profileImage}/></a>
                                 
 
                                 <div>
