@@ -1,10 +1,11 @@
-@import '../../scss/global/global';
+@import '../../../../src/scss/global/global';
 
-.Narrator {
+.MultipleChoice {
   &__text {
     @include inter-narrator;
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     // position: absolute;
