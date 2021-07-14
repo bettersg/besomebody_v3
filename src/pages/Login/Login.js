@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '100vh',
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('xs')]: {
       height: '660px',
     },
     bottom: 0, 
