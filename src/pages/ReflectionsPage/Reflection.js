@@ -19,7 +19,7 @@ const Reflection = ({ reflectionId: propsReflectionId, globalVariables }) => {
   const { character_id, chapter_id } = globalVariables || {}
   const { currentUser } = useAuth()
   const { setSnackbar } = useSnackbar()
-
+  console.log(globalVariables)
   // Save user achievements data to Firestore whenever this component renders
   useEffect(() => {
     const updateUserSaveGame = async () => {
