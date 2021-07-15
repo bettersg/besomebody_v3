@@ -19,6 +19,16 @@ $staatliches: 'Staatliches', cursive;
     letter-spacing: -0.02em;
 }
 
+@mixin inter-charchoicename {
+    font-family: $inter;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 68px;
+    letter-spacing: -2px;
+    text-align: left;
+}
+
 @mixin inter-name {
     font-family: $inter;
     font-size: 22px;
@@ -57,6 +67,16 @@ $staatliches: 'Staatliches', cursive;
     line-height: 15px;
     letter-spacing: 0em;
     text-align: left;
+}
+
+@mixin inter-charchoicescroll {
+    font-family: $inter;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 13px;
+    letter-spacing: 0em;
+    text-align: center;
 }
 
 @mixin p2-normal-body {

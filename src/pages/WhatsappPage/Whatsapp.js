@@ -42,7 +42,7 @@ const Whatsapp = (props) => {
     WhatsappWrapper: {
       backgroundImage: `url('/images/bg_ui_whatsapp.png')`,
       height: '90vh',
-      [theme.breakpoints.up('md')]: {
+      [theme.breakpoints.up('xs')]: {
         height: '660px',
       },
       width: "100%", 
