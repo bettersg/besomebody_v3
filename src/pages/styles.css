@@ -7,7 +7,7 @@ html, body {
   width: 100%; 
   background-image: url("../section1_bg.png");
 }
-@media screen and (min-device-width:481px) {
+@media screen and (min-device-width:600px) {
   html {
     margin-top: 5% !important; 
     position: relative;

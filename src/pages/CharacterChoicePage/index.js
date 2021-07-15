@@ -18,11 +18,11 @@ import CharacterAvatar from "./CharacterAvatar";
 // Constants
 import "./styles.scss"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
     CharChoiceWrapper: {
-        height: '90vh',
-        [theme.breakpoints.up('xs')]: {
-            height: '660px',
+        height: '660px',
+        [theme.breakpoints.only('xs')]: {
+            height: '100vh',
         },
         width: "100%", 
         backgroundColor: "white", 

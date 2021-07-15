@@ -17,9 +17,9 @@ const useStyles = makeStyles((theme) => ({
     paragraphWrapper: {
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      height: '100vh',
-      [theme.breakpoints.up('md')]: {
-        height: '660px',
+      height: '660px',
+      [theme.breakpoints.only('xs')]: {
+          height: '100vh',
       },
       bottom: 0, 
     },

@@ -14,9 +14,9 @@ import { useParams } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
     CharChaptWrapper: {
-        height: '90vh',
-        [theme.breakpoints.up('xs')]: {
-            height: '660px',
+        height: '660px',
+        [theme.breakpoints.only('xs')]: {
+            height: '100vh',
         },
         width: "100%", 
         backgroundColor: "#F0F1FC", 

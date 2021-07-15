@@ -2,7 +2,7 @@
   align-items: center;
 }
 
-@media screen and (max-device-width:480px) {
+@media screen and (max-device-width:600px) {
   .bottomNav {
     border-top: 1px solid #E7E7E7;
     text-align: center;
