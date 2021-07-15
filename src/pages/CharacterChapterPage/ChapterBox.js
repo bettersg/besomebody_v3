@@ -159,7 +159,7 @@ export default function ChapterBox(props) {
               <div className="ChapterBox__endings">
                 {rows}
                 <span style={{ marginLeft: '8px' }}>
-                  XXX of {chaptDetails.endings.length} endings unlocked
+                  0 of {chaptDetails.endings.length} endings unlocked
                 </span> 
               </div>:
               null
