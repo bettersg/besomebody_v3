@@ -44,12 +44,15 @@ Minigame // must add some text
 // DECLARE GLOBAL VARIABLES
 VAR nadia_mood = 10
 VAR gavin_mood = 10
+VAR nadia_liar = 0
+
+
 VAR chapter_1_ending = 0 
 VAR chapter_2_ending = 0 
 VAR chapter_3_ending = 0 
 VAR chapter_4_ending = 0 
 VAR character_id = 1
-
+ 
 
 -> nadia_1_intro
 
@@ -61,11 +64,20 @@ VAR character_id = 1
 #ui:narrator
 #background:bg_nadia_intro.jpg
 #music:nadia_intro.mp3
-..
+.
 VAR chapter_id = 1
-Nadia Binte Rahim #title
-This is where I tell the player about myself, to help them understand my age, background, profile etc. We must explain to them who she is so that they can start to assume her identity.
-So that’s me -- Nadia. 
+NADIA BINTE RAHIM #title
+Hey there. I’m Nadia.
+This is a big year for me, since my A’Levels are coming up. 
+That’s going to decide whether I make it into medical school like I’m hoping, so.. No pressure.
+I haven’t told a lot of people about the medical school thing. It all feels a bit impossible.
+But good grades have always kind of been my thing, so.. Maybe, I have a shot.
+I’ve also got great study buddies! Chloe and Gavin, my best friends at school.
+JC life would be a lot worse without them around. Especially since I don’t exactly, uh, fit in.
+This is a Christian school, and there are barely any other Muslim or Malay students besides me.
+It’s fine though, I’m mostly used to it by now. When I need someone who just.. gets it? I’ve got my cousin Azlin.
+She’s a nurse, so that’s very cool. We’re super close, and she always keeps it real.
+So that’s me -- Nadia.
 And this is what it’s like, to be me.
 CHAPTER 1 #title
 Study Buddy #title
@@ -109,7 +121,7 @@ It's a message from Gavin!
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Gavin
-#chat_group_image:ico_nadia_gavin.jpg
+#chat_group_image:ico_nadia_gavin.png
 #speaker_1_name:Gavin
 #timestamp:21.49
 help #speaker_1
@@ -123,7 +135,7 @@ Crap! I'm still WEARING his hoodie.  #inner_monologue
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Gavin
-#chat_group_image:ico_nadia_gavin.jpg
+#chat_group_image:ico_nadia_gavin.png
 #speaker_1_name:Gavin
 I'm sorry!! Your hoodie is still with me 😳 #speaker_self
 💩 #speaker_1
@@ -152,8 +164,11 @@ It's just exam prep for midyears.  #speaker_self
 Was my friend's idea, so I asked Chloe to join us too. #speaker_self
 Oh this study group is not Chloe who start? #speaker_left
 Oh crap. #inner_monologue
-+ [Tell the truth] It was my friend Gavin's idea. I know him from student council. #speaker_self
-+ [Tell a white lie] It's a bunch of us. Is much easier than last year when I was trying to cram everything by myself. #speaker_self
++ [Tell the truth] 
+    It was my friend Gavin's idea. I know him from student council. #speaker_self
++ [Tell a white lie] 
+    ~ nadia_liar ++
+    It's a bunch of us. Is much easier than last year when I was trying to cram everything by myself. #speaker_self
 - I see. Your friends in this school.. the culture a bit different. #speaker_left
 What do you mean? #speaker_self
 Just different. They hug a lot.. always peluk-peluk (hug). #speaker_left
@@ -176,7 +191,7 @@ I know, I know. #speaker_left
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Gavin
-#chat_group_image:ico_nadia_gavin.jpg
+#chat_group_image:ico_nadia_gavin.png
 #speaker_1_name:Gavin
 Need me to bring any of my notes from last term tomorrow? #speaker_self
 Nah all good #speaker_1
@@ -305,6 +320,7 @@ Yup! Now can we go? I don't need Mrs. Ee to shoot us her laser eyes for being la
 
 = nadia_1_2b
 ~ nadia_trackpants_choice = 2
+~ nadia_mood --
 Track pants! Immediate protection against the sun, SPF 1500 guaranteed. #speaker_self
 Haha, very funny Nad. Just because I don’t want to get too dark.. #speaker_right
 + Too Dark? [] #speaker_self
@@ -393,7 +409,7 @@ A message from Gavin!
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Gavin
-#chat_group_image:ico_nadia_gavin.jpg
+#chat_group_image:ico_nadia_gavin.png
 #speaker_1_name:Gavin
 #timestamp:16.14
 Where u at? #speaker_1
@@ -424,7 +440,7 @@ A message from Azlin
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Azlin
-#chat_group_image:ico_nadia_azlin.jpg
+#chat_group_image:ico_nadia_azlin.png
 #speaker_1_name:Azlin
 #timestamp:16.18
 Nad what time are you gg to be home today? #speaker_1
@@ -467,6 +483,7 @@ Is Chloe really at a hockey “thing”? #speaker_left
     And I didn’t ask. #speaker_self
     Ah crap. Did you guys fight? #speaker_left
 + [Yeah she is...]... Yes. I’m pretty sure. #speaker_self
+	~ nadia_liar ++
 	You’re being strange. Did something happen between you two? #speaker_left
 - Maybe? I don’t think so. It’s weird. #speaker_self
 The weird will pass. #speaker_left
@@ -505,6 +522,7 @@ Wait a minute. Is he really coming for my plate with his chopsticks? #inner_mono
 + [Watch Gavin take your tempeh]-> nadia_1_3c
 
 = nadia_1_3a
+VAR nadia_gavinsharefood = 1
 (Jokingly) Eh, who said I was done! #speaker_self
 Sharing is caring, Nad. #speaker_left
 Please, like you haven’t been eyeing it since just now. #speaker_self
@@ -575,6 +593,8 @@ DID HE JUST ASK ME ON A...  #inner_monologue
 -> nadia_1_4_narration
 
 = nadia_1_3b
+~ nadia_mood --
+~ nadia_gavinsharefood = 2
 Hold up. Gavin, what were you just eating? #speaker_self
 Geez, relax. I know I had bak chor mee, but the chopsticks are clean what.  #speaker_left
 Red stall, red plate. Green stall, green plate. No crossing! #speaker_self
@@ -618,6 +638,8 @@ It’s a...what? #inner_monologue
 
 
 = nadia_1_3c
+~ nadia_mood --
+~ nadia_gavinsharefood = 3
 but... #speaker_self
 Yum. I really love tempeh. #speaker_left
 Nah, you might as well take the rest. #speaker_self
@@ -681,7 +703,7 @@ I’m not imagining it, right? I need to talk to a voice of reason!
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Azlin
-#chat_group_image:ico_nadia_azlin.jpg
+#chat_group_image:ico_nadia_azlin.png
 #speaker_1_name:Azlin
 #timestamp:17:25
 Hallo are you still at my place? Am just leaving school #speaker_self
@@ -741,7 +763,7 @@ Really? It’s just how we are. K, maintain... #inner_monologue
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Azlin
-#chat_group_image:ico_nadia_azlin.jpg
+#chat_group_image:ico_nadia_azlin.png
 #speaker_1_name:Azlin
 No la. Where got.  #speaker_self
 We’re good friends what. Friends sometimes fight. What matters is how we make up after. #speaker_self
@@ -764,7 +786,7 @@ MAMPOS. #speaker_1
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Azlin
-#chat_group_image:ico_nadia_azlin.jpg
+#chat_group_image:ico_nadia_azlin.png
 #speaker_1_name:Azlin
 ~ chapter_1_ending = 1
 So do you 😐 #speaker_self
@@ -791,7 +813,7 @@ just.. remember who you are okay? #speaker_1
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Azlin
-#chat_group_image:ico_nadia_azlin.jpg
+#chat_group_image:ico_nadia_azlin.png
 #speaker_1_name:Azlin
 ~ chapter_1_ending = 2
 I don’t think so. I like people because of who they are, what they’re like. #speaker_self
@@ -825,7 +847,7 @@ just.. remember who you are okay? #speaker_1
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Azlin
-#chat_group_image:ico_nadia_azlin.jpg
+#chat_group_image:ico_nadia_azlin.png
 #speaker_1_name:Azlin
 ~ chapter_1_ending = 3
 No la. We’re just friends. He’s nice. So I’m nice back.  #speaker_self
@@ -852,7 +874,7 @@ just.. remember who u are, okay?  #speaker_1
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Azlin
-#chat_group_image:ico_nadia_azlin.jpg
+#chat_group_image:ico_nadia_azlin.png
 #speaker_1_name:Azlin
 ~ chapter_1_ending = 4
 lol #speaker_self
