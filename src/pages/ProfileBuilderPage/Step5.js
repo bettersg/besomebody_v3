@@ -22,7 +22,7 @@ function Step5(props) {
               <Typography key={props.order} variant="overline" >
                 Nadia
               </Typography> 
-              <Typography key={props.order}> {props.state.religion==="MUSLIM"? "Hey, a fellow Muslim! Maybe we can learn from each other!":"Cool - I really want to learn more about your belief system too!"} Ok last question - what is your housing type? I stay in an HDB with my fanily, and it's useful to know what your social context is so that we can tailor the stories better for you in future. </Typography>                
+              <Typography key={props.order}> {props.state.religion==="MUSLIM"? "Hey, a fellow Muslim! Maybe we can learn from each other!":"Cool - I really want to learn more about your belief system too!"} Ok last question - what is your housing type? I stay in an HDB with my family, and it's useful to know what your social context is so that we can tailor the stories better for you in future. </Typography>                
              <RadioGroup aria-label="housing" name="housing"  onChange={props.handleChange} >
                 <FormControlLabel value="HDB" control={<Radio />} label="HDB" />
                 <FormControlLabel value="CONDO" control={<Radio />} label="Condominium" />
