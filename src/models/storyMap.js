@@ -31,7 +31,7 @@ chapters []
 export const CHARACTER_MAP = [
   {
     characterId: 1,
-    name: "Nadia Ibrahim",
+    name: "Nadia Binte Rahim",
     linkName: "nadia",
     profileImage: "/images/profile_nadia.png",
     description: "Nadia wants to survive JC and become a doctor - but will love and faith get in the way?",
@@ -51,7 +51,7 @@ export const CHARACTER_MAP = [
         number: 1,
         title: "An Unexpected Invitation",
         knotTag: "nadia_1_intro",
-        summary: "Nadia adopts a new dress code for PE, and gets asked a surprising question.",
+        summary: "Nadia's wardrobe choice gets questioned, and she is asked a surprising question by Gavin.",
         playable: true,
         images: [
           "/images/bg_nadia_intro.jpg",
@@ -255,7 +255,7 @@ export const CHARACTER_MAP = [
         number: 4,
         title: "Coming Soon",
         knotTag: "aman_4_intro",
-        summary: "Aman wants to go overseas for uni, but his girlfriend Sonya is staying in Singapore.",
+        summary: "Aman wants to go overseas for university, but with his girlfriend still in Singapore - what will happen?",
         playable: false,
         images : ["/images/aman_1_intro.jpg", "dog.jpg"],
 

@@ -68,8 +68,8 @@ VAR character_id = 1
 VAR chapter_id = 1
 NADIA BINTE RAHIM #title
 Hey there. I’m Nadia.
-This is a big year for me, since my A’Levels are coming up. 
-That’s going to decide whether I make it into medical school like I’m hoping, so.. No pressure.
+This is a big year for me, since my A Levels are coming up. 
+That’s going to decide whether I make it into medical school like I’m hoping, so... No pressure.
 I haven’t told a lot of people about the medical school thing. It all feels a bit impossible.
 But good grades have always kind of been my thing, so.. Maybe, I have a shot.
 I’ve also got great study buddies! Chloe and Gavin, my best friends at school.
@@ -80,7 +80,7 @@ She’s a nurse, so that’s very cool. We’re super close, and she always keep
 So that’s me -- Nadia.
 And this is what it’s like, to be me.
 CHAPTER 1 #title
-Study Buddy #title
+An Unexpected Invitation #title
 
 -> nadia_1_1_narration 
 
@@ -101,16 +101,16 @@ My dad is waiting to pick me up.
 #knot:nadia_1_1
 #ui:scene
 #background:bg_nadia_fathercaratnight.jpg
-#speaker_left_image:cha_nadia_rahman_normal.png
-#speaker_left_name:Abah
-Hi abah #speaker_self
-Nadia dah makan? (Have you eaten?) #speaker_left
+#speaker_right_image:cha_nadia_rahman_normal.png
+#speaker_right_name:Abah
+Hi abah. #speaker_self
+Nadia dah makan? (Have you eaten?) #speaker_right
 Yup, I had dinner. #speaker_self
-There's food at home if you're  hungry, your mother made currypuffs just now. #speaker_left
-Can heat up in the ovenette — #speaker_left
+There's food at home if you're  hungry, your mother made currypuffs just now. #speaker_right
+Can heat up in the ovenette — #speaker_right
 — potato or sardine? #speaker_self
-I think both have. #speaker_left
-
+I think both have. #speaker_right
+#speaker_right_image:pixel.png
 #ui:scene
 #background:new_message_notification.jpg
 It's a message from Gavin!
@@ -150,39 +150,38 @@ yes. it is very entertaining. #speaker_1
 
 #ui:scene
 #background:bg_nadia_fathercaratnight.jpg
-#speaker_left_image:cha_nadia_rahman_worried.png
-#speaker_left_name:Abah
-So how many of you doing this "night study"? Quite a lot of people just now eh.  #speaker_left
+#speaker_right_image:cha_nadia_rahman_worried.png
+#speaker_right_name:Abah
+So how many of you doing this "night study"? Quite a lot of people just now eh.  #speaker_right
 Depends… Last year before promo exams, both the canteen and library got packed. #speaker_self
 It's a bit more chill for now. #speaker_self
-Kalau chill, kan study at home..(If it’s too relaxed, studying at home is better)  #speaker_left
+Kalau chill, kan study at home..(If it’s too relaxed, studying at home is better)  #speaker_right
 I know, it's just easier to concentrate at school. At home, I just feel like sleeping —  #speaker_self
-— are you sleeping enough? All these late nights are not good also.  #speaker_left
-That's why your mother always ask me to pick you up. #speaker_left
+— are you sleeping enough? All these late nights are not good also.  #speaker_right
+That's why your mother always ask me to pick you up. #speaker_right
 Thank you.. I'm ok abah, really. #speaker_self
 It's just exam prep for midyears.  #speaker_self
 Was my friend's idea, so I asked Chloe to join us too. #speaker_self
-Oh this study group is not Chloe who start? #speaker_left
+Oh this study group is not Chloe who start? #speaker_right
 Oh crap. #inner_monologue
-+ [Tell the truth] 
-    It was my friend Gavin's idea. I know him from student council. #speaker_self
-+ [Tell a white lie] 
++ [Tell the truth]  It was my friend Gavin's idea. I know him from student council. #speaker_self
++ [Tell a white lie]  It's a bunch of us. #speaker_self
     ~ nadia_liar ++
-    It's a bunch of us. Is much easier than last year when I was trying to cram everything by myself. #speaker_self
-- I see. Your friends in this school.. the culture a bit different. #speaker_left
+    It's much easier than last year when I was trying to cram everything by myself. #speaker_self
+- I see. Your friends in this school.. the culture a bit different. #speaker_right
 What do you mean? #speaker_self
-Just different. They hug a lot.. always peluk-peluk (hug). #speaker_left
+Just different. They hug a lot.. always peluk-peluk (hug). #speaker_right
 Wait. I hugged Chloe goodbye just now. Which means.. #inner_monologue
 ... he also saw Gavin hugging me.#inner_monologue
 (Nervously) Ya, a bit right? But it's just like that here.  #speaker_self
 Super friendly.  #speaker_self
 It's a convent school thing maybe, they just like to hug-hug, hello goodbye also hug, boy or girl also hug —  #speaker_self
-...which is fine. For them.  #speaker_left
-But for us, it's not.. nice. Tak baik. Kan kita orang Islam. (Not nice. We are Muslims) #speaker_left
+...which is fine. For them.  #speaker_right
+But for us, it's not.. nice. Tak baik. Kan kita orang Islam. (Not nice. We are Muslims) #speaker_right
 I know, abah, we're Muslims. #speaker_self
-If girl, okay la! Chloe or whoever.. but if boy, even if it is just a friend.. #speaker_left
+If girl, okay la! Chloe or whoever.. but if boy, even if it is just a friend.. #speaker_right
 He really is just a friend. #speaker_self
-I know, I know. #speaker_left
+I know, I know. #speaker_right
 + [Text Gavin] -> nadia_1_1b
 + [Turn on the radio to distract dad] -> nadia_1_1c
 
@@ -206,30 +205,30 @@ looks cute on you. I like it. #speaker_1
 #knot:nadia_1_1c
 #ui:scene
 #background:bg_nadia_fathercaratnight.jpg
-#speaker_left_image:cha_nadia_rahman_normal.png
-#speaker_left_name:Abah
+#speaker_right_image:cha_nadia_rahman_normal.png
+#speaker_right_name:Abah
 Oh look! Just in time, Misteri Jam 12..  #speaker_self
-You and your radio ghost stories. #speaker_left
+You and your radio ghost stories. #speaker_right
 Abah, you don't pretend! You love these as much as I do.  #speaker_self
-At least after I watch scary movies, I can still sleep at night.  #speaker_left
-Some people will sleep with the lights on.. who does that ya? #speaker_left
+At least after I watch scary movies, I can still sleep at night.  #speaker_right
+Some people will sleep with the lights on.. who does that ya? #speaker_right
 Fine, you win.. #speaker_self
-Ya, my electricity bill also win. #speaker_left
+Ya, my electricity bill also win. #speaker_right
 -> nadia_1_1d
 
 === nadia_1_1d ===
 #knot:nadia_1_1d
 #ui:scene
-#speaker_left_image:cha_nadia_rahman_normal.png
-#speaker_left_name:Abah
+#speaker_right_image:cha_nadia_rahman_normal.png
+#speaker_right_name:Abah
 #background:bg_nadia_hdbcarpark.jpg
 Finally, home! What a landmine of a drive.. maybe next time I should pretend to sleep. #inner_monologue
-Later go say goodnight to your mother ok?  #speaker_left
-She probably still waiting up for you. #speaker_left
+Later go say goodnight to your mother ok?  #speaker_right
+She probably still waiting up for you. #speaker_right
 Yeah she messaged me earlier just now.  #speaker_self
 Said she had something to pass to me. Do you know anything about it? #speaker_self
-No, she didn't say. #speaker_left
-... is that a new sweater? #speaker_left
+No, she didn't say. #speaker_right
+... is that a new sweater? #speaker_right
  
 -> nadia_1_2_narration 
 
@@ -253,7 +252,7 @@ The teacher said it was ok... #inner_monologue
 #background:bg_nadia_girlsbathroom.jpg
 #speaker_right_image:cha_nadia_chloe_grinning.png
 #speaker_right_name:Chloe
-I am actually a bit nervous now that am in these track pants.  #inner_monologue
+I am actually a bit nervous now that I am in these track pants.  #inner_monologue
 That’s so weird. It’s okay to look a bit different!.. right?    #inner_monologue
 Wow, Chloe is really taking this Asian beauty skincare thing seriously.  #inner_monologue
 That’s a lot of sunblock she’s laying on.  #inner_monologue
@@ -323,7 +322,7 @@ Yup! Now can we go? I don't need Mrs. Ee to shoot us her laser eyes for being la
 ~ nadia_mood --
 Track pants! Immediate protection against the sun, SPF 1500 guaranteed. #speaker_self
 Haha, very funny Nad. Just because I don’t want to get too dark.. #speaker_right
-+ Too Dark? [] #speaker_self
++ Too dark? [] #speaker_self
 + Yeah, I get it. [] #speaker_self
 - You know what I mean! #speaker_right
 Do I? #speaker_self
@@ -334,13 +333,13 @@ So what? #speaker_self
 #speaker_right_image:cha_nadia_chloe_concerned.png
 So.. listen, your parents are great. #speaker_right
 But you gotta admit that they’re a bit controlling. #speaker_right
-Like your mom not wanting you to get “too tanned”? “Too dark?” #speaker_self
+Like your mom not wanting you to get “too tanned” or “too dark”? #speaker_self
 Exactly. You have to draw the line with moms. #speaker_right
 You were fine wearing shorts for PE, why are they making such a fuss?  #speaker_right
 + Nobody’s forcing me.[] #speaker_self
     They didn’t make a fuss. I actually thought it was a good idea. #speaker_self
     Wait, what? This was your idea? #speaker_right
-+ I got them in the uniform’s colour.[] #speaker_self
++ [I got them in the uniform’s colour.] #speaker_self
     Ok, but I did get them in the same colour as our school shorts. #speaker_self
     Wait, you bought them? This was your idea? #speaker_right
 - Yes, it was my idea Chloe. And they’re just track pants.  #speaker_self
@@ -367,7 +366,7 @@ Almost. Was just a random idea I had, and she just wanted to help. A lot. #speak
 You don’t seem that keen on it though? #speaker_right
 #speaker_right_image:cha_nadia_chloe_concerned.png
 I am! I just feel.. weird. #speaker_self
-(Getting impatient) They look fine though! And you don’t look weird. #speaker_right
+They look fine though! And you don’t look weird. #speaker_right
 I won’t stick out? #speaker_self
 Well — #speaker_right
 ... see, that’s what I thought!! #speaker_self
