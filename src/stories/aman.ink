@@ -78,7 +78,7 @@ VAR chapter_9_ending = 0
 .
 ~ chapter_id = 1
 Aman Singh #title
-Sat Sri Akaal! I am Aman Singh. 
+Sat Sri Akaal (God is Truth)! I am Aman Singh. 
 As a Sikh, I keep my turban and beard, and wear the steel bangle, or kara. 
 Those are usually the first things people notice about me. But there’s a lot more to me than that.
 I’ve recently completed my diploma in accountancy, and NS is just around the corner. That’s going to be ‘fun’...
@@ -86,8 +86,8 @@ I’m also interested in media, and I’ve been told I’m good looking. I don�
 My parents and my older sister Prabhjot (we call her Jothi) have always been important in my life.
 They’ve been nicer to me than usual, lately. I think it’s because I’m about to enlist. And after NS, I plan to pursue an accountancy degree in Melbourne. 
 They sometimes joke about losing the baby in the family. I think they genuinely feel a little sad.
-I’ll miss them, and my girlfriend Selinder. Sel and I met in poly, and people tease us because we're inseperable. It helps that she’s really, really, pretty.
-I should mention one more thing. One of my best friends is Zhihao -- we’ve lived in neighbouring HDB blocks since young, so we grew up together in a way.
+I’ll miss them, and my girlfriend Selinder. Sel and I met in poly, and people tease us because we're inseparable. It helps that she’s really, really, pretty.
+I should mention one more thing. One of my best friends is Zhihao -- we’ve lived in neighbouring HDB blocks since childhood, so we grew up together in a way.
 Zhihao’s great! But he can also be... a lot, sometimes. You’ll see.
 So that’s me -- Aman. 
 And this is what it’s like, to be me.
@@ -120,17 +120,17 @@ You okay? You’ve been so quiet this morning. PMS ah? #speaker_left
     Two months more. You? #speaker_left
     Next month. Quite nervous sia. #speaker_self
     Why ah? Oh - because you posted army right? #speaker_left
-+ Haha must be lah[.] Anyway, thanks for doing this ya. I know volunteering is not the most exciting way to spend your weekend.  #speaker_self
++ Haha must be lah.[] Anyway, thanks for doing this ya. I know volunteering is not the most exciting way to spend your weekend.  #speaker_self
     It’s ok, good karma. Anyway, I know you’re enlisting soon, so can’t hang out already. Next month going in already right? #speaker_left
     Uh - yeah. #speaker_self
     You sound like you got handed death sentence. Why? Because going army right? #speaker_left
 - Ya. I thought I would get police. All my cousins got police. Dunno why I kena army. I heard BMT training is from morning to night. How to find time to wash my hair, dry my turban cloth... #speaker_self
 You keeping your turban? Die la. The cloth is never-ending. Can reach JB! #speaker_left
 + [Oi, not funny] You gotta stop those ‘jokes’ man. Just cos I’m your friend and I give you a free pass, all the time...  #speaker_self
-+ Funny ... ha-ha[.] Some of us have real problems on our hands you know.  #speaker_self
++ Funny ... ha-ha.[] Some of us have real problems on our hands you know.  #speaker_self
 - I don’t get it though. If you’re worried about your turban, just cut hair lah. #speaker_left
-+ I can’t do that[.] That’s insane. And my parents would kill me!  #speaker_self
-+ So actually, I’ve been thinking about it[.] It would be easier to blend in. But, my parents would kill me...  #speaker_self
++ I can’t do that.[] That’s insane. And my parents would kill me!  #speaker_self
++ So actually, I’ve been thinking about it.[] It would be easier to blend in. But, my parents would kill me...  #speaker_self
 - You want to kena tekan by your parents, or kena tekan by the sergeant major? #speaker_left
 Is tekan by nobody an option? #speaker_self
 This is NS, sure tekan. Anyway, some of your cousins also don’t keep their turban what.  #speaker_left
@@ -178,7 +178,7 @@ Just take the airpods and go please, I have a lot of stuff to do -- #speaker_sel
 You’ve been cutting your hair, haven’t you? #speaker_right
 + [Yes, so what?] Yes, and I might cut it all off. So?  #speaker_self
     Are you KIDDING me? Papa will kick you out. #speaker_right
-+ None of your business[.] My life, my choices.  #speaker_self
++ None of your business.[] My life, my choices.  #speaker_self
     You better not do anything stupid. Papa will kick you out. #speaker_right
 - Let him. I’m going to enlist anyway. I’ll just stay in camp. #speaker_self
 How could you even say that! Doesn’t this mean anything to you? How can you take this so lightly? #speaker_right
@@ -224,10 +224,14 @@ One month later, Selinder and I are chatting at night.
 #timestamp:23.34
 Babe, I’m sorry, I think I’m going to do it. #speaker_self
 Jaan (dear), don’t do anything rash. #speaker_1
-Think of what this means for your faith and your identity. And your family. #speaker_1
+Remember what we’ve been taught about being a good Sikh and honoring our Gurus? #speaker_1
+About following the Sikhi way of life, no matter how challenging? Don’t do anything that will hurt your parents...  #speaker_1
 And I think you're handsome already! #speaker_1
 ... #speaker_1
 ... hello? #speaker_1
+#ui:narrator
+#background:bg_aman_bedroom.jpg
+I didn't reply because I fell asleep. But I also didn't know how to reply.
 #timestamp:09.15
 Hi babe. I’m so sorry about last night. I got so tired and I just passed out on my bed. #speaker_self
 It’s okay. #speaker_1
@@ -271,10 +275,11 @@ You sure ah, boy. #speaker_right
     Refund what? Haven't pay yet boy.   #speaker_right
 	Sorry. Sorry, I’ve changed my mind. Bye! #speaker_self	
     -> aman_1_9
-+ Yes [,]I'm sure. #speaker_self
++ Yes[]. I'm sure. #speaker_self
     What style you want? Medium, or fade, or --   #speaker_right
     I’m going NS tomorrow, so just cut very short.   #speaker_self	
     #background:bg_aman_barbershopcrowdstaring.jpg
+    Oh my god, are passers-by glancing in and gawking at me? And is that boy taking a video of my haircut!? #inner_monologue
     Ok.  #speaker_right
     #background:bg_aman_barbershophairfloor.jpg
     You want to keep? #speaker_right
@@ -321,7 +326,7 @@ Aman? #speaker_1
 - ... #speaker_self 
 
 #ui:scene
-#background:bg_aman_haircutselfie
+#background:bg_aman_haircutselfie.jpg
 Why isn’t anyone saying anything? #inner_monologue
 They've all seen it. Why don't the reply? #inner_monologue
 I don’t care what they think. Do I care what they think? #inner_monologue
@@ -338,7 +343,7 @@ You will regret it, son. #speaker_1
 
 #ui:scene
 #background:bg_aman_barbershopoutside.jpg
-damnit. aaaaargh.  #inner_monologue
+Damnit. Aaaaargh.  #inner_monologue
 
 #ui:whatsapp
 #background:whatsapp.png
@@ -687,7 +692,7 @@ He said he knows I am a good soldier, but it’s beyond his control. #speaker_le
     Eh no la, that’s not true... #speaker_self
     It’s true bro. You also know. #speaker_left
 + [Oh. Well that's life.]
- - You know, I cut my hair before I enlisted because I didn’t want to stand out as the only guy with a turban.  #speaker_self
+ - You know, I actually wish I didn't stand out as the only guy with a turban.  #speaker_self
  It’s funny that some of us want to blend in with the others. And some of us want to stand out. #speaker_self
 I’m not afraid of standing out.  #speaker_left
 You know what the stereotypes are. I want to break them.  #speaker_left
@@ -1018,9 +1023,9 @@ Do I sound desperate? Maybe I'll try a different tactic... #inner_monologue
 #chat_group_image:elsa_profile.jpg
 #speaker_1_name:Elsa
 Hi Elsa, this is Aman! Just checking to see if you have any update on the role? #speaker_self
-+ I’m nearly fully booked, you see[.] #speaker_self
++ I’m nearly fully booked, you see.[] #speaker_self
     I’m planning my schedule for the next few weeks, and it’s looking packed! #speaker_self
-+ I really want this part..[.] #speaker_self
++ I really want this part...[] #speaker_self
     I loved the creative brief you posted, so I’m really hoping I’m a fit for the role. #speaker_self
 - Thanks again for reaching out to me! #speaker_self
 
@@ -1089,7 +1094,7 @@ Let me be honest with you... #speaker_1
 Look-wise, they prefer someone with more clean look.  #speaker_1
 No offence yup. Just that more relatable without turban and long beard.  #speaker_1
 😁 All the best ya. #speaker_1
-+ I see. Fine. Bye[.] #speaker_self
++ I see. Fine. Bye.[] #speaker_self
 + Ah ok thanks[!] Hope you’ll keep me in mind if other roles come up! #speaker_self
 - Bye! #speaker_1
 -> aman_2_3_home

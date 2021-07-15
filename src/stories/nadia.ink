@@ -68,8 +68,8 @@ VAR character_id = 1
 VAR chapter_id = 1
 NADIA BINTE RAHIM #title
 Hey there. I’m Nadia.
-This is a big year for me, since my A’Levels are coming up. 
-That’s going to decide whether I make it into medical school like I’m hoping, so.. No pressure.
+This is a big year for me, since my A Levels are coming up. 
+That’s going to decide whether I make it into medical school like I’m hoping, so... No pressure.
 I haven’t told a lot of people about the medical school thing. It all feels a bit impossible.
 But good grades have always kind of been my thing, so.. Maybe, I have a shot.
 I’ve also got great study buddies! Chloe and Gavin, my best friends at school.
@@ -80,7 +80,7 @@ She’s a nurse, so that’s very cool. We’re super close, and she always keep
 So that’s me -- Nadia.
 And this is what it’s like, to be me.
 CHAPTER 1 #title
-Study Buddy #title
+An Unexpected Invitation #title
 
 -> nadia_1_1_narration 
 
@@ -103,7 +103,7 @@ My dad is waiting to pick me up.
 #background:bg_nadia_fathercaratnight.jpg
 #speaker_right_image:cha_nadia_rahman_normal.png
 #speaker_right_name:Abah
-Hi abah #speaker_self
+Hi abah. #speaker_self
 Nadia dah makan? (Have you eaten?) #speaker_right
 Yup, I had dinner. #speaker_self
 There's food at home if you're  hungry, your mother made currypuffs just now. #speaker_right
@@ -167,7 +167,7 @@ Oh crap. #inner_monologue
 + [Tell the truth]  It was my friend Gavin's idea. I know him from student council. #speaker_self
 + [Tell a white lie]  It's a bunch of us. #speaker_self
     ~ nadia_liar ++
-    Is much easier than last year when I was trying to cram everything by myself. #speaker_self
+    It's much easier than last year when I was trying to cram everything by myself. #speaker_self
 - I see. Your friends in this school.. the culture a bit different. #speaker_right
 What do you mean? #speaker_self
 Just different. They hug a lot.. always peluk-peluk (hug). #speaker_right
@@ -252,7 +252,7 @@ The teacher said it was ok... #inner_monologue
 #background:bg_nadia_girlsbathroom.jpg
 #speaker_right_image:cha_nadia_chloe_grinning.png
 #speaker_right_name:Chloe
-I am actually a bit nervous now that am in these track pants.  #inner_monologue
+I am actually a bit nervous now that I am in these track pants.  #inner_monologue
 That’s so weird. It’s okay to look a bit different!.. right?    #inner_monologue
 Wow, Chloe is really taking this Asian beauty skincare thing seriously.  #inner_monologue
 That’s a lot of sunblock she’s laying on.  #inner_monologue
@@ -322,7 +322,7 @@ Yup! Now can we go? I don't need Mrs. Ee to shoot us her laser eyes for being la
 ~ nadia_mood --
 Track pants! Immediate protection against the sun, SPF 1500 guaranteed. #speaker_self
 Haha, very funny Nad. Just because I don’t want to get too dark.. #speaker_right
-+ Too Dark? [] #speaker_self
++ Too dark? [] #speaker_self
 + Yeah, I get it. [] #speaker_self
 - You know what I mean! #speaker_right
 Do I? #speaker_self
@@ -333,13 +333,13 @@ So what? #speaker_self
 #speaker_right_image:cha_nadia_chloe_concerned.png
 So.. listen, your parents are great. #speaker_right
 But you gotta admit that they’re a bit controlling. #speaker_right
-Like your mom not wanting you to get “too tanned”? “Too dark?” #speaker_self
+Like your mom not wanting you to get “too tanned” or “too dark”? #speaker_self
 Exactly. You have to draw the line with moms. #speaker_right
 You were fine wearing shorts for PE, why are they making such a fuss?  #speaker_right
 + Nobody’s forcing me.[] #speaker_self
     They didn’t make a fuss. I actually thought it was a good idea. #speaker_self
     Wait, what? This was your idea? #speaker_right
-+ I got them in the uniform’s colour.[] #speaker_self
++ [I got them in the uniform’s colour.] #speaker_self
     Ok, but I did get them in the same colour as our school shorts. #speaker_self
     Wait, you bought them? This was your idea? #speaker_right
 - Yes, it was my idea Chloe. And they’re just track pants.  #speaker_self
@@ -366,7 +366,7 @@ Almost. Was just a random idea I had, and she just wanted to help. A lot. #speak
 You don’t seem that keen on it though? #speaker_right
 #speaker_right_image:cha_nadia_chloe_concerned.png
 I am! I just feel.. weird. #speaker_self
-(Getting impatient) They look fine though! And you don’t look weird. #speaker_right
+They look fine though! And you don’t look weird. #speaker_right
 I won’t stick out? #speaker_self
 Well — #speaker_right
 ... see, that’s what I thought!! #speaker_self
