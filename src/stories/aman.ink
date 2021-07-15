@@ -544,11 +544,11 @@ BMT Enlistment Day. #title
 #background:bg_aman_bmtparadesquare.jpg
 #speaker_left_image:cha_aman_sergeant_normal.png
 #speaker_left_name:Sergeant Wong
-PRIVATE SINGH! Ok, take this. Sit there with the rest. #speaker_left
+RECRUIT SINGH! Ok, take this. Sit there with the rest. #speaker_left
 Thank you, sergeant. #speaker_self
 Ok, first interaction wasn't so bad #inner_monologue
 #speaker_left_image:cha_aman_lukman.png
-#speaker_left_name:Pte Lukman Wahid
+#speaker_left_name:Rec Lukman Wahid
 Hello! I’m Lukman. #speaker_left
 Hey, I’m Aman. Which section are you in? #speaker_self
 Section 2. You? #speaker_left
