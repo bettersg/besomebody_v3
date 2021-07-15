@@ -103,7 +103,7 @@ Duty Calls #title
 #knot:aman_1_1_narration
 #ui:narrator
 #background:bg_aman_sikheventhall.jpg
-Zhi Hao and I are at a Sikh community event early on a Saturday morning.
+Zhihao and I are at a Sikh community event early on a Saturday morning.
 -> aman_1_1
 
 
@@ -116,11 +116,11 @@ Zhi Hao and I are at a Sikh community event early on a Saturday morning.
 Oi! Focus la. You’re double-packing the fruits. #speaker_left
 Crap. Thanks. #speaker_self
 You okay? You’ve been so quiet this morning. PMS ah? #speaker_left
-+ [I'm just nervous] Stop it lah. I'm just nervous about enlistment. When are you going in?
++ [I'm just nervous] Stop it lah. I'm just nervous about enlistment. When are you going in? #speaker_self
     Two months more. You? #speaker_left
     Next month. Quite nervous sia. #speaker_self
     Why ah? Oh - because you posted army right? #speaker_left
-+ Haha must be lah[.] Anyway, thanks for doing this ya. I know volunteering is not the most exciting way to spend your weekend.
++ Haha must be lah[.] Anyway, thanks for doing this ya. I know volunteering is not the most exciting way to spend your weekend.  #speaker_self
     It’s ok, good karma. Anyway, I know you’re enlisting soon, so can’t hang out already. Next month going in already right? #speaker_left
     Uh - yeah. #speaker_self
     You sound like you got handed death sentence. Why? Because going army right? #speaker_left
@@ -171,7 +171,7 @@ What do you want? #speaker_self
 Can I borrow your airpods? I sent mine for servicing. #speaker_right 
 Ya, it’s in the second drawer. Take and get out. #speaker_self
 #background:bg_aman_drawerscissors.jpg
-What is this? #speaker_right #speaker_right_image:jothi_concerned.png
+What is this? #speaker_right #speaker_right_image:cha_aman_jothi_concerned.png
 Nothing -- #speaker_self
 Don’t lie to me, what is this? #speaker_right
 Just take the airpods and go please, I have a lot of stuff to do -- #speaker_self
@@ -219,7 +219,7 @@ One month later, Selinder and I are chatting at night.
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Selinder
-#chat_group_image:ico_aman_selinder.jpg
+#chat_group_image:ico_aman_selinder.png
 #speaker_1_name:Selinder
 #timestamp:23.34
 Babe, I’m sorry, I think I’m going to do it. #speaker_self
@@ -260,12 +260,10 @@ The next morning, while my family was still asleep....
 Yes, boy?  #speaker_right
 Not crowded. Thank you, Waheguru. #inner_monologue
 I want to cut my hair. #speaker_self
-#speaker_right_image:barber_surprised.png
 Cut beard or cut hair?   #speaker_right
 Don’t think. Just say it. Just say it.  #inner_monologue
 Cut everything.  #speaker_self
 Ok. Sit. #speaker_right
-#background:bg_aman_mirrorbarbershop.jpg
 You sure ah, boy. #speaker_right
 + [No] I uh ... ummm   #speaker_self
     Well?  #speaker_right
@@ -317,13 +315,13 @@ Aman - please tell amma you want to order something for dinner! Side with me! #s
 Let the boy make up his own mind Jothi! He's going to be a real man soon! #speaker_1
 Aman? #speaker_1
 + [Send them a selfie of your haircut]
-    - This is what I look like after my haircut #emoji:aman_haircut_selfie.png #speaker_self 
+    This is what I look like after my haircut 📎[selfie.jpg]  #emoji:aman_haircut_selfie.png #speaker_self 
 + [Tell your family that you cut your hair]
     I cut my hair to prepare NS today. It's very short now.    #speaker_self 
 - ... #speaker_self 
 
 #ui:scene
-#background:bg_aman_barbershopoutside.jpg
+#background:bg_aman_haircutselfie
 Why isn’t anyone saying anything? #inner_monologue
 They've all seen it. Why don't the reply? #inner_monologue
 I don’t care what they think. Do I care what they think? #inner_monologue
@@ -367,7 +365,7 @@ I... #speaker_self
     I wanted to talk to you or Jothi about this but I knew you would judge me. #speaker_self
     Papa Army BMT is not like police or SCDF, so your experience and the cousins don't have to deal with mud and helmets. #speaker_self
     I didn't know what to do. I had nobody to talk to about this.  #speaker_self
-    I wish I didn't have to do this but Zhi Hao said they would tekan me in NS if I came in with a turban. #speaker_self
+    I wish I didn't have to do this but Zhihao said they would tekan me in NS if I came in with a turban. #speaker_self
     I heard all these horror stories about how little sleep they get, and if I had to wash my hair and turban it would be even worse. #speaker_self
     Papa I'm sorry. I really had to do this. #speaker_self
     Papa? #speaker_self
@@ -389,7 +387,7 @@ Enlistment Day for NS. #title
 #knot:aman_1_6
 #ui:scene
 #background:bg_aman_bmtparadesquare.jpg
-#speaker_left_image:cha_aman_sergeant_confused.png
+#speaker_left_image:cha_aman_sergeant.png
 #speaker_left_name:2SG Wong
 Private Singh? #speaker_left
 Oh no.... #inner_monologue
@@ -423,7 +421,7 @@ Cool! Hopefully can be buddies. #speaker_left
 === aman_1_7_narration ===
 #knot:aman_1_7_narration
 #ui:narrator
-#background:bg_aman_bmtcookhouse.jpg.jpg
+#background:bg_aman_bmtcookhouse.jpg
 Two months later, in the Halal section of the cookhouse.
 
 -> aman_1_7
@@ -1385,7 +1383,7 @@ Can you come down for an audition next Tuesday at 10am? #speaker_1
     OMG YES! #speaker_self
     I like your enthusiasm! Hahaha.  #speaker_1
     Checking in advance, if the audition goes smoothly, what’s your schedule like for the next few months? #speaker_1
-    I’m all good for the next 3 months until I start school. If I’m selected I’ll definitely make this my number one priority #speaker_self #emoji:smiley.png
+    I’m all good for the next 3 months until I start school. If I’m selected I’ll definitely make this my number one priority 😃😃 #speaker_self  
 - Great!  #speaker_1
 Oh and one more thing, we need our character to have a turban and a full beard.  #speaker_1
 You’re okay not to cut your hair or trim your beard for a while, right? #speaker_1
