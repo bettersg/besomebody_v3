@@ -412,7 +412,7 @@ Wah lao eh! Now must procure helmet for you. Why you DAY ONE so troublesome? #sp
 Take this first and go sit down. Later I call you. #speaker_left
 Arrrrrggggh Zhihao was right. First day after cutting my hair, I already kena tekan by my parents and by the sergeant. #inner_monologue
 #speaker_left_image:cha_aman_lukman.png
-#speaker_left_name:Pte Lukman Wahid
+#speaker_left_name:Lukman Wahid
 Hey, I overheard! You cut your hair? #speaker_left
 + [Mind your own business] Why does everyone care so much about my hair?  #speaker_self
     Whoa sorry. Didn't mean to kaypoh...  #speaker_left
@@ -443,7 +443,7 @@ Two months later, in the Halal section of the cookhouse.
 #ui:scene
 #background:bg_aman_bmtcookhouse.jpg.jpg
 #speaker_left_image:cha_aman_lukman.png
-#speaker_left_name:Pte Lukman Wahid
+#speaker_left_name:Lukman
 
 Can’t believe we’re passing out soon. Three months flew by, don’t you think? #speaker_left
 Ya man, what an experience. We should be proud of ourselves.  #speaker_self
