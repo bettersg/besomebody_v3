@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: ({ image }) => `url('/images/${image}')`, 
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    backgroundColor: "white", 
     height: '660px',
     [theme.breakpoints.only('xs')]: {
         height: '100vh',
