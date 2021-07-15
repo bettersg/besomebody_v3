@@ -7,6 +7,7 @@ import { useAuth } from '../../contexts/AuthContext';
 import { useSnackbar } from '../../contexts/SnackbarContext'
 import { CHARACTER_MAP } from '../../models/storyMap'
 import { getDbUser }  from '../../models/userModel.js';
+import { IntroBanner } from "../../components/IntroBanner"
 
 // Constants
 import "./styles.scss"
@@ -31,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
-export const CharacterChoicePage = () => {
+const CharacterChoicePage = () => {
     const classes = useStyles()  
 
     // Auth Context
@@ -73,25 +74,7 @@ export const CharacterChoicePage = () => {
             </div>
 
             {/* <!-- Continue Playing Banner --> */}
-            <div 
-                className="CharacterChoices__banner"
-                style={{backgroundImage:`url(/character_choice_page/nadia.png)`}}
-            >
-                
-                <div className="grid-container">
-                    <div>
-                        <div className="item1_continuePlaying">Continue Playing</div>
-                        <div className="item2_characterName">Nadia</div>  
-                    </div>
-
-                    <div className="item4_playButton">
-                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="25" cy="25" r="25" fill="#664EFC"/>
-                        <path d="M34.0278 25L20.4862 35.8253V14.1747L34.0278 25Z" fill="white"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
+            <IntroBanner />
 
             {/* <!-- Character card --> */}
             {characters.map((persona, i) => {
@@ -147,3 +130,5 @@ export const CharacterChoicePage = () => {
         </Box>
     )
 }
+
+export default CharacterChoicePage;
