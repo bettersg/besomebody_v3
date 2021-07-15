@@ -41,9 +41,10 @@ const Whatsapp = (props) => {
   const useStyles = makeStyles((theme) => ({
     WhatsappWrapper: {
       backgroundImage: `url('/images/bg_ui_whatsapp.png')`,
-      height: '90vh',
-      [theme.breakpoints.up('xs')]: {
-        height: '660px',
+      backgroundSize: "cover", 
+      height: '660px',
+      [theme.breakpoints.only('xs')]: {
+        height: '100vh',
       },
       width: "100%", 
       // overflow: "hidden", 

@@ -29,9 +29,10 @@
     &__messages {
         scroll-snap-type: y mandatory;
         overflow-y: scroll;
-        height: 77.3vh; 
-        @media screen and (min-device-width:481px) {
-            height: 535px; 
+        // height: 100vh; 
+        height: calc(100vh - 148px); 
+        @media screen and (min-device-width:600px) {
+            height: 515px; 
         }
         > div {
             scroll-snap-align: end;
@@ -66,7 +67,7 @@
         &.choices {
             transition: height 0.4s; 
             height: 55.3vh; 
-            @media screen and (min-device-width:481px) {
+            @media screen and (min-device-width:600px) {
                 height: 350px; 
             }
         }
