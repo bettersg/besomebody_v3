@@ -387,12 +387,13 @@ Enlistment Day for NS. #title
 #knot:aman_1_6
 #ui:scene
 #background:bg_aman_bmtparadesquare.jpg
-#speaker_left_image:cha_aman_sergeant.png
+#speaker_left_image:cha_aman_sergeant_normal.png
 #speaker_left_name:2SG Wong
 Private Singh? #speaker_left
 Oh no.... #inner_monologue
 Confirm you are Private Singh or not? Hello can answer? #speaker_left
 Er, sorry sergeant. I cut my hair yesterday. So I need a helmet. #speaker_self
+#speaker_left_image:cha_aman_sergeant_angry.png
 Hah? Your 11B photo you wear turban. You register say got turban. CMPB tell me you got turban. #speaker_left
 So I went to draw out turban for you. #speaker_left
 Now you cut your hair? #speaker_left
@@ -536,7 +537,7 @@ BMT Enlistment Day. #title
 #knot:aman_1_9
 #ui:scene
 #background:bg_aman_bmtparadesquare.jpg
-#speaker_left_image:cha_aman_sergeant.png
+#speaker_left_image:cha_aman_sergeant_normal.png
 #speaker_left_name:Sergeant Wong
 PRIVATE SINGH! Ok, take this. Sit there with the rest. #speaker_left
 Thank you, sergeant. #speaker_self
@@ -614,9 +615,9 @@ Later that night, right after I wash my hair.
 #knot:aman_1_11
 #ui:scene
 #background:bg_aman_bmttoilet.jpg
-#speaker_left_image:cha_aman_nsf1.png
+#speaker_left_image:cha_aman_bunkmate1_mocking.png
 #speaker_left_name:NSF Arun
-#speaker_right_image:cha_aman_nsf2.png
+#speaker_right_image:cha_aman_bunkmate2_mocking.png
 #speaker_right_name:NSF Soh
 Ah Man, don’t wash your hair at night leh. We all cannot sleep seeing your long hair in the dark. So scary! #speaker_left
 Like hantu sia. #speaker_right
@@ -627,7 +628,8 @@ Like hantu sia. #speaker_right
     Don’t make a scene. #inner_monologue
 + [Joke back]
     Pontia-- #speaker_right
-    #background:bg_aman_bmttoiletscary.jpg
+    #speaker_right_image:cha_aman_bunkmate2_afraid.png
+    #background:bg_aman_bmttoilet_scary.jpg
     They want scary? I'll give them scary. #inner_monologue
     AaaaaahahahahAHAHAHAHA! Aahaha! WooooooahahahHAHAHAH! #speaker_self
     OuuuuuuuaahahahhAHHHAHA! WAHkakaKAKKAKA! #speaker_self
