@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
   Box,
   Button,
@@ -6,7 +6,7 @@ import {
   Container,
 } from '@material-ui/core'
 // import { Alert } from '@material-ui/lab'
-import { useAuth } from '../../contexts/AuthContext'
+// import { useAuth } from '../../contexts/AuthContext'
 import { Link , useHistory} from 'react-router-dom'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 
@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const LandingPage = () => {
-  const [isLoading, setIsLoading] = useState(false)
+  // const [isLoading, setIsLoading] = useState(false)
   // const [isDialogOpen, setIsDialogOpen] = useState(false)
   // const [snackbar, setSnackbar] = useState({
   //   message: '',
@@ -77,7 +77,7 @@ const LandingPage = () => {
   const classes = useStyles()  
   const history = useHistory()
 
-  const { currentUser } = useAuth()  
+  // const { currentUser } = useAuth()  
 
   return (
     <Box className={classes.background}>
