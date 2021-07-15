@@ -32,6 +32,7 @@ export default function MultipleChoiceQuiz(props) {
     const quiz = MINI_GAME_MAP.filter(x => x.game_id===parseInt(specialTags.game_id))[0];
     const { currentUser } = useAuth();
     const [hasGameStarted,setHasGameStarted] = useState(false);
+    const [hasGameEnded,setHasGameEnded] = useState(false);
     const [currentQuestion,setCurrentQuestion] = useState(quiz.questions[0])
     const [currentQuestionNumber,setCurrentQuestionNumber] = useState(1)
     const [score,setScore] = useState(0)
@@ -75,6 +76,8 @@ export default function MultipleChoiceQuiz(props) {
         if(current <= quiz.questions.length){
             setCurrentQuestionNumber(current)
             setCurrentQuestion(quiz.questions[current-1])
+        }else {
+            setHasGameEnded(true);
         }
         setIsDrawerOpen(false);
     }
@@ -117,7 +120,29 @@ export default function MultipleChoiceQuiz(props) {
             </Fade>
             }
 
-            {hasGameStarted&&
+            {hasGameStarted && hasGameEnded &&
+
+                <Fade in={true} timeout={700}>
+                <Box className={classes.paragraphWrapper}  height="100%">
+                <div className="MultipleChoice__text">
+                    <Box> 
+                        You've scored {correctAnswered} out of {quiz.questions.length}
+                    </Box>
+                    <Button 
+                    variant="contained" 
+                    color="primary"
+                    className={`nextButton`}
+                    key="next" onClick={()=>{continueToStory();}} 
+                    >
+                    Back to Story
+                    </Button>
+                </div>
+                </Box>
+                </Fade>
+                
+            } 
+
+            {hasGameStarted && !hasGameEnded &&
             <Fade in={true} timeout={700}>
             <QuestionPanel 
                 question={currentQuestion}
@@ -133,6 +158,8 @@ export default function MultipleChoiceQuiz(props) {
             /> 
             </Fade>
             }
+
+            
             
 
         </>
