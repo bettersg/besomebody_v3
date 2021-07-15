@@ -1383,7 +1383,7 @@ Can you come down for an audition next Tuesday at 10am? #speaker_1
     OMG YES! #speaker_self
     I like your enthusiasm! Hahaha.  #speaker_1
     Checking in advance, if the audition goes smoothly, what’s your schedule like for the next few months? #speaker_1
-    I’m all good for the next 3 months until I start school. If I’m selected I’ll definitely make this my number one priority #speaker_self #emoji:smiley.png
+    I’m all good for the next 3 months until I start school. If I’m selected I’ll definitely make this my number one priority 😃😃 #speaker_self  
 - Great!  #speaker_1
 Oh and one more thing, we need our character to have a turban and a full beard.  #speaker_1
 You’re okay not to cut your hair or trim your beard for a while, right? #speaker_1
