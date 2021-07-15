@@ -8,7 +8,7 @@ import {
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import { useAuth } from '../../../contexts/AuthContext'
 
-import { REFLECTION_PAGE_LEARNING } from '../constants';
+import { REFLECTION_PAGE_CHAPTER_REFLECTION_RESPONSES } from '../constants';
 
 const useStyles = makeStyles((theme) => ({
   background: {
@@ -43,7 +43,9 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     margin: 'auto',
-    textAlign: 'center',
+    textAlign: 'center',    
+    alignItems: "center",
+    paddingTop:'25%',
   },
   btn: {
     padding: '10px 50px',
@@ -60,32 +62,44 @@ const useStyles = makeStyles((theme) => ({
       
     },
   },
-  text: {
-    color: '#ffffff',
+  topText: {
+    color: '#A7A9EB',
     fontSize: '0.9rem',
-    fontWeight: '400',
-    textDecoration: 'none',
+    fontWeight: '600',    
     marginBottom: 30,
-  }
+  },
+  mainText: {
+    color: '#ffffff',
+    fontSize: '1.1rem',
+    fontWeight: '400',    
+    marginBottom: 30,
+  },
+  link: {
+    color: '#ffffff',
+    fontSize: '0.8rem',
+    fontWeight: '300',    
+    marginBottom: 30,
+    textTransform: "uppercase",
+    textDecoration: 'none',
+  },
 }))
 
-const ChapterComplete = ({ setPage , user }) => {
+const ChapterLearning = ({ setPage , reflection }) => {
   const classes = useStyles()
   const { currentUser } = useAuth()  
   const [isLoading, setIsLoading] = useState(false)
-
+  // console.log(reflection)
   return (
   <Box className={classes.background}>
     <Container maxWidth="md" className={classes.container}>
-        <Box py={4} display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-          <Typography className={classes.headerText}>Chapter Complete!</Typography>
-          <Typography className={classes.text}>Congratulations {user.username}! <br /> You've finished the chapter.</Typography>
+        <Box className={classes.container}>
+          <Typography className={classes.topText}>DID YOU KNOW?</Typography>
+          <Typography className={classes.mainText}>{reflection.didyouknow}</Typography>
+          {reflection.media ? <a href={reflection.media} target="_blank" className={classes.link}>FIND OUT MORE ></a> : null}
       </Box>
         <Box className={classes.bottom}>        
-          {/* <Button variant="contained" className={classes.btn} onClick={() => setPage(REFLECTION_PAGE_CHAPTER_REFLECTION_RESPONSES)}> */}
-          <Button variant="contained" className={classes.btn} onClick={() => setPage(REFLECTION_PAGE_LEARNING)}>
-
-          Reflections
+          <Button variant="contained" className={classes.btn} onClick={() => setPage(REFLECTION_PAGE_CHAPTER_REFLECTION_RESPONSES)}>
+          Continue
         </Button>
       </Box>
     </Container>
@@ -93,7 +107,7 @@ const ChapterComplete = ({ setPage , user }) => {
   )
 }
 
-export default ChapterComplete;
+export default ChapterLearning;
 
 
 
