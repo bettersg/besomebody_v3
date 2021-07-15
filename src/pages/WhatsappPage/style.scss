@@ -66,7 +66,8 @@
         }
         &.choices {
             transition: height 0.4s; 
-            height: 55.3vh; 
+            height: calc(100vh - 313px); 
+        // height: 55.3vh; 
             @media screen and (min-device-width:600px) {
                 height: 350px; 
             }
