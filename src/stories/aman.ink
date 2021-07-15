@@ -394,9 +394,9 @@ Enlistment Day for NS. #title
 #background:bg_aman_bmtparadesquare.jpg
 #speaker_left_image:cha_aman_sergeant_normal.png
 #speaker_left_name:2SG Wong
-Private Singh? #speaker_left
+Recruit Singh? #speaker_left
 Oh no.... #inner_monologue
-Confirm you are Private Singh or not? Hello can answer? #speaker_left
+Confirm you are Recruit Singh or not? Hello can answer? #speaker_left
 Er, sorry sergeant. I cut my hair yesterday. So I need a helmet. #speaker_self
 #speaker_left_image:cha_aman_sergeant_angry.png
 Hah? Your 11B photo you wear turban. You register say got turban. CMPB tell me you got turban. #speaker_left
