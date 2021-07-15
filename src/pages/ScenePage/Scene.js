@@ -12,10 +12,13 @@ import { CHARACTER_MAP } from '../../models/storyMap';
 
 const useStyles = makeStyles((theme) => ({
   paragraphWrapper: {
-    backgroundImage: ({ image }) => `url('/images/${image}')`,
+    backgroundImage: ({ image }) => `url('/images/${image}')`, 
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    height: '640px',
+    height: '660px',
+    [theme.breakpoints.only('xs')]: {
+        height: '100vh',
+    },
     bottom: 0, 
   },
   choiceWrapper: {
