@@ -11,7 +11,7 @@ import {
   REFLECTION_PAGE_CHAPTER_COMPLETE,
   REFLECTION_PAGE_CHAPTER_REFLECTION_RESPONSES,
 } from './constants'
-import { updateDbUser } from '../../models/userModel'
+import { getDbUser, updateDbUser } from '../../models/userModel'
 import { useAuth } from '../../contexts/AuthContext'
 import { useSnackbar } from '../../contexts/SnackbarContext'
 
@@ -19,14 +19,15 @@ const Reflection = ({ reflectionId: propsReflectionId, globalVariables }) => {
   const { character_id, chapter_id } = globalVariables || {}
   const { currentUser } = useAuth()
   const { setSnackbar } = useSnackbar()
-
+  console.log(globalVariables)
   // Save user achievements data to Firestore whenever this component renders
   useEffect(() => {
     const updateUserSaveGame = async () => {
       try {
         // Helper variables
+        const currentUserDb = await getDbUser(currentUser.id)
         const currentEnding = globalVariables[`chapter_${chapter_id}_ending`]
-        const currentChapterInUserDb = currentUser?.achievements?.find(
+        const currentChapterInUserDb = currentUserDb?.achievements?.find(
           (achievement) =>
             achievement.character === character_id &&
             achievement.chapter === chapter_id
@@ -46,7 +47,7 @@ const Reflection = ({ reflectionId: propsReflectionId, globalVariables }) => {
             updatedAt: new Date().toISOString(),
             character: character_id,
             chapter: chapter_id,
-            savedStateId: `${currentUser?.id}-${character_id}`,
+            savedStateId: `${currentUserDb?.id}-${character_id}`,
             endings: [
               {
                 id: currentEnding,
@@ -55,14 +56,14 @@ const Reflection = ({ reflectionId: propsReflectionId, globalVariables }) => {
             ],
           }
 
-          const nextAchievements = currentUser?.achievements || []
+          const nextAchievements = currentUserDb?.achievements || []
           const newAchievements = nextAchievements.concat(saveData)
-          await updateDbUser({ achievements: newAchievements }, currentUser.id)
+          await updateDbUser({ achievements: newAchievements }, currentUserDb.id)
         }
 
         // If current character and chapter has been saved before, but current ending has not been unlocked before
         if (currentChapterInUserDb && !hasCurrentEnding) {
-          const newAchievements = currentUser?.achievements.map(
+          const newAchievements = currentUserDb?.achievements.map(
             (achievement) => {
               if (
                 achievement.character === character_id &&
@@ -80,7 +81,7 @@ const Reflection = ({ reflectionId: propsReflectionId, globalVariables }) => {
               return achievement
             }
           )
-          await updateDbUser({ achievements: newAchievements }, currentUser.id)
+          await updateDbUser({ achievements: newAchievements }, currentUserDb.id)
         }
       } catch (err) {
         setSnackbar({

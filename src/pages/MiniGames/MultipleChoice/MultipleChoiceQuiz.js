@@ -1,21 +1,45 @@
 import { useState, useEffect } from 'react';
 import QuestionPanel from './QuestionPanel';
-import './MultipleChoiceQuiz.css';
 import { useAuth } from '../../../contexts/AuthContext';
 import { createDbAnswers } from "../../../models/quizAnswerModel";
-import { useInkContext } from '../../../contexts/InkContext'
+import makeStyles from '@material-ui/core/styles/makeStyles';
+import { useInkContext } from '../../../contexts/InkContext';
+import {
+    Fade,
+    Button,
+    Box,   
+} from '@material-ui/core';
 import { MINI_GAME_MAP } from '../../../models/miniGameMap';
+
+import './MultipleChoiceQuiz.scss';
+
+const useStyles = makeStyles((theme) => ({
+    paragraphWrapper: {
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      height: '100vh',
+      [theme.breakpoints.up('md')]: {
+        height: '660px',
+      },
+      bottom: 0, 
+    },
+  }))
+
 
 export default function MultipleChoiceQuiz(props) {
 
     const { getStory, specialTags } = useInkContext();
     const quiz = MINI_GAME_MAP.filter(x => x.game_id===parseInt(specialTags.game_id))[0];
     const { currentUser } = useAuth();
+    const [hasGameStarted,setHasGameStarted] = useState(false);
     const [currentQuestion,setCurrentQuestion] = useState(quiz.questions[0])
     const [currentQuestionNumber,setCurrentQuestionNumber] = useState(1)
     const [score,setScore] = useState(0)
     const [correctAnswered,setCorrectAnswered] = useState(0)
     const [userAnswers,setUserAnswers] = useState([])
+    const [isCorrectAnswer,setIsCorrectAnswer] = useState(false);
+    const [isDrawerOpen,setIsDrawerOpen]=useState(false);
+    const classes = useStyles();  
 
     useEffect(() => {
 
@@ -52,23 +76,49 @@ export default function MultipleChoiceQuiz(props) {
             setCurrentQuestionNumber(current)
             setCurrentQuestion(quiz.questions[current-1])
         }
+        setIsDrawerOpen(false);
     }
 
     const checkUserAnswer = (userAns) =>{
-        // console.log(userAns)
-        // console.log(currentQuestion.correctAnswer)
         saveUserAnswer(userAns)
         if(currentQuestion.correctAnswer==userAns){
+            setIsCorrectAnswer(true);
             setCorrectAnswered(correctAnswered+1)
             setScore(((correctAnswered +1) / (currentQuestionNumber)) * 100)
         }
         else{
+            setIsCorrectAnswer(false);
             setScore(((correctAnswered) / (currentQuestionNumber)) * 100)
         }
+        setIsDrawerOpen(true);
+     }
+
+    const handleStartGame = () => {
+        console.log("hello");
+        setHasGameStarted(true);
      }
 
     return (
         <>
+            {quiz.introduction && !hasGameStarted && 
+            <Fade in={true} timeout={700}>
+                <Box className={classes.paragraphWrapper}  height="100%">
+                <div className="MultipleChoice__text">
+                    <Box>
+                        { quiz.introduction}
+                    </Box>
+                    <Button
+                    color="primary"
+                    variant="contained"
+                    onClick={() => handleStartGame()}
+                    >Start Game</Button>
+                </div>
+                </Box>
+            </Fade>
+            }
+
+            {hasGameStarted&&
+            <Fade in={true} timeout={700}>
             <QuestionPanel 
                 question={currentQuestion}
                 nextQuestion={nextQuestion}
@@ -78,7 +128,13 @@ export default function MultipleChoiceQuiz(props) {
                 score={score}
                 continueToStory={continueToStory}
                 userAnswers={userAnswers}
-            />  
+                isCorrectAnswer={isCorrectAnswer}
+                isDrawerOpen={isDrawerOpen}
+            /> 
+            </Fade>
+            }
+            
+
         </>
 
     )

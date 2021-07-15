@@ -2,6 +2,7 @@ export const MINI_GAME_MAP = [
     {
       game_id: 1,
       ui: "mcq",
+      introduction: "Why did Jothi Respond this way? Let's find out more.",
       questions: [
         {
           question_id: 1,
