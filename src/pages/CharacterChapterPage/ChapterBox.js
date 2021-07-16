@@ -16,7 +16,7 @@ import { useInkContext } from '../../contexts/InkContext'
 import { CHARACTER_MAP } from '../../models/storyMap'
 import NadiaInk from '../../stories/nadia.ink.json'
 import AmanInk from '../../stories/aman.ink.json'
-import './style.css'
+import './styles.scss'
 
 const useStyles = makeStyles({
   root: {
@@ -71,8 +71,11 @@ export default function ChapterBox(props) {
   const {
     // useInk hook initialiser
     initialiseUseInkHook,
+    isStoryStarted,
+    hasSavedState,
+    loadSavedStory,
 
-    // States
+    // States    
     startStoryFrom,
   } = useInkContext()
 
@@ -113,47 +116,59 @@ export default function ChapterBox(props) {
   return (
     <Card className={classes.root} key={chaptDetails.number}>
       <Grid container>
-        <Grid item xs={8}>
           <CardContent>
-            {/* TODO: this needs to be pulled from the player save data, not from the story*/}
-            {chaptDetails.new == true ? (
-              <Typography variant="overline" className="newChapt">
-                NEW
-              </Typography>
-            ) : null}
-            <span className="chaptText">
-              Chapter {chaptDetails.number} of {total}
-            </span>
-            <Typography className="chaptTitle">{chaptDetails.title}</Typography>
-            <Typography variant="body2">{chaptDetails.summary}</Typography>
-            {rows}
-            <span className="chaptText" style={{ marginLeft: '5px' }}>
-              XXX of {chaptDetails.endings.length} endings unlocked
-            </span>
+            <div className="ChapterBox">
+              <div className="ChapterBox__chaptDetails">
+                {/* TODO: this needs to be pulled from the player save data, not from the story*/}
+                {chaptDetails.new == true ? 
+                  <div className="ChapterBox__chaptDetails__bubble new">NEW!</div>
+                 : chaptDetails.playable == false ? 
+                 <div className="ChapterBox__chaptDetails__bubble coming">COMING SOON</div> :
+                 null}
+                <div className="ChapterBox__chaptDetails--chaptText">
+                  Chapter {chaptDetails.number} of {total}
+                </div>
+
+              </div>
+
+              <div className="ChapterBox__chaptTitle">
+                <div className="ChapterBox__chaptTitle--name">{chaptDetails.title}</div>
+                {isLoading ? (
+                  <div className="spinner-div">
+                    <PacmanLoader color="#e5e5e5" loading={isLoading} size={80} />
+                  </div>
+                ) : (
+                    chaptDetails.playable == false ? (
+                      <div
+                        className={`ChapterBox__chaptTitle--button disable`}
+                      >
+                        Soon
+                      </div>
+                    ) : (
+                      <div
+                        className={`ChapterBox__chaptTitle--button`}
+                        onClick={() => handleChapterStart()}
+                      >
+                        Play
+                      </div>
+                    )
+                )}
+              </div>
+
+            </div>
+            <div className="ChapterBox__summary">{chaptDetails.summary}</div>
+
+            {chaptDetails.playable == true ?
+              <div className="ChapterBox__endings">
+                {rows}
+                <span style={{ marginLeft: '8px' }}>
+                  0 of {chaptDetails.endings.length} endings unlocked
+                </span> 
+              </div>:
+              null
+            }
           </CardContent>
-        </Grid>
-        {isLoading ? (
-          <div className="spinner-div">
-            <PacmanLoader color="#e5e5e5" loading={isLoading} size={80} />
-          </div>
-        ) : (
-          <CardActions>
-            {chaptDetails.playable == false ? (
-              <Button size="small" variant="outlined" disabled>
-                Coming Soon
-              </Button>
-            ) : (
-              <Button
-                size="small"
-                variant="contained"
-                className="chaptBtn"
-                onClick={() => handleChapterStart()}
-              >
-                PLAY
-              </Button>
-            )}
-          </CardActions>
-        )}
+        
       </Grid>
     </Card>
   )

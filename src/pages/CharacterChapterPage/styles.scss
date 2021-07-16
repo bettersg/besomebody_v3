@@ -1,0 +1,101 @@
+@import "../../scss/global/global"; 
+
+.CharacterChapterPage {
+    &__top {
+        // height: 266px;
+        width: 100%;  
+        background-color: $white;
+        padding: 20px; 
+        padding-bottom: 32px;
+        &__nav {
+            display: flex;
+            align-items: center;
+            margin-top:30px;
+            margin-bottom: 31px;
+            &--name {
+                margin-left: 18px; 
+                @include inter-chaptChoiceName; 
+                color: $lapis80;
+                text-decoration: none;
+            }
+        }
+        &__character {
+            display: flex;
+            align-items: center;
+            margin-bottom: 26px;
+            &--name {
+                @include inter-chaptChoiceName; 
+                font-size: 24px;
+                line-height: 29.05px;
+                margin-bottom: 4px;
+            }
+        }
+    }
+}
+
+.ChapterBox {
+    &__chaptDetails {
+        display: flex;
+        align-items: center;
+        &__bubble {
+            @include inter-chaptChoiceName; 
+            line-height: 11px;
+            font-size: 11px;
+            display: flex;
+            align-items: center;
+            height: 20px; 
+            padding: 5px 8px; 
+            border-radius: 10px;
+            margin-right: 9px; 
+            &.new {
+                background-color: $tangerine60;
+            }
+            &.coming {
+                background-color: $lapis10;
+                color: $lapis80;
+            }
+        }
+        &--chaptText {
+            @include inter-chaptchoice600; 
+            color: $lapis80;
+        }
+    }
+    &__chaptTitle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 8px;
+        &--name {
+            @include inter-chaptChoiceName; 
+            font-size: 18px;
+        }
+        &--button {
+            @include inter-chaptChoiceName; 
+            font-size: 14px;
+            height: 40px; 
+            width: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 24px;
+            background-color: $lapisBase;
+            color: $white;
+            cursor: pointer;
+
+            &.disable {
+                background-color: $midnight10;
+                color: $lapisDark2;
+            }
+        }
+    }
+    &__summary {
+        @include inter-chaptchoice500; 
+        margin-right: 124px;
+        color: $midnight60;
+    }
+    &__endings {
+        @include inter-chaptchoice500; 
+        margin-top: 16px;
+        color: $midnight60;
+    }
+}

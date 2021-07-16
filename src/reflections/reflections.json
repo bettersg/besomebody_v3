@@ -1,6 +1,8 @@
 [
   {
-    "id": 1,
+    "id": 1,  
+    "didyouknow": "This story is based on focus group interviews with members from this community. ",
+    "media": "https://www.ricemedia.co/culture-people-daggers-bracelets-and-boxer-shorts-the-religious-articles-of-sikhs/",
     "questions": [
       2,
       3
@@ -8,6 +10,8 @@
   },
   {
     "id": 2,
+    "didyouknow": "This story is based on real stories of inter-faith relationships, and of understanding your own faith as a young adult. There are hidden struggles that many go through.",
+    "media": "https://www.ricemedia.co/culture-people-conversion-circumcision-angry-mum-journey-one-couples-interracial-marriage-nhb/",
     "questions": [
       1,
       3

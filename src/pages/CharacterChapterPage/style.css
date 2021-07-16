@@ -59,7 +59,7 @@
     margin: 0 !important; 
 }
 
-@media screen and (max-device-width:480px) {
+@media screen and (max-device-width:600px) {
     .resumeButton {
         left: 0;
         bottom: 0;

@@ -12,15 +12,16 @@ import Login from '../pages/Login/Login'
 import ForgetPassword from '../pages/ForgetPassword/ForgetPassword'
 import InkController from '../pages/InkController/InkController'
 import LandingPage from '../pages/LandingPage'
-// import CharacterChoicePage from '../pages/CharacterChoicePage'
-import { CharacterChoicePage } from '../pages/CharacterChoicePage'
+import CharacterChoicePage from '../pages/CharacterChoicePage'
+// import { CharacterChoicePage } from '../pages/CharacterChoicePage'
 import CharacterChapterPage from '../pages/CharacterChapterPage'
+// import { CharacterChapterPage } from '../pages/CharacterChapterPage'
 import IntroMaster from '../pages/LandingPage/IntroMaster'
 import ProfileBuilderPage from '../pages/ProfileBuilderPage'
 import AudioPlayer from "../music/Music"
 import Help from '../pages/HelpPage/HelpPage'
 import Music1 from '../music/tobeyou_intro.mp3'
-import Music2 from '../music/tobeyou_outro.mp3'
+import Music2 from '../music/tobeyou_outrolong.mp3'
 
 
 

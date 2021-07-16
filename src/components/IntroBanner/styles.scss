@@ -1,0 +1,56 @@
+@import "../../scss/global/global"; 
+
+.IntroBanner {
+
+    &__banner{
+        height: 162px;
+        width: 100%;
+        
+        .grid-container {
+            padding: 29px 20px 26px 24px; 
+            background: linear-gradient(250.27deg, rgba(252, 104, 79, 0) 49.1%, #FC684F 101.81%);
+            height: 100%;
+            background-color: #ff8944e5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+            
+        .item1_continuePlaying {
+            margin-bottom: 14px; 
+            grid-column: 1 / 6;  
+            text-transform: uppercase;
+            color: #3D349D;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 11px;
+            line-height: 13px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+        
+        .item2_characterName {
+            @include inter-charchoicename; 
+            color: white;
+        }
+        
+        .item3_chapterTimeLeft {
+            grid-column: 1 / 6;
+            color: white;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+        }
+            
+        .item4_playButton {
+            grid-column: 6 / 7;
+            grid-row: 1 / 7;
+            cursor: pointer;
+        }
+    }
+}

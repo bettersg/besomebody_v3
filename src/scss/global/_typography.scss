@@ -49,6 +49,16 @@ $staatliches: 'Staatliches', cursive;
     text-align: left;
 }
 
+@mixin inter-chaptChoiceName {
+    font-family: $inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
 @mixin inter-narrator {
     font-family: $inter;
     font-size: 22px;
@@ -67,6 +77,28 @@ $staatliches: 'Staatliches', cursive;
     line-height: 15px;
     letter-spacing: 0em;
     text-align: left;
+}
+
+@mixin inter-chaptchoice600 {
+    font-family: $inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 12px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+@mixin inter-chaptchoice500 {
+    font-family: $inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+
 }
 
 @mixin inter-charchoicescroll {
