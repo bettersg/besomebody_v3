@@ -106,7 +106,7 @@ const ChapterComplete = ({ setPage , user }) => {
     <Container maxWidth="md" className={classes.container}>
         <Box py={4} display="flex" flexDirection="column" justifyContent="center" alignItems="center">
           <Typography className={classes.headerText}>Chapter Complete!</Typography>
-          <Typography className={classes.text}>Congratulations {user.username}! <br /> You've finished the chapter.</Typography>
+          <Typography className={classes.text}>Congratulations {user.username? user.username:null}! <br /> You've finished the chapter.</Typography>
       </Box>
         <Box className={classes.bottom}>        
           {/* <Button variant="contained" className={classes.btn} onClick={() => setPage(REFLECTION_PAGE_CHAPTER_REFLECTION_RESPONSES)}> */}

@@ -95,7 +95,7 @@ const ChapterLearning = ({ setPage , reflection }) => {
         <Box className={classes.container}>
           <Typography className={classes.topText}>DID YOU KNOW?</Typography>
           <Typography className={classes.mainText}>{reflection.didyouknow}</Typography>
-          {reflection.media ? <a href={reflection.media} target="_blank" className={classes.link}>FIND OUT MORE ></a> : null}
+          {reflection.media ? <a href={reflection.media} target="_blank" className={classes.link}>FIND OUT MORE</a> : null}
       </Box>
         <Box className={classes.bottom}>        
           <Button variant="contained" className={classes.btn} onClick={() => setPage(REFLECTION_PAGE_CHAPTER_REFLECTION_RESPONSES)}>
