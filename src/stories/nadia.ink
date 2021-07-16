@@ -71,11 +71,11 @@ Hey there. I’m Nadia.
 This is a big year for me, since my A Levels are coming up. 
 That’s going to decide whether I make it into medical school like I’m hoping, so... No pressure.
 I haven’t told a lot of people about the medical school thing. It all feels a bit impossible.
-But good grades have always kind of been my thing, so.. Maybe, I have a shot.
+But good grades have always kind of been my thing, so... Maybe, I have a shot.
 I’ve also got great study buddies! Chloe and Gavin, my best friends at school.
 JC life would be a lot worse without them around. Especially since I don’t exactly, uh, fit in.
 This is a Christian school, and there are barely any other Muslim or Malay students besides me.
-It’s fine though, I’m mostly used to it by now. When I need someone who just.. gets it? I’ve got my cousin Azlin.
+It’s fine though, I’m mostly used to it by now. When I need someone who just... gets it? I’ve got my cousin Azlin.
 She’s a nurse, so that’s very cool. We’re super close, and she always keeps it real.
 So that’s me -- Nadia.
 And this is what it’s like, to be me.
@@ -173,7 +173,7 @@ What do you mean? #speaker_self
 Just different. They hug a lot.. always peluk-peluk (hug). #speaker_right
 Wait. I hugged Chloe goodbye just now. Which means.. #inner_monologue
 ... he also saw Gavin hugging me.#inner_monologue
-(Nervously) Ya, a bit right? But it's just like that here.  #speaker_self
+uh... Ya, a bit right? But it's just like that here.  #speaker_self
 Super friendly.  #speaker_self
 It's a convent school thing maybe, they just like to hug-hug, hello goodbye also hug, boy or girl also hug —  #speaker_self
 ...which is fine. For them.  #speaker_right
@@ -429,7 +429,7 @@ Don’t tell me you know him too! #speaker_left
 + [He's infamous] Yeah, he's notoriously strange. #speaker_self
 - The world is blessed. Gimme a min, let me grab some food. #speaker_left
 Go, go.  #speaker_self
-
+#speaker_left_image:pixel.png
 #background:new_message_notification.jpg
 A message from Azlin
 -> nadia_1_3_whatsapp1
@@ -488,7 +488,7 @@ Is Chloe really at a hockey “thing”? #speaker_left
 The weird will pass. #speaker_left
 You think? #speaker_self
 Definitely. I’m sure it’s just a misunderstanding. Right? #speaker_left
-(Uncertain) Right. #speaker_self
+Hmm... Right. #speaker_self
 I looked up NUS the other day. #speaker_self
 #speaker_left_image:cha_nadia_gavin_normal.png
 Oh yeah! So what are you thinking -  NUS or NTU for med school? #speaker_left
@@ -799,8 +799,13 @@ then can i ask u something #speaker_1
 yes? #speaker_self 
 does he know you started wearing the hijab? #speaker_1
 #ui:scene
-#background:nadia_1_bus.jpg
+#background:bg_nadia_bus.jpg
 Oh no. I know where this is going. #inner_monologue
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Azlin
+#chat_group_image:ico_nadia_azlin.png
+#speaker_1_name:Azlin
 🤷‍♀️ #speaker_self
 hmm #speaker_1
 just.. remember who you are okay? #speaker_1
@@ -833,8 +838,13 @@ I hate this.  #speaker_self
 This is the WORST time for to be distracted, its 4 months to a levels #speaker_self
 can’t you two just be friends? no need all this.. #speaker_1
 #ui:scene
-#background:nadia_1_bus.jpg
+#background:bg_nadia_bus.jpg
 I know what she means. It’s going to be complicated. #inner_monologue
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Azlin
+#chat_group_image:ico_nadia_azlin.png
+#speaker_1_name:Azlin
 Sigh a bit late for that #speaker_self
 just.. remember who you are okay? #speaker_1
 
