@@ -31,6 +31,7 @@
     "react-inlinesvg": "^2.3.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
+    "react-share": "^4.4.0",
     "react-sound": "^1.2.0",
     "react-spinners": "^0.11.0",
     "react-step-builder": "^2.0.10",
