@@ -81,7 +81,7 @@ const ReflectionForm = ({ reflection }) => {
       })
     } finally {
       setIsLoading(false);
-      history.push("/chapters/" + name)
+      history.push("/chapterend/" + name + '/' + reflection.chapter)
     }
   }
 

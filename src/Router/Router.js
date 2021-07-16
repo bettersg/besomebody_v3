@@ -22,7 +22,7 @@ import AudioPlayer from "../music/Music"
 import Help from '../pages/HelpPage/HelpPage'
 import Music1 from '../music/tobeyou_intro.mp3'
 import Music2 from '../music/tobeyou_outrolong.mp3'
-
+import ChapterEnd from '../pages/ChapterEndPage/ChapterEnd'
 
 
 class Router extends Component {
@@ -56,7 +56,7 @@ class Router extends Component {
         {/* {bar} // TODO: implement "bar" as a menubar above the game components below */}
         <ThemeProvider theme={theme}>
           <Switch>
-            <Route path={["/", "/intro", "/profilebuilder", "/signup", "/login", "/help", "/characterchoice", "/chapters/:name"]} exact>              
+            <Route path={["/", "/intro", "/profilebuilder", "/signup", "/login", "/help", "/characterchoice", "/chapters/:name", "/chapterend/:name/:chapter"]} exact>              
               <AudioPlayer Music={Music1} />
             </Route>
           </Switch>
@@ -77,9 +77,14 @@ class Router extends Component {
             <PrivateRoute path="/chapters/:name" exact>
               <CharacterChapterPage />
             </PrivateRoute>
+            
 
             <PrivateRoute path="/story/:name" exact>
               <InkController />
+            </PrivateRoute>
+
+            <PrivateRoute path="/chapterend/:name/:chapter" exact>
+              <ChapterEnd />
             </PrivateRoute>
 
             <Route path="/signup" exact>
