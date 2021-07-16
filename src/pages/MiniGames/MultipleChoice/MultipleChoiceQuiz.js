@@ -207,9 +207,9 @@ export default function MultipleChoiceQuiz(props) {
             }
 
             
-            
+         </>   
 
-        </div>
+        
 
     )
 
