@@ -104,7 +104,7 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
       questionId: 3,  // this is hardcoded to the "share your story textarea question"
     }).then(setResponses).catch(console.error);
   }, [reflectionId, setResponses]);
-  const classes = useStyles() 
+
 
   if (responses == null) {
     return <CircularProgress />;
