@@ -9,7 +9,7 @@ import { Link , useHistory } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
   paragraphWrapper: {
-    backgroundImage: "url('/images/bg_nadia_schoolcanteen.jpg')",
+    backgroundImage: "url('/images/bg_nadia_canteen.jpg')",
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '640px',
