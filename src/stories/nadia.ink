@@ -429,7 +429,7 @@ Don’t tell me you know him too! #speaker_left
 + [He's infamous] Yeah, he's notoriously strange. #speaker_self
 - The world is blessed. Gimme a min, let me grab some food. #speaker_left
 Go, go.  #speaker_self
-
+#speaker_left_image:pixel.png
 #background:new_message_notification.jpg
 A message from Azlin
 -> nadia_1_3_whatsapp1
