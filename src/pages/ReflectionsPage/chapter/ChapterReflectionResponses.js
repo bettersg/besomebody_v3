@@ -93,7 +93,7 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
   useEffect(() => {
     getDbReflectionResponses({
       reflectionId,
-      questionId: 3,
+      questionId: 3,  // this is hardcoded to the "share your story textarea question"
     }).then(setResponses).catch(console.error);
   }, [reflectionId, setResponses]);
 

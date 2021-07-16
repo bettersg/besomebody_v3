@@ -43,7 +43,8 @@ const Reflection = ({ reflectionId: propsReflectionId, globalVariables }) => {
         }
       );
   }, [currentUser.id]);
-  
+  console.log(user)
+  // const userDB = async ()  => {return await getDbUser(currentUser.id) } 
   
   // console.log(globalVariables)
   // Save user achievements data to Firestore whenever this component renders
@@ -141,7 +142,7 @@ const Reflection = ({ reflectionId: propsReflectionId, globalVariables }) => {
 
   switch (page) {
     case REFLECTION_PAGE_CHAPTER_COMPLETE:
-      return <ChapterComplete setPage={setPage} user={ user} />
+      return <ChapterComplete setPage={setPage} user={user} />
     case REFLECTION_PAGE_LEARNING:
       return <ChapterLearning setPage={setPage} reflection={reflection} />
     case REFLECTION_PAGE_CHAPTER_REFLECTION_RESPONSES:
