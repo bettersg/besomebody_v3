@@ -115,8 +115,7 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
       <Box>
         {responses.map(response => (
           <ChapterResponse key={response.id} response={response} />
-        ))}
-        <Button variant="contained" onClick={() => setPage(REFLECTION_PAGE_FORM)}>Add your own response</Button>
+        ))}        
       </Box>
       
         </Container>

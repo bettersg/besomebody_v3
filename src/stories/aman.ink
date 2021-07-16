@@ -232,6 +232,11 @@ And I think you're handsome already! #speaker_1
 #ui:narrator
 #background:bg_aman_bedroom.jpg
 I didn't reply because I fell asleep. But I also didn't know how to reply.
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Selinder
+#chat_group_image:ico_aman_selinder.png
+#speaker_1_name:Selinder
 #timestamp:09.15
 Hi babe. I’m so sorry about last night. I got so tired and I just passed out on my bed. #speaker_self
 It’s okay. #speaker_1
