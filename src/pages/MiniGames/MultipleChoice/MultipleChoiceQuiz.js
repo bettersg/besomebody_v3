@@ -50,6 +50,7 @@ const useStyles = makeStyles((theme) => ({
     btn: {
         padding: '10px 50px',
         borderRadius: '40px',
+        marginTop:20,
         marginBottom: '20px',
         background: '#664EFC',
         backgroundColor: '#664EFC',
@@ -178,7 +179,7 @@ export default function MultipleChoiceQuiz(props) {
                     <Button 
                     variant="contained" 
                     color="primary"
-                    className={`nextButton`}
+                    className={classes.btn}
                     key="next" onClick={()=>{continueToStory();}} 
                     >
                     Back to Story

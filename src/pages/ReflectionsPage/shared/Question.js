@@ -8,22 +8,22 @@ const Question = ({ question, value, onChange }) => {
   switch (question.type) {
     case "MULTI_CHOICE":
       return (
-        <Box p={2} bgcolor="white">
+        <Box p={2} bgcolor="rgba(255,255,255,0.6)">
           <Typography variant="body1">
-            {question.body}
+            <b>{question.body}</b>
           </Typography>
           <RadioGroup value={value} onChange={handleChange}>
             {question.choices.map(choice => (
-              <FormControlLabel key={choice.body} value={choice.body} control={<Radio />} label={choice.body} />
+              <FormControlLabel key={choice.body} value={choice.body} control={<Radio />} label={choice.body}  />
             ))}
           </RadioGroup>
         </Box>
       );
     case "LIKERT_SCALE":
       return (
-        <Box p={2} bgcolor="white">
+        <Box p={2} bgcolor="rgba(255,255,255,0.6)">
           <Typography variant="body1">
-            {question.body}
+            <b>{question.body}</b>
           </Typography>
           <Box mt={2}>
             <Box display="flex" justifyContent="space-between">
@@ -44,19 +44,20 @@ const Question = ({ question, value, onChange }) => {
       );
     case "OPEN":
       return (
-        <Box p={2} bgcolor="white">
+        <Box p={2} bgcolor="rgba(255,255,255,0.6)">
           <Typography variant="body1">
-            {question.body}
+            <b>{question.body}</b>
           </Typography>
           <Box mt={2}>
             <TextField
               value={value}
               onChange={handleChange}
               variant="filled"
-              placeholder="Enter your answer here"
+              placeholder="Type here"
               required
               fullWidth
               multiline
+              rows={4}
               InputProps={{ disableUnderline: true }}
             />
           </Box>
@@ -64,7 +65,7 @@ const Question = ({ question, value, onChange }) => {
       );
     default:
       return (
-        <Box p={2} bgcolor="white">
+        <Box p={2} bgcolor="rgba(255,255,255,0.6)">
           <Typography variant="body1">
             Invalid question type provided.
           </Typography>

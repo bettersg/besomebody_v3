@@ -219,7 +219,7 @@ export const CHARACTER_MAP = [
         title: "To Be or Not To Be",
         knotTag: "aman_2_intro",
         summary: "Aman tries to crack the silver screen - but it’s even harder than he imagined.",
-        playable: true,
+        playable: false,
         images : ["/images/aman_1_intro.jpg", "dog.jpg"],
         endings: [
           {
