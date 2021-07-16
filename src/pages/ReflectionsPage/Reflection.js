@@ -43,7 +43,7 @@ const Reflection = ({ reflectionId: propsReflectionId, globalVariables }) => {
         }
       );
   }, [currentUser.id]);
-  console.log(user)
+//   console.log(user)
   // const userDB = async ()  => {return await getDbUser(currentUser.id) } 
   
   // console.log(globalVariables)
