@@ -104,7 +104,7 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
       questionId: 3,
     }).then(setResponses).catch(console.error);
   }, [reflectionId, setResponses]);
-  const classes = useStyles() 
+  // const classes = useStyles() 
 
   if (responses == null) {
     return <CircularProgress />;
