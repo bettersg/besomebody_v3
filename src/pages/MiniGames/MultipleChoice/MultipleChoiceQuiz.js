@@ -25,6 +25,42 @@ const useStyles = makeStyles((theme) => ({
         },
         bottom: 0, 
     },
+    background: {
+        backgroundImage: ({ image }) => `url('/images/bg_launch.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '100vh',
+        [theme.breakpoints.up('xs')]: {
+          height: '660px',
+        },
+        bottom: 0, 
+    
+      },
+    topLine: {
+        position: 'absolute',
+        top: 100,
+        left: 0,
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        textAlign: 'center',
+        padding: 20,
+        color: '#fff'
+    },
+    btn: {
+        padding: '10px 50px',
+        borderRadius: '40px',
+        marginBottom: '20px',
+        background: '#664EFC',
+        backgroundColor: '#664EFC',
+        textDecoration: 'none',
+        color: '#ffffff',
+        fontWeight: '700',
+        '&:hover': {
+          backgroundColor: '#6C70DD',      
+          boxShadow: 'none',
+          
+        },
+      },
   }))
 
 
@@ -34,6 +70,7 @@ export default function MultipleChoiceQuiz(props) {
     const quiz = MINI_GAME_MAP.filter(x => x.game_id===parseInt(specialTags.game_id))[0];
     const { currentUser } = useAuth();
     const [hasGameStarted,setHasGameStarted] = useState(false);
+    const [hasGameEnded,setHasGameEnded] = useState(false);
     const [currentQuestion,setCurrentQuestion] = useState(quiz.questions[0])
     const [currentQuestionNumber,setCurrentQuestionNumber] = useState(1)
     const [score,setScore] = useState(0)
@@ -48,7 +85,6 @@ export default function MultipleChoiceQuiz(props) {
     },[])
 
     const saveUserAnswer = (userAns) => {
-        // console.log(userAns);
         setUserAnswers([...userAnswers, {
             answerId: currentQuestion.answers.filter(x => x.title)[0].answer_id,
             questionId: currentQuestion.question_id,
@@ -77,6 +113,8 @@ export default function MultipleChoiceQuiz(props) {
         if(current <= quiz.questions.length){
             setCurrentQuestionNumber(current)
             setCurrentQuestion(quiz.questions[current-1])
+        }else {
+            setHasGameEnded(true);
         }
         setIsDrawerOpen(false);
     }
@@ -96,30 +134,54 @@ export default function MultipleChoiceQuiz(props) {
      }
 
     const handleStartGame = () => {
-        console.log("hello");
         setHasGameStarted(true);
      }
 
     return (
-        <>
+        <div className={classes.background}>
             {quiz.introduction && !hasGameStarted && 
             <Fade in={true} timeout={700}>
-                <Box className={classes.paragraphWrapper}  height="100%">
+                <Box className={classes.paragraphWrapper} height="100%">
+                <Box className={classes.topLine}>In this segment, we will explore some of the issues covered in the game, using a simple quiz. </Box>
                 <div className="MultipleChoice__text">
-                    <Box>
+                    
+                        <Box my={5}>
                         { quiz.introduction}
                     </Box>
                     <Button
+                    className={classes.btn}
                     color="primary"
-                    variant="contained"
+                    variant="contained"                    
                     onClick={() => handleStartGame()}
-                    >Start Game</Button>
+                    >Start Minigame</Button>
                 </div>
                 </Box>
             </Fade>
             }
 
-            {hasGameStarted&&
+            {hasGameStarted && hasGameEnded &&
+
+                <Fade in={true} timeout={700}>
+                <Box className={classes.paragraphWrapper}  height="100%">
+                <div className="MultipleChoice__text">
+                    <Box> 
+                        You've scored {correctAnswered} out of {quiz.questions.length}
+                    </Box>
+                    <Button 
+                    variant="contained" 
+                    color="primary"
+                    className={`nextButton`}
+                    key="next" onClick={()=>{continueToStory();}} 
+                    >
+                    Back to Story
+                    </Button>
+                </div>
+                </Box>
+                </Fade>
+                
+            } 
+
+            {hasGameStarted && !hasGameEnded &&
             <Fade in={true} timeout={700}>
             <QuestionPanel 
                 question={currentQuestion}
@@ -135,9 +197,11 @@ export default function MultipleChoiceQuiz(props) {
             /> 
             </Fade>
             }
+
+            
             
 
-        </>
+        </div>
 
     )
 
