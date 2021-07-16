@@ -30,7 +30,7 @@
         scroll-snap-type: y mandatory;
         overflow-y: scroll;
         // height: 100vh; 
-        height: calc(100vh - 148px); 
+        height: calc(calc(var(--vh, 1vh) * 100) - 148px); 
         @media screen and (min-device-width:600px) {
             height: 515px; 
         }
@@ -66,7 +66,7 @@
         }
         &.choices {
             transition: height 0.4s; 
-            height: calc(100vh - 313px); 
+            height: calc(calc(var(--vh, 1vh) * 100) - 313px); 
         // height: 55.3vh; 
             @media screen and (min-device-width:600px) {
                 height: 350px; 

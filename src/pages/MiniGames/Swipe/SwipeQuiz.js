@@ -6,6 +6,12 @@ import { Button, Box, Typography } from '@material-ui/core'
 import { MINI_GAME_MAP } from '../../../models/miniGameMap'
 import { makeStyles } from '@material-ui/styles'
 import { useInkContext } from '../../../contexts/InkContext'
+
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 const useStyles = makeStyles({
 
   header: {

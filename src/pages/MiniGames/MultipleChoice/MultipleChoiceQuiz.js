@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
 
         height: '660px',
         [theme.breakpoints.only('xs')]: {
-            height: '100vh',
+            height: 'calc(var(--vh, 1vh) * 100)',
         },
         bottom: 0, 
     },
@@ -30,9 +30,9 @@ const useStyles = makeStyles((theme) => ({
         backgroundImage: ({ image }) => `url('/images/bg_launch.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        height: '100vh',
-        [theme.breakpoints.up('xs')]: {
-          height: '660px',
+        height: '660px',
+        [theme.breakpoints.only('xs')]: {
+            height: 'calc(var(--vh, 1vh) * 100)',
         },
         bottom: 0, 
     

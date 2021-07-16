@@ -11,14 +11,19 @@ import { createDbReflectionResponses } from "../../../models/reflectionResponseM
 import QUESTIONS from "../../../reflections/questions.json";
 import { useAuth } from '../../../contexts/AuthContext';
 
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 const useStyles = makeStyles((theme) => ({
   background: {
     backgroundImage: ({ image }) => `url('/images/bg_reflections.jpg')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    height: '100vh',
-    [theme.breakpoints.up('xs')]: {
-      height: '660px',
+    height: '660px',
+    [theme.breakpoints.only('xs')]: {
+      height: 'calc(var(--vh, 1vh) * 100)',
     },
     bottom: 0,
     overflow:'scroll',

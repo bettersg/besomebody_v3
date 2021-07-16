@@ -1,5 +1,5 @@
 .schoolWrapper {
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     @media screen and (min-device-width:481px) {
         height: 660px; 
     }
