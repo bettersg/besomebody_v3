@@ -97,7 +97,6 @@ export default function MultipleChoiceQuiz(props) {
      }
 
     const handleStartGame = () => {
-        console.log("hello");
         setHasGameStarted(true);
      }
 
