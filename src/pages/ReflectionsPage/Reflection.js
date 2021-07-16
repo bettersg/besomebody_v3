@@ -5,21 +5,47 @@ import ReflectionForm from './shared/ReflectionForm'
 import ChapterReflectionResponses from './chapter/ChapterReflectionResponses'
 import ChapterComplete from './chapter/ChapterComplete'
 import StoryComplete from './story/StoryComplete'
+import ChapterLearning from './chapter/ChapterLearning'
+
 import {
   REFLECTION_PAGE_FORM,
   REFLECTION_PAGE_STORY_COMPLETE,
+  REFLECTION_PAGE_LEARNING,
   REFLECTION_PAGE_CHAPTER_COMPLETE,
   REFLECTION_PAGE_CHAPTER_REFLECTION_RESPONSES,
 } from './constants'
 import { getDbUser, updateDbUser } from '../../models/userModel'
 import { useAuth } from '../../contexts/AuthContext'
 import { useSnackbar } from '../../contexts/SnackbarContext'
+import { firestore } from "../../firebase";
 
 const Reflection = ({ reflectionId: propsReflectionId, globalVariables }) => {
   const { character_id, chapter_id } = globalVariables || {}
   const { currentUser } = useAuth()
   const { setSnackbar } = useSnackbar()
-  console.log(globalVariables)
+  const [loading, setLoading] = useState(true);
+  const [user, setUser] = useState(null);
+  const [error, setError] = useState(null);  
+
+
+  useEffect(() => {
+    return firestore
+      .collection("users")
+      .doc(currentUser.id)
+      .onSnapshot(
+        (snapshot) => {
+          setLoading(false);
+          setUser(snapshot.data());
+        },
+        (error) => {
+          setLoading(false);
+          setError(error);
+        }
+      );
+  }, [currentUser.id]);
+  
+  
+  // console.log(globalVariables)
   // Save user achievements data to Firestore whenever this component renders
   useEffect(() => {
     const updateUserSaveGame = async () => {
@@ -115,7 +141,9 @@ const Reflection = ({ reflectionId: propsReflectionId, globalVariables }) => {
 
   switch (page) {
     case REFLECTION_PAGE_CHAPTER_COMPLETE:
-      return <ChapterComplete setPage={setPage} />
+      return <ChapterComplete setPage={setPage} user={ user} />
+    case REFLECTION_PAGE_LEARNING:
+      return <ChapterLearning setPage={setPage} reflection={reflection} />
     case REFLECTION_PAGE_CHAPTER_REFLECTION_RESPONSES:
       return (
         <ChapterReflectionResponses
