@@ -74,9 +74,9 @@ const CharacterChapterPage = (props) => {
                     <Typography>{persona.description}</Typography>
                 </div>
             </div>
-            {hasSavedState && (
+            {/* {hasSavedState && (
                 <IntroBanner loadSavedStory={loadSavedStory} persona={persona} />
-            )}
+            )} */}
             <div style={{ paddingTop: "24px" }}>
                 {persona.chapters.length > 0 
                     ? persona.chapters.map((chapt,i) => {
