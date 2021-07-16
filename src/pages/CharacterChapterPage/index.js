@@ -2,6 +2,7 @@ import React from "react";
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import "./styles.scss"
 import "../styles.css"
+import { useInkContext } from '../../contexts/InkContext'
 
 import SVG from 'react-inlinesvg';
 
@@ -10,7 +11,7 @@ import ChapterBox from "./ChapterBox"
 import { IntroBanner } from "../../components/IntroBanner"
 
 import { CHARACTER_MAP } from '../../models/storyMap'
-import { useParams } from 'react-router-dom'
+import { useParams , Link } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
     CharChaptWrapper: {
@@ -38,14 +39,26 @@ const CharacterChapterPage = (props) => {
     const { name } = useParams();
     const persona = CHARACTER_MAP.find((character) => character.linkName === name);
 
+    const {
+        // useInk hook initialiser
+        initialiseUseInkHook,
+        isStoryStarted,
+        hasSavedState,
+        loadSavedStory,
+    
+        // States    
+        startStoryFrom,
+      } = useInkContext()
+    
+
     return (
         <Box className={classes.CharChaptWrapper} >
             <div className="CharacterChapterPage">
                 <div className="CharacterChapterPage__top">
-                    <div className="CharacterChapterPage__top__nav">
-                        <a href="/"><SVG src="/chapter_choices_page/arrow.svg" /></a>
-                        <div className="CharacterChapterPage__top__nav--name">{persona.name.split(" ")[0]}’s story</div>
-                    </div>
+                    <Link to='/' style={{textDecoration: 'none'}}><div className="CharacterChapterPage__top__nav">
+                        <SVG src="/chapter_choices_page/arrow.svg" />
+                        <div className="CharacterChapterPage__top__nav--name" >Menu</div>
+                    </div></Link>
                     <div className="CharacterChapterPage__top__character">
                         <Avatar
                             alt={persona.name}
@@ -53,16 +66,18 @@ const CharacterChapterPage = (props) => {
                             className={classes.avatar} 
                         />
                         <div>
-                            <div className="CharacterChapterPage__top__character--name">{persona.name.split(" ")[0]}</div>
-                            <Typography>1,000 playthroughs</Typography>
+                            <div className="CharacterChapterPage__top__character--name">{persona.name.split(" ")[0]}’s story</div>
+                            {/* <Typography>1,000 playthroughs</Typography> */}
                         </div>
 
                     </div>
                     <Typography>{persona.description}</Typography>
                 </div>
             </div>
-            <IntroBanner />
-            <div style={{paddingTop:"24px"}}>
+            {hasSavedState && (
+                <IntroBanner loadSavedStory={loadSavedStory} persona={persona} />
+            )}
+            <div style={{ paddingTop: "24px" }}>
                 {persona.chapters.length > 0 
                     ? persona.chapters.map((chapt,i) => {
                         return (

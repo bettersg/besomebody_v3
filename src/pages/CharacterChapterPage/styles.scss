@@ -10,10 +10,13 @@
         &__nav {
             display: flex;
             align-items: center;
+            margin-top:30px;
             margin-bottom: 31px;
             &--name {
                 margin-left: 18px; 
                 @include inter-chaptChoiceName; 
+                color: $lapis80;
+                text-decoration: none;
             }
         }
         &__character {
