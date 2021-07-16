@@ -5,6 +5,7 @@ import {
     Box,
     Typography,
     Grid,
+    Button,
   } from '@material-ui/core'
 import { useAuth } from '../../contexts/AuthContext';
 import { useSnackbar } from '../../contexts/SnackbarContext'
@@ -58,15 +59,15 @@ export const CharacterChoicePage = () => {
     const classes = useStyles()
     
     const {
-        isStoryStarted,
+        // isStoryStarted,
         hasSavedState,
     
-        getStory,
-        resetStory,
-        startStoryFrom,
-        saveStory,
-        loadSavedStory,
-        resetSavedStory,
+        // getStory,
+        // resetStory,
+        // startStoryFrom,
+        // saveStory,
+        // loadSavedStory,
+        // resetSavedStory,
         globalVariables,
     } = useInkContext()
     
@@ -154,7 +155,7 @@ export const CharacterChoicePage = () => {
                             <Link to={'/chapters/' + persona.linkName}><img className="CharacterChoices__card--imagePost" src={persona.characterIntroImage}/></Link>
 
                             {/* like and share icons */}
-                            <div class="CharacterChoices__card--profileButtons">
+                            <div className="CharacterChoices__card--profileButtons">
                                
                                     <img src="/character_choice_page/heart.svg" width="24px" height="24px"/>
                                
@@ -165,29 +166,54 @@ export const CharacterChoicePage = () => {
                             </div>
 
                             <div className="CharacterChoices__card--description">
-                                <div class="likes">{randNum()} likes</div>
-                                <div class="post_caption">
+                                <div className="likes">{randNum()} likes</div>
+                                <div className="post_caption">
                                     <p><b>{persona.name.split(" ")[0]}</b>:  {persona.description}</p>
                                 </div>
 
                             </div>
 
                             <div className="CharacterChoices__discover">
-                                <div class="profile_tile">
+                                <div className="profile_tile">
                                     <p>Discover {persona.name.split(" ")[0]}'s story</p>
                                 </div>
                                 <div>
-                                    <a href={'/chapters/' + persona.linkName}><div class="play_button">Play</div></a>
+                                    <Link to={'/chapters/' + persona.linkName}><div class="play_button">Play</div></Link>
                                 </div>
                             </div>
                             <div className="CharacterChoices__bottomDivider"></div>
                         </div>
 
                         :
-                        <div className={classes.nonPlayable}>
-                            
-                            <Typography variant="overline"> Locked Character </Typography><br />                                    
-                            <CharacterAvatar personaInfo={persona} key={i} />                            
+                        <div className="CharacterChoices__card">
+                            <div className="CharacterChoices__card__feed">
+                                <img className="CharacterChoices__card__feed--profilePic" src={persona.profileImage}/>
+                                
+
+                                <div>
+                                    <div className="profile_Name">{persona.name}</div>
+                                    <div className="profile_status">This profile is locked</div>
+                                </div>
+                            </div>
+
+                            <img className="CharacterChoices__card--imagePost" src={persona.characterIntroImage}/>
+
+
+                            <div className="CharacterChoices__card--description">
+                               
+                                <div className="post_caption">
+                                    <p><b>{persona.name.split(" ")[0]}</b>:  {persona.description}</p>
+                                </div>
+
+                            </div>
+
+                            <div className="CharacterChoices__discover">
+                                <div className="profile_tile">
+                                    <p>{persona.name.split(" ")[0]}'s story is still locked</p>
+                                </div>
+                               
+                            </div>
+                            <div className="CharacterChoices__bottomDivider"></div>
                         </div>
                     )
                 )
@@ -197,3 +223,7 @@ export const CharacterChoicePage = () => {
 }
 
 export default CharacterChoicePage;
+
+
+
+

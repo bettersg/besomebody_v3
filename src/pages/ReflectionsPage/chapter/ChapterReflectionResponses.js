@@ -105,7 +105,6 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
     }).then(setResponses).catch(console.error);
   }, [reflectionId, setResponses]);
 
-
   if (responses == null) {
     return <CircularProgress />;
   } else {

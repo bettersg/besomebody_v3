@@ -71,8 +71,11 @@ export default function ChapterBox(props) {
   const {
     // useInk hook initialiser
     initialiseUseInkHook,
+    isStoryStarted,
+    hasSavedState,
+    loadSavedStory,
 
-    // States
+    // States    
     startStoryFrom,
   } = useInkContext()
 
@@ -120,7 +123,7 @@ export default function ChapterBox(props) {
                 {chaptDetails.new == true ? 
                   <div className="ChapterBox__chaptDetails__bubble new">NEW!</div>
                  : chaptDetails.playable == false ? 
-                 <div className="ChapterBox__chaptDetails__bubble coming">COMING</div> :
+                 <div className="ChapterBox__chaptDetails__bubble coming">COMING SOON</div> :
                  null}
                 <div className="ChapterBox__chaptDetails--chaptText">
                   Chapter {chaptDetails.number} of {total}
@@ -139,7 +142,7 @@ export default function ChapterBox(props) {
                       <div
                         className={`ChapterBox__chaptTitle--button disable`}
                       >
-                        Play
+                        Soon
                       </div>
                     ) : (
                       <div
