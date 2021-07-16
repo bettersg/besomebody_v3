@@ -1,0 +1,94 @@
+.boxStyle {
+    padding: 10%; 
+}
+
+.chaptBtn {
+    background-color: #1DBF7B !important; 
+    color: white !important; 
+    border-radius: 70px !important;
+    padding: 4px 15px !important; 
+    font-size: 0.65rem !important;
+    margin-left: 20px !important; 
+}
+
+.chaptBtnReplay {
+    color:  #1DBF7B !important; 
+    border: 1px solid #1DBF7B !important; 
+    border-radius: 70px !important;
+    padding: 4px 15px !important; 
+    font-size: 0.65rem !important;
+    margin-left: 20px !important; 
+}
+
+.chaptBtnReplay:hover {
+    color: white !important; 
+    background-color: #1DBF7B !important;
+}
+
+.chaptText {
+    font-size: 0.75rem;
+    color: #B3B3B3;
+}
+
+.chaptTitle {
+    font-size: 0.90rem !important;
+    font-weight: 700 !important; 
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+
+.newChapt {
+    background-color: #DDF5EB;
+    padding: 4px 7px; 
+    border-radius: 50px;
+    font-size: 0.6rem !important;
+    font-weight: 500 !important; 
+    color: #6D6F6E; 
+    margin-right: 5px !important;
+}
+
+.profilePgBtn {
+    background-color: #1DBF7B !important; 
+    color: white !important; 
+    border-radius: 70px !important;
+    padding: 0px !important; 
+    font-size: 0.70rem !important;
+    position: fixed; 
+    bottom: 0 !important; 
+    z-index: 1; 
+    margin: 0 !important; 
+}
+
+@media screen and (max-device-width:600px) {
+    .resumeButton {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        position: fixed; 
+        background-color: transparent !important;
+        height: 7%; 
+    }
+    .topNavBar {
+        flex-grow: 1;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0; 
+        z-index: 1;
+    }
+}
+@media screen and (min-device-width:481px) {
+    .resumeButton {
+        margin-bottom: 10px !important; 
+    }
+}
+
+.resumeButton {
+    padding-top: 10; 
+    background-color: transparent !important;
+    padding-bottom: 10; 
+    margin-bottom: 20 !important; 
+    bottom: 1; 
+}
+

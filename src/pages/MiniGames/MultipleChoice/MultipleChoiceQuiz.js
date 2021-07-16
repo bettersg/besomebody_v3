@@ -15,13 +15,15 @@ import './MultipleChoiceQuiz.scss';
 
 const useStyles = makeStyles((theme) => ({
     paragraphWrapper: {
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      height: '100vh',
-      [theme.breakpoints.up('md')]: {
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundColor: "white",
+
         height: '660px',
-      },
-      bottom: 0, 
+        [theme.breakpoints.only('xs')]: {
+            height: '100vh',
+        },
+        bottom: 0, 
     },
   }))
 

@@ -2,14 +2,21 @@ import React, { useState, useEffect } from 'react';
 import { Box, Button, CircularProgress , 
   Typography,
   Container,} from '@material-ui/core'
-
 import { getDbReflectionResponses } from '../../../models/reflectionResponseModel';
 import { REFLECTION_PAGE_FORM } from '../constants';
 import ChapterResponse from './ChapterResponse';
-import makeStyles from '@material-ui/core/styles/makeStyles'
-
+ import makeStyles from '@material-ui/core/styles/makeStyles'
 
 const useStyles = makeStyles((theme) => ({
+  paragraphWrapper: {
+    backgroundColor: "white", 
+    height: '660px',
+    [theme.breakpoints.only('xs')]: {
+        height: '100vh',
+    },
+    bottom: 0, 
+    overflow: "auto",
+  },
   background: {
     backgroundImage: ({ image }) => `url('/images/bg_reflections.jpg')`,
     backgroundSize: 'cover',
@@ -86,6 +93,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 
+
 const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
   const [responses, setResponses] = useState(null);
   const classes = useStyles()
@@ -96,6 +104,7 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
       questionId: 3,
     }).then(setResponses).catch(console.error);
   }, [reflectionId, setResponses]);
+  const classes = useStyles() 
 
   if (responses == null) {
     return <CircularProgress />;
@@ -107,6 +116,7 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
         {responses.map(response => (
           <ChapterResponse key={response.id} response={response} />
         ))}
+        <Button variant="contained" onClick={() => setPage(REFLECTION_PAGE_FORM)}>Add your own response</Button>
       </Box>
       
         </Container>

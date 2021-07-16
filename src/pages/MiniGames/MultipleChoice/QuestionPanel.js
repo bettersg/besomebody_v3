@@ -19,7 +19,11 @@ import './QuestionPanel.scss';
 const useStyles = makeStyles((theme) => ({
   root: {
     textAlign:'left',
-    padding:10
+    padding:10,
+    height: '660px',
+    [theme.breakpoints.only('xs')]: {
+        height: '100vh',
+    },
   },
 
   questionNumber: {

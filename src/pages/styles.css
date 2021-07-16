@@ -5,9 +5,13 @@
 html, body {
   height: 100%;
   width: 100%; 
-  background-image: url("../section1_bg.png");
+  background-color: white;
 }
-@media screen and (min-device-width:481px) {
+@media screen and (min-device-width:600px) {
+  html, body {
+    background-image: url("../section1_bg.png");
+
+  }
   html {
     margin-top: 5% !important; 
     position: relative;
@@ -53,8 +57,6 @@ html, body {
 
   body {
     height: 660px !important;
-    background: white;
-
   }
 }
 
