@@ -104,23 +104,23 @@ export default function SwipeableTemporaryDrawer(props) {
         <div className="SideMenu__menuitems" >
           {/* I know why you did it as a map, but this makes it very hard to pass in dynamic values to the links. I've reverted it to individual links */}
           <div className="SideMenu__menuitems__item">
-            <SVG src="/side_menu/icon.svg" className="SideMenu__menuitems__icons"/>
-            <Link to="/" className="SideMenu__menuitems__label"><span>Character Menu</span></Link>
+          <Link to="/" className="SideMenu__menuitems__label"><SVG src="/side_menu/icon.svg" className="SideMenu__menuitems__icons"/>
+            <span>Character Menu</span></Link>
           </div>
 
           <div className="SideMenu__menuitems__item">
-            <SVG src="/side_menu/heart.svg" className="SideMenu__menuitems__icons"/>
-            <Link to={"/chapters/"+ name} className="SideMenu__menuitems__label"><span>Chapter Menu</span></Link>
+          <Link to={"/chapters/"+ name} className="SideMenu__menuitems__label"><SVG src="/side_menu/heart.svg" className="SideMenu__menuitems__icons"/>
+            <span>Chapter Menu</span></Link>
           </div>
 
           <div className="SideMenu__menuitems__item">
-            <SVG src="/side_menu/profile.svg" className="SideMenu__menuitems__icons"/>
-            <Link to={"/user/" + currentUser.id} className="SideMenu__menuitems__label"><span>Account Menu</span></Link>
+          <Link to={"/user/" + currentUser.id} className="SideMenu__menuitems__label"><SVG src="/side_menu/profile.svg" className="SideMenu__menuitems__icons"/>
+            <span>Account Menu</span></Link>
           </div>
 
           <div className="SideMenu__menuitems__item">
-            <SVG src="/side_menu/help.svg" className="SideMenu__menuitems__icons"/>
-            <Link to="/help" className="SideMenu__menuitems__label"><span>Help</span></Link>
+          <Link to="/help" className="SideMenu__menuitems__label"><SVG src="/side_menu/help.svg" className="SideMenu__menuitems__icons"/>
+            <span>Help</span></Link>
           </div>
 
         </div>

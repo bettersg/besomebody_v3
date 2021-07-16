@@ -32,7 +32,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '2rem',
     fontWeight: 800,
     color: '#ffffff',
-    marginTop: 200,
   },
   bottom: {
     bottom: 0,
@@ -51,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     margin: 'auto',
     textAlign: 'center',    
     alignItems: "center",
-    paddingTop: '25%',
+    paddingTop: '10%',
     overflow: 'scroll',
     height: 600
   },
@@ -110,7 +109,8 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
   } else {
     return (
     <Box className={classes.background}>
-     <Container maxWidth="md" className={classes.container}>
+     <Container className={classes.container}>
+       <Typography className={classes.headerText}>Reflections from Other Players</Typography>
       <Box>
         {responses.map(response => (
           <ChapterResponse key={response.id} response={response} />
@@ -118,7 +118,7 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
       </Box>
       
         </Container>
-        <Button className={classes.btn} onClick={() => setPage(REFLECTION_PAGE_FORM)}>Add your response</Button>
+        <Button className={classes.btn} onClick={() => setPage(REFLECTION_PAGE_FORM)} fullWidth>Continue</Button>
     </Box>
     )
     
