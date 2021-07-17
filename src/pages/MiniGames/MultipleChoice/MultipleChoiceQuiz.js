@@ -114,16 +114,16 @@ export default function MultipleChoiceQuiz(props) {
         let current = currentQuestionNumber+1;
         if(current <= quiz.questions.length){
             setCurrentQuestionNumber(current)
-            setCurrentQuestion(quiz.questions[current-1])
         }else {
             setHasGameEnded(true);
         }
+        setCurrentQuestion(quiz.questions[current-1])
         setIsDrawerOpen(false);
     }
 
     const checkUserAnswer = (userAns) =>{
         saveUserAnswer(userAns)
-        if(currentQuestion.correctAnswer==userAns){
+        if(currentQuestion.correctAnswer===userAns){
             setIsCorrectAnswer(true);
             setCorrectAnswered(correctAnswered+1)
             setScore(((correctAnswered +1) / (currentQuestionNumber)) * 100)
