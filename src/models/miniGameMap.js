@@ -111,19 +111,19 @@ export const MINI_GAME_MAP = [
         },
         {
           question_id: 2,
-          question: "Muslims have to wash themselves before they pray",
-          correctAnswer: "TRUE",
+          question: "Is it permissible for Muslim females to hug unrelated men?",
+          correctAnswer: "No",
           explanation:
-            "Muslims are expected to perform a purification ritual called Wudu, requiring that they wash their faces, hands, arms, and feet before prayer.",
+            "For Muslims, hugging (touching in general) members of the opposite sex when not related, is not permissible for Muslims according to strict interpretations of the Hadith scriptures in Islam. There are varying interpretations, and not all Muslims follow this. There are also special exceptions to this guideline.",
           type: "text",
           answers: [
             {
               answer_id: 1,
-              title: "TRUE",
+              title: "Yes",
             },
             {
               answer_id: 2,
-              title: "FALSE",
+              title: "No",
             },
           ],
         },

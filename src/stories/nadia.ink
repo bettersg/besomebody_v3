@@ -29,11 +29,9 @@ For cut-and-paste ease
 #subject:Job Application for Ravi
 
 
-FOR MINIGAMES:
--> nadia_2_minigame
-=== nadia_2_minigame ===
-#knot:nadia_Chapter2_minigame
-#ui:swipe or mcq
+FOR MINIGAMES DO NOT START A NEW KNOT
+#knot:nadia_2_minigame
+#ui:mcq
 #game_id:2
 Minigame // must add some text
 -> nadia_2_3 // point to next section of story
@@ -315,10 +313,7 @@ Really?? That's true huh.. #speaker_right
 Yup! Now can we go? I don't need Mrs. Ee to shoot us her laser eyes for being late. That woman — #speaker_self
 ... is permanently on PMS. #speaker_right
 
-
--> nadia_1_minigame
-
-// -> nadia_1_3_narration
+-> nadia_1_3_narration
 
 = nadia_1_2b
 ~ nadia_trackpants_choice = 2
@@ -357,9 +352,7 @@ Right. #speaker_self
 Anyway, let’s go. The last time I was late, Mrs Ee made me run extra laps. #speaker_right
 
 
--> nadia_1_minigame
-
-// -> nadia_1_3_narration
+-> nadia_1_3_narration
 
 = nadia_1_2c
 ~ nadia_trackpants_choice = 3
@@ -391,9 +384,7 @@ If you say so. #speaker_right
 And he’s not the jealous kind. #speaker_self
 Definitely not. OKAY let’s go before they make us run extra laps! #speaker_right
 
-// -> nadia_1_3_narration
-
--> nadia_1_minigame
+-> nadia_1_3_narration
 
 
 === nadia_1_minigame ===
@@ -407,10 +398,14 @@ Minigame 2 // must add some text
 
 
 === nadia_1_3_narration ===
+#knot:nadia_1_minigame
+#ui:mcq
+#game_id:2
+Minigame 2 // must add some text
+
 #knot:nadia_1_3_narration
 #ui:narrator
 #background:bg_nadia_canteen.jpg
-.
 In the quiet window of time after class hours, I’m by myself in the canteen, grabbing a meal. 
 After all of that PE, I’m starving.
 
