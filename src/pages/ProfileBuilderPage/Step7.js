@@ -70,15 +70,15 @@ function Step7(props) {
                   <form onSubmit={handleSubmit}>
                    
                   
-                  <div>Age: {props.state.age?props.state.age:"You left this blank"}</div>
+                  <div>Age (rounded down): {props.state.age?props.state.age:"You left this blank"}</div>
                   <div>Gender: {props.state.gender?props.state.gender.toUpperCase():"You left this blank"}</div>
                   <div>Ethnicity: {props.state.race?props.state.race.toUpperCase():"You left this blank"}</div>
                   <div>Religion: {props.state.religion?props.state.religion.toUpperCase():"You left this blank"}</div>
                   <div>Housing Type: {props.state.housing?props.state.housing.toUpperCase():"You left this blank"}</div>
                   <div>Username: {props.state.username?props.state.username:"You left this blank"}</div>   
                         
-                 
-                  <br/>
+                  
+                <br />                
                 <Button
                     type="submit"
                     variant="contained"
