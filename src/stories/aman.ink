@@ -162,8 +162,6 @@ Later that night...
 #background:bg_aman_bedroom.jpg
 #speaker_right_image:cha_aman_jothi_casual.png
 #speaker_right_name:Jothi
-
-
 Oh my god, can you like, KNOCK? #speaker_self
 If you need privacy, lock the door. Anyway, what are you doing? Examining your forehead lines? #speaker_right
 Told you to do your yoga face exercises before bed. It will keep you youthful and glowing, like moi. #speaker_right 
@@ -191,23 +189,18 @@ Sigh. Aman, I... #speaker_right
 
 
 
--> aman_1_minigame
+-> aman_1_3_narration
 
 
-=== aman_1_minigame ===
+=== aman_1_3_narration ===
 #knot:aman_1_minigame
 #ui:mcq
 #game_id:1
 Minigame 1 // must add some text
 
--> aman_1_3_narration
-
-
-=== aman_1_3_narration ===
 #knot:aman_1_3_narration
 #ui:narrator
 #background:new_message_notification.jpg
-.
 One month later, Selinder and I are chatting at night.
 
 
@@ -229,9 +222,6 @@ About following the Sikhi way of life, no matter how challenging? Don’t do any
 And I think you're handsome already! #speaker_1
 ... #speaker_1
 ... hello? #speaker_1
-#ui:narrator
-#background:bg_aman_bedroom.jpg
-I didn't reply because I fell asleep. But I also didn't know how to reply.
 #timestamp:09.15
 Hi babe. I’m so sorry about last night. I got so tired and I just passed out on my bed. #speaker_self
 It’s okay. #speaker_1
@@ -311,24 +301,23 @@ This is the start of a new chapter in my life.
 #speaker_2_name:Amma
 #speaker_3_name:Jothi
 #timestamp:09.45
-Eh amma can we order something different for dinner tonight? #speaker_3 
+Eh ma can we order something different for dinner tonight? #speaker_3 
 Why? What's wrong with my cooking? #speaker_2 
 It's Aman's last meal as a free man! We should get something nice tonight! #speaker_3
 He is going to NS, not to the moon. And anyway he likes my cooking. #speaker_2
 Speaking of whom, where is he? Went out for breakfast and hasn't come back yet! #speaker_3
-Aman - please tell amma you want to order something for dinner! Side with me! #speaker_2
+Aman - please tell ma you want to order something for dinner! Side with me! #speaker_2
 Let the boy make up his own mind Jothi! He's going to be a real man soon! #speaker_1
 Aman? #speaker_1
 + [Send them a selfie of your haircut]
     This is what I look like after my haircut 📎[selfie.jpg]  #emoji:aman_haircut_selfie.png #speaker_self 
 + [Tell your family that you cut your hair]
-    I cut my hair to prepare NS today. It's very short now.    #speaker_self 
-- ... #speaker_self 
+- I cut my hair to prepare NS today. It's very short now.    #speaker_self 
 
 #ui:scene
 #background:bg_aman_haircutselfie.jpg
 Why isn’t anyone saying anything? #inner_monologue
-They've all seen it. Why don't the reply? #inner_monologue
+They've all seen the message. Why don't the reply? #inner_monologue
 I don’t care what they think. Do I care what they think? #inner_monologue
 
 #ui:whatsapp
@@ -393,7 +382,7 @@ Enlistment Day for NS. #title
 #ui:scene
 #background:bg_aman_bmtparadesquare.jpg
 #speaker_left_image:cha_aman_sergeant_normal.png
-#speaker_left_name:2SG Wong
+#speaker_left_name:Sergeant Wong
 Recruit Singh? #speaker_left
 Oh no.... #inner_monologue
 Confirm you are Recruit Singh or not? Hello can answer? #speaker_left
@@ -407,7 +396,7 @@ Wah lao eh! Now must procure helmet for you. Why you DAY ONE so troublesome? #sp
 Take this first and go sit down. Later I call you. #speaker_left
 Arrrrrggggh Zhihao was right. First day after cutting my hair, I already kena tekan by my parents and by the sergeant. #inner_monologue
 #speaker_left_image:cha_aman_lukman.png
-#speaker_left_name:Pte Lukman Wahid
+#speaker_left_name:Lukman
 Hey, I overheard! You cut your hair? #speaker_left
 + [Mind your own business] Why does everyone care so much about my hair?  #speaker_self
     Whoa sorry. Didn't mean to kaypoh...  #speaker_left
@@ -438,7 +427,7 @@ Two months later, in the Halal section of the cookhouse.
 #ui:scene
 #background:bg_aman_bmtcookhouse.jpg.jpg
 #speaker_left_image:cha_aman_lukman.png
-#speaker_left_name:Pte Lukman Wahid
+#speaker_left_name:Lukman
 
 Can’t believe we’re passing out soon. Three months flew by, don’t you think? #speaker_left
 Ya man, what an experience. We should be proud of ourselves.  #speaker_self

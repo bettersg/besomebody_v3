@@ -2,6 +2,7 @@ import React, { useEffect, useState }from "react";
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import "./styles.scss"
 import "../styles.css"
+import { useInkContext } from '../../contexts/InkContext'
 
 import SVG from 'react-inlinesvg';
 import { getDbUser }  from '../../models/userModel.js';
@@ -10,14 +11,19 @@ import ChapterBox from "./ChapterBox"
 import { IntroBanner } from "../../components/IntroBanner"
 
 import { CHARACTER_MAP } from '../../models/storyMap'
-import { useParams } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
+import { useParams , Link } from 'react-router-dom'
+
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 const useStyles = makeStyles((theme) => ({
     CharChaptWrapper: {
-        height: '90vh',
-        [theme.breakpoints.up('xs')]: {
-            height: '660px',
+        height: '660px',
+        [theme.breakpoints.only('xs')]: {
+          height: 'calc(var(--vh, 1vh) * 100)',
         },
         width: "100%", 
         backgroundColor: "#F0F1FC", 
@@ -51,14 +57,26 @@ const CharacterChapterPage = (props) => {
 	  getUser()
 	}, [currentUser.id])
 
+    const {
+        // useInk hook initialiser
+        initialiseUseInkHook,
+        isStoryStarted,
+        hasSavedState,
+        loadSavedStory,
+    
+        // States    
+        startStoryFrom,
+      } = useInkContext()
+    
+
     return (
         <Box className={classes.CharChaptWrapper} >
             <div className="CharacterChapterPage">
                 <div className="CharacterChapterPage__top">
-                    <div className="CharacterChapterPage__top__nav">
-                        <a href="/"><SVG src="/chapter_choices_page/arrow.svg" /></a>
-                        <div className="CharacterChapterPage__top__nav--name">{persona.name.split(" ")[0]}’s story</div>
-                    </div>
+                    <Link to='/' style={{textDecoration: 'none'}}><div className="CharacterChapterPage__top__nav">
+                        <SVG src="/chapter_choices_page/arrow.svg" />
+                        <div className="CharacterChapterPage__top__nav--name" >Menu</div>
+                    </div></Link>
                     <div className="CharacterChapterPage__top__character">
                         <Avatar
                             alt={persona.name}
@@ -66,17 +84,19 @@ const CharacterChapterPage = (props) => {
                             className={classes.avatar} 
                         />
                         <div>
-                            <div className="CharacterChapterPage__top__character--name">{persona.name.split(" ")[0]}</div>
-                            <Typography>1,000 playthroughs</Typography>
+                            <div className="CharacterChapterPage__top__character--name">{persona.name.split(" ")[0]}’s story</div>
+                            {/* <Typography>1,000 playthroughs</Typography> */}
                         </div>
 
                     </div>
                     <Typography>{persona.description}</Typography>
                 </div>
             </div>
-            <IntroBanner />
-            <div style={{paddingTop:"24px"}}>
-                {userFromDb &&  persona.chapters.length > 0 
+            {/* {hasSavedState && (
+                <IntroBanner loadSavedStory={loadSavedStory} persona={persona} />
+            )} */}
+            <div style={{ paddingTop: "24px" }}>
+                {userFromDb && persona.chapters.length > 0 
                     ? persona.chapters.map((chapt,i) => {
                         return (
                             <div style={{display: "flex", justifyContent: "center"}}  key={i}>

@@ -15,10 +15,10 @@ import './style.scss'
 function Step6(props) {
   
   return(
-    <Box className={`Whatsapp__messages choices' }`} >
+    <Box className={`PBWhatsapp__messages choices' }`} >
         <Fade in={true} key={props.order} timeout={300}>
           <Box key={props.order} my={2} mx={1} display="flex">
-            <Box className="Whatsapp__messages--receiver" borderRadius={5} p={1}>                    
+            <Box className="PBWhatsapp__messages--receiver" borderRadius={5} p={1}>                    
               <Typography key={props.order} variant="overline" >
                 Nadia
               </Typography> 

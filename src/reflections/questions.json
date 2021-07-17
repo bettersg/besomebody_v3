@@ -2,33 +2,84 @@
   {
     "id": 1,
     "type": "MULTI_CHOICE",
-    "body": "Which will you choose?",
+    "body": "How did the character's journey thus far make you feel?",
     "choices": [
       {
-        "body": "The first one"
+        "body": "Optimistic"
       },
       {
-        "body": "The second one"
+        "body": "Happy"
       },
       {
-        "body": "The third one"
+        "body": "Indifferent"
+      },
+      {
+        "body": "Sad"
+      },
+      {
+        "body": "Angry"
+      },
+      {
+        "body": "Hurt"
+      },
+      {
+        "body": "None of the above"
       }
     ]
   },
   {
     "id": 2,
     "type": "LIKERT_SCALE",
-    "body": "Which direction are you headed in?",
+    "body": "How would you rate your level of engagement with the story?",
     "leftChoice": {
-      "body": "I'm on the left!"
+      "body": "I'm not feeling it."
     },
     "rightChoice": {
-      "body": "I'm on the right!"
+      "body": "I'm totally immersed!"
     }
   },
   {
     "id": 3,
     "type": "OPEN",
-    "body": "What are your open-ended thoughts?"
+    "body": "Do you have any reflections or similar stories to share after playing this chapter?"
+  },
+  {
+    "id": 4,
+    "type": "MULTI_CHOICE",
+    "body": "Which of the situations did you find the most challenging for Aman?",
+    "choices": [
+      {
+        "body": "When his sister Jothi confronted him"
+      },
+      {
+        "body": "When his friend Zhihao made a fun of him"
+      },
+      {
+        "body": "When he faced his dad’s disappointment (not all endings had this)"
+      },
+      {
+        "body": "When he was treated badly in NS"
+      }
+    ]
+  }, 
+  {
+    "id": 5,
+    "type": "MULTI_CHOICE",
+    "body": "Which of the choices did you find the most challenging for Nadia?",
+    "choices": [
+      {
+        "body": "Responding to her father’s questions in the car"
+      },
+      {
+        "body": "Deciding how to respond to Gavin in the canteen"
+      },
+      {
+        "body": "Choosing how to answer Chloe's questions about your attire"
+      },
+      {
+        "body": "Answering Azlin's questions about Gavin"
+      }
+    ]
   }
+
 ]

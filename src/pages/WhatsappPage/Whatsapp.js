@@ -8,6 +8,10 @@ import './style.scss'
 import { useInkContext } from '../../contexts/InkContext'
 import { CHARACTER_MAP } from '../../models/storyMap';
 import { useParams } from 'react-router-dom'
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 const Whatsapp = (props) => {
   const { currentParagraphs } = props
@@ -41,9 +45,10 @@ const Whatsapp = (props) => {
   const useStyles = makeStyles((theme) => ({
     WhatsappWrapper: {
       backgroundImage: `url('/images/bg_ui_whatsapp.png')`,
-      height: '90vh',
-      [theme.breakpoints.up('xs')]: {
-        height: '660px',
+      backgroundSize: "cover", 
+      height: '660px',
+      [theme.breakpoints.only('xs')]: {
+        height: 'calc(var(--vh, 1vh) * 100)',
       },
       width: "100%", 
       // overflow: "hidden", 

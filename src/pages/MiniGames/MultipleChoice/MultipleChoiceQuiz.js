@@ -10,19 +10,59 @@ import {
     Box,   
 } from '@material-ui/core';
 import { MINI_GAME_MAP } from '../../../models/miniGameMap';
-
+import ReactAudioPlayer from 'react-audio-player';
+import Music from '../../../music/tobeyou_minigame.mp3'
 import './MultipleChoiceQuiz.scss';
 
 const useStyles = makeStyles((theme) => ({
     paragraphWrapper: {
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      height: '100vh',
-      [theme.breakpoints.up('md')]: {
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundColor: "#6C70DD",
+        backgroundImage: ({ image }) => `url('/images/bg_launch.png')`,
         height: '660px',
-      },
-      bottom: 0, 
+        [theme.breakpoints.only('xs')]: {
+            height: 'calc(var(--vh, 1vh) * 100)',
+        },
+        bottom: 0, 
     },
+    background: {
+        backgroundImage: ({ image }) => `url('/images/bg_launch.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '660px',
+        [theme.breakpoints.only('xs')]: {
+            height: 'calc(var(--vh, 1vh) * 100)',
+        },
+        bottom: 0, 
+    
+      },
+    topLine: {
+        position: 'absolute',
+        top: 100,
+        left: 0,
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        textAlign: 'center',
+        padding: 20,
+        color: '#fff'
+    },
+    btn: {
+        padding: '10px 50px',
+        borderRadius: '40px',
+        marginTop:20,
+        marginBottom: '20px',
+        background: '#664EFC',
+        backgroundColor: '#664EFC',
+        textDecoration: 'none',
+        color: '#ffffff',
+        fontWeight: '700',
+        '&:hover': {
+          backgroundColor: '#6C70DD',      
+          boxShadow: 'none',
+          
+        },
+      },
   }))
 
 
@@ -32,6 +72,7 @@ export default function MultipleChoiceQuiz(props) {
     const quiz = MINI_GAME_MAP.filter(x => x.game_id===parseInt(specialTags.game_id))[0];
     const { currentUser } = useAuth();
     const [hasGameStarted,setHasGameStarted] = useState(false);
+    const [hasGameEnded,setHasGameEnded] = useState(false);
     const [currentQuestion,setCurrentQuestion] = useState(quiz.questions[0])
     const [currentQuestionNumber,setCurrentQuestionNumber] = useState(1)
     const [score,setScore] = useState(0)
@@ -46,7 +87,6 @@ export default function MultipleChoiceQuiz(props) {
     },[])
 
     const saveUserAnswer = (userAns) => {
-        // console.log(userAns);
         setUserAnswers([...userAnswers, {
             answerId: currentQuestion.answers.filter(x => x.title)[0].answer_id,
             questionId: currentQuestion.question_id,
@@ -75,6 +115,8 @@ export default function MultipleChoiceQuiz(props) {
         if(current <= quiz.questions.length){
             setCurrentQuestionNumber(current)
             setCurrentQuestion(quiz.questions[current-1])
+        }else {
+            setHasGameEnded(true);
         }
         setIsDrawerOpen(false);
     }
@@ -94,30 +136,61 @@ export default function MultipleChoiceQuiz(props) {
      }
 
     const handleStartGame = () => {
-        console.log("hello");
         setHasGameStarted(true);
      }
 
     return (
+
         <>
+             <ReactAudioPlayer
+                    src={Music}
+                    autoPlay          
+                    loop                 
+                    id='audioplayer'
+                />
             {quiz.introduction && !hasGameStarted && 
-            <Fade in={true} timeout={700}>
-                <Box className={classes.paragraphWrapper}  height="100%">
+            <Fade in={true} timeout={700}>                
+                <Box className={classes.paragraphWrapper} height="100%">               
+                <Box className={classes.topLine}>In this segment, we will explore some of the issues covered in the game, using a simple quiz. </Box>
                 <div className="MultipleChoice__text">
-                    <Box>
+                    
+                        <Box my={5}>
                         { quiz.introduction}
                     </Box>
                     <Button
+                    className={classes.btn}
                     color="primary"
-                    variant="contained"
+                    variant="contained"                    
                     onClick={() => handleStartGame()}
-                    >Start Game</Button>
+                    >Start Minigame</Button>
                 </div>
                 </Box>
             </Fade>
             }
 
-            {hasGameStarted&&
+            {hasGameStarted && hasGameEnded &&
+
+                <Fade in={true} timeout={700}>
+                <Box className={classes.paragraphWrapper}  height="100%">
+                <div className="MultipleChoice__text">
+                    <Box> 
+                        You've scored {correctAnswered} out of {quiz.questions.length}
+                    </Box>
+                    <Button 
+                    variant="contained" 
+                    color="primary"
+                    className={classes.btn}
+                    key="next" onClick={()=>{continueToStory();}} 
+                    >
+                    Back to Story
+                    </Button>
+                </div>
+                </Box>
+                </Fade>
+                
+            } 
+
+            {hasGameStarted && !hasGameEnded &&
             <Fade in={true} timeout={700}>
             <QuestionPanel 
                 question={currentQuestion}
@@ -133,9 +206,11 @@ export default function MultipleChoiceQuiz(props) {
             /> 
             </Fade>
             }
-            
 
-        </>
+            
+         </>   
+
+        
 
     )
 

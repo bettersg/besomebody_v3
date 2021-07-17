@@ -2,21 +2,33 @@ import React, { useState, useEffect } from 'react';
 import { Box, Button, CircularProgress , 
   Typography,
   Container,} from '@material-ui/core'
-
 import { getDbReflectionResponses } from '../../../models/reflectionResponseModel';
 import { REFLECTION_PAGE_FORM } from '../constants';
 import ChapterResponse from './ChapterResponse';
-import makeStyles from '@material-ui/core/styles/makeStyles'
+ import makeStyles from '@material-ui/core/styles/makeStyles'
 
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 const useStyles = makeStyles((theme) => ({
+  paragraphWrapper: {
+    backgroundColor: "white", 
+    height: '660px',
+    [theme.breakpoints.only('xs')]: {
+        height: 'calc(var(--vh, 1vh) * 100)',
+    },
+    bottom: 0, 
+    overflow: "auto",
+  },
   background: {
     backgroundImage: ({ image }) => `url('/images/bg_reflections.jpg')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    height: '100vh',
-    [theme.breakpoints.up('xs')]: {
-      height: '660px',
+    height: '660px',
+    [theme.breakpoints.only('xs')]: {
+      height: 'calc(var(--vh, 1vh) * 100)',
     },
     bottom: 0, 
 
@@ -25,7 +37,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '2rem',
     fontWeight: 800,
     color: '#ffffff',
-    marginTop: 200,
   },
   bottom: {
     bottom: 0,
@@ -44,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     margin: 'auto',
     textAlign: 'center',    
     alignItems: "center",
-    paddingTop: '25%',
+    paddingTop: '10%',
     overflow: 'scroll',
     height: 600
   },
@@ -86,6 +97,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 
+
 const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
   const [responses, setResponses] = useState(null);
   const classes = useStyles()
@@ -93,7 +105,7 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
   useEffect(() => {
     getDbReflectionResponses({
       reflectionId,
-      questionId: 3,
+      questionId: 3,  // this is hardcoded to the "share your story textarea question"
     }).then(setResponses).catch(console.error);
   }, [reflectionId, setResponses]);
 
@@ -102,15 +114,16 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
   } else {
     return (
     <Box className={classes.background}>
-     <Container maxWidth="md" className={classes.container}>
+     <Container className={classes.container}>
+       <Typography className={classes.headerText}>Reflections from Other Players</Typography>
       <Box>
         {responses.map(response => (
           <ChapterResponse key={response.id} response={response} />
-        ))}
+        ))}        
       </Box>
       
         </Container>
-        <Button className={classes.btn} onClick={() => setPage(REFLECTION_PAGE_FORM)}>Add your response</Button>
+        <Button className={classes.btn} onClick={() => setPage(REFLECTION_PAGE_FORM)} fullWidth>Continue</Button>
     </Box>
     )
     

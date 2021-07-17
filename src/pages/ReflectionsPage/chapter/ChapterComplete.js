@@ -10,14 +10,19 @@ import { useAuth } from '../../../contexts/AuthContext'
 
 import { REFLECTION_PAGE_LEARNING } from '../constants';
 
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 const useStyles = makeStyles((theme) => ({
   background: {
     backgroundImage: ({ image }) => `url('/images/bg_reflections.jpg')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    height: '100vh',
-    [theme.breakpoints.up('xs')]: {
-      height: '660px',
+    height: '660px',
+    [theme.breakpoints.only('xs')]: {
+      height: 'calc(var(--vh, 1vh) * 100)',
     },
     bottom: 0, 
 
@@ -79,7 +84,7 @@ const ChapterComplete = ({ setPage , user }) => {
     <Container maxWidth="md" className={classes.container}>
         <Box py={4} display="flex" flexDirection="column" justifyContent="center" alignItems="center">
           <Typography className={classes.headerText}>Chapter Complete!</Typography>
-          <Typography className={classes.text}>Congratulations {user.username}! <br /> You've finished the chapter.</Typography>
+          <Typography className={classes.text}>Congratulations! <br /> You've finished the chapter.</Typography>
       </Box>
         <Box className={classes.bottom}>        
           {/* <Button variant="contained" className={classes.btn} onClick={() => setPage(REFLECTION_PAGE_CHAPTER_REFLECTION_RESPONSES)}> */}

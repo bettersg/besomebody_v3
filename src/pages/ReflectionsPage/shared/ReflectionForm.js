@@ -11,9 +11,25 @@ import { createDbReflectionResponses } from "../../../models/reflectionResponseM
 import QUESTIONS from "../../../reflections/questions.json";
 import { useAuth } from '../../../contexts/AuthContext';
 
-const useStyles = makeStyles({
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+const useStyles = makeStyles((theme) => ({
+  background: {
+    backgroundImage: ({ image }) => `url('/images/bg_reflections.jpg')`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    height: '660px',
+    [theme.breakpoints.only('xs')]: {
+      height: 'calc(var(--vh, 1vh) * 100)',
+    },
+    bottom: 0,
+    overflow:'scroll',
+  },
   container: {
-    backgroundColor: '#e5e5e5',
+    backgroundColor: 'rgba(255,255,255,0.7)',
   },
   formGroup: {
     backgroundColor: 'white',
@@ -29,7 +45,7 @@ const useStyles = makeStyles({
   textField: {
     // backgroundColor: '#e5e5e5',
   },
-});
+}))
 
 const ReflectionForm = ({ reflection }) => {
   const classes = useStyles();
@@ -70,26 +86,26 @@ const ReflectionForm = ({ reflection }) => {
       })
     } finally {
       setIsLoading(false);
-      history.push("/chapters/" + name)
+      history.push("/chapterend/" + name + '/' + reflection.chapter)
     }
   }
 
   return (
-    <Box bgcolor="#e5e5e5">
-      <Box pt={6} pb={2} bgcolor="white">
+    <Box className={classes.background}>
+      <Box pt={6} pb={2} className={classes.container}>
         <Box>
           <Typography className={classes.subtitle} variant="subtitle1" align="center">
-            OVER TO YOU
+            SHARE YOUR THOUGHTS WITH US
           </Typography>
         </Box>
         <Box>
           <Typography className={classes.title} variant="h1" align="center">
-            Tell us your story
+            REFLECTIONS FORM
           </Typography>
         </Box>
       </Box>
       {questions.map((question, index) => (
-        <Box key={question.id} mt={2} bgcolor="white">
+        <Box key={question.id} mt={2}  className={classes.container}>
           <Question
             key={question.id}
             question={question}

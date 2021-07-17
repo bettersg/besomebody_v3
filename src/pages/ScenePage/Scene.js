@@ -9,13 +9,21 @@ import "./style.scss"
 
 import { CHARACTER_MAP } from '../../models/storyMap';
 
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 const useStyles = makeStyles((theme) => ({
   paragraphWrapper: {
-    backgroundImage: ({ image }) => `url('/images/${image}')`,
+    backgroundImage: ({ image }) => `url('/images/${image}')`, 
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    height: '640px',
+    backgroundColor: "white", 
+    height: '660px',
+    [theme.breakpoints.only('xs')]: {
+        height: 'calc(var(--vh, 1vh) * 100)',
+    },
     bottom: 0, 
   },
   choiceWrapper: {

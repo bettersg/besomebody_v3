@@ -6,6 +6,8 @@ import ChapterReflectionResponses from './chapter/ChapterReflectionResponses'
 import ChapterComplete from './chapter/ChapterComplete'
 import StoryComplete from './story/StoryComplete'
 import ChapterLearning from './chapter/ChapterLearning'
+import ReactAudioPlayer from 'react-audio-player';
+import Music from '../../music/tobeyou_outrolong.mp3'
 
 import {
   REFLECTION_PAGE_FORM,
@@ -43,7 +45,8 @@ const Reflection = ({ reflectionId: propsReflectionId, globalVariables }) => {
         }
       );
   }, [currentUser.id]);
-  
+//   console.log(user)
+  // const userDB = async ()  => {return await getDbUser(currentUser.id) } 
   
   // console.log(globalVariables)
   // Save user achievements data to Firestore whenever this component renders
@@ -139,25 +142,44 @@ const Reflection = ({ reflectionId: propsReflectionId, globalVariables }) => {
     [reflectionId]
   )
 
-  switch (page) {
-    case REFLECTION_PAGE_CHAPTER_COMPLETE:
-      return <ChapterComplete setPage={setPage} user={ user} />
-    case REFLECTION_PAGE_LEARNING:
-      return <ChapterLearning setPage={setPage} reflection={reflection} />
-    case REFLECTION_PAGE_CHAPTER_REFLECTION_RESPONSES:
-      return (
-        <ChapterReflectionResponses
-          reflectionId={reflectionId}
-          setPage={setPage}
-        />
-      )
-    // case REFLECTION_PAGE_STORY_COMPLETE:
-    //   return <StoryComplete setPage={setPage} />
-    case REFLECTION_PAGE_FORM:
-      return reflection ? <ReflectionForm reflection={reflection} /> : null
-    default:
-      return null
+  const renderSwitch = (page) => {
+    switch (page) {     
+      case REFLECTION_PAGE_CHAPTER_COMPLETE:
+        return <ChapterComplete setPage={setPage} user={user} />
+      case REFLECTION_PAGE_LEARNING:
+        return <ChapterLearning setPage={setPage} reflection={reflection} />
+      case REFLECTION_PAGE_CHAPTER_REFLECTION_RESPONSES:
+        return (
+          <ChapterReflectionResponses
+            reflectionId={reflectionId}
+            setPage={setPage}
+          />
+        )
+      // case REFLECTION_PAGE_STORY_COMPLETE:
+      //   return <StoryComplete setPage={setPage} />
+      case REFLECTION_PAGE_FORM:
+        return reflection ? <ReflectionForm reflection={reflection} /> : null
+      default:
+        return null
+    }
   }
+
+  return (
+    <>
+      <ReactAudioPlayer src={Music}  autoPlay loop id='audioplayer' />
+      {renderSwitch(page)}
+    </>
+
+
+  )
+    
 }
 
+  
+
+
 export default Reflection
+
+
+
+// <ReactAudioPlayer src={Music}  autoPlay loop id='audioplayer' />

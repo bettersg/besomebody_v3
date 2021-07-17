@@ -15,11 +15,19 @@ import {
 } from '@material-ui/core';
 import './QuestionPanel.scss';
 
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 const useStyles = makeStyles((theme) => ({
   root: {
     textAlign:'left',
-    padding:10
+    padding:10,
+    height: '660px',
+    [theme.breakpoints.only('xs')]: {
+        height: 'calc(var(--vh, 1vh) * 100)',
+    },
   },
 
   questionNumber: {
@@ -168,7 +176,7 @@ export default function QuestionPanel({question, nextQuestion, total, questionNo
                 <CardActionArea>
                 <CardMedia
                   className={classes.media}
-                  image={'/images/' + answer.imageUrl}
+                  image={'/minigames/' + answer.imageUrl}
                 />
                 <CardContent >
                   <Typography className={classes.imageTitle}>
@@ -251,7 +259,7 @@ export default function QuestionPanel({question, nextQuestion, total, questionNo
                   
                 </Box>
                 <Box>
-                  {answered!=='' && questionNo!==total &&
+                  {answered!=='' &&
                     <Button 
                       variant="contained" 
                       className={clsx(classes.nextButton, isCorrectAnswer? classes.nextButtonCorrect : classes.nextButtonWrong )}
@@ -260,16 +268,6 @@ export default function QuestionPanel({question, nextQuestion, total, questionNo
                         Next
                     </Button>
                   }
-                  {answered!=='' && questionNo===total &&
-                    <Button 
-                      variant="contained" 
-                      color="primary"
-                      className={`nextButton`}
-                      key="next" onClick={()=>{continueToStory();}} 
-                      >
-                        Back to Story
-                    </Button>
-                  } 
                   </Box>
               </Box>
               

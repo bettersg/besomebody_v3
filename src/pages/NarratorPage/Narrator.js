@@ -6,15 +6,19 @@ import makeStyles from '@material-ui/core/styles/makeStyles'
 import { useInkContext } from '../../contexts/InkContext'
 
 import "./style.scss"
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 const useStyles = makeStyles((theme) => ({
   paragraphWrapper: {
     backgroundImage: ({ image }) => `url('/images/${image}')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    height: '100vh',
-    [theme.breakpoints.up('xs')]: {
-      height: '660px',
+    height: '660px',
+    [theme.breakpoints.only('xs')]: {
+        height: `calc(var(--vh, 1vh) * 100)`,
     },
     bottom: 0, 
   },
@@ -26,11 +30,21 @@ const useStyles = makeStyles((theme) => ({
     height: '150px',
     scrollSnapType: 'y mandatory',
   },
-  choiceWrapper: {
-    position: 'relative',
-    opacity: 0.8,    
-    top: '400px',
-  }
+  choicesButton: {
+    width: "330px", 
+    height: "48px", 
+    margin: "auto", 
+    borderRadius: "24px", 
+    border: "solid 1px #3DCAD328", 
+    backgroundColor: "white", 
+    color: "#0B6E7D", 
+    marginBottom: "12px", 
+    '&:hover': {
+      backgroundColor: '#B1EAEE',
+      borderColor: '#B1EAEE',
+      boxShadow: 'none',
+    },
+  },
 }))
  
 const Narrator = (props) => {
@@ -82,21 +96,23 @@ const Narrator = (props) => {
           <div ref={elementRef} />
           {/* this if else is needed to toggle between "Next Button" and choices (if any) */}
           {choices.length > 0 ? 
-            <div  className={classes.choiceWrapper} >            
+            <div className="Narrator__choicesWrapper" >            
               {choices.map((choice) => (
                 
                 <Box
-                    mx={1}
+                    // mx={1}
                     key={choice.text}
-                    display="flex"
-                    justifyContent="center"
-                    my={1}
+                    // display="flex"
+                    // justifyContent="center"
+                    // my={1}
+                    className="Narrator__choicesWrapper__choices"
                   
                   >
                     <Fade in={choice.text?true:false} timeout={700}>
                       <Button
                         variant="contained"
                         color="primary"
+                        className={classes.choicesButton}
                         onClick={() => setChoice(choice.index)}
                       >
                         <Typography variant="caption">{choice.text}</Typography>
