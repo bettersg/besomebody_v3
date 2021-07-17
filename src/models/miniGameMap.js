@@ -33,22 +33,22 @@ export const MINI_GAME_MAP = [
           type: "image",
           answers: [
             {
-              answer_id: 5,
+              answer_id: 1,
               imageUrl: "stan.jpeg",
               title: "Male Sikhs below the age of 12",
             },
             {
-              answer_id: 6,
+              answer_id: 2,
               imageUrl: "malcolm.jpg",
               title: "Female Sikhs after puberty",
             },
             {
-              answer_id: 7,
+              answer_id: 3,
               imageUrl: "robert.jpg",
               title: "No Sikhs are allowed",
             },
             {
-              answer_id: 8,
+              answer_id: 4,
               imageUrl: "bilius.jpg",
               title: "All Sikhs are allowed",
             },
@@ -65,19 +65,19 @@ export const MINI_GAME_MAP = [
             "Singaporean law has made allowances to ensure Sikhs can carry the kirpan in public (under some specific conditions), since 2012. ",
           answers: [
             {
-              answer_id: 9,
+              answer_id: 1,
               title: "Yes, without constraint.",
             },
             {
-              answer_id: 10,
+              answer_id: 2,
               title: "Yes, under certain conditions",
             },
             {
-              answer_id: 11,
+              answer_id: 3,
               title: "No, it is an illegal weapon",
             },
             {
-              answer_id: 12,
+              answer_id: 4,
               title:
                 "No, they carry an image of it instead",
             },
@@ -88,59 +88,72 @@ export const MINI_GAME_MAP = [
   
     {
       game_id: 2,
-      ui: "swipe",
+      ui: "mcq",
+      introduction: "Why did Nadia and Chloe have that chat? Let's find out more.",
       questions: [
         {
-          question_id: 6,
-          question: "Muslims cannot touch dogs",
+          question_id: 1,
+          question: "All Malays in Singapore are Muslim.",
           type: "text",
           explanation:
-            "Traditionally, dogs are considered haram, or forbidden, in Islam as they are thought of as dirty. But while advocate complete avoidance, others simply say Muslims should not touch the animal’s mucous membranes — such as the nose or mouth — which are considered especially impure. Even if that happens, there is a special cleansing ritual that can be followed.",
+            "While an overwhelming majority of Malays in Singapore are followers of Islam, there is a small minority of Malays that follow other faiths.Similarly, a majority of Muslims in Singapore are of Malay ethnicity - but followers of Islam, in general, come from diverse ethnics backgrounds - and this is the case in Singapore as well!",
           correctAnswer: "FALSE",
           answers: [
             {
-              answer_id: 20,
+              answer_id: 1,
               title: "TRUE",
             },
             {
-              answer_id: 21,
+              answer_id: 2,
               title: "FALSE",
             },
           ],
         },
         {
-          question_id: 7,
-          question: "Muslims have to wash themselves before they pray",
-          correctAnswer: "TRUE",
+          question_id: 2,
+          question: "Is it permissible for Muslim females to hug unrelated men?",
+          correctAnswer: "No",
           explanation:
-            "Muslims are expected to perform a purification ritual called Wudu, requiring that they wash their faces, hands, arms, and feet before prayer.",
+            "For Muslims, hugging (touching in general) members of the opposite sex when not related, is not permissible for Muslims according to strict interpretations of the Hadith scriptures in Islam. There are varying interpretations, and not all Muslims follow this. There are also special exceptions to this guideline.",
           type: "text",
           answers: [
             {
-              answer_id: 22,
-              title: "TRUE",
+              answer_id: 1,
+              title: "Yes",
             },
             {
-              answer_id: 23,
-              title: "FALSE",
+              answer_id: 2,
+              title: "No",
             },
           ],
         },
         {
-          question_id: 8,
-          question: "In Singapore, all Muslims are Malay",
-          correctAnswer: "TRUE",
-          explanation:
-            "In Singapore, Indian Muslims form the largest ethnic minority within the otherwise largely Malay Muslim community. There are also Chinese Muslims who have found Islam, and those who have converted to Islam after marriage.",
-          type: "text",
+          question_id: 3,
+          question:
+            "Which of the images below correctly shows a woman in a Hijab?",
+          correctAnswer: "Option 3",
+          explanation: "The images above include a Burka (blue), a Niqab (black), and a Khimar (dark green). The Hijab (light green image) is principle of modesty in Islam, extending to clothing and behaviour for both men and women, and usually refers to the head covering Muslim women wear. A Tudung is a Malay word for head-covering.",
+          type: "image",
           answers: [
             {
-              answer_id: 24,
-              title: "TRUE",
+              answer_id: 1,
+              imageUrl: "burka.png",
+              title: "Option 1",
             },
             {
-              answer_id: 25,
-              title: "FALSE",
+              answer_id: 2,
+              imageUrl: "niqab.png",
+              title: "Option 2",
+            },
+            {
+              answer_id: 3,
+              imageUrl: "hijab.png",
+              title: "Option 3",
+            },
+            {
+              answer_id: 4,
+              imageUrl: "khimar.png",
+              title: "Option 4",
             },
           ],
         },

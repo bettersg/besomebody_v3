@@ -29,11 +29,9 @@ For cut-and-paste ease
 #subject:Job Application for Ravi
 
 
-FOR MINIGAMES:
--> nadia_2_minigame
-=== nadia_2_minigame ===
-#knot:nadia_Chapter2_minigame
-#ui:swipe or mcq
+FOR MINIGAMES DO NOT START A NEW KNOT
+#knot:nadia_2_minigame
+#ui:mcq
 #game_id:2
 Minigame // must add some text
 -> nadia_2_3 // point to next section of story
@@ -389,13 +387,27 @@ Definitely not. OKAY let’s go before they make us run extra laps! #speaker_rig
 -> nadia_1_3_narration
 
 
+// === nadia_1_minigame ===
+// #knot:nadia_1_minigame
+// #ui:mcq
+// #game_id:2
+// Minigame 2 // must add some text
+
+// -> nadia_1_3_narration
+
+
+
 === nadia_1_3_narration ===
+#knot:nadia_1_minigame
+#ui:mcq
+#game_id:2
+Minigame 2 // must add some text
+
 #knot:nadia_1_3_narration
 #ui:narrator
 #background:bg_nadia_canteen.jpg
 In the quiet window of time after class hours, I’m by myself in the canteen, grabbing a meal. 
 After all of that PE, I’m starving.
-
 
 -> nadia_1_3
 

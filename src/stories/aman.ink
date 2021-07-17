@@ -189,23 +189,18 @@ Sigh. Aman, I... #speaker_right
 
 
 
--> aman_1_minigame
+-> aman_1_3_narration
 
 
-=== aman_1_minigame ===
+=== aman_1_3_narration ===
 #knot:aman_1_minigame
 #ui:mcq
 #game_id:1
 Minigame 1 // must add some text
 
--> aman_1_3_narration
-
-
-=== aman_1_3_narration ===
 #knot:aman_1_3_narration
 #ui:narrator
 #background:new_message_notification.jpg
-.
 One month later, Selinder and I are chatting at night.
 
 
