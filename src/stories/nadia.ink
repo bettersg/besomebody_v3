@@ -387,13 +387,13 @@ Definitely not. OKAY let’s go before they make us run extra laps! #speaker_rig
 -> nadia_1_3_narration
 
 
-=== nadia_1_minigame ===
-#knot:nadia_1_minigame
-#ui:mcq
-#game_id:2
-Minigame 2 // must add some text
+// === nadia_1_minigame ===
+// #knot:nadia_1_minigame
+// #ui:mcq
+// #game_id:2
+// Minigame 2 // must add some text
 
--> nadia_1_3_narration
+// -> nadia_1_3_narration
 
 
 
