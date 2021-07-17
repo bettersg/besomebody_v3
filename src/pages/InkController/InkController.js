@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams , useHistory } from 'react-router-dom'
 import { Box, Container, Typography } from '@material-ui/core'
 import NotFoundPage from '../../components/NotFoundPage'
 import WhatsApp from '../WhatsappPage/Whatsapp'
@@ -92,6 +92,7 @@ const getUi = ({ currentParagraphs, specialTags , globalVariables }) => {
 
 const InkController = () => {
   const { name } = useParams()
+  const history = useHistory()
   const {
     // States
     paragraphs,
@@ -149,7 +150,9 @@ const InkController = () => {
 
   return (
     <Container maxWidth="lg" className="ink-controller">
-      
+      {currentParagraphs[0] ? null :
+        <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><Box my={10}>Please start story from the <a href="/">main menu</a>.</Box>
+        </Container>}
 
       {getUi({
         currentParagraphs,
