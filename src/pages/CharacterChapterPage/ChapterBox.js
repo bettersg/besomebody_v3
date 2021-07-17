@@ -16,6 +16,7 @@ import { useInkContext } from '../../contexts/InkContext'
 import { CHARACTER_MAP } from '../../models/storyMap'
 import NadiaInk from '../../stories/nadia.ink.json'
 import AmanInk from '../../stories/aman.ink.json'
+
 import './styles.scss'
 
 const useStyles = makeStyles({
@@ -49,7 +50,7 @@ const getInkJson = (nameParam) => {
 
 export default function ChapterBox(props) {
   const classes = useStyles()
-  const { chaptDetails, total } = props
+  const { chaptDetails, total, userFromDb } = props
   const history = useHistory()
 
   // used for the image preloader
@@ -86,13 +87,21 @@ export default function ChapterBox(props) {
     initialiseUseInkHook(inkJson, characterId)
   }, [])
 
+  const getEndingsUnlocked = () => {
+    const currentChapterInUserDb = userFromDb?.achievements?.find(
+      (achievement) =>
+        achievement.character === characterId &&
+        achievement.chapter === chaptDetails.chapterId
+    );
+    return currentChapterInUserDb ? currentChapterInUserDb.endings.length : 0;
+  }
+
   var rows = []
-  for (var j = 0; j < chaptDetails.endings.length; j++) {
-    rows.push(
-      <FiberManualRecordIcon
-        style={{ fontSize: 8, color: '#E5E5E5', marginRight: 1 }}
-      />
-    )
+  for (var i = 0; i < getEndingsUnlocked(); i++) {
+      rows.push(<FiberManualRecordIcon style={{fontSize:8, color: "#999999", marginRight: 1}}/>);
+  }
+  for (var j = 0; j < chaptDetails.endings.length - getEndingsUnlocked(); j ++) {
+      rows.push(<FiberManualRecordIcon style={{fontSize:8, color: "#E5E5E5", marginRight: 1}}/>);
   }
 
   const handleChapterStart = () => {
@@ -162,7 +171,7 @@ export default function ChapterBox(props) {
               <div className="ChapterBox__endings">
                 {rows}
                 <span style={{ marginLeft: '8px' }}>
-                  0 of {chaptDetails.endings.length} endings unlocked
+                  {getEndingsUnlocked()} of {chaptDetails.endings.length} endings unlocked
                 </span> 
               </div>:
               null
@@ -173,11 +182,3 @@ export default function ChapterBox(props) {
     </Card>
   )
 }
-
-/* TODO number of endings unlocked needs to be pulled from the player save data, not from the story data */
-// for (var i = 0; i < chaptDetails.endingUnlocked; i++) {
-//     rows.push(<FiberManualRecordIcon style={{fontSize:8, color: "#999999", marginRight: 1}}/>);
-// }
-// for (var j = 0; j < chaptDetails.endingAvail - chaptDetails.endingUnlocked; j ++) {
-//     rows.push(<FiberManualRecordIcon style={{fontSize:8, color: "#E5E5E5", marginRight: 1}}/>);
-// }

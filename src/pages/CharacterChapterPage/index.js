@@ -1,16 +1,17 @@
-import React from "react";
+import React, { useEffect, useState }from "react";
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import "./styles.scss"
 import "../styles.css"
 import { useInkContext } from '../../contexts/InkContext'
 
 import SVG from 'react-inlinesvg';
-
+import { getDbUser }  from '../../models/userModel.js';
 import { Box, Fade, Grid, Typography, Avatar } from '@material-ui/core'
 import ChapterBox from "./ChapterBox"
 import { IntroBanner } from "../../components/IntroBanner"
 
 import { CHARACTER_MAP } from '../../models/storyMap'
+import { useAuth } from '../../contexts/AuthContext'
 import { useParams , Link } from 'react-router-dom'
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -43,6 +44,18 @@ const CharacterChapterPage = (props) => {
     const classes = useStyles()  
     const { name } = useParams();
     const persona = CHARACTER_MAP.find((character) => character.linkName === name);
+    // Auth Context
+	const { currentUser } = useAuth()
+    const [userFromDb, setUserFromDb] = useState(null)
+  
+	useEffect(() => {
+	  const getUser = async () => {
+		const user = await getDbUser(currentUser.id)
+		return setUserFromDb(user)
+	  }
+      
+	  getUser()
+	}, [currentUser.id])
 
     const {
         // useInk hook initialiser
@@ -83,11 +96,11 @@ const CharacterChapterPage = (props) => {
                 <IntroBanner loadSavedStory={loadSavedStory} persona={persona} />
             )} */}
             <div style={{ paddingTop: "24px" }}>
-                {persona.chapters.length > 0 
+                {userFromDb && persona.chapters.length > 0 
                     ? persona.chapters.map((chapt,i) => {
                         return (
                             <div style={{display: "flex", justifyContent: "center"}}  key={i}>
-                                <ChapterBox chaptDetails={chapt} total={persona.chapters.length} key={i} />
+                                <ChapterBox userFromDb={userFromDb} chaptDetails={chapt} total={persona.chapters.length} key={i} />
                             </div>
                         )
                     })
