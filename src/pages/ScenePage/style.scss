@@ -51,7 +51,7 @@
     bottom: 0;
     width: 100%; 
     &__innerMono {
-      height: 48px; 
+      height: 48px;       
       background: linear-gradient(180deg, rgba(79, 77, 190, 0) 13.02%, #4F4DBE 100%);
     }
     &__text {
@@ -63,6 +63,7 @@
       &.innerMonologue {
         background: linear-gradient(180deg, #4F4DBE 44.7%, #664EFC 100%);
         color: white;
+        font-style: italic;
       }
       &--line {
         padding: 32px 24px 28px 24px;

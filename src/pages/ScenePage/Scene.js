@@ -157,7 +157,7 @@ const Scene = (props) => {
                         className={`ScenePage__story__text ${step.tags[0]==='inner_monologue'?"innerMonologue":"default"}`}
                         style={{background: step.tags[0]==='inner_monologue'?`linear-gradient(180deg, ${persona.primaryColour} 44.7%, ${persona.primaryColour} 100%)`:"white"}}
                       >
-                        <div style={{marginLeft:"24px"}}>{step.tags[0]==='inner_monologue'? 'INNER MONOLOGUE':null}</div>
+                        {/* <div style={{marginLeft:"24px"}}>{step.tags[0]==='inner_monologue'? 'INNER MONOLOGUE':null}</div> */}
                         <div className="ScenePage__story__text--line">{step.text}</div>
 
 
