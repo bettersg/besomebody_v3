@@ -18,8 +18,8 @@ const useStyles = makeStyles((theme) => ({
     paragraphWrapper: {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundColor: "white",
-
+        backgroundColor: "#6C70DD",
+        backgroundImage: ({ image }) => `url('/images/bg_launch.png')`,
         height: '660px',
         [theme.breakpoints.only('xs')]: {
             height: '100vh',

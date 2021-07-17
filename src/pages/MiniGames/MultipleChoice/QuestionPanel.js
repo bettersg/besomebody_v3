@@ -172,7 +172,7 @@ export default function QuestionPanel({question, nextQuestion, total, questionNo
                 <CardActionArea>
                 <CardMedia
                   className={classes.media}
-                  image={'/images/' + answer.imageUrl}
+                  image={'/minigames/' + answer.imageUrl}
                 />
                 <CardContent >
                   <Typography className={classes.imageTitle}>
