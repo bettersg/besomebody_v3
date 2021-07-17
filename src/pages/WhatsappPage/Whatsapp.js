@@ -101,7 +101,7 @@ const Whatsapp = (props) => {
               className={`Whatsapp__messages ${choices.length > 0 ? 'choices' : ''}`}
               dir="ltr"
             >
-
+              {specialTags.timestamp ? <Box style={{textAlign:'center', paddingTop:5, fontSize:12}}> {specialTags.timestamp}hr </Box>: null}
               {currentParagraphs.map((step, i) => {
                 if (step.tags[0]?.includes('speaker_self')) {
                   return (
