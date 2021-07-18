@@ -15,7 +15,7 @@
             &--name {
                 margin-left: 18px; 
                 @include inter-chaptChoiceName; 
-                color: $lapis80;
+                color: #072435;
                 text-decoration: none;
             }
         }
@@ -62,15 +62,21 @@
     }
     &__chaptTitle {
         display: flex;
-        align-items: center;
+        // align-items: center;
         justify-content: space-between;
         margin-top: 8px;
+        &--text {
+            width: 199px; 
+        }
         &--name {
             @include inter-chaptChoiceName; 
             font-size: 18px;
+            line-height: 140% ; 
+            margin-bottom: 4px; 
         }
         &--button {
             @include inter-chaptChoiceName; 
+            margin-left: 24px; 
             font-size: 14px;
             height: 40px; 
             width: 80px;
@@ -90,7 +96,6 @@
     }
     &__summary {
         @include inter-chaptchoice500; 
-        margin-right: 124px;
         color: $midnight60;
     }
     &__endings {
