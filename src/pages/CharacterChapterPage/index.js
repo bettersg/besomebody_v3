@@ -13,6 +13,8 @@ import { IntroBanner } from "../../components/IntroBanner"
 import { CHARACTER_MAP } from '../../models/storyMap'
 import { useAuth } from '../../contexts/AuthContext'
 import { useParams , Link } from 'react-router-dom'
+import SideMenu from '../SimpleSideMenu/SideMenu'
+
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
@@ -71,6 +73,9 @@ const CharacterChapterPage = (props) => {
 
     return (
         <Box className={classes.CharChaptWrapper} >
+            <div className="game-menu">
+                <SideMenu  />
+            </div>
             <div className="CharacterChapterPage">
                 <div className="CharacterChapterPage__top">
                     <Link to='/' style={{textDecoration: 'none'}}><div className="CharacterChapterPage__top__nav">
