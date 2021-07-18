@@ -6,7 +6,8 @@ import ChapterReflectionResponses from './chapter/ChapterReflectionResponses'
 import ChapterComplete from './chapter/ChapterComplete'
 import StoryComplete from './story/StoryComplete'
 import ChapterLearning from './chapter/ChapterLearning'
-import ReactAudioPlayer from 'react-audio-player';
+import AudioPlayer from "../../music/Music"
+
 import Music from '../../music/tobeyou_outrolong.mp3'
 
 import {
@@ -166,7 +167,7 @@ const Reflection = ({ reflectionId: propsReflectionId, globalVariables }) => {
 
   return (
     <>
-      <ReactAudioPlayer src={Music}  autoPlay loop id='audioplayer' />
+       <AudioPlayer Music={Music} />      
       {renderSwitch(page)}
     </>
 

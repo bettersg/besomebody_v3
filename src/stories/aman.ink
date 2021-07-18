@@ -296,7 +296,7 @@ This is the start of a new chapter in my life.
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Family
-#chat_group_image:ico_aman_family.jpg
+#chat_group_image:ico_aman_family.png
 #speaker_1_name:Papa
 #speaker_2_name:Amma
 #speaker_3_name:Jothi
@@ -323,7 +323,7 @@ I don’t care what they think. Do I care what they think? #inner_monologue
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Family
-#chat_group_image:ico_aman_family.jpg
+#chat_group_image:ico_aman_family.png
 #speaker_1_name:Papa
 #speaker_2_name:Amma
 #speaker_3_name:Jothi
@@ -337,7 +337,7 @@ Damnit. Aaaaargh.  #inner_monologue
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Family
-#chat_group_image:aman_family.jpg
+#chat_group_image:ico_aman_family.png
 #speaker_1_name:Papa
 #speaker_2_name:Amma
 #speaker_3_name:Jothi
@@ -425,7 +425,7 @@ Two months later, in the Halal section of the cookhouse.
 === aman_1_7 ===
 #knot:aman_1_7
 #ui:scene
-#background:bg_aman_bmtcookhouse.jpg.jpg
+#background:bg_aman_bmtcookhouse.jpg
 #speaker_left_image:cha_aman_lukman.png
 #speaker_left_name:Lukman
 

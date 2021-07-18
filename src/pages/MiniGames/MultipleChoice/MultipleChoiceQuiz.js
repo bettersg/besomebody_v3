@@ -10,7 +10,8 @@ import {
     Box,   
 } from '@material-ui/core';
 import { MINI_GAME_MAP } from '../../../models/miniGameMap';
-import ReactAudioPlayer from 'react-audio-player';
+// import ReactAudioPlayer from 'react-audio-player';
+import AudioPlayer from "../../../music/Music"
 import Music from '../../../music/tobeyou_minigame.mp3'
 import './MultipleChoiceQuiz.scss';
 
@@ -142,12 +143,7 @@ export default function MultipleChoiceQuiz(props) {
     return (
 
         <>
-             <ReactAudioPlayer
-                    src={Music}
-                    autoPlay          
-                    loop                 
-                    id='audioplayer'
-                />
+            <AudioPlayer Music={Music} />   
             {quiz.introduction && !hasGameStarted && 
             <Fade in={true} timeout={700}>                
                 <Box className={classes.paragraphWrapper} height="100%">               
