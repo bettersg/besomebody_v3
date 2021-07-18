@@ -16,6 +16,7 @@ import { updateDbUser } from '../../models/userModel'
 import { Link , useHistory } from 'react-router-dom'
 import { useSnackbar } from '../../contexts/SnackbarContext'
 import './style.scss'
+import Step0 from './Step0'
 
 
 
@@ -66,7 +67,7 @@ function Step7(props) {
               <Typography key={props.order} variant="overline" >
                 Nadia
               </Typography> 
-              <Typography key={props.order}> Ok, so here's what I've got for your details. Now let's get started! </Typography> <br/>
+              <Typography key={props.order}> Ok, so here's what I've got for your details. If you missed a field or want to change something, you can rebuild your profile. If you're ready, let's start!</Typography> <br/>
                   <form onSubmit={handleSubmit}>
                    
                   
@@ -78,13 +79,43 @@ function Step7(props) {
                   <div>Username: {props.state.username?props.state.username:"You left this blank"}</div>   
                         
                   
-                <br />                
+                <br />
+                <Button
+                    onClick={() => props.jump(1)}
+                    variant="outlined"                                        
+                  // className="submitBtn"
+                  style={{
+                    padding: '10px 10px',
+                    borderRadius: '40px',
+                    marginBottom: '20px',
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                    textDecoration: 'none',                   
+                  }}>Rebuild your profile</Button>
+
                 <Button
                     type="submit"
                     variant="contained"
                     color="primary"
                     disabled={isLoading}
-                    className="submitBtn"
+                  // className="submitBtn"
+                  style={{
+                    padding: '10px 10px',
+                    borderRadius: '40px',
+                    marginBottom: '20px',
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                    background: '#664EFC',
+                    backgroundColor: '#664EFC',
+                    textDecoration: 'none',
+                    color: '#ffffff',
+                    fontWeight: '700',
+                    '&:hover': {
+                      backgroundColor: '#6C70DD',      
+                      boxShadow: 'none',
+                      
+                    },
+                  }}
                   >
                     Submit - then start the game!
                 </Button>

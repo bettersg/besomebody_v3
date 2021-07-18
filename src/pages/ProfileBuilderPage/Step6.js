@@ -23,7 +23,7 @@ function Step6(props) {
                 Nadia
               </Typography> 
               <Typography key={props.order}> And the most important one: how can I address you? I usually go by just "Nad" for friends. </Typography>                               
-                <TextField type="text" placeholder="e.g. FLYBOY21" name="username" onBlur={props.handleChange} /> 
+                <TextField type="text" placeholder="e.g. Rocky" name="username" onBlur={props.handleChange} /> 
                 </Box>
               </Box>
               

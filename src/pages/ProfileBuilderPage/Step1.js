@@ -26,7 +26,7 @@ function Step1(props) {
                     Nadia
                   </Typography> 
                   <Typography key={props.order}> First up - how young are you?</Typography>
-                  <RadioGroup aria-label="age"  name="age" onChange={props.handleChange}  >
+                  <RadioGroup aria-label="age"  name="age" onChange={props.handleChange} value={props.getState("age", "")} >
                     <FormControlLabel value="16" control={<Radio />} label="Under 16" />
                     <FormControlLabel value="19" control={<Radio />} label="16 to 19" />
                     <FormControlLabel value="20" control={<Radio />} label="20-29" />
