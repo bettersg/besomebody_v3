@@ -73,15 +73,17 @@ const CharacterChapterPage = (props) => {
 
     return (
         <Box className={classes.CharChaptWrapper} >
-            <div className="game-menu">
-                <SideMenu  />
-            </div>
             <div className="CharacterChapterPage">
                 <div className="CharacterChapterPage__top">
-                    <Link to='/' style={{textDecoration: 'none'}}><div className="CharacterChapterPage__top__nav">
-                        <SVG src="/chapter_choices_page/arrow.svg" />
-                        <div className="CharacterChapterPage__top__nav--name" >Menu</div>
-                    </div></Link>
+                        <div className="CharacterChapterPage__top__nav">
+                            <Link to='/' style={{textDecoration: 'none'}}>
+                                <div style={{display: "flex"}}>
+                                    <SVG src="/chapter_choices_page/arrow.svg" />
+                                    <div className="CharacterChapterPage__top__nav--name" >Menu</div>
+                                </div>
+                            </Link>
+                            <SideMenu src="/commons/menu-icon.svg" />
+                        </div>
                     <div className="CharacterChapterPage__top__character">
                         <Avatar
                             alt={persona.name}
