@@ -1,4 +1,4 @@
-name: Deploy to Firebase Hosting on merge
+name: STG - Deploy to Firebase Hosting on merge to main
 'on':
   push:
     branches:
