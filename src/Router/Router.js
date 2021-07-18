@@ -21,7 +21,7 @@ import ProfileBuilderPage from '../pages/ProfileBuilderPage'
 import AudioPlayer from "../music/Music"
 import Help from '../pages/HelpPage/HelpPage'
 import Music1 from '../music/tobeyou_intro.mp3'
-import Music2 from '../music/tobeyou_outrolong.mp3'
+// import Music2 from '../music/tobeyou_outrolong.mp3'
 import ChapterEnd from '../pages/ChapterEndPage/ChapterEnd'
 
 

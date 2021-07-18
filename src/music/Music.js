@@ -10,7 +10,7 @@ import ReactAudioPlayer from 'react-audio-player';
 
 
 const AudioPlayer = ({ Music }) => {
-  const [isPlaying, setPlaying] = useState(false)
+  const [isPlaying, setPlaying] = useState(true)
 
 
   if (Music == null) {
@@ -59,8 +59,8 @@ const AudioPlayer = ({ Music }) => {
     <>
       <Button onClick={() => togglePlaying() }   style={{ position: 'absolute', top: 0, left: 0, color:'rgba(102,78,252,0.5)' }}> {isPlaying ? <MusicOffIcon /> : <MusicNoteIcon />  }</Button>
       <ReactAudioPlayer
-        src={Music1}
-        autoPlay          
+        src={Music}
+        autoPlay={isPlaying}          
         preload={'metadata'}
         loop 
       
