@@ -23,7 +23,7 @@ function Step4(props) {
             Nadia
           </Typography> 
           <Typography key={props.order}> Just 2 more to go! I'm Muslim (although, as you will see, I'm still figuring what that means to me). What is your religion? </Typography>                               
-                <RadioGroup aria-label="religion" name="religion"  onChange={props.handleChange} >
+                <RadioGroup aria-label="religion" name="religion"  onChange={props.handleChange} value={props.getState("religion", "")}>
                   <FormControlLabel value="CHRISTIAN" control={<Radio />} label="Christian" />
                   <FormControlLabel value="HINDU" control={<Radio />} label="Hindu" />
                   <FormControlLabel value="BUDDHIST" control={<Radio />} label="Buddhist" />

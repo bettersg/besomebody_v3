@@ -23,7 +23,7 @@ function Step3(props) {
                 Nadia
               </Typography> 
               <Typography key={props.order}> I'm female, and I'm Malay. What ethnicity or racial group do you identify as? </Typography>                                
-               <RadioGroup aria-label="race" name="race"  onChange={props.handleChange} >
+               <RadioGroup aria-label="race" name="race"  onChange={props.handleChange} value={props.getState("race", "")}>
                 <FormControlLabel value="CHINESE" control={<Radio />} label="Chinese" />
                 <FormControlLabel value="MALAY" control={<Radio />} label="Malay" />
                 <FormControlLabel value="INDIAN" control={<Radio />} label="Indian" />

@@ -24,7 +24,7 @@ function Step2(props) {
                 Nadia
               </Typography> 
             <Typography key={props.order}> Thanks! I'm {parseInt(props.state.age,10)>19?"just a bit younger than":"about the same age as"}  you! What gender do you identify as?</Typography>
-              <RadioGroup aria-label="gender" name="gender"  onChange={props.handleChange} >
+              <RadioGroup aria-label="gender" name="gender"  onChange={props.handleChange} value={props.getState("gender", "")}>
                 <FormControlLabel value="MALE" control={<Radio />} label="Male" />
                 <FormControlLabel value="FEMALE" control={<Radio />} label="Female" />
                 <FormControlLabel value="OTHER" control={<Radio />} label="Other" />
