@@ -31,7 +31,7 @@ const WhatsApp = (props) => {
     globalVariables,
   } = props
   const classes = useStyles({ image: specialTags.background })
-
+  console.log(currentParagraphs)
   // ========================================================
   // Help to scroll to bottom of the paragraphs render screen
   // ========================================================

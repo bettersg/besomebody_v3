@@ -16,6 +16,7 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 const Whatsapp = (props) => {
   const { currentParagraphs } = props
   const { getStory, choices, setChoice, specialTags } = useInkContext()
+  console.log(currentParagraphs)
 
   // ========================================================
   // Help to scroll to bottom of the paragraphs render screen
