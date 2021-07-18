@@ -57,7 +57,7 @@ const AudioPlayer = ({ Music }) => {
 
   return (
     <>
-      <Button onClick={() => togglePlaying() }   style={{ position: 'absolute', top: 0, left: 0, color:'rgba(102,78,252,0.5)' }}> {isPlaying ? <MusicOffIcon /> : <MusicNoteIcon />  }</Button>
+      <Button onClick={() => togglePlaying() }   style={{ position: 'absolute', top: 0, left: 0, color:'rgba(102,78,252,0.5)' }}> {isPlaying ? <MusicNoteIcon /> : <MusicOffIcon />  }</Button>
       <ReactAudioPlayer
         src={Music1}
         autoPlay          
