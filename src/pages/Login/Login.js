@@ -7,6 +7,7 @@ import {
   Card,
   CardContent,
   CardHeader,
+  Divider,
   Grid,
   Link,
   TextField,
@@ -15,7 +16,10 @@ import {
 import { makeStyles } from '@material-ui/core/styles'
 import { Controller, useForm } from 'react-hook-form'
 import { useAuth } from '../../contexts/AuthContext'
+import { createDbUserIfNotExists } from '../../models/userModel'
 import { useSnackbar } from '../../contexts/SnackbarContext'
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+import firebase from "../../firebase";
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
@@ -41,7 +45,12 @@ const useStyles = makeStyles((theme) => ({
   },
   card: {
     background: "rgba(255,255,255,0.9)",    
-    paddingBottom: 30,
+  },
+  divider: {
+    margin: "24px 0"
+  },
+  grid: {
+    height: '100%',
   },
   header: {
     marginTop: 100,
@@ -49,7 +58,6 @@ const useStyles = makeStyles((theme) => ({
   btn: {
     padding: '10px 50px',
     borderRadius: '40px',
-    marginBottom: '20px',
     background: '#664EFC',
     backgroundColor: '#664EFC',
     textDecoration: 'none',
@@ -63,6 +71,20 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const Login = () => {
+  const firebaseUIConfig = {
+    signInFlow: 'popup',
+    signInOptions: [
+      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+      firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+    ],
+    callbacks: {
+      signInSuccessWithAuthResult: (authResult, redirectUrl) => {
+        attemptLogin(true, null, authResult)
+        return false
+      },
+    },
+  };
+
   const classes = useStyles()
   const history = useHistory()
 
@@ -94,6 +116,35 @@ const Login = () => {
     }
   }, [isSubmitting])
 
+  const attemptLogin = async (isThirdPartyAuth, formValues, authResult) => {
+    try {
+      setIsLoading(true)
+      if (!isThirdPartyAuth) {
+        await login(formValues.email, formValues.password)
+        history.push('/')
+      } else {
+        const user = {
+          email: authResult.user.email,
+          id: authResult.user.uid,
+        }
+        const isCreated = await createDbUserIfNotExists(user)
+        if (isCreated) { // If user was not created, user is an existing user and we skip profilebuilder
+          history.push('/profilebuilder')
+        } else {
+          history.push('/')
+        }
+      }
+
+    } catch (err) {
+      setSnackbar({
+        message: `Failed to log in: ${err.message}`,
+        open: true,
+        type: 'error',
+      })
+    }
+    setIsLoading(false)
+  }
+
   const beforeSubmit = async (values) => {
     switch (true) {
       case !values.email: {
@@ -111,32 +162,20 @@ const Login = () => {
         })
       }
       default: {
-        try {
-          setIsLoading(true)
-          await login(values.email, values.password)
-          history.push('/')
-        } catch (err) {
-          setSnackbar({
-            message: `Failed to log in: ${err.message}`,
-            open: true,
-            type: 'error',
-          })
-        }
-        setIsLoading(false)
+        await attemptLogin(false, values)
       }
     }
   }
 
   return (
     <Box className={classes.background}>
-      <Box  mx="auto"  >
+      <Grid container alignItems="center" justify="center" className={classes.grid}>
         <Card raised={true}  className={classes.card}>
-          <CardHeader
-            title="Login"
-            titleTypographyProps={{ variant: 'h4', align: 'center' }}
-            class={classes.header}
-          />
           <CardContent>
+            <StyledFirebaseAuth uiConfig={firebaseUIConfig} firebaseAuth={firebase.auth()} />
+            <Typography variant="overline" display="block"  align="center">
+              or
+            </Typography>
             <form onSubmit={handleSubmit(beforeSubmit)}>
               <Grid container spacing={1}>
                 <Grid item xs={3}>
@@ -189,25 +228,19 @@ const Login = () => {
                   type="submit"
                   className={classes.btn}
                 >
-                  Submit
+                  Log in
                 </Button>
               </Box>
             </form>
+            <Divider className={classes.divider}/>
+            <Typography variant="body2" color="primary" align="center">
+              <Link to="/signup" component={RouterLink} className={classes.link}>
+              Don't have an account? Sign Up
+              </Link>
+            </Typography>
           </CardContent>
         </Card>
-
-        <Box maxWidth={700} mt={3} mx="auto">
-          <Typography variant="body2" align="center">
-            Don't have an account?
-          </Typography>
-
-          <Typography variant="body2" align="center">
-            <Link to="/signup" component={RouterLink} className={classes.link}>
-              Sign Up
-            </Link>
-          </Typography>
-        </Box>
-      </Box>
+      </Grid>
     </Box>
   )
 }

@@ -1,10 +1,17 @@
 import { firestore } from '../firebase'
 
-export const createDbUser = async (obj) => {
+export const createDbUserIfNotExists = async (obj) => {
   try {
-    await firestore.collection('users').doc(obj.id).set(obj)
+    const userRef = firestore.collection('users').doc(obj.id)
+    const user = await userRef.get()
+    if (!user.exists) {
+      await firestore.collection('users').doc(obj.id).set(obj)
+      return true
+    } else {
+      return false
+    }
   } catch (err) {
-    throw new Error(`Error at createDbUser: ${err}`)
+    throw new Error(`Error at createDbUserIfNotExists: ${err}`)
   }
 }
 
