@@ -47,13 +47,13 @@ const getInkJson = (nameParam) => {
   }
 }
 
-const getUi = ({ currentParagraphs, specialTags , globalVariables }) => {
+const getUi = ({ currentParagraphs, specialTags , whatsAppParagraphs, globalVariables }) => {
   switch (specialTags.ui) {
     case 'scene': {
       return <Scene currentParagraphs={currentParagraphs} />
     }
     case 'whatsapp': {
-      return <WhatsApp currentParagraphs={currentParagraphs} />
+      return <WhatsApp currentParagraphs={whatsAppParagraphs} />
     }
     case 'narrator': {
       return <Narrator currentParagraphs={currentParagraphs} />
@@ -184,6 +184,7 @@ const InkController = () => {
         currentParagraphs,
         specialTags,
         globalVariables,
+        whatsAppParagraphs,
       })}
 
       {/* Render event triggers */}
