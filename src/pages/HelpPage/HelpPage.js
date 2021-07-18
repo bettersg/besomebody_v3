@@ -5,6 +5,8 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import SideMenu from '../SimpleSideMenu/SideMenu'
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,6 +35,9 @@ export default function Help() {
 
   return (
     <div className={classes.root}>
+      <div className="game-menu">
+            <SideMenu  />
+        </div>
       <Typography variant="h3">Help Screen</Typography>    
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary

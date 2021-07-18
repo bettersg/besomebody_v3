@@ -15,6 +15,7 @@ import { IntroBanner } from "../../components/IntroBanner"
 import { useInkContext } from '../../contexts/InkContext'
 import { Link } from 'react-router-dom'
 import CharacterAvatar from "./CharacterAvatar";
+import SideMenu from '../SimpleSideMenu/SideMenu'
 
 // Constants
 import "./styles.scss"
@@ -99,6 +100,9 @@ export const CharacterChoicePage = () => {
 
     return (
         <Box className={classes.CharChoiceWrapper} >
+             <div className="game-menu">
+                <SideMenu  />
+            </div>
             <Typography className={classes.scrollHeading}>Character List</Typography>
             <div className="CharacterChoices__scrollMenu">
                 {characters.map((persona, i) => {
