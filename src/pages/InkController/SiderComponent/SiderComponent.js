@@ -119,7 +119,7 @@ export default function SwipeableTemporaryDrawer(props) {
           </div>
 
           <div className="SideMenu__menuitems__item">
-          <Link to="/help" className="SideMenu__menuitems__label"><SVG src="/side_menu/help.svg" className="SideMenu__menuitems__icons"/>
+          <Link to="/help" target="_blank" className="SideMenu__menuitems__label"><SVG src="/side_menu/help.svg" className="SideMenu__menuitems__icons"/>
             <span>Help</span></Link>
           </div>
 
