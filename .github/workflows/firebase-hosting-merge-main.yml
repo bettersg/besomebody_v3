@@ -10,7 +10,7 @@ jobs:
       REACT_APP_NAME: ToBeYou
       REACT_APP_VERSION: 1
       REACT_APP_DESCRIPTION: ToBeYou
-      REACT_APP_HOMEPAGE: https://tobeyou.sg
+      REACT_APP_HOMEPAGE: https://staging.tobeyou.sg
       REACT_APP_TITLE: ToBeYou
       REACT_APP_THEME_PRIMARY_COLOR: blue
       REACT_APP_THEME_SECONDARY_COLOR: red
