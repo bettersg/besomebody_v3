@@ -268,12 +268,13 @@ You sure ah, boy. #speaker_right
 + Yes[]. I'm sure. #speaker_self
     What style you want? Medium, or fade, or --   #speaker_right
     I’m going NS tomorrow, so just cut very short.   #speaker_self	
-    #background:bg_aman_barbershopcrowdstaring.jpg
+    #background:bg_aman_barbershophairfloor1.jpg
     Oh my god, are passers-by glancing in and gawking at me? And is that boy taking a video of my haircut!? #inner_monologue
     Ok.  #speaker_right
-    #background:bg_aman_barbershophairfloor.jpg
+    #background:bg_aman_barbershophairfloor2.jpg
     You want to keep? #speaker_right
     Huh? #speaker_self	
+    #background:bg_aman_barbershophairfloor3.jpg
     Some Singh customer ask to keep their hair. I can put in plastic bag for you.  #speaker_right
     Er… no, it’s okay. Thank you.  #speaker_self	
 
@@ -469,7 +470,7 @@ Thanks buddy. #speaker_left
 BMT Passing Out Parade. #title
 My dad cried at the parade. He claims he didn't but I could see his eyes were wet when we hugged.
 Mum was just happy I survived, I think.
-Jothi made some snarky comments about by biceps being bigger than my brain now, but she seemed genuinely proud too. 
+Jothi made some snarky comments about my biceps being bigger than my brain now, but she seemed genuinely proud too. 
 Sel came too. My parents finally met her. And liked her.
 Lukman saw her and gave me a big wink, then he brought his mum over to say hi.
 We took so many photos that my phone battery died.
