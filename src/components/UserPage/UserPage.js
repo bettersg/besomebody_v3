@@ -20,6 +20,7 @@ import { ReactComponent as NoDataIllustration } from "../../illustrations/no-dat
 
 import { useAuth } from '../../contexts/AuthContext'
 import { useSnackbar } from '../../contexts/SnackbarContext'
+import SideMenu from '../../pages/SimpleSideMenu/SideMenu'
 
 
 const useStyles = makeStyles({
@@ -141,6 +142,9 @@ function UserPage() {
   if (hasProfile) {
     return (
       <Box >
+        <div className="game-menu">
+            <SideMenu  />
+        </div>
         <UserCard user={user} />
         <br />
         <Box className={classes.root}>
@@ -156,11 +160,16 @@ function UserPage() {
   }
 
   return (
-    <EmptyState
+    <>
+      <div className="game-menu">
+            <SideMenu  />
+        </div>
+      <EmptyState
       image={<NoDataIllustration />}
       title="No profile."
       description="The user hasn‘t setup their profile."
-    />
+      />
+    </>
   );
 }
 
