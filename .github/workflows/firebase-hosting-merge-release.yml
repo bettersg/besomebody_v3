@@ -31,6 +31,7 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BESOMEBODY }}'
           channelId: live
-          projectId: besomebody-prod
+          projectId: besomebody
+          target: besomebody-prod
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
