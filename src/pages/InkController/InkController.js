@@ -105,22 +105,48 @@ const InkController = () => {
   } = useInkContext()
 
   
-  // ==============================================================
-  // Filter paragraphs based on current knot
-  // ==============================================================
-  const [currentParagraphs, setCurrentParagraphs] = useState([])
+  // // ==============================================================
+  // // Filter paragraphs based on current knot
+  // // ==============================================================
+  // const [currentParagraphs, setCurrentParagraphs] = useState([])
 
-  useEffect(() => {
-    if (currentKnot || paragraphs[paragraphs.length - 1]?.currentKnot) {
-      const nextParagraphs = paragraphs.filter((paragraph) => {
-        return paragraph.currentKnot === currentKnot
-      })
-      return setCurrentParagraphs([...nextParagraphs])
-    }
+  // useEffect(() => {
+  //   if (currentKnot || paragraphs[paragraphs.length - 1]?.currentKnot) {
+  //     const nextParagraphs = paragraphs.filter((paragraph) => {
+  //       return paragraph.currentKnot === currentKnot
+  //     })
+  //     return setCurrentParagraphs([...nextParagraphs])
+  //   }
 
-    setCurrentParagraphs(paragraphs)
-    // Run this useEffect whenever paragraphs or currentKnot get updated
-  }, [paragraphs, currentKnot])
+  //   setCurrentParagraphs(paragraphs)
+  //   // Run this useEffect whenever paragraphs or currentKnot get updated
+  // }, [paragraphs, currentKnot])
+
+   // ==============================================================
+   // Filter paragraphs based on current knot
+   // ==============================================================
+   const [currentParagraphs, setCurrentParagraphs] = useState([])
+   const [whatsAppParagraphs, setWhatsAppParagraphs] = useState([])
+ 
+   useEffect(() => {
+     if (currentKnot || paragraphs[paragraphs.length - 1]?.currentKnot) {
+       const nextParagraphs = paragraphs.filter((paragraph) => {
+         return paragraph.currentKnot === currentKnot
+       })
+ 
+       if (specialTags.ui === 'whatsapp') {
+         setWhatsAppParagraphs([...nextParagraphs])
+         return setCurrentParagraphs([...whatsAppParagraphs, ...nextParagraphs])
+       }
+ 
+       return setCurrentParagraphs([...nextParagraphs])
+     }
+ 
+     setCurrentParagraphs(paragraphs)
+     // Run this useEffect whenever paragraphs, currentKnot, or specialTags get updated
+   }, [paragraphs, currentKnot, specialTags])
+
+
 
   // ==============================================================
   // Save data when a knot change is detected
