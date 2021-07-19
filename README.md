@@ -15,6 +15,6 @@ When the PR is merged to `main`, GitHub Actions will deploy the staging site.
 
 When `release` is updated, GitHub Actions will deploy the production site. 
 
-To make a release, you can thus checkout `release` locally, merge in `main`, and then push. Alternatively, you can raise a PR to merge `main` into `release`.
+To make a release, you can raise a PR to merge `main` into `release`. (Lead dev can checkout `release` locally, merge in `main`, and then push directly.)
 
 The preview, staging and production sites are all configured to use the same Firebase app. Auth, data storage, and other services are thus common across all environments.
