@@ -79,7 +79,7 @@ const introParagraphs = {
     "choices":null,
   },
   { step:5,
-    "text": "To play the game, we'll need to create an account for you using your email address and a password. We will  use this to save your game, and if we happen to find interesting trends, we will share insights that we discover! No matter what, this data will never be used to identify you!",
+    "text": "To play the game, we'll need to create an account for you. We will use this to save your game, analyse trends, and share interesting insights! No matter what, this data will never be used to identify you!",
     "choices":null,
   },
 ]}
