@@ -13,9 +13,9 @@ import Grid from '@material-ui/core/Grid'
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord'
 import PacmanLoader from 'react-spinners/PacmanLoader'
 import { useInkContext } from '../../contexts/InkContext'
-import { CHARACTER_MAP } from '../../models/storyMap'
-import NadiaInk from '../../stories/nadia.ink.json'
-import AmanInk from '../../stories/aman.ink.json'
+// import { CHARACTER_MAP } from '../../models/storyMap'
+// import NadiaInk from '../../stories/nadia.ink.json'
+// import AmanInk from '../../stories/aman.ink.json'
 
 import './styles.scss'
 
@@ -32,50 +32,50 @@ const useStyles = makeStyles({
   }
 })
 
-const getInkJson = (nameParam) => {
-  switch (nameParam) {
-    case 'nadia': {
-      return {
-        inkJson: NadiaInk,
-        characterId: 1,
-      }
-    }
-    case 'aman': {
-      return {
-        inkJson: AmanInk,
-        characterId: 2,
-      }
-    }
-    default: {
-      return null
-    }
-  }
-}
+// const getInkJson = (nameParam) => {
+//   switch (nameParam) {
+//     case 'nadia': {
+//       return {
+//         inkJson: NadiaInk,
+//         characterId: 1,
+//       }
+//     }
+//     case 'aman': {
+//       return {
+//         inkJson: AmanInk,
+//         characterId: 2,
+//       }
+//     }
+//     default: {
+//       return null
+//     }
+//   }
+// }
 
 export default function ChapterBox(props) {
   const classes = useStyles()
-  const { chaptDetails, total, userFromDb } = props
+  const { chaptDetails, total, userFromDb , characterId } = props
   const history = useHistory()
 
   // used for the image preloader
   const [isLoading, setIsLoading] = useState(false)
 
-  // ==============================================================
-  // Get name param from the route path
-  // ==============================================================
+  // // ==============================================================
+  // // Get name param from the route path
+  // // ==============================================================
   const { name } = useParams()
 
-  // ==============================================================
-  // Get the ink json file, character id, and chapter id
-  // ==============================================================
-  const { inkJson, characterId } = getInkJson(name)
+  // // ==============================================================
+  // // Get the ink json file, character id, and chapter id
+  // // ==============================================================
+  // const { inkJson, characterId } = getInkJson(name)
 
-  // ==============================================================
-  // Get the useInk hook initialiser from the context, and other variables if needed
-  // ==============================================================
+  // // ==============================================================
+  // // Get the useInk hook initialiser from the context, and other variables if needed
+  // // ==============================================================
   const {
     // useInk hook initialiser
-    initialiseUseInkHook,
+    // initialiseUseInkHook,
     isStoryStarted,
     hasSavedState,
     loadSavedStory,
@@ -84,12 +84,12 @@ export default function ChapterBox(props) {
     startStoryFrom,
   } = useInkContext()
 
-  // ==============================================================
-  // Initialise the useInk hook within a useEffect to prevent multiple instances of initialising
-  // ==============================================================
-  useEffect(() => {
-    initialiseUseInkHook(inkJson, characterId)
-  }, [])
+  // // ==============================================================
+  // // Initialise the useInk hook within a useEffect to prevent multiple instances of initialising
+  // // ==============================================================
+  // useEffect(() => {
+  //   initialiseUseInkHook(inkJson, characterId)
+  // }, [])
 
   const getEndingsUnlocked = () => {
     const currentChapterInUserDb = userFromDb?.achievements?.find(
@@ -125,9 +125,14 @@ export default function ChapterBox(props) {
     startStoryFrom(chaptDetails.knotTag)
     history.push('/story/' + name)
   }
+  
+  // const handleLoadSavedStory = () => {
+  //   loadSavedStory()
+  //   history.push('/story/' + name)
+  // }
 
   return (
-    <Card className={classes.root} key={chaptDetails.number}>
+    <Card className={classes.root} key={chaptDetails.number}>     
       <Grid container>
           <CardContent className={classes.card}>
             <div className="ChapterBox">

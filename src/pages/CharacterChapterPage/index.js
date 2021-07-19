@@ -2,11 +2,11 @@ import React, { useEffect, useState }from "react";
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import "./styles.scss"
 import "../styles.css"
-import { useInkContext } from '../../contexts/InkContext'
+import { useHistory } from 'react-router-dom'
 
 import SVG from 'react-inlinesvg';
 import { getDbUser }  from '../../models/userModel.js';
-import { Box, Fade, Grid, Typography, Avatar } from '@material-ui/core'
+import { Button, Box, Fade, Grid, Typography, Avatar } from '@material-ui/core'
 import ChapterBox from "./ChapterBox"
 import { IntroBanner } from "../../components/IntroBanner"
 
@@ -14,6 +14,11 @@ import { CHARACTER_MAP } from '../../models/storyMap'
 import { useAuth } from '../../contexts/AuthContext'
 import { useParams , Link } from 'react-router-dom'
 import SideMenu from '../SimpleSideMenu/SideMenu'
+
+import { useInkContext } from '../../contexts/InkContext'
+
+import NadiaInk from '../../stories/nadia.ink.json'
+import AmanInk from '../../stories/aman.ink.json'
 
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -42,9 +47,31 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
+const getInkJson = (nameParam) => {
+    switch (nameParam) {
+      case 'nadia': {
+        return {
+          inkJson: NadiaInk,
+          characterId: 1,
+        }
+      }
+      case 'aman': {
+        return {
+          inkJson: AmanInk,
+          characterId: 2,
+        }
+      }
+      default: {
+        return null
+      }
+    }
+  }
+
 const CharacterChapterPage = (props) => {
     const classes = useStyles()  
     const { name } = useParams();
+    const history = useHistory()
+
     const persona = CHARACTER_MAP.find((character) => character.linkName === name);
     // Auth Context
 	const { currentUser } = useAuth()
@@ -58,18 +85,43 @@ const CharacterChapterPage = (props) => {
       
 	  getUser()
 	}, [currentUser.id])
+    
+    // ==============================================================
+  // Get name param from the route path
+  // ==============================================================
+//   const { name } = useParams()
 
-    const {
-        // useInk hook initialiser
-        initialiseUseInkHook,
-        isStoryStarted,
-        hasSavedState,
-        loadSavedStory,
+  // ==============================================================
+  // Get the ink json file, character id, and chapter id
+  // ==============================================================
+  const { inkJson, characterId } = getInkJson(name)
+
+  // ==============================================================
+  // Get the useInk hook initialiser from the context, and other variables if needed
+  // ==============================================================
+  const {
+    // useInk hook initialiser
+    initialiseUseInkHook,
+    isStoryStarted,
+    hasSavedState,
+    loadSavedStory,
+
+    // States    
+    startStoryFrom,
+  } = useInkContext()
+
+  // ==============================================================
+  // Initialise the useInk hook within a useEffect to prevent multiple instances of initialising
+  // ==============================================================
+  useEffect(() => {
+    initialiseUseInkHook(inkJson, characterId)
+  }, [])
     
-        // States    
-        startStoryFrom,
-      } = useInkContext()
-    
+  const handleLoadSavedStory = () => {
+    loadSavedStory()
+    history.push('/story/' + name)
+  }
+
 
     return (
         <Box className={classes.CharChaptWrapper} >
@@ -97,17 +149,20 @@ const CharacterChapterPage = (props) => {
 
                     </div>
                     <Typography>{persona.description}</Typography>
+                    {hasSavedState &&
+                        <Button variant="contained" color="primary" fullWidth onClick={handleLoadSavedStory}>LOAD AUTOSAVE</Button>
+                    }
                 </div>
             </div>
             {/* {hasSavedState && (
-                <IntroBanner loadSavedStory={loadSavedStory} persona={persona} />
+                <IntroBanner loadSavedStory={handleLoadSavedStory} persona={persona} />
             )} */}
             <div style={{ paddingTop: "24px" }}>
                 {userFromDb && persona.chapters.length > 0 
                     ? persona.chapters.map((chapt,i) => {
                         return (
                             <div style={{display: "flex", justifyContent: "center"}}  key={i}>
-                                <ChapterBox userFromDb={userFromDb} chaptDetails={chapt} total={persona.chapters.length} key={i} />
+                                <ChapterBox userFromDb={userFromDb} chaptDetails={chapt} total={persona.chapters.length} characterId={characterId} key={i} />
                             </div>
                         )
                     })

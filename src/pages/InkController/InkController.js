@@ -13,6 +13,7 @@ import { CHARACTER_MAP } from '../../models/storyMap'
 import { useInkContext } from '../../contexts/InkContext'
 import Narrator from '../NarratorPage/Narrator'
 import Reflection from '../ReflectionsPage/Reflection'
+import LoadGame from '../LoadGamePage/LoadGame'
 
 import NadiaInk from '../../stories/nadia.ink.json'
 import AmanInk from '../../stories/aman.ink.json'
@@ -99,7 +100,7 @@ const InkController = () => {
     specialTags,
     currentKnot,
     globalVariables,
-
+    isStoryStarted,
     // Methods
     saveStory,
   } = useInkContext()
@@ -150,9 +151,11 @@ const InkController = () => {
 
   return (
     <Container maxWidth="lg" className="ink-controller">
-      {currentParagraphs[0] ? null :
-        <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><Box my={10}>Please start story from the <a href="/">main menu</a>.</Box>
-        </Container>}
+      {isStoryStarted ? null :       
+        history.push('/chapters/'+ name )
+        // <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><Box my={10}>Please start story from your last saved state <Button variant="contained" color="primary" fullWidth onClick={() => loadSavedStory()}>LOAD AUTOSAVE</Button></Box>
+        // </Container>
+      }
 
       {getUi({
         currentParagraphs,
