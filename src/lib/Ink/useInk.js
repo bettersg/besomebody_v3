@@ -51,8 +51,8 @@ const useInk = (json, character) => {
     }
 
     // Reject activation of useInk if user is not logged in
-    if (currentUser) getSaveStates()
-  }, [currentUser])
+    if (currentUser && saveDataId) getSaveStates()
+  }, [currentUser, saveDataId])
 
   // Reject activation of useInk if user is not logged in
   if (!currentUser) return
@@ -153,7 +153,7 @@ const useInk = (json, character) => {
     setSpecialTags({})
     setGlobalVariables({})
     setCurrentKnot(null)
-    inkStory.resetStory()
+    // inkStory.resetStory()
   }
 
   /**
@@ -184,6 +184,8 @@ const useInk = (json, character) => {
       choices,
       userId: currentUser.id,
       character,
+      id: saveDataId,
+      email: currentUser.email,
     }
 
     await createDbSavedStates(saveData, saveDataId)
