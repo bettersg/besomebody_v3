@@ -1,4 +1,3 @@
-To Be Aman
 /*
 For cut-and-paste ease
 #knot:nadia_1_intro
@@ -75,7 +74,6 @@ VAR chapter_9_ending = 0
 #ui:narrator
 #background:bg_aman_intro.jpg
 #music:aman_intro.mp3
-.
 ~ chapter_id = 1
 Aman Singh #title
 Sat Sri Akaal (God is Truth)! I am Aman Singh. 
@@ -270,7 +268,7 @@ You sure ah, boy. #speaker_right
 + Yes[]. I'm sure. #speaker_self
     What style you want? Medium, or fade, or --   #speaker_right
     I’m going NS tomorrow, so just cut very short.   #speaker_self	
-    #background:bg_aman_barbershophairfloor.jpg
+    #background:bg_aman_barbershophairfloor1.jpg
     Oh my god, are passers-by glancing in and gawking at me? And is that boy taking a video of my haircut!? #inner_monologue
     Ok.  #speaker_right
     #background:bg_aman_barbershophairfloor2.jpg
@@ -541,7 +539,7 @@ RECRUIT SINGH! Ok, take this. Sit there with the rest. #speaker_left
 Thank you, sergeant. #speaker_self
 Ok, first interaction wasn't so bad #inner_monologue
 #speaker_left_image:cha_aman_lukman.png
-#speaker_left_name:Rec Lukman Wahid
+#speaker_left_name:Lukman
 Hello! I’m Lukman. #speaker_left
 Hey, I’m Aman. Which section are you in? #speaker_self
 Section 2. You? #speaker_left
