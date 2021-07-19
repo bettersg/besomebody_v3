@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams , useHistory } from 'react-router-dom'
-import { Box, Container, Typography } from '@material-ui/core'
+import { Box, Container, Button, Typography } from '@material-ui/core'
 import NotFoundPage from '../../components/NotFoundPage'
 import WhatsApp from '../WhatsappPage/Whatsapp'
 import Scene from '../ScenePage/Scene'
@@ -28,7 +28,7 @@ const getInkJson = (nameParam) => {
       return {
         inkJson: NadiaInk,
         characterId: 1,
-        chapterId: 1,
+        // chapterId: 1,
       }
     }
     case 'aman': {
@@ -38,7 +38,7 @@ const getInkJson = (nameParam) => {
       return {
         inkJson: AmanInk,
         characterId: 2,
-        chapterId: 1,
+        // chapterId: 1,
       }
     }
     default: {
@@ -102,6 +102,7 @@ const InkController = () => {
 
     // Methods
     saveStory,
+    loadSavedStory,
   } = useInkContext()
 
   
@@ -130,13 +131,22 @@ const InkController = () => {
  
    useEffect(() => {
      if (currentKnot || paragraphs[paragraphs.length - 1]?.currentKnot) {
+       
        const nextParagraphs = paragraphs.filter((paragraph) => {
          return paragraph.currentKnot === currentKnot
        })
- 
+        
        if (specialTags.ui === 'whatsapp') {
-         setWhatsAppParagraphs([...nextParagraphs])
-         return setCurrentParagraphs([...whatsAppParagraphs, ...nextParagraphs])
+         if (whatsAppParagraphs.length > 1)
+         {
+         
+          setWhatsAppParagraphs([...nextParagraphs])
+           return setCurrentParagraphs([...whatsAppParagraphs, ...nextParagraphs])
+         }
+         else {          
+          setWhatsAppParagraphs([...nextParagraphs])
+          return setCurrentParagraphs([...whatsAppParagraphs, ...nextParagraphs])
+         }
        }
  
        return setCurrentParagraphs([...nextParagraphs])
@@ -177,7 +187,7 @@ const InkController = () => {
   return (
     <Container maxWidth="lg" className="ink-controller">
       {currentParagraphs[0] ? null :
-        <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><Box my={10}>Please start story from the <a href="/">main menu</a>.</Box>
+        <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><Box my={10}>Please start story from your last saved state <Button variant="contained" color="primary" fullWidth onClick={() => loadSavedStory()}>LOAD AUTOSAVE</Button></Box>
         </Container>}
 
       {getUi({
