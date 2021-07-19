@@ -270,7 +270,7 @@ You sure ah, boy. #speaker_right
 + Yes[]. I'm sure. #speaker_self
     What style you want? Medium, or fade, or --   #speaker_right
     I’m going NS tomorrow, so just cut very short.   #speaker_self	
-    #background:bg_aman_barbershophairfloor.jpg
+    #background:bg_aman_barbershophairfloor1.jpg
     Oh my god, are passers-by glancing in and gawking at me? And is that boy taking a video of my haircut!? #inner_monologue
     Ok.  #speaker_right
     #background:bg_aman_barbershophairfloor2.jpg
