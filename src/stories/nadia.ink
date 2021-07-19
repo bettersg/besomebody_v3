@@ -554,7 +554,7 @@ Your bak chor mee. And your chopsticks. Which were handling.. #speaker_self
 Oh! Oh crap. The chopsticks were not halal. #speaker_left
 + [Yeah...] Yeah. Well not the chopsticks, but it’s fine —  #speaker_self
 + [Not just that...] Not just that, the bak chor mee that you were eating with them is not halal.  #speaker_self
-- geez, I’m sorry Nad. It totally slipped my mind. I really forgot. #speaker_left
+- Geez, I’m sorry Nad. It totally slipped my mind. I really forgot. #speaker_left
 It’s fine.. #speaker_self
 No, I mean it! I usually remind myself cos I know it’s important to you, but — #speaker_left
 — today the tempeh called out to you? #speaker_self

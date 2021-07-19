@@ -541,7 +541,7 @@ RECRUIT SINGH! Ok, take this. Sit there with the rest. #speaker_left
 Thank you, sergeant. #speaker_self
 Ok, first interaction wasn't so bad #inner_monologue
 #speaker_left_image:cha_aman_lukman.png
-#speaker_left_name:Rec Lukman Wahid
+#speaker_left_name:Lukman
 Hello! I’m Lukman. #speaker_left
 Hey, I’m Aman. Which section are you in? #speaker_self
 Section 2. You? #speaker_left
