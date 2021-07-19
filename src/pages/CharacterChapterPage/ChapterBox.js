@@ -26,6 +26,10 @@ const useStyles = makeStyles({
     textAlign: 'left',
     marginBottom: '10px',
   },
+  card: {
+    paddingTop: "24px", 
+    width: "100%", 
+  }
 })
 
 const getInkJson = (nameParam) => {
@@ -125,7 +129,7 @@ export default function ChapterBox(props) {
   return (
     <Card className={classes.root} key={chaptDetails.number}>
       <Grid container>
-          <CardContent>
+          <CardContent className={classes.card}>
             <div className="ChapterBox">
               <div className="ChapterBox__chaptDetails">
                 {/* TODO: this needs to be pulled from the player save data, not from the story*/}
@@ -141,7 +145,11 @@ export default function ChapterBox(props) {
               </div>
 
               <div className="ChapterBox__chaptTitle">
-                <div className="ChapterBox__chaptTitle--name">{chaptDetails.title}</div>
+                <div className="ChapterBox__chaptTitle--text">
+                  <div className="ChapterBox__chaptTitle--name">{chaptDetails.title}</div>
+                  <div className="ChapterBox__summary">{chaptDetails.summary}</div>
+                </div>
+
                 {isLoading ? (
                   <div className="spinner-div">
                     <PacmanLoader color="#e5e5e5" loading={isLoading} size={80} />
@@ -165,7 +173,7 @@ export default function ChapterBox(props) {
               </div>
 
             </div>
-            <div className="ChapterBox__summary">{chaptDetails.summary}</div>
+            
 
             {chaptDetails.playable == true ?
               <div className="ChapterBox__endings">
