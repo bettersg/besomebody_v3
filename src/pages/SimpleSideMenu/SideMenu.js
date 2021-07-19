@@ -10,7 +10,7 @@ import { getDbUser } from '../../models/userModel.js';
 
 import "../InkController/SiderComponent/style.scss"; 
 
-export default function SideMenu() {
+export default function SideMenu ({src="/side_menu/menu-icon.svg", ...rest}) {
   const history = useHistory(); 
   
   // console.log(persona)
@@ -126,7 +126,7 @@ export default function SideMenu() {
     <div className="MenuWrapper">
       {['left'].map((anchor) => (
         <React.Fragment key={anchor}>
-          <SVG src="/side_menu/menu-icon.svg" onClick={toggleDrawer(anchor, true)} className="MenuWrapper__menuButton" />
+          <SVG src={src} onClick={toggleDrawer(anchor, true)} className="MenuWrapper__menuButton" />
             <SwipeableDrawer
               anchor={anchor}
               open={state[anchor]}

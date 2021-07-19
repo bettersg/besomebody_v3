@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "besomebody"
+  },
+  "targets": {
+    "besomebody": {
+      "hosting": {
+        "production": [
+          "besomebody-prod"
+        ],
+        "staging": [
+          "besomebody"
+        ]
+      }
+    }
+  }
+}

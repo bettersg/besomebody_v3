@@ -41,7 +41,7 @@ const IntroMaster = (props) => {
    
     
     return (
-      <Box >
+      <Box className={classes.background}>
         
         <OpeningSequence />
            

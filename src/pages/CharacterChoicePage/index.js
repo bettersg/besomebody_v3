@@ -100,19 +100,36 @@ export const CharacterChoicePage = () => {
 
     return (
         <Box className={classes.CharChoiceWrapper} >
-             <div className="game-menu">
-                <SideMenu  />
+            <div className="CharacterChoices__header">
+                <div className="CharacterChoices__header--placeholder"></div>
+                <img src="/commons/tobeyou-logo.svg" />
+                <SideMenu src="/commons/menu-icon.svg" />
             </div>
-            <Typography className={classes.scrollHeading}>Character List</Typography>
+             {/* <div className="game-menu"> */}
+            {/* </div> */}
+            
+            {/* <Typography className={classes.scrollHeading}>Character List</Typography> */}
             <div className="CharacterChoices__scrollMenu">
                 {characters.map((persona, i) => {
                     return (
-                        <div className="CharacterChoices__scrollMenu__character">                            
-                            <Avatar
-                                alt={persona.name}
-                                src={persona.profileImage}
-                                className={classes.scrollmenu} 
-                            />
+                        <div className="CharacterChoices__scrollMenu__character">   
+                            {persona.playable == true ? 
+                                <Link to={'/chapters/' + persona.linkName}>
+                                    <Avatar
+                                        alt={persona.name}
+                                        src={persona.profileImage}
+                                        className={classes.scrollmenu} 
+                                    />
+                                </Link>
+                                :
+                                <Avatar
+                                    alt={persona.name}
+                                    src={persona.profileImage}
+                                    className={classes.scrollmenu} 
+                                />
+                            }
+
+                            
                             <div className={`${persona.playable == false ? "disable" : "active"}`} >{persona.name.split(" ")[0]}</div>                            
                         </div>
                         
@@ -120,6 +137,7 @@ export const CharacterChoicePage = () => {
                 })}
                 
             </div>
+            <img src="/character_choice_page/start_playing_banner.png" className="CharacterChoices__banner" />
 
             {/* <!-- Continue Playing Banner --> */}
             {/* 
@@ -157,6 +175,7 @@ export const CharacterChoicePage = () => {
 
                                 <div>
                                     <div className="profile_Name">{persona.name}</div>
+                                    <div className="profile_status">Chapter 1 available</div>
                                     {/* <div className="profile_status">Not played</div> */}
                                 </div>
                             </div>
@@ -164,7 +183,7 @@ export const CharacterChoicePage = () => {
                             <Link to={'/chapters/' + persona.linkName}><img className="CharacterChoices__card--imagePost" src={persona.characterIntroImage}/></Link>
 
                             {/* like and share icons */}
-                            <div className="CharacterChoices__card--profileButtons">
+                            {/* <div className="CharacterChoices__card--profileButtons">
                                
                                     <img src="/character_choice_page/heart.svg" width="24px" height="24px"/>
                                
@@ -172,10 +191,10 @@ export const CharacterChoicePage = () => {
                                 
                                     <img src="/character_choice_page/share.svg" width="24px" height="24px"/>
                                 
-                            </div>
+                            </div> */}
 
                             <div className="CharacterChoices__card--description">
-                                <div className="likes">{randNum()} likes</div>
+                                {/* <div className="likes">{randNum()} likes</div> */}
                                 <div className="post_caption">
                                     <p><b>{persona.name.split(" ")[0]}</b>:  {persona.description}</p>
                                 </div>
