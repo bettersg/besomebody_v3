@@ -1,4 +1,3 @@
-To Be Aman
 /*
 For cut-and-paste ease
 #knot:nadia_1_intro
@@ -75,7 +74,6 @@ VAR chapter_9_ending = 0
 #ui:narrator
 #background:bg_aman_intro.jpg
 #music:aman_intro.mp3
-.
 ~ chapter_id = 1
 Aman Singh #title
 Sat Sri Akaal (God is Truth)! I am Aman Singh. 
