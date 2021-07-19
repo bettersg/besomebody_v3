@@ -150,7 +150,7 @@ Ok, but you go and think about it la. I really think you should just cut. Don’
 === aman_1_2_narration ===
 #knot:aman_1_2_narration
 #ui:narrator
-#background:bg_aman_bedroom.jpg
+#background:bg_aman_mirrorinroom.jpg
 Later that night...
 
 -> aman_1_2
@@ -255,8 +255,10 @@ Yes, boy?  #speaker_right
 Not crowded. Thank you, Waheguru. #inner_monologue
 I want to cut my hair. #speaker_self
 Cut beard or cut hair?   #speaker_right
+#background:bg_aman_barbermirror.jpg
 Don’t think. Just say it. Just say it.  #inner_monologue
 Cut everything.  #speaker_self
+#background:bg_aman_barbershopinside.jpg
 Ok. Sit. #speaker_right
 You sure ah, boy. #speaker_right
 + [No] I uh ... ummm   #speaker_self
@@ -276,6 +278,7 @@ You sure ah, boy. #speaker_right
     Huh? #speaker_self	
     #background:bg_aman_barbershophairfloor3.jpg
     Some Singh customer ask to keep their hair. I can put in plastic bag for you.  #speaker_right
+    #speaker_right_image:pixel.png
     Er… no, it’s okay. Thank you.  #speaker_self	
 
     -> aman_1_5_narration
@@ -316,7 +319,7 @@ Aman? #speaker_1
 - I cut my hair to prepare NS today. It's very short now.    #speaker_self 
 
 #ui:scene
-#background:bg_aman_haircutselfie.jpg
+#background:bg_aman_aftercut.jpg
 Why isn’t anyone saying anything? #inner_monologue
 They've all seen the message. Why don't the reply? #inner_monologue
 I don’t care what they think. Do I care what they think? #inner_monologue
@@ -489,9 +492,9 @@ My family went out for dinner that night.
 #speaker_right_name:Mama
 Our Aman looked so handsome at his passing out parade! #speaker_right
 You did it, son. I am proud of you. Of course, you would have looked more handsome wearing a turban instead of a beret. #speaker_left
-Enough motu, it’s not the time.  #speaker_right
+Enough motu (endearment), it’s not the time.  #speaker_right
 Aman, turban or no turban, you will always be my hero. #speaker_right
-Aman beta, now that the hardest part is over, you should start thinking about what you will do after NS.  #speaker_right
+Aman beta (dear), now that the hardest part is over, you should start thinking about what you will do after NS.  #speaker_right
 + [I was thinking of trying my hand at theatre and short films, mum.]
     #speaker_right_image:cha_aman_jothi.png
     #speaker_right_name:Jothi    
@@ -600,7 +603,7 @@ Sure ah? Ok, I’m going to say prayers - maghrib now. See you at dinner.  #spea
 === aman_1_11_narration ===
 #knot:aman_1_11_narration
 #ui:narrator
-#background:bg_aman_bmttoilet.jpg
+#background:bg_aman_bmtmirrorsad.jpg
 Later that night, right after I wash my hair.
 
 -> aman_1_11
@@ -624,11 +627,12 @@ Like hantu sia. #speaker_right
 + [Joke back]
     Pontia-- #speaker_right
     #speaker_right_image:cha_aman_bunkmate2_afraid.png
-    #background:bg_aman_bmttoilet_scary.jpg
     They want scary? I'll give them scary. #inner_monologue
+    #background:bg_aman_bmtpotianak.jpg
     AaaaaahahahahAHAHAHAHA! Aahaha! WooooooahahahHAHAHAH! #speaker_self
     OuuuuuuuaahahahhAHHHAHA! WAHkakaKAKKAKA! #speaker_self
     @$*@$! -- What the -- #speaker_right
+    #background:bg_aman_bmtmirrorgrin.jpg
     HAHAHAHA Dei! That was brilliant la. #speaker_left
 #background:bg_aman_bmttoilet.jpg
 - Good night everybody.  #speaker_self

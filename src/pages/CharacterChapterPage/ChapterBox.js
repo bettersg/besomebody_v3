@@ -26,6 +26,10 @@ const useStyles = makeStyles({
     textAlign: 'left',
     marginBottom: '10px',
   },
+  card: {
+    paddingTop: '24px',
+    width: '100%',
+  },
 })
 
 const getInkJson = (nameParam) => {
@@ -76,7 +80,10 @@ export default function ChapterBox(props) {
     hasSavedState,
     loadSavedStory,
 
-    // States    
+    // Methods
+    resetStory,
+
+    // States
     startStoryFrom,
   } = useInkContext()
 
@@ -84,6 +91,7 @@ export default function ChapterBox(props) {
   // Initialise the useInk hook within a useEffect to prevent multiple instances of initialising
   // ==============================================================
   useEffect(() => {
+    resetStory()
     initialiseUseInkHook(inkJson, characterId)
   }, [])
 
@@ -92,16 +100,24 @@ export default function ChapterBox(props) {
       (achievement) =>
         achievement.character === characterId &&
         achievement.chapter === chaptDetails.chapterId
-    );
-    return currentChapterInUserDb ? currentChapterInUserDb.endings.length : 0;
+    )
+    return currentChapterInUserDb ? currentChapterInUserDb.endings.length : 0
   }
 
   var rows = []
   for (var i = 0; i < getEndingsUnlocked(); i++) {
-      rows.push(<FiberManualRecordIcon style={{fontSize:8, color: "#999999", marginRight: 1}}/>);
+    rows.push(
+      <FiberManualRecordIcon
+        style={{ fontSize: 8, color: '#999999', marginRight: 1 }}
+      />
+    )
   }
-  for (var j = 0; j < chaptDetails.endings.length - getEndingsUnlocked(); j ++) {
-      rows.push(<FiberManualRecordIcon style={{fontSize:8, color: "#E5E5E5", marginRight: 1}}/>);
+  for (var j = 0; j < chaptDetails.endings.length - getEndingsUnlocked(); j++) {
+    rows.push(
+      <FiberManualRecordIcon
+        style={{ fontSize: 8, color: '#E5E5E5', marginRight: 1 }}
+      />
+    )
   }
 
   const handleChapterStart = () => {
@@ -125,59 +141,61 @@ export default function ChapterBox(props) {
   return (
     <Card className={classes.root} key={chaptDetails.number}>
       <Grid container>
-          <CardContent>
-            <div className="ChapterBox">
-              <div className="ChapterBox__chaptDetails">
-                {/* TODO: this needs to be pulled from the player save data, not from the story*/}
-                {chaptDetails.new == true ? 
-                  <div className="ChapterBox__chaptDetails__bubble new">NEW!</div>
-                 : chaptDetails.playable == false ? 
-                 <div className="ChapterBox__chaptDetails__bubble coming">COMING SOON</div> :
-                 null}
-                <div className="ChapterBox__chaptDetails--chaptText">
-                  Chapter {chaptDetails.number} of {total}
+        <CardContent className={classes.card}>
+          <div className="ChapterBox">
+            <div className="ChapterBox__chaptDetails">
+              {/* TODO: this needs to be pulled from the player save data, not from the story*/}
+              {chaptDetails.new == true ? (
+                <div className="ChapterBox__chaptDetails__bubble new">NEW!</div>
+              ) : chaptDetails.playable == false ? (
+                <div className="ChapterBox__chaptDetails__bubble coming">
+                  COMING SOON
                 </div>
-
+              ) : null}
+              <div className="ChapterBox__chaptDetails--chaptText">
+                Chapter {chaptDetails.number} of {total}
               </div>
-
-              <div className="ChapterBox__chaptTitle">
-                <div className="ChapterBox__chaptTitle--name">{chaptDetails.title}</div>
-                {isLoading ? (
-                  <div className="spinner-div">
-                    <PacmanLoader color="#e5e5e5" loading={isLoading} size={80} />
-                  </div>
-                ) : (
-                    chaptDetails.playable == false ? (
-                      <div
-                        className={`ChapterBox__chaptTitle--button disable`}
-                      >
-                        Soon
-                      </div>
-                    ) : (
-                      <div
-                        className={`ChapterBox__chaptTitle--button`}
-                        onClick={() => handleChapterStart()}
-                      >
-                        Play
-                      </div>
-                    )
-                )}
-              </div>
-
             </div>
-            <div className="ChapterBox__summary">{chaptDetails.summary}</div>
 
-            {chaptDetails.playable == true ?
-              <div className="ChapterBox__endings">
-                {rows}
-                <span style={{ marginLeft: '8px' }}>
-                  {getEndingsUnlocked()} of {chaptDetails.endings.length} endings unlocked
-                </span> 
-              </div>:
-              null
-            }
-          </CardContent>
-        
+            <div className="ChapterBox__chaptTitle">
+              <div className="ChapterBox__chaptTitle--text">
+                <div className="ChapterBox__chaptTitle--name">
+                  {chaptDetails.title}
+                </div>
+                <div className="ChapterBox__summary">
+                  {chaptDetails.summary}
+                </div>
+              </div>
+
+              {isLoading ? (
+                <div className="spinner-div">
+                  <PacmanLoader color="#e5e5e5" loading={isLoading} size={80} />
+                </div>
+              ) : chaptDetails.playable == false ? (
+                <div className={`ChapterBox__chaptTitle--button disable`}>
+                  Soon
+                </div>
+              ) : (
+                <div
+                  className={`ChapterBox__chaptTitle--button`}
+                  onClick={() => handleChapterStart()}
+                >
+                  Play
+                </div>
+              )}
+            </div>
+          </div>
+
+          {chaptDetails.playable == true ? (
+            <div className="ChapterBox__endings">
+              {rows}
+              <span style={{ marginLeft: '8px' }}>
+                {getEndingsUnlocked()} of {chaptDetails.endings.length} endings
+                unlocked
+              </span>
+            </div>
+          ) : null}
+        </CardContent>
       </Grid>
     </Card>
   )

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams , useHistory } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
 import { Box, Container, Typography } from '@material-ui/core'
 import NotFoundPage from '../../components/NotFoundPage'
 import WhatsApp from '../WhatsappPage/Whatsapp'
@@ -16,7 +16,6 @@ import Reflection from '../ReflectionsPage/Reflection'
 
 import NadiaInk from '../../stories/nadia.ink.json'
 import AmanInk from '../../stories/aman.ink.json'
-
 
 const getInkJson = (nameParam) => {
   switch (nameParam) {
@@ -47,13 +46,18 @@ const getInkJson = (nameParam) => {
   }
 }
 
-const getUi = ({ currentParagraphs, specialTags , globalVariables }) => {
+const getUi = ({
+  currentParagraphs,
+  specialTags,
+  globalVariables,
+  whatsAppParagraphs,
+}) => {
   switch (specialTags.ui) {
     case 'scene': {
       return <Scene currentParagraphs={currentParagraphs} />
     }
     case 'whatsapp': {
-      return <WhatsApp currentParagraphs={currentParagraphs} />
+      return <WhatsApp currentParagraphs={whatsAppParagraphs} />
     }
     case 'narrator': {
       return <Narrator currentParagraphs={currentParagraphs} />
@@ -62,18 +66,23 @@ const getUi = ({ currentParagraphs, specialTags , globalVariables }) => {
       // TODO: update this component
       return <Survey currentParagraphs={currentParagraphs} />
     }
-      
+
     case 'chapter_reflection': {
       // TODO: update this component
-      return <Reflection reflectionId={specialTags.reflection_id} globalVariables={globalVariables} />
+      return (
+        <Reflection
+          reflectionId={specialTags.reflection_id}
+          globalVariables={globalVariables}
+        />
+      )
     }
 
     case 'mcq': {
-      return <MultipleChoiceQuiz quizId={specialTags.game_id}/>
+      return <MultipleChoiceQuiz quizId={specialTags.game_id} />
     }
 
     case 'swipe': {
-      return <SwipeQuiz  quizId={specialTags.game_id} />
+      return <SwipeQuiz quizId={specialTags.game_id} />
     }
 
     // case reflection  - return a reflection component with argument for survey id from ink
@@ -104,23 +113,27 @@ const InkController = () => {
     saveStory,
   } = useInkContext()
 
-  
   // ==============================================================
   // Filter paragraphs based on current knot
   // ==============================================================
   const [currentParagraphs, setCurrentParagraphs] = useState([])
+  const [whatsAppParagraphs, setWhatsAppParagraphs] = useState([])
 
   useEffect(() => {
     if (currentKnot || paragraphs[paragraphs.length - 1]?.currentKnot) {
       const nextParagraphs = paragraphs.filter((paragraph) => {
         return paragraph.currentKnot === currentKnot
       })
+      if (specialTags.ui === 'whatsapp') {
+        setWhatsAppParagraphs([...nextParagraphs])
+        return setCurrentParagraphs([...whatsAppParagraphs, ...nextParagraphs])
+      }
       return setCurrentParagraphs([...nextParagraphs])
     }
-
     setCurrentParagraphs(paragraphs)
-    // Run this useEffect whenever paragraphs or currentKnot get updated
-  }, [paragraphs, currentKnot])
+
+    // Run this useEffect whenever paragraphs, currentKnot, or specialTags get updated
+  }, [paragraphs, currentKnot, specialTags])
 
   // ==============================================================
   // Save data when a knot change is detected
@@ -158,6 +171,7 @@ const InkController = () => {
         currentParagraphs,
         specialTags,
         globalVariables,
+        whatsAppParagraphs,
       })}
 
       {/* Render event triggers */}
