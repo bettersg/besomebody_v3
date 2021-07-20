@@ -128,8 +128,12 @@ const Scene = (props) => {
                         width: displayTextWidth(step.tags[0] === "speaker_left"?specialTags.speaker_left_name :
                               step.tags[0] === 'speaker_right'?specialTags.speaker_right_name :
                               step.tags[0]==='speaker_self'?name : "", "bold 22px Inter"),
-                        float: step.tags[0] === 'speaker_right'?"right":null, 
-                        top: step.tags[0] === 'speaker_right'?"-20px":null, 
+                        // float: step.tags[0] === 'speaker_right'?"right":null, 
+                        marginLeft: step.tags[0] === 'speaker_right'? 
+                          `calc(358px - 20px - ${displayTextWidth(step.tags[0] === "speaker_left"?specialTags.speaker_left_name :
+                          step.tags[0] === 'speaker_right'?specialTags.speaker_right_name :
+                          step.tags[0]==='speaker_self'?name : "", "bold 22px Inter")}px)` : null,
+                        // top: step.tags[0] === 'speaker_right'?"-20px":null, 
                         bottom: step.tags[0] === 'speaker_right'?null:"-20px", 
                       }}
                     >
