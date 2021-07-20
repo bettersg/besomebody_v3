@@ -136,21 +136,17 @@ const CharacterChapterPage = (props) => {
             </div>
           </div>
           <Typography>{persona.description}</Typography>
-          {hasSavedState && (
-            <Button
-              variant="contained"
-              color="primary"
-              fullWidth
-              onClick={handleLoadSavedStory}
-            >
-              LOAD AUTOSAVE
-            </Button>
-          )}
+          
         </div>
       </div>
-      {/* {hasSavedState && (
-                <IntroBanner loadSavedStory={loadSavedStory} persona={persona} />
-            )} */}
+     
+      {hasSavedState && (
+            <box             
+              onClick={handleLoadSavedStory}
+            >
+              <IntroBanner persona={persona} />
+            </box>
+          )}
       <div style={{ paddingTop: '24px' }}>
         {userFromDb && persona.chapters.length > 0 ? (
           persona.chapters.map((chapt, i) => {
