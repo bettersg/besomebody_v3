@@ -28,14 +28,20 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("xs")]: {
       height: "calc(var(--vh, 1vh) * 100)",
     },
+    backgroundColor:"#8ADFE5",
+    display: "flex", 
+    flexDirection: "column", 
+    justifyContent: "space-between", 
+
   },
 
   questionNumber: {
-    color: "gray",
-    fontSize: "1rem",
+    color: "#005B69",
+    fontSize: "12px",
+    letterSpacing: "0.12em",
     fontWeight: 700,
     textTransform: "uppercase",
-    marginBottom: "5px",
+    marginBottom: "13px",
   },
 
   questionWrapper: {
@@ -43,17 +49,23 @@ const useStyles = makeStyles((theme) => ({
   },
 
   question: {
-    color: "#444444",
+    color: "#000A11",
     fontWeight: 600,
-    fontSize: "1.15rem",
+    fontSize: "18px",
     marginBottom: "5px",
   },
 
-  answerHeader: {
-    color: "#444444",
+  answerHeaderCorrect: {
+    color: "#4F8D00", 
     fontWeight: 700,
     fontSize: "1.15rem",
-    marginBottom: "5px",
+    marginBottom: "15px",
+  },
+  answerHeaderWrong: {
+    color: "white", 
+    fontWeight: 700,
+    fontSize: "1.15rem",
+    marginBottom: "15px",
   },
 
   nextButton: {
@@ -62,49 +74,77 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     height: 48,
     padding: "0 30px",
-    boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
   },
 
   nextButtonCorrect: {
-    background: "#009900",
+    color: "#4F8D00", 
+    fontWeight: 700,
+    fontSize: "16px", 
+    textTransform: "capitalize", 
+    background: "white",
+    height: "48px", 
+    borderRadius: "24px", 
+    width: "100%",
+    boxShadow: "unset",  
     "&:hover": {
-      background: "#006633",
+      background: "white",
     },
   },
 
   nextButtonWrong: {
-    background: "#990000",
+    color: "#3835C1", 
+    fontWeight: 700,
+    fontSize: "16px", 
+    textTransform: "capitalize", 
+    background: "white",
+    height: "48px", 
+    borderRadius: "24px", 
+    width: "100%",
+    boxShadow: "unset",  
+    marginTop: "20px", 
     "&:hover": {
-      background: "#660000",
+      background: "white",
     },
   },
 
   textButton: {
-    color: "#555555",
+    color: "#005B69",
     fontWeight: 700,
     fontSize: "0.7rem",
     marginBottom: "10px",
-    border: "1px solid #3dcad3",
-
+    border: "1px solid white",
+    backgroundColor: "white", 
+    height: "44px", 
+    borderRadius: "8px", 
+    boxShadow: "0px 2px 4px 0px #0B6E7D33",
     "&:hover": {
-      border: "1px solid #3dcad3",
-      backgroundColor: "#3dcad3",
-      color: "#3c52b2",
+      border: "1px solid #005B69",
+      backgroundColor: "#005B69",
+      color: "white", 
     },
+    "&:active": {
+      backgroundColor: "#005B69", 
+      color: "white", 
+    }, 
   },
 
   imageButton: {
+    width: "100%", 
+  },
+
+  imageCard: {
+    width: "100%", 
     borderRadius: "1em",
-    border: "1px solid #3dcad3",
+    boxShadow: "0px 2px 4px 0px #0B6E7D33",
+    border: "1px solid white",
     "&:hover": {
       border: "1px solid #3dcad3",
       backgroundColor: "#3dcad3",
-      color: "#3c52b2",
     },
   },
 
   paper: {
-    background: "#CCFFCC",
+    background: "green",
   },
 
   answerWrapper: {
@@ -117,13 +157,19 @@ const useStyles = makeStyles((theme) => ({
   },
 
   media: {
-    height: 80,
+    height: "80px",
   },
 
+  mediaWrapper: {
+    width: "100%", 
+    backgroundColor: "white", 
+  }, 
+
   imageTitle: {
-    color: "#555555",
-    fontWeight: 700,
-    fontSize: "0.7rem",
+    color: "#005B69",
+    fontWeight: 500,
+    fontSize: "12px",
+    textAlign: "left", 
   },
 
   drawerStyle: {
@@ -136,7 +182,7 @@ const useStyles = makeStyles((theme) => ({
     flexShrink: 0,
     zIndex: 1,
   },
-  drawerPaper: {
+  drawerPaperCorrect: {
     width: "358px",
     [theme.breakpoints.only("xs")]: {
       width: "100vw",
@@ -144,8 +190,28 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     zIndex: 1,
     bottom: 0,
-    backgroundColor: "white", //target here
+    backgroundColor: "#C5E83A", //target here
+    borderRadius: "15px 15px 0px 0px",
   },
+  drawerPaperWrong: {
+    width: "358px",
+    [theme.breakpoints.only("xs")]: {
+      width: "100vw",
+    },
+    position: "absolute",
+    zIndex: 1,
+    bottom: 0,
+    backgroundColor: "#3835C1", //target here
+    borderRadius: "15px 15px 0px 0px",
+  },
+  answerWrong: {
+    fontSize: "14px",
+    color: "white", 
+  }, 
+  answerCorrect: {
+    fontSize: "14px",
+    color: "#000A11", 
+  }
 }));
 
 export default function QuestionPanel({
@@ -189,17 +255,20 @@ export default function QuestionPanel({
               color="primary"
               onClick={() => handleAnswer(answer.title, question.explanation)}
               disabled={answered !== "" ? true : false}
+              className={clsx(classes.imageButton)}
             >
               <Card
-                className={clsx(classes.imageCard, classes.imageButton)}
+                className={clsx(classes.imageCard)}
                 p={0}
                 m={0}
               >
                 <CardActionArea>
-                  <CardMedia
-                    className={classes.media}
-                    image={"/minigames/" + answer.imageUrl}
-                  />
+                  <div className={classes.mediaWrapper}>
+                    <img 
+                      src={"/minigames/" + answer.imageUrl} 
+                      className={classes.media}
+                    />
+                  </div>
                   <CardContent>
                     <Typography className={classes.imageTitle}>
                       {answer.title}
@@ -235,7 +304,7 @@ export default function QuestionPanel({
               Question {questionNo} of {total}
             </Typography>
             <Box className={classes.questionWrapper}>
-              <Typography color="textSecondary" className={classes.question}>
+              <Typography className={classes.question}>
                 {question["question"]}
               </Typography>
             </Box>
@@ -259,23 +328,31 @@ export default function QuestionPanel({
             )}
           </Grid>
         </Box>
+        <Box></Box>
         <Drawer
           anchor="bottom"
           open={isDrawerOpen}
           className={classes.drawerStyle}
           // style={{}}
           classes={{
-            paper: classes.drawerPaper,
+            paper: isCorrectAnswer ? classes.drawerPaperCorrect : classes.drawerPaperWrong,
           }}
         >
-          <Box display="flex" p={1} className={classes.answerWrapper}>
+          <Box p={1} className={classes.answerWrapper}>
             <Box flexGrow={1}>
               {answered && (
                 <>
-                  <Typography variant="h5" className={classes.answerHeader}>
-                    {isCorrectAnswer ? "Correct!" : "Not Quite Right..."}
+                  {isCorrectAnswer ? 
+                  <Typography variant="h5" className={classes.answerHeaderCorrect}>
+                    Correct!
+                  </Typography> : 
+                  <Typography variant="h5" className={classes.answerHeaderWrong}>
+                    Not Quite Right...
                   </Typography>
-                  <Typography variant="body" className="answerBody">
+                  
+                  }
+                  
+                  <Typography variant="body" className={`answerBody ${isCorrectAnswer ? classes.answerCorrect : classes.answerWrong}`}>
                     {message}
                   </Typography>
                 </>
