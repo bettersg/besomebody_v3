@@ -167,7 +167,7 @@ What do you want? #speaker_self
 Can I borrow your airpods? I sent mine for servicing. #speaker_right 
 Ya, it’s in the second drawer. Take and get out. #speaker_self
 #background:bg_aman_drawerscissors.jpg
-What is this? #speaker_right #speaker_right_image:cha_aman_jothi_concerned.png
+What is this? #speaker_right #speaker_right_image:cha_aman_jothi_sad.png
 Nothing -- #speaker_self
 Don’t lie to me, what is this? #speaker_right
 Just take the airpods and go please, I have a lot of stuff to do -- #speaker_self
@@ -181,7 +181,6 @@ How could you even say that! Doesn’t this mean anything to you? How can you ta
 Sis, until and unless you keep a turban yourself, or even keep your hair longer than your shoulders, or have to do bloody NS, for God’s sake, you are not in a position to comment on or judge my life choices.  #speaker_self
 Don’t pretend to be so perfect. Neither of us are role models. #speaker_self
 Now, will you please take the airpods, and leave me alone? #speaker_self
-#speaker_right_image:cha_aman_jothi_sad.png
 Sigh. Aman, I... #speaker_right
 ... I ...  #speaker_right
 
