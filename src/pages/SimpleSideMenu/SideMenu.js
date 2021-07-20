@@ -68,53 +68,52 @@ export default function SideMenu ({src="/side_menu/menu-icon.svg", ...rest}) {
       className="SideMenu"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
-      style={{backgroundColor:'#FB5A3F', height: "100%"}}
+      style={{backgroundColor:'rgb(0,91,105)', height: "100%"}}
     >
       <div className="SideMenu__background">
-        <img src="/images/pixel.png"  />
+        <img src="/images/group.png"  />
       </div>
       
       
       <div 
         className="SideMenu__top" 
         style={{
-          backgroundImage:`linear-gradient(to bottom, 
-            '#FB5AB3', '#FB5A3F' 50%)`
+          backgroundImage:'linear-gradient(to bottom, rgba(0,91,105,0.7), rgb(0,91,105) 50%)'
         }}
       >        
-        <div className="SideMenu__gameDetails">
-          Menu
-        </div>
-        <div className="SideMenu__playSection">
-          {/* <div className="SideMenu__playSection--timeLeft">Time left in chapter: 3mins</div> */}
+          <div className="SideMenu__gameDetails">
+            Menu
+          </div>
+          <div className="SideMenu__playSection">
+            {/* <div className="SideMenu__playSection--timeLeft">Time left in chapter: 3mins</div> */}
+            
+          </div>
           
-        </div>
-        
-        <div className="SideMenu__menuitems" >
-          {/* I know why you did it as a map, but this makes it very hard to pass in dynamic values to the links. I've reverted it to individual links */}
-          <div className="SideMenu__menuitems__item">
-          <Link to="/" className="SideMenu__menuitems__label"><SVG src="/side_menu/icon.svg" className="SideMenu__menuitems__icons"/>
-            <span>Character Menu</span></Link>
-          </div>
- 
-          <div className="SideMenu__menuitems__item">
-          <Link to={"/user/" + currentUser.id} className="SideMenu__menuitems__label"><SVG src="/side_menu/profile.svg" className="SideMenu__menuitems__icons"/>
-            <span>Account Menu</span></Link>
-          </div>
+          <div className="SideMenu__menuitems" >
+          
+            <div className="SideMenu__menuitems__item">
+            <Link to="/" className="SideMenu__menuitems__label"><SVG src="/side_menu/icon.svg" className="SideMenu__menuitems__icons"/>
+              <span>Character Menu</span></Link>
+            </div>
+  
+            <div className="SideMenu__menuitems__item">
+            <Link to={"/user/" + currentUser.id} className="SideMenu__menuitems__label"><SVG src="/side_menu/profile.svg" className="SideMenu__menuitems__icons"/>
+              <span>Account Menu</span></Link>
+            </div>
 
-          <div className="SideMenu__menuitems__item">
-          <Link to="/help" className="SideMenu__menuitems__label"><SVG src="/side_menu/help.svg" className="SideMenu__menuitems__icons"/>
-            <span>Help</span></Link>
-          </div>
+            <div className="SideMenu__menuitems__item">
+            <Link to="/help" className="SideMenu__menuitems__label"><SVG src="/side_menu/help.svg" className="SideMenu__menuitems__icons"/>
+              <span>Help</span></Link>
+            </div>
 
+          </div>
+        <hr />
+        <div className="SideMenu__bottom">
+          <div className="SideMenu__menuitems__item" >
+            <SVG src="/side_menu/logout.svg" className="SideMenu__menuitems__icons"/>
+              <Link to="/" className="SideMenu__menuitems__label" onClick={logoutUser}><span>Sign Out {userFromDb?.username}</span></Link>
+          </div>
         </div>
-      <hr />
-      <div className="SideMenu__bottom">
-        <div className="SideMenu__menuitems__item" >
-          <SVG src="/side_menu/logout.svg" className="SideMenu__menuitems__icons"/>
-            <Link to="/" className="SideMenu__menuitems__label" onClick={logoutUser}><span>Sign Out {userFromDb?.username}</span></Link>
-        </div>
-      </div>
       </div>
 
 
