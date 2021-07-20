@@ -6,6 +6,16 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import SideMenu from '../SimpleSideMenu/SideMenu'
+import { Grid, ButtonBase } from "@material-ui/core"
+import { useParams, Link, useHistory } from 'react-router-dom'
+import SVG from 'react-inlinesvg'
+
+import "./style.scss"
+
+import { 
+  HELP_ICONS, 
+  HELP_DETAILS,
+} from "./constants"
 
 
 
@@ -17,22 +27,60 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 const useStyles = makeStyles((theme) => ({
   
   paragraphWrapper: {
-    backgroundColor: "white", 
+    backgroundColor: "#F0F1FC", 
     height: '660px',
     [theme.breakpoints.only('xs')]: {
         height: 'calc(var(--vh, 1vh) * 100)',
     },
     bottom: 0, 
-    overflow: "auto",
+    overflow: 'auto',
+    '&::-webkit-scrollbar': {
+      width: '0',
+    },
   },
+  helpWrapper: {
+    backgroundColor: "white", 
+    marginBottom: "8px", 
+  }, 
   heading: {
     fontSize: theme.typography.pxToRem(15),
-    flexBasis: '33.33%',
+    // flexBasis: '33.33%',
+    fontWeight: 700, 
+    fontSize: "20px", 
     flexShrink: 0,
+    padding: "20px",
+    paddingTop: "40px",  
+  },
+  question: {
+    color: "#3835C1", 
+    fontSize: "15px", 
+  }, 
+  answer: {
+    fontSize: "15px", 
+    color: "#000A11", 
   },
   secondaryHeading: {
     fontSize: theme.typography.pxToRem(15),
     color: theme.palette.text.secondary,
+  },
+  options: {
+    marginTop: "28px", 
+  },
+  button: {
+    height: "124px", 
+    width: "100%", 
+    backgroundColor: "white", 
+    padding: "20px", 
+    borderRadius: "8px", 
+    boxShadow: "0px 4px 8px 0px #26248F29",
+    color: "#000A11", 
+    display: "flex",
+    justifyContent:"center", 
+    flexDirection: "column",  
+    
+  }, 
+  accordian: {
+    boxShadow: "unset", 
   },
 }));
 
@@ -46,18 +94,69 @@ export default function Help() {
 
   return (
     <div className={classes.paragraphWrapper}>
-      <div className="game-menu">
-            <SideMenu  />
-        </div>
-      <Typography variant="h3">Help Screen</Typography>    
-      <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+      <div className="HelpPage__nav">
+        <Link to="/" style={{ textDecoration: 'none' }}>
+          <div style={{ display: 'flex' }}>
+            <SVG src="/chapter_choices_page/arrow.svg" />
+            <div className="HelpPage__nav--name">Help</div>
+          </div>
+        </Link>
+        <SideMenu src="/commons/menu-icon.svg" />
+      </div>
+
+      <div className="HelpPage__top" >
+        <div>How can we help?</div>
+        <Grid container className={classes.options} spacing={2}>
+          {HELP_ICONS.map((content) => {
+            return (
+              <Grid item xs={6}>
+                <ButtonBase className={classes.button}>
+                  <div className="HelpPage__top--icon">
+                    <SVG src={content.icon} />
+                  </div>
+                  {content.name}
+                </ButtonBase>
+              </Grid>
+            )
+          })}
+        </Grid>
+      </div>
+
+      {
+        HELP_DETAILS.map((content, idx) => {
+          return (
+            <div className={classes.helpWrapper}>
+              <Typography className={classes.heading}>{content.category}</Typography>
+              {content.questions.map((oneQuestion, idx) => {
+                return (
+                  <Accordion expanded={expanded === oneQuestion.panel} onChange={handleChange(oneQuestion.panel)} className={classes.accordian}>
+                    <AccordionSummary
+                      expandIcon={<ExpandMoreIcon />}
+                      aria-controls={oneQuestion.ariaControls}
+                      id={oneQuestion.id}
+                    >
+                      <Typography className={classes.question}>{oneQuestion.question}</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography className={classes.answer}>{oneQuestion.answer}</Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                )
+              })}
+
+            </div>
+          )
+
+        })
+      }
+
+      {/* <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
           <Typography className={classes.heading}>Playing the Game</Typography>
-          <Typography className={classes.secondaryHeading}>The game interface, stories, choices, etc.</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography  >Q: I want to play as the other characters! How do I access them?<br />
@@ -167,7 +266,7 @@ export default function Help() {
 
           </Typography>
         </AccordionDetails>
-      </Accordion>
+      </Accordion> */}
     </div>
   );
 }

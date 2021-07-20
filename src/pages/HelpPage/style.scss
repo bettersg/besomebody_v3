@@ -1,0 +1,49 @@
+@import "../../scss/global/global"; 
+
+.HelpPage {
+    &__nav {
+        padding: 10px; 
+        background-color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .MenuWrapper__menuButton {
+            position: unset;
+            width: 24px; 
+            opacity: 100%; 
+        }
+        &--name {
+            margin-left: 18px; 
+            @include inter-chaptChoiceName; 
+            color: #072435;
+            text-decoration: none;
+        }
+    }
+    &__top {
+        @include inter-700; 
+        background-image: url("./assets/background.png");
+        height: 406px;
+        background-size: cover;                   
+        background-repeat: no-repeat;
+        background-position: center center;   
+        padding: 42px 28px;
+        color: $white; 
+        font-size: 24px;
+        text-align: center;
+        &--icon {
+            background-color: $lapis10;
+            height: 56px;
+            width: 56px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+    }
+}
+.MuiAccordion-root-193 {
+    &:before {
+        background-color: #D8F4F6 !important;
+    }
+}
