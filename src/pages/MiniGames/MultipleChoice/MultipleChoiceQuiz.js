@@ -19,14 +19,13 @@ const useStyles = makeStyles((theme) => ({
     paragraphWrapper: {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        // backgroundColor: "#6C70DD",
-        // backgroundImage: ({ image }) => `url('/images/bg_launch.png')`,
+        backgroundColor: "#6C70DD",
+        backgroundImage: ({ image }) => `url('/images/bg_launch.png')`,
         height: '660px',
         [theme.breakpoints.only('xs')]: {
             height: 'calc(var(--vh, 1vh) * 100)',
         },
         bottom: 0, 
-        userSelect: "none", 
     },
     background: {
         backgroundImage: ({ image }) => `url('/images/bg_launch.png')`,
@@ -51,16 +50,16 @@ const useStyles = makeStyles((theme) => ({
     },
     btn: {
         padding: '10px 50px',
-        height: "48px", 
         borderRadius: '40px',
-        marginTop: "69px",
+        marginTop:20,
         marginBottom: '20px',
-        backgroundColor: '#ffffff',
+        background: '#664EFC',
+        backgroundColor: '#664EFC',
         textDecoration: 'none',
-        color: '#664EFC',
+        color: '#ffffff',
         fontWeight: '700',
         '&:hover': {
-          backgroundColor: 'lightgrey',      
+          backgroundColor: '#6C70DD',      
           boxShadow: 'none',
           
         },
@@ -148,14 +147,16 @@ export default function MultipleChoiceQuiz(props) {
             {quiz.introduction && !hasGameStarted && 
             <Fade in={true} timeout={700}>                
                 <Box className={classes.paragraphWrapper} height="100%">               
-                <Box className={classes.topLine}>In this segment, we will explore some of the issues covered in the game. </Box>
+                <Box className={classes.topLine}>In this segment, we will explore some of the issues covered in the game, using a simple quiz. </Box>
                 <div className="MultipleChoice__text">
                     
-                    <Box my={5}>
+                        <Box my={5}>
                         { quiz.introduction}
                     </Box>
                     <Button
                     className={classes.btn}
+                    color="primary"
+                    variant="contained"                    
                     onClick={() => handleStartGame()}
                     >Start Minigame</Button>
                 </div>

@@ -175,7 +175,7 @@ export const CharacterChoicePage = () => {
 
                                 <div>
                                     <div className="profile_Name">{persona.name}</div>
-                                    <div className="profile_status">Chapter {persona.newestChapter} now available!</div>
+                                    <div className="profile_status">Chapter 1 available</div>
                                     {/* <div className="profile_status">Not played</div> */}
                                 </div>
                             </div>
