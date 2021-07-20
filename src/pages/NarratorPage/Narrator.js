@@ -65,11 +65,6 @@ const Narrator = (props) => {
       })
     }
   }, [elementRef, currentParagraphs, choices])
-  
-  
-  if (currentParagraphs.length < 1) {
-    getStory();
-  }
    
   const step = currentParagraphs[currentParagraphs.length - 1]
   // console.log(step)

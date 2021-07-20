@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { useParams, useHistory } from 'react-router-dom'
-import { Box, Container, Typography } from '@material-ui/core'
-import NotFoundPage from '../../components/NotFoundPage'
+import { useParams , useHistory } from 'react-router-dom'
+import { Box, Container } from '@material-ui/core'
 import WhatsApp from '../WhatsappPage/Whatsapp'
 import Scene from '../ScenePage/Scene'
 import InkControls from './InkControls'
@@ -9,42 +8,9 @@ import DefaultInk from '../DefaultInk'
 import Survey from '../SurveyPage/Survey'
 import MultipleChoiceQuiz from '../MiniGames/MultipleChoice/MultipleChoiceQuiz'
 import SwipeQuiz from '../MiniGames/Swipe/SwipeQuiz'
-import { CHARACTER_MAP } from '../../models/storyMap'
 import { useInkContext } from '../../contexts/InkContext'
 import Narrator from '../NarratorPage/Narrator'
 import Reflection from '../ReflectionsPage/Reflection'
-
-import NadiaInk from '../../stories/nadia.ink.json'
-import AmanInk from '../../stories/aman.ink.json'
-
-const getInkJson = (nameParam) => {
-  switch (nameParam) {
-    case 'nadia': {
-      const nadiaStory = CHARACTER_MAP.find((story) => story.id === 1)
-      // const nadidChapter1 = nadidStory.chapters.find(
-      // (chapter) => chapter.id === 1)
-      // const json = nadidStory.jsonFile
-      return {
-        inkJson: NadiaInk,
-        characterId: 1,
-        chapterId: 1,
-      }
-    }
-    case 'aman': {
-      const aman = CHARACTER_MAP.find((story) => story.id === 2)
-      // const amanChapter1 = aman.chapters.find((chapter) => chapter.id === 1)
-      // const json = aman.jsonFile
-      return {
-        inkJson: AmanInk,
-        characterId: 2,
-        chapterId: 1,
-      }
-    }
-    default: {
-      return null
-    }
-  }
-}
 
 const getUi = ({
   currentParagraphs,
@@ -100,18 +66,20 @@ const getUi = ({
 }
 
 const InkController = () => {
-  const { name } = useParams()
-  const history = useHistory()
   const {
     // States
     paragraphs,
     specialTags,
     currentKnot,
     globalVariables,
+    isStoryStarted,
 
     // Methods
     saveStory,
   } = useInkContext()
+
+  const history = useHistory()
+  const { name } = useParams()
 
   // ==============================================================
   // Filter paragraphs based on current knot
@@ -142,30 +110,20 @@ const InkController = () => {
 
   useEffect(() => {
     if (currentKnot) setKnot(currentKnot)
-    if (knot !== currentKnot) saveStory()
+    if (currentParagraphs?.length > 1 && knot !== currentKnot) {
+      saveStory()
+    }
 
     // Run this useEffect whenever currentKnot gets updated
   }, [currentKnot])
 
-  /*
-  // ===========
-  // EXAMPLE
-  // ===========
-  useEffect(() => {
-    // MOCK CONDITION: Save game only if global variables or the ui key in special tags exists
-    if (globalVariables || specialTags.ui) {
-      saveStory()
-    }
-
-    // MOCK CONDITION: Trigger this useEffect everytime global variables or the ui key in special tags updates
-  }, [globalVariables, specialTags?.ui])
-  */
-
   return (
     <Container maxWidth="lg" className="ink-controller">
-      {currentParagraphs[0] ? null :
-        <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><Box my={10}>Please start story from the <a href="/">main menu</a>.</Box>
-        </Container>}
+      {isStoryStarted ? null :       
+        history.push('/chapters/'+ name )
+        // <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><Box my={10}>Please start story from your last saved state <Button variant="contained" color="primary" fullWidth onClick={() => loadSavedStory()}>LOAD AUTOSAVE</Button></Box>
+        // </Container>
+      }
 
       {getUi({
         currentParagraphs,
