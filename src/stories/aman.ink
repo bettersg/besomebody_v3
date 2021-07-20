@@ -76,7 +76,7 @@ VAR chapter_9_ending = 0
 #music:aman_intro.mp3
 ~ chapter_id = 1
 Aman Singh #title
-Sat Sri Akaal (God is Truth)! I am Aman Singh. 
+Sat Sri Akaal (God is Truth)!  I am Aman Singh. 
 As a Sikh, I keep my turban and beard, and wear the steel bangle, or kara. 
 Those are usually the first things people notice about me. But there’s a lot more to me than that.
 I’ve recently completed my diploma in accountancy, and NS is just around the corner. That’s going to be ‘fun’...
@@ -158,7 +158,7 @@ Later that night in my room...
 #knot:aman_1_2
 #ui:scene
 #background:bg_aman_bedroom.jpg
-#speaker_right_image:cha_aman_jothi_casual.png
+#speaker_right_image:cha_aman_jothi_normal.png
 #speaker_right_name:Jothi
 Oh my god, can you like, KNOCK? #speaker_self
 If you need privacy, lock the door. Anyway, what are you doing? Examining your forehead lines? #speaker_right
