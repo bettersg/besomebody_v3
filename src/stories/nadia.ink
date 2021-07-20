@@ -61,7 +61,6 @@ VAR character_id = 1
 #ui:narrator
 #background:bg_nadia_intro.jpg
 #music:nadia_intro.mp3
-.
 VAR chapter_id = 1
 NADIA BINTE RAHIM #title
 Hey there. I’m Nadia.
@@ -972,7 +971,6 @@ Reflection 1
 #ui:narrator
 #background:nadia_2_intro.jpg
 #music:nadia_intro.mp3
-.
 ~ chapter_id = 2
 CHAPTER 2 #title
 The Mall #title
