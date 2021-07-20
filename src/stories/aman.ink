@@ -74,7 +74,6 @@ VAR chapter_9_ending = 0
 #ui:narrator
 #background:bg_aman_intro.jpg
 #music:aman_intro.mp3
-.
 ~ chapter_id = 1
 Aman Singh #title
 Sat Sri Akaal (God is Truth)! I am Aman Singh. 
@@ -791,7 +790,6 @@ Reflection 1
 #ui:narrator
 #background:aman_1_intro.jpg
 #music:aman_intro.mp3
-.
 ~ chapter_id = 2
 Chapter 2 #title
 To Be or Not To Be #title
@@ -1555,7 +1553,6 @@ Thank you God, for helping me get this part.  #inner_monologue
 #ui:narrator
 #background:aman_1_intro.jpg
 #music:aman_intro.mp3
-.
 ~ chapter_id = 3
 Chapter 3 #title
 Fight or Flight  #title

@@ -88,10 +88,6 @@ const Scene = (props) => {
       })
     }
   }, [elementRef, currentParagraphs, choices])
-
-  if (currentParagraphs.length < 1) {
-    getStory();
-  }
    
   const step = currentParagraphs[currentParagraphs.length - 1]
 
@@ -103,8 +99,8 @@ const Scene = (props) => {
           {checkSpeakerInCurrentParagraphs().includes('speaker_right') ? <img src={"/images/" + specialTags.speaker_right_image} className="ScenePage__speaker--right nonSpeaker"/> : null}
         </div>
         <div className="ScenePage__speaker">
-          {step.tags[0] === 'speaker_left' ? <img src={"/images/" + specialTags.speaker_left_image} className="ScenePage__speaker--left"/> : null}
-          {step.tags[0] === 'speaker_right' ? <img src={"/images/" + specialTags.speaker_right_image} className="ScenePage__speaker--right"/> : null}
+          {step?.tags[0] === 'speaker_left' ? <img src={"/images/" + specialTags.speaker_left_image} className="ScenePage__speaker--left"/> : null}
+          {step?.tags[0] === 'speaker_right' ? <img src={"/images/" + specialTags.speaker_right_image} className="ScenePage__speaker--right"/> : null}
           
         </div>
       <Box className={classes.paragraphWrapper}  height="100%">

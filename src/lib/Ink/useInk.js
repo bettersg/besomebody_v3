@@ -9,12 +9,12 @@ import {
   getDbSavedStates,
 } from '../../models/saveStateModel'
 
-const useInk = (json, character) => {
+const useInk = (json, characterId) => {
   // Get current user info
   const { currentUser } = useAuth()
 
   // Format a fixed saved data ID for firestore DB
-  const saveDataId = `${currentUser?.id}-${character}`
+  const saveDataId = `${currentUser?.id}-${characterId}`
 
   // Initialise inkjs
   const inkStory = React.useMemo(() => initInk(Story, json), [json])
@@ -50,9 +50,9 @@ const useInk = (json, character) => {
       }
     }
 
-    // Reject activation of useInk if user is not logged in
-    if (currentUser && saveDataId) getSaveStates()
-  }, [currentUser, saveDataId])
+    // Fetch saved state if user is logged in, and character id is given
+    if (currentUser && characterId) getSaveStates()
+  }, [currentUser, characterId])
 
   // Reject activation of useInk if user is not logged in
   if (!currentUser) return
@@ -153,7 +153,7 @@ const useInk = (json, character) => {
     setSpecialTags({})
     setGlobalVariables({})
     setCurrentKnot(null)
-    // inkStory.resetStory()
+    characterId && inkStory.resetStory()
   }
 
   /**
@@ -183,7 +183,7 @@ const useInk = (json, character) => {
       paragraphs,
       choices,
       userId: currentUser.id,
-      character,
+      character: characterId,
       id: saveDataId,
       email: currentUser.email,
     }
