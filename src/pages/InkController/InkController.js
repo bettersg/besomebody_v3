@@ -1,5 +1,5 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react'
+import { useParams , useHistory } from 'react-router-dom'
 import { Box, Container } from '@material-ui/core'
 import WhatsApp from '../WhatsappPage/Whatsapp'
 import Scene from '../ScenePage/Scene'
@@ -72,10 +72,14 @@ const InkController = () => {
     specialTags,
     currentKnot,
     globalVariables,
+    isStoryStarted,
 
     // Methods
     saveStory,
   } = useInkContext()
+
+  const history = useHistory()
+  const { name } = useParams()
 
   // ==============================================================
   // Filter paragraphs based on current knot
@@ -115,19 +119,11 @@ const InkController = () => {
 
   return (
     <Container maxWidth="lg" className="ink-controller">
-      {paragraphs.length < 1 && (
-        <Container
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          <Box my={10}>
-            Please start story from the <a href="/">main menu</a>.
-          </Box>
-        </Container>
-      )}
+      {isStoryStarted ? null :       
+        history.push('/chapters/'+ name )
+        // <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><Box my={10}>Please start story from your last saved state <Button variant="contained" color="primary" fullWidth onClick={() => loadSavedStory()}>LOAD AUTOSAVE</Button></Box>
+        // </Container>
+      }
 
       {getUi({
         currentParagraphs,
