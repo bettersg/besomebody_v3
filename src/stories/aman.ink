@@ -149,7 +149,7 @@ Ok, but you go and think about it la. I really think you should just cut. Don’
 #knot:aman_1_2_narration
 #ui:narrator
 #background:bg_aman_mirrorinroom.jpg
-Later that night...
+Later that night in my room...
 
 -> aman_1_2
 
@@ -287,6 +287,7 @@ You sure ah, boy. #speaker_right
 #background:bg_aman_barbershopoutside.jpg
 I look so different. 
 But this is the new me. 
+#background:bg_aman_haircutselfie.jpg
 This is the start of a new chapter in my life.
 
 
@@ -312,14 +313,14 @@ Aman - please tell ma you want to order something for dinner! Side with me! #spe
 Let the boy make up his own mind Jothi! He's going to be a real man soon! #speaker_1
 Aman? #speaker_1
 + [Send them a selfie of your haircut]
-    This is what I look like after my haircut 📎[selfie.jpg]  #emoji:aman_haircut_selfie.png #speaker_self 
+    This is what I look like after my haircut 📎[selfie.jpg]  #emoji:bg_aman_haircutselfie.jpg #speaker_self 
 + [Tell your family that you cut your hair]
 - I cut my hair to prepare NS today. It's very short now.    #speaker_self 
 
 #ui:scene
-#background:bg_aman_aftercut.jpg
+#background:bg_aman_haircutselfie.jpg
 Why isn’t anyone saying anything? #inner_monologue
-They've all seen the message. Why don't the reply? #inner_monologue
+They've all seen the message. Why don't they reply? #inner_monologue
 I don’t care what they think. Do I care what they think? #inner_monologue
 
 #ui:whatsapp
@@ -469,12 +470,14 @@ Thanks buddy. #speaker_left
 #ui:narrator
 #background:bg_aman_bmtparadesquare.jpg
 BMT Passing Out Parade. #title
-My dad cried at the parade. He claims he didn't but I could see his eyes were wet when we hugged.
+My dad was still a bit grumpy about the hair, but he teared up at the parade. 
+He claims he didn't but I could see his eyes were wet when we hugged.
 Mum was just happy I survived, I think.
+#background:bg_aman_ordberet.jpg
+We took so many photos that my phone battery died.
 Jothi made some snarky comments about my biceps being bigger than my brain now, but she seemed genuinely proud too. 
 Sel came too. My parents finally met her. And liked her.
 Lukman saw her and gave me a big wink, then he brought his mum over to say hi.
-We took so many photos that my phone battery died.
 My family went out for dinner that night.
 
 -> aman_1_8
@@ -494,7 +497,7 @@ Enough motu (endearment), it’s not the time.  #speaker_right
 Aman, turban or no turban, you will always be my hero. #speaker_right
 Aman beta (dear), now that the hardest part is over, you should start thinking about what you will do after NS.  #speaker_right
 + [I was thinking of trying my hand at theatre and short films, mum.]
-    #speaker_right_image:cha_aman_jothi.png
+    #speaker_right_image:cha_aman_jothi2_hairflip.png
     #speaker_right_name:Jothi    
     A few biceps and suddenly you think you can be an action hero eh? #speaker_right
     Haha, I think it's cool! Our next Diljit Dosanjh in the making! #speaker_right
@@ -502,7 +505,7 @@ Aman beta (dear), now that the hardest part is over, you should start thinking a
     But don’t forget to spend time with Selinder! She's quite a lovely girl.  #speaker_left
 
 + [Oh er, this and that!]
-    #speaker_right_image:cha_aman_jothi.png
+    #speaker_right_image:cha_aman_jothi2_normal.png
     #speaker_right_name:Jothi    
     You mean, “spend lots of time with Selinder”, right? #speaker_right
 - Ha, I must agree! I’m glad to have Aman back. #speaker_right
@@ -705,9 +708,10 @@ BMT Passing Out Parade. #title
 My dad cried at the parade. He claims he didn't but I could see his eyes were wet when we hugged.
 Mum was just happy I survived, I think.
 Jothi made some snarky comments about by biceps being bigger than my brain now, but she seemed genuinely proud too. 
+#background:bg_aman_ordturban.jpg
+We took so many photos that my phone battery died.
 Sel came too. My parents finally met her. And liked her.
 Lukman saw her and gave me a big wink, then he brought his mum over to say hi.
-We took so many photos that my phone battery died.
 My family went out for dinner that night.
 
 -> aman_1_13
@@ -726,7 +730,7 @@ You did it, son. I am proud of you.  #speaker_left
 Aman, you will always be my hero. #speaker_right
 Aman beta, now that the hardest part is over, you should start thinking about what you will do after NS.  #speaker_right
 + [I was thinking of trying my hand at theatre and short films, mum.]
-#speaker_right_image:jothi.png
+#speaker_right_image:cha_aman_jothi2_normal.png
 #speaker_right_name:Jothi    
     A few biceps and suddenly you think you can be an action hero eh? #speaker_right
     Haha, I think it's cool! Our next Diljit Dosanjh in the making! #speaker_right
@@ -734,7 +738,7 @@ Aman beta, now that the hardest part is over, you should start thinking about wh
     But don’t forget to spend time with Selinder! She's quite a lovely girl.  #speaker_left
 
 + [Oh er, this and that!]
-#speaker_right_image:jothi.png
+#speaker_right_image:cha_aman_jothi2_hairflip.png
 #speaker_right_name:Jothi    
     You mean, “spend lots of time with Selinder”, right? #speaker_right
 - Ha, I must agree! I’m glad to have Aman back. #speaker_right
