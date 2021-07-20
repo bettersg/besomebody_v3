@@ -31,7 +31,7 @@ const ChapterResponse = ({ response }) => {
   return (
     <Box className={classes.reflectionBox}>
       <Typography className={classes.storyText}>{response.answer} </Typography> <br/>
-      <Typography className={classes.demographicsText}>~{response.user.age? response.user.age + 'years old' : null} {response.user.race? ' | ' + response.user.race : null }  {response.user.religion? ' | ' + response.user.religion : null }   {response.user.gender? ' | ' + response.user.gender : null }  {response.user.housing? ' | ' + response.user.housing : null }</Typography>
+      <Typography className={classes.demographicsText}>~{response.user.age? response.user.age + ' YRS OLD' : null} {response.user.race? ' | ' + response.user.race : null }  {response.user.religion? ' | ' + response.user.religion : null }   {response.user.gender? ' | ' + response.user.gender : null }  {response.user.housing? ' | ' + response.user.housing : null }</Typography>
     </Box>
   )
 };
