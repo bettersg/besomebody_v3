@@ -148,7 +148,7 @@ export default function MultipleChoiceQuiz(props) {
             {quiz.introduction && !hasGameStarted && 
             <Fade in={true} timeout={700}>                
                 <Box className={classes.paragraphWrapper} height="100%">               
-                {/* <Box className={classes.topLine}>In this segment, we will explore some of the issues covered in the game, using a simple quiz. </Box> */}
+                <Box className={classes.topLine}>In this segment, we will explore some of the issues covered in the game. </Box>
                 <div className="MultipleChoice__text">
                     
                     <Box my={5}>
