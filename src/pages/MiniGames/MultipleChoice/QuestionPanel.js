@@ -290,6 +290,7 @@ export default function QuestionPanel({
   const handleAnswer = (answer, explanation) => {
     setAnswered(answer);
     checkUserAnswer(answer);
+    setMessage('');
     if (question.correctAnswer !== answer) {
       setMessage(explanation);
     }
