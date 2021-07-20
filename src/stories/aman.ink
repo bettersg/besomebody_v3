@@ -158,7 +158,7 @@ Later that night in my room...
 #knot:aman_1_2
 #ui:scene
 #background:bg_aman_bedroom.jpg
-#speaker_right_image:cha_aman_jothi_casual.png
+#speaker_right_image:cha_aman_jothi_normal.png
 #speaker_right_name:Jothi
 Oh my god, can you like, KNOCK? #speaker_self
 If you need privacy, lock the door. Anyway, what are you doing? Examining your forehead lines? #speaker_right
