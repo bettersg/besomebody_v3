@@ -115,10 +115,13 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
     return (
     <Box className={classes.background}>
      <Container className={classes.container}>
-       <Typography className={classes.headerText}>Reflections from Other Players</Typography>
+          <Typography className={classes.headerText}>Reflections from Others</Typography>
+          <Typography variant="body2" color="error">{responses.length} players have completed this chapter</Typography>
       <Box>
         {responses.map(response => (
-          <ChapterResponse key={response.id} response={response} />
+          response.answer && (
+            <ChapterResponse key={response.id} response={response} />
+            )
         ))}        
       </Box>
       

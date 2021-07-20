@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
   },
   bottom: {
     bottom: 0,
-    height: '30vh',
+    height: '20vh',
     position: 'absolute',
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -88,8 +88,7 @@ const useStyles = makeStyles((theme) => ({
     color: '#ffffff',
     fontSize: '0.9rem',
     fontWeight: '400',
-    textDecoration: 'none',
-    marginBottom: 30,
+    textDecoration: 'none',    
     },
 socialShare: {
     display: 'inline-block',
@@ -115,7 +114,7 @@ const ChapterEnd = ({ setPage , user }) => {
         <Box py={4} display="flex" flexDirection="column" justifyContent="center" alignItems="center">
           <Typography className={classes.headerText}>Outcome Unlocked!</Typography>
                   <Typography className={classes.text}>You've unlocked one of the endings for {name.charAt(0).toUpperCase() + name.toLowerCase().slice(1)}'s story in chapter {chapter}</Typography> <br />
-                  <Typography className={classes.text}>Replay the chapter to unlock the rest!</Typography>
+                  <Typography className={classes.text}>Share this achievement or your own story on social media and tag us at <b>#tobeyou</b> and <b>#bettersg</b> . </Typography>
       </Box>
         <Box className={classes.bottom}>                  
           <Button variant="contained" className={classes.btn} onClick={() => history.push('/chapters/' + name)}>
@@ -162,7 +161,8 @@ const ChapterEnd = ({ setPage , user }) => {
           >
             <RedditIcon size={32} round />
             </RedditShareButton>
-
+          <br />
+          <a href="mailto:tobeyou@better.sg" target="_blank" rel="noreferrer" style={{color:'#ffffff'}}>Send us feedback</a>
 
 
     
