@@ -300,7 +300,7 @@ This is the start of a new chapter in my life.
 #chat_group_title:Family
 #chat_group_image:ico_aman_family.png
 #speaker_1_name:Papa
-#speaker_2_name:Amma
+#speaker_2_name:Ma
 #speaker_3_name:Jothi
 #timestamp:09.45
 Eh ma can we order something different for dinner tonight? #speaker_3 
@@ -327,7 +327,7 @@ I don’t care what they think. Do I care what they think? #inner_monologue
 #chat_group_title:Family
 #chat_group_image:ico_aman_family.png
 #speaker_1_name:Papa
-#speaker_2_name:Amma
+#speaker_2_name:Ma
 #speaker_3_name:Jothi
 #timestamp:09.50
 You will regret it, son. #speaker_1
@@ -341,15 +341,17 @@ Damnit. Aaaaargh.  #inner_monologue
 #chat_group_title:Family
 #chat_group_image:ico_aman_family.png
 #speaker_1_name:Papa
-#speaker_2_name:Amma
+#speaker_2_name:Ma
 #speaker_3_name:Jothi
 I... #speaker_self
 + [I'm going to NS so I had to cut it.] Papa you don't understand what Army BMT is like! #speaker_self
-    I had to cut it otherwise NS will be miserable for me - even more miserable than for the chinese boys. #speaker_self
+   ~aman_mood -= 1
+   I had to cut it otherwise NS will be miserable for me - even more miserable than for the chinese boys. #speaker_self
     Nobody else in our family had to do Army BMT, and they all went to policy or SCDF so they didn't have to deal with this. #speaker_self
     If I didn't cut it, there's no time to wash my hair or turban in BMT! #speaker_self
     Papa?  #speaker_self
 + I knew you wouldn't understand![] 
+    ~aman_mood -= 2
     This wasn't easy for me either but none of you even bothered to ask me about how I was preparing for Army BMT. #speaker_self
     All the chinese boys already complain about how hard it is and how little sleep they have. #speaker_self
     And they don't even have to wash their hair or turban every night. #speaker_self
@@ -401,6 +403,7 @@ Arrrrrggggh Zhihao was right. First day after cutting my hair, I already kena te
 #speaker_left_name:Lukman
 Hey, I overheard! You cut your hair? #speaker_left
 + [Mind your own business] Why does everyone care so much about my hair?  #speaker_self
+    ~aman_mood -= 1
     Whoa sorry. Didn't mean to kaypoh...  #speaker_left
     No, no. It's ok.. I guess I'm just on edge, man.  #speaker_self
 + [Yeah it's just easier]
@@ -453,7 +456,7 @@ He said he knows I am a good soldier, but it’s beyond his control. #speaker_le
     It’s true bro. You also know. #speaker_left
 + [Oh. Well that's life.]
  - You know, I cut my hair before I enlisted because I didn’t want to stand out as the only guy with a turban.  #speaker_self
- It’s funny that some of us want to blend in with the others. And some of us want to stand out. #speaker_self
+It’s funny that some of us want to blend in with the others. And some of us want to stand out. #speaker_self
 I’m not afraid of standing out.  #speaker_left
 You know what the stereotypes are. I want to break them.  #speaker_left
 I’m not lazy, I’m not laidback! I’ve been the most garang in the platoon.  #speaker_left
@@ -620,21 +623,25 @@ Later that night, right after I wash my hair.
 Ah Man, don’t wash your hair at night leh. We all cannot sleep seeing your long hair in the dark. So scary! #speaker_left
 Like hantu sia. #speaker_right
 + [Ignore]
+    ~aman_mood -= 1
     Pontianak! #speaker_right
     Woooooooooo! #speaker_left
     It’s all good, it’s all good... #inner_monologue
     Don’t make a scene. #inner_monologue
 + [Joke back]
     Pontia-- #speaker_right
-    #speaker_right_image:cha_aman_bunkmate2_afraid.png
-    They want scary? I'll give them scary. #inner_monologue
+    #speaker_left_image:pixel.png
     #background:bg_aman_bmtpotianak.jpg
+    They want scary? I'll give them scary. #inner_monologue
+    #speaker_right_image:cha_aman_bunkmate2_afraid.png
     AaaaaahahahahAHAHAHAHA! Aahaha! WooooooahahahHAHAHAH! #speaker_self
     OuuuuuuuaahahahhAHHHAHA! WAHkakaKAKKAKA! #speaker_self
     @$*@$! -- What the -- #speaker_right
     #background:bg_aman_bmtmirrorgrin.jpg
+    #speaker_left_image:cha_aman_bunkmate1_mocking.png
     HAHAHAHA Dei! That was brilliant la. #speaker_left
-#background:bg_aman_bmttoilet.jpg
+    #speaker_right_image:pixel.png
+#background:bg_aman_bmtmirrorgrin.jpg
 - Good night everybody.  #speaker_self
 
 
