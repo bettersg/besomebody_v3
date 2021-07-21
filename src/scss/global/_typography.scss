@@ -39,6 +39,11 @@ $staatliches: 'Staatliches', cursive;
     text-align: center;
 }
 
+@mixin inter-700 {
+    font-family: $inter;
+    font-weight: 700;
+}
+
 @mixin inter-whatsappName {
     font-family: $inter;
     font-size: 15px;
