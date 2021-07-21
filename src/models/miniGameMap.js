@@ -30,26 +30,22 @@ export const MINI_GAME_MAP = [
             "Which types of baptised (initiated) Sikhs are allowed to shave their body hair?",
           correctAnswer: "No Sikhs are allowed",
           explanation: "Initiated Sikhs (male or female) are not supposed to cut hair from any part of their body",
-          type: "image",
+          type: "text",
           answers: [
             {
-              answer_id: 1,
-              imageUrl: "stan.jpeg",
+              answer_id: 1,              
               title: "Male Sikhs below the age of 12",
             },
             {
               answer_id: 2,
-              imageUrl: "malcolm.jpg",
               title: "Female Sikhs after puberty",
             },
             {
               answer_id: 3,
-              imageUrl: "robert.jpg",
               title: "No Sikhs are allowed",
             },
             {
               answer_id: 4,
-              imageUrl: "bilius.jpg",
               title: "All Sikhs are allowed",
             },
           ],
@@ -221,3 +217,34 @@ export const MINI_GAME_MAP = [
   },
   ];
   
+
+  // {
+  //   question_id: 2,
+  //   question:
+  //     "Which types of baptised (initiated) Sikhs are allowed to shave their body hair?",
+  //   correctAnswer: "No Sikhs are allowed",
+  //   explanation: "Initiated Sikhs (male or female) are not supposed to cut hair from any part of their body",
+  //   type: "image",
+  //   answers: [
+  //     {
+  //       answer_id: 1,
+  //       imageUrl: "stan.jpeg",
+  //       title: "Male Sikhs below the age of 12",
+  //     },
+  //     {
+  //       answer_id: 2,
+  //       imageUrl: "malcolm.jpg",
+  //       title: "Female Sikhs after puberty",
+  //     },
+  //     {
+  //       answer_id: 3,
+  //       imageUrl: "robert.jpg",
+  //       title: "No Sikhs are allowed",
+  //     },
+  //     {
+  //       answer_id: 4,
+  //       imageUrl: "bilius.jpg",
+  //       title: "All Sikhs are allowed",
+  //     },
+  //   ],
+  // },
