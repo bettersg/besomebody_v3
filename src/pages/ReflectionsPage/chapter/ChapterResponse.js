@@ -5,6 +5,7 @@ import FlagIcon from '@material-ui/icons/Flag';
 import { useState } from 'react';
 import { send } from 'emailjs-com';
 import { useAuth } from '../../../contexts/AuthContext'
+import { useSnackbar } from '../../../contexts/SnackbarContext'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -41,8 +42,9 @@ const useStyles = makeStyles((theme) => ({
 const ChapterResponse = ({ response }) => {
   const classes = useStyles()
   const { currentUser } = useAuth()
+  const { setSnackbar } = useSnackbar()
 
-  const responseMessage = response.answer + ' | reflection ID: ' + response.reflectionId + ' | user ID : ' +   response.userId + ' | submitted at ' + response.submittedAt 
+  const responseMessage = response.answer + ' <br/> reflection ID: ' + response.reflectionId + ' <br/> user ID : ' +   response.userId + ' <br/> submitted at ' + response.submittedAt 
 
   const [toSend, setToSend] = useState({
     from_name: currentUser.email,
@@ -61,10 +63,20 @@ const ChapterResponse = ({ response }) => {
       'user_kmfKhjRSSwoovXNarQivp'
     )
       .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
+        setSnackbar({
+          message: 'We have flagged this message to the admins. Thank you!',
+          open: true,
+          type: 'info',
+        })
+        // console.log('SUCCESS!', response.status, response.text);
       })
       .catch((err) => {
-        console.log('FAILED...', err);
+        setSnackbar({
+          message: `Message did not get delivered: ${err}`,
+          open: true,
+          type: 'error',
+        })
+        // console.log('FAILED...', err);
       });
   };
 
