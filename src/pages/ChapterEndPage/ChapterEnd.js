@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
   },
   bottom: {
     bottom: 0,
-    height: '20vh',
+    height: '25vh',
     position: 'absolute',
     marginLeft: 'auto',
     marginRight: 'auto',

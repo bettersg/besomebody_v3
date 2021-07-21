@@ -626,15 +626,18 @@ Like hantu sia. #speaker_right
     Don’t make a scene. #inner_monologue
 + [Joke back]
     Pontia-- #speaker_right
-    #speaker_right_image:cha_aman_bunkmate2_afraid.png
-    They want scary? I'll give them scary. #inner_monologue
+    #speaker_left_image:pixel.png
     #background:bg_aman_bmtpotianak.jpg
+    They want scary? I'll give them scary. #inner_monologue
+    #speaker_right_image:cha_aman_bunkmate2_afraid.png
     AaaaaahahahahAHAHAHAHA! Aahaha! WooooooahahahHAHAHAH! #speaker_self
     OuuuuuuuaahahahhAHHHAHA! WAHkakaKAKKAKA! #speaker_self
     @$*@$! -- What the -- #speaker_right
     #background:bg_aman_bmtmirrorgrin.jpg
+    #speaker_left_image:cha_aman_bunkmate1_mocking.png
     HAHAHAHA Dei! That was brilliant la. #speaker_left
-#background:bg_aman_bmttoilet.jpg
+    #speaker_right_image:pixel.png
+#background:bg_aman_bmtmirrorgrin.jpg
 - Good night everybody.  #speaker_self
 
 
