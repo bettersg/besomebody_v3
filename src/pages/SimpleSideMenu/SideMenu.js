@@ -125,7 +125,7 @@ export default function SideMenu ({src="/side_menu/menu-icon.svg", ...rest}) {
     <div className="MenuWrapper">
       {['left'].map((anchor) => (
         <React.Fragment key={anchor}>
-          <SVG src={src} onClick={toggleDrawer(anchor, true)} className="MenuWrapper__menuButton" />
+          <img src={src} onClick={toggleDrawer(anchor, true)} className="MenuWrapper__menuButton" />
             <SwipeableDrawer
               anchor={anchor}
               open={state[anchor]}
