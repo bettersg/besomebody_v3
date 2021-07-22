@@ -209,19 +209,6 @@ export const HELP_DETAILS = [
         id: "panel4ah-header",
       },
       {
-        question: `I would like to make changes to my profile! How do I do that?`,
-        answer: (
-          <div>
-            You can rebuild your profile in the “Account Menu”. Click the menu
-            icon on the top right of the screen, and then click the option to
-            Rebuild Your Profile.
-          </div>
-        ),
-        panel: "panel4b",
-        ariaControls: "panel4bh-content",
-        id: "panel4bh-header",
-      },
-      {
         question: `Tell me more about Better.sg!`,
         answer: (
           <div>
