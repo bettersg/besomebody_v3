@@ -30,10 +30,13 @@
         color: $white; 
         font-size: 24px;
         text-align: center;
+        a {
+            text-decoration: none;
+        }
         &--icon {
             background-color: $lapis10;
-            height: 56px;
-            width: 56px;
+            height: 56px !important;
+            width: 56px !important;
             border-radius: 50%;
             display: flex;
             justify-content: center;
