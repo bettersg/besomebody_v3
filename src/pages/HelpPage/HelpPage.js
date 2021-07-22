@@ -110,12 +110,14 @@ export default function Help() {
           {HELP_ICONS.map((content) => {
             return (
               <Grid item xs={6}>
-                <ButtonBase className={classes.button}>
-                  <div className="HelpPage__top--icon">
-                    <SVG src={content.icon} />
-                  </div>
-                  {content.name}
-                </ButtonBase>
+                <a href={content.id} >
+                  <ButtonBase className={classes.button}>
+                    <div className="HelpPage__top--icon">
+                      <SVG src={content.icon} />
+                    </div>
+                    {content.name}
+                  </ButtonBase>
+                </a>
               </Grid>
             )
           })}
@@ -126,7 +128,7 @@ export default function Help() {
         HELP_DETAILS.map((content, idx) => {
           return (
             <div className={classes.helpWrapper}>
-              <Typography className={classes.heading}>{content.category}</Typography>
+              <Typography className={classes.heading} id={content.id}>{content.category}</Typography>
               {content.questions.map((oneQuestion, idx) => {
                 return (
                   <Accordion expanded={expanded === oneQuestion.panel} onChange={handleChange(oneQuestion.panel)} className={classes.accordian}>

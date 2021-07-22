@@ -2,24 +2,29 @@ export const HELP_ICONS = [
   {
     name: "Playing the game",
     icon: "/help_page/arrow.svg",
+    id: "#play-game", 
   },
   {
     name: "Account and Profile",
     icon: "/help_page/profile.svg",
+    id: "#account-profile", 
   },
   {
     name: "Report a bug",
     icon: "/help_page/bug.svg",
+    id: "#report-bug", 
   },
   {
     name: "About Us",
     icon: "/help_page/about.svg",
+    id: "#about-game", 
   },
 ];
 
 export const HELP_DETAILS = [
   {
     category: "Playing the Game",
+    id: "play-game", 
     questions: [
       {
         question:
@@ -99,6 +104,7 @@ export const HELP_DETAILS = [
   },
   {
     category: "Submitting an Issue",
+    id: "report-bug", 
     questions: [
       {
         question: `I found a bug in the game! Or I have an issue with part of the story! How do I report it?`,
@@ -117,6 +123,7 @@ export const HELP_DETAILS = [
   },
   {
     category: "Account issues",
+    id: "account-profile", 
     questions: [
       {
         question: `Why do I need to share my personal information? And how is this information used?`,
@@ -158,6 +165,7 @@ export const HELP_DETAILS = [
   },
   {
     category: "About the Game and Team",
+    id: "about-game", 
     questions: [
       {
         question: `What is To Be You about?`,
