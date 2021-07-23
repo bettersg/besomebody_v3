@@ -30,7 +30,7 @@ export const getDbReflectionResponses = async ({
     const snapshot = await firestore.collection("reflectionResponses")
       .where('reflectionId', '==', reflectionId)
       .where('questionId', '==', questionId)      
-      // .orderBy("submittedAt")      
+      // .orderBy("submittedAt", "desc")      
       .get();
     const reflectionResponses = snapshot.docs.map(doc => ({
       ...doc.data(),
