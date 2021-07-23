@@ -73,6 +73,7 @@ const ReflectionForm = ({ reflection }) => {
         userId: currentUser.id,
         answer,
         submittedAt: new Date(),
+        timestamp: Date.now(),
       }
     });
     try {

@@ -6,6 +6,8 @@ import { getDbReflectionResponses } from '../../../models/reflectionResponseMode
 import { REFLECTION_PAGE_FORM } from '../constants';
 import ChapterResponse from './ChapterResponse';
  import makeStyles from '@material-ui/core/styles/makeStyles'
+ import PacmanLoader from 'react-spinners/PacmanLoader'
+
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
@@ -110,20 +112,24 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
   }, [reflectionId, setResponses]);
 
   if (responses == null) {
-    return <CircularProgress />;
+    return (
+      <Box className={classes.background}>
+        <PacmanLoader color="#e5e5e5" size={25}	css={{align:"center", top:"200px", left:"100px"}} />
+      </Box>
+    )
   } else {
     return (
-    <Box className={classes.background}>
-     <Container className={classes.container}>
+      <Box className={classes.background}>        
+        <Container className={classes.container}>
           <Typography className={classes.headerText}>Reflections from Others</Typography>
           <Typography variant="body2" color="error">{responses.length} players have completed this chapter</Typography>
-      <Box>
+        <Box>
         {responses.map(response => (
-          response.answer && (
+          response.answer.length > 5 && (
             <ChapterResponse key={response.id} response={response} />
             )
         ))}        
-      </Box>
+        </Box>
       
         </Container>
         <Button className={classes.btn} onClick={() => setPage(REFLECTION_PAGE_FORM)} fullWidth>Continue</Button>

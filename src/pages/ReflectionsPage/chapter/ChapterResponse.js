@@ -6,7 +6,11 @@ import { useState } from 'react';
 import { send } from 'emailjs-com';
 import { useAuth } from '../../../contexts/AuthContext'
 import { useSnackbar } from '../../../contexts/SnackbarContext'
-
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
 
 const useStyles = makeStyles((theme) => ({
   reflectionBox: {
@@ -55,9 +59,19 @@ const ChapterResponse = ({ response }) => {
     reply_to: 'tobeyou@better.sg',
   });
 
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   const onSubmit = (e) => {
     e.preventDefault();
+    setOpen(false);
     send(
       'service_mxyo80c',
       'template_r9ys0jd',
@@ -69,7 +83,7 @@ const ChapterResponse = ({ response }) => {
           message: 'We have flagged this message to the admins. Thank you!',
           open: true,
           type: 'info',
-        })
+        })        
         // console.log('SUCCESS!', response.status, response.text);
       })
       .catch((err) => {
@@ -77,7 +91,7 @@ const ChapterResponse = ({ response }) => {
           message: `Message did not get delivered: ${err}`,
           open: true,
           type: 'error',
-        })
+        })        
         // console.log('FAILED...', err);
       });
   };
@@ -91,8 +105,31 @@ const ChapterResponse = ({ response }) => {
       <Typography className={classes.storyText}>{response.answer} </Typography> <br/>
       <Grid container >
         <Grid item xs={10}><Typography className={classes.demographicsText}>~{response.user.age ? response.user.age + ' YRS OLD' : null} {response.user.race ? ' | ' + response.user.race : null}  {response.user.religion ? ' | ' + response.user.religion : null}   {response.user.gender ? ' | ' + response.user.gender : null}  {response.user.housing ? ' | ' + response.user.housing : null}</Typography></Grid>
-        <Grid item xs={2}><FlagIcon className={classes.flag} fontSize="small"  onClick={onSubmit}/></Grid>
+        <Grid item xs={2}><FlagIcon className={classes.flag} fontSize="small"  onClick={handleClickOpen} /></Grid>
       </Grid>
+
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+        maxWidth="xs"
+      >
+        <DialogTitle id="alert-dialog-title">{"Alert admins to this comment?"}</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            Comments that are disrespectful / obscene / irrelevant will be removed by admins. Comments that contain different views (even those you may disagree with) will be retained, so long as they are phrased respectfully.
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button variant="contained" onClick={onSubmit} color="primary" autoFocus>
+            SUBMIT RED FLAG <FlagIcon color="error" fontSize="small"  />
+          </Button>
+          <Button onClick={handleClose} color="primary">
+            CLOSE
+          </Button>
+        </DialogActions>
+      </Dialog>
     </Box>
   )
 };
