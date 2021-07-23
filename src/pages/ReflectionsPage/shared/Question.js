@@ -38,7 +38,7 @@ const Question = ({ question, value, onChange }) => {
                 </Typography>
               </Box>
             </Box>
-            <Slider value={value || 0} onChange={(event, value) => onChange(value)} />
+            <Slider value={value || 50} onChange={(event, value) => onChange(value)} />
           </Box>
         </Box>
       );
