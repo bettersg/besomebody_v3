@@ -53,8 +53,7 @@ const Question = ({ question, value, onChange }) => {
               value={value}
               onChange={handleChange}
               variant="filled"
-              placeholder="Type here"
-              required
+              placeholder="Please type here. If you do not wish to share, leave this blank."              
               fullWidth
               multiline
               rows={4}
