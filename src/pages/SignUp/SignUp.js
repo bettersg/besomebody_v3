@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
 
 const SignUp = () => {
   const firebaseUIConfig = {
-    signInFlow: 'popup',
+    signInFlow: 'redirect',
     signInOptions: [
       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
       firebase.auth.FacebookAuthProvider.PROVIDER_ID,
