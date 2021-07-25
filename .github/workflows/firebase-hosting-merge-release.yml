@@ -17,7 +17,7 @@ jobs:
       REACT_APP_THEME_DARK: false
       REACT_APP_SENTRY_DSN: https://bb146ffc4f074171bcf4a41bba43de17@o374848.ingest.sentry.io/5193525
       REACT_APP_FIREBASE_API_KEY: ${{ secrets.REACT_APP_FIREBASE_API_KEY }}
-      REACT_APP_FIREBASE_AUTH_DOMAIN: besomebody.firebaseapp.com
+      REACT_APP_FIREBASE_AUTH_DOMAIN: game.tobeyou.sg
       REACT_APP_FIREBASE_PROJECT_ID: besomebody
       REACT_APP_FIREBASE_STORAGE_BUCKET: besomebody.appspot.com
       REACT_APP_FIREBASE_MESSAGING_SENDER_ID: 1058004825790
