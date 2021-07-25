@@ -33,5 +33,6 @@ jobs:
           channelId: live
           projectId: besomebody
           target: production
+          expires: 2d
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
