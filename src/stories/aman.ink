@@ -474,7 +474,7 @@ Thanks buddy. #speaker_left
 BMT Passing Out Parade. #title
 My dad was still a bit grumpy about the hair, but he teared up at the parade. 
 He claims he didn't but I could see his eyes were wet when we hugged.
-Mum was just happy I survived, I think.
+Ma was just happy I survived, I think.
 #background:bg_aman_ordberet.jpg
 We took so many photos that my phone battery died.
 Jothi made some snarky comments about my biceps being bigger than my brain now, but she seemed genuinely proud too. 
@@ -498,7 +498,7 @@ You did it, son. I am proud of you. Of course, you would have looked more handso
 Enough motu (endearment), it’s not the time.  #speaker_right
 Aman, turban or no turban, you will always be my hero. #speaker_right
 Aman beta (dear), now that the hardest part is over, you should start thinking about what you will do after NS.  #speaker_right
-+ [I was thinking of trying my hand at theatre and short films, mum.]
++ [I was thinking of trying my hand at theatre and short films, Ma.]
     #speaker_right_image:cha_aman_jothi2_hairflip.png
     #speaker_right_name:Jothi    
     A few biceps and suddenly you think you can be an action hero eh? #speaker_right
@@ -712,7 +712,7 @@ Thanks buddy. #speaker_left
 #background:bg_aman_bmtcampoutside.jpg
 BMT Passing Out Parade. #title
 My dad cried at the parade. He claims he didn't but I could see his eyes were wet when we hugged.
-Mum was just happy I survived, I think.
+Ma was just happy I survived, I think.
 Jothi made some snarky comments about by biceps being bigger than my brain now, but she seemed genuinely proud too. 
 #background:bg_aman_ordturban.jpg
 We took so many photos that my phone battery died.
@@ -735,7 +735,7 @@ Our Aman looked so handsome at his passing out parade! #speaker_right
 You did it, son. I am proud of you.  #speaker_left
 Aman, you will always be my hero. #speaker_right
 Aman beta, now that the hardest part is over, you should start thinking about what you will do after NS.  #speaker_right
-+ [I was thinking of trying my hand at theatre and short films, mum.]
++ [I was thinking of trying my hand at theatre and short films, Ma.]
 #speaker_right_image:cha_aman_jothi2_normal.png
 #speaker_right_name:Jothi    
     A few biceps and suddenly you think you can be an action hero eh? #speaker_right
@@ -747,8 +747,7 @@ Aman beta, now that the hardest part is over, you should start thinking about wh
 #speaker_right_image:cha_aman_jothi2_hairflip.png
 #speaker_right_name:Jothi    
     You mean, “spend lots of time with Selinder”, right? #speaker_right
-- Ha, I must agree! I’m glad to have Aman back. #speaker_right
-If only I could freeze time here. #inner_monologue
+- If only I could freeze time here. #inner_monologue
 With everything so simple, and pure... #inner_monologue
 
 -> chapter_1_ending_2
@@ -794,12 +793,13 @@ Reflection 1
 === aman_2_intro ===
 #knot:aman_2_intro
 #ui:narrator
-#background:aman_1_intro.jpg
-#music:aman_intro.mp3
+#background:bg_aman_2_intro.jpg
 ~ chapter_id = 2
 Chapter 2 #title
 To Be or Not To Be #title
 I am finally done with NS, what an adventure! 
+{chapter_1_ending_1: Cutting my hair was a really difficult decision, but I'm growing it back out now.}
+{chapter_1_ending_2: Keeping my hair made NS even harder, but I'm glad I went through it.}
 So many varied experiences, and I have made some good friends too, like Lukman.
 I got accepted into my first choice uni in Melbourne! 
 I’ve got a couple of months off before I fly off. 
@@ -813,30 +813,30 @@ Maybe I’ll be famous by the time I leave for Oz...
 === aman_2_1_narration ===
 #knot:aman_2_1_narration
 #ui:narrator
-#background:aman_bedroom.jpg
+#background:bg_aman_bedroom.jpg
 Two months after finishing NS.
 -> aman_2_1
 
 === aman_2_1 ===
 #knot:aman_2_1
 #ui:scene
-#background:aman_bedroom.jpg
+#background:bg_aman_bedroom.jpg
 {chapter_1_ending_1: -> aman_2_1_ending1 }
 {chapter_1_ending_2: -> aman_2_1_ending2 }
-{not chapter_1_ending_2 && not chapter_1_ending_1: -> aman_2_1_ending1}        // ONLY FOR DEBUGGING. REMOVE IN PRODUCTION
 
 
 = aman_2_1_ending1 
 #ui:scene
-#background:aman_bedroom.jpg
+#background:bg_aman_bedroom.jpg
 Hey, that picture of Selinder and me actually looks pretty good on the wall. #inner_monologue
 Maybe Papa wasn’t entirely wrong about growing out my hair again.  #inner_monologue
 I only did it to keep the peace, but it’s not a bad look. #inner_monologue
+Being able to spend time with Sel has been great… but I wonder what will happen when I go to Australia? #inner_monologue
 -> aman_2_1_choice
 
 = aman_2_1_ending2
 #ui:scene
-#background:aman_bedroom.jpg
+#background:bg_aman_bedroom.jpg
 I wonder if Selinder has left her house yet, for our date tonight.  #inner_monologue
 I'm glad I didn't cut my hair - the turban looks pretty good and she likes the look!  #inner_monologue
 I’ve been loving our time together since I got out of NS, but I wonder...  #inner_monologue
@@ -844,15 +844,15 @@ Will we last when I move to Australia?  #inner_monologue
 -> aman_2_1_choice
 
 = aman_2_1_choice
-+ [Chat with Selinder] -> aman_2_1a
-+ [Just get ready for the date] -> aman_2_1b 
++ [Chat with Selinder about the future] -> aman_2_1a
++ [Check casting calls] -> aman_2_1b 
 
 === aman_2_1a ===
 #knot:aman_2_1a
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Selinder
-#chat_group_image:selinder_profile.jpg
+#chat_group_image:ico_aman_selinder.png
 #speaker_1_name:Selinder
 #timestamp:18.21
 Heyyyy babe. #speaker_self
@@ -889,15 +889,17 @@ Will you be thinking of me as much when you’re in Australia? #speaker_1
 === aman_2_1b ===
 #knot:aman_2_1b
 #ui:scene
-#background:aman_casting_calls.png
+#background:bg_aman_castingcalls1.jpg
 Singapore Casting Calls Group eh? Let's see if there's any roles for me. #inner_monologue
 Hey, I could do this one! #inner_monologue
+#background:bg_aman_castingcalls2.jpg
 It must be so cool to do this full time.  #inner_monologue
 Maybe I’ll get discovered. Get rich. Be famous.  #inner_monologue
 Riding along, with hot girls, in my red convertible along Palm Springs California, the wind in our hair... #inner_monologue
 Oh, who am I kidding!  #inner_monologue
 I’ve applied to dozens of casting calls in the past month, but nobody replies.  #inner_monologue
-
+#background:new_message_notification.jpg
+Hmm... an unknown number... Could it be.... #inner_monologue
 -> aman_2_1c
 
 
@@ -906,22 +908,22 @@ I’ve applied to dozens of casting calls in the past month, but nobody replies.
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Unknown Number
-#chat_group_image:unknown_profile.jpg
-#speaker_1_name:Unknown Number
+#chat_group_image:ico_unknown_profile.png
+#speaker_1_name:Elsa
 Hi, this is Elsa from Everyday Productions! We got your email. #speaker_1
 Can you send me your unedited full body pic, close up shot and side shots pls. And also your per day rate. #speaker_1
 Hi Elsa, thanks for getting back to me! Please see my photos attached.  #speaker_self  
 📎photo1.jpg 📎photo2.jpg  #speaker_self  
 
 #ui:scene
-#background:aman_1_intro.jpg
+#background:bg_aman_bedroom.jpg
 Yaaas! FINALLY. #inner_monologue
 Wait, she asked for my rates. What are my rates? Oh good grief. Uh... #inner_monologue
 + [$500!] 
     #ui:whatsapp
     #background:whatsapp.png
     #chat_group_title:Unknown Number
-    #chat_group_image:elsa_profile.jpg
+    #chat_group_image:ico_unknown_profile.png
     #speaker_1_name:Unknown Number
     VAR aman_2_1c_overcharge = true
     For my daily rate, it’s $500. #speaker_self
@@ -935,7 +937,7 @@ Wait, she asked for my rates. What are my rates? Oh good grief. Uh... #inner_mon
     #ui:whatsapp
     #background:whatsapp.png
     #chat_group_title:Unknown Number
-    #chat_group_image:elsa_profile.jpg
+    #chat_group_image:ico_unknown_profile.png
     #speaker_1_name:Unknown Number
     ~ aman_2_1c_overcharge = false
     My daily rate is... $100? #speaker_self
@@ -953,12 +955,12 @@ ok, better get ready for date night!#inner_monologue
 === aman_2_2 ===
 #knot:aman_2_2
 #ui:scene
-#background:beach.jpg
-#speaker_right_image:selinder.png
+#background:bg_aman_beachdate.jpg
+#speaker_right_image:cha_aman_selinder.png
 #speaker_right_name:Selinder
 She’s beautiful... #inner_monologue
 How is your acting coming along? #speaker_right
-+ [Not much luck.] #speaker_self
++ [Not much luck.] 
     VAR aman_2_2_confide = true
     Not much luck yet. I’ve been applying, but nobody responds.  #speaker_self
     Sometimes I check the email addresses again and again to make sure I didn’t make a mistake, and the email went through. #speaker_self
@@ -970,7 +972,7 @@ How is your acting coming along? #speaker_right
     You look very handsome in them. Let me know when she responds, okay?  #speaker_right
     Of course! Maybe if I get a foothold in entertainment now, I can continue when I move to Australia. #speaker_self
 
-+ [Oh, it's all good.] #speaker_self
++ [Oh, it's all good.] 
     ~ aman_2_2_confide = false
     Oh, it’s all good. I’m taking it easy, just trying my luck.  #speaker_self
     I’m not taking this seriously or anything. #speaker_self
@@ -985,8 +987,8 @@ You’ll come back, right?  #speaker_right
 Of course, jaan (dear). Why wouldn’t I?  #speaker_self
 If not, I’d take you with me! #speaker_self
 You’d better! If not, I’ll cut you up into tiny pieces and make mutton keema (mince) out of you. #speaker_right
-Cannot. You’re vegetarian. #speaker_self
-Vegetarian mutton keema. #speaker_right
+Cannot. You’re vegetarian. 😂  #speaker_self
+Vegetarian mutton keema.  #speaker_right
 
 -> aman_2_3_narration
 
@@ -994,18 +996,18 @@ Vegetarian mutton keema. #speaker_right
 === aman_2_3_narration ===
 #knot:aman_2_3_narration
 #ui:narrator
-#background:aman_home.jpg
-One week later. #title
+#background:bg_aman_hometv.jpg
+One week later, at home. #title
 
 -> aman_2_3 
 
 === aman_2_3 ===
 #knot:aman_2_3
 #ui:scene
-#background:aman_home.jpg
-#speaker_left_image:aman_mother.png
-#speaker_left_name:Mum
-Ah, Ma’s favourite soap. So dramatic. #inner_monologue
+#background:bg_aman_hometv.jpg
+#speaker_left_image:cha_aman_mother.png
+#speaker_left_name:Ma
+Ah, Ma’s favourite tv series. So dramatic. #inner_monologue
 Speaking of dramatic... I haven’t heard from Elsa.  #inner_monologue
 Or anyone else. Maybe I should text her? Where did I put my phone... #inner_monologue
 Where are you going! You’re missing the best part! #speaker_left
@@ -1021,7 +1023,7 @@ Do I sound desperate? Maybe I'll try a different tactic... #inner_monologue
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Elsa, Casting Agent
-#chat_group_image:elsa_profile.jpg
+#chat_group_image:ico_aman_elsa.jpg
 #speaker_1_name:Elsa
 Hi Elsa, this is Aman! Just checking to see if you have any update on the role? #speaker_self
 + I’m nearly fully booked, you see.[] #speaker_self
@@ -1031,9 +1033,9 @@ Hi Elsa, this is Aman! Just checking to see if you have any update on the role? 
 - Thanks again for reaching out to me! #speaker_self
 
 #ui:scene
-#background:aman_home.jpg
-#speaker_left_image:aman_mother.png
-#speaker_left_name:Mum
+#background:bg_aman_hometv.jpg
+#speaker_left_image:cha_aman_mama.png
+#speaker_left_name:Ma
 Nothing to do now but wait, I guess… #inner_monologue
 What a good for nothing! #speaker_left
 Wow, Ma, you too? #speaker_self
@@ -1047,27 +1049,27 @@ A new message! Maybe it's Elsa! Please let it be good news! #inner_monologue
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Zhihao
-#chat_group_image:zhihao.jpg
+#chat_group_image:ico_aman_zhihao.jpg
 #speaker_1_name:Zhihao
 Bro up for drinks next weekend? I’ll make the booking. #speaker_1
 #ui:scene
-#background:aman_home.jpg
+#background:bg_aman_hometv.jpg
 Drinks? He knows I’m not supposed to drink, right? #inner_monologue
 Well, I can always order something non-alcoholic.  #inner_monologue
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Zhihao
-#chat_group_image:zhihao.jpg
+#chat_group_image:ico_aman_zhihao.jpg
 #speaker_1_name:Zhihao
 Yes onz. See you. #speaker_self
 What you doing anyway? #speaker_1
 Thinking of you. 😍  #speaker_self
 🤢 🤮 #speaker_1
 #ui:scene
-#background:aman_home.jpg
-#speaker_left_image:aman_mother.png
-#speaker_left_name:Mum
-Aman, hurry! Tina is threatening to burn herself alive! #speaker_self
+#background:bg_aman_hometv.jpg
+#speaker_left_image:cha_aman_mama_worried.png
+#speaker_left_name:Ma
+Aman, hurry! Tina is threatening to throw away the wedding ring! #speaker_self
 #background:new_message_notification.jpg
 Another message. Uh what does Zhihao want now? #inner_monologue
 -> aman_2_3_whatsapp3
@@ -1077,16 +1079,16 @@ Another message. Uh what does Zhihao want now? #inner_monologue
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Elsa, Casting Agent
-#chat_group_image:elsa_profile.jpg
+#chat_group_image:ico_aman_elsa.png
 #speaker_1_name:Elsa
 Hi Aman. Client decided to go with another talent. Thanks. #speaker_1
 #ui:scene
-#background:aman_home.jpg
+#background:bg_aman_hometv.jpg
 ...Oh. Sigh. #inner_monologue
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Elsa, Casting Agent
-#chat_group_image:elsa_profile.jpg
+#chat_group_image:ico_aman_elsa.png
 #speaker_1_name:Elsa
 Thanks Elsa, no worries. Can I just check if client gave any reason for not proceeding? #speaker_self
 {aman_2_1c_overcharge: Oh, hmm frankly the rate you quoted is quite high for someone with no experience... but...} #speaker_1
@@ -1103,9 +1105,9 @@ No offence yup. Just that more relatable without turban and long beard.  #speake
 === aman_2_3_home ===
 #knot:aman_2_3_home
 #ui:scene
-#background:aman_home.jpg
-#speaker_left_image:aman_mother.png
-#speaker_left_name:Mum
+#background:bg_aman_hometv.jpg
+#speaker_left_image:cha_aman_mama_worried.png
+#speaker_left_name:Ma
 They prefer someone with a more clean look. #inner_monologue
 What does that even mean? #inner_monologue
 So I am dirty looking? #inner_monologue
@@ -1124,7 +1126,7 @@ Sorry, I’m really tired. I’m going to bed. #speaker_self
 === aman_2_4_narration ===
 #knot:aman_2_4_narration
 #ui:narrator
-#background:aman_bedroom.jpg
+#background:bg_aman_bedroom.jpg
 On a sleepless night. 
 #background:new_call_notification.jpg
 The phone rings. It's Selinder.
@@ -1133,8 +1135,8 @@ The phone rings. It's Selinder.
 === aman_2_4 ===
 #knot:aman_2_4
 #ui:scene
-#background:aman_bedroom.jpg
-#speaker_left_image:selinder_phone.png
+#background:bg_aman_bedroom.jpg
+#speaker_left_image:cha_aman_selinder_phone.png
 #speaker_left_name:Selinder
 Hi jaan (dear), how are you? What are you doing? #speaker_left
 Just turning in for the night. How about you? #speaker_self
@@ -1154,6 +1156,7 @@ Tsk. I mean, you know la. For us, it’s harder.  #speaker_left
 Turban and all. Not that many roles. #speaker_left
 Is that how you’ve felt all along? Like I’ve been on a wild goose chase? #speaker_self
 No jaan (dear), that’s not what I meant.  #speaker_left
+#speaker_left_image:cha_aman_selinder_concerned_phone.png
 Just... that you need to manage your expectations. You can’t be so idealistic. #speaker_left
 So I should give up on my dreams, become a boring accountant, and live a boring average Joe life.   #speaker_self
 Oh wait! I’m not even an average Joe. So below-average Joe life.   #speaker_self
@@ -1175,6 +1178,7 @@ Aman? #speaker_left
 = aman_2_4_sleep
 Babe, thanks for calling, but I think I’ll call it a night. #speaker_self
 Oh. Hmm...  #speaker_left
+#speaker_left_image:cha_aman_selinder_concerned_phone.png
 Aman, you’d tell me if anything was bothering you, right?  #speaker_left
 Lately, you’ve felt a little distant. Ever since NS?   #speaker_left
 But maybe I’m just being paranoid.  #speaker_left
@@ -1183,7 +1187,7 @@ Sure. Don’t worry, everything is fine. #speaker_self
 Goodnight. #speaker_left
 
 #ui:scene
-#background:aman_bedroom.jpg
+#background:bg_aman_bedroom.jpg
 Selinder is wonderful. #inner_monologue
 I’m the problem.  #inner_monologue
 Why do I want things I can’t have? #inner_monologue
@@ -1203,11 +1207,11 @@ But I’m just...me. #inner_monologue
 === aman_2_5_narration ===
 #knot:aman_2_5_narration
 #ui:narrator
-#background:aman_bedroom.jpg
+#background:bg_aman_bedroom.jpg
 Taunting Dreams #title
 The dreams kept repeating. Taunting me. Rejecting me. 
 Every night, it was the same dream. I pick up my phone, and there's a message.
-#background:new_message_notification.jpg
+#background:new_message_notification_dream.jpg
 Sorry, you were not selected.
 Client wants a more pan-Asian look.
 Can you shave your beard?
@@ -1217,6 +1221,7 @@ Actually you have nice features, but can’t really see them.
 Sorry. 
 Sorry. you are not what anybody is looking for in a model.
 Sorry, nobody wants to be you, Aman.
+#background:bg_aman_bedroom.jpg
 I wish the dreams would stop. Maybe I just need one gig.
 
 -> aman_2_5
@@ -1224,13 +1229,13 @@ I wish the dreams would stop. Maybe I just need one gig.
 === aman_2_5 ===
 #knot:aman_2_5
 #ui:scene
-#background:aman_bedroom.jpg
+#background:bg_aman_bedroom.jpg
 This sucks. Only three more months before I leave for Melbourne, and I haven’t scored a single gig. Not even as an extra! #inner_monologue
 Maybe - maybe if I changed my look? Slick my hair back, and wear it in a ponytail instead... #inner_monologue
 + [Change my look] -> aman_2_6_narration
 + [Keep my look] 
     {chapter_1_ending_1: I cut my hair for NS, and it didn't make life easier. I won't change my look again. } #inner_monologue
-    {not chapter_1_ending_1: I didn't even cut my hair to make life easy for NS - I'm not going to change my look now. } #inner_monologue
+    {chapter_1_ending_2: I didn't even cut my hair to make life easy for NS - I'm not going to change my look now. } #inner_monologue
     I remember what Ma used to say, when I got bullied in school. #inner_monologue
     Sikhs are courageous, and face their challenges head on. Never giving up. Always remaining in chardikala (optimism). #inner_monologue
     I won’t give up. I’ll keep trying, just as I am. #inner_monologue
@@ -1244,10 +1249,10 @@ Maybe - maybe if I changed my look? Slick my hair back, and wear it in a ponytai
 === aman_2_6_narration ===
 #knot:aman_2_6_narration
 #ui:narrator
-#background:aman_home.jpg
+#background:bg_aman_homeplaystation.jpg
 Hanging out with Zhihao. #title
 Playing Playstation with Zhihao is like meditation. Clears my mind.
-Nothing can distur..
+Nothing can distu...
 #background:new_message_notification.jpg
 Oh, another message! From Claire, the other casting agent!
 I guess she liked the photos I sent!
@@ -1259,15 +1264,13 @@ I guess she liked the photos I sent!
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Claire, Casting Agent
-#chat_group_image:claire_profile.jpg
+#chat_group_image:ico_aman_claire.png
 #speaker_1_name:Claire
 Hey Aman, thanks for sending over those photos! Can you come down for an audition tomorrow? #speaker_1
 Yes! #speaker_self
-
-
 #ui:scene
-#background:aman_home.jpg
-#speaker_left_image:zhihao.png
+#background:bg_aman_homeplaystation.jpg
+#speaker_left_image:cha_aman_zhihao.png
 #speaker_left_name:Zhihao
 Wow, this new look actually works. How should I style myself for this audition...? #inner_monologue
 Bro - can I borrow your Adidas cap tomorrow? #speaker_self
@@ -1278,15 +1281,17 @@ They ask you take out your turban? #speaker_left
 Not they ask. But it’s hard to get roles with a turban.   #speaker_self
 So I’ve been sending out my pics with my hair tied back.  #speaker_self
 {chapter_1_ending_1: -> aman_2_6_cut_hair}
-{not chapter_1_ending_1: -> aman_2_6_keep_hair}
+{chapter_1_ending_2: -> aman_2_6_keep_hair}
 
 = aman_2_6_cut_hair
 Wah lau eh. Funny la you. That time before NS, you cut your hair, then you decide to keep long again.  #speaker_left
+#speaker_left_image:cha_aman_zhihao_joking.png
 Now doing all this disguise to pretend like short again.  #speaker_left
 You are so confu-singh. Geddit? Geddit? #speaker_left
 ->aman_2_6_cap
 
 = aman_2_6_keep_hair
+#speaker_left_image:cha_aman_zhihao_jokingmean.png
 Fake la you. That time ask you cut once and for all don’t want to cut.  #speaker_left
 Now doing all this hidden disguise pretend like short hair. Funny sia you.  #speaker_left
 ->aman_2_6_cap
@@ -1294,6 +1299,7 @@ Now doing all this hidden disguise pretend like short hair. Funny sia you.  #spe
 = aman_2_6_cap
 VAR aman_2_6_secret = false
 Eh, you gonna borrow me your cap, or you gonna give me a lecture?  #speaker_self
+#speaker_left_image:cha_aman_zhihao_eyebrowsraised.png
 Aiya take la take la.  #speaker_left
 + [Thanks]
     Thanks, man.  #speaker_self
@@ -1315,47 +1321,44 @@ Am I so desperate to be on TV, I’ll do anything...? #inner_monologue
 === aman_2_7_narration ===
 #knot:aman_2_7_narration
 #ui:narrator
-#background:supermarket.jpg
-A few weeks later, in the supermarket with mum. 
+#background:bg_aman_supermarket.jpg
+A few weeks later, in the supermarket with Ma. 
 -> aman_2_7
 
 === aman_2_7 ===
 #knot:aman_2_7
 #ui:scene
-#background:supermarket.jpg
-#speaker_right_image:aman_mum.png
-#speaker_right_name:Mama
+#background:bg_aman_supermarket.jpg
+#speaker_right_image:cha_aman_mama.png
+#speaker_right_name:Ma
 Ma, enough la. Who’s gonna carry so many plastic bags? #speaker_self
 I didn’t send you to the jungle for two years so you could complain about carrying my plastic bags. #speaker_right
-Oh look! Ripe mangoes on sale!  #speaker_self
+Oh look! Ripe mangoes on sale!  #speaker_right
 -> aman_2_7_whatsapp1
 
 === aman_2_7_whatsapp1 ===
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Claire, Casting Agent
-#chat_group_image:claire_profile.jpg
+#chat_group_image:ico_aman_claire.png
 #speaker_1_name:Claire
 Hi Aman, thanks for coming by last week for the audition. #speaker_1
 Discussed with the client, and he really likes your facial features.  #speaker_1
 Would you be open to cutting your hair? We are looking for a more clean-cut look. And no facial hair. #speaker_1
 The client is keen on your looks, aside from that.  #speaker_1
-
 #ui:scene
-#background:supermarket.jpg
+#background:bg_aman_supermarket.jpg
 Here we go again... sigh #inner_monologue
-
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Claire, Casting Agent
-#chat_group_image:claire_profile.jpg
+#chat_group_image:ico_aman_claire.png
 #speaker_1_name:Claire
 No, I can’t cut. It’s ok, thank you. #speaker_self
-
 #ui:scene
-#background:supermarket.jpg
-#speaker_right_image:aman_mum.png
-#speaker_right_name:Mama
+#background:bg_aman_supermarket.jpg
+#speaker_right_image:cha_aman_mama.png
+#speaker_right_name:Ma
 What are you looking so down in the dumps about, beta (son) ? #speaker_right
 Nothing, ma. #speaker_self
 #background:new_message_notification.jpg
@@ -1367,19 +1370,19 @@ Oh...I got one new message. Probably another rejection from another casting agen
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Kristine, Casting Agent
-#chat_group_image:unknown_profile.jpg
+#chat_group_image:ico_aman_kristine.png
 #speaker_1_name:Kristine
 Hey, Aman! Kristine from TOP. We got your email and pics. Thanks for your interest in "A Trip in Time". #speaker_1
 
 #ui:scene
-#background:supermarket.jpg
+#background:bg_aman_supermarket.jpg
 A TRIP IN TIME! #inner_monologue
 That’s the World War II drama that needs British Indian soldiers! Will this be my lucky break? #inner_monologue
 
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Kristine, Casting Agent
-#chat_group_image:unknown_profile.jpg
+#chat_group_image:ico_aman_kristine.png
 #speaker_1_name:Kristine
 Can you come down for an audition next Tuesday at 10am? #speaker_1
 + [Play it cool]
@@ -1397,40 +1400,40 @@ Oh and one more thing, we need our character to have a turban and a full beard. 
 You’re okay not to cut your hair or trim your beard for a while, right? #speaker_1
 
 {chapter_1_ending_1: -> aman_2_7_cut_hair}
-{not chapter_1_ending_1: -> aman_2_7_keep_hair}    // this should actually be chapter_1_ending_2 but it breaks unless you play the entire game in one sitting. need to pull from savegame?
+{chapter_1_ending_2: -> aman_2_7_keep_hair}    // this should actually be chapter_1_ending_2 but it breaks unless you play the entire game in one sitting. need to pull from savegame?
 
 = aman_2_7_cut_hair
 #ui:scene
-#background:supermarket.jpg
+#background:bg_aman_supermarket.jpg
 Good lord. The irony... #inner_monologue
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Kristine, Casting Agent
-#chat_group_image:unknown_profile.jpg
+#chat_group_image:ico_aman_kristine.png
 #speaker_1_name:Kristine
 Yes sure, not a problem :) #speaker_self
 #ui:scene
-#background:supermarket.jpg
-#speaker_right_image:aman_mum.png
-#speaker_right_name:Mama
+#background:bg_aman_supermarket.jpg
+#speaker_right_image:cha_aman_mama.png
+#speaker_right_name:Ma
 What happened? Smiling so much. Must be a message from Selinder? #speaker_right
 Even better! I’ll tell you later, Ma. #speaker_self
 -> aman_2_8_narration
 
 = aman_2_7_keep_hair
 #ui:scene
-#background:supermarket.jpg
+#background:bg_aman_supermarket.jpg
 PERFECT! #inner_monologue
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Kristine, Casting Agent
-#chat_group_image:unknown_profile.jpg
+#chat_group_image:ico_aman_kristine.png
 #speaker_1_name:Kristine
 Yes sure, not a problem :) #speaker_self
 #ui:scene
-#background:supermarket.jpg
-#speaker_right_image:aman_mum.png
-#speaker_right_name:Mama
+#background:bg_aman_supermarket.jpg
+#speaker_right_image:cha_aman_mama.png
+#speaker_right_name:Ma
 What happened? Smiling so much. Must be a message from Selinder? #speaker_right
 Even better! I’ll tell you later, Ma. #speaker_self
 -> aman_2_8_narration
@@ -1448,8 +1451,8 @@ Another of Jothi’s meltdowns...
 === aman_2_8 ===
 #knot:aman_2_8
 #ui:scene
-#background:jothi_bedroom.jpg
-#speaker_right_image:jothi.png
+#background:bg_aman_jothibedroom.jpg
+#speaker_right_image:cha_aman_jothi.png
 #speaker_right_name:Jothi
 Definitely this red dress, right? Come on, Aman. Validate my choices. #speaker_right
 Tell me my instincts are impeccable. #speaker_right
@@ -1463,6 +1466,7 @@ Tell me my instincts are impeccable. #speaker_right
 - Pfft. I don’t get it!  #speaker_self
 You and Dev broke up, so why does it matter what you wear at tonight’s party? #speaker_self
 Hello, are we related, how can you be this dense?  #speaker_right
+#speaker_right_image:cha_aman_jothi_hairflip.png
 It matters BECAUSE we broke up.  #speaker_right
 I need to sear those eyeballs into the back of his brain, like fishballs melting into a barbeque pit. #speaker_right
 Anyway, back to what I was saying.  #speaker_right
@@ -1490,7 +1494,7 @@ A message! #inner_monologue
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Kristine, Casting Agent
-#chat_group_image:unknown_profile.jpg
+#chat_group_image:ico_aman_kristine.png
 #speaker_1_name:Kristine
 Congratulations, Aman :) #speaker_1
 You’ve been selected to play Sundar Singh in A Trip in Time. #speaker_1
@@ -1499,13 +1503,13 @@ In the meantime, please block 15 days of your calendar for next month. #speaker_
 Of course! Thank you! #speaker_self
 
 #ui:scene
-#background:jothi_bedroom.jpg
-#speaker_right_image:jothi.png
+#background:bg_aman_jothibedroom.jpg
+#speaker_right_image:cha_aman_jothi.png
 #speaker_right_name:Jothi
 Sis! Oi! #speaker_self
 Oi oi! What! #speaker_right
 I GOT THE PART! Shooting starts next month! I’m SO HAPPY!  #speaker_self
-#speaker_right_image:jothi_happy.png
+#speaker_right_image:cha_aman_jothi_happy.png
 My baby bro! I’m so happy for you - well done! And I’m the first to know. So honoured. #speaker_right
 Who are you going to tell next?! #speaker_right
 + [I will tell Selinder first!]
@@ -1721,7 +1725,7 @@ The Reckoning #title
 I walked into my house and everybody was sitting there, waiting for me. 
 Pa had his arms folded, and glaring daggers at me.
 Mama looked anxious. Jothi looked a bit smug. 
-It looked like the scene from one of my mum's movies.
+It looked like the scene from one of my Ma's movies.
 -> aman_3_2
 
 
