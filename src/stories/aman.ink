@@ -1239,7 +1239,11 @@ Maybe - maybe if I changed my look? Slick my hair back, and wear it in a ponytai
     I remember what Ma used to say, when I got bullied in school. #inner_monologue
     Sikhs are courageous, and face their challenges head on. Never giving up. Always remaining in chardikala (optimism). #inner_monologue
     I won’t give up. I’ll keep trying, just as I am. #inner_monologue
+    #knot:chapter_2_ending_2
+    #ending:chapter_2_ending_2
+    ~ chapter_2_ending = 2
     VAR aman_2_5_change_look = false
+    
     -> aman_2_7_narration
 
 
@@ -1257,6 +1261,9 @@ Nothing can distu...
 Oh, another message! From Claire, the other casting agent!
 I guess she liked the photos I sent!
 ~ aman_2_5_change_look = true
+#knot:chapter_2_ending_1
+#ending:chapter_2_ending_1
+~ chapter_2_ending = 1
 -> aman_2_6
 
 === aman_2_6 ===
@@ -1529,13 +1536,22 @@ Thank you God, for helping me get this part.  #inner_monologue
     This just reinforces that I can just be me and still succeed in life. #inner_monologue
     } 
 
--> chapter_2_ending_1
+-> aman_3_intro
+
 
 === chapter_2_ending_1 ===
 #knot:chapter_2_ending_1
 #ending:chapter_2_ending_1
 ~ chapter_2_ending = 1
-// multiple ways to record the ending so that we can check in ink later if the player chose this ending or the other one. this knot is not presented to the user in the game.
+// multiple ways to record the ending so that we can check in ink later if the player chose this ending or the other one. this knot is not presented to the user in the game. CHANGE MY LOOK
+-> aman_3_intro
+
+=== chapter_2_ending_2 ===
+#knot:chapter_2_ending_2
+#ending:chapter_2_ending_2
+~ chapter_2_ending = 2
+// multiple ways to record the ending so that we can check in ink later if the player chose this ending or the other one. this knot is not presented to the user in the game. KEEP MY LOOK
+
 
 -> aman_3_intro
 
@@ -1798,7 +1814,7 @@ No dad, I just know what you all want from me. When you asked me to keep my turb
 {chapter_1_ending_1: 
     Only AFTER you cut your hair in the first place! #speaker_left	
 }
-{not chapter_1_ending_1: 
+{chapter_1_ending_2: 
     Of COURSE you should keep your turban, you are Sikh! #speaker_left	
 }
 I didn’t even ASK to keep a turban! It was put on me since young! #speaker_self

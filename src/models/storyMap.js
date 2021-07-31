@@ -104,10 +104,10 @@ export const CHARACTER_MAP = [
       {
         chapterId: 2,
         number: 2,
-        title: "Date and Faith",
+        title: "The Date Crasher",
         knotTag: "nadia_2_intro",
         summary: "Nadia runs into some hard realities. Sometimes, having dreams isn't as straightforward as it should be.",
-        playable: false,
+        playable: true,
         images : ["cat.jpg", "dog.jpg"],
         endings: [
           {
@@ -225,8 +225,8 @@ export const CHARACTER_MAP = [
         title: "To Be or Not To Be",
         knotTag: "aman_2_intro",
         summary: "Aman tries to crack the silver screen - but it’s even harder than he imagined.",
-        playable: false,
-        images : ["/images/aman_1_intro.jpg", "dog.jpg"],
+        playable: true,
+        images : ["/images/aman_1_intro.jpg"],
         endings: [
           {
             endingId: 1,
@@ -334,7 +334,7 @@ export const CHARACTER_MAP = [
   },
   {
     characterId: 6,
-    name: "Unaisah Syafirah",
+    name: "Unaisah Begum",
     linkName: "",
     profileImage: "/images/profile_blank.png",
     characterIntroImage:  "/images/instagram_blank.png",

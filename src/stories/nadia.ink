@@ -877,12 +877,12 @@ nad, if u want to go into med school, then focus k? #speaker_1
 u have big dreams so u must protect!!  #speaker_1
 esp when all our makciks say girl no need to study so hard.  #speaker_1
 So nonsense la when they say that 🙄 #speaker_self
-geram seh! “just kahwin and have children.. like that life is blessed already” #speaker_1
+geram seh! “just  (marry) and have children.. like that life is blessed already” #speaker_1
 Ya, I know.  #speaker_self
 Thanks you know, for  helping and pushing me through. Means a lot. #speaker_self
 tau pon 😬 #speaker_1
 better remember when u bc some bigshot doctor haha.  #speaker_1
-don’t shiok sendiri, suddenly don’t know ur nurse cousin all  #speaker_1
+don’t shiok sendiri (fall blissfully in love and get self absorbed), suddenly don’t know ur nurse cousin all  #speaker_1
 just.. remember who u are, okay?  #speaker_1
 
 -> nadia_1_reflection
@@ -969,11 +969,18 @@ Reflection 1
 === nadia_2_intro ===
 #knot:nadia_2_intro
 #ui:narrator
-#background:nadia_2_intro.jpg
+#background:nadia_1_intro.jpg
 #music:nadia_intro.mp3
 ~ chapter_id = 2
+I’m still a little surprised by what happened with Gavin. 
+Not the chopsticks thing - but the invitation to go on a date! 
+I guess it never occurred to me that he might like me enough to ask me out. 
+There are still so many questions in my head - and Azlin is right, I need to remember who I am. 
+But maybe for this one moment, I can just enjoy being with him without worrying about all that. 
+And maybe I can show who him who I am outside of school, when we’re not studying in the library. 
+I hope he likes what he finds.
 CHAPTER 2 #title
-The Mall #title
+Dates and Faith #title
 
 -> nadia_2_1_narration 
 
@@ -981,20 +988,339 @@ The Mall #title
 === nadia_2_1_narration ===
 #knot:nadia_2_1_narration
 #ui:narrator
-#background:nadia_shoppingmall.jpg
-3:10pm in the mall with Gavin
+#background:bg_nadia_bedroom.jpg
+Sunday, 2:25pm.
+I’m running late - this is SO not me! 
+But I also don’t usually take so long to decide on what to wear. 
+Or go on dates! Ok, just breathe. I’m committing to this. 
+I’m going to wear my hijab. 
+
 -> nadia_2_1
 
 
 === nadia_2_1 ===
 #knot:nadia_2_1
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Chloe
+#chat_group_image:ico_nadia_chloe.png
+#speaker_1_name:Chloe
+Hallo! Wanna head out this afternoon for a mug sesh? #speaker_1
+Darn I can’t #speaker_self
+That’s ok! What are u up to? #speaker_1
+Um. I’m meeting Gavin. #speaker_self
+Oh chey, bo jio.. Are you two studying without me! #speaker_1
+😳 #speaker_self
+wellllllll #speaker_self
+No way! Omg. It’s a daaaaaaaaaate  🎉✨🎉✨🎉✨ #speaker_1
+I can’t believe you didn’t tell me!!! #speaker_1
+Sorryyyyyyyy I didn’t know how to #speaker_self
+and what if it isn’t? You know?? #speaker_self
+Ok so who asked who out? Was it Gavin? #speaker_1
+Kinda #speaker_self
+Hahahaha then it is a date la! 🎉🎉🎉  #speaker_1
+(Like finally!) #speaker_1
+Calmmmm down. I’m already nervous enough. #speaker_self
+So...  what’s your date fit? Are you doing matching lewks #speaker_1
+NO?? Would you?? #speaker_self
+Huhu I think it can be cute leh. #speaker_1
+Quick show meeeee #speaker_1
+Okok, gimme a min #speaker_self
+Gah can’t believe am taking a selfie for Chloe. Right... sending through my selfie with this caption! #inner_monologue
++ 😎 I'm rocking this[] #speaker_self
+    I’m turning up like this. Ok right? #speaker_self
+    Still a cutie!  #speaker_1
+    Whew, what a relief 😏  #speaker_self
+    Your headscarf colour is so pretty 💛 I think this is the first time we’ve EVER seen you wearing one!!  #speaker_1
+    #ui:scene
+    #background:bg_nadia_bedroom.jpg
+    I hope Gavin is as positive about this as Chloe is. #inner_monologue
+    
++ 🧐 Here goes, I guess...[] #speaker_self 
+    What do you think? #speaker_self 
+    Hahaha oh gosh #speaker_1
+    !! #speaker_self 
+    No no you look super cute! Just forgot that you wear a headscarf these days (?) #speaker_1
+    Does Gavin know btw?  #speaker_1
+    #ui:scene
+    #background:bg_nadia_bedroom.jpg
+    He knows, but I don't know if he understands. I hope he's ok with this. #inner_monologue
+- There's only one way to find out. #inner_monologue
+
+
+-> nadia_2_2_narration 
+
+
+=== nadia_2_2_narration ===
+#knot:nadia_2_2_narration
+#ui:narrator
+#background:bg_nadia_mall.jpg
+Sunday, 3:10pm, at the mall.
+
+-> nadia_2_2
+
+
+=== nadia_2_2 ===
+#knot:nadia_2_2
 #ui:scene
-#background:nadia_shoppingmall.jpg
-#speaker_left_image:cha_nadia_gavin.png
+#background:bg_nadia_mall.jpg
+#speaker_left_image:cha_nadia_gavin_date.png
 #speaker_left_name:Gavin
 Hi so sorry I’m late! #speaker_self
-Hey! You look nice. #speaker_left
+Hey! You look nice. #speaker_1
 Oh! He’s reaching out for a hug. #inner_monologue
 
+{chapter_1_ending_1: 
+    + [Hug Gavin back ] -> nadia_2_2g1
+    + [Turn my shoulder to avoid] -> nadia_2_2g2
+    }
+{chapter_1_ending_2: -> nadia_2_2b}
+{chapter_1_ending_3: -> nadia_2_2b}
+{chapter_1_ending_4:
+    +[Hug Gavin back] -> nadia_2_2g1
+    }
+
+= nadia_2_2g1
+Gee thanks. You clean up well too. So where’s this cafe? #speaker_self
+It’s just outside, I heard they have really good tempeh — #speaker_left
+... seriously?? #speaker_self
+Hahaha no, just kidding. #speaker_left
+You are so irritating!!	#speaker_self
+Was worth the look on your face though. #speaker_left
+You’re the one obsessed. #speaker_self
+Am I though? I recall it was someone else being very protective that day. #speaker_left
+Hahaha... Ok ok, I’m done with this.	#speaker_self
+You really do look nice by the way. #speaker_left
+Yeah? I was a bit worried. #speaker_self
+About what?	#speaker_left
+That I look.. different today, than how I would in school?	#speaker_self
+True. I don’t think it’s a big deal. #speaker_left
+Hmmm... Really? #speaker_self
+Hahaha... Ok fine, but that’s just because I was a bit surprised. #speaker_left
+I didn’t know you wear a.. tudung outside of school. #speaker_left
+So secretive about everything, Nad. #speaker_left
+Ugh, fair. I just don’t want anything to be made a big deal. #speaker_self
+And sometimes.. not saying anything makes it a bigger deal.	#speaker_left
+You really working on your psychologist skills huh. #speaker_self
+Not bad, right?	#speaker_left
+Truly your calling. Ok fine, open communication, let’s go.	#speaker_self
+When I am in hijab.. it might be better if we don’t hug to say hello? #speaker_self
+I don’t want you to feel weird, and it’s nothing when we’re in school but - #speaker_self
+Yeah, okay. #speaker_left
+Yeah? #speaker_self
+I do. If it makes you feel weird, then I won’t want to either. #speaker_left
+How does your head make everything sound so simple. #speaker_self
+There’s usually a straight line.. through the knots. #speaker_left
+Hahaha... Either your logic is loopy, or I need that coffee more than I realise. #speaker_self
+Where is this cafe?	#speaker_self
+It’s just around here, unless we missed a turn... #speaker_left
+{chapter_1_ending_2 or chapter_1_ending_3 : -> nadia_2_2b}
+
+
+
+= nadia_2_2g2
+I better turn sideways to avoid being hugged when I'm wearing this! #inner_monologue
+-> nadia_2_2c
+
+= nadia_2_2b
+[wip]
+-> nadia_2_2c
+
+= nadia_2_2c
+#ui:narrator
+#background:bg_nadia_mall.jpg
+We carry on making our way to the cafe. 
+The mall is a maze to get through, when a familiar voice breaks through the crowd.
+#ui:scene
+#background:bg_nadia_mall.jpg
+#speaker_left_image:cha_nadia_gavin_date.png
+#speaker_left_name:Gavin
+#speaker_right_image:cha_nadia_azlin.png 
+#speaker_right_name:Azlin
+We carry on making our way to the cafe. The mall is a maze to get through, when a familiar voice breaks through the crowd.	
+NADIA! #speaker_right
+No way. #inner_monologue
+Oh hey! What are you doing here? #speaker_self
+No seriously, what is she doing here? Ok she’s just standing there, she’s waiting for me to come over.. with Gavin.	#inner_monologue
+Who’s that?	#speaker_left
+It’s my cousin, let me just go over and say hi.	#speaker_self
+I’ll come with. #speaker_left
+Darn it Gavin! Fine, let’s do this. #inner_monologue 
+Sigh, what are the odds of bumping into her here.#inner_monologue
+She looks gleeful - I think I'm never going to hear the end of this. #inner_monologue
+Ok, I'll salam her (Muslim greeting, meaning "peace be with you") first before she.. #inner_monologue
+What on earth! Gavin is trying to salam her too! oh this is AWKWARD. #inner_monologue
+...ah. #speaker_self
+#speaker_left_image:cha_nadia_gavin_date_confused.png
+What? #speaker_left
+Uh, I'll have to talk to him later about this.#inner_monologue
+Haha, it’s okay. #speaker_right
+Hi kak, this is Gavin.	#speaker_self
+Hi Gavin —	#speaker_right
+PLEASE do not say “I’ve heard so much about you.”	#inner_monologue
+#speaker_left_image:cha_nadia_gavin_date.png
+Nice to meet you! #speaker_right
+Oh thank goodness. Thank you Azlin. #inner_monologue
+What are you guys doing here?	#speaker_right
+We’re going to grab coffee.. There’s this halal cafe that just opened up.	#speaker_left
+Yes, and Gavin’s suggestion actually! #speaker_self
+#speaker_right_image:cha_nadia_azlin_naughty.png
+Oh really? I thought you were more of a tea person, Nad.	#speaker_right
+#speaker_left_image:cha_nadia_gavin_date_confused.png
+huh?	#speaker_left
+uh... I mean, I drink tea at home cos it’s there, but I do like.. Coffee.. At cafes.	#speaker_self
+Ooh, fancy. No kopitiam kopi for you? #speaker_right
+#speaker_left_image:cha_nadia_gavin_date.png
+Kopi po siew dai. #speaker_left
+Hmm? #speaker_right
+That’s her usual order. At school.	#speaker_left
+Haha ok ok, just teasing only.	#speaker_right
+Gee, thanks. #speaker_self
+You’re welcome! Ok, I’ll get to my errands now. Text me later!	#speaker_right
+Salam.  #speaker_self
+Wa’alaikumussalam (and the same to you) #speaker_right
+oh NO Gavin is about to try and raise his hands to try and salam her again! #inner_monologue
+phew Azlin turned before he managed to make a fool of himself again #inner_monologue
+Did I miss something?	#speaker_left
+Sorry about that. The salam thing - er, you don’t have to salam Azlin. #speaker_self
+You don’t do that when you’re a guy and she’s...	#speaker_self
+Wow. I am tripping up today.	#speaker_left
+It’s fine, she was definitely more kaypoh to meet you. It’s nothing offensive or rude. #speaker_self
+How come there are so many invisible rules?	#speaker_left
+I wouldn’t say rules...	#speaker_self
+Ok, not rules.	#speaker_left
+Cultural... customs. Habits. Adat, which means behaviour of.. being polite.	#speaker_self
+Social protocol. #speaker_left
+Courtesy. #speaker_self
+Code of conduct. #speaker_left
+Ugh why must you make everything sound so formal?	#speaker_self
+#speaker_left_image:cha_nadia_gavin_date_confused.png
+(Bewildered) Well yeah, but it is. I had no idea Malay people were so formal. 	#speaker_left
+Why, because we just sit downstairs at void deck with guitar all?	#speaker_self
+Oi don’t put words in my mouth -	#speaker_left
+— ok fine, but just because you don’t know about it doesn’t mean it doesn’t exist.	#speaker_self
+And I’m just trying to understand how come I never knew any of this before.	#speaker_left
+Because you’re not Malay!	#speaker_self
+#speaker_left_image:cha_nadia_gavin_date.png
+No shit! (Bursts laughing) #speaker_left
+Thank goodness. This guy is... ridiculous, and he makes me laugh until tears stream down my face. #inner_monologue
+Is it always going to be like this?	#inner_monologue
+So I have to tell you something.	#speaker_left
+Now what?	#speaker_self
+I am.. Chinese. I’m sorry if you didn’t notice before.	#speaker_left
+(Laughs) Really? Are you sure? #speaker_self
+Yup! Says so on my IC. #speaker_left
+Oof, let’s save that for another day. #speaker_self
+Agreed. I’m sorry things got weird.	#speaker_left
+It’s ok, I’m the one who got a bit..	#speaker_self
+Snarky?	#speaker_left
+Yes, that. I got defensive. #speaker_self
+And I wasn’t criticising your.. culture.	#speaker_left
+Anyway these things, it’s sort of - no need to say one. It’s just how we are around family. 	#speaker_self
+You grow up with it. So when you were so confused by it, and suddenly I have to explain things that usually no need to say.. it rattled me, actually.	#speaker_self
+I feel like an idiot saying this. But maybe only just now did I realise: eh, we really are very different. 	#speaker_self
+Haha so I was kinda right, you really did just realise I’m Chinese. #speaker_left
+You know what I mean! #speaker_self
+Yeah, I do. I feel a bit of it. Funny huh, we spend some much time hanging in school. #speaker_left
+This is a new feeling.	#speaker_left
+I hate new feelings. #speaker_self
+Well.. I hope not.	#speaker_left
+(smiles) Ok. I don’t hate ALL new feelings. #speaker_self
+(beams) Good. Can’t believe we bumped into your cousin. Are you sure she’s not stalking us? 	#speaker_left
++ [Same! Can we hide now?]
+Same! Can we hide now? #speaker_self
+Do you still want coffee? 	#speaker_left
+Ooh I don’t know. How caffeinated do we want to be? #speaker_self
+Haha, you’re right - I feel quite awake already after all that. 	#speaker_left
+How about.. Somewhere quiet and chill? #speaker_self
+How about a silly movie? #speaker_left
+Oh! How about a scary movie? #speaker_self
+#ui:narrator
+#background:bg_nadia_mall.jpg
+We end up watching the latest Thai horror movie. 
+I think Gavin liked it. He grabbed my hand at a jump scare... 
+And didn’t let go for the rest of the movie.
+-> nadia_2_3_narration
+
++ [I hope not!]
+I hope not! #speaker_self
+Do you still want coffee?  #speaker_left
+Not if it means we’re going to be walking around this mall looking for the place, haha.  #speaker_self
+Yeah and it’s so crowded today! How about.. A movie?#speaker_left
+Yeah, why not! #speaker_self
+Something serious or silly?#speaker_left
+Silly, please.  #speaker_self
+#ui:narrator
+#background:bg_nadia_mall.jpg
+We end up watching a very strange and silly movie. 
+I think I liked it. Gavin tried to hold my hand at some point in the movie. 
+It was awkward, and obvious, but ... I let him.
+-> nadia_2_3_narration
+
+=== nadia_2_3_narration ===
+#knot:nadia_2_3_narration
+#ui:narrator
+#background:bg_nadia_library.jpg
+3:20pm, on a Monday.
+It’s the start of the school week, and I’m in the library in between class periods. 
+Chloe said she was going to speak to a teacher, then join me here 20 minutes ago. 
+Where is she... 
+
+-> nadia_2_3 
+
+=== nadia_2_3 ===
+#knot:nadia_2_3
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Chloe
+#chat_group_image:ico_nadia_chloe.png
+#speaker_1_name:Chloe
+idk what I’m gg to tell my mum #speaker_1
+What happened!  #speaker_self
+The opposite of good news #speaker_1
+Are you still having consult? #speaker_self
+Just finished. I’m gg to sit here and stone for awhile k #speaker_1
+Nuuuu can’t be that bad #speaker_self
+idkkkkkkk I don’t even feel like studying anymore #speaker_1
+:( well i’m gg to be in the library ok?  #speaker_self
+You take your time la. I brought snacks, if that helps... #speaker_self
+I don’t know. Maybe I’m being dramatic. #speaker_1
+You want to talk about it? #speaker_self
+Maybe not now. I think.. I’d rather hear about your date  👀👫 #speaker_1
+Ah! Haha yes, um it was nice. Normal.  #speaker_self
+Wow, please hold back on the details!! 😂 #speaker_1
+Ok fine, fine. Then you come down here la! #speaker_self
+#ui:narrator
+#background:bg_nadia_library.jpg
+10 minutes later
+#ui:scene
+#background:bg_nadia_library.jpg
+#speaker_left_image:cha_nadia_chloe.png
+#speaker_left_name:Chloe
+So.. how was date-day? #speaker_left
+Kinda the same, kinda really different.. Did you see this coming? #speaker_self
+Only like, finally. You guys have been into each other for ages! The banter is non-stop with you two. #speaker_left
+Why didn’t you say anything!! #speaker_self
+Cos I didn’t want to accidentally force something into happening, if it wasn’t going to happen.	#speaker_left
+In case it doesn’t work out.. because she doesn’t think it will? #inner_monologue
+Did he say anything about you know, wearing a headscarf?	#speaker_left
+Strangely.. it went ok. I was so nervous! Who knows what he really thinks of it. But he didn’t freak out. So there’s that at least. #speaker_self
+Are you sure you’re ok?	#speaker_self
+Gah, I don’t know.  #speaker_left
+It’s just so frustrating, I feel like I’ve been trying to do everything right but it’s still not going to be good enough. #speaker_left
+What’s this about?	#speaker_self
+I have.. been hoping to apply for overseas scholarships. #speaker_left
+My mum keeps bugging me about it. So I’ve been asking some teachers. #speaker_left
+Everybody is saying to just try la, what’s the harm right. But I don’t want to waste my time! #speaker_left
+If my chances are going to be lousy, I want to know so I can figure something else out. #speaker_left
+Argh, I hate that this is stressing you out. #speaker_self
+I know right! My mum is convinced that it’s the route to go for.  #speaker_left
++[But is it though?] -> nadia_2_3a
++[You always say she ends up being right.] -> nadia_2_3b
+
+= nadia_2_3a
+-> END
+
+= nadia_2_3b
 
 -> END
