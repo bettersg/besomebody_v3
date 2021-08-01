@@ -50,6 +50,22 @@ export default function ChapterBox(props) {
     return currentChapterInUserDb ? currentChapterInUserDb.endings.length : 0
   }
 
+  const previousChapterInUserDb = () => {
+    const previousChapterNumber = chaptDetails.chapterId - 1
+    // console.log('previous chapter: ' , previousChapterNumber)
+    if (previousChapterNumber > 0) {
+      const previousChapterData = userFromDb?.achievements?.find(
+        (achievement) =>
+          achievement.character === characterId &&
+          achievement.chapter === previousChapterNumber 
+      )
+      // console.log(previousChapterData)
+      return previousChapterData ? true : false
+    }
+    return true
+  }
+  // console.log(chaptDetails.chapterId , previousChapterInUserDb())
+  
   var rows = []
   for (var i = 0; i < getEndingsUnlocked(); i++) {
     rows.push(
@@ -79,7 +95,7 @@ export default function ChapterBox(props) {
         console.info('But these loaded fine:')
         console.info(err.loaded)
       })    
-    loadSavedVariables(chaptDetails.knotTag)    
+    loadSavedVariables(chaptDetails.knotTag)      // doing this creates a problem - the story starts at the knotTag with all the previous globalVariables ... but getStory then jumps ahead to the last player position in the autosave game.
     startStoryFrom(chaptDetails.knotTag)
     setIsLoading(false)
     history.push('/story/' + name)
@@ -117,15 +133,21 @@ export default function ChapterBox(props) {
               </div>
             ) : chaptDetails.playable == false ? (
               <div className={`ChapterBox__chaptTitle--button disable`}>
-                Soon
+                SOON
               </div>
-            ) : (
-              <div
-                className={`ChapterBox__chaptTitle--button`}
-                onClick={() => handleChapterStart()}
-              >
-                Play
-              </div>
+            )   : previousChapterInUserDb() || chaptDetails.chapterId == 1 ? (
+                  <div
+                    className={`ChapterBox__chaptTitle--button`}
+                    onClick={() => handleChapterStart()}
+                  >
+                  Play
+                  </div>
+                )
+                  : (
+                    <div className={`ChapterBox__chaptTitle--button disable`}>
+                      LOCKED
+                    </div>
+                  
             )}
           </div>
         </div>
