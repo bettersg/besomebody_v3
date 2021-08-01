@@ -38,6 +38,7 @@ export default function ChapterBox(props) {
     // States
     startStoryFrom,
     loadSavedVariables,
+    
   } = useInkContext()
 
   const getEndingsUnlocked = () => {
@@ -67,7 +68,7 @@ export default function ChapterBox(props) {
 
   const handleChapterStart = () => {
     setIsLoading(true)
-    console.log(chaptDetails.images)
+    // console.log(chaptDetails.images)
     loadImage(chaptDetails.images)
       .then(function (allImgs) {
         console.log(allImgs.length, 'images loaded!', allImgs)
@@ -77,10 +78,10 @@ export default function ChapterBox(props) {
         console.error(err.errored)
         console.info('But these loaded fine:')
         console.info(err.loaded)
-      })
-    setIsLoading(false)
-    loadSavedVariables()
+      })    
+    loadSavedVariables(chaptDetails.knotTag)    
     startStoryFrom(chaptDetails.knotTag)
+    setIsLoading(false)
     history.push('/story/' + name)
   }
 

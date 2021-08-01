@@ -214,18 +214,18 @@ const useInk = (json, characterId) => {
    * Load the paragraphs or choices in local snapshots back into the React states
    * Submit the ink saved state back to inkjs but only the variables and not the starting know
    */
-    const handleLoadSavedVariables = async () => {
+    const handleLoadSavedVariables = async (loadFrom) => {
       const savedStateRes = await getDbSavedStates(saveDataId)
       if (!savedStateRes) return null
-  
-      setParagraphs(savedStateRes.paragraphs)
-      setChoices(savedStateRes.choices)
-      setSpecialTags(savedStateRes.specialTags)
+       
+      // setParagraphs(savedStateRes.paragraphs)
+      // setChoices(savedStateRes.choices)
+      // setSpecialTags(savedStateRes.specialTags)
       setGlobalVariables(savedStateRes.globalVariables)
+      setCurrentKnot(loadFrom)
       // setCurrentKnot(savedStateRes.currentKnot)
       setIsStoryStarted(true)
-      inkStory.loadStoryState(savedStateRes.inkJson)
-      console.log('loading: ',savedStateRes.globalVariables)
+      inkStory.loadStoryState(savedStateRes.inkJson)      
     }
 
   /**

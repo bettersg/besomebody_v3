@@ -92,7 +92,7 @@ const CharacterChapterPage = (props) => {
 
     // Methods
     resetStory,
-    loadSavedVariables,
+   // loadSavedVariables,
     loadSavedStory,
   } = useInkContext()
 
