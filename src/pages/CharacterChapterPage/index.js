@@ -88,19 +88,20 @@ const CharacterChapterPage = (props) => {
   const {
     // useInk hook initialiser
     initialiseUseInkHook,
-    hasSavedState,
-    loadSavedStory,
+    hasSavedState,    
 
     // Methods
     resetStory,
+    loadSavedVariables,
+    loadSavedStory,
   } = useInkContext()
 
   
 
-  // Initialise the useInk hook within a useEffect to prevent multiple instances of initialising
+  // Initialise the useInk hook within a useEffect to prevent multiple instances of initialising && make sure loadSavedVariables is called here
   useEffect(() => {
     resetStory()
-    initialiseUseInkHook(inkJson, characterId)
+    initialiseUseInkHook(inkJson, characterId)    
   }, [inkJson, characterId])
 
   // Load story

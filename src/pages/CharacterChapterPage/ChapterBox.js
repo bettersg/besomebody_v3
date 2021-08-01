@@ -37,6 +37,7 @@ export default function ChapterBox(props) {
   const {
     // States
     startStoryFrom,
+    loadSavedVariables,
   } = useInkContext()
 
   const getEndingsUnlocked = () => {
@@ -78,6 +79,7 @@ export default function ChapterBox(props) {
         console.info(err.loaded)
       })
     setIsLoading(false)
+    loadSavedVariables()
     startStoryFrom(chaptDetails.knotTag)
     history.push('/story/' + name)
   }

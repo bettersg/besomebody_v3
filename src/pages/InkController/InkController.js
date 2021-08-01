@@ -80,7 +80,8 @@ const InkController = () => {
 
   const history = useHistory()
   const { name } = useParams()
-
+  console.log(globalVariables)
+  
   // ==============================================================
   // Filter paragraphs based on current knot
   // ==============================================================
