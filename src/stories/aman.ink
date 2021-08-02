@@ -40,6 +40,18 @@ Minigame // must add some text
 
 */
 
+
+-> aman_1_intro
+
+// CHARACTER INTRODUCTION
+ 
+
+=== aman_1_intro ===
+#knot:aman_1_intro
+#ui:narrator
+#background:bg_aman_intro.jpg
+#music:aman_intro.mp3
+
 // DECLARE GLOBAL VARIABLES
 VAR character_id = 2
 VAR chapter_id = 0
@@ -63,17 +75,6 @@ VAR chapter_9_ending = 0
 // VAR ending_id = 1;
 
 
-
--> aman_1_intro
-
-// CHARACTER INTRODUCTION
- 
-
-=== aman_1_intro ===
-#knot:aman_1_intro
-#ui:narrator
-#background:bg_aman_intro.jpg
-#music:aman_intro.mp3
 ~ chapter_id = 1
 Aman Singh #title
 Sat Sri Akaal (God is Truth)!  I am Aman Singh. 

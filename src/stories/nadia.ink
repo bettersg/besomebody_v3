@@ -992,7 +992,7 @@ Dates and Faith #title
 Sunday, 2:25pm.
 I’m running late - this is SO not me! 
 But I also don’t usually take so long to decide on what to wear. 
-Or go on dates! Ok, just breathe. I’m committing to this. 
+Or go on dates! Ok, just breathe. Let's commit to this. 
 I’m going to wear my hijab. 
 
 -> nadia_2_1
@@ -1026,25 +1026,31 @@ NO?? Would you?? #speaker_self
 Huhu I think it can be cute leh. #speaker_1
 Quick show meeeee #speaker_1
 Okok, gimme a min #speaker_self
-Gah can’t believe am taking a selfie for Chloe. Right... sending through my selfie with this caption! #inner_monologue
-+ 😎 I'm rocking this[] #speaker_self
+#ui:scene
+#background:bg_nadia_wearinghijab.jpg
+Gah can’t believe am taking a selfie for Chloe. #inner_monologue
+Right... sending through my selfie with this caption! #inner_monologue
++ 😎 Rocking it![] #speaker_self
+    VAR nadia_2_confidenthijab = true
     I’m turning up like this. Ok right? #speaker_self
     Still a cutie!  #speaker_1
     Whew, what a relief 😏  #speaker_self
-    Your headscarf colour is so pretty 💛 I think this is the first time we’ve EVER seen you wearing one!!  #speaker_1
+    Your headscarf colour is so pretty 💛 I think this is the first time I’ve EVER seen you wearing one!!  #speaker_1
+    Gavin is going to love it!   #speaker_1
     #ui:scene
-    #background:bg_nadia_bedroom.jpg
-    I hope Gavin is as positive about this as Chloe is. #inner_monologue
+    #background:bg_nadia_selfiehijab.jpg
+    I sure hope so. #inner_monologue
     
-+ 🧐 Here goes, I guess...[] #speaker_self 
++ 🧐 Like this can?[] #speaker_self 
+    ~ nadia_2_confidenthijab = false
     What do you think? #speaker_self 
     Hahaha oh gosh #speaker_1
     !! #speaker_self 
-    No no you look super cute! Just forgot that you wear a headscarf these days (?) #speaker_1
-    Does Gavin know btw?  #speaker_1
+    No no you still look super cute! Just forgot that you wear a headscarf these days (?) #speaker_1
+    Does Gavin know btw? He should be ok with it right? #speaker_1
     #ui:scene
-    #background:bg_nadia_bedroom.jpg
-    He knows, but I don't know if he understands. I hope he's ok with this. #inner_monologue
+    #background:bg_nadia_selfiehijab.jpg
+    It's never really come up with him. But he should be "okay with it"... right? #inner_monologue
 - There's only one way to find out. #inner_monologue
 
 
@@ -1069,18 +1075,15 @@ Sunday, 3:10pm, at the mall.
 Hi so sorry I’m late! #speaker_self
 Hey! You look nice. #speaker_1
 Oh! He’s reaching out for a hug. #inner_monologue
-
-{chapter_1_ending_1: 
-    + [Hug Gavin back ] -> nadia_2_2g1
-    + [Turn my shoulder to avoid] -> nadia_2_2g2
+{nadia_2_confidenthijab: 
+    + [Hug Gavin back ] -> nadia_2_2a1
     }
-{chapter_1_ending_2: -> nadia_2_2b}
-{chapter_1_ending_3: -> nadia_2_2b}
-{chapter_1_ending_4:
-    +[Hug Gavin back] -> nadia_2_2g1
+{not nadia_2_confidenthijab: 
+    + [Hug Gavin back ] -> nadia_2_2a1
+    + [Turn my shoulder to avoid] -> nadia_2_2a2
     }
 
-= nadia_2_2g1
+= nadia_2_2a1
 Gee thanks. You clean up well too. So where’s this cafe? #speaker_self
 It’s just outside, I heard they have really good tempeh — #speaker_left
 ... seriously?? #speaker_self
@@ -1114,29 +1117,57 @@ There’s usually a straight line.. through the knots. #speaker_left
 Hahaha... Either your logic is loopy, or I need that coffee more than I realise. #speaker_self
 Where is this cafe?	#speaker_self
 It’s just around here, unless we missed a turn... #speaker_left
-{chapter_1_ending_2 or chapter_1_ending_3 : -> nadia_2_2b}
+
+-> nadia_2_2b
 
 
+= nadia_2_2a2
+Gee thanks. You clean up well too. 	#speaker_self
+Err..You ok? #speaker_left
+Um yeah, all good! Now, Where’s this cafe? 	#speaker_self
+I checked the directory and they said straight, left and then down the next escalator. #speaker_left
+Cool. You did your homework! 	#speaker_self
+Always. You don’t get into student council without some heavy lifting. #speaker_left
+You..are not flexing right now. 	#speaker_self
+Hey, if you had biceps like mine, you’d flex too. #speaker_left
+You’re such a weirdo. 	#speaker_self
+You know you like it. #speaker_left
+Do I? Do I really? 	#speaker_self
+Ehhh. I saw your smile from a mile away ok? You were super easy to spot. #speaker_left
+...Is he referring to my hijab? #inner_monologue
+Easy to spot how? 	#speaker_self
+I just looked for the shortest, most energetic person walking towards me. That, and that tatty bag of yours. #speaker_left
+Wah, your negging is not subtle. 	#speaker_self
+But seriously though, is everything ok with you? You seemed a little off when we said hi. #speaker_left
+Oh, it’s just, you know... #speaker_self
+I’m wearing my hijab and it’s best not to be seen hugging when I have it on. 	#speaker_self
+Ah! Noted. My bad. I will keep five steps apart from you at all times. #speaker_left
+Wow. There’s no need to be that extreme. 	#speaker_self
+I mean, I will try my best but you know, coffee tables are closer than that. #speaker_left
+Righttt. So, this really doesn’t bother you? 	#speaker_self
+Your...tudung? No, why should it? I mean, I know you’re pretty religious and faith is important to you.  #speaker_left
+We all know how operation tempeh went down. #speaker_left
+I think it’s great that you’re confident in who you are.  #speaker_left
+Wow. I wish I had mentioned it earlier. I took WAY too long trying to decide whether to wear it or not. 	#speaker_self
+Lol, was that why you were late? I thought you were having second thoughts about meeting. #speaker_left
+No, I’m pretty sure I want to be here. 	#speaker_self
+So...is there anything else I need to know about what we can or cannot do? #speaker_left
+Yes, here’s an important one. We can’t get lost looking for coffee. Are you sure you got the right directions? 	#speaker_self
+Eh...did I say left or right just now? Maybe we missed the turn... #speaker_left
 
-= nadia_2_2g2
-I better turn sideways to avoid being hugged when I'm wearing this! #inner_monologue
--> nadia_2_2c
-
+-> nadia_2_2b
+ 
 = nadia_2_2b
-[wip]
--> nadia_2_2c
-
-= nadia_2_2c
-#ui:narrator
-#background:bg_nadia_mall.jpg
-We carry on making our way to the cafe. 
-The mall is a maze to get through, when a familiar voice breaks through the crowd.
 #ui:scene
 #background:bg_nadia_mall.jpg
 #speaker_left_image:cha_nadia_gavin_date.png
 #speaker_left_name:Gavin
 #speaker_right_image:cha_nadia_azlin.png 
 #speaker_right_name:Azlin
+This mall is such a maze. Where on earth is that cafe?
+Wait a minute. Is someone calling my name?
+Someone is definitely calling my name.
+I know that voice. That’s...
 We carry on making our way to the cafe. The mall is a maze to get through, when a familiar voice breaks through the crowd.	
 NADIA! #speaker_right
 No way. #inner_monologue
