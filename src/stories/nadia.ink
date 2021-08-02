@@ -38,17 +38,6 @@ Minigame // must add some text
 
 */
 
-// DECLARE GLOBAL VARIABLES
-VAR nadia_mood = 10
-VAR gavin_mood = 10
-VAR nadia_liar = 0
-
-
-VAR chapter_1_ending = 0 
-VAR chapter_2_ending = 0 
-VAR chapter_3_ending = 0 
-VAR chapter_4_ending = 0 
-VAR character_id = 1
  
 
 -> nadia_1_intro
@@ -61,7 +50,16 @@ VAR character_id = 1
 #ui:narrator
 #background:bg_nadia_intro.jpg
 #music:nadia_intro.mp3
+// DECLARE GLOBAL VARIABLES
+VAR character_id = 1
 VAR chapter_id = 1
+VAR nadia_mood = 10
+VAR gavin_mood = 10
+VAR nadia_liar = 0
+VAR chapter_1_ending = 0 
+VAR chapter_2_ending = 0 
+VAR chapter_3_ending = 0 
+VAR chapter_4_ending = 0 
 NADIA BINTE RAHIM #title
 Hey there. I’m Nadia.
 This is a big year for me, since my A Levels are coming up. 
@@ -81,7 +79,6 @@ An Unexpected Invitation #title
 -> nadia_1_1_narration 
 
 // START STORY
-
 
 === nadia_1_1_narration ===
 #knot:nadia_1_1_narration
@@ -972,6 +969,7 @@ Reflection 1
 #background:nadia_1_intro.jpg
 #music:nadia_intro.mp3
 ~ chapter_id = 2
+//reset chapter 2-5 variables
 I’m still a little surprised by what happened with Gavin. 
 Not the chopsticks thing - but the invitation to go on a date! 
 I guess it never occurred to me that he might like me enough to ask me out. 
