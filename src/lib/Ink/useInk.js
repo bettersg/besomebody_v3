@@ -225,7 +225,7 @@ const useInk = (json, characterId) => {
       setCurrentKnot(loadFrom)
       // setCurrentKnot(savedStateRes.currentKnot)
       setIsStoryStarted(true)
-      inkStory.loadStoryState(savedStateRes.inkJson)      
+      // inkStory.loadStoryState(savedStateRes.inkJson)      // so maybe this is the problem
     }
 
   /**
