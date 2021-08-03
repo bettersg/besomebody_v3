@@ -1309,7 +1309,7 @@ Aiya take la take la.  #speaker_left
     I tell Selinder for what? Your girlfriend not my girlfriend.  #speaker_left
     Just don’t make your girlfriend problem my problem. #speaker_left
     Okay just don’t say anything, then no problem.  #speaker_self
-- Oi, can we finish the game or not. talk so much until i missed the goal.  #speaker_left
+- Oi, can we finish the game or not. talk too much la you.  #speaker_left
 This is a great opportunity, right? I should be excited. #inner_monologue
 Why do I feel so uneasy? Like I’m a fraud? #inner_monologue
 Am I so desperate to be on TV, I’ll do anything...? #inner_monologue

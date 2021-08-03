@@ -1344,12 +1344,143 @@ Everybody is saying to just try la, what’s the harm right. But I don’t want 
 If my chances are going to be lousy, I want to know so I can figure something else out. #speaker_left
 Argh, I hate that this is stressing you out. #speaker_self
 I know right! My mum is convinced that it’s the route to go for.  #speaker_left
-+[But is it though?] -> nadia_2_3a
-+[You always say she ends up being right.] -> nadia_2_3b
++[Why does your mum think this way?] -> nadia_2_3a
++[What do you think?] -> nadia_2_3b
 
 = nadia_2_3a
--> END
+Why is she so fixed on scholarships though? But is it though? #speaker_self
+Well, all her friends keep talking about it too I guess.  #speaker_left
+They have kids our age, in other JCs or already on scholarships. #speaker_left
+It’s so weird how parents gossip!! #speaker_self
+Tell me about it! I’ve never even met these guys, but I probably can tell you their life stories based on what my mum tells me.  #speaker_left
+Who got through DSA, who transferred out, who didn’t get into med school here and now it’s costing a bomb to go overseas.. #speaker_left
+Oh boy. Should I tell her about med school? #inner_monologue
++[Yes, maybe Chloe can help me.] -> nadia_2_3a1
++[No, this is about Chloe not me.] -> nadia_2_3a2
+
+= nadia_2_3a1
+Ok, I have to tell you something.  #speaker_self
+What is it? #speaker_left
+I’m going to try for med school too.  #speaker_self
+Oh shit. Really? #speaker_left
+Yeah.. is that crazy? #speaker_self
+I mean, you know how tough it’s going to be.  #speaker_left
+I’m going to try.  #speaker_self
+Well of course! It’s really prestigious.  #speaker_left
+The hours are mad long though, you’re gonna sacrifice a lot.  #speaker_left
+That’s what they tell me on TV. #speaker_self
+It’s real! And what if a patient DIES. I could never do it, and I don’t think you’re the GP doctor sort either. #speaker_left
+I think it’s worth it.  #speaker_self
+If somehow I get the grades to get into med school.. Then that’s the best use of it. You know? #speaker_self
+If you get those grades, you could go anywhere! What about law? #speaker_left
+Mmmph not my thing.  #speaker_self
+I guess a Dr. Nadia does makes more sense for the universe. #speaker_left
+-> nadia_2_3c
+
+= nadia_2_3a2
+All this sounds really stressful.Well.. how do you feel about this scholarship situation? #speaker_self
+Totally. It’s lLike I’m being pushed for something that I can’t really argue against.  #speaker_left
+But you’re so good at arguing with your mom.  #speaker_self
+Well this one isn’t as fun. I mean, it’s GOOD to get your name on a scholarship right? That means you’re someone. #speaker_left
+Does it really matter? #speaker_self
+Ya! Not that I like it, but it’s the game, and you gotta make smart moves.  #speaker_left
+(Doubtfully) Ok, assuming you’re right.. why do you think you’re not in the game anymore? #speaker_self
+So I was talking to the HOD just now about the scholarship I’m applying for. You know he’s the super honest type. No bullshit.  #speaker_left
+Said that based on his past students and how they did.. I don’t have enough on my track record. #speaker_left
+Woah, he really said that?! #speaker_self
+Ya something along the lines of ‘showcase self-initiated community projects with impact’.  #speaker_left
+Maybe I shouldn’t have spent all my time with hockey. Should have joined student council like you and Gavin.. #speaker_left
+But you LOVE hockey. And you think student council people are annoying and idealistic.  #speaker_self
+Correction - everyone else, aside from you and Gavin. #speaker_left
+-> nadia_2_3c
 
 = nadia_2_3b
+But what do you think? That’s the most important thing.  #speaker_self
+You always say she ends up being right. #speaker_self
+It’s so annoying! Like I’m being pushed for something that I can’t really argue against.  #speaker_left
+Hmm.. Well.. d do you want a scholarship?how do you feel about this scholarship situation? #speaker_self
+Well..That it’ll be really cool to study overseas.  #speaker_left
+Right? You get to do that, and have a career set and planned.  #speaker_left
+Would you still go overseas without a scholarship? #speaker_self
+Maybe.. I think we could, but it really is so expensive.   #speaker_left
+Oh boy. Med school is expensive too. #inner_monologue
+Chloe, should I be looking at scholarships too? #speaker_self
+I didn’t know you wanted to go overseas too! #speaker_left
+Oh no, no, I’m probably going to stick to the local unis. But hoping to apply for.. med school. #speaker_self
+Really? I guess I can see that happening.. #speaker_left
+You think so?  #speaker_self
+Yeah, sure. It is pricey though, I heard it’s like three times more than other degrees. #speaker_left
+Three?? #speaker_self
+Oh boy, and you’re also going to be doing more years in school too. The unis have scholarships too, you can try for that?  #speaker_left
+I’ll look it up. #speaker_self
+And financial assistance, I think.  #speaker_left
+Right, that too.  #speaker_self
+You know, and if somehow med school doesn’t work out.. I mean, they shortlist more than 1,000 applicants, then only offer less than 300 spots.  #speaker_left
+There’s always.. nursing? #speaker_left
+That’s not the same thing. #inner_monologue
+Isn’t your cousin in nursing? That’s good right? #speaker_left
+Yeah she is, but not through NUS. #speaker_self
+Ah, right..  #speaker_left
+Azlin worked HARD for her diploma.  #inner_monologue
+Well I guess we’re both on the same track. #speaker_left
+What’s that? #speaker_self
+Making life more difficult for ourselves. #speaker_left
+-> nadia_2_3c
+
+=== nadia_2_3c ===
+#ui:scene
+#background:bg_nadia_library.jpg
+#speaker_left_image:cha_nadia_chloe.png
+#speaker_left_name:Chloe
+Gee, thanks. Well.. scholarships are competitive, but so are you. Your essays are laser sharp.  #speaker_self
+It’s not enough. Just wish I had a bit of an advantage.. Anyway, you won’t understand.  #speaker_left
+Come on, try me. #speaker_self
+Well, it’s different for you. You’ll probably have an easier time getting a scholarship too.  #speaker_left
+I really don’t think so. #speaker_self
+Nad, it’s easier for you to get into things.  #speaker_left
++ [Right.] -> nadia_2_3d
++ [What do you mean by that?] -> nadia_2_3e
+
+=== nadia_2_3d ===
+Right. #speaker_self
+Argh it’s so unfair. You fill the quota, you know?  #speaker_left
+No, I don’t know, Chloe. #inner_monologue
+Anyway. I’ll figure it out.   #speaker_left
+That’s not how things work.. right?? #inner_monologue
+#speaker_left_image:pixel.png
+#background:new_message_notification.jpg
+A message from Gavin.
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Gavin
+#chat_group_image:ico_nadia_gavin.png
+#speaker_1_name:Gavin
+Hey wru? #speaker_1
+My church friend is down to meet this Sat. What say u? We can properly get coffee this time :)  #speaker_1
+#ui:scene
+#background:bg_nadia_library.jpg
+#speaker_left_image:cha_nadia_chloe.png
+#speaker_left_name:Chloe
+I can’t do this right now.  I need to escape this conversation somehow. #inner_monologue
+Yeah. I’m sure you’ll be fine.  #speaker_self
+Oops, I have to go home early.  #speaker_self
+My mum just texted, says she needs me for something. You’re ok right? #speaker_self
+Yeah, sure...  #speaker_left
++ [I can’t believe what Chloe just said. TO MY FACE!] -> nadia_2_3d1
++ [Hey Kak, are you off today?] -> nadia_2_3d2
+
+=== nadia_2_3d1 ===
+#knot:nadia_2_3d1
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Azlin
+#chat_group_image:ico_nadia_azlin.png
+#speaker_1_name:Azlin
+
+
+=== nadia_2_3e ===
+
+
+
 
 -> END
