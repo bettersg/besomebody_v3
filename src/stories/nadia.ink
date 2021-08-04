@@ -56,10 +56,10 @@ VAR chapter_id = 1
 VAR nadia_mood = 10
 VAR gavin_mood = 10
 VAR nadia_liar = 0
-VAR chapter_1_ending = 0 
-VAR chapter_2_ending = 0 
-VAR chapter_3_ending = 0 
-VAR chapter_4_ending = 0 
+// VAR chapter_1_ending = 0 
+// VAR chapter_2_ending = 0 
+// VAR chapter_3_ending = 0 
+// VAR chapter_4_ending = 0 
 NADIA BINTE RAHIM #title
 Hey there. I’m Nadia.
 This is a big year for me, since my A Levels are coming up. 
@@ -794,7 +794,7 @@ MAMPOS. #speaker_1
 #chat_group_title:Azlin
 #chat_group_image:ico_nadia_azlin.png
 #speaker_1_name:Azlin
-~ chapter_1_ending = 1
+VAR chapter_1_ending = 1
 So do you 😐 #speaker_self
 haha that’s my own pasal and problem 😬 #speaker_1
 Do your parents know about gavin? #speaker_1
@@ -1639,7 +1639,7 @@ You’re right. I need to unclench. I wanted to talk to you about... #speaker_se
 #background:bg_nadia_playgroundnight.jpg
 #speaker_right_image:cha_nadia_azlin.png
 #speaker_right_name:Azlin
-~ chapter_2_ending = 1
+VAR chapter_2_ending = 1
 ..what Chloe said. Like it doesn’t even make sense!  #speaker_self
 I couldn’t even say anything back you know, I was stunned - like has she always felt this way? Is that really how she thinks? #speaker_self
 Ok ok, one thing at a time. This Chloe person, your volleyball friend? #speaker_right

@@ -55,11 +55,11 @@ Minigame // must add some text
 VAR character_id = 2
 VAR chapter_id = 1
 VAR aman_mood = 10
-VAR chapter_1_ending = 0 
-VAR chapter_2_ending = 0 
-VAR chapter_3_ending = 0 
-VAR chapter_4_ending = 0 
-VAR chapter_5_ending = 0 
+// VAR chapter_1_ending = 0 
+// VAR chapter_2_ending = 0 
+// VAR chapter_3_ending = 0 
+// VAR chapter_4_ending = 0 
+// VAR chapter_5_ending = 0 
 // VAR aman_2_1c_overcharge = 0
 // VAR aman_2_2_confide = 0
 // VAR aman_2_5_change_look= 0
@@ -511,7 +511,7 @@ With everything so simple, and pure... #inner_monologue
 #knot:chapter_1_ending_1
 #ending:chapter_1_ending_1
 // multiple ways to record the ending so that we can check in ink later if the player chose this ending or the other one. this knot is not presented to the user in the game.
-~ chapter_1_ending = 1
+VAR chapter_1_ending = 1
 
 -> aman_1_reflection
  
@@ -1233,7 +1233,7 @@ Maybe - maybe if I changed my look? Slick my hair back, and wear it in a ponytai
     I won’t give up. I’ll keep trying, just as I am. #inner_monologue
     #knot:chapter_2_ending_2
     #ending:chapter_2_ending_2
-    ~ chapter_2_ending = 2
+    VAR chapter_2_ending = 2
     VAR aman_2_5_change_look = false
     
     -> aman_2_7_narration
