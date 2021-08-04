@@ -211,7 +211,7 @@ One month later, Selinder and I are chatting at night.
 #chat_group_title:Selinder
 #chat_group_image:ico_aman_selinder.png
 #speaker_1_name:Selinder
-#timestamp:23.34
+23.34hr #timestamp
 Babe, I’m sorry, I think I’m going to do it. #speaker_self
 Jaan (dear), don’t do anything rash. #speaker_1
 Remember what we’ve been taught about being a good Sikh and honoring our Gurus? #speaker_1
@@ -219,7 +219,7 @@ About following the Sikhi way of life, no matter how challenging? Don’t do any
 And I think you're handsome already! #speaker_1
 ... #speaker_1
 ... hello? #speaker_1
-#timestamp:09.15
+09.15hr #timestamp
 Hi babe. I’m so sorry about last night. I got so tired and I just passed out on my bed. #speaker_self
 It’s okay. #speaker_1
 I’m sorry if I came down too hard on you. #speaker_1
