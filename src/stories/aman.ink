@@ -47,9 +47,9 @@ VAR chapter_id = 0
 VAR aman_mood = 10
 VAR chapter_1_ending = 0 
 VAR chapter_2_ending = 0 
-// VAR chapter_3_ending = 0 
-// VAR chapter_4_ending = 0 
-// VAR chapter_5_ending = 0 
+VAR chapter_3_ending = 0 
+VAR chapter_4_ending = 0 
+VAR chapter_5_ending = 0 
 
 
 // VAR aman_2_1c_overcharge = 0
