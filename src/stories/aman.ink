@@ -47,13 +47,10 @@ VAR chapter_id = 0
 VAR aman_mood = 10
 VAR chapter_1_ending = 0 
 VAR chapter_2_ending = 0 
-VAR chapter_3_ending = 0 
-VAR chapter_4_ending = 0 
-VAR chapter_5_ending = 0 
-VAR chapter_6_ending = 0 
-VAR chapter_7_ending = 0 
-VAR chapter_8_ending = 0 
-VAR chapter_9_ending = 0 
+// VAR chapter_3_ending = 0 
+// VAR chapter_4_ending = 0 
+// VAR chapter_5_ending = 0 
+
 
 // VAR aman_2_1c_overcharge = 0
 // VAR aman_2_2_confide = 0
@@ -798,8 +795,8 @@ Reflection 1
 Chapter 2 #title
 To Be or Not To Be #title
 I am finally done with NS, what an adventure! 
-{chapter_1_ending_1: Cutting my hair was a really difficult decision, but I'm growing it back out now.}
-{chapter_1_ending_2: Keeping my hair made NS even harder, but I'm glad I went through it.}
+{chapter_1_ending == 1: Cutting my hair was a really difficult decision, but I'm growing it back out now.}
+{chapter_1_ending == 2: Keeping my hair made NS even harder, but I'm glad I went through it.}
 So many varied experiences, and I have made some good friends too, like Lukman.
 I got accepted into my first choice uni in Melbourne! 
 I’ve got a couple of months off before I fly off. 
@@ -821,8 +818,8 @@ Two months after finishing NS.
 #knot:aman_2_1
 #ui:scene
 #background:bg_aman_bedroom.jpg
-{chapter_1_ending_1: -> aman_2_1_ending1 }
-{chapter_1_ending_2: -> aman_2_1_ending2 }
+{chapter_1_ending == 1: -> aman_2_1_ending1 }
+{chapter_1_ending == 2: -> aman_2_1_ending2 }
 
 
 = aman_2_1_ending1 

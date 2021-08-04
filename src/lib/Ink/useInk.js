@@ -97,7 +97,9 @@ const useInk = (json, characterId) => {
     if (!nextStep) return null
 
     // Update globalVariables if there are global variables
+    // update this to check if the globalVariables are already set or not, and only set if they are not already set
     const currentGlobalVariables = inkStory.getGlobalVariables()
+    console.log('getstory: ',currentGlobalVariables) // this fails. this overwrites the firestore global variables with the ink story "fresh" variables
     if (currentGlobalVariables) setGlobalVariables(currentGlobalVariables)
 
     // Update currentKnot if chapter is retrieved
@@ -214,15 +216,15 @@ const useInk = (json, characterId) => {
    * Load the paragraphs or choices in local snapshots back into the React states
    * Submit the ink saved state back to inkjs but only the variables and not the starting know
    */
-    const handleLoadSavedVariables = async (loadFrom) => {
+    const handleLoadSavedVariables = async () => {
       const savedStateRes = await getDbSavedStates(saveDataId)
       if (!savedStateRes) return null
-       
+      console.log('savedStateRes Load Saved Variables ', savedStateRes) // this works -> firestore globalVariables are loaded correctly
       // setParagraphs(savedStateRes.paragraphs)
       // setChoices(savedStateRes.choices)
       // setSpecialTags(savedStateRes.specialTags)
       setGlobalVariables(savedStateRes.globalVariables)
-      setCurrentKnot(loadFrom)
+      // setCurrentKnot(loadFrom)
       // setCurrentKnot(savedStateRes.currentKnot)
       setIsStoryStarted(true)
       // inkStory.loadStoryState(savedStateRes.inkJson)      // so maybe this is the problem
