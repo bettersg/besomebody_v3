@@ -80,6 +80,25 @@
         "body": "Answering Azlin's questions about Gavin"
       }
     ]
+  },
+  {
+    "id": 6,
+    "type": "MULTI_CHOICE",
+    "body": "Which of the situations did you find the most challenging for Nadia?",
+    "choices": [
+      {
+        "body": "The decision to wear a tudung for the date"
+      },
+      {
+        "body": "The conversation with Gavin about cultural norms"
+      },
+      {
+        "body": "The discussion with Chloe in the library"
+      },
+      {
+        "body": "The final conversation with Azlin at the playground"
+      }
+    ]
   }
 
 ]

@@ -26,9 +26,14 @@
     ]
   },
   {
-    "id": 3,
+    "id": 3,  
+    "story":"Nadia", 
+    "chapter":2,
+    "didyouknow": "There were many serious issues raised in this chapter, and it may help to research more and discuss these issues with trusted friends from other communities.",
+    "media": "https://www.channelnewsasia.com/news/singapore/is-casual-racism-okay-seven-singaporeans-share-stories-7862072",
     "questions": [
-      1,
+      1,      
+      6,
       2,
       3
     ]

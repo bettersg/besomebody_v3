@@ -112,12 +112,12 @@ export const CHARACTER_MAP = [
         endings: [
           {
             endingId: 1,
-            title: "Scold Him",
+            title: "Azlin gets upset with you",
             inkVar: "nadia_chapter2_ending_1",
           },
           {
             endingId: 2,
-            title: "Walk Away",
+            title: "Azlin tells you to give him up",
             inkVar: "nadia_chapter2_ending_2",
           },
         ]
@@ -225,7 +225,7 @@ export const CHARACTER_MAP = [
         title: "To Be or Not To Be",
         knotTag: "aman_2_intro",
         summary: "Aman tries to crack the silver screen - but it’s even harder than he imagined.",
-        playable: true,
+        playable: false,
         images : ["/images/aman_1_intro.jpg"],
         endings: [
           {
