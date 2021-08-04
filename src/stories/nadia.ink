@@ -1032,9 +1032,15 @@ Huhu I think it can be cute leh. #speaker_1
 Quick show meeeee #speaker_1
 Okok, gimme a min #speaker_self
 #ui:scene
-#background:bg_nadia_wearinghijab.jpg
+#background:bg_nadia_selfiehijab.jpg
 Gah can’t believe am taking a selfie for Chloe. #inner_monologue
 Right... sending through my selfie with this caption! #inner_monologue
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Chloe
+#chat_group_image:ico_nadia_chloe.png
+#speaker_1_name:Chloe
+So.... #speaker_self
 + 😎 Rocking it![] #speaker_self
     VAR nadia_2_confidenthijab = true
     I’m turning up like this. Ok right? #speaker_self
@@ -1273,7 +1279,7 @@ Well.. I hope not.	#speaker_left
     How about a silly movie? #speaker_left
     Oh! How about a scary movie? #speaker_self
     #ui:narrator
-    #background:bg_nadia_mall.jpg
+    #background:bg_nadia_cinema.jpg
     We end up watching the latest Thai horror movie. 
     I think Gavin liked it. He grabbed my hand at a jump scare... 
     And didn’t let go for the rest of the movie.
@@ -1289,7 +1295,7 @@ Well.. I hope not.	#speaker_left
     Something serious or silly?#speaker_left
     Silly, please.  #speaker_self
     #ui:narrator
-    #background:bg_nadia_mall.jpg
+    #background:bg_nadia_cinema.jpg
     We end up watching a very strange and silly movie. 
     He didn’t try to hold my hand or anything. Everything was just comfortable, and.. nice.
     -> nadia_2_3_narration
@@ -1481,6 +1487,10 @@ Yeah, sure...  #speaker_left
 #speaker_left_image:pixel.png
 #background:new_message_notification.jpg
 A message from my Abah.
+-> nadia_2_3d_whatsapp
+
+=== nadia_2_3d_whatsapp ===
+#knot:nadia_2_3d_whatsapp
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Family Chatgroup
@@ -1551,6 +1561,9 @@ Why am I getting angry? Maybe I need to find an excuse to walk away. #inner_mono
 #speaker_left_image:pixel.png
 #background:new_message_notification.jpg
 A message from my Abah.
+-> nadia_2_3e_whatsapp
+=== nadia_2_3e_whatsapp ===
+#knot:nadia_2_3e_whatsapp
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Family Chatgroup
