@@ -1010,6 +1010,7 @@ I’m going to wear my hijab.
 #chat_group_title:Chloe
 #chat_group_image:ico_nadia_chloe.png
 #speaker_1_name:Chloe
+14:27 #timestamp
 Hallo! Wanna head out this afternoon for a mug sesh? #speaker_1
 Darn I can’t #speaker_self
 That’s ok! What are u up to? #speaker_1
@@ -1031,16 +1032,7 @@ NO?? Would you?? #speaker_self
 Huhu I think it can be cute leh. #speaker_1
 Quick show meeeee #speaker_1
 Okok, gimme a min #speaker_self
-#ui:scene
-#background:bg_nadia_selfiehijab.jpg
-Gah can’t believe am taking a selfie for Chloe. #inner_monologue
-Right... sending through my selfie with this caption! #inner_monologue
-#ui:whatsapp
-#background:whatsapp.png
-#chat_group_title:Chloe
-#chat_group_image:ico_nadia_chloe.png
-#speaker_1_name:Chloe
-So.... #speaker_self
+bg_nadia_selfiehijab.jpg #speaker_self #image
 + 😎 Rocking it![] #speaker_self
     VAR nadia_2_confidenthijab = true
     I’m turning up like this. Ok right? #speaker_self
@@ -1318,6 +1310,7 @@ Where is she...
 #chat_group_title:Chloe
 #chat_group_image:ico_nadia_chloe.png
 #speaker_1_name:Chloe
+15:20 #timestamp
 idk what I’m gg to tell my mum #speaker_1
 What happened!  #speaker_self
 The opposite of good news #speaker_1
@@ -1497,7 +1490,7 @@ A message from my Abah.
 #chat_group_image:ico_nadia_rahman.png
 #speaker_1_name:Abah
 Huhu terjumpa (found) photo of Nadia when she was small 🌱👶🐛🦋 #speaker_1
-[Thumbnail image: Nadia aged 6, dressed in a kid’s doctor’s coat. She is not looking at the camera. Instead, her full attention is to a teddy bear that she is examining with a toy stethoscope.]  #speaker_1 #image:bg_nadia_doctor.jpg
+bg_nadia_childdoctor.jpg #speaker_1 #image
 Haha so serious this girl #speaker_2
 From young my girl already have ambition! Study hard and achieve your dreams. 🤲  #speaker_1
 Insyaallah, you will become a doctor and then you can really help people. It is the MOST noble profession. Any hospital would be lucky to have you! #speaker_1
@@ -1583,7 +1576,7 @@ Anyway, I need to take this. #speaker_self
 #speaker_2_name:Azlin
 #speaker_3_name:Cik Lina (aunt)
 #speaker_4_name:Raihan (cousin)
-[Thumbnail image: Nadia aged 6, dressed in a kid’s doctor’s coat. She is not looking at the camera. Instead, her full attention is to a teddy bear that she is examining with a toy stethoscope.]  #speaker_1
+bg_nadia_childdoctor.jpg #speaker_1 #image
 Haha so serious this girl #speaker_2
 From young my girl already have ambition! Study hard and achieve your dreams. 🤲  #speaker_1
 Insyaallah, you will become a doctor and then you can really help people. It is the MOST noble profession. Any hospital would be lucky to have you! #speaker_1

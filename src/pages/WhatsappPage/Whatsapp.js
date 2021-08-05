@@ -99,8 +99,7 @@ const Whatsapp = (props) => {
         <Box>
             <Box
               className={`Whatsapp__messages ${choices.length > 0 ? 'choices' : ''}`}
-              dir="ltr"
-            >
+              dir="ltr">
               {specialTags.timestamp ? <Box style={{textAlign:'center', paddingTop:5, fontSize:12}}> {specialTags.timestamp}hr </Box>: null}
               {currentParagraphs.map((step, i) => {
                 if (step.tags[0]?.includes('speaker_self')) {
@@ -141,27 +140,16 @@ const Whatsapp = (props) => {
                         <Typography key={step.text}>{step.text}</Typography>
 
                       </div>
-                      {/* <Box key={step.text} my={2} mx={1} className="Whatsapp__messages--receiver" borderRadius={5}>  */}
-                        {/* <Box className="Whatsapp__messages--receiver" borderRadius={5}>*/}
-                          {/* {console.log(isNotPrevSpeaker(step.tags[0]))}
-                          
-                          <Typography className="Whatsapp__messages--receiver--name" variant="overline" 
-                            style={{color:persona.primaryColour,textTransform:"capitalize", display:isNotPrevSpeaker(step.tags[0])?"block":"none"}}
-                          >
-                            {(step.tags[0]?.includes('speaker_1') ? specialTags.speaker_1_name : "")}
-                            {(step.tags[0]?.includes('speaker_2') ? specialTags.speaker_2_name : "")}
-                            {(step.tags[0]?.includes('speaker_3') ? specialTags.speaker_3_name : "")}
-                            {(step.tags[0]?.includes('speaker_4') ? specialTags.speaker_4_name : "")} */}
-                            {/* {console.log(step.text.substring(1, step.text.length))} */}
-                          {/* </Typography> 
-                          {setCurrentSpeaker(step.tags[0])}
-                          {console.log(prevSpeaker)}
-                          <Typography>{step.text}</Typography> */}
-                        {/* </Box> */}
-                      {/* </Box> */}
+                     
                     </Fade>
                   )
                 }
+                else if (step.tags[0]?.includes('timestamp')) {
+                  return (
+                    <Box style={{ textAlign: 'center', paddingTop: 5 }}> <Typography key={step.text} variant="overline"> {step.text}hr</Typography> </Box>
+                    )
+                }
+              
               })}
               <div ref={elementRef} />
             </Box>
