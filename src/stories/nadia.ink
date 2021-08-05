@@ -1081,7 +1081,7 @@ Sunday, 3:10pm, at the mall.
 #knot:nadia_2_2
 #ui:scene
 #background:bg_nadia_mall.jpg
-#speaker_left_image:cha_nadia_gavin_date.png
+#speaker_left_image:cha_nadia_gavin_casual_normal.png
 #speaker_left_name:Gavin
 Hi so sorry I’m late! #speaker_self
 Hey! You look nice. #speaker_1
@@ -1173,7 +1173,7 @@ Eh...did I say left or right just now? Maybe we missed the turn... #speaker_left
 = nadia_2_2b
 #ui:scene
 #background:bg_nadia_mall.jpg
-#speaker_left_image:cha_nadia_gavin_date.png
+#speaker_left_image:cha_nadia_gavin_casual_normal.png
 #speaker_left_name:Gavin
 #speaker_right_image:cha_nadia_azlin.png 
 #speaker_right_name:Azlin
@@ -1194,14 +1194,14 @@ I’ll never hear the end of this.  #inner_monologue
 K, just be steady... let me first salam her (traditional Muslim greeting)...  #inner_monologue
 Oh dear. What is Gavin doing? #inner_monologue
 ...ah. #speaker_self
-#speaker_left_image:cha_nadia_gavin_date_confused.png
+#speaker_left_image:cha_nadia_gavin_casual_nervous.png
 What? #speaker_left
 Haha, it’s okay. #speaker_right
 Did he just try to salam my cousin? Oh this is awkward. I'll tell him later. #inner_monologue
 Hi kak, this is Gavin.	#speaker_self
 Hi Gavin...	#speaker_right
 PLEASE do not say “I’ve heard so much about you.”	#inner_monologue
-#speaker_left_image:cha_nadia_gavin_date.png
+#speaker_left_image:cha_nadia_gavin_casual_normal.png
 ...nice to meet you! #speaker_right
 Oh thank goodness. Thank you Azlin. #inner_monologue
 What are you guys doing here?	#speaker_right
@@ -1209,11 +1209,11 @@ We’re going to grab coffee.. There’s this halal cafe that just opened up.	#s
 Yes, and Gavin’s suggestion actually! #speaker_self
 #speaker_right_image:cha_nadia_azlin_naughty.png
 Oh really? I thought you were more of a tea person, Nad.	#speaker_right
-#speaker_left_image:cha_nadia_gavin_date_confused.png
+#speaker_left_image:cha_nadia_gavin_casual_concerned.png
 huh?	#speaker_left
 uh... I mean, I drink tea at home cos it’s there, but I do like.. Coffee.. At cafes.	#speaker_self
 Ooh, fancy. No kopitiam kopi for you? #speaker_right
-#speaker_left_image:cha_nadia_gavin_date.png
+#speaker_left_image:cha_nadia_gavin_casual_normal.png
 Kopi po siew dai. #speaker_left
 Hmm? #speaker_right
 That’s her usual order. At school.	#speaker_left
@@ -1235,14 +1235,14 @@ Social protocol. #speaker_left
 Courtesy. #speaker_self
 Code of conduct. #speaker_left
 Ugh why must you make everything sound so formal?	#speaker_self
-#speaker_left_image:cha_nadia_gavin_date_confused.png
+#speaker_left_image:cha_nadia_gavin_casual_concerned.png
 (Bewildered) Well yeah, but it is. I had no idea Malay people were so formal. 	#speaker_left
 Why, because we just sit downstairs at void deck with guitar all?	#speaker_self
 Oi don’t put words in my mouth -	#speaker_left
 — ok fine, but just because you don’t know about it doesn’t mean it doesn’t exist.	#speaker_self
 And I’m just trying to understand how come I never knew any of this before.	#speaker_left
 Because you’re not Malay!	#speaker_self
-#speaker_left_image:cha_nadia_gavin_date_laughing.png
+#speaker_left_image:cha_nadia_gavin_casual_grinning.png
 No shit! (Bursts out laughing) #speaker_left
 Hahaha... I love that we can laugh together, until it almost hurts... #inner_monologue
 All that tension -- gone, at least for now. #inner_monologue
@@ -1267,7 +1267,7 @@ Yeah, I do. I feel a bit of it. Funny huh, we spend so much time hanging in scho
 This is a new feeling.	#speaker_left
 I hate new feelings. #speaker_self
 Well.. I hope not.	#speaker_left
-#speaker_left_image:cha_nadia_gavin_date.png
+#speaker_left_image:cha_nadia_gavin_casual_normal.png
 (smiles) Ok. I don’t hate ALL new feelings. #speaker_self
 (beams) Good. Can’t believe we bumped into your cousin. Are you sure she’s not stalking us? 	#speaker_left
 + [Let's hide - just you and me]
@@ -1316,7 +1316,7 @@ Where is she...
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Chloe
-#chat_group_image:ico_nadia_chloe.png
+#chat_group_image:ico_nadia_chloe_school_concerned.png
 #speaker_1_name:Chloe
 idk what I’m gg to tell my mum #speaker_1
 What happened!  #speaker_self
@@ -1338,7 +1338,7 @@ Ok fine, fine. Then you come down here la! #speaker_self
 10 minutes later
 #ui:scene
 #background:bg_nadia_library.jpg
-#speaker_left_image:cha_nadia_chloe.png
+#speaker_left_image:ico_nadia_chloe_school_concerned.png
 #speaker_left_name:Chloe
 So.. how was date-day? #speaker_left
 Kinda the same, kinda really different.. Did you see this coming? #speaker_self
@@ -1447,7 +1447,7 @@ Making life more difficult for ourselves. #speaker_left
 === nadia_2_3c ===
 #ui:scene
 #background:bg_nadia_library.jpg
-#speaker_left_image:cha_nadia_chloe.png
+#speaker_left_image:ico_nadia_chloe_school_sad.png
 #speaker_left_name:Chloe
 Gee, thanks. Well.. scholarships are competitive, but so are you! Your essays are laser sharp.  #speaker_self
 It’s not enough. Just wish I had a bit of an advantage.. Anyway, you won’t understand.  #speaker_left
@@ -1547,7 +1547,7 @@ wow. later we get ice cream from the mama shop k. cool you down a bit #speaker_1
 #knot:nadia_2_3e
 #ui:scene
 #background:bg_nadia_library.jpg
-#speaker_left_image:cha_nadia_chloe.png
+#speaker_left_image:ico_nadia_chloe_school_concerned.png
 #speaker_left_name:Chloe
 ~ nadia_2_confrontchloe = true
 What do you mean by that? #speaker_self
@@ -1572,7 +1572,7 @@ A message from my Abah.
 Huhu terjumpa (found) photo of Nadia when she was small 🌱👶🐛🦋 #speaker_1
 #ui:scene
 #background:bg_nadia_library.jpg
-#speaker_left_image:cha_nadia_chloe.png
+#speaker_left_image:ico_nadia_chloe_school_concerned.png
 #speaker_left_name:Chloe
 Anyway, I need to take this. #speaker_self
 #ui:whatsapp
