@@ -53,6 +53,10 @@ const Whatsapp = (props) => {
       width: "100%", 
       // overflow: "hidden", 
     },
+    whatsappImage: {
+      maxWidth: 150,
+      maxHeight: 150,
+    }
     // WhatsappMsgs: {
     //   maxHeight: maxHeight,
     // }
@@ -101,7 +105,7 @@ const Whatsapp = (props) => {
               className={`Whatsapp__messages ${choices.length > 0 ? 'choices' : ''}`}
               dir="ltr"
             >             
-            {/*             {specialTags.timestamp ? <Box style={{textAlign:'center', paddingTop:5, fontSize:12}}> {specialTags.timestamp}hr </Box>: null} */}
+            {specialTags.timestamp ? <Box style={{textAlign:'center', paddingTop:5, fontSize:12}}> {specialTags.timestamp}hr </Box>: null}
             {currentParagraphs.map((step, i) => {                
                 if (step.tags[0]?.includes('speaker_self')) {
                   return (
@@ -117,7 +121,7 @@ const Whatsapp = (props) => {
                           borderRadius={5}
                           key={step.text}
                         >
-                          <Typography key={step.text}>{step.text}</Typography>
+                          {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.whatsappImage} /> :  <Typography key={step.text}>{step.text}</Typography> )}
                           {setCurrentSpeaker(step.tags[0])}
                         </Box>
                       </Fade>
@@ -138,27 +142,11 @@ const Whatsapp = (props) => {
                         </div>
                         {setCurrentSpeaker(step.tags[0])}
                         {/* <div>{step.text}</div> */}
-                        <Typography key={step.text}>{step.text}</Typography>
+                       
+                        {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.whatsappImage} /> :  <Typography key={step.text}>{step.text}</Typography> )}
 
                       </div>
-                      {/* <Box key={step.text} my={2} mx={1} className="Whatsapp__messages--receiver" borderRadius={5}>  */}
-                        {/* <Box className="Whatsapp__messages--receiver" borderRadius={5}>*/}
-                          {/* {console.log(isNotPrevSpeaker(step.tags[0]))}
-                          
-                          <Typography className="Whatsapp__messages--receiver--name" variant="overline" 
-                            style={{color:persona.primaryColour,textTransform:"capitalize", display:isNotPrevSpeaker(step.tags[0])?"block":"none"}}
-                          >
-                            {(step.tags[0]?.includes('speaker_1') ? specialTags.speaker_1_name : "")}
-                            {(step.tags[0]?.includes('speaker_2') ? specialTags.speaker_2_name : "")}
-                            {(step.tags[0]?.includes('speaker_3') ? specialTags.speaker_3_name : "")}
-                            {(step.tags[0]?.includes('speaker_4') ? specialTags.speaker_4_name : "")} */}
-                            {/* {console.log(step.text.substring(1, step.text.length))} */}
-                          {/* </Typography> 
-                          {setCurrentSpeaker(step.tags[0])}
-                          {console.log(prevSpeaker)}
-                          <Typography>{step.text}</Typography> */}
-                        {/* </Box> */}
-                      {/* </Box> */}
+                      
                     </Fade>
                   )
                 }
@@ -167,6 +155,7 @@ const Whatsapp = (props) => {
                     <Box style={{ textAlign: 'center', paddingTop: 5 }}> <Typography key={step.text} variant="overline"> {step.text}</Typography> </Box>
                     )
                 }
+              
               })}
               <div ref={elementRef} />
             </Box>
