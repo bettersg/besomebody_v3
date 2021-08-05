@@ -1084,7 +1084,7 @@ Sunday, 3:10pm, at the mall.
 #speaker_left_image:cha_nadia_gavin_casual_normal.png
 #speaker_left_name:Gavin
 Hi so sorry I’m late! #speaker_self
-Hey! You look nice. #speaker_1
+Hey! You look nice. #speaker_left
 Oh! He’s reaching out for a hug. #inner_monologue
 {nadia_2_confidenthijab: 
     + [Hug Gavin back ] -> nadia_2_2a1
@@ -1316,7 +1316,7 @@ Where is she...
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Chloe
-#chat_group_image:ico_nadia_chloe_school_concerned.png
+#chat_group_image:ico_nadia_chloe.png
 #speaker_1_name:Chloe
 idk what I’m gg to tell my mum #speaker_1
 What happened!  #speaker_self
