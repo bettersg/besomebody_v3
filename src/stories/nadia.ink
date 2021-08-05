@@ -1010,6 +1010,7 @@ I’m going to wear my hijab.
 #chat_group_title:Chloe
 #chat_group_image:ico_nadia_chloe.png
 #speaker_1_name:Chloe
+14:27 #timestamp
 Hallo! Wanna head out this afternoon for a mug sesh? #speaker_1
 Darn I can’t #speaker_self
 That’s ok! What are u up to? #speaker_1
@@ -1031,16 +1032,7 @@ NO?? Would you?? #speaker_self
 Huhu I think it can be cute leh. #speaker_1
 Quick show meeeee #speaker_1
 Okok, gimme a min #speaker_self
-#ui:scene
-#background:bg_nadia_selfiehijab.jpg
-Gah can’t believe am taking a selfie for Chloe. #inner_monologue
-Right... sending through my selfie with this caption! #inner_monologue
-#ui:whatsapp
-#background:whatsapp.png
-#chat_group_title:Chloe
-#chat_group_image:ico_nadia_chloe.png
-#speaker_1_name:Chloe
-So.... #speaker_self
+bg_nadia_selfiehijab.jpg #speaker_self #image
 + 😎 Rocking it![] #speaker_self
     VAR nadia_2_confidenthijab = true
     I’m turning up like this. Ok right? #speaker_self
@@ -1084,7 +1076,7 @@ Sunday, 3:10pm, at the mall.
 #speaker_left_image:cha_nadia_gavin_casual_normal.png
 #speaker_left_name:Gavin
 Hi so sorry I’m late! #speaker_self
-Hey! You look nice. #speaker_1
+Hey! You look nice. #speaker_left
 Oh! He’s reaching out for a hug. #inner_monologue
 {nadia_2_confidenthijab: 
     + [Hug Gavin back ] -> nadia_2_2a1
@@ -1316,8 +1308,9 @@ Where is she...
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Chloe
-#chat_group_image:ico_nadia_chloe_school_concerned.png
+#chat_group_image:ico_nadia_chloe.png
 #speaker_1_name:Chloe
+15:20 #timestamp
 idk what I’m gg to tell my mum #speaker_1
 What happened!  #speaker_self
 The opposite of good news #speaker_1
@@ -1338,7 +1331,7 @@ Ok fine, fine. Then you come down here la! #speaker_self
 10 minutes later
 #ui:scene
 #background:bg_nadia_library.jpg
-#speaker_left_image:ico_nadia_chloe_school_concerned.png
+#speaker_left_image:nadia_chloe_school_concerned.png
 #speaker_left_name:Chloe
 So.. how was date-day? #speaker_left
 Kinda the same, kinda really different.. Did you see this coming? #speaker_self
@@ -1447,7 +1440,7 @@ Making life more difficult for ourselves. #speaker_left
 === nadia_2_3c ===
 #ui:scene
 #background:bg_nadia_library.jpg
-#speaker_left_image:ico_nadia_chloe_school_sad.png
+#speaker_left_image:nadia_chloe_school_sad.png
 #speaker_left_name:Chloe
 Gee, thanks. Well.. scholarships are competitive, but so are you! Your essays are laser sharp.  #speaker_self
 It’s not enough. Just wish I had a bit of an advantage.. Anyway, you won’t understand.  #speaker_left
@@ -1497,7 +1490,7 @@ A message from my Abah.
 #chat_group_image:ico_nadia_rahman.png
 #speaker_1_name:Abah
 Huhu terjumpa (found) photo of Nadia when she was small 🌱👶🐛🦋 #speaker_1
-[Thumbnail image: Nadia aged 6, dressed in a kid’s doctor’s coat. She is not looking at the camera. Instead, her full attention is to a teddy bear that she is examining with a toy stethoscope.]  #speaker_1 #image:bg_nadia_doctor.jpg
+bg_nadia_childdoctor.jpg #speaker_1 #image
 Haha so serious this girl #speaker_2
 From young my girl already have ambition! Study hard and achieve your dreams. 🤲  #speaker_1
 Insyaallah, you will become a doctor and then you can really help people. It is the MOST noble profession. Any hospital would be lucky to have you! #speaker_1
@@ -1547,7 +1540,7 @@ wow. later we get ice cream from the mama shop k. cool you down a bit #speaker_1
 #knot:nadia_2_3e
 #ui:scene
 #background:bg_nadia_library.jpg
-#speaker_left_image:ico_nadia_chloe_school_concerned.png
+#speaker_left_image:nadia_chloe_school_concerned.png
 #speaker_left_name:Chloe
 ~ nadia_2_confrontchloe = true
 What do you mean by that? #speaker_self
@@ -1572,7 +1565,7 @@ A message from my Abah.
 Huhu terjumpa (found) photo of Nadia when she was small 🌱👶🐛🦋 #speaker_1
 #ui:scene
 #background:bg_nadia_library.jpg
-#speaker_left_image:ico_nadia_chloe_school_concerned.png
+#speaker_left_image:nadia_chloe_school_concerned.png
 #speaker_left_name:Chloe
 Anyway, I need to take this. #speaker_self
 #ui:whatsapp
@@ -1583,7 +1576,7 @@ Anyway, I need to take this. #speaker_self
 #speaker_2_name:Azlin
 #speaker_3_name:Cik Lina (aunt)
 #speaker_4_name:Raihan (cousin)
-[Thumbnail image: Nadia aged 6, dressed in a kid’s doctor’s coat. She is not looking at the camera. Instead, her full attention is to a teddy bear that she is examining with a toy stethoscope.]  #speaker_1
+bg_nadia_childdoctor.jpg #speaker_1 #image
 Haha so serious this girl #speaker_2
 From young my girl already have ambition! Study hard and achieve your dreams. 🤲  #speaker_1
 Insyaallah, you will become a doctor and then you can really help people. It is the MOST noble profession. Any hospital would be lucky to have you! #speaker_1

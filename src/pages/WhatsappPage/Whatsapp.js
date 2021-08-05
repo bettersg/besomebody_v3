@@ -103,10 +103,9 @@ const Whatsapp = (props) => {
         <Box>
             <Box
               className={`Whatsapp__messages ${choices.length > 0 ? 'choices' : ''}`}
-              dir="ltr"
-            >             
-            {specialTags.timestamp ? <Box style={{textAlign:'center', paddingTop:5, fontSize:12}}> {specialTags.timestamp}hr </Box>: null}
-            {currentParagraphs.map((step, i) => {                
+              dir="ltr">
+              {specialTags.timestamp ? <Box style={{textAlign:'center', paddingTop:5, fontSize:12}}> {specialTags.timestamp}hr </Box>: null}
+              {currentParagraphs.map((step, i) => {
                 if (step.tags[0]?.includes('speaker_self')) {
                   return (
                     <Box
@@ -146,13 +145,12 @@ const Whatsapp = (props) => {
                         {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.whatsappImage} /> :  <Typography key={step.text}>{step.text}</Typography> )}
 
                       </div>
-                      
                     </Fade>
                   )
                 }
                 else if (step.tags[0]?.includes('timestamp')) {
                   return (
-                    <Box style={{ textAlign: 'center', paddingTop: 5 }}> <Typography key={step.text} variant="overline"> {step.text}</Typography> </Box>
+                    <Box style={{ textAlign: 'center', paddingTop: 5 }}> <Typography key={step.text} variant="overline"> {step.text}hr</Typography> </Box>
                     )
                 }
               

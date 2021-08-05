@@ -202,7 +202,7 @@ One month later, Selinder and I are chatting at night.
 #chat_group_title:Selinder
 #chat_group_image:ico_aman_selinder.png
 #speaker_1_name:Selinder
-23.34hr #timestamp
+23.34 #timestamp
 Babe, I’m sorry, I think I’m going to do it. #speaker_self
 Jaan (dear), don’t do anything rash. #speaker_1
 Remember what we’ve been taught about being a good Sikh and honoring our Gurus? #speaker_1
@@ -210,7 +210,7 @@ About following the Sikhi way of life, no matter how challenging? Don’t do any
 And I think you're handsome already! #speaker_1
 ... #speaker_1
 ... hello? #speaker_1
-09.15hr #timestamp
+09.15 #timestamp
 Hi babe. I’m so sorry about last night. I got so tired and I just passed out on my bed. #speaker_self
 It’s okay. #speaker_1
 I’m sorry if I came down too hard on you. #speaker_1
@@ -293,7 +293,7 @@ This is the start of a new chapter in my life.
 #speaker_1_name:Papa
 #speaker_2_name:Ma
 #speaker_3_name:Jothi
-#timestamp:09.45
+09.45 #timestamp
 Eh ma can we order something different for dinner tonight? #speaker_3 
 Why? What's wrong with my cooking? #speaker_2 
 It's Aman's last meal as a free man! We should get something nice tonight! #speaker_3
@@ -303,7 +303,8 @@ Aman - please tell ma you want to order something for dinner! Side with me! #spe
 Let the boy make up his own mind Jothi! He's going to be a real man soon! #speaker_1
 Aman? #speaker_1
 + [Send them a selfie of your haircut]
-    This is what I look like after my haircut 📎[selfie.jpg]  #emoji:bg_aman_haircutselfie.jpg #speaker_self 
+    This is what I look like after my haircut #speaker_self
+    bg_aman_haircutselfie.jpg #speaker_self #image
 + [Tell your family that you cut your hair]
 - I cut my hair to prepare NS today. It's very short now.    #speaker_self 
 
@@ -320,7 +321,7 @@ I don’t care what they think. Do I care what they think? #inner_monologue
 #speaker_1_name:Papa
 #speaker_2_name:Ma
 #speaker_3_name:Jothi
-#timestamp:09.50
+09.50 #timestamp
 You will regret it, son. #speaker_1
 
 #ui:scene
@@ -846,7 +847,7 @@ Will we last when I move to Australia?  #inner_monologue
 #chat_group_title:Selinder
 #chat_group_image:ico_aman_selinder.png
 #speaker_1_name:Selinder
-#timestamp:18.21
+18.21 #timestamp
 Heyyyy babe. #speaker_self
 Hey yourself! What are you up to? #speaker_1
 Hm same old. Surfing socials for casting calls.  #speaker_self
@@ -1700,7 +1701,7 @@ Ain’t gonna veto that... #speaker_self
 #chat_group_title:Jothi
 #chat_group_image:jothi.jpg
 #speaker_1_name:Jothi
-#timestamp:22.17
+22.17 #timestamp
 Come home. Now. #speaker_1
 I'm celebrating with my friends! What happened? #speaker_self
 You’re in trouble is what happened. Come home and we talk. #speaker_1
