@@ -108,7 +108,22 @@ export const CHARACTER_MAP = [
         knotTag: "nadia_2_intro",
         summary: "Nadia runs into some hard realities. Sometimes, having dreams isn't as straightforward as it should be.",
         playable: true,
-        images : ["cat.jpg", "dog.jpg"],
+        images: [
+          "/images/bg_nadia_intro.jpg",
+          "/images/bg_nadia_bedroom.jpg",
+          "/images/bg_nadia_selfiehijab.jpg",
+          "/images/bg_nadia_mall.jpg",
+          "/images/bg_nadia_cinema.jpg",
+          "/images/bg_nadia_library.jpg",
+          "/images/new_message_notification.jpg",
+          "/images/bg_nadia_playgroundnight.jpg",          
+          "/images/cha_nadia_gavin_casual_concerned.png",                  
+          "/images/cha_nadia_gavin_casual_normal.png",                  
+          "/images/cha_nadia_gavin_casual_nervous.png",                  
+          "/images/cha_nadia_gavin_casual_grinning.png",                  
+          "/images/cha_nadia_chloe_school_concerned.png",                  
+          "/images/cha_nadia_chloe_school_sad.png",                  
+        ],
         endings: [
           {
             endingId: 1,
@@ -259,9 +274,9 @@ export const CHARACTER_MAP = [
       {
         chapterId: 4,
         number: 4,
-        title: "Coming Soon",
+        title: "For The Love of God",
         knotTag: "aman_4_intro",
-        summary: "Aman wants to go overseas for university, but with his girlfriend still in Singapore - what will happen?",
+        summary: "Aman is presented with a huge decision that will affect his future and relationship. What will he choose? ",
         playable: false,
         images : ["/images/aman_1_intro.jpg", "dog.jpg"],
 
@@ -281,9 +296,9 @@ export const CHARACTER_MAP = [
       {
         chapterId: 5,
         number: 5,
-        title: "Coming Soon",
+        title: "Fly Away",
         knotTag: "aman_5_intro",
-        summary: "Coming Soon.",
+        summary: "Aman is off to Melbourne. Will he find himself in the land down under?",
         playable: false,
         images : ["/images/aman_1_intro.jpg","dog.jpg"],
 

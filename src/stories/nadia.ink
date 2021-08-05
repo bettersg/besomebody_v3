@@ -1316,7 +1316,7 @@ Where is she...
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Chloe
-#chat_group_image:ico_nadia_chloe.png
+#chat_group_image:ico_nadia_chloe_school_concerned.png
 #speaker_1_name:Chloe
 idk what I’m gg to tell my mum #speaker_1
 What happened!  #speaker_self
@@ -1338,7 +1338,7 @@ Ok fine, fine. Then you come down here la! #speaker_self
 10 minutes later
 #ui:scene
 #background:bg_nadia_library.jpg
-#speaker_left_image:cha_nadia_chloe.png
+#speaker_left_image:ico_nadia_chloe_school_concerned.png
 #speaker_left_name:Chloe
 So.. how was date-day? #speaker_left
 Kinda the same, kinda really different.. Did you see this coming? #speaker_self
@@ -1447,7 +1447,7 @@ Making life more difficult for ourselves. #speaker_left
 === nadia_2_3c ===
 #ui:scene
 #background:bg_nadia_library.jpg
-#speaker_left_image:cha_nadia_chloe.png
+#speaker_left_image:ico_nadia_chloe_school_sad.png
 #speaker_left_name:Chloe
 Gee, thanks. Well.. scholarships are competitive, but so are you! Your essays are laser sharp.  #speaker_self
 It’s not enough. Just wish I had a bit of an advantage.. Anyway, you won’t understand.  #speaker_left
@@ -1547,7 +1547,7 @@ wow. later we get ice cream from the mama shop k. cool you down a bit #speaker_1
 #knot:nadia_2_3e
 #ui:scene
 #background:bg_nadia_library.jpg
-#speaker_left_image:cha_nadia_chloe.png
+#speaker_left_image:ico_nadia_chloe_school_concerned.png
 #speaker_left_name:Chloe
 ~ nadia_2_confrontchloe = true
 What do you mean by that? #speaker_self
@@ -1572,7 +1572,7 @@ A message from my Abah.
 Huhu terjumpa (found) photo of Nadia when she was small 🌱👶🐛🦋 #speaker_1
 #ui:scene
 #background:bg_nadia_library.jpg
-#speaker_left_image:cha_nadia_chloe.png
+#speaker_left_image:ico_nadia_chloe_school_concerned.png
 #speaker_left_name:Chloe
 Anyway, I need to take this. #speaker_self
 #ui:whatsapp
