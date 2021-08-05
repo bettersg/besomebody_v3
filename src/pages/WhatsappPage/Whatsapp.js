@@ -53,6 +53,10 @@ const Whatsapp = (props) => {
       width: "100%", 
       // overflow: "hidden", 
     },
+    whatsappImage: {
+      maxWidth: 150,
+      maxHeight: 150,
+    }
     // WhatsappMsgs: {
     //   maxHeight: maxHeight,
     // }
@@ -116,7 +120,7 @@ const Whatsapp = (props) => {
                           borderRadius={5}
                           key={step.text}
                         >
-                          <Typography key={step.text}>{step.text}</Typography>
+                          {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.whatsappImage} /> :  <Typography key={step.text}>{step.text}</Typography> )}
                           {setCurrentSpeaker(step.tags[0])}
                         </Box>
                       </Fade>
@@ -137,10 +141,10 @@ const Whatsapp = (props) => {
                         </div>
                         {setCurrentSpeaker(step.tags[0])}
                         {/* <div>{step.text}</div> */}
-                        <Typography key={step.text}>{step.text}</Typography>
+                       
+                        {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.whatsappImage} /> :  <Typography key={step.text}>{step.text}</Typography> )}
 
                       </div>
-                     
                     </Fade>
                   )
                 }
@@ -159,7 +163,7 @@ const Whatsapp = (props) => {
                   choices.length === 0 ? '' : 'choice'
                 }`}
               >
-                Choose your reply...
+                Continue...
               </Box>
               <Box className="Whatsapp__sendWrapper__sendButton--right">
                 <ExpandMoreIcon />

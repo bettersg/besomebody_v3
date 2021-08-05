@@ -316,7 +316,7 @@ export default function QuestionPanel({
             spacing={2}
             container
             direction="row"
-            justify="center"
+            justifyContent="center"
             alignItems="center"
           >
             {question["answers"].map((answer) =>
@@ -353,7 +353,7 @@ export default function QuestionPanel({
                   
                   }
                   
-                  <Typography variant="body" className={`answerBody ${isCorrectAnswer ? classes.answerCorrect : classes.answerWrong}`}>
+                  <Typography variant="body1" className={`answerBody ${isCorrectAnswer ? classes.answerCorrect : classes.answerWrong}`}>
                     {message}
                   </Typography>
                 </>
