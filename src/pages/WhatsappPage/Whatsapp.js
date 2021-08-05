@@ -100,9 +100,9 @@ const Whatsapp = (props) => {
             <Box
               className={`Whatsapp__messages ${choices.length > 0 ? 'choices' : ''}`}
               dir="ltr"
-            >
-              {/* {specialTags.timestamp ? <Box style={{textAlign:'center', paddingTop:5, fontSize:12}}> {specialTags.timestamp}hr </Box>: null} */}
-            {currentParagraphs.map((step, i) => {              
+            >             
+            {/*             {specialTags.timestamp ? <Box style={{textAlign:'center', paddingTop:5, fontSize:12}}> {specialTags.timestamp}hr </Box>: null} */}
+            {currentParagraphs.map((step, i) => {                
                 if (step.tags[0]?.includes('speaker_self')) {
                   return (
                     <Box
@@ -162,8 +162,10 @@ const Whatsapp = (props) => {
                     </Fade>
                   )
                 }
-                else if (step.tags[0]?.includes('timestamp')) {                 
-                  <Box style={{ textAlign: 'center', paddingTop: 5, fontSize: 12 }}> <Typography key={step.text}> {step.text}</Typography> </Box>
+                else if (step.tags[0]?.includes('timestamp')) {
+                  return (
+                    <Box style={{ textAlign: 'center', paddingTop: 5 }}> <Typography key={step.text} variant="overline"> {step.text}</Typography> </Box>
+                    )
                 }
               })}
               <div ref={elementRef} />
