@@ -10,6 +10,7 @@ import MultipleChoiceQuiz from '../MiniGames/MultipleChoice/MultipleChoiceQuiz'
 import SwipeQuiz from '../MiniGames/Swipe/SwipeQuiz'
 import { useInkContext } from '../../contexts/InkContext'
 import Narrator from '../NarratorPage/Narrator'
+import Notification from '../NotificationPage/Notification'
 import Reflection from '../ReflectionsPage/Reflection'
 
 const getUi = ({
@@ -28,6 +29,9 @@ const getUi = ({
     case 'narrator': {
       return <Narrator currentParagraphs={currentParagraphs} />
     }
+    case 'notification': {
+      return <Notification currentParagraphs={currentParagraphs} />
+    }  
     case 'survey': {
       // TODO: update this component
       return <Survey currentParagraphs={currentParagraphs} />

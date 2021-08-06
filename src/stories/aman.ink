@@ -55,11 +55,11 @@ Minigame // must add some text
 VAR character_id = 2
 VAR chapter_id = 1
 VAR aman_mood = 10
-VAR chapter_1_ending = 0 
-VAR chapter_2_ending = 0 
-VAR chapter_3_ending = 0 
-VAR chapter_4_ending = 0 
-VAR chapter_5_ending = 0 
+// VAR chapter_1_ending = 0 
+// VAR chapter_2_ending = 0 
+// VAR chapter_3_ending = 0 
+// VAR chapter_4_ending = 0 
+// VAR chapter_5_ending = 0 
 // VAR aman_2_1c_overcharge = 0
 // VAR aman_2_2_confide = 0
 // VAR aman_2_5_change_look= 0
@@ -175,8 +175,6 @@ Now, will you please take the airpods, and leave me alone? #speaker_self
 Sigh. Aman, I... #speaker_right
 ... I ...  #speaker_right
 
-
-
 -> aman_1_3_narration
 
 
@@ -276,8 +274,8 @@ You sure ah, boy. #speaker_right
 #ui:narrator
 #background:bg_aman_barbershopoutside.jpg
 I look so different. 
-But this is the new me. 
 #background:bg_aman_haircutselfie.jpg
+But this is the new me. 
 This is the start of a new chapter in my life.
 
 
@@ -512,7 +510,7 @@ With everything so simple, and pure... #inner_monologue
 #knot:chapter_1_ending_1
 #ending:chapter_1_ending_1
 // multiple ways to record the ending so that we can check in ink later if the player chose this ending or the other one. this knot is not presented to the user in the game.
-~ chapter_1_ending = 1
+VAR chapter_1_ending = 1
 
 -> aman_1_reflection
  
@@ -847,7 +845,7 @@ Will we last when I move to Australia?  #inner_monologue
 #chat_group_title:Selinder
 #chat_group_image:ico_aman_selinder.png
 #speaker_1_name:Selinder
-18.21 #timestamp
+17.35 #timestamp
 Heyyyy babe. #speaker_self
 Hey yourself! What are you up to? #speaker_1
 Hm same old. Surfing socials for casting calls.  #speaker_self
@@ -891,8 +889,11 @@ Maybe I’ll get discovered. Get rich. Be famous.  #inner_monologue
 Riding along, with hot girls, in my red convertible along Palm Springs California, the wind in our hair... #inner_monologue
 Oh, who am I kidding!  #inner_monologue
 I’ve applied to dozens of casting calls in the past month, but nobody replies.  #inner_monologue
-#background:new_message_notification.jpg
-Hmm... an unknown number... Could it be.... #inner_monologue
+
+#ui:notification
+#background:ui_aman_message.jpg
+UNKNOWN NUMBER: Hi, this is Elsa # message
+
 -> aman_2_1c
 
 
@@ -903,10 +904,11 @@ Hmm... an unknown number... Could it be.... #inner_monologue
 #chat_group_title:Unknown Number
 #chat_group_image:ico_unknown_profile.png
 #speaker_1_name:Elsa
+17.47 #timestamp
 Hi, this is Elsa from Everyday Productions! We got your email. #speaker_1
 Can you send me your unedited full body pic, close up shot and side shots pls. And also your per day rate. #speaker_1
 Hi Elsa, thanks for getting back to me! Please see my photos attached.  #speaker_self  
-📎photo1.jpg 📎photo2.jpg  #speaker_self  
+📎 photo1.jpg 📎 photo2.jpg  #speaker_self  
 
 #ui:scene
 #background:bg_aman_bedroom.jpg
@@ -938,9 +940,9 @@ Wait, she asked for my rates. What are my rates? Oh good grief. Uh... #inner_mon
     Sure, thank you! #speaker_self
 
 #ui:scene
-#background:aman_1_intro.jpg
+#background:bg_aman_bedroom.jpg
 - Waheguru, Waheguru, Waheguru, please help me get the part! #inner_monologue
-ok, better get ready for date night!#inner_monologue
+ok, better get ready for date night! #inner_monologue
 -> aman_2_2
  
 
@@ -1033,7 +1035,7 @@ Nothing to do now but wait, I guess… #inner_monologue
 What a good for nothing! #speaker_left
 Wow, Ma, you too? #speaker_self
 Not you! Mukesh! #speaker_left
-#background:new_message_notification.jpg
+#background:ui_aman_message.jpg
 A new message! Maybe it's Elsa! Please let it be good news! #inner_monologue
 -> aman_2_3_whatsapp2
 
@@ -1063,7 +1065,7 @@ Thinking of you. 😍  #speaker_self
 #speaker_left_image:cha_aman_mama_worried.png
 #speaker_left_name:Ma
 Aman, hurry! Tina is threatening to throw away the wedding ring! #speaker_self
-#background:new_message_notification.jpg
+#background:ui_aman_message.jpg
 Another message. Uh what does Zhihao want now? #inner_monologue
 -> aman_2_3_whatsapp3
 
@@ -1121,15 +1123,17 @@ Sorry, I’m really tired. I’m going to bed. #speaker_self
 #ui:narrator
 #background:bg_aman_bedroom.jpg
 On a sleepless night. 
-#background:new_call_notification.jpg
-The phone rings. It's Selinder.
+
+#ui:notification
+#background:ui_aman_call.jpg
+Selinder #call
 -> aman_2_4
 
 === aman_2_4 ===
 #knot:aman_2_4
 #ui:scene
-#background:bg_aman_bedroom.jpg
-#speaker_left_image:cha_aman_selinder_phone.png
+#background:ui_aman_call.jpg
+#speaker_left_image:cha_aman_selinder.png
 #speaker_left_name:Selinder
 Hi jaan (dear), how are you? What are you doing? #speaker_left
 Just turning in for the night. How about you? #speaker_self
@@ -1149,7 +1153,7 @@ Tsk. I mean, you know la. For us, it’s harder.  #speaker_left
 Turban and all. Not that many roles. #speaker_left
 Is that how you’ve felt all along? Like I’ve been on a wild goose chase? #speaker_self
 No jaan (dear), that’s not what I meant.  #speaker_left
-#speaker_left_image:cha_aman_selinder_concerned_phone.png
+#speaker_left_image:cha_aman_selinder_concerned.png
 Just... that you need to manage your expectations. You can’t be so idealistic. #speaker_left
 So I should give up on my dreams, become a boring accountant, and live a boring average Joe life.   #speaker_self
 Oh wait! I’m not even an average Joe. So below-average Joe life.   #speaker_self
@@ -1171,7 +1175,7 @@ Aman? #speaker_left
 = aman_2_4_sleep
 Babe, thanks for calling, but I think I’ll call it a night. #speaker_self
 Oh. Hmm...  #speaker_left
-#speaker_left_image:cha_aman_selinder_concerned_phone.png
+#speaker_left_image:cha_aman_selinder_concerned.png
 Aman, you’d tell me if anything was bothering you, right?  #speaker_left
 Lately, you’ve felt a little distant. Ever since NS?   #speaker_left
 But maybe I’m just being paranoid.  #speaker_left
@@ -1204,16 +1208,19 @@ But I’m just...me. #inner_monologue
 Taunting Dreams #title
 The dreams kept repeating. Taunting me. Rejecting me. 
 Every night, it was the same dream. I pick up my phone, and there's a message.
-#background:new_message_notification_dream.jpg
-Sorry, you were not selected.
-Client wants a more pan-Asian look.
-Can you shave your beard?
-Would you consider cutting your hair?
-Sorry, looking for a corporate look.
-Actually you have nice features, but can’t really see them.
-Sorry. 
-Sorry. you are not what anybody is looking for in a model.
-Sorry, nobody wants to be you, Aman.
+
+#ui:notification
+#background:ui_aman_message.jpg
+Sorry, you were not selected. # message
+Client wants a more pan-Asian look. # message
+Can you shave your beard? # message
+Would you consider cutting your hair? # message
+Sorry, looking for a corporate look. # message
+Actually you have nice features, but can’t really see them. # message
+Sorry.  # message
+Sorry. you are not what anybody is looking for in a model. # message
+Sorry, nobody wants to be you, Aman. # message
+#ui:narrator
 #background:bg_aman_bedroom.jpg
 I wish the dreams would stop. Maybe I just need one gig.
 
@@ -1234,7 +1241,7 @@ Maybe - maybe if I changed my look? Slick my hair back, and wear it in a ponytai
     I won’t give up. I’ll keep trying, just as I am. #inner_monologue
     #knot:chapter_2_ending_2
     #ending:chapter_2_ending_2
-    ~ chapter_2_ending = 2
+    VAR chapter_2_ending = 2
     VAR aman_2_5_change_look = false
     
     -> aman_2_7_narration
@@ -1250,9 +1257,10 @@ Maybe - maybe if I changed my look? Slick my hair back, and wear it in a ponytai
 Hanging out with Zhihao. #title
 Playing Playstation with Zhihao is like meditation. Clears my mind.
 Nothing can distu...
-#background:new_message_notification.jpg
-Oh, another message! From Claire, the other casting agent!
-I guess she liked the photos I sent!
+
+#ui:notification
+#background:ui_aman_message.jpg
+Claire: Hey Aman! Thanks for sending those photos! # message
 ~ aman_2_5_change_look = true
 #knot:chapter_2_ending_1
 #ending:chapter_2_ending_1
@@ -1361,8 +1369,11 @@ No, I can’t cut. It’s ok, thank you. #speaker_self
 #speaker_right_name:Ma
 What are you looking so down in the dumps about, beta (son) ? #speaker_right
 Nothing, ma. #speaker_self
-#background:new_message_notification.jpg
-Oh...I got one new message. Probably another rejection from another casting agent. #inner_monologue
+Oh...another message... Probably another rejection from another casting agent. #inner_monologue
+#ui:notification
+#background:ui_aman_message.jpg
+UNKNOWN NUMBER # message
+
 -> aman_2_7_whatsapp2
 
 === aman_2_7_whatsapp2 ===
@@ -1485,8 +1496,9 @@ Gawd, you’re such a killjoy. Anyway, I’m going with this
 dress.  #speaker_right
 Thank you for being so unhelpful. #speaker_right
 
-#background:new_message_notification.jpg
-A message! #inner_monologue
+#ui:notification
+#background:ui_aman_message.jpg
+Kristine, casting agent: Congratulations, Aman :) # message
 -> aman_2_8_whatsapp1
 
 === aman_2_8_whatsapp1 ===
@@ -1690,7 +1702,10 @@ Aman, I must say, I’m actually very happy for you. Applied so many times. Fina
 // = aman_3_1_punch
 Na, come and punch la. You do the honours. #speaker_left
 Ain’t gonna veto that... #speaker_self
-#background:new_message_notification.jpg
+#ui:notification
+#background:ui_aman_message.jpg
+Jothi: COME HOME. NOW. # message
+
 -> aman_3_1_whatsapp
 
 
@@ -1702,7 +1717,7 @@ Ain’t gonna veto that... #speaker_self
 #chat_group_image:jothi.jpg
 #speaker_1_name:Jothi
 22.17 #timestamp
-Come home. Now. #speaker_1
+COME HOME. NOW. #speaker_1
 I'm celebrating with my friends! What happened? #speaker_self
 You’re in trouble is what happened. Come home and we talk. #speaker_1
 Ok, I’ll walk Selinder home and head back. #speaker_self

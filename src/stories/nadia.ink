@@ -22,6 +22,10 @@ For cut-and-paste ease
 #speaker_2_name:Eric -> can be left blank
 #timestamp:21.34
 
+#ui:notification
+#background:ui_nadia_message.jpg
+Gavin: help # message
+
 #knot:nadia_2_haircut_no
 #ui:email
 #to:Jeffrey Tan <jeffrey@hotmail.com>
@@ -103,9 +107,9 @@ Can heat up in the ovenette — #speaker_right
 — potato or sardine? #speaker_self
 I think both have. #speaker_right
 #speaker_right_image:pixel.png
-#ui:scene
-#background:new_message_notification.jpg
-It's a message from Gavin!
+#ui:notification
+#background:ui_nadia_message.jpg
+Gavin: help # message
 -> nadia_1_1a
 
 === nadia_1_1a ===
@@ -115,7 +119,7 @@ It's a message from Gavin!
 #chat_group_title:Gavin
 #chat_group_image:ico_nadia_gavin.png
 #speaker_1_name:Gavin
-#timestamp:21.49
+21.49 #timestamp
 help #speaker_1
 this bus is blasting the AC #speaker_1
 is so cold 🥶 🥶 🥶 #speaker_ 
@@ -408,9 +412,9 @@ After all of that PE, I’m starving.
 
 === nadia_1_3 ===
 #knot:nadia_1_3
-#ui:scene
-#background:new_message_notification.jpg
-A message from Gavin!
+#ui:notification
+#background:ui_nadia_message.jpg
+Gavin: Where u at? # message
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Gavin
@@ -436,8 +440,9 @@ Don’t tell me you know him too! #speaker_left
 - The world is blessed. Gimme a min, let me grab some food. #speaker_left
 Go, go.  #speaker_self
 #speaker_left_image:pixel.png
-#background:new_message_notification.jpg
-A message from Azlin
+#ui:notification
+#background:ui_nadia_message.jpg
+Azlin: Nad what time are you gg to be home today? # message
 -> nadia_1_3_whatsapp1
 
 === nadia_1_3_whatsapp1 ===
@@ -1552,8 +1557,11 @@ If you’re not Chinese, you can just swoop right in. Somehow there’s always s
 Chloe, I don’t think it works that way. I have family and older cousins who live in HDBs. I’m pretty sure they don’t have an easy time.    #speaker_self  
 Why am I getting angry? Maybe I need to find an excuse to walk away. #inner_monologue
 #speaker_left_image:pixel.png
-#background:new_message_notification.jpg
-A message from my Abah.
+
+#ui:notification
+#background:ui_nadia_message.jpg
+Abah: Huhu terjumpa (found) photo of Nadia when she was small # message
+
 -> nadia_2_3e_whatsapp
 === nadia_2_3e_whatsapp ===
 #knot:nadia_2_3e_whatsapp
@@ -1599,9 +1607,11 @@ Woah, where did that speech come from? #inner_monologue
 + [Ignore group chat, text Azlin instead.] -> nadia_2_3e2
 
 ===  nadia_2_3e1 ===
-#ui:scene
-#background:new_message_notification.jpg
-A message from Azlin.
+
+#ui:notification
+#background:ui_nadia_message.jpg
+Azlin: Haha kembang (flower) seh # message
+
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Azlin
@@ -1610,7 +1620,7 @@ A message from Azlin.
 Haha kembang seh #speaker_1
 Wait what do you meannn #speaker_self
 kembang, like you know, your head getting all big 🙃 oi i didn’t know your malay was this bad hahaha #speaker_1
-I KNOW what kembang (flower) is, and I’m not okayy 😑 It’s just my dad la, he can be very over #speaker_self
+I KNOW what kembang is, and I’m not okayy 😑 It’s just my dad la, he can be very over #speaker_self
 lol memang. anyway joking only. u really are working for it. #speaker_1
 I hope so.. #speaker_self
 don’t be like that! i really was just teasing a bit. u ok tak? #speaker_1
