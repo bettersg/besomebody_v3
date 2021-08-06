@@ -23,6 +23,9 @@
         "body": "Hurt"
       },
       {
+        "body": "Confused"
+      },
+      {
         "body": "None of the above"
       }
     ]
@@ -87,17 +90,30 @@
     "body": "Which of the situations did you find the most challenging for Nadia?",
     "choices": [
       {
-        "body": "The decision to wear a tudung for the date"
+        "body": "Anticipating Gavin's reactions when he saw her dressed in the hijab"
       },
       {
-        "body": "The conversation with Gavin about cultural norms"
+        "body": "Dealing with Chole's perception that Nadia is advantaged unfairly because of her race"
       },
       {
-        "body": "The discussion with Chloe in the library"
+        "body": "Understanding Azlin's viewpoints and her struggles as a Malay"
+      } 
+    ]
+  },
+  {
+    "id": 7,
+    "type": "MULTI_CHOICE",
+    "body": "What do you think is Nadia's most significant challenge ahead?",
+    "choices": [
+      {
+        "body": "Being comfortable with herself (e.g. donning the hijab)"
       },
       {
-        "body": "The final conversation with Azlin at the playground"
-      }
+        "body": "Change how her peers perceive her and other Malays"
+      },
+      {
+        "body": "Navigating and understanding the experiences of other Malays"
+      } 
     ]
   }
 

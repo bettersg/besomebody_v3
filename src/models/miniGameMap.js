@@ -193,7 +193,7 @@ export const MINI_GAME_MAP = [
           },
           {
             answer_id: 2,
-            title: "No, they can eat from halal-certified eateries or from sources that are Muslim-owned.",
+            title: "No, they can eat from halal-certified eateries /  sources that are Muslim-owned.",
           },
           {
             answer_id: 3,
