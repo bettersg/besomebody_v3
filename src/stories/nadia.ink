@@ -1022,8 +1022,9 @@ That’s ok! What are u up to? #speaker_1
 Um. I’m meeting Gavin. #speaker_self
 Oh chey, bo jio.. Are you two studying without me! #speaker_1
 😳 #speaker_self
-wellllllll #speaker_self
-No way! Omg. It’s a daaaaaaaaaate  🎉✨🎉✨🎉✨ #speaker_1
++ wellllllll [] #speaker_self
++ errr not exactly studying [] #speaker_self
+- No way! Omg. It’s a daaaaaaaaaate  🎉✨🎉✨🎉✨ #speaker_1
 I can’t believe you didn’t tell me!!! #speaker_1
 Sorryyyyyyyy I didn’t know how to #speaker_self
 and what if it isn’t? You know?? #speaker_self
@@ -1040,7 +1041,7 @@ Okok, gimme a min #speaker_self
 bg_nadia_selfiehijab.jpg #speaker_self #image
 + 😎 Rocking it![] #speaker_self
     VAR nadia_2_confidenthijab = true
-    I’m turning up like this. Ok right? #speaker_self
+    I’m turning up like this.  #speaker_self
     Still a cutie!  #speaker_1
     Whew, what a relief 😏  #speaker_self
     Your headscarf colour is so pretty 💛 I think this is the first time I’ve EVER seen you wearing one!!  #speaker_1
@@ -1049,9 +1050,9 @@ bg_nadia_selfiehijab.jpg #speaker_self #image
     #background:bg_nadia_selfiehijab.jpg
     I sure hope so. #inner_monologue
     
-+ 🧐 Like this can?[] #speaker_self 
++ Like this can? 😳 [] #speaker_self 
     ~ nadia_2_confidenthijab = false
-    What do you think? #speaker_self 
+    What do you think? Ok right? #speaker_self 
     Hahaha oh gosh #speaker_1
     !! #speaker_self 
     No no you still look super cute! Just forgot that you wear a headscarf these days (?) #speaker_1
@@ -1105,8 +1106,11 @@ Hahaha... Ok ok, I’m done with this.	#speaker_self
 You really do look nice by the way. #speaker_left
 Yeah? I was a bit worried. #speaker_self
 About what?	#speaker_left
-That I look.. different today, than how I would in school?	#speaker_self
-True. I don’t think it’s a big deal. #speaker_left
++ That I look.. different today, than how I would in school?[]	#speaker_self
+    Do you really? 	#speaker_left
++ That... you would feel weird seeing me like this?[]	#speaker_self
+    Let me check, do I feel weird? Nah - no weird feels. 	#speaker_left
+- I don’t think it’s a big deal. #speaker_left
 Hmmm... Really? #speaker_self
 Hahaha... Ok fine, but that’s just because I was a bit surprised. #speaker_left
 I didn’t know you wear a.. tudung outside of school. #speaker_left
@@ -1150,8 +1154,10 @@ I just looked for the shortest, most energetic person walking towards me. That, 
 Wah, your negging is not subtle. 	#speaker_self
 But seriously though, is everything ok with you? You seemed a little off when we said hi. #speaker_left
 Oh, it’s just, you know... #speaker_self
-I’m wearing my hijab and it’s best not to be seen hugging when I have it on. 	#speaker_self
-Ah! Noted. My bad. I will keep five steps apart from you at all times. #speaker_left
++ I’m wearing my tudung and it’s best not to be seen hugging when I have it on. []	#speaker_self
++ I guess I’m a bit more conscious about physical contact [] #speaker_self
+    esp when I’m wearing my tudung and we’re not in school  #speaker_self
+- Ah! Noted. My bad. I will keep five steps apart from you at all times. #speaker_left
 Wow. There’s no need to be that extreme. 	#speaker_self
 I mean, I will try my best but you know, coffee tables are closer than that. #speaker_left
 Righttt. So, this really doesn’t bother you? 	#speaker_self
@@ -1268,6 +1274,7 @@ Well.. I hope not.	#speaker_left
 (smiles) Ok. I don’t hate ALL new feelings. #speaker_self
 (beams) Good. Can’t believe we bumped into your cousin. Are you sure she’s not stalking us? 	#speaker_left
 + [Let's hide - just you and me]
+    VAR nadia_2_hidewithgavin = true
     I wouldn’t put it past her. How about we go hide somewhere? #speaker_self
     Do you still want coffee? 	#speaker_left
     Ooh I don’t know. How caffeinated do we want to be? #speaker_self
@@ -1284,6 +1291,7 @@ Well.. I hope not.	#speaker_left
     -> nadia_2_3_narration
 
 + [No clue!]
+    ~ nadia_2_hidewithgavin = false
     I hope not! #speaker_self
     Do you still want coffee?  #speaker_left
     Not if it means we’re going to be walking around this mall looking for the place, haha.  #speaker_self
@@ -1298,6 +1306,11 @@ Well.. I hope not.	#speaker_left
     -> nadia_2_3_narration
 
 === nadia_2_3_narration ===
+#knot:nadia_2_minigame
+#ui:mcq
+#game_id:3
+Minigame 3 // must add some text
+
 #knot:nadia_2_3_narration
 #ui:narrator
 #background:bg_nadia_library.jpg
@@ -1360,7 +1373,7 @@ I know right! My mum is convinced that it’s the route to go for.  #speaker_lef
 +[What do you think?] -> nadia_2_3b
 
 = nadia_2_3a
-Why is she so fixed on scholarships though? But is it though? #speaker_self
+Why is she so fixed on scholarships though?  #speaker_self
 Well, all her friends keep talking about it too I guess.  #speaker_left
 They have kids our age, in other JCs or already on scholarships. #speaker_left
 It’s so weird how parents gossip!! #speaker_self
@@ -1492,7 +1505,7 @@ A message from my Abah.
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Family Chatgroup
-#chat_group_image:ico_nadia_rahman.png
+#chat_group_image:ico_nadia_family.png
 #speaker_1_name:Abah
 Huhu terjumpa (found) photo of Nadia when she was small 🌱👶🐛🦋 #speaker_1
 bg_nadia_childdoctor.jpg #speaker_1 #image
@@ -1561,6 +1574,11 @@ Why am I getting angry? Maybe I need to find an excuse to walk away. #inner_mono
 #ui:notification
 #background:ui_nadia_message.jpg
 Abah: Huhu terjumpa (found) photo of Nadia when she was small # message
+#ui:scene
+#background:bg_nadia_library.jpg
+#speaker_left_image:nadia_chloe_school_concerned.png
+#speaker_left_name:Chloe
+Anyway, I need to take this. #speaker_self
 
 -> nadia_2_3e_whatsapp
 === nadia_2_3e_whatsapp ===
@@ -1568,18 +1586,14 @@ Abah: Huhu terjumpa (found) photo of Nadia when she was small # message
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Family Chatgroup
-#chat_group_image:ico_nadia_rahman.png
+#chat_group_image:ico_nadia_family.png
 #speaker_1_name:Abah
 Huhu terjumpa (found) photo of Nadia when she was small 🌱👶🐛🦋 #speaker_1
-#ui:scene
-#background:bg_nadia_library.jpg
-#speaker_left_image:nadia_chloe_school_concerned.png
-#speaker_left_name:Chloe
-Anyway, I need to take this. #speaker_self
+
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Abah
-#chat_group_image:ico_nadia_rahman.png
+#chat_group_image:ico_nadia_family.png
 #speaker_1_name:Abah
 #speaker_2_name:Azlin
 #speaker_3_name:Cik Lina (aunt)
