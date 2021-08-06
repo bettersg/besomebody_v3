@@ -1349,7 +1349,7 @@ Ok fine, fine. Then you come down here la! #speaker_self
 10 minutes later
 #ui:scene
 #background:bg_nadia_library.jpg
-#speaker_left_image:nadia_chloe_school_concerned.png
+#speaker_left_image:cha_nadia_chloe_school_concerned.png
 #speaker_left_name:Chloe
 So.. how was date-day? #speaker_left
 Kinda the same, kinda really different.. Did you see this coming? #speaker_self
@@ -1458,7 +1458,7 @@ Making life more difficult for ourselves. #speaker_left
 === nadia_2_3c ===
 #ui:scene
 #background:bg_nadia_library.jpg
-#speaker_left_image:nadia_chloe_school_sad.png
+#speaker_left_image:cha_nadia_chloe_school_sad.png
 #speaker_left_name:Chloe
 Gee, thanks. Well.. scholarships are competitive, but so are you! Your essays are laser sharp.  #speaker_self
 It’s not enough. Just wish I had a bit of an advantage.. Anyway, you won’t understand.  #speaker_left
@@ -1495,9 +1495,10 @@ Yeah. I’m sure you’ll be fine.  #speaker_self
 Oops, I have to go home early.  #speaker_self
 My dad just texted, says he needs me for something. You’re ok right? #speaker_self
 Yeah, sure...  #speaker_left
-#speaker_left_image:pixel.png
-#background:new_message_notification.jpg
-A message from my Abah.
+#ui:notification
+#background:ui_nadia_message.jpg
+Abah: Huhu terjumpa (found) photo of Nadia when she was small # message
+
 -> nadia_2_3d_whatsapp
 
 === nadia_2_3d_whatsapp ===
@@ -1581,6 +1582,7 @@ Abah: Huhu terjumpa (found) photo of Nadia when she was small # message
 Anyway, I need to take this. #speaker_self
 
 -> nadia_2_3e_whatsapp
+
 === nadia_2_3e_whatsapp ===
 #knot:nadia_2_3e_whatsapp
 #ui:whatsapp
@@ -1589,15 +1591,6 @@ Anyway, I need to take this. #speaker_self
 #chat_group_image:ico_nadia_family.png
 #speaker_1_name:Abah
 Huhu terjumpa (found) photo of Nadia when she was small 🌱👶🐛🦋 #speaker_1
-
-#ui:whatsapp
-#background:whatsapp.png
-#chat_group_title:Abah
-#chat_group_image:ico_nadia_family.png
-#speaker_1_name:Abah
-#speaker_2_name:Azlin
-#speaker_3_name:Cik Lina (aunt)
-#speaker_4_name:Raihan (cousin)
 bg_nadia_childdoctor.jpg #speaker_1 #image
 Haha so serious this girl #speaker_2
 From young my girl already have ambition! Study hard and achieve your dreams. 🤲  #speaker_1
@@ -1610,7 +1603,7 @@ Woah, where did that speech come from? #inner_monologue
 + [Reply to the group chat and thank your dad] 
     #ui:whatsapp
     #background:whatsapp.png
-    #chat_group_title:Abah
+    #chat_group_title:Family Chatgroup
     #chat_group_image:ico_nadia_family.png
     #speaker_1_name:Abah
     #speaker_2_name:Azlin
@@ -1618,7 +1611,7 @@ Woah, where did that speech come from? #inner_monologue
     #speaker_4_name:Raihan (cousin)
     Thank you Abah. I will try my best 🙏 #speaker_self
     -> nadia_2_3e1
-+ [Ignore group chat, text Azlin instead.] -> nadia_2_3e2
++ [Ignore group chat, chat with Azlin instead.] -> nadia_2_3e2
 
 ===  nadia_2_3e1 ===
 
@@ -1631,7 +1624,7 @@ Azlin: Haha kembang (flower) seh # message
 #chat_group_title:Azlin
 #chat_group_image:ico_nadia_azlin.png
 #speaker_1_name:Azlin
-Haha kembang seh #speaker_1
+Haha kembang (flower blooming) seh #speaker_1
 Wait what do you meannn #speaker_self
 kembang, like you know, your head getting all big 🙃 oi i didn’t know your malay was this bad hahaha #speaker_1
 I KNOW what kembang is, and I’m not okayy 😑 It’s just my dad la, he can be very over #speaker_self
