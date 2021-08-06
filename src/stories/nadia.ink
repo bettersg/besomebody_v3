@@ -1505,7 +1505,7 @@ A message from my Abah.
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Family Chatgroup
-#chat_group_image:ico_nadia_rahman.png
+#chat_group_image:ico_nadia_family.png
 #speaker_1_name:Abah
 Huhu terjumpa (found) photo of Nadia when she was small 🌱👶🐛🦋 #speaker_1
 bg_nadia_childdoctor.jpg #speaker_1 #image
@@ -1574,6 +1574,11 @@ Why am I getting angry? Maybe I need to find an excuse to walk away. #inner_mono
 #ui:notification
 #background:ui_nadia_message.jpg
 Abah: Huhu terjumpa (found) photo of Nadia when she was small # message
+#ui:scene
+#background:bg_nadia_library.jpg
+#speaker_left_image:nadia_chloe_school_concerned.png
+#speaker_left_name:Chloe
+Anyway, I need to take this. #speaker_self
 
 -> nadia_2_3e_whatsapp
 === nadia_2_3e_whatsapp ===
@@ -1581,18 +1586,14 @@ Abah: Huhu terjumpa (found) photo of Nadia when she was small # message
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Family Chatgroup
-#chat_group_image:ico_nadia_rahman.png
+#chat_group_image:ico_nadia_family.png
 #speaker_1_name:Abah
 Huhu terjumpa (found) photo of Nadia when she was small 🌱👶🐛🦋 #speaker_1
-#ui:scene
-#background:bg_nadia_library.jpg
-#speaker_left_image:nadia_chloe_school_concerned.png
-#speaker_left_name:Chloe
-Anyway, I need to take this. #speaker_self
+
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Abah
-#chat_group_image:ico_nadia_rahman.png
+#chat_group_image:ico_nadia_family.png
 #speaker_1_name:Abah
 #speaker_2_name:Azlin
 #speaker_3_name:Cik Lina (aunt)

@@ -29,6 +29,7 @@
     &__messages {
         scroll-snap-type: y mandatory;
         overflow-y: scroll;
+        user-select: none;
         // height: 100vh; 
         height: calc(calc(var(--vh, 1vh) * 100) - 148px); 
         @media screen and (min-device-width:600px) {
@@ -130,6 +131,7 @@
         .choices {
             border-radius: 12px;
             margin: 10px; 
+            user-select: none;
             padding: 13px 20px;
             text-align: center;
             background-color: $aqua1;
