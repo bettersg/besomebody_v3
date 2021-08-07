@@ -1180,7 +1180,7 @@ Eh...did I say left or right just now? Maybe we missed the turn... #speaker_left
 #background:bg_nadia_mall.jpg
 #speaker_left_image:cha_nadia_gavin_casual_normal.png
 #speaker_left_name:Gavin
-#speaker_right_image:cha_nadia_azlin.png 
+#speaker_right_image:cha_nadia_azlin_normal.png 
 #speaker_right_name:Azlin
 This mall is such a maze. Where on earth is that cafe? #inner_monologue
 Wait a minute. Is someone calling my name? #inner_monologue
@@ -1199,6 +1199,7 @@ I’ll never hear the end of this.  #inner_monologue
 K, just be steady... let me first salam her (traditional Muslim greeting)...  #inner_monologue
 Oh dear. What is Gavin doing? #inner_monologue
 ...ah. #speaker_self
+#speaker_right_image:cha_nadia_azlin_confused.png 
 #speaker_left_image:cha_nadia_gavin_casual_nervous.png
 What? #speaker_left
 Haha, it’s okay. #speaker_right
@@ -1207,12 +1208,13 @@ Hi kak, this is Gavin.	#speaker_self
 Hi Gavin...	#speaker_right
 PLEASE do not say “I’ve heard so much about you.”	#inner_monologue
 #speaker_left_image:cha_nadia_gavin_casual_normal.png
+#speaker_right_image:cha_nadia_azlin_happy.png 
 ...nice to meet you! #speaker_right
 Oh thank goodness. Thank you Azlin. #inner_monologue
 What are you guys doing here?	#speaker_right
 We’re going to grab coffee.. There’s this halal cafe that just opened up.	#speaker_left
 Yes, and Gavin’s suggestion actually! #speaker_self
-#speaker_right_image:cha_nadia_azlin_naughty.png
+#speaker_right_image:cha_nadia_azlin_teasing.png
 Oh really? I thought you were more of a tea person, Nad.	#speaker_right
 #speaker_left_image:cha_nadia_gavin_casual_concerned.png
 huh?	#speaker_left
@@ -1232,10 +1234,12 @@ huh?	#speaker_left
     That’s her usual order. At school.	#speaker_left
 - Haha ok ok, just teasing only.	#speaker_right
 Gee, thanks. #speaker_self
+#speaker_right_image:cha_nadia_azlin_happy.png 
 You’re welcome! Ok, I’ll get to my errands now. Text me later!	#speaker_right
 We’re in the clear! Oh no, Gavin is trying to salam her again... #inner_monologue
 That’s right Azlin, just ignore and walk away. #inner_monologue
 Did I miss something?	#speaker_left
+#speaker_right_image:pixel.png 
 Sorry about that. The salam thing - er, you don’t have to salam Azlin. #speaker_self
 You don’t do that when you’re a guy and she’s...	#speaker_self
 Wow. I am tripping up today.	#speaker_left
@@ -1693,7 +1697,7 @@ This has been our hangour spot for ages, ever since Azlin moved into the same ne
 #knot:nadia_2_4
 #ui:scene
 #background:bg_nadia_playgroundnight.jpg
-#speaker_right_image:cha_nadia_azlin.png
+#speaker_right_image:cha_nadia_azlin_normal.png
 #speaker_right_name:Azlin
 So.. are you sure this is not about Gavin? #speaker_right
 No, it’s really not. #speaker_self
