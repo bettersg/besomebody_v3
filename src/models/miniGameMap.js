@@ -182,7 +182,7 @@ export const MINI_GAME_MAP = [
       {
         question_id: 2,
         question: "Can Muslims only eat from halal-certified eateries?",
-        correctAnswer: "No, they can eat from halal-certified eateries or from sources that are Muslim-owned.",
+        correctAnswer: "No, they can eat from halal-certified eateries /  sources that are Muslim-owned.",
         explanation:
           "Some small businesses owned by Muslims (e.g. home-based businesses) are not halal-certified, but will follow Muslim practices and therefore Muslims can eat from them too.",
         type: "text",
