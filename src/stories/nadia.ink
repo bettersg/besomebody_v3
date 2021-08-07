@@ -1153,10 +1153,12 @@ Easy to spot how? 	#speaker_self
 I just looked for the shortest, most energetic person walking towards me. That, and that tatty bag of yours. #speaker_left
 Wah, your negging is not subtle. 	#speaker_self
 But seriously though, is everything ok with you? You seemed a little off when we said hi. #speaker_left
-Oh, it’s just, you know... #speaker_self
-+ I’m wearing my tudung and it’s best not to be seen hugging when I have it on. []	#speaker_self
-+ I guess I’m a bit more conscious about physical contact [] #speaker_self
-    esp when I’m wearing my tudung and we’re not in school  #speaker_self
++ [We’d better not hug in public.] 
+    Oh, it’s just, you know. I’m wearing my tudung and it’s best not to be seen hugging when I have it on.	#speaker_self
++ [Everything’s fine.] 
+    It’s all good. #speaker_self
+    Are you sure? #speaker_left
+    Just a bit more conscious about physical contact when I’m in my tudung.  #speaker_self
 - Ah! Noted. My bad. I will keep five steps apart from you at all times. #speaker_left
 Wow. There’s no need to be that extreme. 	#speaker_self
 I mean, I will try my best but you know, coffee tables are closer than that. #speaker_left
@@ -1214,13 +1216,21 @@ Yes, and Gavin’s suggestion actually! #speaker_self
 Oh really? I thought you were more of a tea person, Nad.	#speaker_right
 #speaker_left_image:cha_nadia_gavin_casual_concerned.png
 huh?	#speaker_left
-uh... I mean, I drink tea at home cos it’s there, but I do like.. Coffee.. At cafes.	#speaker_self
-Ooh, fancy. No kopitiam kopi for you? #speaker_right
-#speaker_left_image:cha_nadia_gavin_casual_normal.png
-Kopi po siew dai. #speaker_left
-Hmm? #speaker_right
-That’s her usual order. At school.	#speaker_left
-Haha ok ok, just teasing only.	#speaker_right
++ [I like tea]
+    I mean, I drink tea at home, but...  #speaker_self
+    Oh! Er, we can have te --	#speaker_left
+    No, I like coffee too..!  #speaker_self
+    #speaker_left_image:cha_nadia_gavin_casual_normal.png
+    No I mean, I know you like tea, that’s why I chose this cafe, it serves really good tea...	#speaker_left
++ [I like coffee]
+    I like coffee! Coffee is good. Coffee at cafes. #speaker_self
+    What am I babbling about? This is so embarrassing. #inner_monologue
+    Only fancy cafes, huh?  No kopitiam kopi for you? #speaker_right
+    #speaker_left_image:cha_nadia_gavin_casual_normal.png
+    Kopi po siew dai. #speaker_left
+    Hmm? #speaker_right
+    That’s her usual order. At school.	#speaker_left
+- Haha ok ok, just teasing only.	#speaker_right
 Gee, thanks. #speaker_self
 You’re welcome! Ok, I’ll get to my errands now. Text me later!	#speaker_right
 We’re in the clear! Oh no, Gavin is trying to salam her again... #inner_monologue
@@ -1231,11 +1241,13 @@ You don’t do that when you’re a guy and she’s...	#speaker_self
 Wow. I am tripping up today.	#speaker_left
 It’s fine, she was definitely more kaypoh to meet you. It’s nothing offensive or rude. #speaker_self
 How come there are so many invisible rules?	#speaker_left
-I wouldn’t say rules...	#speaker_self
-Ok, not rules.	#speaker_left
-Cultural... customs. Habits. Adat, which means behaviour of.. being polite.	#speaker_self
-Social protocol. #speaker_left
-Courtesy. #speaker_self
++ [Not "rules"]
+    I wouldn’t say rules...	#speaker_self
+    Ok, not rules.	#speaker_left
++ [It's culture]
+    Cultural... customs. Habits. Adat, which means behaviour of.. being polite.	#speaker_self
+    Social protocol. #speaker_left
+- Courtesy. #speaker_self
 Code of conduct. #speaker_left
 Ugh why must you make everything sound so formal?	#speaker_self
 #speaker_left_image:cha_nadia_gavin_casual_concerned.png
@@ -1259,9 +1271,12 @@ Oof, let’s save that for another day. #speaker_self
 Agreed. I’m sorry things got weird.	#speaker_left
 It’s ok, I’m the one who got a bit..	#speaker_self
 Snarky?	#speaker_left
-Yes, that. I got defensive. #speaker_self
-And I wasn’t criticising your.. culture.	#speaker_left
-Anyway these things, it’s sort of - no need to say one. It’s just how we are around family. 	#speaker_self
++ [Yes, that]
+    Yes, that. I got defensive. #speaker_self
++ [Who, me?]
+    Let's go with "indignant." #speaker_self
+- It's fine. And I hope you know I wasn’t criticising your.. culture.	#speaker_left
+Oh these things, it’s sort of - no need to say one. It’s just how we are around family. 	#speaker_self
 You grow up with it. So when you were so confused by it, and suddenly I have to explain things that usually no need to say.. it rattled me, actually.	#speaker_self
 I feel like an idiot saying this. But maybe only just now did I realise: eh, we really are very different. 	#speaker_self
 Haha so I was kinda right, you really did just realise I’m Chinese. #speaker_left
@@ -1340,10 +1355,14 @@ idkkkkkkk I don’t even feel like studying anymore #speaker_1
 You take your time la. I brought snacks, if that helps... #speaker_self
 I don’t know. Maybe I’m being dramatic. #speaker_1
 You want to talk about it? #speaker_self
-Maybe not now. I think.. I’d rather hear about your date  👀👫 #speaker_1
-Ah! Haha yes, um it was nice. Normal.  #speaker_self
-Wow, please hold back on the details!! 😂 #speaker_1
-Ok fine, fine. Then you come down here la! #speaker_self
+Maybe not now. I think.. I’d rather hear about your date  👀👫  #speaker_1
++ [It was nice]
+    Ah! Haha yes, um it was nice.  #speaker_self
+    Wow, please hold back on the details!! 😂  #speaker_1
++ [It was okay]
+    Oh uhhh. It was fine! Normal la.  #speaker_self
+    omg, telll me moreee #speaker_1
+- Ok fine, fine. Then you come down here la! #speaker_self
 #ui:narrator
 #background:bg_nadia_library.jpg
 10 minutes later
@@ -1414,9 +1433,12 @@ Ya! Not that I like it, but it’s the game, and you gotta make smart moves.  #s
 (Doubtfully) Ok, assuming you’re right.. why do you think you’re not in the game anymore? #speaker_self
 So I was talking to the HOD just now about the scholarship I’m applying for. You know he’s the super honest type. No bullshit.  #speaker_left
 Said that based on his past students and how they did.. I don’t have enough on my track record. #speaker_left
-Woah, he really said that?! #speaker_self
-Ya something along the lines of ‘showcase self-initiated community projects with impact’.  #speaker_left
-Maybe I shouldn’t have spent all my time with hockey. Should have joined student council like you and Gavin.. #speaker_left
++ Woah, he really said that ?![] #speaker_self
+    Ya something along the lines of ‘showcase self-initiated community projects with impact’.  #speaker_left
++ [He's wrong!] 
+    But you have a great record! What about hockey, and...and...  #speaker_self
+    Ya exactly, hockey and what? I don’t have any ‘service to the community’ type of thing to talk about. #speaker_left
+-  I shouldn’t have spent all my time with hockey. Should have joined student council like you and Gavin.. #speaker_left
 But you LOVE hockey. And you think student council people are annoying and idealistic.  #speaker_self
 Correction - everyone else, aside from you and Gavin. #speaker_left
 -> nadia_2_3c
@@ -1440,10 +1462,12 @@ You think so?  #speaker_self
 Yeah, sure. It is pricey though, I heard it’s like three times more than other degrees. #speaker_left
 Three?? #speaker_self
 Oh boy, and you’re also going to be doing more years in school too. The unis have scholarships too, you can try for that?  #speaker_left
-I’ll look it up. #speaker_self
-And financial assistance, I think.  #speaker_left
-Right, that too.  #speaker_self
-You know, and if somehow med school doesn’t work out.. I mean, they shortlist more than 1,000 applicants, then only offer less than 300 spots.  #speaker_left
++ I'll look into it. [] #speaker_self
+    And financial assistance, I think.  #speaker_left
+    Right, that too.  #speaker_self
++ [Sounds competetive] Getting a scholarship on top of getting into med school? Sounds impossible... #speaker_self
+    Oh if not scholarship, I think there’s financial assistance too. #speaker_left
+- You know, and if somehow med school doesn’t work out.. I mean, they shortlist more than 1,000 applicants, then only offer less than 300 spots.  #speaker_left
 There’s always.. nursing? #speaker_left
 That’s not the same thing. #inner_monologue
 Isn’t your cousin in nursing? That’s good right? #speaker_left
@@ -1474,7 +1498,7 @@ VAR nadia_2_confrontchloe = false
 Right. #speaker_self
 Argh it’s so unfair. You fill the "quota", you know?  #speaker_left
 No, I don’t know, Chloe. #inner_monologue
-It's like HDB quotas, somehow there's always space for Malay or Indian. You're so lucky you're Malay. Anyway. I’ll figure it out.   #speaker_left
+It's like HDB quotas, somehow there's always space for Malay or Indian. You're so lucky you're Malay.    #speaker_left
 That’s not how things work.. right?? #inner_monologue
 // #speaker_left_image:pixel.png
 // #background:new_message_notification.jpg
@@ -1661,7 +1685,7 @@ fuyoo. k, text you later? usual spot. #speaker_1
 #ui:narrator
 #background:bg_nadia_playgroundnight.jpg
 8.45pm, at a playground bench. 
-This is where we always meet, ever since Azlin moved into the same neighbourhood as me.
+This has been our hangour spot for ages, ever since Azlin moved into the same neighbourhood as me.
 
 -> nadia_2_4
 
@@ -1687,7 +1711,7 @@ You’re right. I need to unclench. I wanted to talk to you about... #speaker_se
 === nadia_2_4a ===
 #ui:scene
 #background:bg_nadia_playgroundnight.jpg
-#speaker_right_image:cha_nadia_azlin.png
+#speaker_right_image:cha_nadia_azlin_normal.png
 #speaker_right_name:Azlin
 VAR chapter_2_ending = 1
 ..what Chloe said. Like it doesn’t even make sense!  #speaker_self
@@ -1704,9 +1728,11 @@ It is, right? #speaker_self
 Ya it is. I’m sorry Nad, but your friend - does she even live in the real world? Nonsense seh! #speaker_right
 That’s what I couldn’t believe! She’s so level-headed, reasonable, I didn’t think she was so - #speaker_self
 - sheltered?  #speaker_right
-Not that. I didn’t think.. she would see race. Like we’re such good friends.  #speaker_self
-She knows we both work super hard to get where we are. How can she think I have it easier?  #speaker_self
-Does she also think we don’t have to pay school fees? Or that we get special treatment? #speaker_right
++ [I didn’t think she would see race.]
+    Not that. I didn’t think.. she would see race. And I’m thinking: is this how she’s seen me all along? #speaker_self
++ [I thought we were better friends than this.]
+    No, it’s just.. we’re such good friends. She knows we both work super hard to get where we are. How can she think I have it easier?  #speaker_self
+- Does she also think we don’t have to pay school fees? Or that we get special treatment? #speaker_right
 Do people still think that!  #speaker_self
 I was digging around before I did my nursing diploma. Betul ke? What is this that people who are never Malay always like to say? #speaker_right
 Isn’t it just one of those things taxi uncles like to complain about.  #speaker_self
@@ -1717,6 +1743,7 @@ How come we get subsidy? #speaker_self
 I know kan. Asked myself that also, and then I saw the max household income if you nak qualify. You know how much? $2000.  #speaker_right
 That’s not - #speaker_self
 - ya, is not a lot. Like if you qualify kan, that means there wasn’t money floating around to anyhow get a diploma.   #speaker_right
+#speaker_right_image:cha_nadia_azlin_concerned.png
 But still.. why this special subsidy? And just for us? Because we’re what, native to Singapore? #speaker_self
 No, Nadia. Because more of us, more Malay people, are poor.  #speaker_right
 (Confused) That isn’t - I don’t think.. But we’re not poor because we’re Malay. #speaker_self
@@ -1729,14 +1756,18 @@ It’s all the stories, with the money problems, the drug problems. Then, when t
 They shout it out to the whole kampong. Look what this person managed to do! You can do it too!! #speaker_right
 You managed also though. That says something kan? Put in the effort, work hard, and things get better.  #speaker_self
 We’re all trying. It’s nothing special.  #speaker_right
-Maybe other people don’t want to try hard enough.  #speaker_self
-What? #speaker_right
-Why are so many of us poor, until government give us special treatment? How come?  #speaker_self
-I don’t know. But once you’re not doing well, with money problems, it’s harder to get out.  #speaker_right
++ [Maybe some aren't trying hard enough]
+    Maybe some people don’t want to try hard enough.  #speaker_self
+    What? #speaker_right
+    Why are so many of us poor, until government give us special treatment? How come?  #speaker_self
++ [Then why are outcomes different?]
+    If we’re all trying, then why are so many of us still poor?  #speaker_self
+- I don’t know. But once you’re not doing well, with money problems, it’s harder to get out.  #speaker_right
 But it’s also personal decisions, right? Maybe it’s other people and their decision-making that’s.. not good.  #speaker_self
 Maybe always living beyond their means. Maybe a lot of them don’t know how to be responsible.  #speaker_self
-(Getting pissed) Who are you talking about? #speaker_right
-No one.. But you know, Cik Lina’s family - I know they have money problems, but when I see them, phones all macam baru je. #speaker_self
+#speaker_right_image:cha_nadia_azlin_angry.png
+Who are you talking about? #speaker_right
+No one.. But you know, Cik Lina’s family - I know they have money problems, but when I see them, phones all macam baru (quite new) je. #speaker_self
 New phones, different models.  #speaker_self
 That’s not our business, Nad.  #speaker_right
 But it’s true though! Every Hari Raya also must change curtains.  #speaker_self
@@ -1753,17 +1784,22 @@ I’m not, but that’s also why I’m not spending money anyhow.  #speaker_self
 And your coffee latte or bubble tea all whatever, that one come from where? Pocket money from your abah kan.  #speaker_right
 School fees? Next year when you go uni? #speaker_right
 I can take my own bank loan - #speaker_self
-- but you don’t have to. That’s the difference. They have “new” phones, but at home no internet. You know how difficult that makes school and work?  #speaker_right
-I know my family has it easier. #speaker_self
-Your family can afford to make decisions easier. You don’t have to calculate many small decisions just to make one big one.  #speaker_right
-You don’t think I want to get a degree like you? I see my colleagues, they all can climb higher with degree.  #speaker_right
+... but you don’t have to. That’s the difference. They have “new” phones, but at home no internet. You know how difficult that makes school and work?  #speaker_right
++ [I get it]
+    Okay, I get it. #speaker_self
+    Oh, really? You do? #speaker_right
++ [I know my family has it easier.] 
+    I know things are.. easier for my family. #speaker_self
+    Your family can afford to make decisions easier. You don’t have to calculate many small decisions just to make one big one.  #speaker_right
+- You don’t think I want to get a degree like you? I see my colleagues, they all can climb higher with degree.  #speaker_right
 You thinking of doing degree next time? #speaker_self
 How to? Now my income finally dah stable, if I go back to nursing school - who’s going to pay the house bills?  #speaker_right
 See how that works? Because I’m being responsible, right? #speaker_right
 Kak..  #speaker_self
+#speaker_right_image:cha_nadia_azlin_confused.png
 When you don’t have much, it is so much more difficult to step up.  #speaker_right
 Kak, I understand - #speaker_self
-- no, just because you’re Malay doesn’t mean you understand. You and your father, always thinking you’re so different from the rest of us. #speaker_right
+... no, just because you’re Malay doesn’t mean you understand. You and your father, always thinking you’re so different from the rest of us. #speaker_right
 I don’t think I’m different.. #speaker_self
 Sorry - not different. You think you’re better than the rest of us.  #speaker_right
 That’s not true! #speaker_self
@@ -1774,7 +1810,7 @@ Maybe. I’m gonna go. I’ll see you around.  #speaker_right
 === nadia_2_4b ===
 #ui:scene
 #background:bg_nadia_playgroundnight.jpg
-#speaker_right_image:cha_nadia_azlin.png
+#speaker_right_image:cha_nadia_azlin_normal.png
 #speaker_right_name:Azlin
 ~ chapter_2_ending = 2
 ..what my dad said. He really open mouth only.  #speaker_self
@@ -1790,6 +1826,7 @@ Maybe in her time. #speaker_self
 But it’s not anymore. I like my work. I don’t want to be just a housewife.   #speaker_right
 Although right, yesterday, I almost told her about this patient. Problem seh! Everything busy already, then want to create trouble.   #speaker_right
 What happened? #speaker_self
+#speaker_right_image:cha_nadia_azlin_concerned.png
 Wanted to change nurses. Patient didn’t want my colleague to touch her. Because my colleague Indian.   #speaker_right
 What! And you had to follow the request? #speaker_self
 Ya la, patient still need medical care. I had to step in just to get the job done.   #speaker_right
@@ -1800,15 +1837,23 @@ She was telling me... get this. She was telling me it is easier for me to get in
 Uni applications, scholarships. Because I’m Malay. That there’s some magic quota I help fill.  #speaker_self
 People still think that way? All through poly I heard that. At least she told you to your face.   #speaker_right
 In my time, everyone just paggro whisper behind my back. And when you do well, people low-key surprised.    #speaker_right
-Sounds like my Maths teacher. Saying I’m good at the subject. “Very rare,” she said. How you tahan like that?  #speaker_self
-You just hold your breath and smile. Shield up. Ignore their nonsense. Waste time only to get so worked up.   #speaker_right
-But so geram! For Chloe to think I will have an easier time, that she has to work harder than me - when every day, I feel a bit... lost.  #speaker_self
-Gavin and Chloe all have family and friends who went through JC, scholarships, uni. They know what’s coming up. I don’t, not really.  #speaker_self
-Sorry I can’t help there.   #speaker_right
-I don’t mean it that way! Without you around, I would feel even more alone.  #speaker_self
-With all the stories from your work, at least I know I’m not really imagining things.  #speaker_self
-It’s funny right. You can work harder than everyone else, but you slip up one time, or giving yourself a break, and in front of the wrong person -  #speaker_right
-- they will think it’s because she’s lazy, or not very smart.  #speaker_self
+Sounds like my Maths teacher. Saying I’m good at the subject. “Very rare,” she said.   #speaker_self
++ How you tahan (tolerate) this kind of thing? [] #speaker_self
+    You just hold your breath and smile. Shield up. Ignore their nonsense. Waste time only to get so worked up.   #speaker_right
+    But so geram (angry)! For Chloe to think I will have an easier time, that she has to work harder than me - when every day, I feel a bit... lost.  #speaker_self
+    Gavin and Chloe all have family and friends who went through JC, scholarships, uni. They know what’s coming up. I don’t, not really.  #speaker_self
+    Sorry I can’t help there.   #speaker_right
+    I don’t mean it that way! Without you around, I would feel even more alone.  #speaker_self
+    With all the stories from your work, at least I know I’m not really imagining things.  #speaker_self
++ [What should I do?]
+    But that’s my Maths teacher. Chloe is my friend. I didn’t expect this from her.  #speaker_self
+    Now I don’t know what to do about it. Should I talk to her about it more? #speaker_self
+    Uh, that one you decide. I wouldn’t bother.   #speaker_right
+    Sorry, I know she’s your friend, I’m just not surprised.  #speaker_right
+    No you’re right, I’ll have to think about it on my own.  #speaker_self
+    I’m just glad you’re here or I would feel even more alone. With all the stories from your work, at least I know I’m not imagining things. #speaker_self
+- It’s funny right. You can work harder than everyone else, but you slip up one time, or giving yourself a break, and in front of the wrong person -  #speaker_right
+... they will think it’s because she’s lazy, or not very smart.  #speaker_self
 Because she’s Malay.   #speaker_right
 Gavin told me some time ago.. He told his mum I hadn’t been in school and she said, “wah JC still can like that?”  #speaker_self
 Her first thought was that I was anyhow skipping classes, not that I was sick.  #speaker_self
@@ -1821,11 +1866,17 @@ Clearly has not met you.   #speaker_right
 I don’t even want to think about it. Or whatever Chloe might actually think of me.  #speaker_self
 What were you guys fighting about?  #speaker_right
 Well, it wasn’t really a fight-fight. I just left the conversation halfway. I felt so uneasy about it.  #speaker_self
-..are there really HDB racial quotas? #speaker_self
-Wow you JC kids really think far ahead ah.  #speaker_right
-No, no way, not like that. It’s Chloe, she said I can get the scholarship easier just like how Malays get HDB ballots easier.  #speaker_self
-Is that true? But Cik Lina had a hard time when she was applying for a flat.  #speaker_self
-It’s hard for everyone la. People always think just because there’s a quota to buy a flat, that means we can always get any flat.   #speaker_right
++ ..are there really HDB racial quotas? []  #speaker_self 
+    #speaker_right_image:cha_nadia_azlin_teasing.png
+    Wow you JC kids really think far ahead ah.  #speaker_right
+    No, no way, not like that. It’s Chloe, she said I can get the scholarship easier just like how Malays get HDB ballots easier.  #speaker_self
+    Is that true? But Cik Lina had a hard time when she was applying for a flat.  #speaker_self
+    #speaker_right_image:cha_nadia_azlin_concerned.png
++ [What she said was so wrong] 
+    It felt like.. Whatever I do from here, will just be undermined, right? Because I’m Malay, so I fill the quota.   #speaker_self
+    Yup, can’t win. #speaker_right
+    And the HDB thing -- if it was really so easy, why did Cik Lina have a hard time when she was applying for a flat?  #speaker_self
+- It’s hard for everyone la. People always think just because there’s a quota to buy a flat, that means we can always get any flat.   #speaker_right
 People always want what they can’t have.   #speaker_right
 They don’t see that other side. Next time if you need to sell your flat, you can also only sell to a very small group of people.   #speaker_right
 You can never get a good price because there’s not enough people to make a demand.   #speaker_right
