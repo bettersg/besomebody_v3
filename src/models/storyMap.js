@@ -41,7 +41,7 @@ export const CHARACTER_MAP = [
     primaryColour: '#FB5A3F',
     secondaryColour: '#664EFC',
     playable: true,
-    newestChapter: 1,
+    newestChapter: 2,
     variables: {
       nadia_mood: 5,
       gavin_mood: 5,
