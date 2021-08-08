@@ -1153,10 +1153,9 @@ Easy to spot how? 	#speaker_self
 I just looked for the shortest, most energetic person walking towards me. That, and that tatty bag of yours. #speaker_left
 Wah, your negging is not subtle. 	#speaker_self
 But seriously though, is everything ok with you? You seemed a little off when we said hi. #speaker_left
-+ [We’d better not hug in public.] 
-    Oh, it’s just, you know. I’m wearing my tudung and it’s best not to be seen hugging when I have it on.	#speaker_self
-+ [Everything’s fine.] 
-    It’s all good. #speaker_self
++ [We’d better not hug in public.]  Oh, it’s just, you know. #speaker_self
+I’m wearing my tudung and it’s best not to be seen hugging when I have it on.	#speaker_self
++ [Everything’s fine.]  It’s all good. #speaker_self
     Are you sure? #speaker_left
     Just a bit more conscious about physical contact when I’m in my tudung.  #speaker_self
 - Ah! Noted. My bad. I will keep five steps apart from you at all times. #speaker_left
@@ -1218,14 +1217,12 @@ Yes, and Gavin’s suggestion actually! #speaker_self
 Oh really? I thought you were more of a tea person, Nad.	#speaker_right
 #speaker_left_image:cha_nadia_gavin_casual_concerned.png
 huh?	#speaker_left
-+ [I like tea]
-    I mean, I drink tea at home, but...  #speaker_self
++ [I like tea] I mean, I drink tea at home, but...  #speaker_self
     Oh! Er, we can have te --	#speaker_left
     No, I like coffee too..!  #speaker_self
     #speaker_left_image:cha_nadia_gavin_casual_normal.png
     No I mean, I know you like tea, that’s why I chose this cafe, it serves really good tea...	#speaker_left
-+ [I like coffee]
-    I like coffee! Coffee is good. Coffee at cafes. #speaker_self
++ [I like coffee] I like coffee! Coffee is good. Coffee at cafes. #speaker_self
     What am I babbling about? This is so embarrassing. #inner_monologue
     Only fancy cafes, huh?  No kopitiam kopi for you? #speaker_right
     #speaker_left_image:cha_nadia_gavin_casual_normal.png
@@ -1245,11 +1242,9 @@ You don’t do that when you’re a guy and she’s...	#speaker_self
 Wow. I am tripping up today.	#speaker_left
 It’s fine, she was definitely more kaypoh to meet you. It’s nothing offensive or rude. #speaker_self
 How come there are so many invisible rules?	#speaker_left
-+ [Not "rules"]
-    I wouldn’t say rules...	#speaker_self
++ [Not "rules"] I wouldn’t say rules...	#speaker_self
     Ok, not rules.	#speaker_left
-+ [It's culture]
-    Cultural... customs. Habits. Adat, which means behaviour of.. being polite.	#speaker_self
++ [It's culture] Cultural... customs. Habits. Adat, which means behaviour of.. being polite.	#speaker_self
     Social protocol. #speaker_left
 - Courtesy. #speaker_self
 Code of conduct. #speaker_left
@@ -1274,11 +1269,10 @@ Yup! Says so on my IC. #speaker_left
 Oof, let’s save that for another day. #speaker_self
 Agreed. I’m sorry things got weird.	#speaker_left
 It’s ok, I’m the one who got a bit..	#speaker_self
+#speaker_left_image:cha_nadia_gavin_casual_normal.png
 Snarky?	#speaker_left
-+ [Yes, that]
-    Yes, that. I got defensive. #speaker_self
-+ [Who, me?]
-    Let's go with "indignant." #speaker_self
++ [Yes, that] Yes, that. I got defensive. #speaker_self
++ [Who, me?] Let's go with "indignant." #speaker_self
 - It's fine. And I hope you know I wasn’t criticising your.. culture.	#speaker_left
 Oh these things, it’s sort of - no need to say one. It’s just how we are around family. 	#speaker_self
 You grow up with it. So when you were so confused by it, and suddenly I have to explain things that usually no need to say.. it rattled me, actually.	#speaker_self
@@ -1289,12 +1283,11 @@ Yeah, I do. I feel a bit of it. Funny huh, we spend so much time hanging in scho
 This is a new feeling.	#speaker_left
 I hate new feelings. #speaker_self
 Well.. I hope not.	#speaker_left
-#speaker_left_image:cha_nadia_gavin_casual_normal.png
 (smiles) Ok. I don’t hate ALL new feelings. #speaker_self
-(beams) Good. Can’t believe we bumped into your cousin. Are you sure she’s not stalking us? 	#speaker_left
-+ [Let's hide - just you and me]
+#speaker_left_image:cha_nadia_gavin_casual_grinning.png
+Good. Can’t believe we bumped into your cousin. Are you sure she’s not stalking us? 	#speaker_left
++ [Let's hide - just you and me] I wouldn’t put it past her. How about we go hide somewhere? #speaker_self
     VAR nadia_2_hidewithgavin = true
-    I wouldn’t put it past her. How about we go hide somewhere? #speaker_self
     Do you still want coffee? 	#speaker_left
     Ooh I don’t know. How caffeinated do we want to be? #speaker_self
     Haha, you’re right - I feel quite awake already after all that. 	#speaker_left
@@ -1309,9 +1302,8 @@ Well.. I hope not.	#speaker_left
     {nadia_2_huggavin: I didn't want him to.}
     -> nadia_2_3_narration
 
-+ [No clue!]
++ [No clue!]  I hope not! #speaker_self
     ~ nadia_2_hidewithgavin = false
-    I hope not! #speaker_self
     Do you still want coffee?  #speaker_left
     Not if it means we’re going to be walking around this mall looking for the place, haha.  #speaker_self
     Yeah and it’s so crowded today! How about.. A movie?#speaker_left
@@ -1360,11 +1352,9 @@ You take your time la. I brought snacks, if that helps... #speaker_self
 I don’t know. Maybe I’m being dramatic. #speaker_1
 You want to talk about it? #speaker_self
 Maybe not now. I think.. I’d rather hear about your date  👀👫  #speaker_1
-+ [It was nice]
-    Ah! Haha yes, um it was nice.  #speaker_self
++ [It was nice]  Ah! Haha yes, um it was nice.  #speaker_self
     Wow, please hold back on the details!! 😂  #speaker_1
-+ [It was okay]
-    Oh uhhh. It was fine! Normal la.  #speaker_self
++ [It was okay]  Oh uhhh. It was fine! Normal la.  #speaker_self
     omg, telll me moreee #speaker_1
 - Ok fine, fine. Then you come down here la! #speaker_self
 #ui:narrator
@@ -1392,9 +1382,11 @@ What’s this about?	#speaker_self
 I have.. been hoping to apply for overseas scholarships. #speaker_left
 My mum keeps bugging me about it. So I’ve been asking some teachers. #speaker_left
 Everybody is saying to just try la, what’s the harm right. But I don’t want to waste my time! #speaker_left
+#speaker_left_image:cha_nadia_chloe_school_sad.png
 If my chances are going to be lousy, I want to know so I can figure something else out. #speaker_left
 Argh, I hate that this is stressing you out. #speaker_self
 I know right! My mum is convinced that it’s the route to go for.  #speaker_left
+#speaker_left_image:cha_nadia_chloe_school_confused.png
 +[Why does your mum think this way?] -> nadia_2_3a
 +[What do you think?] -> nadia_2_3b
 
@@ -1421,6 +1413,7 @@ I’m going to try.  #speaker_self
 Well of course! It’s really prestigious.  #speaker_left
 The hours are mad long though, you’re gonna sacrifice a lot.  #speaker_left
 That’s what they tell me on TV. #speaker_self
+#speaker_left_image:cha_nadia_chloe_school_concerned.png
 It’s real! And what if a patient DIES. I could never do it, and I don’t think you’re the GP doctor sort either. #speaker_left
 I think it’s worth it.  #speaker_self
 If somehow I get the grades to get into med school.. Then that’s the best use of it. You know? #speaker_self
@@ -1438,15 +1431,16 @@ Well this one isn’t as fun. I mean, it’s GOOD to get your name on a scholars
 Does it really matter? #speaker_self
 Ya! Not that I like it, but it’s the game, and you gotta make smart moves.  #speaker_left
 (Doubtfully) Ok, assuming you’re right.. why do you think you’re not in the game anymore? #speaker_self
+#speaker_left_image:cha_nadia_chloe_school_sad.png
 So I was talking to the HOD just now about the scholarship I’m applying for. You know he’s the super honest type. No bullshit.  #speaker_left
 Said that based on his past students and how they did.. I don’t have enough on my track record. #speaker_left
 + Woah, he really said that ?![] #speaker_self
     Ya something along the lines of ‘showcase self-initiated community projects with impact’.  #speaker_left
-+ [He's wrong!] 
-    But you have a great record! What about hockey, and...and...  #speaker_self
++ [He's wrong!]  But you have a great record! What about hockey, and...and...  #speaker_self
     Ya exactly, hockey and what? I don’t have any ‘service to the community’ type of thing to talk about. #speaker_left
 -  I shouldn’t have spent all my time with hockey. Should have joined student council like you and Gavin.. #speaker_left
 But you LOVE hockey. And you think student council people are annoying and idealistic.  #speaker_self
+#speaker_left_image:cha_nadia_chloe_school_normal.png
 Correction - everyone else, aside from you and Gavin. #speaker_left
 -> nadia_2_3c
 
@@ -1462,6 +1456,7 @@ Would you still go overseas without a scholarship? #speaker_self
 Maybe.. I think we could, but it really is so expensive.   #speaker_left
 Oh boy. Med school is expensive too. #inner_monologue
 Chloe, should I be looking at scholarships too? #speaker_self
+#speaker_left_image:cha_nadia_chloe_school_concerned.png
 I didn’t know you wanted to go overseas too! #speaker_left
 Oh no, no, I’m probably going to stick to the local unis. But hoping to apply for.. med school. #speaker_self
 Really? I guess I can see that happening.. #speaker_left
@@ -1481,6 +1476,7 @@ Isn’t your cousin in nursing? That’s good right? #speaker_left
 Yeah she is, but not through NUS. #speaker_self
 Ah, right..  #speaker_left
 Azlin worked HARD for her diploma.  #inner_monologue
+#speaker_left_image:cha_nadia_chloe_school_normal.png
 Well I guess we’re both on the same track. #speaker_left
 What’s that? #speaker_self
 Making life more difficult for ourselves. #speaker_left
@@ -1494,6 +1490,7 @@ Making life more difficult for ourselves. #speaker_left
 Gee, thanks. Well.. scholarships are competitive, but so are you! Your essays are laser sharp.  #speaker_self
 It’s not enough. Just wish I had a bit of an advantage.. Anyway, you won’t understand.  #speaker_left
 Come on, try me. #speaker_self
+#speaker_left_image:cha_nadia_chloe_school_normal.png
 Well, it’s different for you. You’ll probably have an easier time getting a scholarship too.  #speaker_left
 I really don’t think so. #speaker_self
 Nad, it’s easier for you to get into things.  #speaker_left
@@ -1505,6 +1502,7 @@ VAR nadia_2_confrontchloe = false
 Right. #speaker_self
 Argh it’s so unfair. You fill the "quota", you know?  #speaker_left
 No, I don’t know, Chloe. #inner_monologue
+#speaker_left_image:cha_nadia_chloe_school_concerned.png
 It's like HDB quotas, somehow there's always space for Malay or Indian. You're so lucky you're Malay.    #speaker_left
 That’s not how things work.. right?? #inner_monologue
 // #speaker_left_image:pixel.png
@@ -1525,6 +1523,7 @@ I can’t do this right now.  I need to escape this conversation somehow. #inner
 Yeah. I’m sure you’ll be fine.  #speaker_self
 Oops, I have to go home early.  #speaker_self
 My dad just texted, says he needs me for something. You’re ok right? #speaker_self
+#speaker_left_image:cha_nadia_chloe_school_sad.png
 Yeah, sure...  #speaker_left
 #ui:notification
 #background:ui_nadia_message.jpg
@@ -1593,7 +1592,7 @@ wow. later we get ice cream from the mama shop k. cool you down a bit #speaker_1
 #knot:nadia_2_3e
 #ui:scene
 #background:bg_nadia_library.jpg
-#speaker_left_image:nadia_chloe_school_concerned.png
+#speaker_left_image:cha_nadia_chloe_school_concerned.png
 #speaker_left_name:Chloe
 ~ nadia_2_confrontchloe = true
 What do you mean by that? #speaker_self
@@ -1611,7 +1610,7 @@ Why am I getting angry? Maybe I need to find an excuse to walk away. #inner_mono
 Abah: Huhu terjumpa (found) photo of Nadia when she was small # message
 #ui:scene
 #background:bg_nadia_library.jpg
-#speaker_left_image:nadia_chloe_school_concerned.png
+#speaker_left_image:cha_nadia_chloe_school_concerned.png
 #speaker_left_name:Chloe
 Anyway, I need to take this. #speaker_self
 
@@ -1665,7 +1664,7 @@ Haha kembang (flower blooming) seh #speaker_1
 Wait what do you meannn #speaker_self
 kembang, like you know, your head getting all big 🙃 oi i didn’t know your malay was this bad hahaha #speaker_1
 I KNOW what kembang is, and I’m not okayy 😑 It’s just my dad la, he can be very over #speaker_self
-lol memang. anyway joking only. u really are working for it. #speaker_1
+lol memang (of course). anyway joking only. u really are working for it. #speaker_1
 I hope so.. #speaker_self
 don’t be like that! i really was just teasing a bit. u ok tak? #speaker_1
 Tough day. Some really weird conversations. Wanna hang out today? #speaker_self
@@ -1745,10 +1744,10 @@ It is, right? #speaker_self
 Ya it is. I’m sorry Nad, but your friend - does she even live in the real world? Nonsense seh! #speaker_right
 That’s what I couldn’t believe! She’s so level-headed, reasonable, I didn’t think she was so - #speaker_self
 - sheltered?  #speaker_right
-+ [I didn’t think she would see race.]
-    Not that. I didn’t think.. she would see race. And I’m thinking: is this how she’s seen me all along? #speaker_self
-+ [I thought we were better friends than this.]
-    No, it’s just.. we’re such good friends. She knows we both work super hard to get where we are. How can she think I have it easier?  #speaker_self
++ [I didn’t think she would see race.] Not that. I didn’t think.. she would see race. #speaker_self
+    And I’m thinking: is this how she’s seen me all along? #speaker_self
++ [I thought we were better friends than this.] No, it’s just.. we’re such good friends. #speaker_self
+    She knows we both work super hard to get where we are. How can she think I have it easier?  #speaker_self
 - Does she also think we don’t have to pay school fees? Or that we get special treatment? #speaker_right
 Do people still think that!  #speaker_self
 I was digging around before I did my nursing diploma. Betul ke (is it true)? What is this that people who are never Malay always like to say? #speaker_right
@@ -1774,12 +1773,10 @@ It’s all the stories, with the money problems, the drug problems. Then, when t
 They shout it out to the whole kampong. Look what this person managed to do! You can do it too!! #speaker_right
 You managed also though. That says something kan? Put in the effort, work hard, and things get better.  #speaker_self
 We’re all trying. It’s nothing special.  #speaker_right
-+ [Maybe some aren't trying hard enough]
-    Maybe some people don’t want to try hard enough.  #speaker_self
++ [Maybe some aren't trying hard enough]  Maybe some people don’t want to try hard enough.  #speaker_self
     What? #speaker_right
     Why are so many of us poor, until government give us special treatment? How come?  #speaker_self
-+ [Then why are outcomes different?]
-    If we’re all trying, then why are so many of us still poor?  #speaker_self
++ [Then why are outcomes different?]    If we’re all trying, then why are so many of us still poor?  #speaker_self
 - I don’t know. But once you’re not doing well, with money problems, it’s harder to get out.  #speaker_right
 But it’s also personal decisions, right? Maybe it’s other people and their decision-making that’s.. not good.  #speaker_self
 Maybe always living beyond their means. Maybe a lot of them don’t know how to be responsible.  #speaker_self
@@ -1805,11 +1802,9 @@ And your coffee latte or bubble tea all whatever, that one come from where? Pock
 School fees? Next year when you go uni? #speaker_right
 I can take my own bank loan - #speaker_self
 ... but you don’t have to. That’s the difference. They have “new” phones, but at home no internet. You know how difficult that makes school and work?  #speaker_right
-+ [I get it]
-    Okay, I get it. #speaker_self
++ [I get it] Okay, I get it. #speaker_self
     Oh, really? You do? #speaker_right
-+ [I know my family has it easier.] 
-    I know things are.. easier for my family. #speaker_self
++ [I know my family has it easier.]  I know things are.. easier for my family. #speaker_self
     Your family can afford to make decisions easier. You don’t have to calculate many small decisions just to make one big one.  #speaker_right
 - You don’t think I want to get a degree like you? I see my colleagues, they all can climb higher with degree.  #speaker_right
 You thinking of doing degree next time? #speaker_self
