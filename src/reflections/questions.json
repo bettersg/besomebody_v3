@@ -2,7 +2,7 @@
   {
     "id": 1,
     "type": "MULTI_CHOICE",
-    "body": "How did the character's journey thus far make you feel?",
+    "body": "How did the character's story thus far make you feel?",
     "choices": [
       {
         "body": "Optimistic"
@@ -93,7 +93,7 @@
         "body": "Anticipating Gavin's reactions when he saw her dressed in the hijab"
       },
       {
-        "body": "Dealing with Chole's perception that Nadia is advantaged unfairly because of her race"
+        "body": "Dealing with Chloe's perception that Nadia is advantaged unfairly because of her race"
       },
       {
         "body": "Understanding Azlin's viewpoints and her struggles as a Malay"

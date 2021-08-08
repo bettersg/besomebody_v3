@@ -1,9 +1,9 @@
 [
   {
     "id": 1,  
-    "story":"Nadia", 
+    "story":"Aman", 
     "chapter":1,
-    "didyouknow": "This story is based on focus group interviews with members from this community. ",
+    "didyouknow": "This story is based on focus group interviews with members from this community, and deals with an important element of the Sikh identiity. ",
     "media": "https://www.ricemedia.co/culture-people-daggers-bracelets-and-boxer-shorts-the-religious-articles-of-sikhs/",
     "questions": [
       1,      
@@ -14,7 +14,7 @@
   },
   {
     "id": 2,
-    "story":"Aman", 
+    "story":"Nadia", 
     "chapter":1,
     "didyouknow": "This story is based on real stories of inter-faith relationships, and of understanding your own faith as a young adult. There are hidden struggles that many go through.",
     "media": "https://www.ricemedia.co/culture-people-conversion-circumcision-angry-mum-journey-one-couples-interracial-marriage-nhb/",
@@ -34,7 +34,6 @@
     "questions": [
       1,      
       6,
-      7,
       2,
       3
     ]
