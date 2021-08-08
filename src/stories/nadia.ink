@@ -1180,12 +1180,12 @@ Eh...did I say left or right just now? Maybe we missed the turn... #speaker_left
 #background:bg_nadia_mall.jpg
 #speaker_left_image:cha_nadia_gavin_casual_normal.png
 #speaker_left_name:Gavin
-#speaker_right_image:cha_nadia_azlin_normal.png 
 #speaker_right_name:Azlin
 This mall is such a maze. Where on earth is that cafe? #inner_monologue
 Wait a minute. Is someone calling my name? #inner_monologue
 Someone is definitely calling my name. #inner_monologue
 I know that voice. That’s... #inner_monologue
+#speaker_right_image:cha_nadia_azlin_happy.png 
 NADIA! #speaker_right
 No way. #inner_monologue
 Oh hey! What are you doing here? #speaker_self
@@ -1372,17 +1372,20 @@ Maybe not now. I think.. I’d rather hear about your date  👀👫  #speaker_1
 10 minutes later
 #ui:scene
 #background:bg_nadia_library.jpg
-#speaker_left_image:cha_nadia_chloe_school_concerned.png
+#speaker_left_image:cha_nadia_chloe_school_normal.png
 #speaker_left_name:Chloe
 So.. how was date-day? #speaker_left
 Kinda the same, kinda really different.. Did you see this coming? #speaker_self
+#speaker_left_image:cha_nadia_chloe_school_grinning.png
 Only like, finally. You guys have been into each other for ages! The banter is non-stop with you two. #speaker_left
 Why didn’t you say anything!! #speaker_self
 Cos I didn’t want to accidentally force something into happening, if it wasn’t going to happen.	#speaker_left
 In case it doesn’t work out.. because she doesn’t think it will? #inner_monologue
+#speaker_left_image:cha_nadia_chloe_school_normal.png
 Did he say anything about you know, wearing a headscarf?	#speaker_left
 Strangely.. it went ok. I was so nervous! Who knows what he really thinks of it. But he didn’t freak out. So there’s that at least. #speaker_self
 Are you sure you’re ok?	#speaker_self
+#speaker_left_image:cha_nadia_chloe_school_confused.png
 Gah, I don’t know.  #speaker_left
 It’s just so frustrating, I feel like I’ve been trying to do everything right but it’s still not going to be good enough. #speaker_left
 What’s this about?	#speaker_self
@@ -1469,7 +1472,7 @@ Oh boy, and you’re also going to be doing more years in school too. The unis h
 + I'll look into it. [] #speaker_self
     And financial assistance, I think.  #speaker_left
     Right, that too.  #speaker_self
-+ [Sounds competetive] Getting a scholarship on top of getting into med school? Sounds impossible... #speaker_self
++ [Sounds competitive] Getting a scholarship on top of getting into med school? Sounds impossible... #speaker_self
     Oh if not scholarship, I think there’s financial assistance too. #speaker_left
 - You know, and if somehow med school doesn’t work out.. I mean, they shortlist more than 1,000 applicants, then only offer less than 300 spots.  #speaker_left
 There’s always.. nursing? #speaker_left
@@ -1536,6 +1539,9 @@ Abah: Huhu terjumpa (found) photo of Nadia when she was small # message
 #chat_group_title:Family Chatgroup
 #chat_group_image:ico_nadia_family.png
 #speaker_1_name:Abah
+#speaker_2_name:Azlin
+#speaker_3_name:Cik Lina (aunt)
+#speaker_4_name:Raihan (cousin)
 Huhu terjumpa (found) photo of Nadia when she was small 🌱👶🐛🦋 #speaker_1
 bg_nadia_childdoctor.jpg #speaker_1 #image
 Haha so serious this girl #speaker_2
@@ -1618,6 +1624,9 @@ Anyway, I need to take this. #speaker_self
 #chat_group_title:Family Chatgroup
 #chat_group_image:ico_nadia_family.png
 #speaker_1_name:Abah
+#speaker_2_name:Azlin
+#speaker_3_name:Cik Lina (aunt)
+#speaker_4_name:Raihan (cousin)
 Huhu terjumpa (found) photo of Nadia when she was small 🌱👶🐛🦋 #speaker_1
 bg_nadia_childdoctor.jpg #speaker_1 #image
 Haha so serious this girl #speaker_2
@@ -1689,7 +1698,7 @@ fuyoo. k, text you later? usual spot. #speaker_1
 #ui:narrator
 #background:bg_nadia_playgroundnight.jpg
 8.45pm, at a playground bench. 
-This has been our hangour spot for ages, ever since Azlin moved into the same neighbourhood as me.
+This has been our hangout spot for ages, ever since Azlin moved into the same neighbourhood as me.
 
 -> nadia_2_4
 
@@ -1697,10 +1706,11 @@ This has been our hangour spot for ages, ever since Azlin moved into the same ne
 #knot:nadia_2_4
 #ui:scene
 #background:bg_nadia_playgroundnight.jpg
-#speaker_right_image:cha_nadia_azlin_normal.png
+#speaker_right_image:cha_nadia_azlin_happy.png
 #speaker_right_name:Azlin
 So.. are you sure this is not about Gavin? #speaker_right
 No, it’s really not. #speaker_self
+#speaker_right_image:cha_nadia_azlin_teasing.png 
 Sorry if I gave you a hard time that day when I bumped into you all. Hope I didn’t make it awkward.  #speaker_right
 Don’t bluff, you were enjoying yourself.  #speaker_self
 Ok I was, just a little. He seems nice, although when he - #speaker_right
@@ -1708,6 +1718,7 @@ Ok I was, just a little. He seems nice, although when he - #speaker_right
 But it was kinda cute. Clearly he knows who he needs to impress. Or try to. Smart guy.  #speaker_right
 It wasn’t that awkward right? I explained to him afterwards, and it’s so weird to suddenly need to even explain these — #speaker_self
 STOP. You’re obsessing. It was fine. Also I thought you said this wasn’t about Gavin. #speaker_right
+#speaker_right_image:cha_nadia_azlin_normal.png 
 You’re right. I need to unclench. I wanted to talk to you about... #speaker_self
 + [...what Chloe said.] -> nadia_2_4a
 + [... what my dad said.] -> nadia_2_4b
@@ -1720,11 +1731,13 @@ You’re right. I need to unclench. I wanted to talk to you about... #speaker_se
 VAR chapter_2_ending = 1
 ..what Chloe said. Like it doesn’t even make sense!  #speaker_self
 I couldn’t even say anything back you know, I was stunned - like has she always felt this way? Is that really how she thinks? #speaker_self
+#speaker_right_image:cha_nadia_azlin_concerned.png
 Ok ok, one thing at a time. This Chloe person, your volleyball friend? #speaker_right
 (Sigh) Hockey.  #speaker_self 
 And this fight was about? #speaker_right
 Well she’s been obsessing about scholarships and this afternoon, she was really ticked off by something. I was just trying to talk to her.  #speaker_self
 Chloe said.. she thinks that I get accepted into things. Because I’m Malay. That I would fill their quota, so that’s why they would want me.  #speaker_self
+#speaker_right_image:cha_nadia_azlin_confused.png
 Wait, who’s “they”? #speaker_right
 I don’t even know! But Chloe thinks that I have it easier, that it’ll be easier for me to get into things, and that -  #speaker_self
 - she has to work harder than you. That’s some crazy shit.  #speaker_right
@@ -1738,16 +1751,17 @@ That’s what I couldn’t believe! She’s so level-headed, reasonable, I didn�
     No, it’s just.. we’re such good friends. She knows we both work super hard to get where we are. How can she think I have it easier?  #speaker_self
 - Does she also think we don’t have to pay school fees? Or that we get special treatment? #speaker_right
 Do people still think that!  #speaker_self
-I was digging around before I did my nursing diploma. Betul ke? What is this that people who are never Malay always like to say? #speaker_right
+I was digging around before I did my nursing diploma. Betul ke (is it true)? What is this that people who are never Malay always like to say? #speaker_right
+#speaker_right_image:cha_nadia_azlin_normal.png
 Isn’t it just one of those things taxi uncles like to complain about.  #speaker_self
 I found out.. It’s half-true, which is always the problem kan.  #speaker_right
 That doesn’t sound good.  #speaker_self
 We don’t get free education. That rumour is just rubbish. BUT. There is a government subsidy.. if you’re Malay, and trying to get diploma or degree.  #speaker_right
 How come we get subsidy? #speaker_self
-I know kan. Asked myself that also, and then I saw the max household income if you nak qualify. You know how much? $2000.  #speaker_right
+I know kan (right). Asked myself that also, and then I saw the max household income if you nak (want to) qualify. You know how much? $2000.  #speaker_right
 That’s not - #speaker_self
 - ya, is not a lot. Like if you qualify kan, that means there wasn’t money floating around to anyhow get a diploma.   #speaker_right
-#speaker_right_image:cha_nadia_azlin_concerned.png
+#speaker_right_image:cha_nadia_azlin_confused.png
 But still.. why this special subsidy? And just for us? Because we’re what, native to Singapore? #speaker_self
 No, Nadia. Because more of us, more Malay people, are poor.  #speaker_right
 (Confused) That isn’t - I don’t think.. But we’re not poor because we’re Malay. #speaker_self
@@ -1769,20 +1783,22 @@ We’re all trying. It’s nothing special.  #speaker_right
 - I don’t know. But once you’re not doing well, with money problems, it’s harder to get out.  #speaker_right
 But it’s also personal decisions, right? Maybe it’s other people and their decision-making that’s.. not good.  #speaker_self
 Maybe always living beyond their means. Maybe a lot of them don’t know how to be responsible.  #speaker_self
-#speaker_right_image:cha_nadia_azlin_angry.png
 Who are you talking about? #speaker_right
 No one.. But you know, Cik Lina’s family - I know they have money problems, but when I see them, phones all macam baru (quite new) je. #speaker_self
 New phones, different models.  #speaker_self
+#speaker_right_image:cha_nadia_azlin_angry.png
 That’s not our business, Nad.  #speaker_right
 But it’s true though! Every Hari Raya also must change curtains.  #speaker_self
 Your abah telling you these things? #speaker_right
 It’s just something I noticed. #speaker_self
 Ya something you noticed. Doesn’t mean you understand. How people spend their money is not our business. #speaker_right
 Not if that’s why they keep being stuck! #speaker_self
+#speaker_right_image:cha_nadia_azlin_confused.png
 Let me tell you something. Those phones kan, it’s all secondhand okay.  #speaker_right
 It’s the thing that they can have and feel like everyone else. Have you ever met up with them? #speaker_right
 No, I’ve been busy.. #speaker_self
 Right. When you do, you meet them at MRT station. Because they’re on top-up, not phone plan.  #speaker_right
+#speaker_right_image:cha_nadia_azlin_normal.png
 They want to use public wifi. They all work part-time. Do you? #speaker_right
 I’m not, but that’s also why I’m not spending money anyhow.  #speaker_self
 And your coffee latte or bubble tea all whatever, that one come from where? Pocket money from your abah kan.  #speaker_right
@@ -1807,6 +1823,7 @@ Kak, I understand - #speaker_self
 I don’t think I’m different.. #speaker_self
 Sorry - not different. You think you’re better than the rest of us.  #speaker_right
 That’s not true! #speaker_self
+#speaker_right_image:cha_nadia_azlin_normal.png
 Maybe. I’m gonna go. I’ll see you around.  #speaker_right
 
 -> nadia_2_reflection
@@ -1819,6 +1836,7 @@ Maybe. I’m gonna go. I’ll see you around.  #speaker_right
 ~ chapter_2_ending = 2
 ..what my dad said. He really open mouth only.  #speaker_self
 It’s like that. Haha remember that time when he said - anyone can become a nurse.   #speaker_right
+#speaker_right_image:cha_nadia_azlin_concerned.png
 Like easy only. Take blood pressure only, help people go toilet only.   #speaker_right
 He doesn’t understand la.  #speaker_self
 It’s fine. I just close eyes, close ears. I’m happy as long as I get to work.  #speaker_right
@@ -1830,7 +1848,7 @@ Maybe in her time. #speaker_self
 But it’s not anymore. I like my work. I don’t want to be just a housewife.   #speaker_right
 Although right, yesterday, I almost told her about this patient. Problem seh! Everything busy already, then want to create trouble.   #speaker_right
 What happened? #speaker_self
-#speaker_right_image:cha_nadia_azlin_concerned.png
+#speaker_right_image:cha_nadia_azlin_confused.png
 Wanted to change nurses. Patient didn’t want my colleague to touch her. Because my colleague Indian.   #speaker_right
 What! And you had to follow the request? #speaker_self
 Ya la, patient still need medical care. I had to step in just to get the job done.   #speaker_right
@@ -1874,14 +1892,15 @@ Well, it wasn’t really a fight-fight. I just left the conversation halfway. I 
     #speaker_right_image:cha_nadia_azlin_teasing.png
     Wow you JC kids really think far ahead ah.  #speaker_right
     No, no way, not like that. It’s Chloe, she said I can get the scholarship easier just like how Malays get HDB ballots easier.  #speaker_self
+    #speaker_right_image:cha_nadia_azlin_confused.png
     Is that true? But Cik Lina had a hard time when she was applying for a flat.  #speaker_self
-    #speaker_right_image:cha_nadia_azlin_concerned.png
 + [What she said was so wrong] 
     It felt like.. Whatever I do from here, will just be undermined, right? Because I’m Malay, so I fill the quota.   #speaker_self
     Yup, can’t win. #speaker_right
     And the HDB thing -- if it was really so easy, why did Cik Lina have a hard time when she was applying for a flat?  #speaker_self
 - It’s hard for everyone la. People always think just because there’s a quota to buy a flat, that means we can always get any flat.   #speaker_right
 People always want what they can’t have.   #speaker_right
+#speaker_right_image:cha_nadia_azlin_normal.png
 They don’t see that other side. Next time if you need to sell your flat, you can also only sell to a very small group of people.   #speaker_right
 You can never get a good price because there’s not enough people to make a demand.   #speaker_right
 But if you can buy and sell from anyone, then you can have more people who are willing to compete to give you a better price.  #speaker_right
@@ -1895,7 +1914,7 @@ That’s different, that was out of your control. #speaker_self
 Did Gavin say anything to his mum when she thought you were a bad influence?  #speaker_right
 I don’t know. #speaker_self
 You remind me of me when I was younger. But you learn la Nads. The world doesn't care how much you fight.   #speaker_right
-It just wants you quiet and compliant. Penat you know? Focus on your A’s. Maybe Gavin is nice, but... save yourself the heartache.  #speaker_right
+It just wants you quiet and compliant. Penat (tired) you know? Focus on your A’s. Maybe Gavin is nice, but... save yourself the heartache.  #speaker_right
 
 -> nadia_2_reflection
 

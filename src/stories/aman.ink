@@ -297,12 +297,12 @@ Why? What's wrong with my cooking? #speaker_2
 It's Aman's last meal as a free man! We should get something nice tonight! #speaker_3
 He is going to NS, not to the moon. And anyway he likes my cooking. #speaker_2
 Speaking of whom, where is he? Went out for breakfast and hasn't come back yet! #speaker_3
-Aman - please tell ma you want to order something for dinner! Side with me! #speaker_2
+Aman - please tell ma you want to order something for dinner! Side with me! #speaker_3
 Let the boy make up his own mind Jothi! He's going to be a real man soon! #speaker_1
 Aman? #speaker_1
 + [Send them a selfie of your haircut]
     This is what I look like after my haircut #speaker_self
-    bg_aman_haircutselfie.jpg #speaker_self #image
+    bg_aman_haircutselfiephoto.jpg #speaker_self #image
 + [Tell your family that you cut your hair]
 - I cut my hair to prepare NS today. It's very short now.    #speaker_self 
 
