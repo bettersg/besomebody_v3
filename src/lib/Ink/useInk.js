@@ -186,6 +186,7 @@ const useInk = (json, characterId) => {
       character: characterId,
       id: saveDataId,
       email: currentUser.email,
+      timestamp:new Date(),
     }
 
     await createDbSavedStates(saveData, saveDataId)
@@ -208,6 +209,24 @@ const useInk = (json, characterId) => {
     setIsStoryStarted(true)
     inkStory.loadStoryState(savedStateRes.inkJson)
   }
+
+   /**
+   * Load the paragraphs or choices in local snapshots back into the React states
+   * Submit the ink saved state back to inkjs but only the variables and not the starting know
+   */
+    const handleLoadSavedVariables = async (loadFrom) => {
+      const savedStateRes = await getDbSavedStates(saveDataId)
+      if (!savedStateRes) return null
+       
+      // setParagraphs(savedStateRes.paragraphs)
+      // setChoices(savedStateRes.choices)
+      // setSpecialTags(savedStateRes.specialTags)
+      setGlobalVariables(savedStateRes.globalVariables)
+      setCurrentKnot(loadFrom)
+      // setCurrentKnot(savedStateRes.currentKnot)
+      setIsStoryStarted(true)
+      // inkStory.loadStoryState(savedStateRes.inkJson)      // so maybe this is the problem
+    }
 
   /**
    * Clear snapshots in React states
@@ -234,6 +253,7 @@ const useInk = (json, characterId) => {
     startStoryFrom: handleStartStoryFrom,
     saveStory: handleSaveStory,
     loadSavedStory: handleLoadSavedStory,
+    loadSavedVariables: handleLoadSavedVariables,
     resetSavedStory: handleResetSavedStory,
   }
 }

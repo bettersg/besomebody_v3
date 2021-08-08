@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         // backgroundColor: "#6C70DD",
-        // backgroundImage: ({ image }) => `url('/images/bg_launch.png')`,
+        backgroundImage: ({ image }) => `url('/images/bg_launch.png')`,
         height: '660px',
         [theme.breakpoints.only('xs')]: {
             height: 'calc(var(--vh, 1vh) * 100)',

@@ -1,6 +1,6 @@
 @import '../../scss/global/global';
 
-.Narrator {
+.Notification {
   &__text {
     @include inter-narrator;
     height: 100%;
@@ -10,13 +10,9 @@
     user-select: none;
     // position: absolute;
     // margin: auto;
-    color: $white;
+    color: $dark2;
     padding: 0px 50px;
-    background: radial-gradient(
-      81.88% 46.79% at 50% 50%,
-      rgba(0, 10, 17, 0.56) 33.85%,
-      rgba(0, 0, 0, 0.7) 100%
-    );
+     
   }
   &__choicesWrapper {
     display: flex;

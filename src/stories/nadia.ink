@@ -22,6 +22,10 @@ For cut-and-paste ease
 #speaker_2_name:Eric -> can be left blank
 #timestamp:21.34
 
+#ui:notification
+#background:ui_nadia_message.jpg
+Gavin: help # message
+
 #knot:nadia_2_haircut_no
 #ui:email
 #to:Jeffrey Tan <jeffrey@hotmail.com>
@@ -39,17 +43,14 @@ Minigame // must add some text
 */
 
 // DECLARE GLOBAL VARIABLES
+VAR character_id = 1
 VAR nadia_mood = 10
 VAR gavin_mood = 10
 VAR nadia_liar = 0
-
-
-VAR chapter_1_ending = 0 
-VAR chapter_2_ending = 0 
-VAR chapter_3_ending = 0 
-VAR chapter_4_ending = 0 
-VAR character_id = 1
- 
+// VAR chapter_1_ending = 0 
+// VAR chapter_2_ending = 0 
+// VAR chapter_3_ending = 0 
+// VAR chapter_4_ending = 0 
 
 -> nadia_1_intro
 
@@ -82,7 +83,6 @@ An Unexpected Invitation #title
 
 // START STORY
 
-
 === nadia_1_1_narration ===
 #knot:nadia_1_1_narration
 #ui:narrator
@@ -107,9 +107,9 @@ Can heat up in the ovenette — #speaker_right
 — potato or sardine? #speaker_self
 I think both have. #speaker_right
 #speaker_right_image:pixel.png
-#ui:scene
-#background:new_message_notification.jpg
-It's a message from Gavin!
+#ui:notification
+#background:ui_nadia_message.jpg
+Gavin: help # message
 -> nadia_1_1a
 
 === nadia_1_1a ===
@@ -119,7 +119,7 @@ It's a message from Gavin!
 #chat_group_title:Gavin
 #chat_group_image:ico_nadia_gavin.png
 #speaker_1_name:Gavin
-#timestamp:21.49
+21.49 #timestamp
 help #speaker_1
 this bus is blasting the AC #speaker_1
 is so cold 🥶 🥶 🥶 #speaker_ 
@@ -151,7 +151,7 @@ yes. it is very entertaining. #speaker_1
 So how many of you doing this "night study"? Quite a lot of people just now eh.  #speaker_right
 Depends… Last year before promo exams, both the canteen and library got packed. #speaker_self
 It's a bit more chill for now. #speaker_self
-Kalau chill, kan study at home..(If it’s too relaxed, studying at home is better)  #speaker_right
+Kalau chill, kan study at home...(If it’s too relaxed, studying at home is better)  #speaker_right
 I know, it's just easier to concentrate at school. At home, I just feel like sleeping —  #speaker_self
 — are you sleeping enough? All these late nights are not good also.  #speaker_right
 That's why your mother always ask me to pick you up. #speaker_right
@@ -412,9 +412,9 @@ After all of that PE, I’m starving.
 
 === nadia_1_3 ===
 #knot:nadia_1_3
-#ui:scene
-#background:new_message_notification.jpg
-A message from Gavin!
+#ui:notification
+#background:ui_nadia_message.jpg
+Gavin: Where u at? # message
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Gavin
@@ -440,8 +440,9 @@ Don’t tell me you know him too! #speaker_left
 - The world is blessed. Gimme a min, let me grab some food. #speaker_left
 Go, go.  #speaker_self
 #speaker_left_image:pixel.png
-#background:new_message_notification.jpg
-A message from Azlin
+#ui:notification
+#background:ui_nadia_message.jpg
+Azlin: Nad what time are you gg to be home today? # message
 -> nadia_1_3_whatsapp1
 
 === nadia_1_3_whatsapp1 ===
@@ -797,7 +798,7 @@ MAMPOS. #speaker_1
 #chat_group_title:Azlin
 #chat_group_image:ico_nadia_azlin.png
 #speaker_1_name:Azlin
-~ chapter_1_ending = 1
+VAR chapter_1_ending = 1
 So do you 😐 #speaker_self
 haha that’s my own pasal and problem 😬 #speaker_1
 Do your parents know about gavin? #speaker_1
@@ -818,6 +819,8 @@ Oh no. I know where this is going. #inner_monologue
 #speaker_1_name:Azlin
 🤷‍♀️ #speaker_self
 hmm #speaker_1
+i don't know about this nad  #speaker_1
+better think before you rush #speaker_1
 just.. remember who you are okay? #speaker_1
 
 -> nadia_1_reflection
@@ -856,7 +859,7 @@ I know what she means. It’s going to be complicated. #inner_monologue
 #chat_group_image:ico_nadia_azlin.png
 #speaker_1_name:Azlin
 Sigh a bit late for that #speaker_self
-just.. remember who you are okay? #speaker_1
+don't do anything you will regret k #speaker_1
 
 -> nadia_1_reflection
 
@@ -872,18 +875,21 @@ just.. remember who you are okay? #speaker_1
 No la. We’re just friends. He’s nice. So I’m nice back.  #speaker_self
 ...mmhmmm... #speaker_1
 Anyway #speaker_self
-This is the WORST time for me to be distracted, it’s 4 months to a levels #speaker_self
-nad, if u want to go into med school, then focus k? #speaker_1
+I also know I cannot get distracted now. It's 4 months to A levels!!!! #speaker_self
+exactly.  nad, if u want to go into med school, then focus k? #speaker_1
 u have big dreams so u must protect!!  #speaker_1
 esp when all our makciks say girl no need to study so hard.  #speaker_1
 So nonsense la when they say that 🙄 #speaker_self
-geram seh! “just kahwin and have children.. like that life is blessed already” #speaker_1
+geram seh! “just  (marry) and have children.. like that life is blessed already” #speaker_1
 Ya, I know.  #speaker_self
 Thanks you know, for  helping and pushing me through. Means a lot. #speaker_self
 tau pon 😬 #speaker_1
 better remember when u bc some bigshot doctor haha.  #speaker_1
-don’t shiok sendiri, suddenly don’t know ur nurse cousin all  #speaker_1
-just.. remember who u are, okay?  #speaker_1
+don’t shiok sendiri (fall blissfully in love and get self absorbed), suddenly don’t know ur nurse cousin all  #speaker_1
+think about boys later #speaker_1
+for now, just keep ur head on straight and don't anyhow #speaker_1
+u know better than that #speaker_1
+and i know u are better than that #speaker_1
 
 -> nadia_1_reflection
 
@@ -934,7 +940,8 @@ i hope u have an easier time when u become a doctor.  #speaker_1
 but also  #speaker_1
 Yes? 😬 #speaker_self
 dun gatal gatal with these boys la. just focus on your studies. only 4 more months to a levels kan.  #speaker_1
-just.. remember who u are, okay?  #speaker_1
+stay on course nad   #speaker_1
+u got this.  #speaker_1
 
 
 -> nadia_1_reflection
@@ -969,11 +976,21 @@ Reflection 1
 === nadia_2_intro ===
 #knot:nadia_2_intro
 #ui:narrator
-#background:nadia_2_intro.jpg
+#background:bg_nadia_intro.jpg
 #music:nadia_intro.mp3
 ~ chapter_id = 2
+//reset chapter 2-5 variables
 CHAPTER 2 #title
-The Mall #title
+The Date Crasher #title
+
+I’m still a little surprised by what happened with Gavin. 
+Not the chopsticks thing, I mean - but the invitation to go on a date. 
+I guess it never occurred to me that he might like me enough to ask me out. 
+There are still so many questions in my head. 
+But maybe for this one moment, I can just enjoy being with him without worrying about all that. 
+And maybe I can show him who I am outside of school, when we’re not studying in the library. 
+I hope he likes what he finds.
+
 
 -> nadia_2_1_narration 
 
@@ -981,20 +998,933 @@ The Mall #title
 === nadia_2_1_narration ===
 #knot:nadia_2_1_narration
 #ui:narrator
-#background:nadia_shoppingmall.jpg
-3:10pm in the mall with Gavin
+#background:bg_nadia_bedroom.jpg
+Sunday, 2:25pm.
+I’m running late - this is SO not me! 
+But I also don’t usually take so long to decide on what to wear. 
+Or go on dates! Ok, just breathe. Let's commit to this. 
+I’m going to wear my hijab. 
+
 -> nadia_2_1
 
 
 === nadia_2_1 ===
 #knot:nadia_2_1
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Chloe
+#chat_group_image:ico_nadia_chloe.png
+#speaker_1_name:Chloe
+14:27 #timestamp
+Hallo! Wanna head out this afternoon for a mug sesh? #speaker_1
+Darn I can’t #speaker_self
+That’s ok! What are u up to? #speaker_1
+Um. I’m meeting Gavin. #speaker_self
+Oh chey, bo jio.. Are you two studying without me! #speaker_1
+😳 #speaker_self
++ wellllllll [] #speaker_self
++ errr not exactly studying [] #speaker_self
+- No way! Omg. It’s a daaaaaaaaaate  🎉✨🎉✨🎉✨ #speaker_1
+I can’t believe you didn’t tell me!!! #speaker_1
+Sorryyyyyyyy I didn’t know how to #speaker_self
+and what if it isn’t? You know?? #speaker_self
+Ok so who asked who out? Was it Gavin? #speaker_1
+Kinda #speaker_self
+Hahahaha then it is a date la! 🎉🎉🎉  #speaker_1
+(Like finally!) #speaker_1
+Calmmmm down. I’m already nervous enough. #speaker_self
+So...  what’s your date fit? Are you doing matching lewks #speaker_1
+NO?? Would you?? #speaker_self
+Huhu I think it can be cute leh. #speaker_1
+Quick show meeeee #speaker_1
+Okok, gimme a min #speaker_self
+bg_nadia_selfiehijab.jpg #speaker_self #image
++ 😎 Rocking it![] #speaker_self
+    VAR nadia_2_confidenthijab = true
+    I’m turning up like this.  #speaker_self
+    Still a cutie!  #speaker_1
+    Whew, what a relief 😏  #speaker_self
+    Your headscarf colour is so pretty 💛 I think this is the first time I’ve EVER seen you wearing one!!  #speaker_1
+    Gavin is going to love it!   #speaker_1
+    #ui:scene
+    #background:bg_nadia_selfiehijab.jpg
+    I sure hope so. #inner_monologue
+    
++ Like this can? 😳 [] #speaker_self 
+    ~ nadia_2_confidenthijab = false
+    What do you think? Ok right? #speaker_self 
+    Hahaha oh gosh #speaker_1
+    !! #speaker_self 
+    No no you still look super cute! Just forgot that you wear a headscarf these days (?) #speaker_1
+    Does Gavin know btw? He should be ok with it right? #speaker_1
+    #ui:scene
+    #background:bg_nadia_selfiehijab.jpg
+    It's never really come up with Gavin. But he should be "okay with it"... right? #inner_monologue
+- There's only one way to find out. #inner_monologue
+
+
+-> nadia_2_2_narration 
+
+
+=== nadia_2_2_narration ===
+#knot:nadia_2_2_narration
+#ui:narrator
+#background:bg_nadia_mall.jpg
+Sunday, 3:10pm, at the mall.
+
+-> nadia_2_2
+
+
+=== nadia_2_2 ===
+#knot:nadia_2_2
 #ui:scene
-#background:nadia_shoppingmall.jpg
-#speaker_left_image:cha_nadia_gavin.png
+#background:bg_nadia_mall.jpg
+#speaker_left_image:cha_nadia_gavin_casual_normal.png
 #speaker_left_name:Gavin
 Hi so sorry I’m late! #speaker_self
 Hey! You look nice. #speaker_left
 Oh! He’s reaching out for a hug. #inner_monologue
+{nadia_2_confidenthijab: 
+    + [Hug Gavin back ] -> nadia_2_2a1
+    }
+{not nadia_2_confidenthijab: 
+    + [Hug Gavin back ] -> nadia_2_2a1
+    + [Turn my shoulder to avoid] -> nadia_2_2a2
+    }
 
+= nadia_2_2a1
+VAR nadia_2_huggavin = true
+Gee thanks. You clean up well too. So where’s this cafe? #speaker_self
+It’s just outside, I heard they have really good tempeh — #speaker_left
+... seriously?? #speaker_self
+Hahaha no, just kidding. #speaker_left
+You are so irritating!!	#speaker_self
+Was worth the look on your face though. #speaker_left
+You’re the one obsessed. #speaker_self
+Am I though? I recall it was someone else being very protective that day. #speaker_left
+Hahaha... Ok ok, I’m done with this.	#speaker_self
+You really do look nice by the way. #speaker_left
+Yeah? I was a bit worried. #speaker_self
+About what?	#speaker_left
++ That I look.. different today, than how I would in school?[]	#speaker_self
+    Do you really? 	#speaker_left
++ That... you would feel weird seeing me like this?[]	#speaker_self
+    Let me check, do I feel weird? Nah - no weird feels. 	#speaker_left
+- I don’t think it’s a big deal. #speaker_left
+Hmmm... Really? #speaker_self
+Hahaha... Ok fine, but that’s just because I was a bit surprised. #speaker_left
+I didn’t know you wear a.. tudung outside of school. #speaker_left
+So secretive about everything, Nad. #speaker_left
+Ugh, fair. I just don’t want anything to be made a big deal. #speaker_self
+And sometimes.. not saying anything makes it a bigger deal.	#speaker_left
+You really working on your psychologist skills huh. #speaker_self
+Not bad, right?	#speaker_left
+Truly your calling. Ok fine, open communication, let’s go.	#speaker_self
+When I am in hijab.. it might be better if we don’t hug to say hello? #speaker_self
+I don’t want you to feel weird, and it’s nothing when we’re in school but - #speaker_self
+Yeah, okay. #speaker_left
+Yeah? #speaker_self
+I do. If it makes you feel weird, then I won’t want to either. #speaker_left
+How does your head make everything sound so simple. #speaker_self
+There’s usually a straight line.. through the knots. #speaker_left
+Hahaha... Either your logic is loopy, or I need that coffee more than I realise. #speaker_self
+Where is this cafe?	#speaker_self
+It’s just around here, unless we missed a turn... #speaker_left
+
+-> nadia_2_2b
+
+
+= nadia_2_2a2
+~ nadia_2_huggavin = false
+Gee thanks. You clean up well too. 	#speaker_self
+Err..You ok? #speaker_left
+Um yeah, all good! Now, Where’s this cafe? 	#speaker_self
+I checked the directory and they said straight, left and then down the next escalator. #speaker_left
+Cool. You did your homework! 	#speaker_self
+Always. You don’t get into student council without some heavy lifting. #speaker_left
+You..are not flexing right now. 	#speaker_self
+Hey, if you had biceps like mine, you’d flex too. #speaker_left
+You’re such a weirdo. 	#speaker_self
+You know you like it. #speaker_left
+Do I? Do I really? 	#speaker_self
+Ehhh. I saw your smile from a mile away ok? You were super easy to spot. #speaker_left
+...Is he referring to my hijab? #inner_monologue
+Easy to spot how? 	#speaker_self
+I just looked for the shortest, most energetic person walking towards me. That, and that tatty bag of yours. #speaker_left
+Wah, your negging is not subtle. 	#speaker_self
+But seriously though, is everything ok with you? You seemed a little off when we said hi. #speaker_left
++ [We’d better not hug in public.]  Oh, it’s just, you know. #speaker_self
+I’m wearing my tudung and it’s best not to be seen hugging when I have it on.	#speaker_self
++ [Everything’s fine.]  It’s all good. #speaker_self
+    Are you sure? #speaker_left
+    Just a bit more conscious about physical contact when I’m in my tudung.  #speaker_self
+- Ah! Noted. My bad. I will keep five steps apart from you at all times. #speaker_left
+Wow. There’s no need to be that extreme. 	#speaker_self
+I mean, I will try my best but you know, coffee tables are closer than that. #speaker_left
+Righttt. So, this really doesn’t bother you? 	#speaker_self
+Your...tudung? No, why should it? I mean, I know you’re pretty religious and faith is important to you.  #speaker_left
+We all know how operation tempeh went down. #speaker_left
+I think it’s great that you’re confident in who you are.  #speaker_left
+Wow. I wish I had mentioned it earlier. I took WAY too long trying to decide whether to wear it or not. 	#speaker_self
+Lol, was that why you were late? I thought you were having second thoughts about meeting. #speaker_left
+No, I’m pretty sure I want to be here. 	#speaker_self
+So...is there anything else I need to know about what we can or cannot do? #speaker_left
+Yes, here’s an important one. We can’t get lost looking for coffee. Are you sure you got the right directions? 	#speaker_self
+Eh...did I say left or right just now? Maybe we missed the turn... #speaker_left
+
+-> nadia_2_2b
+ 
+= nadia_2_2b
+#ui:scene
+#background:bg_nadia_mall.jpg
+#speaker_left_image:cha_nadia_gavin_casual_normal.png
+#speaker_left_name:Gavin
+#speaker_right_name:Azlin
+This mall is such a maze. Where on earth is that cafe? #inner_monologue
+Wait a minute. Is someone calling my name? #inner_monologue
+Someone is definitely calling my name. #inner_monologue
+I know that voice. That’s... #inner_monologue
+#speaker_right_image:cha_nadia_azlin_happy.png 
+NADIA! #speaker_right
+No way. #inner_monologue
+Oh hey! What are you doing here? #speaker_self
+No seriously, what is she doing here? Ok she’s just standing there, she’s waiting for me to come over.. with Gavin.	#inner_monologue
+Who’s that?	#speaker_left
+It’s my cousin, let me just go over and say hi.	#speaker_self
+I’ll come with. #speaker_left
+Darn it Gavin! Fine, let’s do this. #inner_monologue 
+Seriously, what were the odds? Azlin looks so gleeful -- just look at that grin on her face.  #inner_monologue
+I’ll never hear the end of this.  #inner_monologue
+K, just be steady... let me first salam her (traditional Muslim greeting)...  #inner_monologue
+Oh dear. What is Gavin doing? #inner_monologue
+...ah. #speaker_self
+#speaker_right_image:cha_nadia_azlin_confused.png 
+#speaker_left_image:cha_nadia_gavin_casual_nervous.png
+What? #speaker_left
+Haha, it’s okay. #speaker_right
+Did he just try to salam my cousin? Oh this is awkward. I'll tell him later. #inner_monologue
+Hi kak, this is Gavin.	#speaker_self
+Hi Gavin...	#speaker_right
+PLEASE do not say “I’ve heard so much about you.”	#inner_monologue
+#speaker_left_image:cha_nadia_gavin_casual_normal.png
+#speaker_right_image:cha_nadia_azlin_happy.png 
+...nice to meet you! #speaker_right
+Oh thank goodness. Thank you Azlin. #inner_monologue
+What are you guys doing here?	#speaker_right
+We’re going to grab coffee.. There’s this halal cafe that just opened up.	#speaker_left
+Yes, and Gavin’s suggestion actually! #speaker_self
+#speaker_right_image:cha_nadia_azlin_teasing.png
+Oh really? I thought you were more of a tea person, Nad.	#speaker_right
+#speaker_left_image:cha_nadia_gavin_casual_concerned.png
+huh?	#speaker_left
++ [I like tea] I mean, I drink tea at home, but...  #speaker_self
+    Oh! Er, we can have te --	#speaker_left
+    No, I like coffee too..!  #speaker_self
+    #speaker_left_image:cha_nadia_gavin_casual_normal.png
+    No I mean, I know you like tea, that’s why I chose this cafe, it serves really good tea...	#speaker_left
++ [I like coffee] I like coffee! Coffee is good. Coffee at cafes. #speaker_self
+    What am I babbling about? This is so embarrassing. #inner_monologue
+    Only fancy cafes, huh?  No kopitiam kopi for you? #speaker_right
+    #speaker_left_image:cha_nadia_gavin_casual_normal.png
+    Kopi po siew dai. #speaker_left
+    Hmm? #speaker_right
+    That’s her usual order. At school.	#speaker_left
+- Haha ok ok, just teasing only.	#speaker_right
+Gee, thanks. #speaker_self
+#speaker_right_image:cha_nadia_azlin_happy.png 
+You’re welcome! Ok, I’ll get to my errands now. Text me later!	#speaker_right
+We’re in the clear! Oh no, Gavin is trying to salam her again... #inner_monologue
+That’s right Azlin, just ignore and walk away. #inner_monologue
+Did I miss something?	#speaker_left
+#speaker_right_image:pixel.png 
+Sorry about that. The salam thing - er, you don’t have to salam Azlin. #speaker_self
+You don’t do that when you’re a guy and she’s...	#speaker_self
+Wow. I am tripping up today.	#speaker_left
+It’s fine, she was definitely more kaypoh to meet you. It’s nothing offensive or rude. #speaker_self
+How come there are so many invisible rules?	#speaker_left
++ [Not "rules"] I wouldn’t say rules...	#speaker_self
+    Ok, not rules.	#speaker_left
++ [It's culture] Cultural... customs. Habits. Adat, which means behaviour of.. being polite.	#speaker_self
+    Social protocol. #speaker_left
+- Courtesy. #speaker_self
+Code of conduct. #speaker_left
+Ugh why must you make everything sound so formal?	#speaker_self
+#speaker_left_image:cha_nadia_gavin_casual_concerned.png
+(Bewildered) Well yeah, but it is. I had no idea Malay people were so formal. 	#speaker_left
+Why, because we just sit downstairs at void deck with guitar all?	#speaker_self
+Oi don’t put words in my mouth -	#speaker_left
+— ok fine, but just because you don’t know about it doesn’t mean it doesn’t exist.	#speaker_self
+And I’m just trying to understand how come I never knew any of this before.	#speaker_left
+Because you’re not Malay!	#speaker_self
+#speaker_left_image:cha_nadia_gavin_casual_grinning.png
+No shit! (Bursts out laughing) #speaker_left
+Hahaha... I love that we can laugh together, until it almost hurts... #inner_monologue
+All that tension -- gone, at least for now. #inner_monologue
+Is it always going to be like this? #inner_monologue
+So I have to tell you something.	#speaker_left
+Now what?	#speaker_self
+I am.. Chinese. I’m sorry if you didn’t notice before.	#speaker_left
+(Laughs) Really? Are you sure? #speaker_self
+Yup! Says so on my IC. #speaker_left
+Oof, let’s save that for another day. #speaker_self
+Agreed. I’m sorry things got weird.	#speaker_left
+It’s ok, I’m the one who got a bit..	#speaker_self
+#speaker_left_image:cha_nadia_gavin_casual_normal.png
+Snarky?	#speaker_left
++ [Yes, that] Yes, that. I got defensive. #speaker_self
++ [Who, me?] Let's go with "indignant." #speaker_self
+- It's fine. And I hope you know I wasn’t criticising your.. culture.	#speaker_left
+Oh these things, it’s sort of - no need to say one. It’s just how we are around family. 	#speaker_self
+You grow up with it. So when you were so confused by it, and suddenly I have to explain things that usually no need to say.. it rattled me, actually.	#speaker_self
+I feel like an idiot saying this. But maybe only just now did I realise: eh, we really are very different. 	#speaker_self
+Haha so I was kinda right, you really did just realise I’m Chinese. #speaker_left
+You know what I mean! #speaker_self
+Yeah, I do. I feel a bit of it. Funny huh, we spend so much time hanging in school. #speaker_left
+This is a new feeling.	#speaker_left
+I hate new feelings. #speaker_self
+Well.. I hope not.	#speaker_left
+(smiles) Ok. I don’t hate ALL new feelings. #speaker_self
+#speaker_left_image:cha_nadia_gavin_casual_grinning.png
+Good. Can’t believe we bumped into your cousin. Are you sure she’s not stalking us? 	#speaker_left
++ [Let's hide - just you and me] I wouldn’t put it past her. How about we go hide somewhere? #speaker_self
+    VAR nadia_2_hidewithgavin = true
+    Do you still want coffee? 	#speaker_left
+    Ooh I don’t know. How caffeinated do we want to be? #speaker_self
+    Haha, you’re right - I feel quite awake already after all that. 	#speaker_left
+    How about.. Somewhere quiet and chill? #speaker_self
+    How about a silly movie? #speaker_left
+    Oh! How about a scary movie? #speaker_self
+    #ui:narrator
+    #background:bg_nadia_cinema.jpg
+    We end up watching the latest Thai horror movie. 
+    I think Gavin liked it. He grabbed my hand at a jump scare... 
+    And didn’t let go for the rest of the movie.
+    {nadia_2_huggavin: I didn't want him to.}
+    -> nadia_2_3_narration
+
++ [No clue!]  I hope not! #speaker_self
+    ~ nadia_2_hidewithgavin = false
+    Do you still want coffee?  #speaker_left
+    Not if it means we’re going to be walking around this mall looking for the place, haha.  #speaker_self
+    Yeah and it’s so crowded today! How about.. A movie?#speaker_left
+    Yeah, why not! #speaker_self
+    Something serious or silly?#speaker_left
+    Silly, please.  #speaker_self
+    #ui:narrator
+    #background:bg_nadia_cinema.jpg
+    We end up watching a very strange and silly movie. 
+    He didn’t try to hold my hand or anything. Everything was just comfortable, and.. nice.
+    -> nadia_2_3_narration
+
+=== nadia_2_3_narration ===
+#knot:nadia_2_minigame
+#ui:mcq
+#game_id:3
+Minigame 3 // must add some text
+
+#knot:nadia_2_3_narration
+#ui:narrator
+#background:bg_nadia_library.jpg
+3:20pm, on a Monday.
+It’s the start of the school week, and I’m in the library in between class periods. 
+Chloe said she was going to speak to a teacher, then join me here 20 minutes ago. 
+Where is she... 
+
+-> nadia_2_3 
+
+=== nadia_2_3 ===
+#knot:nadia_2_3
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Chloe
+#chat_group_image:ico_nadia_chloe.png
+#speaker_1_name:Chloe
+15:20 #timestamp
+idk what I’m gg to tell my mum #speaker_1
+What happened!  #speaker_self
+The opposite of good news #speaker_1
+Are you still having consult? #speaker_self
+Just finished. I’m gg to sit here and stone for awhile k #speaker_1
+Nuuuu can’t be that bad #speaker_self
+idkkkkkkk I don’t even feel like studying anymore #speaker_1
+:( well i’m gg to be in the library ok?  #speaker_self
+You take your time la. I brought snacks, if that helps... #speaker_self
+I don’t know. Maybe I’m being dramatic. #speaker_1
+You want to talk about it? #speaker_self
+Maybe not now. I think.. I’d rather hear about your date  👀👫  #speaker_1
++ [It was nice]  Ah! Haha yes, um it was nice.  #speaker_self
+    Wow, please hold back on the details!! 😂  #speaker_1
++ [It was okay]  Oh uhhh. It was fine! Normal la.  #speaker_self
+    omg, telll me moreee #speaker_1
+- Ok fine, fine. Then you come down here la! #speaker_self
+#ui:narrator
+#background:bg_nadia_library.jpg
+10 minutes later
+#ui:scene
+#background:bg_nadia_library.jpg
+#speaker_left_image:cha_nadia_chloe_school_normal.png
+#speaker_left_name:Chloe
+So.. how was date-day? #speaker_left
+Kinda the same, kinda really different.. Did you see this coming? #speaker_self
+#speaker_left_image:cha_nadia_chloe_school_grinning.png
+Only like, finally. You guys have been into each other for ages! The banter is non-stop with you two. #speaker_left
+Why didn’t you say anything!! #speaker_self
+Cos I didn’t want to accidentally force something into happening, if it wasn’t going to happen.	#speaker_left
+In case it doesn’t work out.. because she doesn’t think it will? #inner_monologue
+#speaker_left_image:cha_nadia_chloe_school_normal.png
+Did he say anything about you know, wearing a headscarf?	#speaker_left
+Strangely.. it went ok. I was so nervous! Who knows what he really thinks of it. But he didn’t freak out. So there’s that at least. #speaker_self
+Are you sure you’re ok?	#speaker_self
+#speaker_left_image:cha_nadia_chloe_school_confused.png
+Gah, I don’t know.  #speaker_left
+It’s just so frustrating, I feel like I’ve been trying to do everything right but it’s still not going to be good enough. #speaker_left
+What’s this about?	#speaker_self
+I have.. been hoping to apply for overseas scholarships. #speaker_left
+My mum keeps bugging me about it. So I’ve been asking some teachers. #speaker_left
+Everybody is saying to just try la, what’s the harm right. But I don’t want to waste my time! #speaker_left
+#speaker_left_image:cha_nadia_chloe_school_sad.png
+If my chances are going to be lousy, I want to know so I can figure something else out. #speaker_left
+Argh, I hate that this is stressing you out. #speaker_self
+#speaker_left_image:cha_nadia_chloe_school_confused.png
+I know right! My mum is convinced that it’s the route to go for.  #speaker_left
++[Why does your mum think this way?] -> nadia_2_3a
++[What do you think?] -> nadia_2_3b
+
+= nadia_2_3a
+Why is she so fixed on scholarships though?  #speaker_self
+Well, all her friends keep talking about it too I guess.  #speaker_left
+They have kids our age, in other JCs or already on scholarships. #speaker_left
+It’s so weird how parents gossip!! #speaker_self
+Tell me about it! I’ve never even met these guys, but I probably can tell you their life stories based on what my mum tells me.  #speaker_left
+Who got through DSA, who transferred out, who didn’t get into med school here and now it’s costing a bomb to go overseas.. #speaker_left
+Oh boy. Should I tell her about med school? #inner_monologue
++[Yes, maybe Chloe can help me.] -> nadia_2_3a1
++[No, this is about Chloe not me.] -> nadia_2_3a2
+
+= nadia_2_3a1
+VAR nadia_2_chloelibrarychoice = 1
+Ok, I have to tell you something.  #speaker_self
+What is it? #speaker_left
+I’m going to try for med school too.  #speaker_self
+Oh shit. Really? #speaker_left
+Yeah.. is that crazy? #speaker_self
+I mean, you know how tough it’s going to be.  #speaker_left
+I’m going to try.  #speaker_self
+Well of course! It’s really prestigious.  #speaker_left
+The hours are mad long though, you’re gonna sacrifice a lot.  #speaker_left
+That’s what they tell me on TV. #speaker_self
+#speaker_left_image:cha_nadia_chloe_school_concerned.png
+It’s real! And what if a patient DIES. I could never do it, and I don’t think you’re the GP doctor sort either. #speaker_left
+I think it’s worth it.  #speaker_self
+If somehow I get the grades to get into med school.. Then that’s the best use of it. You know? #speaker_self
+If you get those grades, you could go anywhere! What about law? #speaker_left
+Mmmph not my thing.  #speaker_self
+I guess a Dr. Nadia does makes more sense for the universe. #speaker_left
+-> nadia_2_3c
+
+= nadia_2_3a2
+~ nadia_2_chloelibrarychoice = 2
+All this sounds really stressful. #speaker_self
+Totally. It’s like I’m being pushed for something that I can’t really argue against.  #speaker_left
+But you’re so good at arguing with your mom.  #speaker_self
+Well this one isn’t as fun. I mean, it’s GOOD to get your name on a scholarship right? That means you’re someone. #speaker_left
+Does it really matter? #speaker_self
+Ya! Not that I like it, but it’s the game, and you gotta make smart moves.  #speaker_left
+(Doubtfully) Ok, assuming you’re right.. why do you think you’re not in the game anymore? #speaker_self
+#speaker_left_image:cha_nadia_chloe_school_sad.png
+So I was talking to the HOD just now about the scholarship I’m applying for. You know he’s the super honest type. No bullshit.  #speaker_left
+Said that based on his past students and how they did.. I don’t have enough on my track record. #speaker_left
++ Woah, he really said that ?![] #speaker_self
+    Ya something along the lines of ‘showcase self-initiated community projects with impact’.  #speaker_left
++ [He's wrong!]  But you have a great record! What about hockey, and...and...  #speaker_self
+    Ya exactly, hockey and what? I don’t have any ‘service to the community’ type of thing to talk about. #speaker_left
+-  I shouldn’t have spent all my time with hockey. Should have joined student council like you and Gavin.. #speaker_left
+But you LOVE hockey. And you think student council people are annoying and idealistic.  #speaker_self
+#speaker_left_image:cha_nadia_chloe_school_normal.png
+Correction - everyone else, aside from you and Gavin. #speaker_left
+-> nadia_2_3c
+
+= nadia_2_3b
+~ nadia_2_chloelibrarychoice = 3
+But what do you think? That’s the most important thing.  #speaker_self
+You always say she ends up being right. #speaker_self
+It’s so annoying! Like I’m being pushed for something that I can’t really argue against.  #speaker_left
+Hmm.. do you want a scholarship?  #speaker_self
+Well.. it’ll be really cool to study overseas.  #speaker_left
+Right? You get to do that, and have a career set and planned.  #speaker_left
+Would you still go overseas without a scholarship? #speaker_self
+Maybe.. I think we could, but it really is so expensive.   #speaker_left
+Oh boy. Med school is expensive too. #inner_monologue
+Chloe, should I be looking at scholarships too? #speaker_self
+#speaker_left_image:cha_nadia_chloe_school_concerned.png
+I didn’t know you wanted to go overseas too! #speaker_left
+Oh no, no, I’m probably going to stick to the local unis. But hoping to apply for.. med school. #speaker_self
+Really? I guess I can see that happening.. #speaker_left
+You think so?  #speaker_self
+Yeah, sure. It is pricey though, I heard it’s like three times more than other degrees. #speaker_left
+Three?? #speaker_self
+Oh boy, and you’re also going to be doing more years in school too. The unis have scholarships too, you can try for that?  #speaker_left
++ I'll look into it. [] #speaker_self
+    And financial assistance, I think.  #speaker_left
+    Right, that too.  #speaker_self
++ [Sounds competitive] Getting a scholarship on top of getting into med school? Sounds impossible... #speaker_self
+    Oh if not scholarship, I think there’s financial assistance too. #speaker_left
+- You know, and if somehow med school doesn’t work out.. I mean, they shortlist more than 1,000 applicants, then only offer less than 300 spots.  #speaker_left
+There’s always.. nursing? #speaker_left
+That’s not the same thing. #inner_monologue
+Isn’t your cousin in nursing? That’s good right? #speaker_left
+Yeah she is, but not through NUS. #speaker_self
+Ah, right..  #speaker_left
+Azlin worked HARD for her diploma.  #inner_monologue
+#speaker_left_image:cha_nadia_chloe_school_normal.png
+Well I guess we’re both on the same track. #speaker_left
+What’s that? #speaker_self
+Making life more difficult for ourselves. #speaker_left
+-> nadia_2_3c
+
+=== nadia_2_3c ===
+#ui:scene
+#background:bg_nadia_library.jpg
+#speaker_left_image:cha_nadia_chloe_school_sad.png
+#speaker_left_name:Chloe
+Gee, thanks. Well.. scholarships are competitive, but so are you! Your essays are laser sharp.  #speaker_self
+It’s not enough. Just wish I had a bit of an advantage.. Anyway, you won’t understand.  #speaker_left
+Come on, try me. #speaker_self
+#speaker_left_image:cha_nadia_chloe_school_normal.png
+Well, it’s different for you. You’ll probably have an easier time getting a scholarship too.  #speaker_left
+I really don’t think so. #speaker_self
+Nad, it’s easier for you to get into things.  #speaker_left
++ [Right.] -> nadia_2_3d
++ [What do you mean by that?] -> nadia_2_3e
+
+=== nadia_2_3d ===
+VAR nadia_2_confrontchloe = false
+Right. #speaker_self
+Argh it’s so unfair. You fill the "quota", you know?  #speaker_left
+No, I don’t know, Chloe. #inner_monologue
+#speaker_left_image:cha_nadia_chloe_school_concerned.png
+It's like HDB quotas, somehow there's always space for Malay or Indian. You're so lucky you're Malay.    #speaker_left
+That’s not how things work.. right?? #inner_monologue
+// #speaker_left_image:pixel.png
+// #background:new_message_notification.jpg
+// A message from Gavin.
+// #ui:whatsapp
+// #background:whatsapp.png
+// #chat_group_title:Gavin
+// #chat_group_image:ico_nadia_gavin.png
+// #speaker_1_name:Gavin
+// Hey wru? #speaker_1
+// My church friend is down to meet this Sat. What say u? We can properly get coffee this time :)  #speaker_1
+// #ui:scene
+// #background:bg_nadia_library.jpg
+// #speaker_left_image:cha_nadia_chloe.png
+// #speaker_left_name:Chloe
+I can’t do this right now.  I need to escape this conversation somehow. #inner_monologue
+Yeah. I’m sure you’ll be fine.  #speaker_self
+Oops, I have to go home early.  #speaker_self
+My dad just texted, says he needs me for something. You’re ok right? #speaker_self
+#speaker_left_image:cha_nadia_chloe_school_sad.png
+Yeah, sure...  #speaker_left
+#ui:notification
+#background:ui_nadia_message.jpg
+Abah: Huhu terjumpa (found) photo of Nadia when she was small # message
+
+-> nadia_2_3d_whatsapp
+
+=== nadia_2_3d_whatsapp ===
+#knot:nadia_2_3d_whatsapp
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Family Chatgroup
+#chat_group_image:ico_nadia_family.png
+#speaker_1_name:Abah
+#speaker_2_name:Azlin
+#speaker_3_name:Cik Lina (aunt)
+#speaker_4_name:Raihan (cousin)
+Huhu terjumpa (found) photo of Nadia when she was small 🌱👶🐛🦋 #speaker_1
+bg_nadia_childdoctor.jpg #speaker_1 #image
+Haha so serious this girl #speaker_2
+From young my girl already have ambition! Study hard and achieve your dreams. 🤲  #speaker_1
+Insyaallah, you will become a doctor and then you can really help people. It is the MOST noble profession. Any hospital would be lucky to have you! #speaker_1
+Alahai, cute nye  #speaker_3
+haha i remember that teddy bear  #speaker_4
+#ui:scene
+#background:bg_nadia_library.jpg
+Woah, where did that speech come from? #inner_monologue
+Azlin’s in this chat, I hope she doesn’t feel weird about what Abah said.  #inner_monologue
+It’s like he forgot we already have someone in the family who works in a hospital and helps people...  #inner_monologue
+Actually... I really need to talk to Azlin and process what Chloe just said. I better text her: #inner_monologue
++ [I can’t believe what Chloe just said. TO MY FACE!] -> nadia_2_3d1
++ [Hey Kak, are you off today?] -> nadia_2_3d2
+
+=== nadia_2_3d1 ===
+#knot:nadia_2_3d1
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Azlin
+#chat_group_image:ico_nadia_azlin.png
+#speaker_1_name:Azlin
+Wow. I can’t believe what my friend just said to me #speaker_self
+To my face!! #speaker_self
+who?? #speaker_1
+Argh too long to type la, can we meet later please  #speaker_self
+Geram (makes me angry) to the max  #speaker_self
+fuyoo yeah sure sure 8pm? usual spot. #speaker_1
+-> nadia_2_4_narration
+
+=== nadia_2_3d2 ===
+#knot:nadia_2_3d2
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Azlin
+#chat_group_image:ico_nadia_azlin.png
+#speaker_1_name:Azlin
+Kak are you off today? #speaker_self
+yap, why? #speaker_1
+Argh too long to type. Can we meet later please  #speaker_self
+yeah sure sure 8pm? usual spot. #speaker_1
+is this pasal (about) Gavin #speaker_1
+No. Worse. #speaker_self
+wow. later we get ice cream from the mama shop k. cool you down a bit #speaker_1
+-> nadia_2_4_narration
+
+=== nadia_2_3e ===
+#knot:nadia_2_3e
+#ui:scene
+#background:bg_nadia_library.jpg
+#speaker_left_image:cha_nadia_chloe_school_concerned.png
+#speaker_left_name:Chloe
+~ nadia_2_confrontchloe = true
+What do you mean by that? #speaker_self
+Don’t make me say it.. it’s like HDB quota ok. It’s always easier if you’re Malay or Indian. #speaker_left
+Are you sure? How do you even know this? #speaker_self
+Right, you don’t have any siblings... my sister is trying to BTO and it’s crazy hard.  #speaker_left
+Especially if you want to get a good location. It’s damn competitive! You’re so lucky you’re Malay.  #speaker_left
+If you’re not Chinese, you can just swoop right in. Somehow there’s always space in the quota for Malay or Indian. #speaker_left
+Chloe, I don’t think it works that way. I have family and older cousins who live in HDBs. I’m pretty sure they don’t have an easy time.    #speaker_self  
+Why am I getting angry? Maybe I need to find an excuse to walk away. #inner_monologue
+#speaker_left_image:pixel.png
+
+#ui:notification
+#background:ui_nadia_message.jpg
+Abah: Huhu terjumpa (found) photo of Nadia when she was small # message
+#ui:scene
+#background:bg_nadia_library.jpg
+#speaker_left_image:cha_nadia_chloe_school_concerned.png
+#speaker_left_name:Chloe
+Anyway, I need to take this. #speaker_self
+
+-> nadia_2_3e_whatsapp
+
+=== nadia_2_3e_whatsapp ===
+#knot:nadia_2_3e_whatsapp
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Family Chatgroup
+#chat_group_image:ico_nadia_family.png
+#speaker_1_name:Abah
+#speaker_2_name:Azlin
+#speaker_3_name:Cik Lina (aunt)
+#speaker_4_name:Raihan (cousin)
+Huhu terjumpa (found) photo of Nadia when she was small 🌱👶🐛🦋 #speaker_1
+bg_nadia_childdoctor.jpg #speaker_1 #image
+Haha so serious this girl #speaker_2
+From young my girl already have ambition! Study hard and achieve your dreams. 🤲  #speaker_1
+Insyaallah, you will become a doctor and then you can really help people. It is the MOST noble profession. Any hospital would be lucky to have you! #speaker_1
+Alahai, cute nye  #speaker_3
+haha i remember that teddy bear  #speaker_4
+#ui:scene
+#background:bg_nadia_library.jpg
+Woah, where did that speech come from? #inner_monologue
++ [Reply to the group chat and thank your dad] 
+    #ui:whatsapp
+    #background:whatsapp.png
+    #chat_group_title:Family Chatgroup
+    #chat_group_image:ico_nadia_family.png
+    #speaker_1_name:Abah
+    #speaker_2_name:Azlin
+    #speaker_3_name:Cik Lina (aunt)
+    #speaker_4_name:Raihan (cousin)
+    Thank you Abah. I will try my best 🙏 #speaker_self
+    -> nadia_2_3e1
++ [Ignore group chat, chat with Azlin instead.] -> nadia_2_3e2
+
+===  nadia_2_3e1 ===
+
+#ui:notification
+#background:ui_nadia_message.jpg
+Azlin: Haha kembang (flower) seh # message
+
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Azlin
+#chat_group_image:ico_nadia_azlin.png
+#speaker_1_name:Azlin
+Haha kembang (flower blooming) seh #speaker_1
+Wait what do you meannn #speaker_self
+kembang, like you know, your head getting all big 🙃 oi i didn’t know your malay was this bad hahaha #speaker_1
+I KNOW what kembang is, and I’m not okayy 😑 It’s just my dad la, he can be very over #speaker_self
+lol memang (of course). anyway joking only. u really are working for it. #speaker_1
+I hope so.. #speaker_self
+don’t be like that! i really was just teasing a bit. u ok tak? #speaker_1
+Tough day. Some really weird conversations. Wanna hang out today? #speaker_self
+always, for my fave cuz. #speaker_1
+-> nadia_2_4_narration
+
+===  nadia_2_3e2 ===
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Azlin
+#chat_group_image:ico_nadia_azlin.png
+#speaker_1_name:Azlin
+Omg 😓 #speaker_self
+Why is my dad being so drama on wa #speaker_self
+best what, your abah so proud of you #speaker_1
+Sorry he’s like that. #speaker_self
+tak apalah (no issue) #speaker_1
+He really cannot maintain seh. He doesn’t get it la!  #speaker_self
+aiya, it’s just a cute photo. i think everyone will focus on that. and not his monologue. haha  #speaker_1
+“and then you can really help people” 😤 Like only doctors do that?? Hospitals only run on doctors?  #speaker_self
+nothing I haven’t heard from him before 🙃 #speaker_1
+It’s not fair tho #speaker_self
+it’s fine 👻 eh i’m off today. potong ice cream session this evening? #speaker_1
+Yes plssss. You won’t believe what this friend said to me today! #speaker_self
+fuyoo. k, text you later? usual spot. #speaker_1
+-> nadia_2_4_narration
+
+=== nadia_2_4_narration ===
+#knot:nadia_2_4_narration
+#ui:narrator
+#background:bg_nadia_playgroundnight.jpg
+8.45pm, at a playground bench. 
+This has been our hangout spot for ages, ever since Azlin moved into the same neighbourhood as me.
+
+-> nadia_2_4
+
+=== nadia_2_4 ===
+#knot:nadia_2_4
+#ui:scene
+#background:bg_nadia_playgroundnight.jpg
+#speaker_right_image:cha_nadia_azlin_happy.png
+#speaker_right_name:Azlin
+So.. are you sure this is not about Gavin? #speaker_right
+No, it’s really not. #speaker_self
+#speaker_right_image:cha_nadia_azlin_teasing.png 
+Sorry if I gave you a hard time that day when I bumped into you all. Hope I didn’t make it awkward.  #speaker_right
+Don’t bluff, you were enjoying yourself.  #speaker_self
+Ok I was, just a little. He seems nice, although when he - #speaker_right
+- tried to salam you! I died a bit.  #speaker_self
+But it was kinda cute. Clearly he knows who he needs to impress. Or try to. Smart guy.  #speaker_right
+It wasn’t that awkward right? I explained to him afterwards, and it’s so weird to suddenly need to even explain these — #speaker_self
+STOP. You’re obsessing. It was fine. Also I thought you said this wasn’t about Gavin. #speaker_right
+#speaker_right_image:cha_nadia_azlin_normal.png 
+You’re right. I need to unclench. I wanted to talk to you about... #speaker_self
++ [...what Chloe said.] -> nadia_2_4a
++ [... what my dad said.] -> nadia_2_4b
+
+=== nadia_2_4a ===
+#ui:scene
+#background:bg_nadia_playgroundnight.jpg
+#speaker_right_image:cha_nadia_azlin_normal.png
+#speaker_right_name:Azlin
+VAR chapter_2_ending = 1
+..what Chloe said. Like it doesn’t even make sense!  #speaker_self
+I couldn’t even say anything back you know, I was stunned - like has she always felt this way? Is that really how she thinks? #speaker_self
+#speaker_right_image:cha_nadia_azlin_concerned.png
+Ok ok, one thing at a time. This Chloe person, your volleyball friend? #speaker_right
+(Sigh) Hockey.  #speaker_self 
+And this fight was about? #speaker_right
+Well she’s been obsessing about scholarships and this afternoon, she was really ticked off by something. I was just trying to talk to her.  #speaker_self
+Chloe said.. she thinks that I get accepted into things. Because I’m Malay. That I would fill their quota, so that’s why they would want me.  #speaker_self
+#speaker_right_image:cha_nadia_azlin_confused.png
+Wait, who’s “they”? #speaker_right
+I don’t even know! But Chloe thinks that I have it easier, that it’ll be easier for me to get into things, and that -  #speaker_self
+- she has to work harder than you. That’s some crazy shit.  #speaker_right
+It is, right? #speaker_self
+Ya it is. I’m sorry Nad, but your friend - does she even live in the real world? Nonsense seh! #speaker_right
+That’s what I couldn’t believe! She’s so level-headed, reasonable, I didn’t think she was so - #speaker_self
+- sheltered?  #speaker_right
++ [I didn’t think she would see race.] Not that. I didn’t think.. she would see race. #speaker_self
+    And I’m thinking: is this how she’s seen me all along? #speaker_self
++ [I thought we were better friends than this.] No, it’s just.. we’re such good friends. #speaker_self
+    She knows we both work super hard to get where we are. How can she think I have it easier?  #speaker_self
+- Does she also think we don’t have to pay school fees? Or that we get special treatment? #speaker_right
+Do people still think that!  #speaker_self
+I was digging around before I did my nursing diploma. Betul ke (is it true)? What is this that people who are never Malay always like to say? #speaker_right
+#speaker_right_image:cha_nadia_azlin_normal.png
+Isn’t it just one of those things taxi uncles like to complain about.  #speaker_self
+I found out.. It’s half-true, which is always the problem kan.  #speaker_right
+That doesn’t sound good.  #speaker_self
+We don’t get free education. That rumour is just rubbish. BUT. There is a government subsidy.. if you’re Malay, and trying to get diploma or degree.  #speaker_right
+How come we get subsidy? #speaker_self
+I know kan (right). Asked myself that also, and then I saw the max household income if you nak (want to) qualify. You know how much? $2000.  #speaker_right
+That’s not - #speaker_self
+- ya, is not a lot. Like if you qualify kan, that means there wasn’t money floating around to anyhow get a diploma.   #speaker_right
+#speaker_right_image:cha_nadia_azlin_confused.png
+But still.. why this special subsidy? And just for us? Because we’re what, native to Singapore? #speaker_self
+No, Nadia. Because more of us, more Malay people, are poor.  #speaker_right
+(Confused) That isn’t - I don’t think.. But we’re not poor because we’re Malay. #speaker_self
+Ya obviously. You, me and the next door neighbour also know that.  #speaker_right
+Doesn’t change the fact that when there’s a charity drive, and got photos on Facebook, the faces all Melayu.  #speaker_right
+And when there’s somehow a success story -   #speaker_self
+- then all over Berita Harian. Masyarakat Melayu boleh maju. Malay people can succeed! Haha, might be you next time. #speaker_right
+Argh, I hope not.. I want to be a doctor. But I don’t want it to be a big deal because I’m Malay. Suddenly becoming a poster.  #speaker_self
+It’s all the stories, with the money problems, the drug problems. Then, when there’s an achievement.. #speaker_self
+They shout it out to the whole kampong. Look what this person managed to do! You can do it too!! #speaker_right
+You managed also though. That says something kan? Put in the effort, work hard, and things get better.  #speaker_self
+We’re all trying. It’s nothing special.  #speaker_right
++ [Maybe some aren't trying hard enough]  Maybe some people don’t want to try hard enough.  #speaker_self
+    What? #speaker_right
+    Why are so many of us poor, until government give us special treatment? How come?  #speaker_self
++ [Then why are outcomes different?]    If we’re all trying, then why are so many of us still poor?  #speaker_self
+- I don’t know. But once you’re not doing well, with money problems, it’s harder to get out.  #speaker_right
+But it’s also personal decisions, right? Maybe it’s other people and their decision-making that’s.. not good.  #speaker_self
+Maybe always living beyond their means. Maybe a lot of them don’t know how to be responsible.  #speaker_self
+Who are you talking about? #speaker_right
+No one.. But you know, Cik Lina’s family - I know they have money problems, but when I see them, phones all macam baru (quite new) je. #speaker_self
+New phones, different models.  #speaker_self
+#speaker_right_image:cha_nadia_azlin_angry.png
+That’s not our business, Nad.  #speaker_right
+But it’s true though! Every Hari Raya also must change curtains.  #speaker_self
+Your abah telling you these things? #speaker_right
+It’s just something I noticed. #speaker_self
+Ya something you noticed. Doesn’t mean you understand. How people spend their money is not our business. #speaker_right
+Not if that’s why they keep being stuck! #speaker_self
+#speaker_right_image:cha_nadia_azlin_confused.png
+Let me tell you something. Those phones kan, it’s all secondhand okay.  #speaker_right
+It’s the thing that they can have and feel like everyone else. Have you ever met up with them? #speaker_right
+No, I’ve been busy.. #speaker_self
+Right. When you do, you meet them at MRT station. Because they’re on top-up, not phone plan.  #speaker_right
+#speaker_right_image:cha_nadia_azlin_normal.png
+They want to use public wifi. They all work part-time. Do you? #speaker_right
+I’m not, but that’s also why I’m not spending money anyhow.  #speaker_self
+And your coffee latte or bubble tea all whatever, that one come from where? Pocket money from your abah kan.  #speaker_right
+School fees? Next year when you go uni? #speaker_right
+I can take my own bank loan - #speaker_self
+... but you don’t have to. That’s the difference. They have “new” phones, but at home no internet. You know how difficult that makes school and work?  #speaker_right
++ [I get it] Okay, I get it. #speaker_self
+    Oh, really? You do? #speaker_right
++ [I know my family has it easier.]  I know things are.. easier for my family. #speaker_self
+    Your family can afford to make decisions easier. You don’t have to calculate many small decisions just to make one big one.  #speaker_right
+- You don’t think I want to get a degree like you? I see my colleagues, they all can climb higher with degree.  #speaker_right
+You thinking of doing degree next time? #speaker_self
+How to? Now my income finally dah stable, if I go back to nursing school - who’s going to pay the house bills?  #speaker_right
+See how that works? Because I’m being responsible, right? #speaker_right
+Kak..  #speaker_self
+#speaker_right_image:cha_nadia_azlin_confused.png
+When you don’t have much, it is so much more difficult to step up.  #speaker_right
+Kak, I understand - #speaker_self
+... no, just because you’re Malay doesn’t mean you understand. You and your father, always thinking you’re so different from the rest of us. #speaker_right
+I don’t think I’m different.. #speaker_self
+Sorry - not different. You think you’re better than the rest of us.  #speaker_right
+That’s not true! #speaker_self
+#speaker_right_image:cha_nadia_azlin_normal.png
+Maybe. I’m gonna go. I’ll see you around.  #speaker_right
+
+-> nadia_2_reflection
+
+=== nadia_2_4b ===
+#ui:scene
+#background:bg_nadia_playgroundnight.jpg
+#speaker_right_image:cha_nadia_azlin_normal.png
+#speaker_right_name:Azlin
+~ chapter_2_ending = 2
+..what my dad said. He really open mouth only.  #speaker_self
+It’s like that. Haha remember that time when he said - anyone can become a nurse.   #speaker_right
+#speaker_right_image:cha_nadia_azlin_concerned.png
+Like easy only. Take blood pressure only, help people go toilet only.   #speaker_right
+He doesn’t understand la.  #speaker_self
+It’s fine. I just close eyes, close ears. I’m happy as long as I get to work.  #speaker_right
+How’s your mom? She still wants you to kahwin and quit? #speaker_self
+Ya, she still makes noise. Say I already with my boyfriend so long, not good to drag and drag.   #speaker_right
+I just diam and make sure I don't complain about work in front of her.   #speaker_right
+She won’t understand. Think it’s better to just get married, have kids. Then like magic, all the problems disappear.  #speaker_right
+Maybe in her time. #speaker_self
+But it’s not anymore. I like my work. I don’t want to be just a housewife.   #speaker_right
+Although right, yesterday, I almost told her about this patient. Problem seh! Everything busy already, then want to create trouble.   #speaker_right
+What happened? #speaker_self
+#speaker_right_image:cha_nadia_azlin_confused.png
+Wanted to change nurses. Patient didn’t want my colleague to touch her. Because my colleague Indian.   #speaker_right
+What! And you had to follow the request? #speaker_self
+Ya la, patient still need medical care. I had to step in just to get the job done.   #speaker_right
+My colleague so upset seh. Want to maintain my own face also difficult. Next time when you’re a doctor, you also must learn.   #speaker_right
+Arghhh, how do you do it? When people are rude, I really cannot! Just now already with Chloe, I wanted to just let go seh.  #speaker_self
+What happened? You both fought?   #speaker_right
+She was telling me... get this. She was telling me it is easier for me to get into things.  #speaker_self
+Uni applications, scholarships. Because I’m Malay. That there’s some magic quota I help fill.  #speaker_self
+People still think that way? All through poly I heard that. At least she told you to your face.   #speaker_right
+In my time, everyone just paggro whisper behind my back. And when you do well, people low-key surprised.    #speaker_right
+Sounds like my Maths teacher. Saying I’m good at the subject. “Very rare,” she said.   #speaker_self
++ How you tahan (tolerate) this kind of thing? [] #speaker_self
+    You just hold your breath and smile. Shield up. Ignore their nonsense. Waste time only to get so worked up.   #speaker_right
+    But so geram (angry)! For Chloe to think I will have an easier time, that she has to work harder than me - when every day, I feel a bit... lost.  #speaker_self
+    Gavin and Chloe all have family and friends who went through JC, scholarships, uni. They know what’s coming up. I don’t, not really.  #speaker_self
+    Sorry I can’t help there.   #speaker_right
+    I don’t mean it that way! Without you around, I would feel even more alone.  #speaker_self
+    With all the stories from your work, at least I know I’m not really imagining things.  #speaker_self
++ [What should I do?]
+    But that’s my Maths teacher. Chloe is my friend. I didn’t expect this from her.  #speaker_self
+    Now I don’t know what to do about it. Should I talk to her about it more? #speaker_self
+    Uh, that one you decide. I wouldn’t bother.   #speaker_right
+    Sorry, I know she’s your friend, I’m just not surprised.  #speaker_right
+    No you’re right, I’ll have to think about it on my own.  #speaker_self
+    I’m just glad you’re here or I would feel even more alone. With all the stories from your work, at least I know I’m not imagining things. #speaker_self
+- It’s funny right. You can work harder than everyone else, but you slip up one time, or giving yourself a break, and in front of the wrong person -  #speaker_right
+... they will think it’s because she’s lazy, or not very smart.  #speaker_self
+Because she’s Malay.   #speaker_right
+Gavin told me some time ago.. He told his mum I hadn’t been in school and she said, “wah JC still can like that?”  #speaker_self
+Her first thought was that I was anyhow skipping classes, not that I was sick.  #speaker_self
+Didn’t he say anything?  #speaker_right
+I don’t know. This was very long ago, maybe he didn’t know what to make of it. She also told him to spend less time with me.  #speaker_self
+Seriously?  #speaker_right
+Ya. He said it like it’s funny, cos his mum was concerned about me being a bad influence and not being serious about school. #speaker_self
+Whose notes is her son using?? #speaker_self
+Clearly has not met you.   #speaker_right
+I don’t even want to think about it. Or whatever Chloe might actually think of me.  #speaker_self
+What were you guys fighting about?  #speaker_right
+Well, it wasn’t really a fight-fight. I just left the conversation halfway. I felt so uneasy about it.  #speaker_self
++ ..are there really HDB racial quotas? []  #speaker_self 
+    #speaker_right_image:cha_nadia_azlin_teasing.png
+    Wow you JC kids really think far ahead ah.  #speaker_right
+    No, no way, not like that. It’s Chloe, she said I can get the scholarship easier just like how Malays get HDB ballots easier.  #speaker_self
+    #speaker_right_image:cha_nadia_azlin_confused.png
+    Is that true? But Cik Lina had a hard time when she was applying for a flat.  #speaker_self
++ [What she said was so wrong] 
+    It felt like.. Whatever I do from here, will just be undermined, right? Because I’m Malay, so I fill the quota.   #speaker_self
+    Yup, can’t win. #speaker_right
+    And the HDB thing -- if it was really so easy, why did Cik Lina have a hard time when she was applying for a flat?  #speaker_self
+- It’s hard for everyone la. People always think just because there’s a quota to buy a flat, that means we can always get any flat.   #speaker_right
+People always want what they can’t have.   #speaker_right
+#speaker_right_image:cha_nadia_azlin_normal.png
+They don’t see that other side. Next time if you need to sell your flat, you can also only sell to a very small group of people.   #speaker_right
+You can never get a good price because there’s not enough people to make a demand.   #speaker_right
+But if you can buy and sell from anyone, then you can have more people who are willing to compete to give you a better price.  #speaker_right
+That sounds very complicated. #speaker_self
+Aiya, you don’t worry about this now. Just focus on getting into med school.   #speaker_right
+Just remember that people are always looking for excuses to blame others, especially if they feel threatened.   #speaker_right
+Don’t give them that chance, keep your head down.   #speaker_right
+But if they’re wrong, shouldn't I correct them? It’s not right to let things slide, when something isn’t fair or they have the wrong idea.  #speaker_self
+Like when I said nothing and took over my colleague’s racist patient? Sometimes you just get on with it.   #speaker_right
+That’s different, that was out of your control. #speaker_self
+Did Gavin say anything to his mum when she thought you were a bad influence?  #speaker_right
+I don’t know. #speaker_self
+You remind me of me when I was younger. But you learn la Nads. The world doesn't care how much you fight.   #speaker_right
+It just wants you quiet and compliant. Penat (tired) you know? Focus on your A’s. Maybe Gavin is nice, but... save yourself the heartache.  #speaker_right
+
+-> nadia_2_reflection
+
+
+
+=== nadia_2_reflection ===
+#knot:nadia_2_reflection
+#ui:chapter_reflection
+#reflection_id:3
+Reflection 3
+
+
+-> nadia_3_intro
+
+
+=== nadia_3_intro ===
 
 -> END

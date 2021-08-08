@@ -2,7 +2,7 @@
   {
     "id": 1,
     "type": "MULTI_CHOICE",
-    "body": "How did the character's journey thus far make you feel?",
+    "body": "How did the character's story thus far make you feel?",
     "choices": [
       {
         "body": "Optimistic"
@@ -21,6 +21,9 @@
       },
       {
         "body": "Hurt"
+      },
+      {
+        "body": "Confused"
       },
       {
         "body": "None of the above"
@@ -79,6 +82,38 @@
       {
         "body": "Answering Azlin's questions about Gavin"
       }
+    ]
+  },
+  {
+    "id": 6,
+    "type": "MULTI_CHOICE",
+    "body": "Which of the situations did you find the most challenging for Nadia?",
+    "choices": [
+      {
+        "body": "Anticipating Gavin's reactions when he saw her dressed in the hijab"
+      },
+      {
+        "body": "Dealing with Chloe's perception that Nadia is advantaged unfairly because of her race"
+      },
+      {
+        "body": "Understanding Azlin's viewpoints and her struggles as a Malay"
+      } 
+    ]
+  },
+  {
+    "id": 7,
+    "type": "MULTI_CHOICE",
+    "body": "What do you think is Nadia's most significant challenge ahead?",
+    "choices": [
+      {
+        "body": "Being comfortable with herself (e.g. donning the hijab)"
+      },
+      {
+        "body": "Change how her peers perceive her and other Malays"
+      },
+      {
+        "body": "Navigating and understanding the experiences of other Malays"
+      } 
     ]
   }
 
