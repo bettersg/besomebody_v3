@@ -1385,8 +1385,8 @@ Everybody is saying to just try la, what’s the harm right. But I don’t want 
 #speaker_left_image:cha_nadia_chloe_school_sad.png
 If my chances are going to be lousy, I want to know so I can figure something else out. #speaker_left
 Argh, I hate that this is stressing you out. #speaker_self
-I know right! My mum is convinced that it’s the route to go for.  #speaker_left
 #speaker_left_image:cha_nadia_chloe_school_confused.png
+I know right! My mum is convinced that it’s the route to go for.  #speaker_left
 +[Why does your mum think this way?] -> nadia_2_3a
 +[What do you think?] -> nadia_2_3b
 
