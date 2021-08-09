@@ -171,6 +171,7 @@ You’ve been cutting your hair, haven’t you? #speaker_right
 How could you even say that! Doesn’t this mean anything to you? How can you take this so lightly? #speaker_right
 Sis, until and unless you keep a turban yourself, or even keep your hair longer than your shoulders, or have to do bloody NS, for God’s sake, you are not in a position to comment on or judge my life choices.  #speaker_self
 Don’t pretend to be so perfect. Neither of us are role models. #speaker_self
+Don't you even go there Aman. I am not having that conversation with you right now. #speaker_right
 Now, will you please take the airpods, and leave me alone? #speaker_self
 Sigh. Aman, I... #speaker_right
 ... I ...  #speaker_right
@@ -205,6 +206,7 @@ Babe, I’m sorry, I think I’m going to do it. #speaker_self
 Jaan (dear), don’t do anything rash. #speaker_1
 Remember what we’ve been taught about being a good Sikh and honoring our Gurus? #speaker_1
 About following the Sikhi way of life, no matter how challenging? Don’t do anything that will hurt your parents...  #speaker_1
+It would be totally against our faith to cut your hair... what message would you be sending if you did this?  #speaker_1
 And I think you're handsome already! #speaker_1
 ... #speaker_1
 ... hello? #speaker_1
@@ -220,8 +222,8 @@ Awww... 😍 #speaker_self
 So - did you decide...?  #speaker_1
 You know what.  #speaker_self
 I wasn’t sure up till this very moment, but I’ve decided now.  #speaker_self
-+ [I am going to cut my hair. I have to do this.] -> aman_1_4_narration #speaker_self
-+ [I'll keep my hair. You were right dear.] -> aman_1_9_narration   #speaker_self
++ I am going to cut my hair. I know you may not agree but I have to do this[.] -> aman_1_4_narration #speaker_self
++ I'll keep my hair. You were right dear[.] -> aman_1_9_narration   #speaker_self
 
 === aman_1_4_narration ===
 #knot:aman_1_4_narration
@@ -336,15 +338,15 @@ Damnit. Aaaaargh.  #inner_monologue
 I... #speaker_self
 + [I'm going to NS so I had to cut it.] Papa you don't understand what Army BMT is like! #speaker_self
    ~aman_mood -= 1
-   I had to cut it otherwise NS will be miserable for me - even more miserable than for the chinese boys. #speaker_self
     Nobody else in our family had to do Army BMT, and they all went to policy or SCDF so they didn't have to deal with this. #speaker_self
-    If I didn't cut it, there's no time to wash my hair or turban in BMT! #speaker_self
+   I had to cut it otherwise NS will be miserable for me - even more miserable than for the chinese boys. #speaker_self
+    If I didn't cut it, there's no time to wash my hair or turban in BMT! Even though SAF would let me keep my hair, it would be exhausting to manage papa. #speaker_self
     Papa?  #speaker_self
 + I knew you wouldn't understand![] 
     ~aman_mood -= 2
     This wasn't easy for me either but none of you even bothered to ask me about how I was preparing for Army BMT. #speaker_self
     All the chinese boys already complain about how hard it is and how little sleep they have. #speaker_self
-    And they don't even have to wash their hair or turban every night. #speaker_self
+    And they don't even have to wash their hair or turban every night. Even though SAF would let me keep my hair, it would be exhausting to manage papa.  #speaker_self
     All the cousins went to police or SCDF so they have no idea how hard it is outfield. #speaker_self
     And you didn't care to ask me. #speaker_self
     You're just stuck in your old traditions and don't care about what's best for me. #speaker_self
@@ -354,7 +356,7 @@ I... #speaker_self
     Papa Army BMT is not like police or SCDF, so your experience and the cousins don't have to deal with mud and helmets. #speaker_self
     I didn't know what to do. I had nobody to talk to about this.  #speaker_self
     I wish I didn't have to do this but Zhihao said they would tekan me in NS if I came in with a turban. #speaker_self
-    I heard all these horror stories about how little sleep they get, and if I had to wash my hair and turban it would be even worse. #speaker_self
+    I heard all these horror stories about how little sleep they get, and if I had to wash my hair and turban it would be even worse.  Even though SAF would let me keep my hair, it would be exhausting to manage papa. #speaker_self
     Papa I'm sorry. I really had to do this. #speaker_self
     Papa? #speaker_self
 - Sigh. Son, come home. What's done is done. It is in Waheguru's hands now. #speaker_1
@@ -462,7 +464,7 @@ Thanks buddy. #speaker_left
 #ui:narrator
 #background:bg_aman_bmtparadesquare.jpg
 BMT Passing Out Parade. #title
-My dad was still a bit grumpy about the hair, but he teared up at the parade. 
+My dad was still angry about the haircut, but even he teared up at the parade. 
 He claims he didn't but I could see his eyes were wet when we hugged.
 Ma was just happy I survived, I think.
 #background:bg_aman_ordberet.jpg
@@ -484,9 +486,9 @@ My family went out for dinner that night.
 #speaker_right_image:cha_aman_mama.png
 #speaker_right_name:Mama
 Our Aman looked so handsome at his passing out parade! #speaker_right
-You did it, son. I am proud of you. Of course, you would have looked more handsome wearing a turban instead of a beret. #speaker_left
-Enough motu (endearment), it’s not the time.  #speaker_right
-Aman, turban or no turban, you will always be my hero. #speaker_right
+You did it, son. I still feel like you let us down with your choice to cut your hair, and you would have looked more handsome wearing a turban instead of a beret... #speaker_left
+Enough motu (endearment), it’s not the time. We will have this conversation with him another day.  #speaker_right
+Aman, you will always be my son and my hero. #speaker_right
 Aman beta (dear), now that the hardest part is over, you should start thinking about what you will do after NS.  #speaker_right
 + [I was thinking of trying my hand at theatre and short films, Ma.]
     #speaker_right_image:cha_aman_jothi2_hairflip.png
@@ -789,7 +791,7 @@ Reflection 1
 Chapter 2 #title
 To Be or Not To Be #title
 I am finally done with NS, what an adventure! 
-{chapter_1_ending == 1 : Cutting my hair was a really difficult decision, but I'm growing it back out now.}
+{chapter_1_ending == 1 : Cutting my hair was a really difficult decision, and my father was furious with me... but I'm growing it back out now.}
 {chapter_1_ending == 2: Keeping my hair made NS even harder, but I'm glad I went through it.}
 So many varied experiences, and I have made some good friends too, like Lukman.
 I got accepted into my first choice uni in Melbourne! 
