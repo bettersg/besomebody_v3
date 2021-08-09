@@ -222,8 +222,8 @@ Awww... 😍 #speaker_self
 So - did you decide...?  #speaker_1
 You know what.  #speaker_self
 I wasn’t sure up till this very moment, but I’ve decided now.  #speaker_self
-+ I am going to cut my hair. I know you may not agree but I have to do this[.] -> aman_1_4_narration #speaker_self
-+ I'll keep my hair. You were right dear[.] -> aman_1_9_narration   #speaker_self
++ [I am going to cut my hair. I know you may not agree but I have to do this.] -> aman_1_4_narration #speaker_self
++ [I'll keep my hair. You were right dear.] -> aman_1_9_narration   #speaker_self
 
 === aman_1_4_narration ===
 #knot:aman_1_4_narration
