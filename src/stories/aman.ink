@@ -130,17 +130,10 @@ You keeping your turban? Die la. The cloth is never-ending. Can reach JB! #speak
     I don't know how to explain this to Zhihao. Heck, I don't know how to explain it to myself. #inner_monologue
     So maybe NS is just the excuse, but when I look in the mirror, I don't always feel like me with this. #inner_monologue
     This isn't an easy decision bro. I don't want to suffer in NS, but I also don't want to disappoint my family. #speaker_self
-- You want to kena tekan by your parents, or kena tekan by the sergeant major? #speaker_left
+- You want to kena tekan  (be given a hard time) by your parents, or kena tekan by the sergeant major? #speaker_left
 Is tekan by nobody an option? #speaker_self
-This is NS, sure tekan. Anyway, some of your cousins also don’t keep their turban what.  #speaker_left
-Haha I remember your little cousin from the next block - remember we used to tease him in the playground? #speaker_left
-Oh my god, yes! We would hide his water bottle, and after playing police and thief, we would all be so thirsty drinking our water, and he would have none. #speaker_self
-Then when he asked us for a sip, we would say cannnnnnnnn... #speaker_left
-And hand him our empty water bottles! Once you filled his bottle with sand, remember? #speaker_self
-Eh it was your idea! We were damn mean sia. #speaker_left
-You’re still mean what. #speaker_self
-Anyway that kid cut hair since secondary school what. So no problem la. #speaker_left
-His parents are different. Anyway, focus la! We still have to deliver all of these bags to the rental block. #speaker_self
+This is NS, sure tekan.   #speaker_left
+Sigh. Anyway, focus la! We still have to deliver all of these bags to the rental block. #speaker_self
 Ok, whatever. I don't pretend to understand but all I know is BMT sounds damn siong (difficult) - and I think even tougher if every night you need to wash hair! #speaker_left
 Don’t make things harder for yourself la.  #speaker_left
 
