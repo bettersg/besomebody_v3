@@ -222,6 +222,10 @@ const useInk = (json, characterId) => {
     // setChoices(savedStateRes.choices)
     // setSpecialTags(savedStateRes.specialTags)
     setGlobalVariables(savedStateRes.globalVariables)
+    Object.entries(savedStateRes.globalVariables).map((variables) => {
+      const [variableName, value] = variables
+      inkStory.setVariable(variableName, value)
+    })
     setCurrentKnot(loadFrom)
     // setCurrentKnot(savedStateRes.currentKnot)
     setIsStoryStarted(true)
