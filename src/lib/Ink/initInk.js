@@ -34,6 +34,10 @@ const initInk = (storyApi, json) => {
     return globalVariables
   }
 
+  const setVariable = (variableName, value) => {
+    inkStory.variablesState[variableName] = value
+  }
+
   const selectChoice = (choiceIndex) => {
     inkStory.ChooseChoiceIndex(choiceIndex)
   }
@@ -57,6 +61,7 @@ const initInk = (storyApi, json) => {
   return {
     nextStoryStep,
     getGlobalVariables,
+    setVariable,
     selectChoice,
     resetStory,
     startStoryFrom,
