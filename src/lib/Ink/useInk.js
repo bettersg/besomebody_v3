@@ -186,7 +186,7 @@ const useInk = (json, characterId) => {
       character: characterId,
       id: saveDataId,
       email: currentUser.email,
-      timestamp:new Date(),
+      timestamp: new Date(),
     }
 
     await createDbSavedStates(saveData, saveDataId)
@@ -210,23 +210,23 @@ const useInk = (json, characterId) => {
     inkStory.loadStoryState(savedStateRes.inkJson)
   }
 
-   /**
+  /**
    * Load the paragraphs or choices in local snapshots back into the React states
    * Submit the ink saved state back to inkjs but only the variables and not the starting know
    */
-    const handleLoadSavedVariables = async (loadFrom) => {
-      const savedStateRes = await getDbSavedStates(saveDataId)
-      if (!savedStateRes) return null
-       
-      // setParagraphs(savedStateRes.paragraphs)
-      // setChoices(savedStateRes.choices)
-      // setSpecialTags(savedStateRes.specialTags)
-      setGlobalVariables(savedStateRes.globalVariables)
-      setCurrentKnot(loadFrom)
-      // setCurrentKnot(savedStateRes.currentKnot)
-      setIsStoryStarted(true)
-      // inkStory.loadStoryState(savedStateRes.inkJson)      // so maybe this is the problem
-    }
+  const handleLoadSavedVariables = async (loadFrom) => {
+    const savedStateRes = await getDbSavedStates(saveDataId)
+    if (!savedStateRes) return null
+
+    // setParagraphs(savedStateRes.paragraphs)
+    // setChoices(savedStateRes.choices)
+    // setSpecialTags(savedStateRes.specialTags)
+    setGlobalVariables(savedStateRes.globalVariables)
+    setCurrentKnot(loadFrom)
+    // setCurrentKnot(savedStateRes.currentKnot)
+    setIsStoryStarted(true)
+    // inkStory.loadStoryState(savedStateRes.inkJson)      // so maybe this is the problem
+  }
 
   /**
    * Clear snapshots in React states
@@ -234,6 +234,15 @@ const useInk = (json, characterId) => {
   const handleResetSavedStory = async () => {
     await deleteDbSavedStates(saveDataId)
     setHasSavedState(false)
+  }
+
+  /**
+   * Find variable by name and give it a new value
+   * @param {string} variableName
+   * @param {string} value
+   */
+  const handleSetVariable = (variableName, value) => {
+    inkStory.setVariable(variableName, value)
   }
 
   return {
@@ -255,6 +264,7 @@ const useInk = (json, characterId) => {
     loadSavedStory: handleLoadSavedStory,
     loadSavedVariables: handleLoadSavedVariables,
     resetSavedStory: handleResetSavedStory,
+    setVariable: handleSetVariable,
   }
 }
 
