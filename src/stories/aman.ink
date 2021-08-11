@@ -68,7 +68,7 @@ VAR aman_mood = 10
 // VAR ending_id = 1;
 Aman Singh #title
 Sat Sri Akaal (God is Truth)!  I am Aman Singh. 
-Coming from a Sikh family, I keep my turban and beard, and wear the steel bangle, or kara. 
+As a Sikh, I keep my turban and beard, and wear the steel bangle, or kara. 
 Now, I'm not a perfect Sikh by any means, but I am still figuring out who I am... what faith means to me, and how I want to live my life.
 I’ve recently completed my diploma in accountancy, and NS is just around the corner. That’s going to be ‘fun’...
 I’m also interested in media, and I’ve been told I’m good looking. I don’t mind exploring acting and modelling jobs.
@@ -117,9 +117,9 @@ You okay? You’ve been so quiet this morning. PMS ah? #speaker_left
 You keeping your turban? Die la. The cloth is never-ending. Can reach JB! #speaker_left
 + [Oi, not funny] You gotta stop those ‘jokes’ man. Just cos I’m your friend and I give you a free pass, all the time...  #speaker_self
 + Funny ... ha-ha.[] Some of us have real problems on our hands you know.  #speaker_self
-- I don’t get it though. If you’re worried about your turban, just cut hair lah. #speaker_left
-+ I can’t do that.[] That’s insane.  #speaker_self
-    You know that is completely not allowed for Sikhs, right? My parents would be so disappointed. #speaker_self
+- I don’t get it though. If you’re so worried about your turban, why keep it? Can't you cut hair? #speaker_left
++ I can’t do that.[] That’s insane!  #speaker_self
+    You know that is completely not allowed for Sikhs, right? And my parents would be so disappointed. #speaker_self
     And it’s not like I can’t wear my turban in NS. #speaker_self
     Uh, but you’ve been stressing about BMT for months.  #speaker_left
     Every time we meet you talk about the same thing. Can’t tell me you never thought about it. #speaker_left
@@ -133,7 +133,7 @@ You keeping your turban? Die la. The cloth is never-ending. Can reach JB! #speak
 - You want to kena tekan  (be given a hard time) by your parents, or kena tekan by the sergeant major? #speaker_left
 Is tekan by nobody an option? #speaker_self
 This is NS, sure tekan.   #speaker_left
-Sigh. Anyway, focus la! We still have to deliver all of these bags to the rental block. #speaker_self
+Wah thanks for the pep talk huh. Anyway, focus la! We still have to deliver all of these bags to the rental block. #speaker_self
 Ok, whatever. I don't pretend to understand but all I know is BMT sounds damn siong (difficult) - and I think even tougher if every night you need to wash hair! #speaker_left
 Don’t make things harder for yourself la.  #speaker_left
 
@@ -166,13 +166,13 @@ What is this? #speaker_right #speaker_right_image:cha_aman_jothi_sad.png
 Nothing -- #speaker_self
 Don’t lie to me, what is this? #speaker_right
 Just take the airpods and go please, I have a lot of stuff to do -- #speaker_self
-You’ve been cutting your hair, haven’t you? #speaker_right
-+ [Yes, so what?] Yes, and I might cut it all off. So?  #speaker_self
+Have you been cutting your hair? Aman... #speaker_right
++ [Maybe, and?] Maybe I have, and maybe I haven't. My life, my choices.  #speaker_self
     Are you KIDDING me? Papa will kick you out. #speaker_right
 + None of your business.[]   #speaker_self
     You better not do anything stupid. Papa will kick you out. #speaker_right
-- Let him. I’m going to enlist anyway. I’ll just stay in camp. #speaker_self
-How could you even say that! Doesn’t this mean anything to you? How can you take this so lightly? #speaker_right
+- If he does, I can stay in camp. #speaker_self
+How could you even say that! How can you take this so lightly? #speaker_right
 Sis, until and unless you keep a turban yourself, or even keep your hair longer than your shoulders, or have to do bloody NS, for God’s sake, you are not in a position to comment on or judge my life choices.  #speaker_self
 Don’t pretend to be so perfect. Neither of us are role models. #speaker_self
 Don't you even go there Aman. I am not having that conversation with you right now. #speaker_right
@@ -191,9 +191,10 @@ Minigame 1 // must add some text
 
 #knot:aman_1_3_narration
 #ui:narrator
-#background:new_message_notification.jpg
+#background:ui_aman_message.jpg
 One month later, Selinder and I are chatting at night.
-
+My doubts and questions haven't gone away. In fact, they've gotten more intense.
+With just days before NS, it's time to make a difficult choice.
 
 -> aman_1_3
 
@@ -206,42 +207,56 @@ One month later, Selinder and I are chatting at night.
 #chat_group_image:ico_aman_selinder.png
 #speaker_1_name:Selinder
 23.34 #timestamp
-Babe, I’m sorry, I am honestly considering it. #speaker_self
+Babe, I’m sorry... I know this isn't what you want to hear but I am honestly considering it. #speaker_self
 Jaan (dear), don’t do anything rash. #speaker_1
-This is really serious - I don't know why you are even contemplating this... Remember what we’ve been taught about being a good Sikh and honoring our Gurus? #speaker_1
+This is really serious... our hair is important to us. Remember what we’ve been taught about being a good Sikh and honoring our Gurus? #speaker_1
 About following the Sikhi way of life, no matter how challenging? Don’t do anything that will hurt your parents...  #speaker_1
 And if it helps, I think you're handsome already! #speaker_1
++ Sel, I know what we've been taught[]... and I want to be a good person, I really do.. #speaker_self
++ I've just... been lost in my doubts lately.[]   #speaker_self
+- I know I've been talking about NS with you and Zhihao as the reason why I think keeping a turban will be hard .. but..  #speaker_self
+I also think it's more than that, if I'm being honest with myself.  #speaker_self
+Sometimes I look in the mirror and I think.. #speaker_self
+Must I always look like this? #speaker_self
+Sticking out wherever I go #speaker_self
+Having to tolerate dumb jokes about the colour of my turban #speaker_self
+Having my bags searched twice whenever I'm overseas in the airport #speaker_self
+Feeling like people see me as a Sikh before they see me as a person #speaker_self
+Then I ask myself. Is it my choice to keep my turban? Or just my responsibility? #speaker_self
+But jaan… #speaker_1
+It can be BOTH #speaker_1
+That is what FAITH is about #speaker_1
+And pride in our way of life. #speaker_1
+I am so sorry you have been going through this. I didn’t know you were keeping all of this bottled up inside #speaker_1
+But you can do the right thing here, jaan #speaker_1
 ... #speaker_1
 ... hello? #speaker_1
 09.15 #timestamp
-Hi babe. I’m so sorry about last night. I got so tired and I just passed out on my bed. #speaker_self
+Hi babe. I’m so sorry about last night. I was thinking about what you said and I just passed out on my bed. #speaker_self
 It’s okay. #speaker_1
 I’m sorry if I came down too hard on you. #speaker_1
 I know this is your decision in the end. #speaker_1
 I mean, I know what I wish you would choose. #speaker_1
-But I will support you, no matter what. #speaker_1
-You’re the best.  #speaker_self
+But I will love you, no matter what. #speaker_1
 Awww... 😍 #speaker_self
+You’re the best.  #speaker_self
 So - did you decide...?  #speaker_1
-You know what.  #speaker_self
 I wasn’t sure up till this very moment, but I’ve decided now.  #speaker_self
 + [I am going to cut my hair.] 
     I am going to do it.  #speaker_self
     I know you may not agree or understand, but this is something I want to do for myself.  #speaker_self
-    -> aman_1_4_narration 
+    -> aman_1_5_narration 
 + [I'll keep my hair.] 
-    You're right dear, I won't be cutting my hair.  #speaker_self
-    I've just been in a bit of a weird place lately, thinking about who I am.  #speaker_self
-    Sometimes I just look in the mirror and wonder if this is my choice, or just my responsibility to look this way.  #speaker_self
-    And maybe, with NS, I thought that it might be a reason to change.  #speaker_self
-    But what you said last night really made sense. I am Sikh, and I should not be considering cutting my hair.  #speaker_self
+    You're right dear, I will keep my hair.  #speaker_self
+    But what you said last night really made sense. I am Sikh, and I should do what is right, even if it is hard.  #speaker_self
     -> aman_1_9_narration  
 
 === aman_1_4_narration ===
 #knot:aman_1_4_narration
 #ui:narrator
 #background:bg_aman_barbershopoutside.jpg
-The next morning, while my family was still asleep....
+The next morning, I went to the barber while my family was asleep.
+
 -> aman_1_4
 
 
@@ -252,7 +267,7 @@ The next morning, while my family was still asleep....
 #speaker_right_image:cha_aman_barber.png
 #speaker_right_name:Barber
 Yes, boy?  #speaker_right
-Not crowded. Thank you, Waheguru. #inner_monologue
+Not crowded. Thank goodness. #inner_monologue
 I want to cut my hair. #speaker_self
 Cut beard or cut hair?   #speaker_right
 #background:bg_aman_barbermirror.jpg
@@ -289,11 +304,14 @@ You sure ah, boy. #speaker_right
 #knot:aman_1_5_narration
 #ui:narrator
 #background:bg_aman_barbershopoutside.jpg
-I look so different. 
-#background:bg_aman_haircutselfie.jpg
-But this is the new me. 
+I went to the barber the next morning, when my family were all asleep.
+It was all a blur. 
+I was emotional, even though I thought it wouldn't affect me.
+Suddenly, I was standing outside, and it was done. 
+#background:bg_aman_haircutselfiephoto.jpg
+This is the new me. 
 This is the start of a new chapter in my life.
-
+This is what I wanted... right?
 
 -> aman_1_5 
 
@@ -357,7 +375,8 @@ I... #speaker_self
     If I didn't cut it, there's no time to wash my hair or turban in BMT! Even though SAF would let me keep my hair, it would be exhausting to manage papa. #speaker_self
     Papa?  #speaker_self
     These are ridiculous excuses! You think you are the first Sikh in the military? #speaker_1
-    Sikhs have always done our part and more. We are respected in uniform. And now you go and do this. What message will it send? How will people see us? #speaker_1
+    Sikhs have always done our part and more. We are respected in uniform. We are a brave and valiant people. Our forefathers fought to preserve our faith, even at the expense of their lives! How can you use NS of all things as an excuse? #speaker_1
+    And now you go and do this. What message will it send? How will people see us? #speaker_1
 + I knew you wouldn't understand![] 
     ~aman_mood -= 2
     This wasn't easy for me either but none of you even bothered to ask me about how I was preparing for Army BMT. #speaker_self
@@ -365,23 +384,25 @@ I... #speaker_self
     And they don't even have to wash their hair or turban every night. Even though SAF would let me keep my hair, it would be exhausting to manage papa.  #speaker_self
     All the cousins went to police or SCDF so they have no idea how hard it is outfield. #speaker_self
     And you didn't care to ask me. #speaker_self
-    You're just stuck in your old traditions and don't care about what's best for me. #speaker_self
+    I had to do this for myself, I knew you wouldn't understand. #speaker_self
     Papa? #speaker_self
     These are ridiculous excuses! You think you are the first Sikh in the military? #speaker_1
-    Sikhs have always done our part and more. We are respected in uniform. And now you go and do this. What message will it send? How will people see us? #speaker_1
-    You did this for yourself - it is not just selfish, but it is disrespectful! #speaker_1
+     Sikhs have always done our part and more. We are respected in uniform for being a brave and valiant people. How can you use NS of all things as an excuse? #speaker_1
+    Our forefathers have fought for the right to practise our faith, keep our turbans, even at the expense of their LIVES! #speaker_1
+    You did this for yourself - it is disrespectful! What message will this send? How will people see us? #speaker_1
 + I really struggled with this Papa[]
     I wanted to talk to you or Jothi about this but I knew you would judge me. #speaker_self
     Papa Army BMT is not like police or SCDF, so your experience and the cousins don't have to deal with mud and helmets. #speaker_self
     I didn't know what to do. I had nobody to talk to about this.  #speaker_self
-    I wish I didn't have to do this but Zhihao said they would tekan me in NS if I came in with a turban. #speaker_self
     I heard all these horror stories about how little sleep they get, and if I had to wash my hair and turban it would be even worse.  Even though SAF would let me keep my hair, it would be exhausting to manage papa. #speaker_self
     Papa I'm sorry. I really had to do this. #speaker_self
     Papa? #speaker_self
     Mud? Helmets? These are ridiculous excuses! You think you are the first Sikh in the military? #speaker_1
-    Sikhs have always done our part and more. We are respected in uniform. And now you go and do this. What message will it send? How will people see us? #speaker_1
+    Sikhs have always done our part and more. We are respected in uniform. We are respected in uniform for being a brave and valiant people. How can you use NS of all things as an excuse? #speaker_1
+    Our forefathers have fought for the right to practise our faith, keep our turbans, even at the expense of their LIVES!  #speaker_1
+    And now you go and do this. What message will it send? How will people see us? #speaker_1
 - Papa, I know how angry you are but let's talk about this at home. #speaker_3
-Sigh. What's done is done. I have said my piece. It is in Waheguru's hands now. #speaker_1
+What is there left to talk about. What's done is done. I have said my piece. It is in Waheguru's hands now. #speaker_1
 
 
 -> aman_1_6_narration
