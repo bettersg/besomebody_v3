@@ -482,14 +482,14 @@ Aren’t you happy?  #speaker_self
 Not really. I wanted to join OCS to become an officer, or at least SISPEC la, become a sergeant. #speaker_left 
 I thought I did really well in all my IPPT tests and training. But it’s still not enough, maybe. #speaker_left
 Did you speak to your sergeant? Tell him how you feel? #speaker_self
-Yes, I told him how badly I wanted to join and how others who did less well than me got into OCS. #speaker_left
+Yes, I told him how badly I wanted to join and how others I think did less well than me got into OCS. #speaker_left
 Then? #speaker_self
-He said he knows I am a good soldier, but it’s beyond his control. #speaker_left
+He said he knows I am a good soldier, but I lack certain qualities... sigh #speaker_left
 + [What does that mean?]
     Aiya forget it la. Maybe it's because I’m Malay. So I can only be a driver or a storeman. #speaker_left
-    To become a leader as a minority cannot just be good, must be exceptional.  #speaker_left
+    To become a leader as a minority cannot just be good, maybe must be exceptional?  #speaker_left
     Eh no la, that’s not true... #speaker_self
-    It’s true bro. You also know. #speaker_left
+    It’s what everybody says bro. #speaker_left
 + [Oh. Well that's life.]
  - You know, it’s funny that some of us want to blend in with the others. And some of us want to stand out. #speaker_self
 I’m not afraid of standing out.  #speaker_left
@@ -720,14 +720,14 @@ Aren’t you happy?  #speaker_self
 Not really. I wanted to join OCS to become an officer, or at least SISPEC la, become a sergeant. #speaker_left 
 I thought I did really well in all my IPPT tests and training. But it’s still not enough, maybe. #speaker_left
 Did you speak to your sergeant? Tell him how you feel? #speaker_self
-Yes, I told him how badly I wanted to join and how others who did less well than me got into OCS. #speaker_left
+Yes, I told him how badly I wanted to join and how others I think did less well than me got into OCS. #speaker_left
 Then? #speaker_self
-He said he knows I am a good soldier, but it’s beyond his control. #speaker_left
+He said he knows I am a good soldier, but I lack certain qualities... sigh #speaker_left
 + [What does that mean?]
     Aiya forget it la. Maybe it's because I’m Malay. So I can only be a driver or a storeman. #speaker_left
-    To become a leader as a minority cannot just be good, must be exceptional.  #speaker_left
+    To become a leader as a minority cannot just be good, maybe must be exceptional?  #speaker_left
     Eh no la, that’s not true... #speaker_self
-    It’s true bro. You also know. #speaker_left
+    It’s what everybody says bro. #speaker_left
 + [Oh. Well that's life.]
  - You know, I actually wish I didn't stand out as the only guy with a turban.  #speaker_self
  It’s funny that some of us want to blend in with the others. And some of us want to stand out. #speaker_self
