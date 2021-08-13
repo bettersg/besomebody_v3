@@ -198,7 +198,7 @@ export const CHARACTER_MAP = [
         title: "Duty Calls",
         knotTag: "aman_1_intro",
         summary: "Aman prepares to enlist in National Service. Will he go in as he is, or take a big step to blend in?",
-        playable: false,
+        playable: true,
         images: [
           "/images/bg_aman_intro.jpg",
           "/images/bg_aman_sikheventhall.jpg",
