@@ -9,8 +9,7 @@ export const MINI_GAME_MAP = [
           question:
             "Sikh men usually have the same last name: Singh",
           type: "text",
-          correctAnswer:
-            "True",
+          correct_answer_id: 1,
           explanation:
             "Guru Gobind Singh wanted to create an egalitarian society, and in South Asia, different last names often had socioeconomic and caste-associations. The word Singh means Lion and the word Kaur denotes royalty – a sovereign princess.",
           answers: [
@@ -28,7 +27,7 @@ export const MINI_GAME_MAP = [
           question_id: 2,
           question:
             "Which types of baptised (initiated) Sikhs are allowed to shave their body hair?",
-          correctAnswer: "No Sikhs are allowed",
+          correct_answer_id: 3,
           explanation: "Initiated Sikhs (male or female) are not supposed to cut hair from any part of their body",
           type: "text",
           answers: [
@@ -55,8 +54,7 @@ export const MINI_GAME_MAP = [
           question:
             "In Singapore, are Sikhs allowed to wear the Kirpan (a religious dagger)?",
           type: "text",
-          correctAnswer:
-          "Yes, under certain conditions",
+          correct_answer_id: 2,
           explanation:
             "Singaporean law has made allowances to ensure Sikhs can carry the kirpan in public (under some specific conditions), since 2012. ",
           answers: [
@@ -91,9 +89,9 @@ export const MINI_GAME_MAP = [
           question_id: 1,
           question: "All Malays in Singapore are Muslim.",
           type: "text",
+          correct_answer_id: 2,
           explanation:
             "While an overwhelming majority of Malays in Singapore are followers of Islam, there is a small minority of Malays that follow other faiths.Similarly, a majority of Muslims in Singapore are of Malay ethnicity - but followers of Islam, in general, come from diverse ethnics backgrounds - and this is the case in Singapore as well!",
-          correctAnswer: "FALSE",
           answers: [
             {
               answer_id: 1,
@@ -108,7 +106,7 @@ export const MINI_GAME_MAP = [
         {
           question_id: 2,
           question: "Is it permissible for Muslim females to hug unrelated men?",
-          correctAnswer: "No",
+          correct_answer_id: 2,
           explanation:
             "For Muslims, hugging (touching in general) members of the opposite sex when not related, is not permissible for Muslims according to strict interpretations of the Hadith scriptures in Islam. There are varying interpretations, and not all Muslims follow this. There are also special exceptions to this guideline.",
           type: "text",
@@ -127,7 +125,7 @@ export const MINI_GAME_MAP = [
           question_id: 3,
           question:
             "Which of the images below correctly shows a woman in a tudung?",
-          correctAnswer: "Option 3",
+          correct_answer_id: 3,
           explanation: "The images above include a Burka (blue), a Niqab (black), and a Khimar (dark green). The Hijab (light green image) is principle of modesty in Islam, extending to clothing and behaviour for both men and women, and usually refers to the head covering Muslim women wear. A Tudung is a Malay word for head-covering.",
           type: "image",
           answers: [
@@ -167,7 +165,7 @@ export const MINI_GAME_MAP = [
         type: "text",
         explanation:
           "Yes, non-Muslims may exchange Salam or shake hands with Muslims. The handshake is a palm-to-palm touch with the right hand or with both hands (never the left), the palms are then brought to the heart as a gesture of sincerity. A handshake is only initiated between individuals of the same gender. A Muslim woman does not shake a man’s hand unless he is a a family member or a religious teacher.",
-        correctAnswer: "YES",
+        correct_answer_id: 1,
         answers: [
           {
             answer_id: 1,
@@ -182,7 +180,7 @@ export const MINI_GAME_MAP = [
       {
         question_id: 2,
         question: "Can Muslims only eat from halal-certified eateries?",
-        correctAnswer: "No, they can eat from halal-certified eateries /  sources that are Muslim-owned.",
+        correct_answer_id: 2,
         explanation:
           "Some small businesses owned by Muslims (e.g. home-based businesses) are not halal-certified, but will follow Muslim practices and therefore Muslims can eat from them too.",
         type: "text",
@@ -205,7 +203,7 @@ export const MINI_GAME_MAP = [
         question_id: 3,
         question:
           "Which of the following meat dishes is NOT halal?",
-        correctAnswer: "Frog",
+        correct_answer_id: 3,
         explanation: "Frog meat is considered as haram (non-halal) by most Islamic scholars, because such ‘water creatures’ are considered unclean (along with alligators and turtles). Halal (lawful) food are items prepared under strict Muslim dietary laws, and animals, like chicken, sheep, cattle, must be slaughtered by Muslims because a short prayer is said when they are being slaughtered.",
         type: "text",
         answers: [

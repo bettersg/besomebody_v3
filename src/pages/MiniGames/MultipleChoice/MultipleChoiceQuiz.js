@@ -90,7 +90,7 @@ export default function MultipleChoiceQuiz(props) {
 
     const saveUserAnswer = (userAns) => {
         setUserAnswers([...userAnswers, {
-            answerId: currentQuestion.answers.filter(x => x.title)[0].answer_id,
+            answerId: userAns,
             questionId: currentQuestion.question_id,
         }])
     }
@@ -125,7 +125,7 @@ export default function MultipleChoiceQuiz(props) {
 
     const checkUserAnswer = (userAns) =>{
         saveUserAnswer(userAns)
-        if(currentQuestion.correctAnswer===userAns){
+        if(currentQuestion.correct_answer_id===userAns){
             setIsCorrectAnswer(true);
             setCorrectAnswered(correctAnswered+1)
             setScore(((correctAnswered +1) / (currentQuestionNumber)) * 100)

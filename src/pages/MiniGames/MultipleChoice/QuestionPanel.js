@@ -239,7 +239,7 @@ export default function QuestionPanel({
             variant={answered === answer ? "contained" : "outlined"}
             color="primary"
             key={answer.title}
-            onClick={() => handleAnswer(answer.title, question.explanation)}
+            onClick={() => handleAnswer(answer.answer_id, question.explanation)}
             disabled={answered !== "" ? true : false}
           >
             {answer.title}
@@ -251,9 +251,9 @@ export default function QuestionPanel({
         return (
           <Grid key={answer.title} item xs={6}>
             <ButtonBase
-              variant={answered === answer.title ? "contained" : "outlined"}
+              variant={answered === answer ? "contained" : "outlined"}
               color="primary"
-              onClick={() => handleAnswer(answer.title, question.explanation)}
+              onClick={() => handleAnswer(answer.answer_id, question.explanation)}
               disabled={answered !== "" ? true : false}
               className={clsx(classes.imageButton)}
             >
@@ -287,11 +287,11 @@ export default function QuestionPanel({
     }
   };
 
-  const handleAnswer = (answer, explanation) => {
-    setAnswered(answer);
-    checkUserAnswer(answer);
+  const handleAnswer = (answer_id, explanation) => {
+    setAnswered(answer_id);
+    checkUserAnswer(answer_id);
     setMessage('');
-    if (question.correctAnswer !== answer) {
+    if (question.correct_answer_id !== answer_id) {
       setMessage(explanation);
     }
   };
