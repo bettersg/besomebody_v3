@@ -143,32 +143,37 @@ export const CHARACTER_MAP = [
           {
             endingId: 1,
             title: "Azlin gets upset with you",
-            inkVar: "nadia_chapter2_ending_1",
+            inkVar: "chapter2_ending_1",
           },
           {
             endingId: 2,
             title: "Azlin tells you to give him up",
-            inkVar: "nadia_chapter2_ending_2",
+            inkVar: "chapter2_ending_2",
           },
         ]
       },
       {
         chapterId: 3,
         number: 3,
-        title: "Coming Soon",
+        title: "Fork in the Road",
         knotTag: "nadia_3_intro",
-        summary: "Coming Soon",
+        summary: "As one door closes, another opens. But which girl will step through that door? As JC life comes to an end, only Nadia can choose.",
         playable: false,
         endings: [
           {
             endingId: 1,
             title: "Public",
-            inkVar: "nadia_chapter3_ending_1",
+            inkVar: "chapter3_ending_1",
           },
           {
             endingId: 2,
             title: "Private",
-            inkVar: "nadia_chapter3_ending_2",
+            inkVar: "chapter3_ending_2",
+          },
+          {
+            endingId: 3,
+            title: "Private",
+            inkVar: "chapter3_ending_3",
           },
         ]
       },
