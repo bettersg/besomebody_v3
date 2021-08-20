@@ -1926,5 +1926,478 @@ Reflection 3
 
 
 === nadia_3_intro ===
+#knot:nadia_3_intro
+#ui:narrator
+#background:bg_nadia_intro.jpg
+~ chapter_id = 3
+CHAPTER 3 #title
+Fork in the Road #title
+
+What Azlin said last night really made me think... 
+About myself, about Chloe.... and about Gavin.
+But I haven't had enough time to process all of that. 
+All I want to think about are eukaryotic cells, testing for triglycerides, and surviving my A Levels.
+But something tells me that I need to settle the doubts in my head before I can get to my textbooks.
+
+VAR nadia_3_relationship = 0
+{nadia_2_hidewithgavin: 
+    ~ nadia_3_relationship =1
+ - else:
+   ~ nadia_3_relationship = 0 
+    }
+{chapter_2_ending:
+- 1 : ~ nadia_3_relationship +=0
+- 2 : ~ nadia_3_relationship +=1
+}    
+
+
+-> nadia_3_1_narration 
+
+
+=== nadia_3_1_narration ===
+#knot:nadia_3_1_narration
+#ui:narrator
+#background:bg_nadia_bedroom.jpg
+    Relationship: {nadia_3_relationship} // remove 
+I'm glad today is not a school day.
+I think I need to lay low for a bit, and maybe see Chloe a bit less.
+I want to just stay home and chill - but I have a nagging feeling like I'm supposed to have plans for today that I can't quite remember.
+Oh crap - I think I was supposed to reply to Gavin on something!
+
+ 
+-> nadia_3_1
+
+
+=== nadia_3_1 ===
+#knot:nadia_3_1
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Gavin
+#chat_group_image:ico_nadia_gavin.png
+#speaker_1_name:Gavin
+Hey u. Things ok? #speaker_1
+Just checking in.. not sure if you got my texts last night 🙃 #speaker_1
+#ui:scene
+#background:bg_nadia_bedroom.jpg
+Did I really forget to reply him completely? Oh crap.  #inner_monologue
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Gavin
+#chat_group_image:ico_nadia_gavin.png
+#speaker_1_name:Gavin
+Hey hey! 🙏🙏🙏 sorry, was out talking with my cousin till late. I’m ok.. #speaker_self
+Sure? Kinda disappeared after school, thought something happened. You can tell me you know.  #speaker_1
++ [Brush it off] -> nadia_3_1a
++ [Open up, a little] -> nadia_3_1b
+
+
+= nadia_3_1a 
+    ~ nadia_3_relationship -=1
+    Relationship: {nadia_3_relationship} // remove 
+    It was nothing, just tired #speaker_self
+    Okayyy. You sound pretty bummed tho #speaker_1
+    Do I? #speaker_self
+    Yeah, a bit. Would you like.. 🧋? #speaker_1
+    Haaa no need la #speaker_self
+    Or.. 🍪🍦🍰🍕? That’s a whole menu for your selection. #speaker_1
+    lol seriously, no need #speaker_self
+    Come on Nad, *something* is bothering you. I know it. It’s killing me #speaker_1
+    #ui:scene
+    #background:bg_nadia_bedroom.jpg 
+    Can he just drop it, please. I just want some space to process things...  #inner_monologue
+    #ui:whatsapp
+    #background:whatsapp.png
+    #chat_group_title:Gavin
+    #chat_group_image:ico_nadia_gavin.png
+    #speaker_1_name:Gavin 
+    Well? #speaker_1
+    Geez stop examining me! You’re making me feel like I’m under a microscope. #speaker_self 
+    Ok ok  #speaker_1
+    Do you still wanna meet my church friends this weekend? To ask about med school or whatever. #speaker_1
+    
+    + [Hesitate]
+    // ~ nadia_3_relationship += 0
+    Relationship: {nadia_3_relationship} // remove 
+    Might be tough.. #speaker_self
+    You know what? It’s fine, Nad.  #speaker_1
+    Don’t know why I thought this was a good idea in the first place. #speaker_1
+    #ui:scene
+    #background:bg_nadia_bedroom.jpg 
+    What the hell? #inner_monologue
+    #ui:whatsapp
+    #background:whatsapp.png
+    #chat_group_title:Gavin
+    #chat_group_image:ico_nadia_gavin.png
+    #speaker_1_name:Gavin 
+    I really like you. But I don’t understand you sometimes.  #speaker_1
+    Pretty sure I’ve been myself this whole while Gavin  #speaker_self
+    You sure? You’re holding back on something. It’s weird man #speaker_1
+    Yeah well not everything’s about you #speaker_self
+    It’s not even about me! Why are you always bottling shit up #speaker_1
+    And not everyone needs to tell the whole world what’s going on in their head.  #speaker_self
+    Is that really what you think of me #speaker_1
+    I’m sorry I didn’t mean that #speaker_self
+    I just wanted to help you Nad. Always have. #speaker_1
+    I know.  #speaker_self
+    That’s what you always say. I’ll see you in school. #speaker_1
+
+    + [Decline]
+    I don’t think so… it might be tough.. #speaker_self
+    Really? Am gonna be out whole day with them tmr, just join us whenever la #speaker_1
+    No as in.. I’m just tired #speaker_self
+    😕 #speaker_1
+    You’re doing it again. Holding back.  #speaker_1
+    I know I know, sorry  #speaker_self
+    You sure you don’t wanna talk about it? #speaker_1
+    Yeah.. just have a lot going on in my head right now. It’s not your fault.  #speaker_self
+    “It’s not you, it’s me.” #speaker_1
+     #ui:scene
+        #background:bg_nadia_bedroom.jpg 
+    What? #inner_monologue
+    #ui:whatsapp
+        #background:whatsapp.png
+        #chat_group_title:Gavin
+        #chat_group_image:ico_nadia_gavin.png
+        #speaker_1_name:Gavin 
+    Just wanted to beat you to it.  #speaker_1
+    Dammit Gavin Tan Weiliang #speaker_self
+    So was I right #speaker_1
+    I’m really really really sorry.  #speaker_self
+    My head is a mess rn. I don’t want to pull the both us through it.  #speaker_self
+    It isn’t fair. I don’t want to ruin what we have.  #speaker_self
+    Dammit Nadia Binte Rahman #speaker_1
+    I’ll.. see you in school k?   #speaker_self
+- bye  #speaker_1
+-> nadia_3_2
+
+= nadia_3_1b
+    ~ nadia_3_relationship +=1
+    Relationship: {nadia_3_relationship} // remove 
+    Yeah. Left school in a bit of a mood 👀 you ever have those days? #speaker_self 
+    Guess so. Talking nonsense with you or whoever’s in the student council room helps  #speaker_1
+    Haha wow - must mean you’re always in a bit of a weird mood.  #speaker_self 
+    Yup, that’s the secret. Don’t tell anyone ok. Sooo what’s gg on with u 💩 #speaker_1
+    #ui:scene
+    #background:bg_nadia_bedroom.jpg 
+    I don’t want to complain to him about Chloe. She’s a friend to us both.. #inner_monologue
+    #ui:whatsapp
+    #background:whatsapp.png
+    #chat_group_title:Gavin
+    #chat_group_image:ico_nadia_gavin.png
+    #speaker_1_name:Gavin  
+    I think Chloe was just super stressed yesterday and it rubbed off on me 🤷 that’s all  #speaker_self 
+    Ah man, that happens. You guys didn’t fight again did you? #speaker_1
+    No la #speaker_self 
+    Good u met up with your cousin tho, shake off any bad vibes #speaker_1
+    😐😐😐 wish that was the case #speaker_self 
+    Noooooo 😩😩😩😩😩😩 #speaker_1
+    Yaaaa it’s like the feng shui was all wrong yesterday with whoever I was talking to #speaker_self 
+    Lucky we didn’t talk much yesterday then lol #speaker_1
+    It really does feel like my fault sometimes, like recently..  #speaker_self 
+    Really? #speaker_1
+    Sigh I don’t *actually* like talking about race, or religion.  #speaker_self 
+    But then it comes up and then catches me by surprise - I can’t taichi it away!!  #speaker_self 
+    Yeah you shouldn’t have to Nad  #speaker_1
+    Why can’t race be a non-issue, it’ll make everything SO not complicated #speaker_self 
+    Exactly!! I was just talking about it with Zhihao yesterday #speaker_1
+    #ui:scene
+    #background:bg_nadia_bedroom.jpg 
+    Really? I’m not sure I want to hear this. #inner_monologue
+    #ui:whatsapp
+    #background:whatsapp.png
+    #chat_group_title:Gavin
+    #chat_group_image:ico_nadia_gavin.png
+    #speaker_1_name:Gavin 
+    Dude was just giving me a tough time cos we haven’t hung out in awhile - said I “disappeared” with my “minah gf”  #speaker_1
+    🙄 wth right #speaker_1
+    #ui:scene
+    #background:bg_nadia_bedroom.jpg 
+    What the hell is right. #inner_monologue
+    #ui:whatsapp
+    #background:whatsapp.png
+    #chat_group_title:Gavin
+    #chat_group_image:ico_nadia_gavin.png
+    #speaker_1_name:Gavin 
+    Messed up man. Told him race doesn’t matter to you and me.  #speaker_1
+    We’re chill about it, if it even comes up.  #speaker_1
+    #ui:scene
+    #background:bg_nadia_bedroom.jpg 
+    Well that was the one time when we went on our date. Wasn’t thaaaat chill, that part. #inner_monologue
+    #ui:whatsapp
+    #background:whatsapp.png
+    #chat_group_title:Gavin
+    #chat_group_image:ico_nadia_gavin.png
+    #speaker_1_name:Gavin 
+    Can’t believe he called you a minah.  #speaker_1
+    It’s not like he doesn’t know you from council.  #speaker_1
+    Whatevs we’re not close #speaker_self 
+    Yeah but still! He knows you what. You’re not like that 🙄  #speaker_1
+    Huh like what #speaker_self 
+    Welllll different la 😎 I mean do *you* think you’re a minah hahaha #speaker_1
+    + [Pick a fight]
+     ~ nadia_3_relationship -=1
+    Relationship: {nadia_3_relationship} // remove 
+    Like you’ve even met any minah before 🤨  #speaker_self 
+    Hahaha ok fair #speaker_1
+    Ya it’s a damn weird thing to say  #speaker_self 
+    But I’m saying you’re not one? #speaker_1
+    #ui:scene
+    #background:bg_nadia_bedroom.jpg 
+    That says you have an idea of what being a minah means... and it’s not a good image #inner_monologue
+    #ui:whatsapp
+    #background:whatsapp.png
+    #chat_group_title:Gavin
+    #chat_group_image:ico_nadia_gavin.png
+    #speaker_1_name:Gavin 
+    And you’re not - you’re really not like most Malays #speaker_1
+    Uhhhh sounds like a backhanded compliment 🙄  #speaker_self 
+    Woah  #speaker_1
+    What does “not like most Malays” even mean  #speaker_self 
+    Yo it’s not that deep, chill  #speaker_1
+    And so what if I was like “most Malays” which means what EVEN #speaker_self 
+    + [Try to Explain] 
+     ~ nadia_3_relationship +=1
+    Relationship: {nadia_3_relationship} // remove 
+    lol don’t think am legit enough to call myself a minah #speaker_self 
+    Anyway it’s the same as ah lian or ah beng #speaker_1
+    Does anyone ever call YOU ah beng #speaker_self 
+    If I ever dye my hair red, maybe they will!! lolol #speaker_1
+    Ya see it’s not like Azlin goes around asking “oh where’s your ah beng so-and-so” just bc you’re chinese #speaker_self 
+    Has she been asking about me 👁️👁️ & am I a so-and-so #speaker_1
+    Dude not the point!! #speaker_self 
+    Ok ok  #speaker_1
+    It’s weird for Zhihao to so easily throw out “minah” bc duh I’m Malay #speaker_self 
+    Ikr  #speaker_1
+    🙄🙄🙄 minah is short for Aminah btw  #speaker_self 
+    Oh wow #speaker_1
+    So like when OTHER people start using it.. as a label, bc I guess we’re *all* Aminah 🙄🙄🙄 #speaker_self 
+- Look I’m on *your* side here, Zhihao WAS being dickish #speaker_1
++ I don’t understand why you’re friends with the guy.[] #speaker_self 
+    ~ nadia_3_relationship -=1
+    Relationship: {nadia_3_relationship} // remove 
++ I’m not pissed at you, but argh! [] #speaker_self 
+    ~ nadia_3_relationship +=1
+    Relationship: {nadia_3_relationship} // remove 
+- Zhihao's all right #speaker_1 
+{ nadia_3_relationship < 3 : 
+    -> nadia_3_1maybe
+}
+{ nadia_3_relationship >= 3 : 
+    -> nadia_3_1yes
+}
+
+= nadia_3_1maybe
+He’s not as funny as he thinks he is #speaker_self 
+Ok, burn. 🔥🔥🔥 #speaker_1 
+Said what I said 🙄💁‍♀️ #speaker_self 
+We’ve just been friends for ages, same schools etc. He’s always been around.  #speaker_1 
+Yeah I get it.. Kinda like what Azlin is to me too.  #speaker_self 
+😐 what happened with your cousin last night? #speaker_1 
+You know how sometimes when you’re close with someone  #speaker_self 
+Like inseparable  #speaker_self 
+You forget that you’re NOT the same person. #speaker_self 
+You guys are that tight huh #speaker_1 
+Yeah. Grew up together, like you said.  #speaker_self 
+She said some things.. I just didn’t think we felt so differently about it 😕 #speaker_self 
+Like?.. #speaker_1 
+#ui:scene
+#background:bg_nadia_bedroom.jpg 
+Oh, I don’t want to tell him about being Malay or whatever. He’s not going to get it. It’s too exhausting.  #inner_monologue
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Gavin
+#chat_group_image:ico_nadia_gavin.png
+#speaker_1_name:Gavin 
+
+If you want to say la #speaker_1 
+Yeah tell you next time maybe. I don’t really wanna relive it all in text lol #speaker_self 
+Ok thenn #speaker_1 
+Thanks for checking in on me btw 🙂 #speaker_self 
+Duh no prob. Got me real worried for a bit, radio silence all #speaker_1 
+😬 lol k will give u advanced warning next time #speaker_self 
+You still wanna meet my church friends? Am gonna see them this weekend #speaker_1 
+Idkkk might be tough. My social batt is like zero, lol. Can just see how it goes? #speaker_self 
+👌 you go rest up then #speaker_1 
+Will see ya in school 👁️👁️ #speaker_self 
+-> nadia_3_2
+
+= nadia_3_1yes
+NADIA
+👁️👁️
+ 
+GAVIN
+He’s fine laaa #speaker_1 
+ 
+...in small amounts  #speaker_1 
+ 
+NADIA
+Ha!!!! Knew it!
+ 
+GAVIN
+What happened with you and Azlin anyway #speaker_1 
+ 
+NADIA
+☹️
+ 
+GAVIN
+No? Don’t wanna talk about it? #speaker_1 
+ 
+NADIA
+I do... but I also don’t really wanna relive it in text
+ 
+Ya know?
+ 
+GAVIN
+OK thennn. Will a bubble tea help haha #speaker_1 
+ 
+NADIA
+No need la. I want to stew and sulk a bit. That’s all 😔
+ 
+GAVIN 
+Sulking is a lot more fun with an audience #speaker_1 
+ 
+NADIA
+Nooooooo
+ 
+GAVIN
+Yessssss #speaker_1 
+ 
+Trust me, way better 😂 #speaker_1 
+ 
+NADIA
+That what you always do? Should I be worried lol
+ 
+GAVIN
+Well I don’t think sulking is a competitive sport #speaker_1 
+ 
+So you can take the lead today lol #speaker_1 
+ 
+NADIA
+🙄 .. I don’t expect you to get it ok, so it’s fine if you don’t. 
+ 
+GAVIN
+My ears (👁️👁️) are at your disposal.  #speaker_1 
+ 
+NADIA
+The chat I had with Azlin gave me all sorts of feelings about being Malay
+ 
+I’m not ashamed of being Malay, like NO WAY. 
+ 
+GAVIN
+Uh huh #speaker_1 
+ 
+👉No Judgment Zone #speaker_1 
+ 
+NADIA
+Ok ok
+ 
+What if.. All this while, I have been judging
+ 
+Myself. AND my own people 🙃🤡🙃🤡🙃
+ 
+GAVIN
+This come from where 🤯 #speaker_1 
+ 
+NADIA
+IDKKKKK but?? 
+ 
+...*Sometimes* I think if they worked harder or made “right” decisions, then they would stop doing so.. badly?
+ 
+It’s such an awful thing to say. Sometimes my dad says it in passing. Maybe I absorbed it, idk
+ 
+GAVIN
+Well idk.. Parents really have their idea of the world #speaker_1 
+ 
+NADIA
+I also KNOW it’s easy for me to say, cos things are ok for MY family.
+ 
+Then THAT makes me feel like a lousy Malay person. Can’t even relate to other Malays who are doing less-great. Sometimes it’s my own cousins. As if I’m so different from them. But I’m not.. 
+ 
+GAVIN
+I don’t think any of this makes you more or less Malay than each other 😕 #speaker_1 
+ 
+NADIA
+Sometimes I forget how much I have. I forget how much I don’t know. It’s embarrassing. 
+ 
+Makes me feel so gross 
+ 
+GAVIN
+You’re also your own person tho, a whole individual.  #speaker_1 
+ 
+You’re also being a bit hard on yourself. Just a bit 👀 #speaker_1 
+ 
+NADIA
+I want to do well. I want it to mean something. Get myself into med school. 
+ 
+The other day Azlin joked like haha, for sure my face will be on Berita Harian some day 💀💀💀
+ 
+GAVIN
+Lot of pressure for small shoulders #speaker_1 
+ 
+NADIA
+Ya who wants to be a potential poster child about anything! I’m not about tht life 🤢
+ 
+Then at the same time.. 
+ 
+GAVIN
+Posters work.  #speaker_1 
+ 
+NADIA
+Maybe? Who knows. If it throws away shitty stereotypes? even my own. 
+ 
+OK that’s it.
+ 
+Thanks for listening to my podcast 😣
+ 
+GAVIN
+Pretty good one tbh #speaker_1 
+ 
+NADIA
+That was really a rant. I’m sorry
+ 
+GAVIN
+Eh, no sorry pls! Thank you for sharing all of that   #speaker_1 
+ 
+Means a lot too that you can talk to me about these things  #speaker_1 
+ 
+NADIA
+You sure?
+ 
+GAVIN
+Yeah man! Tbh you being very srs about a lot is NOT brand new information.  #speaker_1 
+ 
+I like that about you. More of this please 🤓 #speaker_1 
+ 
+NADIA
+Okayyyy, my head can be pretty tangled sometimes 😅
+ 
+GAVIN
+I’m good with a comb #speaker_1 
+ 
+NADIA 
+Haha we know
+ 
+GAVIN
+😳😎💁‍♂️ #speaker_1 
+ 
+NADIA
+Thanks Gavin. I feel a bit better
+ 
+GAVIN
+Told you sulking with an audience works! #speaker_1 
+ 
+Anyway, come out tmr la! Meeting my church friends, so if you wanna ask them about med school..   #speaker_1 
+ 
+NADIA
+Oh geez I keep forgetting! Yes pls. Thanks for doing this with me ☺️ 
+ 
+GAVIN
+That’s my plan 🧡 #speaker_1 
+
+
+    
+
+=== nadia_3_2 ===
+
 
 -> END
