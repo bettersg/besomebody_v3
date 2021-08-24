@@ -1,4 +1,4 @@
-import { firestore } from '../firebase'
+import { firestore} from '../firebase'
 import { getDbUser } from './userModel';
 
 export const createDbReflectionResponses = async (responses) => {
@@ -52,4 +52,12 @@ export const getDbReflectionResponse = async(id) => {
   } catch (err) {
     throw new Error(`Error at getDbReflectionResponse: ${err}`);
   }
+}
+export const createReflectionLikes = async(id)=>{
+  var reflLikesPosts = firestore.collection('reflectionResponses').doc(id)
+  console.log(reflLikesPosts)
+
+  await reflLikesPosts.update({
+    numLikes : firestore.FieldValue.increment(1)
+  })
 }
