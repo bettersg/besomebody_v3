@@ -5,27 +5,35 @@
     "body": "How did the character's story thus far make you feel?",
     "choices": [
       {
+        "id":1,
         "body": "Optimistic"
       },
       {
+        "id":2,
         "body": "Happy"
       },
       {
+        "id":3,
         "body": "Indifferent"
       },
       {
+        "id":4,
         "body": "Sad"
       },
       {
+        "id":5,
         "body": "Angry"
       },
       {
+        "id":5,
         "body": "Hurt"
       },
       {
+        "id":6,
         "body": "Confused"
       },
       {
+        "id":7,
         "body": "None of the above"
       }
     ]
@@ -52,15 +60,19 @@
     "body": "Which of the situations did you find the most challenging for Aman?",
     "choices": [
       {
+        "id":1,
         "body": "When his sister Jothi confronted him"
       },
       {
+        "id":2,
         "body": "When his friend Zhihao made fun of him"
       },
       {
+        "id":3,
         "body": "When he faced his dad’s disappointment (not all endings had this)"
       },
       {
+        "id":4,
         "body": "When he was treated badly in NS"
       }
     ]
@@ -71,15 +83,19 @@
     "body": "Which of the choices did you find the most challenging for Nadia?",
     "choices": [
       {
+        "id":1,
         "body": "Responding to her father’s questions in the car"
       },
       {
+        "id":2,
         "body": "Deciding how to respond to Gavin in the canteen"
       },
       {
+        "id":3,
         "body": "Choosing how to answer Chloe's questions about your attire"
       },
       {
+        "id":4,
         "body": "Answering Azlin's questions about Gavin"
       }
     ]
@@ -90,12 +106,15 @@
     "body": "Which of the situations did you find the most challenging for Nadia?",
     "choices": [
       {
+        "id":1,
         "body": "Anticipating Gavin's reactions when he saw her dressed in the hijab"
       },
       {
+        "id":2,
         "body": "Dealing with Chloe's perception that Nadia is advantaged unfairly because of her race"
       },
       {
+        "id":3,
         "body": "Understanding Azlin's viewpoints and her struggles as a Malay"
       } 
     ]
@@ -106,12 +125,15 @@
     "body": "What do you think is Nadia's most significant challenge ahead?",
     "choices": [
       {
+        "id":1,
         "body": "Being comfortable with herself (e.g. donning the hijab)"
       },
       {
+        "id":2,
         "body": "Change how her peers perceive her and other Malays"
       },
       {
+        "id":3,
         "body": "Navigating and understanding the experiences of other Malays"
       } 
     ]
