@@ -1,6 +1,33 @@
 import { Typography, Box, TextField, Slider, RadioGroup, Radio, FormControlLabel } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+  imageChoiceContainer: {
+    display: 'flex',
+    overflowX: 'scroll',
+    '-ms-overflow-style': 'none', /* for Internet Explorer, Edge */
+    'scrollbar-width': 'none', /* for Firefox */
+    '&::-webkit-scrollbar': {
+      display: 'none',
+    },
+  },
+  imageChoice: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    margin: '10px 0',
+    marginRight: '10px',
+  },
+  imageChoiceImg: {
+    borderRadius: '5px',
+    height: '120px',
+    marginBottom: '10px',
+  },
+}))
 
 const Question = ({ question, value, onChange }) => {
+  const classes = useStyles();
+
   const handleChange = (event) => {
     onChange(event.target.value);
   };
@@ -17,6 +44,28 @@ const Question = ({ question, value, onChange }) => {
               <FormControlLabel key={choice.body} value={choice.body} control={<Radio />} label={choice.body}  />
             ))}
           </RadioGroup>
+        </Box>
+      );
+    case "MULTI_CHOICE_IMAGE":
+      return (
+        <Box p={2} bgcolor="rgba(255,255,255,0.6)">
+          <Typography variant="body1">
+            <b>{question.body}</b>
+          </Typography>
+          <Box className={classes.imageChoiceContainer}>
+            {question.choices.map(choice => (
+              <Box className={classes.imageChoice}>
+                <img
+                  className={classes.imageChoiceImg}
+                  src={choice.image_url}
+                  onClick={() => handleChange({
+                    target: { value: choice.image_url }
+                  })}
+                />
+                <b>{choice.body}</b>
+              </Box>
+            ))}
+          </Box>
         </Box>
       );
     case "LIKERT_SCALE":
