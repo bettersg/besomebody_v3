@@ -109,7 +109,7 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
   const classes = useStyles()
 
   async function fetchMoreResponses() {
-    const LIMIT = 10;
+    const LIMIT = 300;
     const { newResponses, newLastDocSnapshot } = await getDbReflectionResponsesPaginated({
       lastDocSnapshot,
       limit: LIMIT,
