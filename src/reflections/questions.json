@@ -137,6 +137,24 @@
         "body": "Navigating and understanding the experiences of other Malays"
       } 
     ]
+  },
+  {
+    "id": 8,
+    "type": "MULTI_CHOICE_IMAGE",
+    "body": "What do you think is Nadia's most significant challenge ahead?",
+    "choices": [
+      {
+        "body": "Realistic",
+        "image_url": "https://cdnb.artstation.com/p/assets/images/images/004/456/215/large/wil-hughes-troll-face.jpg?1483926054"
+      },
+      {
+        "body": "Mirrored",
+        "image_url": "https://www.getdigital.eu/web/getdigital/gfx/products/__generated__resized/1100x1100/Aufkleber_Trollface.jpg"
+      },
+      {
+        "body": "Thug",
+        "image_url": "https://www.nicepng.com/png/detail/2-24510_trollface-deal-with-it-troll-face-png.png"
+      } 
+    ]
   }
-
 ]

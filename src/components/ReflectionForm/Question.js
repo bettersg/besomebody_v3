@@ -14,14 +14,21 @@ const useStyles = makeStyles((theme) => ({
   imageChoice: {
     display: 'flex',
     flexDirection: 'column',
+    cursor: 'pointer',
     alignItems: 'center',
     margin: '10px 0',
     marginRight: '10px',
   },
   imageChoiceImg: {
+    boxSizing: 'content-box',
     borderRadius: '5px',
     height: '120px',
+    marginTop: '2px',
     marginBottom: '10px',
+  },
+  imageChoiceImgSelected: {
+    marginTop: 0,
+    border: '2px solid red',
   },
 }))
 
@@ -56,10 +63,13 @@ const Question = ({ question, value, onChange }) => {
             {question.choices.map(choice => (
               <Box className={classes.imageChoice}>
                 <img
-                  className={classes.imageChoiceImg}
+                  className={value === choice.body
+                    ? `${classes.imageChoiceImg} ${classes.imageChoiceImgSelected}`
+                    : classes.imageChoiceImg}
+                  alt={choice.body}
                   src={choice.image_url}
                   onClick={() => handleChange({
-                    target: { value: choice.image_url }
+                    target: { value: choice.body }
                   })}
                 />
                 <b>{choice.body}</b>

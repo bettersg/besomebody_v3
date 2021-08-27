@@ -1,8 +1,19 @@
-import ReflectionForm from '../../../components/ReflectionForm';
-import reflections from '../../../reflections/reflections.json';
+import ReflectionForm from '../../../components/ReflectionForm/EndStoryReflectionForm';
 
-const QuickFeedbackStep = () => {
-  return <ReflectionForm reflection={reflections[1]} />;
+const QuickFeedbackStep = ({ reflection, setState, next }) => {
+  const handleSubmit = (answers) => {
+    setState('quickAnswers', answers);
+    next();
+  };
+
+  return (
+    <ReflectionForm
+      subtitle="OVER TO YOU"
+      title="Chapter Feedback"
+      questions={reflection.quickQuestions}
+      onSubmit={handleSubmit}
+    />
+  );
 };
 
 export default QuickFeedbackStep;

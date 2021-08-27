@@ -1,8 +1,8 @@
 import React from "react";
 import {
   makeStyles,
-    ThemeProvider,
-  createMuiTheme,
+  ThemeProvider,
+  createTheme,
 } from "@material-ui/core/styles";
 import { Avatar, Button , Typography }
     from "@material-ui/core";
@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const theme = createMuiTheme({
+const theme = createTheme({
   overrides: {
     MuiTypography: {
       subtitle1: {

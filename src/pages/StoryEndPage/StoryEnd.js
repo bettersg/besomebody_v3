@@ -1,8 +1,9 @@
-import { Box, Button } from '@material-ui/core'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import { useMemo } from 'react';
+import { Button } from '@material-ui/core'
 import { Steps, Step } from "react-step-builder";
 
 import Frame from '../../components/Frame';
+import useEndOfChapter from '../../hooks/useEndOfChapter'
 import OutcomeUnlockedStep from './steps/OutcomeUnlockedStep';
 import QuickFeedbackStep from './steps/QuickFeedbackStep';
 import BonusExperienceStep from './steps/BonusExperienceStep';
@@ -12,7 +13,21 @@ import LongFeedbackStep from './steps/LongFeedbackStep';
 import DataBrowserStep from './steps/DataBrowserStep';
 import ShareStep from './steps/ShareStep';
 
-const StoryEnd = () => {
+import REFLECTIONS from '../../reflections/reflections.json'
+
+const StoryEnd = ({ reflectionId: propsReflectionId, globalVariables }) => {
+  const { user } = useEndOfChapter({ globalVariables });
+
+  const reflectionId =
+    typeof propsReflectionId === 'string'
+      ? parseInt(propsReflectionId, 10)
+      : propsReflectionId
+
+  const reflection = useMemo(
+    () => REFLECTIONS.find((reflection) => reflection.id === reflectionId),
+    [reflectionId]
+  )
+
   const Navigation = (props) => {
     return (
       <Button type="primary" onClick={props.next} color="primary">
@@ -23,8 +38,8 @@ const StoryEnd = () => {
 
   const config = {
     navigation: {
-      component: Navigation, // a React component with special props provided automatically
-      location: "after" // or before
+      component: Navigation,
+      location: "after"
     }
   };
 
@@ -32,11 +47,11 @@ const StoryEnd = () => {
     <Frame>
       <Steps config={config}>
         <Step title="Outcome Unlocked" component={OutcomeUnlockedStep} />
-        <Step title="Quick Feedback" component={QuickFeedbackStep} />
+        <Step title="Quick Feedback" component={(props) => <QuickFeedbackStep reflection={reflection} {...props} />} />
         <Step title="Bonus Experience" component={BonusExperienceStep} />
         <Step title="Reminder" component={ReminderStep} />
         <Step title="Reflections from Others" component={ReflectionResponsesStep} />
-        <Step title="Long Feedback" component={LongFeedbackStep} />
+        <Step title="Long Feedback" component={(props) => <LongFeedbackStep reflection={reflection} user={user} {...props} />} />
         <Step title="Data Browser" component={DataBrowserStep} />
         <Step title="Share" component={ShareStep} />
       </Steps>

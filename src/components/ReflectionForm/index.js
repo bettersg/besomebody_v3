@@ -10,9 +10,8 @@ import { createDbReflectionResponses } from "../../models/reflectionResponseMode
 
 import QUESTIONS from "../../reflections/questions.json";
 import { useAuth } from '../../contexts/AuthContext';
-import Frame from '../Frame';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   container: {
     backgroundColor: 'rgba(255,255,255,0.7)',
   },

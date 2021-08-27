@@ -12,6 +12,7 @@ import { useInkContext } from '../../contexts/InkContext'
 import Narrator from '../NarratorPage/Narrator'
 import Notification from '../NotificationPage/Notification'
 import Reflection from '../ReflectionsPage/Reflection'
+import StoryEnd from '../StoryEndPage/StoryEnd'
 
 const getUi = ({
   currentParagraphs,
