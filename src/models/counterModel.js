@@ -4,7 +4,7 @@ export const getDbReflectionResponsesCount = async (reflectionId, questionId) =>
   try {
     const counter = await firestore
       .collection('counters')
-      .doc(`reflectionResponses-${reflectionId}-${questionId}`)
+      .doc(`reflectionResponses-${reflectionId}`)
       .get();
     return counter.exists ? counter.data().count : 0;
   } catch (err) {
