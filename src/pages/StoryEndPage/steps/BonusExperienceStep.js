@@ -1,5 +1,5 @@
 const BonusExperienceStep = () => {
-  return 'a';
+  return 'BonusExperienceStep';
 };
 
 export default BonusExperienceStep;

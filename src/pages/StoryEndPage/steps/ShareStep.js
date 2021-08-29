@@ -1,5 +1,5 @@
 const ShareStep = () => {
-  return 'c';
+  return 'ShareStep';
 }
 
 export default ShareStep;

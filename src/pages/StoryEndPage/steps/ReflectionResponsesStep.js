@@ -1,5 +1,5 @@
 const ReflectionResponsesStep = () => {
-  return 'b';
+  return 'ReflectionResponsesStep';
 };
 
 export default ReflectionResponsesStep;
