@@ -137,6 +137,28 @@
         "body": "Navigating and understanding the experiences of other Malays"
       } 
     ]
+  },
+  {
+    "id": 8,
+    "type": "MULTI_CHOICE_IMAGE",
+    "body": "Which character do you identify most with in this story?",
+    "choices": [
+      {
+        "body": "Nadia",
+        "image_url": "https://cdnb.artstation.com/p/assets/images/images/004/456/215/large/wil-hughes-troll-face.jpg?1483926054"
+      },
+      {
+        "body": "Gavin",
+        "image_url": "https://www.getdigital.eu/web/getdigital/gfx/products/__generated__resized/1100x1100/Aufkleber_Trollface.jpg"
+      },
+      {
+        "body": "Chloe",
+        "image_url": "https://www.nicepng.com/png/detail/2-24510_trollface-deal-with-it-troll-face-png.png"
+      },
+      {
+        "body": "Azlin",
+        "image_url": "https://www.nicepng.com/png/detail/2-24510_trollface-deal-with-it-troll-face-png.png"
+      }  
+    ]
   }
-
 ]

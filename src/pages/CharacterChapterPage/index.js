@@ -142,11 +142,11 @@ const CharacterChapterPage = (props) => {
       </div>
      
       {hasSavedState && (
-            <box             
+            <Box             
               onClick={handleLoadSavedStory}
             >
               <IntroBanner persona={persona} />
-            </box>
+            </Box>
           )}
       <div style={{ paddingTop: '24px' }}>
         {userFromDb && persona.chapters.length > 0 ? (

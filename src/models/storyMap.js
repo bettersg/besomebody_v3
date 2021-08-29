@@ -158,7 +158,7 @@ export const CHARACTER_MAP = [
         title: "Fork in the Road",
         knotTag: "nadia_3_intro",
         summary: "As one door closes, another opens. But which girl will step through that door? As JC life comes to an end, only Nadia can choose.",
-        playable: false,
+        playable: true,
         endings: [
           {
             endingId: 1,
