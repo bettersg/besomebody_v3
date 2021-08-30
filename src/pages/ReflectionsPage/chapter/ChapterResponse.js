@@ -14,8 +14,7 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
 //import from model 
-//import { createReflectionLikes } from '../../../models/reflectionResponseModel';
-import { createReflectionLikes } from '../../../increment/incrementreflectionLikes';
+import { createReflectionLikes } from '../../../models/ReflectionLikes';
 
 const useStyles = makeStyles((theme) => ({
   reflectionBox: {
@@ -35,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     color: '#E2E2F8',
     marginTop:10,
     fontWeight: 400,
-    fontSize: 12,
+    fontSize: 11,
   },
   flag: {
     color: '#E2E2F8',
@@ -86,10 +85,9 @@ const ChapterResponse = ({ response }) => {
   const likeReflection = (e) =>{
     e.preventDefault();
 
-    console.log(response.id)
-    console.log(response.reflectionId)
+    console.log(currentUser.id)
 
-    createReflectionLikes(response.id)
+    createReflectionLikes(response.id, currentUser.id)
   }
   //submit the red flag disagreement
   const onSubmit = (e) => {

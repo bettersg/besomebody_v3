@@ -53,11 +53,3 @@ export const getDbReflectionResponse = async(id) => {
     throw new Error(`Error at getDbReflectionResponse: ${err}`);
   }
 }
-export const createReflectionLikes = async(id)=>{
-  var reflLikesPosts = firestore.collection('reflectionResponses').doc(id)
-  console.log(reflLikesPosts)
-
-  await reflLikesPosts.update({
-    numLikes : firestore.FieldValue.increment(1)
-  })
-}
