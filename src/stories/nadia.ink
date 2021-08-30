@@ -2311,8 +2311,9 @@ That’s my plan 🧡 #speaker_1
     
 
 === nadia_3_2 ===
-#knot:nadia_3_2
 #ui:story_end
 #reflection_id:4
+VAR chapter_3_ending = 1
+This is the end.
 
 -> END
