@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Box, Button, CircularProgress , 
   Typography,
   Container,} from '@material-ui/core'
-import { getDbReflectionResponses } from '../../../models/reflectionResponseModel';
+import { getDbReflectionResponsesPaginated } from '../../../models/reflectionResponseModel';
+import { getDbReflectionResponsesCount } from '../../../models/counterModel';
 import { REFLECTION_PAGE_FORM } from '../constants';
 import ChapterResponse from './ChapterResponse';
- import makeStyles from '@material-ui/core/styles/makeStyles'
- import PacmanLoader from 'react-spinners/PacmanLoader'
-
+import makeStyles from '@material-ui/core/styles/makeStyles'
+import PacmanLoader from 'react-spinners/PacmanLoader'
+import InfiniteScroll from 'react-infinite-scroll-component';
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
@@ -102,14 +103,38 @@ const useStyles = makeStyles((theme) => ({
 
 const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
   const [responses, setResponses] = useState(null);
+  const [hasMore, setHasMore] = useState(true);
+  const [lastDocSnapshot, setLastDocSnapshot] = useState(null);
+  const [count, setCount] = useState(null);
   const classes = useStyles()
 
-  useEffect(() => {
-    getDbReflectionResponses({
+  async function fetchMoreResponses() {
+    const LIMIT = 300;
+    const { newResponses, newLastDocSnapshot } = await getDbReflectionResponsesPaginated({
+      lastDocSnapshot,
+      limit: LIMIT,
       reflectionId,
       questionId: 3,  // this is hardcoded to the "share your story textarea question"
-    }).then(setResponses).catch(console.error);
-  }, [reflectionId, setResponses]);
+    });
+    if (newResponses.length < LIMIT) {
+      setHasMore(false);
+    }
+    setResponses((prevResponses) => prevResponses === null ? newResponses : prevResponses.concat(newResponses));
+    setLastDocSnapshot(newLastDocSnapshot);
+  }
+
+  async function fetchMoreResponsesIfNotOverflow() {
+    const container = document.getElementById('reflectionsContainerId');
+    if (container && container.scrollHeight > container.clientHeight) return;
+    if (hasMore) await fetchMoreResponses();
+  }
+
+  async function fetchCount() {
+    setCount(await getDbReflectionResponsesCount(reflectionId, 3));
+  }
+
+  useEffect(() => fetchCount(), []);
+  useEffect(() => fetchMoreResponsesIfNotOverflow(), [hasMore, lastDocSnapshot]);
 
   if (responses == null) {
     return (
@@ -120,15 +145,21 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
   } else {
     return (
       <Box className={classes.background}>        
-        <Container className={classes.container}>
+        <Container className={classes.container} id={'reflectionsContainerId'}>
           <Typography className={classes.headerText}>Reflections from Others</Typography>
-          <Typography variant="body2" color="error">{responses.length} players have completed this chapter</Typography>
+          <Typography variant="body2" color="error">{count || 0} players have completed this chapter</Typography>
         <Box>
-        {responses.map(response => (
-          response.answer.length > 5 && (
-            <ChapterResponse key={response.id} response={response} />
-            )
-        ))}        
+          <InfiniteScroll
+            dataLength={responses.length}
+            next={fetchMoreResponses}
+            hasMore={hasMore}
+            loader={<PacmanLoader color="#e5e5e5" size={10} css={{display:'flex', left:'-15px', margin:'auto', height:'30px'}} />}
+            scrollableTarget={'reflectionsContainerId'}
+          >
+            {responses.map(response => (
+              response.answer.length > 5 && <ChapterResponse key={response.id} response={response} />
+            ))}
+          </InfiniteScroll>
         </Box>
       
         </Container>

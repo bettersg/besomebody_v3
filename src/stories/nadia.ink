@@ -1767,7 +1767,7 @@ No, Nadia. Because more of us, more Malay people, are poor.  #speaker_right
 Ya obviously. You, me and the next door neighbour also know that.  #speaker_right
 Doesn’t change the fact that when there’s a charity drive, and got photos on Facebook, the faces all Melayu.  #speaker_right
 And when there’s somehow a success story -   #speaker_self
-- then all over Berita Harian. Masyarakat Melayu boleh maju. Malay people can succeed! Haha, might be you next time. #speaker_right
+- then all over Berita Harian (the news). Masyarakat Melayu boleh maju (Malay people can succeed)! Haha, might be you next time. #speaker_right
 Argh, I hope not.. I want to be a doctor. But I don’t want it to be a big deal because I’m Malay. Suddenly becoming a poster.  #speaker_self
 It’s all the stories, with the money problems, the drug problems. Then, when there’s an achievement.. #speaker_self
 They shout it out to the whole kampong. Look what this person managed to do! You can do it too!! #speaker_right
@@ -1923,6 +1923,26 @@ Reflection 3
 
 
 -> nadia_3_intro
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 === nadia_3_intro ===
@@ -2222,182 +2242,77 @@ Will see ya in school 👁️👁️ #speaker_self
 -> nadia_3_2
 
 = nadia_3_1yes
-NADIA
-👁️👁️
- 
-GAVIN
-He’s fine laaa #speaker_1 
- 
+👁️👁️️ #speaker_self 
+He’s good deeeeep down laaa, and he's fine...  #speaker_1 
 ...in small amounts  #speaker_1 
- 
-NADIA
-Ha!!!! Knew it!
- 
-GAVIN
+Ha!!!! Knew it!️ #speaker_self 
 What happened with you and Azlin anyway #speaker_1 
- 
-NADIA
-☹️
- 
-GAVIN
+☹️️ #speaker_self 
 No? Don’t wanna talk about it? #speaker_1 
- 
-NADIA
-I do... but I also don’t really wanna relive it in text
- 
-Ya know?
- 
-GAVIN
+I do... but I also don’t really wanna relive it in text️ #speaker_self 
+Ya know?️ #speaker_self 
 OK thennn. Will a bubble tea help haha #speaker_1 
- 
-NADIA
-No need la. I want to stew and sulk a bit. That’s all 😔
- 
-GAVIN 
+No need la. I want to stew and sulk a bit. That’s all 😔️ #speaker_self 
 Sulking is a lot more fun with an audience #speaker_1 
- 
-NADIA
-Nooooooo
- 
-GAVIN
+Nooooo   #speaker_self 
 Yessssss #speaker_1 
- 
 Trust me, way better 😂 #speaker_1 
- 
-NADIA
-That what you always do? Should I be worried lol
- 
-GAVIN
+That what you always do? Should I be worried lol️ #speaker_self 
 Well I don’t think sulking is a competitive sport #speaker_1 
- 
 So you can take the lead today lol #speaker_1 
- 
-NADIA
-🙄 .. I don’t expect you to get it ok, so it’s fine if you don’t. 
- 
-GAVIN
+🙄 .. I don’t expect you to get it ok, so it’s fine if you don’t. ️ #speaker_self 
 My ears (👁️👁️) are at your disposal.  #speaker_1 
- 
-NADIA
-The chat I had with Azlin gave me all sorts of feelings about being Malay
- 
-I’m not ashamed of being Malay, like NO WAY. 
- 
-GAVIN
+The chat I had with Azlin gave me all sorts of feelings about being Malay️ #speaker_self 
+I’m not ashamed of being Malay, like NO WAY. ️ #speaker_self 
 Uh huh #speaker_1 
- 
 👉No Judgment Zone #speaker_1 
- 
-NADIA
-Ok ok
- 
-What if.. All this while, I have been judging
- 
-Myself. AND my own people 🙃🤡🙃🤡🙃
- 
-GAVIN
+Ok ok️ #speaker_self 
+What if.. All this while, I have been judging️ #speaker_self 
+Myself. AND my own people 🙃🤡🙃🤡🙃️ #speaker_self 
 This come from where 🤯 #speaker_1 
- 
-NADIA
-IDKKKKK but?? 
- 
-...*Sometimes* I think if they worked harder or made “right” decisions, then they would stop doing so.. badly?
- 
-It’s such an awful thing to say. Sometimes my dad says it in passing. Maybe I absorbed it, idk
- 
-GAVIN
+IDKKKKK but?? ️ #speaker_self 
+...*Sometimes* I think if they worked harder or made “right” decisions, then they would stop doing so.. badly?️ #speaker_self 
+It’s such an awful thing to say. Sometimes my dad says it in passing. Maybe I absorbed it, idk️ #speaker_self 
 Well idk.. Parents really have their idea of the world #speaker_1 
- 
-NADIA
-I also KNOW it’s easy for me to say, cos things are ok for MY family.
- 
-Then THAT makes me feel like a lousy Malay person. Can’t even relate to other Malays who are doing less-great. Sometimes it’s my own cousins. As if I’m so different from them. But I’m not.. 
- 
-GAVIN
+I also KNOW it’s easy for me to say, cos things are ok for MY family.️ #speaker_self 
+Then THAT makes me feel like a lousy Malay person. Can’t even relate to other Malays who are doing less-great. Sometimes it’s my own cousins. As if I’m so different from them. But I’m not.. ️ #speaker_self 
 I don’t think any of this makes you more or less Malay than each other 😕 #speaker_1 
- 
-NADIA
-Sometimes I forget how much I have. I forget how much I don’t know. It’s embarrassing. 
- 
-Makes me feel so gross 
- 
-GAVIN
+Sometimes I forget how much I have. I forget how much I don’t know. It’s embarrassing. ️ #speaker_self 
+Makes me feel so gross ️ #speaker_self 
 You’re also your own person tho, a whole individual.  #speaker_1 
- 
 You’re also being a bit hard on yourself. Just a bit 👀 #speaker_1 
- 
-NADIA
-I want to do well. I want it to mean something. Get myself into med school. 
- 
-The other day Azlin joked like haha, for sure my face will be on Berita Harian some day 💀💀💀
- 
-GAVIN
+I want to do well. I want it to mean something. Get myself into med school. ️ #speaker_self 
+The other day Azlin joked like haha, for sure my face will be on Berita Harian some day 💀💀💀️ #speaker_self 
 Lot of pressure for small shoulders #speaker_1 
- 
-NADIA
-Ya who wants to be a potential poster child about anything! I’m not about tht life 🤢
- 
-Then at the same time.. 
- 
-GAVIN
+Ya who wants to be a potential poster child about anything! I’m not about tht life 🤢️ #speaker_self 
+Then at the same time.. ️ #speaker_self 
 Posters work.  #speaker_1 
- 
-NADIA
-Maybe? Who knows. If it throws away shitty stereotypes? even my own. 
- 
-OK that’s it.
- 
-Thanks for listening to my podcast 😣
- 
-GAVIN
+Maybe? Who knows. If it throws away shitty stereotypes? even my own. ️ #speaker_self 
+OK that’s it.️ #speaker_self 
+Thanks for listening to my podcast 😣️ #speaker_self 
 Pretty good one tbh #speaker_1 
- 
-NADIA
-That was really a rant. I’m sorry
- 
-GAVIN
+That was really a rant. I’m sorry️ #speaker_self 
 Eh, no sorry pls! Thank you for sharing all of that   #speaker_1 
- 
 Means a lot too that you can talk to me about these things  #speaker_1 
- 
-NADIA
-You sure?
- 
-GAVIN
+You sure?️ #speaker_self 
 Yeah man! Tbh you being very srs about a lot is NOT brand new information.  #speaker_1 
- 
 I like that about you. More of this please 🤓 #speaker_1 
- 
-NADIA
-Okayyyy, my head can be pretty tangled sometimes 😅
- 
-GAVIN
+Okayyyy, my head can be pretty tangled sometimes 😅️ #speaker_self 
 I’m good with a comb #speaker_1 
- 
-NADIA 
-Haha we know
- 
-GAVIN
+Haha we know️ #speaker_self 
 😳😎💁‍♂️ #speaker_1 
- 
-NADIA
-Thanks Gavin. I feel a bit better
- 
-GAVIN
+Thanks Gavin. I feel a bit better️ #speaker_self 
 Told you sulking with an audience works! #speaker_1 
- 
 Anyway, come out tmr la! Meeting my church friends, so if you wanna ask them about med school..   #speaker_1 
- 
-NADIA
-Oh geez I keep forgetting! Yes pls. Thanks for doing this with me ☺️ 
- 
-GAVIN
+Oh geez I keep forgetting! Yes pls. Thanks for doing this with me 😅️ ️ #speaker_self 
 That’s my plan 🧡 #speaker_1 
 
-
+-> nadia_3_2
     
 
 === nadia_3_2 ===
-
+#ui:story_end
+#reflection_id:4
+This is the end.
 
 -> END

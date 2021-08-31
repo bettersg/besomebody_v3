@@ -70,6 +70,7 @@ export default function ChapterBox(props) {
   for (var i = 0; i < getEndingsUnlocked(); i++) {
     rows.push(
       <FiberManualRecordIcon
+        key={`1:${i}`}
         style={{ fontSize: 8, color: '#999999', marginRight: 1 }}
       />
     )
@@ -77,6 +78,7 @@ export default function ChapterBox(props) {
   for (var j = 0; j < chaptDetails.endings.length - getEndingsUnlocked(); j++) {
     rows.push(
       <FiberManualRecordIcon
+        key={`2:${j}`}
         style={{ fontSize: 8, color: '#E5E5E5', marginRight: 1 }}
       />
     )
