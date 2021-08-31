@@ -138,6 +138,8 @@ const Whatsapp = (props) => {
                           {(step.tags[0]?.includes('speaker_2') ? specialTags.speaker_2_name : "")}
                           {(step.tags[0]?.includes('speaker_3') ? specialTags.speaker_3_name : "")}
                           {(step.tags[0]?.includes('speaker_4') ? specialTags.speaker_4_name : "")}
+                          {(step.tags[0]?.includes('speaker_5') ? specialTags.speaker_5_name : "")}
+                          {(step.tags[0]?.includes('speaker_6') ? specialTags.speaker_6_name : "")}
                         </div>
                         {setCurrentSpeaker(step.tags[0])}
                         {/* <div>{step.text}</div> */}

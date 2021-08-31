@@ -159,6 +159,7 @@ export const CHARACTER_MAP = [
         knotTag: "nadia_3_intro",
         summary: "As one door closes, another opens. But which girl will step through that door? As JC life comes to an end, only Nadia can choose.",
         playable: true,
+<<<<<<< Updated upstream
         images: [
           "/images/bg_nadia_intro.jpg",
           "/images/bg_nadia_bedroom.jpg",
@@ -187,6 +188,9 @@ export const CHARACTER_MAP = [
           "/images/bg_launch.jpg",
           "/images/bg_reflections.jpg",
         ],
+=======
+        images: ["/images/aman_1_intro.jpg"],
+>>>>>>> Stashed changes
         endings: [
           {
             endingId: 1,
