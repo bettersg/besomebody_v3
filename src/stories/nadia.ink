@@ -952,7 +952,7 @@ u got this.  #speaker_1
 #knot:nadia_1_reflection
 #ui:chapter_reflection
 #reflection_id:2
-Reflection 1
+Reflection 2
 
 
 
@@ -1984,8 +1984,11 @@ I think I need to lay low for a bit, and maybe see Chloe a bit less.
 I want to just stay home and chill - but I have a nagging feeling like I'm supposed to have plans for today that I can't quite remember.
 Oh crap - I think I was supposed to reply to Gavin on something!
 
- 
--> nadia_3_1
+// FOR DEBUG ONLY
+
++ [chapter 3 ending 1] -> chapter_3_ending_1
++ [chapter 3 ending 2] -> chapter_3_ending_2
++ [continue story] -> nadia_3_1
 
 
 === nadia_3_1 ===
@@ -2062,6 +2065,7 @@ Sure? Kinda disappeared after school, thought something happened. You can tell m
     That’s what you always say. I’ll see you in school. #speaker_1
 
     + [Decline]
+    VAR nadia_3_gavinchoice = "no"
     I don’t think so… it might be tough.. #speaker_self
     Really? Am gonna be out whole day with them tmr, just join us whenever la #speaker_1
     No as in.. I’m just tired #speaker_self
@@ -2207,6 +2211,7 @@ Sure? Kinda disappeared after school, thought something happened. You can tell m
 }
 
 = nadia_3_1maybe
+~ nadia_3_gavinchoice = "maybe"
 He’s not as funny as he thinks he is #speaker_self 
 Ok, burn. 🔥🔥🔥 #speaker_1 
 Said what I said 🙄💁‍♀️ #speaker_self 
@@ -2242,6 +2247,7 @@ Will see ya in school 👁️👁️ #speaker_self
 -> nadia_3_2
 
 = nadia_3_1yes
+~ nadia_3_gavinchoice = "yes"
 👁️👁️️ #speaker_self 
 He’s good deeeeep down laaa, and he's fine...  #speaker_1 
 ...in small amounts  #speaker_1 
@@ -2307,13 +2313,390 @@ Anyway, come out tmr la! Meeting my church friends, so if you wanna ask them abo
 Oh geez I keep forgetting! Yes pls. Thanks for doing this with me 😅️ ️ #speaker_self 
 That’s my plan 🧡 #speaker_1 
 
--> nadia_3_2
+-> nadia_3_2_narration
     
 
+=== nadia_3_2_narration ===
+#knot:nadia_3_2_narration
+#ui:narrator
+#background:bg_nadia_canteen.jpg
+12:30pm, School Canteen.
+The months flew by in a blur as we rushed through the A Levels. Late nights, notes covered with scribblings and highlighted lines, practice papers, and lots of sugar and caffeine to keep us going.
+All of that ... to lead to today. 
+It feels odd being back in the school canteen again. In just a few hours, I'll pick up my results.
+A simple sheet of paper that will determine whether I can enter med school or not. I'm excited, nervous, terrified, and hopeful all at once. 
+And it's good to see some familiar faces again.
+
+
+-> nadia_3_2
+
+
 === nadia_3_2 ===
+#knot:nadia_3_2
+#ui:scene
+#background:bg_nadia_canteen.jpg
+#speaker_left_image:cha_nadia_chloe_school_normal.png
+#speaker_left_name:Chloe
+Never thought I would miss the smell of the canteen. It’s so odd seeing it empty like this. #inner_monologue
+Nad! #speaker_left
+There she is. Looks like she’s finally managed to catch up on her sleep. Let me  go over.  #inner_monologue
+Haven’t seen you in ages! I’m so nervous, my hands are jittery. #speaker_left
+I know right. The other day, I saw papers thrown out of someone’s window. #speaker_self   
+What! Like notes? Did you see who it was? #speaker_left
+No, just the white sheets, floating down the block. Was probably around after our last papers. I’ve been thinking about it since. #speaker_self 
+Tempting huh. Maybe I’ll do that after today. I’ve been holding on to them, a crazy stack by my bed. #speaker_left
+Don’t want to touch, right? #speaker_self 
+Ya! Don’t want to even look. Might be bad luck to disturb, just in case. But also.. Reassuring? #speaker_left
+It’s all the work. Two years. #speaker_self 
+#speaker_left_image:cha_nadia_chloe_school_grinning.png
+(Jokingly) Not like I put down offerings.  #speaker_left
+Well, after today.. #speaker_self 
+Do you know where we’re supposed to go? And where’s Gavin? #speaker_left
+The hall I think, haven’t heard much from the teachers. Do you think they’ll make announcements? #speaker_self 
+Maybe, how the school did and all. Haven’t seen some of the guys around yet either. #speaker_left
+Yeah, some of them are coming in from Tekong, might take a while I guess. I saw a few of the boys by the field. #speaker_self 
+Oh that’s right! Have you seen Gavin with his botak cut yet?  #speaker_left
+(Distracted) No, not yet actually.. #inner_monologue
+#speaker_left_image:cha_nadia_chloe_school_normal.png
+Wanna go to the quad? See whether the rest of the class is there. #speaker_left
++ Yes, Let's go.[] #speaker_self
+    Hopefully there’s a good breeze there. This still air and anticipation is killing me!  #speaker_left
++ Can we stay in the canteen? []  #speaker_self
+    Haha alright, I miss this place too. #speaker_left
+    I’m hoping Gavin will find us here. #inner_monologue
+-     Anyway, I am such a ball of nerves...  #speaker_self
+Oh please - if anybody should walk into that hall with confidence, it's you. #speaker_left
+#ui:narrator
+#background:bg_nadia_canteen.jpg
+1:30pm. It was so good chatting with Chloe and some of my classmates. 
+It felt like a reunion, but with a nervous energy running through us all.
+Some classmates joked too loud, others were quieter than usual.
+An announcement over the school PA system rings out, asking us to go to the school hall.
+It's time. Sigh.
+Suddenly, a teacher approaches our table. It's Ms Unaisah.
+#ui:scene
+#background:bg_nadia_canteen.jpg
+#speaker_left_image:cha_nadia_chloe_school_normal.png
+#speaker_left_name:Chloe
+#speaker_right_name:Unaisah    
+#speaker_right_image:cha_nadia_unaisah.png
+Ms Una? Is she looking for someone? #inner_monologue
+Nadia, can I see you for a bit? Privately please?   #speaker_right
+Chloe, you guys go ahead first. I’ll catch up later.  #speaker_self
+Ok, text me? See you later! #speaker_left
+#speaker_left_image:pixel.png
+Your form teacher asked me to help look for you.  #speaker_right
++ Is something the matter? []  #speaker_self
++ Oh no, did I do badly? []  #speaker_self
+- Not at all. Congratulations, Nadia.  #speaker_right
+(disbelief) What do you mean? #speaker_self
+I mean you did really well. You’re one of our top scorers.  #speaker_right
+No way. NO WAY. NOOOO WAAAAYYYY. OMG OMG OMG #inner_monologue
+(laughs) I can see you’re in a bit of shock. Come with me, we’re briefing the top 3 students in the teacher’s lounge before you go to the hall with the rest.  #speaker_right
+There’s also some paperwork to collect the school award and we can also start the scholarship application process for you today.  #speaker_right
+#speaker_right_image:pixel.png
+#ui:narrator
+#background:bg_nadia_schoolhall.jpg
+2:40pm. School Hall.
+My world changed in the last hour. 
+I'm holding my envelope in my hand, and I keep peeking at the results sheet just to make sure I read it correctly.
+The teachers are still talking, going through slides in some presentation that I stopped paying attention to.
+#ui:notification
+#background:ui_nadia_message.jpg
+Abah: How was it? # message
+-> nadia_3_2_abah
+
+=== nadia_3_2_abah === 
+#knot:nadia_3_2_abah
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Abah
+#chat_group_image:ico_nadia_family.png
+#speaker_1_name:Abah
+#timestamp:14:40
+I got my results #speaker_self
+?.. #speaker_1
+...... straight As #speaker_self
+Alhamdulillah!! All ur hard work Nadia. Abah very, very proud of u. Always.  #speaker_1
+Thanks abah. I can’t believe it.. #speaker_self
+Want me to pick u up from school? Can be there half hr #speaker_1
++ It’s ok, think I want to look for my friends [] #speaker_self
+    Ok then. Jangan balik lambat (don't return home late) #speaker_1
+    Enjoy yourself! :) #speaker_1
++ Yeah ok, but maybe 1hr like that? []  #speaker_self
+    Ok then. Make sure you go say thank you to your teachers!  #speaker_1
+- I will :) Also.. don’t tell the rest of the family k? I want to message Azlin first.   #speaker_self   
+👌     #speaker_1
+#ui:narrator
+#background:bg_nadia_schoolhall.jpg
+Ok, the formal part is finally done. Now to find my friends.
+#ui:notification
+#background:ui_nadia_message.jpg
+Kelly: omggggggG @nadia!!!! We just heard!! # message
+
+
+-> nadia_3_2b
+
+=== nadia_3_2b ===
+#knot:nadia_3_2b
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Student Council Chat
+#chat_group_image:ico_nadia_studentcouncil.png
+#speaker_1_name:Gavin 
+#speaker_2_name:Kelly 
+#speaker_3_name:Yvonne
+#speaker_4_name:Vikas 
+#speaker_5_name:Sam
+#timestamp:14:45
+Ya siaaaaaa no wonder suddenly disappear like that hahaha #speaker_3
+Haha rest of us queueing up in hall to collect result slip like goondu #speaker_2
+@nadia congrats yo. How’s everyone? I still otw to school sia, kena book out so late  #speaker_5
+Ok ok la, not so bad mine.. Just glad finish already, can move on 🤭 #speaker_3
+ 
+#ui:scene
+#background:bg_nadia_schoolhall.jpg
+I better say something. Before it gets awkward! #inner_monologue
+ 
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Student Council Chat
+#chat_group_image:ico_nadia_studentcouncil.png
+#speaker_1_name:Gavin 
+#speaker_2_name:Kelly 
+#speaker_3_name:Yvonne
+#speaker_4_name:Vikas 
+#speaker_5_name:Sam
+Thanks guys!! I didn’t really know what to expect.. Think am still processing haha #speaker_self
+Haha what’s there to process. The whole world’s your oyster 💎 #speaker_4
+Is there anybody else staying back after this? #speaker_5
+@sam yea, some of us hanging around still! we gg for ice cream later #speaker_3
+yes pls 😅 Wanna ask yall about unis huhu #speaker_2
+mememe! #speaker_1
+{nadia_3_gavinchoice:
+- "no" : -> nadia_3_2b_no
+- "maybe": -> nadia_3_2b_maybe
+- "yes": -> nadia_3_2b_yes
+- else: -> nadia_3_2b_maybe
+}
+
+=== nadia_3_2b_no ===
+#knot:nadia_3_2b_no
+#ui:notification
+#background:ui_nadia_message.jpg
+Gavin: Hey congrats # message
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Gavin
+#chat_group_image:ico_nadia_gavin.png
+#speaker_1_name:Gavin
+Hey congrats.  #speaker_1
+Thanks #speaker_self
+#ui:scene
+#background:bg_nadia_schoolhall.jpg
+I guess.. That’s that. #inner_monologue
+-> nadia_3_2c
+    
+    
+=== nadia_3_2b_maybe ===    
+#knot:nadia_3_2b_maybe
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Student Council Chat
+#chat_group_image:ico_nadia_studentcouncil.png
+#speaker_1_name:Gavin 
+#speaker_2_name:Kelly 
+#speaker_3_name:Yvonne
+#speaker_4_name:Vikas 
+#speaker_5_name:Sam
+Nadddd tell me you’re joining us! Am dying to hear what you’re gg to apply for #speaker_2
+Ummm not really sure yet 😅 will be nice meeting up! #speaker_self
+-> nadia_3_2b_maybe_1
+
+= nadia_3_2b_maybe_1    
+#ui:notification
+#background:ui_nadia_message.jpg
+Gavin: Pls, no need pretend :) Congrats la!! # message
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Gavin
+#chat_group_image:ico_nadia_gavin.png
+#speaker_1_name:Gavin
+Pls, no need pretend :) Congrats la!!  #speaker_1
+😳!! omg wru #speaker_self
+Still on my way. Travelling from Tekong is no joke. Stupid boat got delayed. You still in school? #speaker_1
+Yeah, am looking for Chloe actually  #speaker_self
+How did she do? #speaker_1
+... idk, she should be ok, but she hasn’t replied my text #speaker_self
+Weird #speaker_1
+-> nadia_3_2b_maybe_2
+
+= nadia_3_2b_maybe_2
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Student Council Chat
+#chat_group_image:ico_nadia_studentcouncil.png
+#speaker_1_name:Gavin 
+#speaker_2_name:Kelly 
+#speaker_3_name:Yvonne
+#speaker_4_name:Vikas 
+#speaker_5_name:Sam
+Hey @yvonne, did you see Chloe btw #speaker_self
+Right, she also disappeared lol - she did ok leh! Said her mom was waiting for her outside #speaker_3
+Got it, thanks! #speaker_self
+#ui:scene
+#background:bg_nadia_schoolhall.jpg
+Guess I’ll join the rest later for ice-cream.. Doesn’t feel right leaving school without Chloe.   #inner_monologue
+-> nadia_3_2c
+
+
+=== nadia_3_2b_yes ===    
+Nadddd tell me you’re joining us! Am dying to hear what you’re gg to apply for #speaker_2
+😬 I’m probablyprobab gonna try for med school #speaker_self
+Of course!! I can totally see it #speaker_2
+Waaahhh. #speaker_4
+So we get free treatment from you for life right Dr Nadia? Hehe #speaker_5
+-> nadia_3_2b_yes_1
+
+= nadia_3_2b_yes_1    
+#ui:notification
+#background:ui_nadia_message.jpg
+Gavin: Das right!! Proud of you babe 🌹🌹🌹 # message
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Gavin
+#chat_group_image:ico_nadia_gavin.png
+#speaker_1_name:Gavin
+Das right!! Proud of you babe 🌹🌹🌹  #speaker_1
+😳!! omg wru #speaker_self
+Still on my wayyyyy, are you waiting for me haha  #speaker_1
+I can! Still looking for Chloe actually.  #speaker_self
+Eh? She told me she went home  #speaker_1
+Wait how do you know this, I’ve been waiting for her to reply meeee #speaker_self
+Idk she texted me earlier asking what time I was reaching. When I said I was an hr away  #speaker_1
+She decided to go home first..  #speaker_self
+Yep her mom was waiting for her. Said she’ll join us for dinner if we’re still out.   #speaker_1
+Yeah? #speaker_self
+She did ok, I think. You worry too much! I’ll see you in awhile k?   #speaker_1
+#ui:scene
+#background:bg_nadia_schoolhall.jpg
+I hope he’s right. Just feels weird, thought she and I would be doing this together.  #inner_monologue
+-> nadia_3_2c
+
+=== nadia_3_2c ===
+#ui:scene
+#background:bg_nadia_schoolhall.jpg
++ [Check up on Chloe] -> nadia_3_2d
++ [Tell Azlin your results] -> nadia_3_2e
+
+=== nadia_3_2d ===
+ 
+NADIA
+Hallo! Wru?
+ 
+NADIA
+Chlo u ok
+ 
+NADIA
+Yoohoo
+ 
+NADIA
+Hey Chlo heard you’re at home already - lemme know if you want to come out and hang? Esp if you want a break from your mom.
+ 
+CHLOE
+Hi hi
+ 
+NADIA
+Omg hey!!!
+ 
+CHLOE
+Sorry I disappeared like that haha
+ 
+NADIA
+No no its ok 😅 do you want to come hang out
+ 
+CHLOE
+Idk 
+ 
+I don’t want to ruin the mood
+ 
+You should celebrate tho 🙂
+ 
+NADIA
+Oh.. it won’t be the same without you
+ 
+Are you ok?
+ 
+CHLOE
+Yes. I’m just being a bit dramatic. What a way to end school, crying in the bathroom haha
+ 
+NADIA
+Omg Chlo why didn’t you call me
+ 
+CHLOE
+Don’t be ridiculous, you were having your moment lolol
+ 
+We’ll hang out soon k? Congrats Nad 
+-> nadia_3_3_narration
+
+=== nadia_3_2e ===
+WHATSAPP: THREAD (w AZLIN)
+ 
+NADIA
+So I have news 😅
+ 
+AZLIN
+?
+ 
+Eh today is a levels results kan!
+ 
+So how, front page berita harian tak 🤭🤭🤭
+ 
+NADIA
+Haha nothing that dramatic
+ 
+But I did well. I’m gg to apply for med school
+ 
+AZLIN
+!!!! YES LA congrats Nad 💯✨✨✨💯
+ 
+NADIA
+Thank youuuuuu I really just wanted you to be the first to know 💖
+ 
+AZLIN
+Gasp am i really
+NADIA
+Ok sort of, my dad got ahead of you
+ 
+AZLIN
+Haha of course he did
+ 
+Ahhhhh I’m so happy for you ✨ Let’s have dinner soon, my treat! 
+ 
+NADIA
+Wah 🤓
+ 
+AZLIN
+You pick ok! Good news like this must celebrate. 
+-> nadia_3_3_narration
+    
+=== nadia_3_3_narration ===    
+testing
+-> END
+
+=== chapter_3_ending_1 ===
+VAR chapter_3_ending = 1 
 #ui:story_end
 #reflection_id:4
-VAR chapter_3_ending = 1
-This is the end.
+the end = 1    
+    -> END
 
+=== chapter_3_ending_2 ===
+~ chapter_3_ending = 2
+#ui:story_end
+#reflection_id:4
+the end = 2
+    
+    
+    
 -> END

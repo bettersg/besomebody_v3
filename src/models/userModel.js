@@ -40,6 +40,7 @@ export const updateDbUser = async (obj, objId) => {
     } else {
       const user = await userRef.get()
       const currentUserData = user.data()
+      console.log('Progress Saved')
       return currentUserData
     }
   } catch (err) {

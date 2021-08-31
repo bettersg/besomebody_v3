@@ -107,6 +107,7 @@ const ReflectionResponsesStep = ({ reflectionId , next }) => {
   const [count, setCount] = useState(null);
   const classes = useStyles()
   
+
   async function fetchMoreResponses() {
     const LIMIT = 300;
     const { newResponses, newLastDocSnapshot } = await getDbReflectionResponsesPaginated({
@@ -133,6 +134,8 @@ const ReflectionResponsesStep = ({ reflectionId , next }) => {
   }
 
   useEffect(() => fetchCount(), []);
+  // watch for change in the select form.
+  // set the reflectionId to the one the user has picked
   useEffect(() => fetchMoreResponsesIfNotOverflow(), [hasMore, lastDocSnapshot]);
 
   if (responses == null) {
@@ -142,6 +145,9 @@ const ReflectionResponsesStep = ({ reflectionId , next }) => {
       </Box>
     )
   } else {
+    //  get list of character's reflectionID from storymap.js. 
+    // Nadia's reflection ID options: Chapter 1 = 2, chapter 2 = 3, chapter 3 = 4
+    // create an input here to allow user to select reflectionId <Select> <option value=2> Chapter 1 Reflections 
     return (
       <Box className={classes.background}>        
         <Container className={classes.container} id={'reflectionsContainerId'}>

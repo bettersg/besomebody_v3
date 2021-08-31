@@ -17,7 +17,8 @@ import Music from '../../music/tobeyou_outrolong.mp3'
 
 import REFLECTIONS from '../../reflections/reflections.json'
 
-const StoryEnd = ({ reflectionId: propsReflectionId, globalVariables }) => {
+const StoryEnd = ({ reflectionId: propsReflectionId, globalVariables }) => {  
+  console.log('story end global vars:',globalVariables)
   const { user } = useEndOfChapter({ globalVariables });
 
   const reflectionId =
