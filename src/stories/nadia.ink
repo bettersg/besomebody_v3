@@ -2690,7 +2690,7 @@ VAR chapter_3_ending = 1
 #reflection_id:4
 the end = 1    
     -> END
-
+ 
 === chapter_3_ending_2 ===
 ~ chapter_3_ending = 2
 #ui:story_end

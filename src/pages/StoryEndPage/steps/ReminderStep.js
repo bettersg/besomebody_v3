@@ -1,5 +1,5 @@
 const ReminderStep = () => {
-  return 'b';
+  return 'ReminderStep';
 };
 
 export default ReminderStep;

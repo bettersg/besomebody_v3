@@ -1,5 +1,5 @@
 const DataBrowserStep = () => {
-  return 'c';
+  return 'DataBrowserStep';
 }
 
 export default DataBrowserStep;
