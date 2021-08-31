@@ -2688,12 +2688,8 @@ testing
 VAR chapter_3_ending = 1 
 #ui:story_end
 #reflection_id:4
-<<<<<<< Updated upstream
-This is the end.
-=======
 the end = 1    
     -> END
->>>>>>> Stashed changes
 
 === chapter_3_ending_2 ===
 ~ chapter_3_ending = 2
