@@ -10,6 +10,7 @@ export const createReflectionLikes = (id, uidLike)=>{
         if (doc.data().numLikes == null){
             washingtonRef.set({
                 numLikes: 1,
+                userLikes: [uidLike]
             },{merge: true})
             console.log(doc.data())
         }
@@ -17,6 +18,7 @@ export const createReflectionLikes = (id, uidLike)=>{
             washingtonRef.update(
                 {
                     numLikes: doc.data().numLikes + 1,
+                    userLikes: [...doc.data().userLikes,uidLike]
                 }
             )
             console.log(doc.data())
