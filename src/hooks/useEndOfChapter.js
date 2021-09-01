@@ -7,9 +7,9 @@ import { useSnackbar } from '../contexts/SnackbarContext'
 // Performs complex save state logic at the end of each chapter.
 export default function useEndOfChapter({ globalVariables = {} }) {
   const { character_id, chapter_id } = globalVariables;
+  console.log('story end global vars:',globalVariables)
   const { currentUser } = useAuth()
-  const { setSnackbar } = useSnackbar()
-
+  const { setSnackbar } = useSnackbar()  
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);  
@@ -21,7 +21,7 @@ export default function useEndOfChapter({ globalVariables = {} }) {
       .onSnapshot(
         (snapshot) => {
           setLoading(false);
-          setUser(snapshot.data());
+          setUser(snapshot.data());          
         },
         (error) => {
           setLoading(false);
@@ -39,7 +39,7 @@ export default function useEndOfChapter({ globalVariables = {} }) {
       try {
         // Helper variables
         const currentUserDb = await getDbUser(currentUser.id)
-        const currentEnding = globalVariables[`chapter_${chapter_id}_ending`]
+        const currentEnding = globalVariables[`chapter_${chapter_id}_ending`]        
         const currentChapterInUserDb = currentUserDb?.achievements?.find(
           (achievement) =>
             achievement.character === character_id &&
@@ -52,9 +52,9 @@ export default function useEndOfChapter({ globalVariables = {} }) {
               )
             )
           : false
-
+          console.log(hasCurrentEnding)
         // If current character and chapter has not been saved before
-        if (!currentChapterInUserDb) {
+        if (!currentChapterInUserDb) {          
           const saveData = {
             createdAt: new Date().toISOString(),
             updatedAt: new Date().toISOString(),
@@ -71,7 +71,7 @@ export default function useEndOfChapter({ globalVariables = {} }) {
 
           const nextAchievements = currentUserDb?.achievements || []
           const newAchievements = nextAchievements.concat(saveData)
-          await updateDbUser({ achievements: newAchievements }, currentUserDb.id)
+          await updateDbUser({ achievements: newAchievements }, currentUserDb.id)          
         }
 
         // If current character and chapter has been saved before, but current ending has not been unlocked before

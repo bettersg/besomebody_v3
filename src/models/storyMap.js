@@ -49,6 +49,7 @@ export const CHARACTER_MAP = [
     chapters: [
       {
         chapterId: 1,
+        reflectionId:2,
         number: 1,
         title: "An Unexpected Invitation",
         knotTag: "nadia_1_intro",
@@ -107,6 +108,7 @@ export const CHARACTER_MAP = [
       {
         chapterId: 2,
         number: 2,
+        reflectionId:3,
         title: "The Date Crasher",
         knotTag: "nadia_2_intro",
         summary: "Nadia runs into some hard realities. Sometimes, having dreams isn't as straightforward as it should be.",
@@ -155,6 +157,7 @@ export const CHARACTER_MAP = [
       {
         chapterId: 3,
         number: 3,
+        reflectionId:4,
         title: "Fork in the Road",
         knotTag: "nadia_3_intro",
         summary: "As one door closes, another opens. But which girl will step through that door? As JC life comes to an end, only Nadia can choose.",
@@ -197,12 +200,7 @@ export const CHARACTER_MAP = [
             endingId: 2,
             title: "Private",
             inkVar: "chapter3_ending_2",
-          },
-          {
-            endingId: 3,
-            title: "Private",
-            inkVar: "chapter3_ending_3",
-          },
+          }, 
         ]
       },
     ],
@@ -228,6 +226,7 @@ export const CHARACTER_MAP = [
       {
         chapterId: 1,
         number: 1,
+        reflectionId:1,
         title: "Duty Calls",
         knotTag: "aman_1_intro",
         summary: "Aman prepares to enlist in National Service. Will he go in as he is, or take a big step to blend in?",
