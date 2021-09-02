@@ -27,7 +27,7 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-const EndStoryReflectionForm = ({ subtitle, title, questions: propsQuestions, onSubmit }) => {
+const EndStoryReflectionForm = ({ subtitle, title, questions: propsQuestions, onSubmit, onSuccess, onError }) => {
   const classes = useStyles();
 
   const questions = propsQuestions.map(id => QUESTIONS.find(question => question.id === id));
@@ -49,9 +49,15 @@ const EndStoryReflectionForm = ({ subtitle, title, questions: propsQuestions, on
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async () => {
-    setIsLoading(true);
-    await onSubmit?.(answers);
-    setIsLoading(false);
+    try {
+      setIsLoading(true);
+      await onSubmit?.(answers);
+      setIsLoading(false);
+      onSuccess?.();
+    } catch (error) {
+      setIsLoading(false);
+      onError?.(error);
+    }
   };
 
   return (
