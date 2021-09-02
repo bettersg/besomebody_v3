@@ -98,7 +98,7 @@ const InkController = () => {
 
   const history = useHistory()
   const { name } = useParams()
-  // console.log('inkController globalVar: ' , globalVariables)
+  console.log('inkController globalVar: ' , globalVariables)
   // console.log('inkController specialTags: ' , specialTags)
   // console.log('inkController paragraphs: ' , paragraphs)
   // console.log('inkController knot: ' + currentKnot)

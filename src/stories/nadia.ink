@@ -76,7 +76,8 @@ It’s fine though, I’m mostly used to it by now. When I need someone who just
 She’s a nurse, so that’s very cool. We’re super close, and she always keeps it real.
 So that’s me -- Nadia.
 And this is what it’s like, to be me.
-CHAPTER 1 #title
+~ chapter_id = 1
+CHAPTER {chapter_id} #title
 An Unexpected Invitation #title
 
 -> nadia_1_1_narration 
@@ -979,8 +980,7 @@ Reflection 1
 #background:bg_nadia_intro.jpg
 #music:nadia_intro.mp3
 ~ chapter_id = 2
-//reset chapter 2-5 variables
-CHAPTER 2 #title
+CHAPTER {chapter_id} #title
 The Date Crasher #title
 
 I’m still a little surprised by what happened with Gavin. 
@@ -1919,6 +1919,7 @@ It just wants you quiet and compliant. Penat (tired) you know? Focus on your A�
 #knot:nadia_2_reflection
 #ui:chapter_reflection
 #reflection_id:3
+
 Reflection 3
 
 
@@ -1949,8 +1950,8 @@ Reflection 3
 #knot:nadia_3_intro
 #ui:narrator
 #background:bg_nadia_intro.jpg
-~ chapter_id = 3
-CHAPTER 3 #title
+~ chapter_id = 3 
+CHAPTER {chapter_id} #title
 Fork in the Road #title
 
 What Azlin said last night really made me think... 
@@ -1958,6 +1959,7 @@ About myself, about Chloe.... and about Gavin.
 But I haven't had enough time to process all of that. 
 All I want to think about are eukaryotic cells, testing for triglycerides, and surviving my A Levels.
 But something tells me that I need to settle the doubts in my head before I can get to my textbooks.
+
 
 VAR nadia_3_relationship = 0
 {nadia_2_hidewithgavin: 
@@ -2586,6 +2588,7 @@ I hope he’s right. Just feels weird, thought she and I would be doing this tog
 === nadia_3_2c ===
 #ui:scene
 #background:bg_nadia_schoolhall.jpg
+// this doesn't work.
 + [Check up on Chloe] -> nadia_3_2d
 + [Tell Azlin your results] -> nadia_3_2e
 
