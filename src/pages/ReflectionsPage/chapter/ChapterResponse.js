@@ -85,8 +85,6 @@ const ChapterResponse = ({ response }) => {
   const likeReflection = (e) =>{
     e.preventDefault();
 
-    console.log(currentUser.id)
-
     createReflectionLikes(response.id, currentUser.id)
   }
   //submit the red flag disagreement
