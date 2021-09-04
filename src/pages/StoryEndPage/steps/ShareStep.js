@@ -1,5 +1,4 @@
 import ShareableImage from "../../../components/ShareableImage/ShareableImage";
-import avatar from './ico_nadia_nadia.png';
 
 const ShareStep = () => {
 
@@ -7,7 +6,7 @@ const ShareStep = () => {
   const data = {
     id: 1, 
     text: "I've just finished playing Nadia's Story!", 
-    avatar: avatar}
+    avatar: "nadia"}
   // -- 
 
   return <ShareableImage data={data}></ShareableImage>;

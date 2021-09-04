@@ -6,7 +6,7 @@ import downloadjs from "downloadjs";
 // const data = {
 //     id: 1, 
 //     text: "I've just finished playing Chapter One of Nadia's Story!", 
-//     avatar: avatar}
+//     avatar: 'nadia'}
 
 const ShareableImage = ({data,  }) =>{
 
