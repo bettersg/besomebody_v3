@@ -2,7 +2,8 @@ import ShareableImage from "../../../components/ShareableImage/ShareableImage";
 
 const ShareStep = () => {
 
-  // -- remove this section when receiving state variables
+  // -- remove this section when receiving state variables,
+  // refer to the below for input format required by component
   const data = {
     id: 1, 
     text: "I've just finished playing Nadia's Story!", 
