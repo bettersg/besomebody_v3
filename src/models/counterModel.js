@@ -12,14 +12,12 @@ export const getDbReflectionResponsesCount = async (reflectionId, questionId) =>
   }
 }
 
-export const getDbReflectionResponsesAnswerCount = async (reflectionId, questionId,answerId) => {
+export const getDbReflectionResponsesChoiceCount = async (reflectionId, questionId,choiceId) => {
   try {
     const counter = await firestore
       .collection('counters')
-      .doc(`reflectionResponses-${reflectionId}-${questionId}-${answerId}`)
+      .doc(`reflectionResponses-${reflectionId}-${questionId}-${choiceId}`)
       .get();
-      console.log(reflectionId);
-      console.log(questionId);
       return counter.exists ? counter.data().count : 0;
   } catch (err) {
     throw new Error(`Error at getDbReflectionResponsesAnswerCount: ${err}`)

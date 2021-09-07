@@ -1,6 +1,6 @@
 import { Typography, Box, TextField, Slider, RadioGroup, Radio, FormControlLabel } from '@material-ui/core';
 import React, { useState, useEffect } from 'react';
-import { getDbReflectionResponsesAnswerCount } from '../../../models/counterModel';
+import { getDbReflectionResponsesChoiceCount } from '../../../models/counterModel';
 
 const Question = ({ question, value, onChange, reflectionId}) => {
 
@@ -11,7 +11,7 @@ const Question = ({ question, value, onChange, reflectionId}) => {
   async function fetchCounts() {
     if(question.type!=="MULTI_CHOICE"){return;}
     let results = await Promise.all(question.choices.map(async (choice) => {
-      return getDbReflectionResponsesAnswerCount(reflectionId,question.id,choice.id);
+      return getDbReflectionResponsesChoiceCount(reflectionId,question.id,choice.id);
     }));
     setCounts(results);
   }
