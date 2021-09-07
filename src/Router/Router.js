@@ -23,6 +23,7 @@ import Help from '../pages/HelpPage/HelpPage'
 import Music1 from '../music/tobeyou_intro.mp3'
 // import Music2 from '../music/tobeyou_outrolong.mp3'
 import ChapterEnd from '../pages/ChapterEndPage/ChapterEnd'
+import ReflectionMcq from '../pages/ReflectionMcq'
 
 
 class Router extends Component {
@@ -69,6 +70,10 @@ class Router extends Component {
             <Route path="/intro" exact>
               <IntroMaster />
             </Route>
+
+            <PrivateRoute path="/mcq" exact>
+              <ReflectionMcq />
+            </PrivateRoute>
 
             <PrivateRoute path="/characterchoice" exact>
               <CharacterChoicePage />

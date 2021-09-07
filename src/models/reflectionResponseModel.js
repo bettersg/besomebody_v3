@@ -50,25 +50,25 @@ export const getDbReflectionResponsesPaginated = async ({
   }
 }
 
-// export const getDbReflectionResponses = async ({
-//   reflectionId,
-//   questionId,
-// }) => {
-//   try {
-//     const snapshot = await firestore.collection("reflectionResponses")
-//       .where('reflectionId', '==', reflectionId)
-//       .where('questionId', '==', questionId)      
-//       // .orderBy("submittedAt", "desc")      
-//       .get();
-//     const reflectionResponses = snapshot.docs.map(doc => ({
-//       ...doc.data(),
-//       id: doc.id,
-//     }));
-//     return Promise.all(reflectionResponses.map(populateDbUserOnReflectionResponse))
-//   } catch (err) {
-//     throw new Error(`Error at getDbReflectionResponses: ${err}`)
-//   }
-// };
+export const getDbReflectionResponses = async ({
+  reflectionId,
+  questionId,
+}) => {
+  try {
+    const snapshot = await firestore.collection("reflectionResponses")
+      .where('reflectionId', '==', reflectionId)
+      .where('questionId', '==', questionId)      
+      // .orderBy("submittedAt", "desc")      
+      .get();
+    const reflectionResponses = snapshot.docs.map(doc => ({
+      ...doc.data(),
+      id: doc.id,
+    }));
+    return Promise.all(reflectionResponses.map(populateDbUserOnReflectionResponse))
+  } catch (err) {
+    throw new Error(`Error at getDbReflectionResponses: ${err}`)
+  }
+};
 
 export const getDbReflectionResponse = async(id) => {
   try {
