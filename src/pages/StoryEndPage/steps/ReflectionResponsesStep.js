@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Button, CircularProgress , 
+import { Box, Button, 
   Typography,
   Container,} from '@material-ui/core'
 import { getDbReflectionResponsesPaginated } from '../../../models/reflectionResponseModel';
 import { getDbReflectionResponsesCount } from '../../../models/counterModel';
-import { REFLECTION_PAGE_FORM } from '../constants';
-import ChapterResponse from './ChapterResponse';
+import ChapterResponse from '../../ReflectionsPage/chapter/ChapterResponse';
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import PacmanLoader from 'react-spinners/PacmanLoader'
 import InfiniteScroll from 'react-infinite-scroll-component';
@@ -100,13 +99,14 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 
-
-const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
+const ReflectionResponsesStep = ({ reflectionId , next }) => {
+  
   const [responses, setResponses] = useState(null);
   const [hasMore, setHasMore] = useState(true);
   const [lastDocSnapshot, setLastDocSnapshot] = useState(null);
   const [count, setCount] = useState(null);
   const classes = useStyles()
+  
 
   async function fetchMoreResponses() {
     const LIMIT = 300;
@@ -134,6 +134,8 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
   }
 
   useEffect(() => fetchCount(), []);
+  // watch for change in the select form.
+  // set the reflectionId to the one the user has picked
   useEffect(() => fetchMoreResponsesIfNotOverflow(), [hasMore, lastDocSnapshot]);
 
   if (responses == null) {
@@ -143,6 +145,9 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
       </Box>
     )
   } else {
+    //  get list of character's reflectionID from storymap.js. 
+    // Nadia's reflection ID options: Chapter 1 = 2, chapter 2 = 3, chapter 3 = 4
+    // create an input here to allow user to select reflectionId <Select> <option value=2> Chapter 1 Reflections 
     return (
       <Box className={classes.background}>        
         <Container className={classes.container} id={'reflectionsContainerId'}>
@@ -163,11 +168,11 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
         </Box>
       
         </Container>
-        <Button className={classes.btn} onClick={() => setPage(REFLECTION_PAGE_FORM)} fullWidth>Continue</Button>
+        <Button className={classes.btn} onClick={next} fullWidth>Continue</Button>
     </Box>
     )
     
   }
 }
 
-export default ChapterReflectionResponses;
+export default ReflectionResponsesStep;

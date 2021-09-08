@@ -12,6 +12,7 @@ import { useInkContext } from '../../contexts/InkContext'
 import Narrator from '../NarratorPage/Narrator'
 import Notification from '../NotificationPage/Notification'
 import Reflection from '../ReflectionsPage/Reflection'
+import StoryEnd from '../StoryEndPage/StoryEnd'
 
 const getUi = ({
   currentParagraphs,
@@ -32,13 +33,13 @@ const getUi = ({
     case 'notification': {
       return <Notification currentParagraphs={currentParagraphs} />
     }  
-    case 'survey': {
-      // TODO: update this component
-      return <Survey currentParagraphs={currentParagraphs} />
-    }
+    // case 'survey': {
+    //   // TODO: update this component
+    //   return <Survey currentParagraphs={currentParagraphs} />
+    // }
 
     case 'chapter_reflection': {
-      // TODO: update this component
+       
       return (
         <Reflection
           reflectionId={specialTags.reflection_id}
@@ -46,24 +47,37 @@ const getUi = ({
         />
       )
     }
+      
+    case 'story_end': {
+       
+      return (
+        <StoryEnd
+          reflectionId={specialTags.reflection_id}
+          globalVariables={globalVariables}
+        />
+      )
+    }
+      
+      
+      
 
     case 'mcq': {
       return <MultipleChoiceQuiz quizId={specialTags.game_id} />
     }
 
-    case 'swipe': {
-      return <SwipeQuiz quizId={specialTags.game_id} />
-    }
+    // case 'swipe': {
+    //   return <SwipeQuiz quizId={specialTags.game_id} />
+    // }
 
     // case reflection  - return a reflection component with argument for survey id from ink
     // <Reflection getstory surveyid />
 
-    case 'school': {
-      return (
-        // to remove school from nadia's story
-        <Scene currentParagraphs={currentParagraphs} />
-      )
-    }
+    // case 'school': {
+    //   return (
+    //     // to remove school from nadia's story
+    //     <Scene currentParagraphs={currentParagraphs} />
+    //   )
+    // }
     default:
       return <DefaultInk currentParagraphs={currentParagraphs} />
   }

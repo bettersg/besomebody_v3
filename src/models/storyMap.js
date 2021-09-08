@@ -49,6 +49,7 @@ export const CHARACTER_MAP = [
     chapters: [
       {
         chapterId: 1,
+        reflectionId:2,
         number: 1,
         title: "An Unexpected Invitation",
         knotTag: "nadia_1_intro",
@@ -107,6 +108,7 @@ export const CHARACTER_MAP = [
       {
         chapterId: 2,
         number: 2,
+        reflectionId:3,
         title: "The Date Crasher",
         knotTag: "nadia_2_intro",
         summary: "Nadia runs into some hard realities. Sometimes, having dreams isn't as straightforward as it should be.",
@@ -155,10 +157,39 @@ export const CHARACTER_MAP = [
       {
         chapterId: 3,
         number: 3,
+        reflectionId:4,
         title: "Fork in the Road",
         knotTag: "nadia_3_intro",
         summary: "As one door closes, another opens. But which girl will step through that door? As JC life comes to an end, only Nadia can choose.",
-        playable: false,
+        playable: true,
+        images: [
+          "/images/bg_nadia_intro.jpg",
+          "/images/bg_nadia_bedroom.jpg",
+          "/images/bg_nadia_selfiehijab.jpg",
+          "/images/bg_nadia_mall.jpg",
+          "/images/bg_nadia_cinema.jpg",
+          "/images/bg_nadia_library.jpg",          
+          "/images/ui_nadia_message.jpg",
+          "/images/bg_nadia_playgroundnight.jpg",          
+          "/images/cha_nadia_gavin_casual_concerned.png",                  
+          "/images/cha_nadia_gavin_casual_grinning.png",                  
+          "/images/cha_nadia_gavin_casual_nervous.png",                  
+          "/images/cha_nadia_gavin_casual_normal.png",                  
+          "/images/cha_nadia_chloe_school_concerned.png",                  
+          "/images/cha_nadia_chloe_school_confused.png",
+          "/images/cha_nadia_chloe_school_frustrated.png",                  
+          "/images/cha_nadia_chloe_school_grinning.png",                  
+          "/images/cha_nadia_chloe_school_normal.png",
+          "/images/cha_nadia_chloe_school_sad.png",
+          "/images/cha_nadia_azlin_normal.png",
+          "/images/cha_nadia_azlin_teasing.png",
+          "/images/cha_nadia_azlin_angry.png",
+          "/images/cha_nadia_azlin_happy.png",
+          "/images/cha_nadia_azlin_confused.png",
+          "/images/cha_nadia_azlin_concerned.png",
+          "/images/bg_launch.jpg",
+          "/images/bg_reflections.jpg",
+        ],
         endings: [
           {
             endingId: 1,
@@ -169,12 +200,7 @@ export const CHARACTER_MAP = [
             endingId: 2,
             title: "Private",
             inkVar: "chapter3_ending_2",
-          },
-          {
-            endingId: 3,
-            title: "Private",
-            inkVar: "chapter3_ending_3",
-          },
+          }, 
         ]
       },
     ],
@@ -200,6 +226,7 @@ export const CHARACTER_MAP = [
       {
         chapterId: 1,
         number: 1,
+        reflectionId:1,
         title: "Duty Calls",
         knotTag: "aman_1_intro",
         summary: "Aman prepares to enlist in National Service. Will he go in as he is, or take a big step to blend in?",

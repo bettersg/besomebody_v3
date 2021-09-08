@@ -1,6 +1,6 @@
 import camelCase from "camelcase";
 
-import { createMuiTheme } from "@material-ui/core/styles";
+import { createTheme } from "@material-ui/core/styles";
 
 import firebase, { analytics, auth, firestore } from "../firebase";
 
@@ -158,7 +158,7 @@ const defaultSecondaryColor = getColor(
 );
 const defaultDark = process.env.REACT_APP_THEME_DARK === "true";
 
-const defaultTheme = createMuiTheme({
+const defaultTheme = createTheme({
   palette: {
     primary: defaultPrimaryColor.import,
     secondary: defaultSecondaryColor.import,
@@ -216,7 +216,7 @@ appearance.createTheme = (theme) => {
     return null;
   }
 
-  theme = createMuiTheme({
+  theme = createTheme({
     palette: {
       primary: primaryColor.import,
       secondary: secondaryColor.import,
