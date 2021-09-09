@@ -2682,7 +2682,7 @@ You pick ok! Good news like this must celebrate.
     
 === nadia_3_3_narration ===    
 testing
--> END
+    -> END
 
 === chapter_3_ending_1 ===
 VAR chapter_3_ending = 1 
@@ -2696,7 +2696,12 @@ the end = 1
 #ui:story_end
 #reflection_id:4
 the end = 2
-    
+      -> END
+
+== story_end ===
+#ui:story_end
+#reflection_id:4
+reflection browser
     
     
 -> END

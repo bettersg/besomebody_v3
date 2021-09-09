@@ -17,14 +17,16 @@ const useStyles = makeStyles({
     borderRadius: 10,
     textAlign: 'left',
     marginBottom: '10px',
+    backgroundColor: '#FEE1DC'
   },
   card: {
     paddingTop: '24px',
     width: '100%',
-  },
+    },
+     
 })
 
-export default function ChapterBox(props) {
+export default function ReflectionChapter(props) {
   const { chaptDetails, total, userFromDb, characterId } = props
 
   const classes = useStyles()
@@ -41,48 +43,49 @@ export default function ChapterBox(props) {
     
   } = useInkContext()
 
-  const getEndingsUnlocked = () => {
-    const currentChapterInUserDb = userFromDb?.achievements?.find(
-      (achievement) =>
-        achievement.character === characterId &&
-        achievement.chapter === chaptDetails.chapterId
-    )
-    return currentChapterInUserDb ? currentChapterInUserDb.endings.length : 0
-  }
+//   const getEndingsUnlocked = () => {
+//     const currentChapterInUserDb = userFromDb?.achievements?.find(
+//       (achievement) =>
+//         achievement.character === characterId &&
+//         achievement.chapter === chaptDetails.chapterId
+//     )
+//     return currentChapterInUserDb ? currentChapterInUserDb.endings.length : 0
+//   }
 
-  const previousChapterInUserDb = () => {
-    const previousChapterNumber = chaptDetails.chapterId - 1
-    // console.log('previous chapter: ' , previousChapterNumber)
-    if (previousChapterNumber > 0) {
-      const previousChapterData = userFromDb?.achievements?.find(
-        (achievement) =>
-          achievement.character === characterId &&
-          achievement.chapter === previousChapterNumber 
-      )
-      // console.log(previousChapterData)
-      return previousChapterData ? true : false
-    }
-    return true
-  }
+//   const previousChapterInUserDb = () => {
+//     const previousChapterNumber = chaptDetails.chapterId - 1
+//     // console.log('previous chapter: ' , previousChapterNumber)
+//     if (previousChapterNumber > 0) {
+//       const previousChapterData = userFromDb?.achievements?.find(
+//         (achievement) =>
+//           achievement.character === characterId &&
+//           achievement.chapter === previousChapterNumber 
+//       )
+//       // console.log(previousChapterData)
+//       return previousChapterData ? true : false
+//     }
+//     return true
+//   }
   // console.log(chaptDetails.chapterId , previousChapterInUserDb())
   
-  var rows = []
-  for (var i = 0; i < getEndingsUnlocked(); i++) {
-    rows.push(
-      <FiberManualRecordIcon
-        key={`1:${i}`}
-        style={{ fontSize: 8, color: '#999999', marginRight: 1 }}
-      />
-    )
-  }
-  for (var j = 0; j < chaptDetails.endings.length - getEndingsUnlocked(); j++) {
-    rows.push(
-      <FiberManualRecordIcon
-        key={`2:${j}`}
-        style={{ fontSize: 8, color: '#E5E5E5', marginRight: 1 }}
-      />
-    )
-  }
+//   var rows = []
+//   for (var i = 0; i < getEndingsUnlocked(); i++) {
+//     rows.push(
+//       <FiberManualRecordIcon
+//         key={`1:${i}`}
+//         style={{ fontSize: 8, color: '#999999', marginRight: 1 }}
+//       />
+//     )
+//   }
+//   for (var j = 0; j < chaptDetails.endings.length - getEndingsUnlocked(); j++) {
+//     rows.push(
+//       <FiberManualRecordIcon
+//         key={`2:${j}`}
+//         style={{ fontSize: 8, color: '#E5E5E5', marginRight: 1 }}
+//       />
+//     )
+//   }
+
 
   const handleChapterStart = () => {
     setIsLoading(true)
@@ -108,15 +111,9 @@ export default function ChapterBox(props) {
       <CardContent className={classes.card}>
         <div className="ChapterBox">
           <div className="ChapterBox__chaptDetails">
-            {chaptDetails.new == true ? (
-              <div className="ChapterBox__chaptDetails__bubble new">NEW!</div>
-            ) : chaptDetails.playable == false ? (
-              <div className="ChapterBox__chaptDetails__bubble coming">
-                COMING SOON
-              </div>
-            ) : null}
+             
             <div className="ChapterBox__chaptDetails--chaptText">
-              Chapter {chaptDetails.number} of {total}
+              UNLOCKED EXPERIENCE
             </div>
           </div>
 
@@ -132,36 +129,19 @@ export default function ChapterBox(props) {
               <div className="spinner-div">
                 <PacmanLoader color="#e5e5e5" loading={isLoading} size={80} />
               </div>
-            ) : chaptDetails.playable == false ? (
-              <div className={`ChapterBox__chaptTitle--button disable`}>
-                SOON
-              </div>
-            )   : previousChapterInUserDb() || chaptDetails.chapterId == 1 ? (
+                ) : (
                   <div
-                    className={`ChapterBox__chaptTitle--button`}
+                    className={`ChapterBox__chaptTitle--secretButton`}
                     onClick={() => handleChapterStart()}
                   >
-                  Play
+                  START
                   </div>
                 )
-                  : (
-                    <div className={`ChapterBox__chaptTitle--button disable`}>
-                      LOCKED
-                    </div>
-                  
-            )}            
+            }            
           </div>
         </div>
 
-        {chaptDetails.playable == true ? (
-          <div className="ChapterBox__endings">
-            {rows}
-            <span style={{ marginLeft: '8px' }}>
-              {getEndingsUnlocked()} of {chaptDetails.endings.length} endings
-              unlocked
-            </span>
-          </div>
-        ) : null}        
+             
       </CardContent>
     </Card>
   )
