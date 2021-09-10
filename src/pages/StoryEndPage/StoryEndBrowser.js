@@ -17,14 +17,14 @@ import Music from '../../music/tobeyou_outrolong.mp3'
 
 import REFLECTIONS from '../../reflections/reflections.json'
 
-const StoryEnd = ({ reflectionId: propsReflectionId, globalVariables }) => {  
-  // console.log('story end global vars:', globalVariables)
+const StoryEndBrowser = ({ reflectionId: propsReflectionId, globalVariables }) => {  
+  console.log('story end global vars:', globalVariables)
   
   
   const { user , character_id } = useEndOfChapter({ globalVariables });
 
   // console.log('player  data:', user)  
-  // const currentCharCompleted = 'user?.character_' + character_id  + '_complete' // the user will only have this flag if they have previously submitted a reflection.
+  const currentCharCompleted = 'user?.character_' + character_id  + '_complete' // the user will only have this flag if they have previously submitted a reflection.
   // console.log('char completed?', eval(currentCharCompleted))
 
   const reflectionId =
@@ -56,12 +56,12 @@ const StoryEnd = ({ reflectionId: propsReflectionId, globalVariables }) => {
     <Frame>
       <AudioPlayer Music={Music} />     
       <Steps config={config}>
-        <Step title="Outcome Unlocked" component={OutcomeUnlockedStep} />
-        <Step title="Quick Feedback" component={(props) => <QuickFeedbackStep reflection={reflection} {...props} />} />
+        {/* <Step title="Outcome Unlocked" component={OutcomeUnlockedStep} /> */}
+        {/* <Step title="Quick Feedback" component={(props) => <QuickFeedbackStep reflection={reflection} {...props} />} /> */}
         <Step title="Bonus Experience" component={BonusExperienceStep} />
         <Step title="Reminder" component={ReminderStep} />
         <Step title="Reflections from Others"  component={(props) => <ReflectionResponsesStep reflectionId={reflectionId}  {...props} />} />
-        <Step title="Long Feedback" component={(props) => <LongFeedbackStep reflection={reflection} user={user} {...props} />} />
+        {/* <Step title="Long Feedback" component={(props) => <LongFeedbackStep reflection={reflection} user={user} {...props} />} /> */}
         <Step title="Data Browser" component={DataBrowserStep} />
         <Step title="Share" component={ShareStep} />
       </Steps>
@@ -69,4 +69,4 @@ const StoryEnd = ({ reflectionId: propsReflectionId, globalVariables }) => {
   );
 };
 
-export default StoryEnd;
+export default StoryEndBrowser;

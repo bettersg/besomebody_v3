@@ -176,7 +176,7 @@ const CharacterChapterPage = (props) => {
                 <ReflectionChapter
                 userFromDb={userFromDb}
                 characterId={characterId}
-                chaptDetails={persona.reflectionBrowser[0]}                
+                chaptDetails={persona.reflectionBrowser[0]}            
               />
             }
       </div>
