@@ -1,14 +1,12 @@
-import { useHistory } from 'react-router-dom'
-
 import ReflectionForm from '../../../components/ReflectionForm/EndStoryReflectionForm';
 import { useSnackbar } from '../../../contexts/SnackbarContext';
 import { useAuth } from '../../../contexts/AuthContext';
 import { createDbReflectionResponses } from "../../../models/reflectionResponseModel";
+import { getDbUser, updateDbUser } from '../../../models/userModel'
 
-const LongFeedbackStep = ({ reflection, setState, getState, next }) => {
+const LongFeedbackStep = ({ reflection, characterId, setState, getState, next }) => {
   const { currentUser } = useAuth();
   const { setSnackbar } = useSnackbar();
-  const history = useHistory()
 
   const handleSubmit = async (longAnswers) => {
     setState('longAnswers', longAnswers);
@@ -33,6 +31,14 @@ const LongFeedbackStep = ({ reflection, setState, getState, next }) => {
     setState('answerDocs', answerDocs);
 
     await createDbReflectionResponses(answerDocs);
+
+    // Update the user achievements.
+
+    const currentUserDb = await getDbUser(currentUser.id);
+
+    await updateDbUser({
+      [`character_${characterId}_completed`]: true,
+    }, currentUserDb.id)          
   };
 
   const handleSuccess = () => {
