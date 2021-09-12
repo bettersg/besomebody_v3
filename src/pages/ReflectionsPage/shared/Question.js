@@ -1,6 +1,22 @@
 import { Typography, Box, TextField, Slider, RadioGroup, Radio, FormControlLabel } from '@material-ui/core';
+import React, { useState, useEffect } from 'react';
+import { getDbReflectionResponsesChoiceCount } from '../../../models/counterModel';
 
-const Question = ({ question, value, onChange }) => {
+const Question = ({ question, value, onChange, reflectionId}) => {
+
+  const [counts, setCounts] = useState(null);
+
+  useEffect(() => fetchCounts(), []);
+
+  async function fetchCounts() {
+    if(question.type!=="MULTI_CHOICE"){return;}
+    let results = await Promise.all(question.choices.map(async (choice) => {
+      return getDbReflectionResponsesChoiceCount(reflectionId,question.id,choice.id);
+    }));
+    setCounts(results);
+  }
+
+
   const handleChange = (event) => {
     onChange(event.target.value);
   };
@@ -13,7 +29,7 @@ const Question = ({ question, value, onChange }) => {
             <b>{question.body}</b>
           </Typography>
           <RadioGroup value={value} onChange={handleChange}>
-            {question.choices.map(choice => (
+            {question.choices.map((choice,i) => (
               <FormControlLabel key={choice.body} value={choice.body} control={<Radio />} label={choice.body}  />
             ))}
           </RadioGroup>

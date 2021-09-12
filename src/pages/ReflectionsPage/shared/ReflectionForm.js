@@ -70,6 +70,7 @@ const ReflectionForm = ({ reflection }) => {
       return {
         reflectionId: reflection.id,
         questionId: question.id,
+        choiceId: question.type==="MULTI_CHOICE" ? question.choices.find( ({ body }) => body === answer ).id : null,
         userId: currentUser.id,
         answer,
         submittedAt: new Date(),
@@ -108,6 +109,7 @@ const ReflectionForm = ({ reflection }) => {
       {questions.map((question, index) => (
         <Box key={question.id} mt={2}  className={classes.container}>
           <Question
+            reflectionId={reflection.id}
             key={question.id}
             question={question}
             value={answers[index]}
