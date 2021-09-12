@@ -5,12 +5,14 @@ import { useSnackbar } from '../../../contexts/SnackbarContext';
 import { useAuth } from '../../../contexts/AuthContext';
 import { createDbReflectionResponses } from "../../../models/reflectionResponseModel";
 
-const LongFeedbackStep = ({ reflection, getState, next }) => {
+const LongFeedbackStep = ({ reflection, setState, getState, next }) => {
   const { currentUser } = useAuth();
   const { setSnackbar } = useSnackbar();
   const history = useHistory()
 
   const handleSubmit = async (longAnswers) => {
+    setState('longAnswers', longAnswers);
+
     const quickAnswers = getState('quickAnswers');
 
     const questionIds = [...reflection.quickQuestions, ...reflection.longQuestions];
@@ -27,12 +29,14 @@ const LongFeedbackStep = ({ reflection, getState, next }) => {
         timestamp: Date.now(),
       }
     });
+    
+    setState('answerDocs', answerDocs);
 
     await createDbReflectionResponses(answerDocs);
   };
 
   const handleSuccess = () => {
-    history.push("/");
+    next();
   };
 
   const handleError = () => {
