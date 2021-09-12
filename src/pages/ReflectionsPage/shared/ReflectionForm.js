@@ -70,7 +70,7 @@ const ReflectionForm = ({ reflection }) => {
       return {
         reflectionId: reflection.id,
         questionId: question.id,
-        answerId: question.type==="MULTI_CHOICE" ? question.choices.find( ({ body }) => body === answer ).id : null,
+        choiceId: question.type==="MULTI_CHOICE" ? question.choices.find( ({ body }) => body === answer ).id : null,
         userId: currentUser.id,
         answer,
         submittedAt: new Date(),

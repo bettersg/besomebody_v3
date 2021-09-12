@@ -30,7 +30,7 @@ const Question = ({ question, value, onChange, reflectionId}) => {
           </Typography>
           <RadioGroup value={value} onChange={handleChange}>
             {question.choices.map((choice,i) => (
-              <FormControlLabel key={choice.body} value={choice.body} control={<Radio />} label={choice.body + " " + counts[i]}  />
+              <FormControlLabel key={choice.body} value={choice.body} control={<Radio />} label={choice.body}  />
             ))}
           </RadioGroup>
         </Box>

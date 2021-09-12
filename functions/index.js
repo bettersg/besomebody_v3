@@ -8,7 +8,7 @@ const FieldValue = admin.firestore.FieldValue;
 exports.incrementReflectionCounters = functions.firestore
   .document('reflectionResponses/{docId}')
   .onCreate(async (snap, context) => {
-    const { reflectionId, questionId, answerId } = snap.data();
+    const { reflectionId, questionId, choiceId } = snap.data();
     if (questionId !== 3) return;  // this question appears in every reflectionId and hence is a reliable measure of the total number of reflections submitted
 
     const counterRef = firestore
@@ -23,15 +23,15 @@ exports.incrementReflectionCounters = functions.firestore
     }
 
 
-    const answerRef = firestore
+    const choiceRef = firestore
       .collection('counters')
-      .doc(`reflectionResponses-${reflectionId}-${questionId}-${answerId}`);
-    const answerCounter = await counterRef.get();
+      .doc(`reflectionResponses-${reflectionId}-${questionId}-${choiceId}`);
+    const choiceCounter = await counterRef.get();
 
-    if (!answerCounter.exists) {
-      await answerRef.set({ count: 1 });
+    if (!choiceCounter.exists) {
+      await choiceRef.set({ count: 1 });
     } else {
-      await answerRef.update({ count: FieldValue.increment(1) });
+      await choiceRef.update({ count: FieldValue.increment(1) });
     }
 
   });
