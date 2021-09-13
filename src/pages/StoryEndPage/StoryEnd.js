@@ -7,6 +7,7 @@ import useEndOfChapter from '../../hooks/useEndOfChapter'
 import OutcomeUnlockedStep from './steps/OutcomeUnlockedStep';
 import QuickFeedbackStep from './steps/QuickFeedbackStep';
 import BonusExperienceStep from './steps/BonusExperienceStep';
+import DidYouKnowStep from './steps/DidYouKnowStep';
 import ReminderStep from './steps/ReminderStep';
 import ReflectionResponsesStep from './steps/ReflectionResponsesStep';
 import LongFeedbackStep from './steps/LongFeedbackStep';
@@ -52,6 +53,7 @@ const StoryEnd = ({ reflectionId: propsReflectionId, globalVariables }) => {
       <Steps config={config}>
         <Step title="Outcome Unlocked" component={OutcomeUnlockedStep} />
         <Step title="Quick Feedback" component={(props) => <QuickFeedbackStep reflection={reflection} {...props} />} />
+        <Step title="Did You Know"  component={(props) => <DidYouKnowStep reflection={reflection} {...props} />} />
         <Step title="Bonus Experience" component={BonusExperienceStep} />
         <Step title="Reminder" component={ReminderStep} />
         <Step title="Reflections from Others"  component={(props) => <ReflectionResponsesStep reflectionId={reflectionId}  {...props} />} />
