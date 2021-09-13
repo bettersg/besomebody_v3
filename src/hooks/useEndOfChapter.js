@@ -7,7 +7,7 @@ import { useSnackbar } from '../contexts/SnackbarContext'
 // Performs complex save state logic at the end of each chapter.
 export default function useEndOfChapter({ globalVariables = {} }) {
   const { character_id, chapter_id } = globalVariables;
-  console.log('story end global vars:',globalVariables)
+  // console.log('useendofchapter global vars:',globalVariables)
   const { currentUser } = useAuth()
   const { setSnackbar } = useSnackbar()  
   const [user, setUser] = useState(null);
@@ -110,6 +110,7 @@ export default function useEndOfChapter({ globalVariables = {} }) {
 
   return {
     user,
+    character_id, 
     loading,
     error
   };

@@ -2685,22 +2685,24 @@ You pick ok! Good news like this must celebrate.
 testing
     -> END
 
-=== chapter_3_ending_1 ===
+=== chapter_3_ending_1 === // for debug only
 VAR chapter_3_ending = 1 
+VAR story_finished = true
 #ui:story_end
 #reflection_id:4
 the end = 1    
     -> END
  
-=== chapter_3_ending_2 ===
+=== chapter_3_ending_2 === // for debug only
 ~ chapter_3_ending = 2
+~ story_finished = true
 #ui:story_end
 #reflection_id:4
 the end = 2
       -> END
 
-== story_end ===
-#ui:story_end
+=== story_end_browser ===
+#ui:story_end_browser
 #reflection_id:4
 reflection browser
     
