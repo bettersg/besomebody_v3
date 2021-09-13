@@ -6,6 +6,8 @@ import { getDbReflectionResponsesPaginated } from '../../../models/reflectionRes
 import { getDbReflectionResponsesCount } from '../../../models/counterModel';
 import ChapterResponse from '../../ReflectionsPage/chapter/ChapterResponse';
 import makeStyles from '@material-ui/core/styles/makeStyles'
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import TuneIcon from '@material-ui/icons/Tune';
 import PacmanLoader from 'react-spinners/PacmanLoader'
 import InfiniteScroll from 'react-infinite-scroll-component';
 
@@ -98,22 +100,52 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
+const chapterToReflectionIdMap = {
+  nadia: { 1: 2, 2: 3, 3: 4 },
+};
+const reflectionIdToCharacterMap = {
+  2: 'nadia',
+  3: 'nadia',
+  4: 'nadia',
+}
 
-const ReflectionResponsesStep = ({ reflectionId , next }) => {
-  
+const ReflectionResponsesStep = ({ reflectionId, next }) => {
   const [responses, setResponses] = useState(null);
   const [hasMore, setHasMore] = useState(true);
   const [lastDocSnapshot, setLastDocSnapshot] = useState(null);
+  const [chosenReflectionId, setChosenReflectionId] = useState(reflectionId);
   const [count, setCount] = useState(null);
-  const classes = useStyles()
-  
+  const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false);
+  const classes = useStyles();
+
+  function setNewReflection(newReflectionId) {
+    setResponses(null);
+    setHasMore(true);
+    setLastDocSnapshot(null);
+    setChosenReflectionId(newReflectionId);
+  }
+
+  const FilterDrawer = () => {
+    const character = reflectionIdToCharacterMap[reflectionId];
+    const reflectionIdMap = chapterToReflectionIdMap[character];
+    const buttons = Object.entries(reflectionIdMap).map(([chapt, reflId]) =>
+      <Button variant='contained' onClick={() => setNewReflection(reflId)}>Chpt {chapt}</Button>
+    );
+    return (
+      <div role='presentation' onKeyDown={toggleFilterDrawer(false)}>
+        <h1>Filter stories</h1>
+        <h3>CHAPTERS</h3>
+        { buttons }
+      </div>
+    );
+  }
 
   async function fetchMoreResponses() {
     const LIMIT = 300;
     const { newResponses, newLastDocSnapshot } = await getDbReflectionResponsesPaginated({
       lastDocSnapshot,
       limit: LIMIT,
-      reflectionId,
+      reflectionId: chosenReflectionId,
       questionId: 3,  // this is hardcoded to the "share your story textarea question"
     });
     if (newResponses.length < LIMIT) {
@@ -130,29 +162,32 @@ const ReflectionResponsesStep = ({ reflectionId , next }) => {
   }
 
   async function fetchCount() {
-    setCount(await getDbReflectionResponsesCount(reflectionId, 3));
+    console.log(chosenReflectionId);
+    setCount(await getDbReflectionResponsesCount(chosenReflectionId, 3));
   }
 
-  useEffect(() => fetchCount(), []);
-  // watch for change in the select form.
-  // set the reflectionId to the one the user has picked
-  useEffect(() => fetchMoreResponsesIfNotOverflow(), [hasMore, lastDocSnapshot]);
+  function toggleFilterDrawer(open) {
+    function handler(event) {
+      if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) return;
+      setIsFilterDrawerOpen(open);
+    }
+    return handler;
+  }
 
-  if (responses == null) {
-    return (
-      <Box className={classes.background}>
-        <PacmanLoader color="#e5e5e5" size={25}	css={{align:"center", top:"200px", left:"100px"}} />
-      </Box>
-    )
-  } else {
-    //  get list of character's reflectionID from storymap.js. 
-    // Nadia's reflection ID options: Chapter 1 = 2, chapter 2 = 3, chapter 3 = 4
-    // create an input here to allow user to select reflectionId <Select> <option value=2> Chapter 1 Reflections 
-    return (
-      <Box className={classes.background}>        
-        <Container className={classes.container} id={'reflectionsContainerId'}>
-          <Typography className={classes.headerText}>Reflections from Others</Typography>
-          <Typography variant="body2" color="error">{count || 0} players have completed this chapter</Typography>
+  useEffect(() => fetchCount(), [chosenReflectionId]);
+  useEffect(() => fetchMoreResponsesIfNotOverflow(), [hasMore, lastDocSnapshot, chosenReflectionId]);
+
+  const LoadingBox = () => (
+    <Box className={classes.background}>
+      <PacmanLoader color="#e5e5e5" size={25} css={{ align: "center", top: "200px", left: "100px" }} />
+    </Box>
+  );
+
+  const ReflectionsBox = () => (
+    <Box className={classes.background}>
+      <Container className={classes.container} id={'reflectionsContainerId'}>
+        <Typography className={classes.headerText}>Reflections from Others</Typography>
+        <Typography variant="body2" color="error">{count || 0} players have completed this chapter</Typography>
         <Box>
           <InfiniteScroll
             dataLength={responses.length}
@@ -166,13 +201,26 @@ const ReflectionResponsesStep = ({ reflectionId , next }) => {
             ))}
           </InfiniteScroll>
         </Box>
-      
-        </Container>
-        <Button className={classes.btn} onClick={next} fullWidth>Continue</Button>
+      </Container>
+      <Button className={classes.btn} onClick={toggleFilterDrawer(true)}><TuneIcon /></Button>
+      <Button className={classes.btn} onClick={next}>Continue</Button>
     </Box>
-    )
+  );
+
+  return (
+    <React.Fragment key='bottom'>
+      <SwipeableDrawer
+        anchor={'bottom'}
+        open={isFilterDrawerOpen}
+        onClose={toggleFilterDrawer(false)}
+        onOpen={toggleFilterDrawer(true)}
+      >
+        <FilterDrawer />
+      </SwipeableDrawer>
+      { responses == null ? <LoadingBox/> : <ReflectionsBox/> }
+    </React.Fragment>
+  );
     
-  }
 }
 
 export default ReflectionResponsesStep;
