@@ -52,7 +52,8 @@ export default function useEndOfChapter({ globalVariables = {} }) {
               )
             )
           : false
-          console.log(hasCurrentEnding)
+        // console.log(hasCurrentEnding)
+        // console.log(currentChapterInUserDb)
         // If current character and chapter has not been saved before
         if (!currentChapterInUserDb) {          
           const saveData = {
