@@ -7,7 +7,7 @@ import useEndOfChapter from '../../hooks/useEndOfChapter'
 import OutcomeUnlockedStep from './steps/OutcomeUnlockedStep';
 import QuickFeedbackStep from './steps/QuickFeedbackStep';
 import BonusExperienceStep from './steps/BonusExperienceStep';
-import ReminderStep from './steps/ReminderStep';
+import ReflectionIntroStep from './steps/ReflectionIntroStep';
 import ReflectionResponsesStep from './steps/ReflectionResponsesStep';
 import LongFeedbackStep from './steps/LongFeedbackStep';
 import DataBrowserStep from './steps/DataBrowserStep';
@@ -59,10 +59,10 @@ const StoryEndBrowser = ({ reflectionId: propsReflectionId, globalVariables }) =
         {/* <Step title="Outcome Unlocked" component={OutcomeUnlockedStep} /> */}
         {/* <Step title="Quick Feedback" component={(props) => <QuickFeedbackStep reflection={reflection} {...props} />} /> */}
         <Step title="Bonus Experience" component={BonusExperienceStep} />
-        <Step title="Reminder" component={ReminderStep} />
+        <Step title="ReflectionIntroStep" component={ReflectionIntroStep} />
         <Step title="Reflections from Others"  component={(props) => <ReflectionResponsesStep reflectionId={reflectionId}  {...props} />} />
         {/* <Step title="Long Feedback" component={(props) => <LongFeedbackStep reflection={reflection} user={user} {...props} />} /> */}
-        <Step title="Data Browser" component={DataBrowserStep} />
+        {/* <Step title="Data Browser" component={DataBrowserStep} /> */}
         <Step title="Share" component={ShareStep} />
       </Steps>
     </Frame>
