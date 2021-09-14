@@ -62,8 +62,9 @@ VAR nadia_liar = 0
 #ui:narrator
 #background:bg_nadia_intro.jpg
 #music:nadia_intro.mp3
-VAR chapter_id = 1
+CHAPTER 1 #title
 NADIA BINTE RAHIM #title
+VAR chapter_id = 1
 Hey there. I’m Nadia.
 This is a big year for me, since my A Levels are coming up. 
 That’s going to decide whether I make it into medical school like I’m hoping, so... No pressure.
@@ -979,11 +980,6 @@ Reflection 2
 #ui:narrator
 #background:bg_nadia_intro.jpg
 #music:nadia_intro.mp3
-~ chapter_id = 2
-//reset chapter 2-5 variables
-CHAPTER 2 #title
-The Date Crasher #title
-
 I’m still a little surprised by what happened with Gavin. 
 Not the chopsticks thing, I mean - but the invitation to go on a date. 
 I guess it never occurred to me that he might like me enough to ask me out. 
@@ -991,6 +987,10 @@ There are still so many questions in my head.
 But maybe for this one moment, I can just enjoy being with him without worrying about all that. 
 And maybe I can show him who I am outside of school, when we’re not studying in the library. 
 I hope he likes what he finds.
+~ chapter_id = 2
+//reset chapter 2-5 variables
+CHAPTER {chapter_id} #title
+The Date Crasher #title
 
 
 -> nadia_2_1_narration 
@@ -1950,15 +1950,14 @@ Reflection 3
 #knot:nadia_3_intro
 #ui:narrator
 #background:bg_nadia_intro.jpg
-~ chapter_id = 3
-CHAPTER 3 #title
-Fork in the Road #title
-
 What Azlin said last night really made me think... 
 About myself, about Chloe.... and about Gavin.
 But I haven't had enough time to process all of that. 
 All I want to think about are eukaryotic cells, testing for triglycerides, and surviving my A Levels.
 But something tells me that I need to settle the doubts in my head before I can get to my textbooks.
+~ chapter_id = 3
+CHAPTER {chapter_id} #title
+Fork in the Road #title
 
 VAR nadia_3_relationship = 0
 {nadia_2_hidewithgavin: 
