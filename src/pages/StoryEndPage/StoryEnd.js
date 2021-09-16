@@ -38,20 +38,13 @@ const StoryEnd = ({ reflectionId: propsReflectionId, globalVariables }) => {
     () => REFLECTIONS.find((reflection) => reflection.id === reflectionId),
     [reflectionId]
   )
-
-  const Navigation = (props) => {
-    return (
-      <Button type="primary" onClick={props.next} color="primary">
-        Continue
-      </Button> 
-    );
-  };
+ 
 
   const config = {
-    navigation: {
-      component: Navigation,
-      location: "after"
-    }
+    // navigation: {
+    //   component: Navigation,
+    //   location: "after"
+    // }
   };
 
   return (
