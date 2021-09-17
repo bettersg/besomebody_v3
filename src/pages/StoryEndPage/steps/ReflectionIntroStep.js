@@ -1,5 +1,4 @@
-
-import React , { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Box,
   Button,
@@ -8,6 +7,8 @@ import {
 } from '@material-ui/core'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import { useAuth } from '../../../contexts/AuthContext'
+import { getDbReflectionResponsesCount } from '../../../models/counterModel';
+
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
@@ -73,19 +74,26 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-const ReflectionIntroStep = ({ next }) => {
+const ReflectionIntroStep = ({ next , reflectionId }) => {
   const classes = useStyles()
   const { currentUser } = useAuth()  
   const [isLoading, setIsLoading] = useState(false)
+  const [count, setCount] = useState(null);
+
+
+  async function fetchCount() {
+    setCount(await getDbReflectionResponsesCount(reflectionId, 3));
+  }
+
+  useEffect(() => fetchCount(), []);
 
   return (
   <Box className={classes.background}>
     <Container maxWidth="md" className={classes.container}>
         <Box py={4} display="flex" flexDirection="column" justifyContent="center" alignItems="center">          
           <Typography className={classes.text}>While this is the end of their story, it is the start of a new kind of story.</Typography>
-          <Typography className={classes.text}>Your story.</Typography>
-          <Typography className={classes.text}>XXXX (count) have played.</Typography>
-          <Typography className={classes.text}>Here are their stories.</Typography>
+          <Typography className={classes.headerText}>Your story.</Typography>
+          <Typography className={classes.text}>{count || 0} players have left their stories.</Typography>
       </Box>
         <Box className={classes.bottom}>        
           {/* <Button variant="contained" className={classes.btn} onClick={() => setPage(REFLECTION_PAGE_CHAPTER_REFLECTION_RESPONSES)}> */}
