@@ -19,7 +19,7 @@ const ShareableImage = ({data,  }) =>{
 
       htmlToImage.toBlob(exportData[0])
         .then(function (blob) {
-          var file = new File([blob], 'to-be-you-shared.png', { type: blob.type })
+          var file = new File([blob], 'to-be-you-shared.jpg', { type: 'image/jpeg' })
           console.log(file)
           const filesArray = [file]
           console.log(filesArray)
