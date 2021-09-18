@@ -30,6 +30,7 @@
     "react": "^16.14.0",
     "react-app-rewired": "^2.1.8",
     "react-audio-player": "^0.17.0",
+    "react-device-detect": "^1.17.0",
     "react-dom": "^17.0.1",
     "react-firebaseui": "^5.0.2",
     "react-hook-form": "^6.12.2",
