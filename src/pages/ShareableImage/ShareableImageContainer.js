@@ -1,4 +1,4 @@
-import GeneratedImage from './GeneratedImage'
+import ShareableImage from './ShareableImage'
 import * as htmlToImage from 'html-to-image';
 import downloadjs from "downloadjs";
 import {isMobile} from 'react-device-detect';
@@ -9,7 +9,7 @@ import {isMobile} from 'react-device-detect';
 //     text: "I've just finished playing Chapter One of Nadia's Story!", 
 //     avatar: 'nadia'}
 
-const ShareableImage = ({data,  }) =>{
+const ShareableImageContainer = ({data,  }) =>{
 
   const exportAsPicture = () => {
 
@@ -70,9 +70,9 @@ const ShareableImage = ({data,  }) =>{
 
   return <div>
       <h1>Share your experience playing To Be You!</h1>
-      <GeneratedImage imageData={data} className="htmlToImageVis"/>
+      <ShareableImage imageData={data} className="htmlToImageVis"/>
         <button onClick={exportAsPicture}>Share</button>
   </div>
 };
 
-export default ShareableImage;
+export default ShareableImageContainer;

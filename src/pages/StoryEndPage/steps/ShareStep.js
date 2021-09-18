@@ -1,4 +1,4 @@
-import ShareableImage from "../../../components/ShareableImage/ShareableImage";
+import ShareableImageContainer from "../../ShareableImage/ShareableImageContainer";
 
 const ShareStep = () => {
 
@@ -10,7 +10,7 @@ const ShareStep = () => {
     avatar: "nadia"}
   // -- 
 
-  return <ShareableImage data={data}></ShareableImage>;
+  return <ShareableImageContainer data={data}></ShareableImageContainer>;
 }
 
 export default ShareStep;

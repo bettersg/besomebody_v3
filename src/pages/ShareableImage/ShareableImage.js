@@ -1,4 +1,4 @@
-const GeneratedImage = ({imageData, className }) => {
+const ShareableImage = ({imageData, className }) => {
     const {id, text, avatar} = imageData;
     var avatarImage = '';
 
@@ -26,4 +26,4 @@ const GeneratedImage = ({imageData, className }) => {
     </div>
 }
 
-export default GeneratedImage;
+export default ShareableImage;
