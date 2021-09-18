@@ -65,17 +65,23 @@ const ReflectionForm = ({ reflection }) => {
   const [answers, setAnswers] = useState(questions.map(() => ""));
 
   const handleSubmitClick = async () => {
-    const answerDocs = answers.map((answer, index) => {
-      const question = questions[index];
-      return {
-        reflectionId: reflection.id,
-        questionId: question.id,
-        userId: currentUser.id,
-        answer,
-        submittedAt: new Date(),
-        timestamp: Date.now(),
-      }
-    });
+    const answerDocs = answers
+      .filter((answer, index) => {
+        const question = questions[index];
+        return question.choices?.find(({ body }) => body === answer) != null;
+      })
+      .map((answer, index) => {
+        const question = questions[index];
+        return {
+          reflectionId: reflection.id,
+          questionId: question.id,
+          choiceId: question.type==="MULTI_CHOICE" ? question.choices.find(({ body }) => body === answer)?.id : null,
+          userId: currentUser.id,
+          answer,
+          submittedAt: new Date(),
+          timestamp: Date.now(),
+        }
+      });
     try {
       setIsLoading(true);
       await createDbReflectionResponses(answerDocs);
@@ -108,6 +114,7 @@ const ReflectionForm = ({ reflection }) => {
       {questions.map((question, index) => (
         <Box key={question.id} mt={2}  className={classes.container}>
           <Question
+            reflectionId={reflection.id}
             key={question.id}
             question={question}
             value={answers[index]}

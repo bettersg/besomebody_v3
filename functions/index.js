@@ -8,7 +8,7 @@ const FieldValue = admin.firestore.FieldValue;
 exports.incrementReflectionCounters = functions.firestore
   .document('reflectionResponses/{docId}')
   .onCreate(async (snap, context) => {
-    const { reflectionId, questionId } = snap.data();
+    const { reflectionId, questionId, choiceId } = snap.data();
     if (questionId !== 3) return;  // this question appears in every reflectionId and hence is a reliable measure of the total number of reflections submitted
 
     const counterRef = firestore
@@ -21,6 +21,19 @@ exports.incrementReflectionCounters = functions.firestore
     } else {
       await counterRef.update({ count: FieldValue.increment(1) });
     }
+
+
+    const choiceRef = firestore
+      .collection('counters')
+      .doc(`reflectionResponses-${reflectionId}-${questionId}-${choiceId}`);
+    const choiceCounter = await counterRef.get();
+
+    if (!choiceCounter.exists) {
+      await choiceRef.set({ count: 1 });
+    } else {
+      await choiceRef.update({ count: FieldValue.increment(1) });
+    }
+
   });
 
 // TODO: might need a decrement count on deleting reflection -> Noted, but we do not provide this as a client-side function now, so any deletion will be manual (ie from admin ui). decrement can be manual also.

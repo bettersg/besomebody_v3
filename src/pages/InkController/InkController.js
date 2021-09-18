@@ -13,6 +13,7 @@ import Narrator from '../NarratorPage/Narrator'
 import Notification from '../NotificationPage/Notification'
 import Reflection from '../ReflectionsPage/Reflection'
 import StoryEnd from '../StoryEndPage/StoryEnd'
+import StoryEndBrowser from '../StoryEndPage/StoryEndBrowser'
 
 const getUi = ({
   currentParagraphs,
@@ -58,7 +59,17 @@ const getUi = ({
       )
     }
       
+    case 'story_end_browser': {
+       
+      return (
+        <StoryEndBrowser
+          reflectionId={specialTags.reflection_id}
+          globalVariables={globalVariables}
+        />
+      )
+    }
       
+    
       
 
     case 'mcq': {

@@ -99,6 +99,25 @@
                 color: $lapisDark2;
             }
         }
+        &--secretButton {
+            @include inter-chaptChoiceName; 
+            margin-left: 24px; 
+            font-size: 14px;
+            height: 40px; 
+            width: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 24px;
+            background-color: $tangerineBase;
+            color: $white;
+            cursor: pointer;
+
+            &.disable {
+                background-color: $midnight10;
+                color: $lapisDark2;
+            }
+        }
     }
     &__summary {
         @include inter-chaptchoice500; 

@@ -108,7 +108,6 @@ export default function ChapterBox(props) {
       <CardContent className={classes.card}>
         <div className="ChapterBox">
           <div className="ChapterBox__chaptDetails">
-            {/* TODO: this needs to be pulled from the player save data, not from the story*/}
             {chaptDetails.new == true ? (
               <div className="ChapterBox__chaptDetails__bubble new">NEW!</div>
             ) : chaptDetails.playable == false ? (
@@ -150,7 +149,7 @@ export default function ChapterBox(props) {
                       LOCKED
                     </div>
                   
-            )}
+            )}            
           </div>
         </div>
 
@@ -162,7 +161,7 @@ export default function ChapterBox(props) {
               unlocked
             </span>
           </div>
-        ) : null}
+        ) : null}        
       </CardContent>
     </Card>
   )

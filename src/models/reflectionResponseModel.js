@@ -1,4 +1,4 @@
-import { firestore } from '../firebase'
+import { firestore} from '../firebase'
 import { getDbUser } from './userModel';
 
 export const createDbReflectionResponses = async (responses) => {

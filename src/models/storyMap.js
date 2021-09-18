@@ -204,7 +204,19 @@ export const CHARACTER_MAP = [
         ]
       },
     ],
-
+    reflectionBrowser: [
+      {         
+        title: "Reflection Browser",
+        knotTag: "story_end_browser",
+        summary: "Nadia's story in the game has ended, but the stories of all our players are waiting to be explored.",
+        playable: true,
+        images: [
+          "/images/bg_nadia_intro.jpg",         
+          "/images/bg_launch.jpg",
+          "/images/bg_reflections.jpg",
+        ],        
+      },
+    ]
   },
   {
     characterId: 2,

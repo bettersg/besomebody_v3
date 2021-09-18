@@ -6,7 +6,9 @@ import {
   Container,
 } from '@material-ui/core'
 import makeStyles from '@material-ui/core/styles/makeStyles'
-import { useAuth } from '../../../contexts/AuthContext'
+// import { useAuth } from '../../../contexts/AuthContext'
+
+import { REFLECTION_PAGE_CHAPTER_REFLECTION_RESPONSES } from '../../ReflectionsPage/constants';
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
@@ -15,7 +17,7 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 const useStyles = makeStyles((theme) => ({
   background: {
-    backgroundImage: ({ image }) => `url('/reflection/bg_outcomeunlocked.jpg')`,
+    backgroundImage: ({ image }) => `url('/images/bg_reflections.jpg')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '660px',
@@ -23,13 +25,13 @@ const useStyles = makeStyles((theme) => ({
       height: 'calc(var(--vh, 1vh) * 100)',
     },
     bottom: 0, 
-    maxHeight: '100%',
+
   },
   headerText: {
     fontSize: '2rem',
     fontWeight: 800,
     color: '#ffffff',
-    marginTop: 60,
+    marginTop: 200,
   },
   bottom: {
     bottom: 0,
@@ -46,7 +48,9 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     margin: 'auto',
-    textAlign: 'center',
+    textAlign: 'center',    
+    alignItems: "center",
+    paddingTop:'25%',
   },
   btn: {
     padding: '10px 50px',
@@ -63,44 +67,45 @@ const useStyles = makeStyles((theme) => ({
       
     },
   },
-  text: {
-    color: '#ffffff',
+  topText: {
+    color: '#A7A9EB',
     fontSize: '0.9rem',
-    fontWeight: '400',
-    textDecoration: 'none',
+    fontWeight: '600',    
     marginBottom: 30,
-  }
+  },
+  mainText: {
+    color: '#ffffff',
+    fontSize: '1.1rem',
+    fontWeight: '400',    
+    marginBottom: 30,
+  },
+  link: {
+    color: '#ffffff',
+    fontSize: '0.8rem',
+    fontWeight: '300',    
+    marginBottom: 30,
+    textTransform: "uppercase",
+    textDecoration: 'none',
+  },
 }))
 
-const OutcomeUnlockedStep = ({ next }) => {
+const DidYouKnowStep = ({ reflection , next}) => {
   const classes = useStyles()
-  const { currentUser } = useAuth()  
-  const [isLoading, setIsLoading] = useState(false)
 
+  // const { currentUser } = useAuth()  
+  // const [isLoading, setIsLoading] = useState(false)
+  console.log(next)
   return (
   <Box className={classes.background}>
     <Container maxWidth="md" className={classes.container}>
-        <Box py={4} display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-          <div className={classes.headerText}> <img
-            src={'/reflection/icon_outcomeunlocked.png'}            
-            alt={'Outcome Unlocked'}            
-          />
-          <img
-            src={'/reflection/icon_outcomeunlocked.png'}            
-            alt={'Outcome Unlocked'}            
-          />
-          <img
-            src={'/reflection/icon_outcomeunlocked.png'}            
-            alt={'Outcome Unlocked'}            
-          /> </div>
-          <Typography className={classes.headerText}>Outcome Unlocked!</Typography>
-          <Typography className={classes.text}>You have unlocked an ending for this story! To unlock more endings, you may need to replay this chapter or replay the whole story.</Typography>
+        <Box className={classes.container}>
+          <Typography className={classes.topText}>DID YOU KNOW?</Typography>
+          <Typography className={classes.mainText}>{reflection.didyouknow}</Typography>
+          {reflection.media ? <a href={reflection.media} target="_blank" className={classes.link}>FIND OUT MORE</a> : null}
       </Box>
         <Box className={classes.bottom}>        
-          {/* <Button variant="contained" className={classes.btn} onClick={() => setPage(REFLECTION_PAGE_CHAPTER_REFLECTION_RESPONSES)}> */}
           <Button variant="contained" className={classes.btn} onClick={() => next()}>
-
-          Next
+          Continue
         </Button>
       </Box>
     </Container>
@@ -108,7 +113,7 @@ const OutcomeUnlockedStep = ({ next }) => {
   )
 }
 
-export default OutcomeUnlockedStep;
+export default DidYouKnowStep;
 
 
 

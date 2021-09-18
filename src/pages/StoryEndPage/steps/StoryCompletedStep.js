@@ -15,21 +15,22 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 const useStyles = makeStyles((theme) => ({
   background: {
-    backgroundImage: ({ image }) => `url('/reflection/bg_outcomeunlocked.jpg')`,
+    backgroundImage: ({ image }) => `url('/images/bg_reflections.jpg')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '660px',
     [theme.breakpoints.only('xs')]: {
       height: 'calc(var(--vh, 1vh) * 100)',
     },
-    bottom: 0, 
+    bottom: 0,
     maxHeight: '100%',
+
   },
   headerText: {
     fontSize: '2rem',
     fontWeight: 800,
     color: '#ffffff',
-    marginTop: 60,
+    marginTop: 200,
   },
   bottom: {
     bottom: 0,
@@ -72,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-const OutcomeUnlockedStep = ({ next }) => {
+const StoryCompletedStep = ({ next }) => {
   const classes = useStyles()
   const { currentUser } = useAuth()  
   const [isLoading, setIsLoading] = useState(false)
@@ -81,20 +82,8 @@ const OutcomeUnlockedStep = ({ next }) => {
   <Box className={classes.background}>
     <Container maxWidth="md" className={classes.container}>
         <Box py={4} display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-          <div className={classes.headerText}> <img
-            src={'/reflection/icon_outcomeunlocked.png'}            
-            alt={'Outcome Unlocked'}            
-          />
-          <img
-            src={'/reflection/icon_outcomeunlocked.png'}            
-            alt={'Outcome Unlocked'}            
-          />
-          <img
-            src={'/reflection/icon_outcomeunlocked.png'}            
-            alt={'Outcome Unlocked'}            
-          /> </div>
-          <Typography className={classes.headerText}>Outcome Unlocked!</Typography>
-          <Typography className={classes.text}>You have unlocked an ending for this story! To unlock more endings, you may need to replay this chapter or replay the whole story.</Typography>
+          <Typography className={classes.headerText}>Story Completed!</Typography>
+          <Typography className={classes.text}>Congratulations! <br /> You've finished the whole story.</Typography>
       </Box>
         <Box className={classes.bottom}>        
           {/* <Button variant="contained" className={classes.btn} onClick={() => setPage(REFLECTION_PAGE_CHAPTER_REFLECTION_RESPONSES)}> */}
@@ -108,7 +97,7 @@ const OutcomeUnlockedStep = ({ next }) => {
   )
 }
 
-export default OutcomeUnlockedStep;
+export default StoryCompletedStep;
 
 
 

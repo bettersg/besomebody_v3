@@ -1,4 +1,4 @@
-import React , { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Box,
   Button,
@@ -7,6 +7,8 @@ import {
 } from '@material-ui/core'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import { useAuth } from '../../../contexts/AuthContext'
+import { getDbReflectionResponsesCount } from '../../../models/counterModel';
+
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
@@ -15,7 +17,7 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 const useStyles = makeStyles((theme) => ({
   background: {
-    backgroundImage: ({ image }) => `url('/reflection/bg_outcomeunlocked.jpg')`,
+    backgroundImage: ({ image }) => `url('/reflection/bg_reflections.jpg')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '660px',
@@ -29,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '2rem',
     fontWeight: 800,
     color: '#ffffff',
-    marginTop: 60,
+    marginTop: 200,
   },
   bottom: {
     bottom: 0,
@@ -72,29 +74,26 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-const OutcomeUnlockedStep = ({ next }) => {
+const ReflectionIntroStep = ({ next , reflectionId }) => {
   const classes = useStyles()
   const { currentUser } = useAuth()  
   const [isLoading, setIsLoading] = useState(false)
+  const [count, setCount] = useState(null);
+
+
+  async function fetchCount() {
+    setCount(await getDbReflectionResponsesCount(reflectionId, 3));
+  }
+
+  useEffect(() => fetchCount(), []);
 
   return (
   <Box className={classes.background}>
     <Container maxWidth="md" className={classes.container}>
-        <Box py={4} display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-          <div className={classes.headerText}> <img
-            src={'/reflection/icon_outcomeunlocked.png'}            
-            alt={'Outcome Unlocked'}            
-          />
-          <img
-            src={'/reflection/icon_outcomeunlocked.png'}            
-            alt={'Outcome Unlocked'}            
-          />
-          <img
-            src={'/reflection/icon_outcomeunlocked.png'}            
-            alt={'Outcome Unlocked'}            
-          /> </div>
-          <Typography className={classes.headerText}>Outcome Unlocked!</Typography>
-          <Typography className={classes.text}>You have unlocked an ending for this story! To unlock more endings, you may need to replay this chapter or replay the whole story.</Typography>
+        <Box py={4} display="flex" flexDirection="column" justifyContent="center" alignItems="center">          
+          <Typography className={classes.text}>While this is the end of their story, it is the start of a new kind of story.</Typography>
+          <Typography className={classes.headerText}>Your story.</Typography>
+          <Typography className={classes.text}>{count || 0} players have left their stories.</Typography>
       </Box>
         <Box className={classes.bottom}>        
           {/* <Button variant="contained" className={classes.btn} onClick={() => setPage(REFLECTION_PAGE_CHAPTER_REFLECTION_RESPONSES)}> */}
@@ -108,7 +107,7 @@ const OutcomeUnlockedStep = ({ next }) => {
   )
 }
 
-export default OutcomeUnlockedStep;
+export default ReflectionIntroStep;
 
 
 
