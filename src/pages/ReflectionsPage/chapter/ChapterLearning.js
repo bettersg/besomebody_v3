@@ -82,7 +82,7 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "capitalize", 
     fontWeight: '700',
     '&:hover': {
-      backgroundColor: '#6C70DD',      
+      backgroundColor: '#E2E2F8',      
       boxShadow: 'none',
       
     },

@@ -7,7 +7,7 @@ import { getDbReflectionResponsesCount } from '../../../models/counterModel';
 import { REFLECTION_PAGE_FORM } from '../constants';
 import ChapterResponse from './ChapterResponse';
 import makeStyles from '@material-ui/core/styles/makeStyles'
-import PacmanLoader from 'react-spinners/PacmanLoader'
+import ClipLoader from 'react-spinners/ClipLoader'
 import InfiniteScroll from 'react-infinite-scroll-component';
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -16,7 +16,13 @@ let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 const useStyles = makeStyles((theme) => ({
+  // reflectionScrollArea: {
+  //   background: "linear-gradient(180deg, rgba(251, 90, 63, 0) 0%, #FB5A3F99 50%)",
+  //   height: "1514px", 
+  //   overflowX: "scroll",  
+  // },
   paragraphWrapper: {
+
     backgroundColor: "white", 
     height: '660px',
     [theme.breakpoints.only('xs')]: {
@@ -26,13 +32,16 @@ const useStyles = makeStyles((theme) => ({
     overflow: "auto",
   },
   background: {
-    backgroundImage: ({ image }) => `url('/images/bg_reflections.jpg')`,
+    // backgroundImage: ({ image }) => `url('/images/bg_reflections.jpg')`,
+    background: "linear-gradient(180deg, rgba(251, 90, 63, 0) 0%, #FB5A3F99 50%)",
+    backgroundColor: "#26248F", 
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '660px',
     [theme.breakpoints.only('xs')]: {
       height: 'calc(var(--vh, 1vh) * 100)',
     },
+    overflowX: "hidden", 
     bottom: 0, 
 
   },
@@ -55,22 +64,31 @@ const useStyles = makeStyles((theme) => ({
     // alignItems: 'center',
   },
   container: {
-    margin: 'auto',
     textAlign: 'center',    
     alignItems: "center",
     paddingTop: '10%',
     overflow: 'scroll',
-    height: 600
+    height: "100%", 
+  },
+  
+  btnSection: {
+    background: "linear-gradient(180deg, rgba(251, 90, 63, 0) 0%, #FB5A3F 100%)",
+    height: "128px", 
+    position: "absolute", 
+    bottom: 0, 
+    width: "100%",
   },
   btn: {
     padding: '10px 50px',
     borderRadius: '40px',
-    marginBottom: '20px',
-    background: '#664EFC',
-    backgroundColor: '#664EFC',
+    backgroundColor: '#3835C1',
     textDecoration: 'none',
     color: '#ffffff',
     fontWeight: '700',
+    width: "253px", 
+    position: "absolute", 
+    bottom: 28,
+    right: 32, 
     '&:hover': {
       backgroundColor: '#6C70DD',      
       boxShadow: 'none',
@@ -137,33 +155,38 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
   useEffect(() => fetchMoreResponsesIfNotOverflow(), [hasMore, lastDocSnapshot]);
 
   if (responses == null) {
+    // if (responses ) {
     return (
       <Box className={classes.background}>
-        <PacmanLoader color="#e5e5e5" size={25}	css={{align:"center", top:"200px", left:"100px"}} />
+        <ClipLoader size={106} width={"10"} css={{position: "absolute", top: 253, left: 134, border: "10px solid #898DE4", borderBottomColor:"transparent"}} />
       </Box>
     )
   } else {
     return (
-      <Box className={classes.background}>        
+      <Box className={classes.background}>      
+      <div className={classes.reflectionScrollArea}>
         <Container className={classes.container} id={'reflectionsContainerId'}>
           <Typography className={classes.headerText}>Reflections from Others</Typography>
           <Typography variant="body2" color="error">{count || 0} players have completed this chapter</Typography>
-        <Box>
-          <InfiniteScroll
-            dataLength={responses.length}
-            next={fetchMoreResponses}
-            hasMore={hasMore}
-            loader={<PacmanLoader color="#e5e5e5" size={10} css={{display:'flex', left:'-15px', margin:'auto', height:'30px'}} />}
-            scrollableTarget={'reflectionsContainerId'}
-          >
-            {responses.map(response => (
-              response.answer.length > 5 && <ChapterResponse key={response.id} response={response} />
-            ))}
-          </InfiniteScroll>
-        </Box>
+          <Box>
+            <InfiniteScroll
+              dataLength={responses.length}
+              next={fetchMoreResponses}
+              hasMore={hasMore}
+              loader={<ClipLoader color="#898DE4" size={106} css={{display:'flex', left:'-15px', margin:'auto', height:'30px'}} />}
+              scrollableTarget={'reflectionsContainerId'}
+            >
+              {responses.map(response => (
+                response.answer.length > 5 && <ChapterResponse key={response.id} response={response} />
+              ))}
+            </InfiniteScroll>
+          </Box>
       
         </Container>
-        <Button className={classes.btn} onClick={() => setPage(REFLECTION_PAGE_FORM)} fullWidth>Continue</Button>
+        <div className={classes.btnSection}>
+          <Button className={classes.btn} onClick={() => setPage(REFLECTION_PAGE_FORM)} fullWidth>Continue</Button>
+        </div>
+        </div>  
     </Box>
     )
     

@@ -18,41 +18,47 @@ import { createReflectionLikes } from '../../../models/ReflectionLikes';
 
 const useStyles = makeStyles((theme) => ({
   reflectionBox: {
-    backgroundColor: "#26248F", 
+    background: "linear-gradient(180deg, #FFFCED 0%, #FFF1A7 100%)",
     boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.12)',
     borderRadius: 8,
-    padding: 10,
+    padding: "32px 20px",
     margin:10,
   },
   storyText: {
-    color: '#ffffff',
     fontWeight: 500,
     fontSize: 15,
     lineHeight: '150%',
+    textAlign: "left", 
   },
   demographicsText: {
-    color: '#E2E2F8',
-    marginTop:10,
+    color: '#8A5C00',
     fontWeight: 400,
+    textAlign: "left", 
     fontSize: 11,
+    textTransform: "capitalize", 
+
   },
   flag: {
-    color: '#E2E2F8',
-    marginTop: 10,
-    
+    color: '#3A2A08',
     '&:hover': {
       color: '#ff0000',
       cursor: 'pointer',
     },
   },
   heart:{
-    color: '#E2E2F8',
-    marginTop:10,
+    color: '#3A2A08',
     '&:hover': {
       color: '#ff0000',
       cursor: 'pointer',
     },
+  }, 
+  demoShareBox:{
+    display:"flex", 
+    justifyContent: "space-between", 
+    alignItems: "center", 
+    marginTop:16,
   }
+
 }))
 
 
@@ -121,11 +127,11 @@ const ChapterResponse = ({ response }) => {
 
   return (
     <Box className={classes.reflectionBox}>
-      <Typography className={classes.storyText}>{response.answer} </Typography> <br/>
-      <Grid container >
-        <Grid item xs={10}><Typography className={classes.demographicsText}>~{response.user.age ? response.user.age + ' YRS OLD' : null} {response.user.race ? ' | ' + response.user.race : null}  {response.user.religion ? ' | ' + response.user.religion : null}   {response.user.gender ? ' | ' + response.user.gender : null}  {response.user.housing ? ' | ' + response.user.housing : null}</Typography></Grid>
-        <Grid item xs={2}><FlagIcon className={classes.flag} fontSize="small"  onClick={handleClickOpen} /></Grid>
-        <Grid item xs={2}><FavoriteIcon className={classes.heart} fontSize="small" onClick={likeReflection}/></Grid>
+      <Typography className={classes.storyText}>{response.answer} </Typography>
+      <Grid container className={classes.demoShareBox}>
+        <Grid item xs={8}><Typography className={classes.demographicsText}>{response.user.race ? response.user.race.toLowerCase() : null}{response.user.gender ? ', ' + response.user.gender.toLowerCase() : null}, ~{response.user.age ? response.user.age : null}{response.user.religion ? ', ' + response.user.religion.toLowerCase() : null}{response.user.housing ? ', ' + response.user.housing.toLowerCase() : null}</Typography></Grid>
+        <Grid item xs={1}><FavoriteIcon className={classes.heart} fontSize="small" onClick={likeReflection}/></Grid>
+        <Grid item xs={1}><FlagIcon className={classes.flag} fontSize="small"  onClick={handleClickOpen} /></Grid>
       </Grid>
 
       <Dialog
