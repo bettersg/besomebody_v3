@@ -6,7 +6,7 @@
       "fields": [
         { "fieldPath": "reflectionId", "order": "ASCENDING" },
         { "fieldPath": "questionId", "order": "ASCENDING" },
-        { "fieldPath": "answer", "order": "ASCENDING" }
+        { "fieldPath": "submittedAt", "order": "DESCENDING" }
       ]
     }
   ]

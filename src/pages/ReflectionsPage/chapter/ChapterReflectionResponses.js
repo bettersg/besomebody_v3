@@ -113,7 +113,7 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
     const { newResponses, newLastDocSnapshot } = await getDbReflectionResponsesPaginated({
       lastDocSnapshot,
       limit: LIMIT,
-      reflectionId,
+      reflectionIds: [reflectionId],
       questionId: 3,  // this is hardcoded to the "share your story textarea question"
     });
     if (newResponses.length < LIMIT) {
@@ -130,7 +130,7 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
   }
 
   async function fetchCount() {
-    setCount(await getDbReflectionResponsesCount(reflectionId, 3));
+    setCount(await getDbReflectionResponsesCount(reflectionId));
   }
 
   useEffect(() => fetchCount(), []);

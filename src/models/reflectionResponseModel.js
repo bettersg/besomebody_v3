@@ -25,15 +25,15 @@ const populateDbUserOnReflectionResponse = async (reflectionResponse) => {
 export const getDbReflectionResponsesPaginated = async ({
   lastDocSnapshot,
   limit,
-  reflectionId,
+  reflectionIds,
   questionId,
 }) => {
   try {
     let query = firestore.collection('reflectionResponses')
-      .where('reflectionId', '==', reflectionId)
+      .where('reflectionId', 'in', reflectionIds)
       .where('questionId', '==', questionId)
       // .where('answer', '!=', '')  // TODO: uncomment after composite index is deployed
-      // .orderBy('submittedAt', 'desc')
+      .orderBy('submittedAt', 'desc')
       .limit(limit);
     if (lastDocSnapshot) {
       query = query.startAfter(lastDocSnapshot);
