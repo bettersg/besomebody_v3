@@ -29,7 +29,7 @@ const Question = ({ question, value, onChange, reflectionId}) => {
             <b>{question.body}</b>
           </Typography>
           <RadioGroup value={value} onChange={handleChange}>
-            {question.choices.map((choice,i) => (
+            {question.choices.map((choice) => (
               <FormControlLabel key={choice.body} value={choice.body} control={<Radio />} label={choice.body}  />
             ))}
           </RadioGroup>
