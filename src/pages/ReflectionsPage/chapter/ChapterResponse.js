@@ -14,7 +14,9 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
 //import from model 
-import { createReflectionLikes } from '../../../models/ReflectionLikes';
+import { createReflectionLikes, getUserReflectionLikes } from '../../../models/ReflectionLikes';
+
+const ReflBeenLiked = getUserReflectionLikes;
 
 const useStyles = makeStyles((theme) => ({
   reflectionBox: {
@@ -52,6 +54,14 @@ const useStyles = makeStyles((theme) => ({
       color: '#ff0000',
       cursor: 'pointer',
     },
+  },
+  red_heart:{
+    color: '#ff0000',
+    marginTop:10,
+    '&:hover': {
+      color: '#E2E2F8',
+      cursor: 'pointer',
+    },
   }
 }))
 
@@ -84,7 +94,7 @@ const ChapterResponse = ({ response }) => {
   //handle likes 
   const likeReflection = (e) =>{
     e.preventDefault();
-
+    //check for heart color
     createReflectionLikes(response.id, currentUser.id)
   }
   //submit the red flag disagreement
@@ -115,6 +125,9 @@ const ChapterResponse = ({ response }) => {
       });
   };
 
+  //check if reflection has been liked 
+  
+
   // const handleChange = (e) => {
   //   setToSend({ ...toSend, [e.target.name]: e.target.value });
   // };
@@ -125,7 +138,7 @@ const ChapterResponse = ({ response }) => {
       <Grid container >
         <Grid item xs={10}><Typography className={classes.demographicsText}>~{response.user.age ? response.user.age + ' YRS OLD' : null} {response.user.race ? ' | ' + response.user.race : null}  {response.user.religion ? ' | ' + response.user.religion : null}   {response.user.gender ? ' | ' + response.user.gender : null}  {response.user.housing ? ' | ' + response.user.housing : null}</Typography></Grid>
         <Grid item xs={2}><FlagIcon className={classes.flag} fontSize="small"  onClick={handleClickOpen} /></Grid>
-        <Grid item xs={2}><FavoriteIcon className={classes.heart} fontSize="small" onClick={likeReflection}/></Grid>
+        <Grid item xs={2}><FavoriteIcon className={ReflBeenLiked?(classes.red_heart):(classes.heart)} fontSize="small" onClick={likeReflection}/></Grid>
       </Grid>
 
       <Dialog
