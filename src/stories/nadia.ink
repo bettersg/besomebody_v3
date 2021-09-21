@@ -267,8 +267,8 @@ It's not weird, right? #speaker_self
 + [My mum got them for me] -> nadia_1_2c
 
 = nadia_1_2a
-VAR nadia_trackpants_choice = 1
 I feel more comfortable in these, actually. My mom just got them for me. #speaker_self
+VAR nadia_trackpants_choice = 1
 Really? It looks a bit warm, don't you think? #speaker_right
 Yeah they are, a bit. But that's just the material. #speaker_self
 Well, do you want to borrow my shorts? I have an extra pair. #speaker_right
@@ -534,8 +534,8 @@ Wait a minute. Is he really coming for my plate with his chopsticks? #inner_mono
 + [Watch Gavin take your tempeh]-> nadia_1_3c
 
 = nadia_1_3a
-VAR nadia_gavinsharefood = 1
 (Jokingly) Eh, who said I was done! #speaker_self
+VAR nadia_gavinsharefood = 1
 Sharing is caring, Nad. #speaker_left
 Please, like you haven’t been eyeing it since just now. #speaker_self
 Oh come on! Pleaaaaaase? #speaker_left
@@ -800,8 +800,8 @@ MAMPOS. #speaker_1
 #chat_group_title:Azlin
 #chat_group_image:ico_nadia_azlin.png
 #speaker_1_name:Azlin
-VAR chapter_1_ending = 1
 So do you 😐 #speaker_self
+VAR chapter_1_ending = 1
 haha that’s my own pasal and problem 😬 #speaker_1
 Do your parents know about gavin? #speaker_1
 Not really. It’s very early for anything right? You know how my dad can be #speaker_self
@@ -834,8 +834,8 @@ just.. remember who you are okay? #speaker_1
 #chat_group_title:Azlin
 #chat_group_image:ico_nadia_azlin.png
 #speaker_1_name:Azlin
-~ chapter_1_ending = 2
 I don’t think so. I like people because of who they are, what they’re like. #speaker_self
+~ chapter_1_ending = 2
 cute and chinese is your type 🤷‍♀️ #speaker_1
 🙄 #speaker_self
 Why does it have to be a race thing #speaker_self
@@ -873,9 +873,9 @@ don't do anything you will regret k #speaker_1
 #chat_group_title:Azlin
 #chat_group_image:ico_nadia_azlin.png
 #speaker_1_name:Azlin
-~ chapter_1_ending = 3
 No la. We’re just friends. He’s nice. So I’m nice back.  #speaker_self
 ...mmhmmm... #speaker_1
+~ chapter_1_ending = 3
 Anyway #speaker_self
 I also know I cannot get distracted now. It's 4 months to A levels!!!! #speaker_self
 exactly.  nad, if u want to go into med school, then focus k? #speaker_1
@@ -903,8 +903,8 @@ and i know u are better than that #speaker_1
 #chat_group_title:Azlin
 #chat_group_image:ico_nadia_azlin.png
 #speaker_1_name:Azlin
-~ chapter_1_ending = 4
 lol #speaker_self
+~ chapter_1_ending = 4
 Kak, I’m the one that knows him. He’s sweet.  #speaker_self
 Ok he is a bit clueless.  #speaker_self
 Alamak today in the canteen he took his chopsticks bekas you know what, wanted to try my food #speaker_self
@@ -1094,8 +1094,8 @@ Oh! He’s reaching out for a hug. #inner_monologue
     }
 
 = nadia_2_2a1
-VAR nadia_2_huggavin = true
 Gee thanks. You clean up well too. So where’s this cafe? #speaker_self
+VAR nadia_2_huggavin = true
 It’s just outside, I heard they have really good tempeh — #speaker_left
 ... seriously?? #speaker_self
 Hahaha no, just kidding. #speaker_left
@@ -1403,8 +1403,8 @@ Oh boy. Should I tell her about med school? #inner_monologue
 +[No, this is about Chloe not me.] -> nadia_2_3a2
 
 = nadia_2_3a1
-VAR nadia_2_chloelibrarychoice = 1
 Ok, I have to tell you something.  #speaker_self
+VAR nadia_2_chloelibrarychoice = 1
 What is it? #speaker_left
 I’m going to try for med school too.  #speaker_self
 Oh shit. Really? #speaker_left
@@ -1499,8 +1499,8 @@ Nad, it’s easier for you to get into things.  #speaker_left
 + [What do you mean by that?] -> nadia_2_3e
 
 === nadia_2_3d ===
-VAR nadia_2_confrontchloe = false
 Right. #speaker_self
+VAR nadia_2_confrontchloe = false
 Argh it’s so unfair. You fill the "quota", you know?  #speaker_left
 No, I don’t know, Chloe. #inner_monologue
 #speaker_left_image:cha_nadia_chloe_school_concerned.png
@@ -1728,8 +1728,8 @@ You’re right. I need to unclench. I wanted to talk to you about... #speaker_se
 #background:bg_nadia_playgroundnight.jpg
 #speaker_right_image:cha_nadia_azlin_normal.png
 #speaker_right_name:Azlin
-VAR chapter_2_ending = 1
 ..what Chloe said. Like it doesn’t even make sense!  #speaker_self
+VAR chapter_2_ending = 1
 I couldn’t even say anything back you know, I was stunned - like has she always felt this way? Is that really how she thinks? #speaker_self
 #speaker_right_image:cha_nadia_azlin_concerned.png
 Ok ok, one thing at a time. This Chloe person, your volleyball friend? #speaker_right
@@ -1961,7 +1961,7 @@ Fork in the Road #title
 
 VAR nadia_3_relationship = 0
 {nadia_2_hidewithgavin: 
-    ~ nadia_3_relationship =1
+    ~ nadia_3_relationship = 1
  - else:
    ~ nadia_3_relationship = 0 
     }
@@ -1981,7 +1981,7 @@ VAR nadia_3_relationship = 0
     Relationship: {nadia_3_relationship} // remove 
 I'm glad today is not a school day.
 I think I need to lay low for a bit, and maybe see Chloe a bit less.
-I want to just stay home and chill - but I have a nagging feeling like I'm supposed to have plans for today that I can't quite remember.
+I want to just stay home and chill - but I have a nagging feeling like I'm supposed to have plans ... that I can't quite remember.
 Oh crap - I think I was supposed to reply to Gavin on something!
 
 // FOR DEBUG ONLY
@@ -2015,9 +2015,8 @@ Sure? Kinda disappeared after school, thought something happened. You can tell m
 
 
 = nadia_3_1a 
-    ~ nadia_3_relationship -=1
-    Relationship: {nadia_3_relationship} // remove 
     It was nothing, just tired #speaker_self
+    ~ nadia_3_relationship -= 1
     Okayyy. You sound pretty bummed tho #speaker_1
     Do I? #speaker_self
     Yeah, a bit. Would you like.. 🧋? #speaker_1
@@ -2040,7 +2039,6 @@ Sure? Kinda disappeared after school, thought something happened. You can tell m
     
     + [Hesitate]
     // ~ nadia_3_relationship += 0
-    Relationship: {nadia_3_relationship} // remove 
     Might be tough.. #speaker_self
     You know what? It’s fine, Nad.  #speaker_1
     Don’t know why I thought this was a good idea in the first place. #speaker_1
@@ -2065,8 +2063,8 @@ Sure? Kinda disappeared after school, thought something happened. You can tell m
     That’s what you always say. I’ll see you in school. #speaker_1
 
     + [Decline]
-    VAR nadia_3_gavinchoice = "no"
     I don’t think so… it might be tough.. #speaker_self
+    VAR nadia_3_gavinchoice = "no"
     Really? Am gonna be out whole day with them tmr, just join us whenever la #speaker_1
     No as in.. I’m just tired #speaker_self
     😕 #speaker_1
@@ -2095,9 +2093,8 @@ Sure? Kinda disappeared after school, thought something happened. You can tell m
 -> nadia_3_2
 
 = nadia_3_1b
-    ~ nadia_3_relationship +=1
-    Relationship: {nadia_3_relationship} // remove 
     Yeah. Left school in a bit of a mood 👀 you ever have those days? #speaker_self 
+    ~ nadia_3_relationship += 1
     Guess so. Talking nonsense with you or whoever’s in the student council room helps  #speaker_1
     Haha wow - must mean you’re always in a bit of a weird mood.  #speaker_self 
     Yup, that’s the secret. Don’t tell anyone ok. Sooo what’s gg on with u 💩 #speaker_1
@@ -2211,8 +2208,8 @@ Sure? Kinda disappeared after school, thought something happened. You can tell m
 }
 
 = nadia_3_1maybe
-~ nadia_3_gavinchoice = "maybe"
 He’s not as funny as he thinks he is #speaker_self 
+~ nadia_3_gavinchoice = "maybe"
 Ok, burn. 🔥🔥🔥 #speaker_1 
 Said what I said 🙄💁‍♀️ #speaker_self 
 We’ve just been friends for ages, same schools etc. He’s always been around.  #speaker_1 
@@ -2247,8 +2244,8 @@ Will see ya in school 👁️👁️ #speaker_self
 -> nadia_3_2
 
 = nadia_3_1yes
-~ nadia_3_gavinchoice = "yes"
 👁️👁️️ #speaker_self 
+~ nadia_3_gavinchoice = "yes"
 He’s good deeeeep down laaa, and he's fine...  #speaker_1 
 ...in small amounts  #speaker_1 
 Ha!!!! Knew it!️ #speaker_self 
@@ -2393,7 +2390,7 @@ Your form teacher asked me to help look for you.  #speaker_right
 I mean you did really well. You’re one of our top scorers.  #speaker_right
 No way. NO WAY. NOOOO WAAAAYYYY. OMG OMG OMG #inner_monologue
 (laughs) I can see you’re in a bit of shock. Come with me, we’re briefing the top 3 students in the teacher’s lounge before you go to the hall with the rest.  #speaker_right
-There’s also some paperwork to collect the school award and we can also start the scholarship application process for you today.  #speaker_right
+There’s also some paperwork to collect the school award and we can also start the scholarship application process as we didn't put you on our list before.  #speaker_right
 #speaker_right_image:pixel.png
 #ui:narrator
 #background:bg_nadia_schoolhall.jpg
@@ -2524,7 +2521,7 @@ Gavin: Pls, no need pretend :) Congrats la!! # message
 #speaker_1_name:Gavin
 Pls, no need pretend :) Congrats la!!  #speaker_1
 😳!! omg wru #speaker_self
-Still on my way. Travelling from Tekong is no joke. Stupid boat got delayed. You still in school? #speaker_1
+Still on my way. Travelling from Tekong is no joke. My stupid boat got delayed. You still in school? #speaker_1
 Yeah, am looking for Chloe actually  #speaker_self
 How did she do? #speaker_1
 ... idk, she should be ok, but she hasn’t replied my text #speaker_self
@@ -2584,120 +2581,563 @@ I hope he’s right. Just feels weird, thought she and I would be doing this tog
 -> nadia_3_2c
 
 === nadia_3_2c ===
+#knot:nadia_3_2c
 #ui:scene
 #background:bg_nadia_schoolhall.jpg
 + [Check up on Chloe] -> nadia_3_2d
 + [Tell Azlin your results] -> nadia_3_2e
 
 === nadia_3_2d ===
- 
-NADIA
-Hallo! Wru?
- 
-NADIA
-Chlo u ok
- 
-NADIA
-Yoohoo
- 
-NADIA
-Hey Chlo heard you’re at home already - lemme know if you want to come out and hang? Esp if you want a break from your mom.
- 
-CHLOE
-Hi hi
- 
-NADIA
-Omg hey!!!
- 
-CHLOE
-Sorry I disappeared like that haha
- 
-NADIA
-No no its ok 😅 do you want to come hang out
- 
-CHLOE
-Idk 
- 
-I don’t want to ruin the mood
- 
-You should celebrate tho 🙂
- 
-NADIA
-Oh.. it won’t be the same without you
- 
-Are you ok?
- 
-CHLOE
-Yes. I’m just being a bit dramatic. What a way to end school, crying in the bathroom haha
- 
-NADIA
-Omg Chlo why didn’t you call me
- 
-CHLOE
-Don’t be ridiculous, you were having your moment lolol
- 
-We’ll hang out soon k? Congrats Nad 
+#knot:nadia_3_2d
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Chloe
+#chat_group_image:ico_nadia_chloe.png
+#speaker_1_name:Chloe
+Hallo! Wru? #speaker_self
+Chlo u ok #speaker_self
+Yoohoo #speaker_self
+Hey Chlo heard you’re at home already - lemme know if you want to come out and hang? Esp if you want a break from your mom. #speaker_self
+Hi hi  #speaker_1
+Omg hey!!! #speaker_self
+Sorry I disappeared like that haha #speaker_1
+No no its ok 😅 do you want to come hang out #speaker_self
+Idk  #speaker_1
+I don’t want to ruin the mood #speaker_1
+You should celebrate tho 🙂 #speaker_1
+Oh.. it won’t be the same without you #speaker_self
+Are you ok? #speaker_self
+Yes. I’m just being a bit dramatic. What a way to end school, crying in the bathroom haha #speaker_1
+Omg Chlo why didn’t you call me #speaker_self
+Don’t be ridiculous, you were having your moment lolol #speaker_1
+We’ll hang out soon k? Congrats Nad  #speaker_1
+
 -> nadia_3_3_narration
 
 === nadia_3_2e ===
-WHATSAPP: THREAD (w AZLIN)
- 
-NADIA
-So I have news 😅
- 
-AZLIN
-?
- 
-Eh today is a levels results kan!
- 
-So how, front page berita harian tak 🤭🤭🤭
- 
-NADIA
-Haha nothing that dramatic
- 
-But I did well. I’m gg to apply for med school
- 
-AZLIN
-!!!! YES LA congrats Nad 💯✨✨✨💯
- 
-NADIA
-Thank youuuuuu I really just wanted you to be the first to know 💖
- 
-AZLIN
-Gasp am i really
-NADIA
-Ok sort of, my dad got ahead of you
- 
-AZLIN
-Haha of course he did
- 
-Ahhhhh I’m so happy for you ✨ Let’s have dinner soon, my treat! 
- 
-NADIA
-Wah 🤓
- 
-AZLIN
-You pick ok! Good news like this must celebrate. 
+#knot:nadia_3_23
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Azlin
+#chat_group_image:ico_nadia_azlin.png
+#speaker_1_name:Azlin
+So I have news 😅 #speaker_self
+?  #speaker_1
+Eh today is a levels results kan!  #speaker_1
+So how, front page berita harian tak 🤭🤭🤭  #speaker_1
+Haha nothing that dramatic #speaker_self
+But I did well. I’m gg to apply for med school #speaker_self
+!!!! YES LA congrats Nad 💯✨✨✨💯  #speaker_1
+Thank youuuuuu I really just wanted you to be the first to know 💖 #speaker_self
+Gasp am i really  #speaker_1
+Ok sort of, my dad got ahead of you #speaker_self
+Haha of course he did  #speaker_1
+Ahhhhh I’m so happy for you ✨ Let’s have dinner soon, my treat!   #speaker_1
+Wah 🤓 #speaker_self
+You pick ok! Good news like this must celebrate.   #speaker_1
+
 -> nadia_3_3_narration
     
 === nadia_3_3_narration ===    
-testing
-    -> END
+// Scene 3: INT. HDB flat, living room. Nadia is arriving at a gathering of friends from school. 
+#knot:nadia_3_3_narration
+#ui:narrator
+#background:bg_nadia_bedroom.jpg
+The dust settled after a few weeks.
+I guess the jubilation, excitement - and disappointment, for some - just settled into an acceptance of whatever A Level grades we each received. 
+This period felt a bit rudderless, I guess. 
+I knew what the next steps were, but I wish I had friends around me to talk about it with.
+I miss my friends, but at the same time, I'm a bit nervous about the upcoming gathering.
+
+{ nadia_3_gavinchoice == "yes" && nadia_2_hidewithgavin == false : -> nadia_3_3a }
+{ nadia_3_gavinchoice == "yes" && nadia_2_hidewithgavin == true : -> nadia_3_3b }
+{ nadia_3_gavinchoice == "maybe" : -> nadia_3_3c }
+{ nadia_3_gavinchoice == "no" : -> nadia_3_3d }
+
+=== nadia_3_3a ===
+#knot:nadia_3_3a
+#ui:narrator
+#background:bg_nadia_chloehome.jpg
+6:30pm, outside Chloe's house. 
+Gavin and I arrived a bit late to the party.
+#ui:scene
+#background:bg_nadia_chloehome.jpg
+#speaker_left_image:cha_nadia_gavin_casual_normal.png
+#speaker_left_name:Gavin
+#speaker_right_image:cha_nadia_chloe_casual_normal.png
+#speaker_right_name:Chloe
+Why do I feel so nervous! #inner_monologue
+OK I hear quite a crowd, guess we’re running late. Just ring the doorbell.. #inner_monologue
+You ok? #speaker_left
+Yes. Absolutely. #speaker_self
+Oi! Took you two long enough. Food arrived ages ago. #speaker_right
+Scolding us already Chloe.. #speaker_left
+We brought ice cream? #speaker_self
+Ok fine. Your bribe is accepted. #speaker_right
+Told you that would appease her. Will put these away in the freezer.. #speaker_left
+Sorry we’re late Chlo. #speaker_self
+Ok nevermind, he’s gone now. #speaker_right
+#speaker_left_image:pixel.png
+What happened? You texted me saying you were leaving your house ages ago.  #speaker_right
+Well… #speaker_self
++ [A small victory... ]  Yes.. so Gavin decided he wanted to pick me up then head here. #speaker_self
+    That’s kinda sweet.. #speaker_right
+    Ya it is! But that also means he met my dad today.  #speaker_self
+    For the first time.  #speaker_self
+    Oh.. #speaker_right
+    Did I warn him that my dad can get long-winded? Yes.  #speaker_self
+    Did it go ok though? #speaker_right
+    Better than expected. #speaker_self
+    Is that a high bar? #speaker_right
+    Actually, we think he approves.  #speaker_self
+    That’s good! #speaker_right
+    
++ [I’ve never been more stressed... ] We hit a bit of a detour... #speaker_self
+    Oh no, what happened? #speaker_right
+    Gavin decided to pick me up and met my dad. #speaker_self
+    Whoa! #speaker_right
+    I was so nervous my heart nearly flew out of my chest. #speaker_self
+    Did it go ok though? #speaker_right
+    I think so? We think so.  #speaker_self
+    That’s good right! #speaker_right
+- Anyway come on, you must be hungry. Better get to the food before the guys finish everything.  #speaker_right
+Good point.  #speaker_self
+So I made sure we ordered from a halal place. It’s just bee hoon and things, but I double-checked and everything.  #speaker_right
+Wow thanks Chloe. It looks really good. #speaker_self
+The sweet and sour fish is really good. #speaker_right
+#speaker_left_image:cha_nadia_zhihao_casual_normal.png
+#speaker_left_name:Zhihao
+That one not nice!! #speaker_left
+Don’t listen to him. He finished like half the tray. #speaker_right
+Who ask you guys come so late, haha. #speaker_left
+That one not my fault ok. You go ask... #speaker_self
++ [Gavin] You go ask Gavin la. #speaker_self
+    Gavin? Eh, got no hair already, what excuse does he have! #speaker_left
+    Aha, so Gavin is a vainpot! As suspected.. #inner_monologue
++ [my boyfriend] You go ask my boyfriend la. #speaker_self
+    Ugh, don’t remind me! I’m still looking for a replacement gaming buddy now that loverboy is spending all his time with you.  #speaker_left
+    Anybody interested? #speaker_left
+    Dream on, Zhihao.  #speaker_right
+- Anyway. Nice to see you Nadia. Congrats. Top scorer and all.  #speaker_left
+Thanks Zhihao.  #speaker_self
+Who would have thought, huh? #speaker_left
+No, can we not.. #inner_monologue
+#speaker_right_image:cha_nadia_gavin_casual_normal.png
+#speaker_right_name:Gavin 
+Thought what? #speaker_right
+Nothing, Nadia just very zai. Who would have thought Gavin had such good taste. #speaker_left
+Good save, Zhihao. #inner_monologue
+You were always a bit.. different.  #speaker_left
++ In a good way? [] #speaker_self
+    Must be!  #speaker_left
+    I felt like an outsider sometimes. #speaker_self
+    Wait, really? #speaker_right
+    You?? You sailed right through school, all the way to the end. #speaker_left
+
++ What’s that supposed to mean? []  #speaker_self
+    I meant that in a good way! #speaker_left
+    I don’t see how always being an outsider is a good thing.  #speaker_self
+    I didn’t realise you felt that way. #speaker_right
+    Yah! You sailed right through school, all the way to the end. #speaker_left
+- It looked that way, huh.  #speaker_self
+#speaker_right_image:cha_nadia_chloe_casual_normal.png
+#speaker_right_name:Chloe
+I think it was a very lonely two years sometimes. #speaker_right
+Yeah? Felt longer too. #speaker_self
+#speaker_left_image:cha_nadia_zhihao_casual_normal.png
+#speaker_left_name:Zhihao
+Don’t say until like that can.. #speaker_left
+
+#speaker_left_image:cha_nadia_gavin_casual_normal.png
+#speaker_left_name:Gavin 
+Yeah we just started our own two years. #speaker_left
+
+Oops, sorry. You can take the floor. What Tekong-related complaints would you like to file Gavin? #speaker_self
+#speaker_left_image:cha_nadia_zhihao_casual_normal.png
+#speaker_left_name:Zhihao
+OK, number one! The canteen food sucks!! How come the Muslim food always look nicer. #speaker_left
+
+#speaker_left_image:cha_nadia_gavin_casual_normal.png
+#speaker_left_name:Gavin 
+I told you that years ago.#speaker_left
+
+#speaker_left_image:cha_nadia_zhihao_casual_normal.png
+#speaker_left_name:Zhihao
+Number two! People who snore, they should all form their own company.  #speaker_left
+
+#speaker_left_image:cha_nadia_gavin_casual_normal.png
+#speaker_left_name:Gavin 
+Hahaha, that one makes sense. #speaker_left
+Do you think your campmates who snore know they do? #speaker_self
+We’d tell them. Trust me. #speaker_left
+Phew, glad I’m not one. #speaker_right
+Um... #speaker_self
+What?! Since when! #speaker_right
+You know how you like to nap in those armchairs? In the school library?  #speaker_self
+We have videos.#speaker_left
+No!!!! #speaker_right
+-> chapter_3_epilogue
+
+=== nadia_3_3b ===
+#knot:nadia_3_3b
+#ui:narrator
+#background:bg_nadia_gavinhome.jpg
+6pm, outside Gavin's apartment. 
+#ui:scene
+#background:bg_nadia_gavinhome.jpg
+#speaker_left_image:cha_nadia_gavin_casual_normal.png
+#speaker_left_name:Gavin
+#speaker_right_image:cha_nadia_mrstan_normal.png
+#speaker_right_name:Mrs Tan
+Why do I feel so nervous!  #inner_monologue
+OK I don’t hear too much commotion, not so many people here yet. Just ring the doorbell.. #inner_monologue
+Oh. I thought you were the catering.  #speaker_right
++ [No, sorry.] 
+    Err, no, sorry. Just me. Nadia. #speaker_self
+    Oh, Nadia! Gavin’s said a lot about you.  #speaker_right
+    Nad! You’re early! #speaker_left
+    Come in, come in!  #speaker_left
+
++ [I’m Nadia.]
+    I’m Nadia. #speaker_self
+    Oh, Nadia! Nice to finally meet you. Gavin’s said a lot about you. #speaker_right
+    Likewise! Thanks for having us over.  #speaker_self
+    Come in! Come in!  #speaker_right
+    Nad! You’re early! #speaker_left
+
+- Mom, this is Nadia. She’s one of the school’s top scorers - #speaker_left
+So I’ve heard. #speaker_right
+Which surprised no one really. She’s just brilliant like that, and making it look so easy. The cheek of it all! #speaker_left
+Haha alright, how about we let Nadia say something for herself. #speaker_right
++ Yes, he does do that.[]  #speaker_self
+    Doesn’t he?  #speaker_right
+
++ It’s okay[.]  It’s kinda sweet.  #speaker_self
+    Well, someone’s gotta brag about Nadia. #speaker_left
+    Hey, maybe you haven’t given me the chance to! #speaker_self
+    Don’t you notice he always has more to say when someone opens their mouth?  #speaker_right
+
+- Wow already ganging up on me. Fine, I’ll get back to putting away the ice cream. #speaker_left
+(Excited) There’s ice cream? #speaker_self
+And a waffle maker. Come help me set it up later! #speaker_left
+(Smiles) So that’s why he was bothering me about dragging it out from the store room. #speaker_right
+Haha I guess.. What’s not to like about fresh waffles. #speaker_self
+So congrats on your results. I’m sure your family must be very proud.  #speaker_right
+Thanks auntie, yes they were very excited.  #speaker_self
+Gavin said you’re applying for med school.  #speaker_right
+Oh, he did! Well, yes. I’m going to try. It’s very competitive I heard.  #speaker_self
+He says you’re very focused. And stubborn.  #speaker_right
+Not that stubborn.. I hope.  #speaker_self
+No, it’s a good thing. It’s better to be stubborn with some things.  #speaker_right
+(Smiles) Ok, I’ll write that down to remind myself.  #speaker_self
+Gavin is in the kitchen. In case you want to get ahead with the ice cream before your friends arrive.  #speaker_right
+You really do have the best ideas, auntie.  #speaker_self
+Whew. I think that went ok.. Now to find Gavin in the kitchen.  #inner_monologue
+Here for ice cream? #speaker_left
+Looks like you got started without me! #speaker_self
+Yup. Got bored putting away all the tubs. Here, grab a bowl. Start sampling. #speaker_left
+Thanks. Your mom’s nice by the way.  #speaker_self
+Yeah she was looking forward to meeting you. I could tell.  #speaker_left
+Did you.. Tell her about us? #speaker_self
+Well — #speaker_left
+... it’s ok if you didn’t, I was just asking! #speaker_self
+I did. #speaker_left
+(Shy) Oh! Ok. That’s cool. #speaker_self
+Have you told your folks about me? #speaker_left
++ Wow what flavour is this ice cream.[] #speaker_self
++ Should we change the music? []  #speaker_self
+    It’s a bit sombre for a party. #speaker_self
+- Nad! #speaker_left
+Ok ok, I will! But then you’re going to have to meet my dad. He’s old school like that.  #speaker_self
+I can be old school.  #speaker_left
+Next weekend? #speaker_self
+It’s a date! See? Old school. #speaker_left
+Alright then. And Gavin? #speaker_self
+Yes Nadia? #speaker_left
+Are waffles and ice cream all we’re having for dinner? #speaker_self
+Course not! We’re working backwards huh. This is just dessert.  #speaker_left
+I ordered food from that cafe we went to - #speaker_left
+... the one with the aglio olio!  #speaker_self
+They had pizza on the menu too, so I ordered some of that. Thought it’d be easier to just order from a halal restaurant for the whole party.  #speaker_left
+Thanks for putting this together. #speaker_self
+Wasn’t too hard. Most things are easy if you want them to be.  #speaker_left
+Yeah? #speaker_self
+Absolutely.  #speaker_left
+-> chapter_3_epilogue
+
+=== nadia_3_3c ===
+#knot:nadia_3_3c
+#ui:narrator
+#background:bg_nadia_chloehome.jpg
+6pm, outside Chloe's apartment. 
+#ui:scene
+#background:bg_nadia_chloehome.jpg
+#speaker_left_image:cha_nadia_gavin_casual_normal.png
+#speaker_left_name:Gavin
+#speaker_right_image:cha_nadia_chloe_casual_normal.png
+#speaker_right_name:Chloe
+Why do I feel so nervous! #inner_monologue
+OK I hear quite a crowd, guess I’m running late. Just ring the doorbell.. #inner_monologue
+Nad, took you long enough! Food just arrived. #speaker_right
+Oh wow that's a lot! I know the guys are in army now, but you don’t have to FEED one.. #speaker_self
+Well the rest of your student council gang are coming round later.  #speaker_right
+Some of the hockey girls too. I  hope we didn’t order too much.  #speaker_right
+.. it’s NOT going to be a problem.  #speaker_left
++ Haha hello Gavin. [] #speaker_self
+    Anything that is not from a Tekong kitchen is gourmet to me.  #speaker_left
+
++ Gavin! I thought you said you were going to be late? [] #speaker_self
+    Convinced Mom to give me a lift. Speedy speedy.  #speaker_left
+- Haha ok, how much torture is NS? #speaker_self
+The very most worst! #speaker_left
+Sounds like Tekong has brought out an even more dramatic side of you.. #speaker_self
+It is so boring. I do what I need to keep myself sane.  #speaker_left
+Come on, hurry up sit down. Zhihao wants to start a board game. #speaker_left
+Ok ok, sure. Chloe you joining? #speaker_self
+Gimme a min.. #speaker_right
+
+#speaker_left_image:cha_nadia_zhihao_casual_normal.png
+#speaker_left_name:Zhihao
+Wah Nadia, new look is it.  #speaker_left
++ Uh no, not really. [] #speaker_self
+    Oh ya, I think I saw before, outside school.  #speaker_left
++ ... [] #speaker_self
+    #speaker_left_image:cha_nadia_gavin_casual_normal.png
+    #speaker_left_name:Gavin
+    Eh nonsense la Zhihao! In school she wear already to collect results. #speaker_left
+    #speaker_left_image:cha_nadia_zhihao_casual_normal.png
+    #speaker_left_name:Zhihao
+    Ohhhh yeah...
+
+- I think you look nice! You always look so comfy. #speaker_right
+#speaker_left_image:cha_nadia_zhihao_casual_normal.png
+#speaker_left_name:Zhihao
+Ya I was only asking.. But a bit warm right?
+#speaker_left_image:cha_nadia_gavin_casual_normal.png
+#speaker_left_name:Gavin
+Oi! She’s not here for an interview leh. #speaker_left
+I’m going to get something to eat. Does anyone want anything? #speaker_self
+Oh Nad! My mum did all the ordering, but I made sure the pizza came from a halal place.  #speaker_right
+Got it. Pizza is halal. #speaker_self
+That’s ok right? #speaker_right
++ Got it. Pizza is halal. [] #speaker_self
+    Food enough for an army. Pizza for me. #inner_monologue
++ Aww, that chicken looked good.[] But oh well.  #speaker_self
+- Hurry back Nad! Zhihao is trying to look at your cards! #speaker_left
+OI!! #speaker_self
+
+
+-> chapter_3_epilogue
+
+
+=== nadia_3_3d ===
+#knot:nadia_3_3d
+#ui:narrator
+#background:bg_nadia_gavinhome.jpg
+6pm, outside Gavin's house. 
+#ui:scene
+#background:bg_nadia_gavinhome.jpg
+#speaker_left_image:cha_nadia_gavin_casual_normal.png
+#speaker_left_name:Gavin
+#speaker_right_image:cha_nadia_chloe_casual_normal.png
+#speaker_right_name:Chloe
+Why do I feel so nervous!  #inner_monologue
+OK I hear quite a crowd, guess I’m running late.  #inner_monologue
+
+#ui:notification
+#background:ui_nadia_message.jpg
+Gavin: Hey!  # message
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Gavin
+#chat_group_image:ico_nadia_gavin.png
+#speaker_1_name:Gavin
+18.02 #timestamp
+Are you coming by today? #speaker_1
+Yup. Just outside your door actually, haha. #speaker_self
+Oh, ok. Chloe’s there already. I went out to grab some ice. #speaker_1
+👍 #speaker_self
+#ui:scene
+#background:bg_nadia_gavinhome.jpg
+#speaker_left_image:cha_nadia_mrstan_normal.png
+#speaker_left_name:Mrs Tan
+#speaker_right_image:cha_nadia_chloe_casual_normal.png
+#speaker_right_name:Chloe
+Just ring the doorbell.. #inner_monologue
+Oh. Hello dear. You must be - #speaker_left
+Nadia.   #speaker_self
++ [Thanks for having us over.]
+    Nadia. Hi auntie - thanks for having us over.  #speaker_self
+    Was all Gavin’s idea. I’m just here opening doors for teenagers.  #speaker_left
+    I’m joking. It’s nice to meet you. Nadia.. Are you - #speaker_left
+
++ [Gavin’s said a lot about you.] 
+    Nice to finally meet you. Gavin’s said a lot about you. #speaker_self
+    Likewise, Nadia.  #speaker_left
+    I’m glad he’s decided to be more serious with his studies. I guess he just needed some competition.  #speaker_left
+
+- Are you -  #speaker_left
+... one of the school’s sleeper hits? Hi Nad, what took you so long!! #speaker_right
+Are you the one applying for med school? #speaker_left
+
+CHOICE: 
+A. Respond to Mrs. Tan /  
+B. Respond to Chloe
+A. Respond to Mrs. Tan
+
+
+NADIA
+Yep, that’s me. Gavin told you? #speaker_self
+
+MRS. TAN
+He said you were deciding between two universities.  #speaker_left
+
+NADIA
+I have my preference, but it’s probably better to try for both.  #speaker_self
+
+
+B. Respond to Chloe
+
+NADIA
+Wow, um hi Chloe. I’m a what? #speaker_self
+
+CHLOE
+Haha nevermind. Yes, Nadia is applying for med school. Have you decided between the universities yet? #speaker_right
+
+NADIA
+I think so, but it’s probably better to try for both. #speaker_self
+
+
+
+
+
+MRS. TAN
+That’s true. Gavin was asking about our church friends currently in med school.  #speaker_left
+
+Said a friend of his was going along the same path. Didn’t realise it was you.   #speaker_left
+
+NADIA
+Ah, yes. Gavin was trying to help. I don’t know anyone who’s in med school.  #speaker_self
+
+CHLOE
+Did you meet any of them in the end? #speaker_right
+
+NADIA
+No.. this was sometime ago. It’s ok, really.  #speaker_self
+
+MRS. TAN
+Would you like to? It might be helpful. Always good to know what’s coming ahead.  #speaker_left
+
+NADIA
+Really? Only if it’s no trouble.  #speaker_self
+
+MRS. TAN
+Of course not. It’s going to be a tough draw. Any small leg up is helpful. #speaker_left
+
+NADIA
+Thank you so much! It’s so nice to meet you.   #speaker_self
+
+MRS. TAN
+Come look for me later, I’ll pass you their numbers. #speaker_left
+
+CHLOE
+Nice one, Nad!  #speaker_right
+
+NADIA 
+Yeah. That was a surprise.  #speaker_self
+
+Anyway, I brought food! It’s potluck, right? #speaker_self
+
+CHLOE
+Yup, you can put yours with the rest on the dining table. What did you bring! #speaker_right
+
+NADIA
+Nothing fancy, just some bee hoon and snacks my mom made.  #speaker_self
+
+CHLOE
+Oh nice! There’s bee hoon already, but I think I saw it had luncheon meat.. #speaker_right
+
+NADIA (inner mono)
+Yep. Figured as much.
+
+CHLOE
+Lucky you brought yours, huh. #speaker_right
+
+CHOICE: 
+A. Yeah, it’s no biggie! /  
+B. I usually have to.
+
+
+A. Yeah, it’s no biggie!
+
+NADIA
+Yeah, it’s no biggie! #speaker_self
+
+CHLOE
+I’m going to help Zhihao with something, he was trying to set up a video game. Come find me when you’re done! #speaker_right
+
+
+B. I usually have to.
+
+NADIA
+Yeah, I usually have to. Wouldn’t wanna be drooling over everyone else’s food. Heh. #speaker_self
+ 
+CHLOE
+...Right. #speaker_right
+
+NADIA
+Anyway, I think I heard Zhihao call for you.  #speaker_self
+
+CHLOE
+Oops, forgot I was in the middle of helping him set up a video game.  #speaker_right
+
+I’ll come find you when I’m done? #speaker_right
+
+
+NADIA
+Yep, see you in a bit Chlo. #speaker_self
+
+WHATSAPP: NOTIF
+AZLIN
+how is it
+
+WHATSAPP: THREAD
+NADIA
+Ok la.. Bit awkward. But good to see Chloe. Was supposed to catch up with her.  #speaker_self
+
+AZLIN
+🤞 
+
+NADIA
+You want to hang out later? I won’t be long here, I think.  #speaker_self
+
+AZLIN
+can, set. 
+
+
+-> chapter_3_epilogue
+
+
+===  chapter_3_epilogue ===
+blah
+
 
 === chapter_3_ending_1 === // for debug only
-VAR chapter_3_ending = 1 
-VAR story_finished = true
 #ui:story_end
 #reflection_id:4
 the end = 1    
+VAR chapter_3_ending = 1 
+VAR story_finished = true
+.
     -> END
  
 === chapter_3_ending_2 === // for debug only
-~ chapter_3_ending = 2
-~ story_finished = true
 #ui:story_end
 #reflection_id:4
 the end = 2
+~ chapter_3_ending = 2
+~ story_finished = true
+.
       -> END
 
 === story_end_browser ===
