@@ -162,7 +162,6 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
   }
 
   async function fetchCount() {
-    console.log(chosenReflectionId);
     setCount(await getDbReflectionResponsesCount(chosenReflectionId, 3));
   }
 
@@ -177,36 +176,6 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
   useEffect(() => fetchCount(), [chosenReflectionId]);
   useEffect(() => fetchMoreResponsesIfNotOverflow(), [hasMore, lastDocSnapshot, chosenReflectionId]);
 
-  const LoadingBox = () => (
-    <Box className={classes.background}>
-      <PacmanLoader color="#e5e5e5" size={25} css={{ align: "center", top: "200px", left: "100px" }} />
-    </Box>
-  );
-
-  const ReflectionsBox = () => (
-    <Box className={classes.background}>
-      <Container className={classes.container} id={'reflectionsContainerId'}>
-        <Typography className={classes.headerText}>Reflections from Others</Typography>
-        <Typography variant="body2" color="error">{count || 0} players have completed this chapter</Typography>
-        <Box>
-          <InfiniteScroll
-            dataLength={responses.length}
-            next={fetchMoreResponses}
-            hasMore={hasMore}
-            loader={<PacmanLoader color="#e5e5e5" size={10} css={{display:'flex', left:'-15px', margin:'auto', height:'30px'}} />}
-            scrollableTarget={'reflectionsContainerId'}
-          >
-            {responses.map(response => (
-              response.answer.length > 5 && <ChapterResponse key={response.id} response={response} />
-            ))}
-          </InfiniteScroll>
-        </Box>
-      </Container>
-      <Button className={classes.btn} onClick={toggleFilterDrawer(true)}><TuneIcon /></Button>
-      <Button className={classes.btn} onClick={next}>Continue</Button>
-    </Box>
-  );
-
   return (
     <React.Fragment key='bottom'>
       <SwipeableDrawer
@@ -217,10 +186,37 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
       >
         <FilterDrawer />
       </SwipeableDrawer>
-      { responses == null ? <LoadingBox/> : <ReflectionsBox/> }
+      { responses === null
+        ?
+        <Box className={classes.background}>
+          <PacmanLoader color="#e5e5e5" size={25} css={{ align: "center", top: "200px", left: "100px" }} />
+        </Box>
+        :
+        <Box className={classes.background}>
+          <Container className={classes.container} id={'reflectionsContainerId'}>
+            <Typography className={classes.headerText}>Reflections from Others</Typography>
+            <Typography variant="body2" color="error">{count || 0} players have completed this chapter</Typography>
+            <Box>
+              <InfiniteScroll
+                dataLength={responses.length}
+                next={fetchMoreResponses}
+                hasMore={hasMore}
+                loader={<PacmanLoader color="#e5e5e5" size={10} css={{ display: 'flex', left: '-15px', margin: 'auto', height: '30px' }} />}
+                scrollableTarget={'reflectionsContainerId'}
+              >
+                {responses.map(response => (
+                  response.answer.length > 5 && <ChapterResponse key={response.id} response={response} />
+                ))}
+              </InfiniteScroll>
+            </Box>
+          </Container>
+          <Button className={classes.btn} onClick={toggleFilterDrawer(true)}><TuneIcon /></Button>
+          <Button className={classes.btn} onClick={next}>Continue</Button>
+        </Box>
+      }
     </React.Fragment>
   );
-    
+
 }
 
 export default ReflectionResponsesStep;
