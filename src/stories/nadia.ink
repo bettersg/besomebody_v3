@@ -1978,7 +1978,7 @@ VAR nadia_3_relationship = 0
 #knot:nadia_3_1_narration
 #ui:narrator
 #background:bg_nadia_bedroom.jpg
-    Relationship: {nadia_3_relationship} // remove 
+    // Relationship: {nadia_3_relationship} // remove 
 I'm glad today is not a school day.
 I think I need to lay low for a bit, and maybe see Chloe a bit less.
 I want to just stay home and chill - but I have a nagging feeling like I'm supposed to have plans ... that I can't quite remember.
@@ -1986,9 +1986,10 @@ Oh crap - I think I was supposed to reply to Gavin on something!
 
 // FOR DEBUG ONLY
 
-+ [chapter 3 ending 1] -> chapter_3_ending_1
-+ [chapter 3 ending 2] -> chapter_3_ending_2
-+ [continue story] -> nadia_3_1
+// + [chapter 3 ending 1] -> chapter_3_ending_1
+// + [chapter 3 ending 2] -> chapter_3_ending_2
+// + [continue story] 
+-> nadia_3_1
 
 
 === nadia_3_1 ===
@@ -2199,7 +2200,7 @@ Sure? Kinda disappeared after school, thought something happened. You can tell m
 + I’m not pissed at you, but argh! [] #speaker_self 
     ~ nadia_3_relationship +=1
     Relationship: {nadia_3_relationship} // remove 
-- Zhihao's all right #speaker_1 
+- Zhihao's all right... deep down #speaker_1 
 { nadia_3_relationship < 3 : 
     -> nadia_3_1maybe
 }
@@ -2318,7 +2319,8 @@ That’s my plan 🧡 #speaker_1
 #ui:narrator
 #background:bg_nadia_canteen.jpg
 12:30pm, School Canteen.
-The months flew by in a blur as we rushed through the A Levels. Late nights, notes covered with scribblings and highlighted lines, practice papers, and lots of sugar and caffeine to keep us going.
+The months flew by in a blur as we rushed through the A Levels. 
+Late nights, notes covered with scribblings and highlighted lines, practice papers, and lots of sugar and caffeine to keep us going.
 All of that ... to lead to today. 
 It feels odd being back in the school canteen again. In just a few hours, I'll pick up my results.
 A simple sheet of paper that will determine whether I can enter med school or not. I'm excited, nervous, terrified, and hopeful all at once. 
@@ -2411,6 +2413,7 @@ Abah: How was it? # message
 #chat_group_image:ico_nadia_family.png
 #speaker_1_name:Abah
 #timestamp:14:40
+Abah: How was it? #speaker_1
 I got my results #speaker_self
 ?.. #speaker_1
 ...... straight As #speaker_self
@@ -2446,6 +2449,7 @@ Kelly: omggggggG @nadia!!!! We just heard!! # message
 #speaker_4_name:Vikas 
 #speaker_5_name:Sam
 #timestamp:14:45
+omggggggG @nadia!!!! We just heard!! #speaker_2
 Ya siaaaaaa no wonder suddenly disappear like that hahaha #speaker_3
 Haha rest of us queueing up in hall to collect result slip like goondu #speaker_2
 @nadia congrats yo. How’s everyone? I still otw to school sia, kena book out so late  #speaker_5
@@ -2492,7 +2496,9 @@ Thanks #speaker_self
 #ui:scene
 #background:bg_nadia_schoolhall.jpg
 I guess.. That’s that. #inner_monologue
--> nadia_3_2c
+I should...#inner_monologue
++ [Check up on Chloe] -> nadia_3_2d
++ [Tell Azlin your results] -> nadia_3_2e
     
     
 === nadia_3_2b_maybe ===    
@@ -2510,10 +2516,12 @@ Nadddd tell me you’re joining us! Am dying to hear what you’re gg to apply f
 Ummm not really sure yet 😅 will be nice meeting up! #speaker_self
 -> nadia_3_2b_maybe_1
 
-= nadia_3_2b_maybe_1    
+=== nadia_3_2b_maybe_1  ===
+#knot:nadia_3_2b_maybe_1
 #ui:notification
 #background:ui_nadia_message.jpg
 Gavin: Pls, no need pretend :) Congrats la!! # message
+#knot:nadia_3_2b_yes_1b
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Gavin
@@ -2528,7 +2536,8 @@ How did she do? #speaker_1
 Weird #speaker_1
 -> nadia_3_2b_maybe_2
 
-= nadia_3_2b_maybe_2
+=== nadia_3_2b_maybe_2 === 
+#knot:nadia_3_2b_maybe_2
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Student Council Chat
@@ -2544,21 +2553,25 @@ Got it, thanks! #speaker_self
 #ui:scene
 #background:bg_nadia_schoolhall.jpg
 Guess I’ll join the rest later for ice-cream.. Doesn’t feel right leaving school without Chloe.   #inner_monologue
--> nadia_3_2c
+I should...#inner_monologue
++ [Check up on Chloe] -> nadia_3_2d
++ [Tell Azlin your results] -> nadia_3_2e
 
 
 === nadia_3_2b_yes ===    
 Nadddd tell me you’re joining us! Am dying to hear what you’re gg to apply for #speaker_2
-😬 I’m probablyprobab gonna try for med school #speaker_self
+😬 I’m probably gonna try for med school #speaker_self
 Of course!! I can totally see it #speaker_2
 Waaahhh. #speaker_4
 So we get free treatment from you for life right Dr Nadia? Hehe #speaker_5
 -> nadia_3_2b_yes_1
 
-= nadia_3_2b_yes_1    
+=== nadia_3_2b_yes_1  ===
+#knot:nadia_3_2b_yes_1
 #ui:notification
 #background:ui_nadia_message.jpg
 Gavin: Das right!! Proud of you babe 🌹🌹🌹 # message
+#knot:nadia_3_2b_yes_1b
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Gavin
@@ -2566,7 +2579,7 @@ Gavin: Das right!! Proud of you babe 🌹🌹🌹 # message
 #speaker_1_name:Gavin
 Das right!! Proud of you babe 🌹🌹🌹  #speaker_1
 😳!! omg wru #speaker_self
-Still on my wayyyyy, are you waiting for me haha  #speaker_1
+Still on my wayyyyy - stupid boat got delayed... are you waiting for me haha  #speaker_1
 I can! Still looking for Chloe actually.  #speaker_self
 Eh? She told me she went home  #speaker_1
 Wait how do you know this, I’ve been waiting for her to reply meeee #speaker_self
@@ -2578,14 +2591,17 @@ She did ok, I think. You worry too much! I’ll see you in awhile k?   #speaker_
 #ui:scene
 #background:bg_nadia_schoolhall.jpg
 I hope he’s right. Just feels weird, thought she and I would be doing this together.  #inner_monologue
--> nadia_3_2c
+I should...#inner_monologue
++ [Check up on Chloe] -> nadia_3_2d
++ [Tell Azlin your results] -> nadia_3_2e
 
 === nadia_3_2c ===
 #knot:nadia_3_2c
 #ui:scene
 #background:bg_nadia_schoolhall.jpg
-+ [Check up on Chloe] -> nadia_3_2d
-+ [Tell Azlin your results] -> nadia_3_2e
+// + [Check up on Chloe] -> nadia_3_2d
+// + [Tell Azlin your results] -> nadia_3_2e
+-> END
 
 === nadia_3_2d ===
 #knot:nadia_3_2d
@@ -2776,7 +2792,7 @@ What?! Since when! #speaker_right
 You know how you like to nap in those armchairs? In the school library?  #speaker_self
 We have videos.#speaker_left
 No!!!! #speaker_right
--> chapter_3_epilogue
+-> nadia_3_4_narration
 
 === nadia_3_3b ===
 #knot:nadia_3_3b
@@ -2863,7 +2879,7 @@ Thanks for putting this together. #speaker_self
 Wasn’t too hard. Most things are easy if you want them to be.  #speaker_left
 Yeah? #speaker_self
 Absolutely.  #speaker_left
--> chapter_3_epilogue
+-> nadia_3_4_narration
 
 === nadia_3_3c ===
 #knot:nadia_3_3c
@@ -2927,7 +2943,7 @@ That’s ok right? #speaker_right
 OI!! #speaker_self
 
 
--> chapter_3_epilogue
+-> nadia_3_4_narration
 
 
 === nadia_3_3d ===
@@ -2979,156 +2995,217 @@ Nadia.   #speaker_self
 - Are you -  #speaker_left
 ... one of the school’s sleeper hits? Hi Nad, what took you so long!! #speaker_right
 Are you the one applying for med school? #speaker_left
++ [Respond to Mrs. Tan]
+    Yep, that’s me. Gavin told you? #speaker_self
+    He said you were deciding between two universities.  #speaker_left
+    I have my preference, but it’s probably better to try for both.  #speaker_self
 
-CHOICE: 
-A. Respond to Mrs. Tan /  
-B. Respond to Chloe
-A. Respond to Mrs. Tan
-
-
-NADIA
-Yep, that’s me. Gavin told you? #speaker_self
-
-MRS. TAN
-He said you were deciding between two universities.  #speaker_left
-
-NADIA
-I have my preference, but it’s probably better to try for both.  #speaker_self
-
-
-B. Respond to Chloe
-
-NADIA
-Wow, um hi Chloe. I’m a what? #speaker_self
-
-CHLOE
-Haha nevermind. Yes, Nadia is applying for med school. Have you decided between the universities yet? #speaker_right
-
-NADIA
-I think so, but it’s probably better to try for both. #speaker_self
-
-
-
-
-
-MRS. TAN
-That’s true. Gavin was asking about our church friends currently in med school.  #speaker_left
-
++ [Respond to Chloe]
+    Wow, um hi Chloe. I’m a what? #speaker_self
+    Haha nevermind. Yes, Nadia is applying for med school. Have you decided between the universities yet? #speaker_right
+    I think so, but it’s probably better to try for both. #speaker_self
+- That’s true. Gavin was asking about our church friends currently in med school.  #speaker_left
 Said a friend of his was going along the same path. Didn’t realise it was you.   #speaker_left
-
-NADIA
 Ah, yes. Gavin was trying to help. I don’t know anyone who’s in med school.  #speaker_self
-
-CHLOE
 Did you meet any of them in the end? #speaker_right
-
-NADIA
 No.. this was sometime ago. It’s ok, really.  #speaker_self
-
-MRS. TAN
 Would you like to? It might be helpful. Always good to know what’s coming ahead.  #speaker_left
-
-NADIA
 Really? Only if it’s no trouble.  #speaker_self
-
-MRS. TAN
 Of course not. It’s going to be a tough draw. Any small leg up is helpful. #speaker_left
-
-NADIA
 Thank you so much! It’s so nice to meet you.   #speaker_self
-
-MRS. TAN
 Come look for me later, I’ll pass you their numbers. #speaker_left
-
-CHLOE
 Nice one, Nad!  #speaker_right
-
-NADIA 
 Yeah. That was a surprise.  #speaker_self
-
 Anyway, I brought food! It’s potluck, right? #speaker_self
-
-CHLOE
 Yup, you can put yours with the rest on the dining table. What did you bring! #speaker_right
-
-NADIA
 Nothing fancy, just some bee hoon and snacks my mom made.  #speaker_self
-
-CHLOE
 Oh nice! There’s bee hoon already, but I think I saw it had luncheon meat.. #speaker_right
-
-NADIA (inner mono)
-Yep. Figured as much.
-
-CHLOE
+Yep. Figured as much. #inner_monologue
 Lucky you brought yours, huh. #speaker_right
-
-CHOICE: 
-A. Yeah, it’s no biggie! /  
-B. I usually have to.
-
-
-A. Yeah, it’s no biggie!
-
-NADIA
-Yeah, it’s no biggie! #speaker_self
-
-CHLOE
-I’m going to help Zhihao with something, he was trying to set up a video game. Come find me when you’re done! #speaker_right
-
-
-B. I usually have to.
-
-NADIA
-Yeah, I usually have to. Wouldn’t wanna be drooling over everyone else’s food. Heh. #speaker_self
- 
-CHLOE
-...Right. #speaker_right
-
-NADIA
-Anyway, I think I heard Zhihao call for you.  #speaker_self
-
-CHLOE
-Oops, forgot I was in the middle of helping him set up a video game.  #speaker_right
-
-I’ll come find you when I’m done? #speaker_right
-
-
-NADIA
++ Yeah, it’s no biggie! [] #speaker_self
+    I’m going to help Zhihao with something, he was trying to set up a video game. Come find me when you’re done! #speaker_right
++ Yeah, I usually have to. [] Wouldn’t wanna be drooling over everyone else’s food. Heh. #speaker_self
+    ...Right. #speaker_right
+    Anyway, I think I heard Zhihao call for you.  #speaker_self
+    Oops, forgot I was in the middle of helping him set up a video game.  #speaker_right
+- I’ll come find you when I’m done? #speaker_right
 Yep, see you in a bit Chlo. #speaker_self
 
-WHATSAPP: NOTIF
-AZLIN
-how is it
+#ui:notification
+#background:ui_nadia_message.jpg
+Azlin: how is it  # message
+-> nadia_3_3d_whatsapp
 
-WHATSAPP: THREAD
-NADIA
-Ok la.. Bit awkward. But good to see Chloe. Was supposed to catch up with her.  #speaker_self
-
-AZLIN
-🤞 
-
-NADIA
+= nadia_3_3d_whatsapp
+#knot:nadia_3_3d_whatsapp
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Azlin
+#chat_group_image:ico_nadia_azlin.png
+#speaker_1_name:Azlin
+how is it #speaker_1
++ Okkkk la.[] #speaker_self
++ Bit awkward. [] #speaker_self
+- But good to see Chloe. Was supposed to catch up with her.  #speaker_self
+🤞   #speaker_1
 You want to hang out later? I won’t be long here, I think.  #speaker_self
-
-AZLIN
-can, set. 
+can, set.  #speaker_1
 
 
--> chapter_3_epilogue
+-> nadia_3_4_narration
 
 
-===  chapter_3_epilogue ===
-blah
+===  nadia_3_4_narration ===
+#knot:nadia_3_3d
+#ui:narrator
+#background:bg_nadia_fathercaratday.jpg
+Abah is driving me to university for my first day.
+He insisted on getting here a "bit" early... so we're here at 8am!
+He's so excited. I'm so nervous. 
+Also, this campus is a maze. Where on earth is my building?
+-> nadia_3_4
+
+===  nadia_3_4 ===
+#knot:nadia_3_4
+#ui:scene
+#background:bg_nadia_fathercaratday.jpg
+#speaker_right_image:cha_nadia_rahman_normal.png
+#speaker_right_name:Abah
+Abah, I think you turn left here. #speaker_self
+Why are the signs so small.. #speaker_right
+I’ll keep a look out for the building. #speaker_self
+It’s not even 8 yet. You said 8.30, kan? Plenty of time.. #speaker_right
+{ nadia_3_gavinchoice == "yes" : -> nadia_3_4a }
+{ nadia_3_gavinchoice == "maybe" : -> nadia_3_4b }
+{ nadia_3_gavinchoice == "no" : -> nadia_3_4c }
+
+    = nadia_3_4a 
+    Yeah. I might get lost though. Inside. #speaker_self
+    You won’t. How are you feeling? #speaker_right
+    Um, ok I guess! A bit nervous. I’ve been googling, managed to find my course overview for the next 5 years. #speaker_self
+    Already? #speaker_right
+    Ya! At least I waited until I got in to med school, before digging it up. #speaker_self
+    Well I know you always want to step on the pedal. Five years is long ok. #speaker_right
+    More than that. With residencies.  #speaker_self
+    Exactly. Remember to pace yourself. It’s a marathon. #speaker_right
+    Not a sprint, I know. I’ll be fine, the people around me always remind me. It means a lot! Like Azlin.  #speaker_self
+    And that boy? #speaker_right
+    Yes, and Gavin.  #speaker_self
+    Hm. Next time he book out, tell him to go get you the curry puff at that other Pasir Ris hawker centre.  #speaker_right
+    That one is the better one.  #speaker_right
+    For me, or for you? #speaker_self
+    Well you know.. If he happens to buy extra, it’s not good to push away good fortune. #speaker_right
+    Sure, I’ll let him know. #speaker_self
+    Ok, here we are. What time do you finish today? Want me to pick you up? #speaker_right
+    Thanks abah. #speaker_self
+    + Will find my way back later. I’ll see you at home? [] #speaker_self
+    + Gavin will send me back later. I’ll see you at home? [] #speaker_self
+    - Ok, be good! #speaker_right
+    Ok abah, I think this is the building. Thanks for the lift! #speaker_self
+    #ui:notification
+    #background:ui_nadia_message.jpg
+    Gavin: Good luck babe!! You got this 💪❤️‍🔥 # message
+    #ui:narrator
+    #background:bg_nadia_intro.jpg
+    Ok, take a deep breath. 
+    I'm going to be ok. 
+    VAR chapter_3_ending = 1 
+    -> chapter_3_ending_1
+    
+    = nadia_3_4b
+    Yeah. I might get lost though. Inside. #speaker_self
+    You won’t. How are you feeling? #speaker_right
+    Kinda weird to not be in uniform. I feel ok, I guess.  #speaker_self
+    Just ok? You’re going into your first day of becoming a doctor! #speaker_right
+    Almost feels weird to be wearing my headscarf in a school situation. #inner_monologue
+    Abah is very proud of you.  #speaker_right
+    I know, thanks abah. This campus is huge.. #speaker_self
+    Just look out for the sign, don’t want to miss the turn. #speaker_right
+    Sort of met some of my schoolmates the other week. #speaker_self
+    Ya? Banyak Cina? (lots of Chinese) #speaker_right
+    Kinda, but there were some Malay and Indian students too. I wonder which JCs they came from.. #speaker_self
+    That’s good, a nice mix.  #speaker_right
+    Yeah. Time to make friends.  #speaker_self
+    Nobody from your school? #speaker_right
+    Maybe one or two familiar faces? Nobody I really know. #speaker_self
+    Also, I found out also that for the exams, its just pass or fail.  #speaker_self
+    That’s crazy! I wonder what that’s going to feel like. Apparently so we won’t chase grades.  #speaker_self
+    Maybe now that they’ve decided you all are good enough, they just want you to chill. Relax. #speaker_right
+    Hahaha, sure. Relax in med school. #speaker_self
+    It’s a good joke.  #speaker_right
+    It is, not bad, not bad. #speaker_self
+    Ok, here we are. What time do you finish today? Want me to pick you up? #speaker_right
+    Thanks abah. Will find my way back later. I’ll see you at home? #speaker_self
+    Oh, ok. Are you meeting someone later? #speaker_right
+    + [Azlin]  Ya, I’m meeting Azlin.  #speaker_self
+         Ok, be good! #speaker_right
+         Ok abah, I think this is the building. Thanks for the lift! #speaker_self
+        #ui:notification
+        #background:ui_nadia_message.jpg
+        Azlin: text me later when you’re done! easy-peasy 💪💅✨ #message
+    + [Gavin]  Ya, I’m meeting Gavin. #speaker_self
+        Gavin, hm? #speaker_right
+        Ok, be good! #speaker_right
+        Ok abah, I think this is the building. Thanks for the lift! #speaker_self
+        #ui:notification
+        #background:ui_nadia_message.jpg
+        Gavin: Good luck Nad! You got this 😉 #message
+    #ui:narrator
+    #background:bg_nadia_intro.jpg
+    - Ok, take a deep breath. 
+    I'm going to be ok. 
+    ~ chapter_3_ending = 2
+
+    -> chapter_3_ending_2
+    
+    
+    = nadia_3_4c 
+    I know. It’s just.. #speaker_self
+    Are you nervous? #speaker_right
+    No! No, I’m really excited. It’s med school. I can’t believe it.  #speaker_self
+    It’s going to be tough - #speaker_right
+    I can do it.  #speaker_self
+    Insyaallah. #speaker_right
+    Insyaallah. I really learned a lot in the last 2 years. #speaker_self
+    Ya? #speaker_right
+    Yeah. This time, I’m going to make sure I speak my mind. Be terus terang (frank), you know? #speaker_self
+    Maybe.  #speaker_right
+    Seriously, abah. Sometimes when I think about it kan, maybe the things people have said.. I let it slide.  #speaker_self
+    If I’m going to become a good doctor, I’m going to be more honest with myself. #speaker_self
+    And with other people. Not going to take any bullshit. #speaker_self
+    Eh, language.  #speaker_right
+    Sorry. Ok, I see it! You can turn right here, abah.  #speaker_self
+    Be respectful. Keep your focus. Must always remember what you represent. Have you met your schoolmates yet? #speaker_right
+    Sort of.  #speaker_self
+    Semua Cina? (All Chinese?) #speaker_right
+    No, I saw some Malay and Indian students. Not a lot -  #speaker_self
+    ... but still good. Anybody from your school? #speaker_right
+    Haha, it’s not like I memorised everyone in JC.. #speaker_self
+    Ok, here we are. What time do you finish today? Want me to pick you up? #speaker_right
+    Thanks abah. Will find my way back later. I’ll see you at home? #speaker_self
+    Ok, be good! #speaker_right
+    Ok abah, I think this is the building. Thanks for the lift! #speaker_self
+    #ui:notification
+    #background:ui_nadia_message.jpg
+    Azlin: good luck on your first day! blow them away naddd 🔥x💯 #message
+    #ui:narrator
+    #background:bg_nadia_intro.jpg
+    Ok, take a deep breath. 
+    I’m going to be ok.
+    ~ chapter_3_ending = 3
+
+    -> chapter_3_ending_3
+    
 
 
 === chapter_3_ending_1 === // for debug only
 #ui:story_end
 #reflection_id:4
 the end = 1    
-VAR chapter_3_ending = 1 
+~ chapter_3_ending = 1 
 VAR story_finished = true
 .
+
     -> END
  
 === chapter_3_ending_2 === // for debug only
@@ -3136,6 +3213,15 @@ VAR story_finished = true
 #reflection_id:4
 the end = 2
 ~ chapter_3_ending = 2
+~ story_finished = true
+.
+      -> END
+
+=== chapter_3_ending_3 === // for debug only
+#ui:story_end
+#reflection_id:4
+the end = 3
+~ chapter_3_ending = 3
 ~ story_finished = true
 .
       -> END
