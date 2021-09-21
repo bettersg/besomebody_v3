@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Button, 
+import {
+  Box,
+  Button,
   Typography,
-  Container,} from '@material-ui/core'
+  Container,
+  SwipeableDrawer,
+} from '@material-ui/core'
+import { ToggleButton, ToggleButtonGroup } from '@material-ui/lab'
 import { getDbReflectionResponsesPaginated } from '../../../models/reflectionResponseModel';
-import { getDbReflectionResponsesCount } from '../../../models/counterModel';
+import { getDbReflectionResponsesCounts } from '../../../models/counterModel';
 import ChapterResponse from '../../ReflectionsPage/chapter/ChapterResponse';
 import makeStyles from '@material-ui/core/styles/makeStyles'
-import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import TuneIcon from '@material-ui/icons/Tune';
 import PacmanLoader from 'react-spinners/PacmanLoader'
 import InfiniteScroll from 'react-infinite-scroll-component';
@@ -78,6 +82,13 @@ const useStyles = makeStyles((theme) => ({
       
     },
   },
+  filterChaptBtn: {
+    textTransform: 'none',
+  },
+  filterActionBtn: {
+    fontWeight: 'bold',
+    textTransform: 'none',
+  },
   topText: {
     color: '#A7A9EB',
     fontSize: '0.9rem',
@@ -113,29 +124,52 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
   const [responses, setResponses] = useState(null);
   const [hasMore, setHasMore] = useState(true);
   const [lastDocSnapshot, setLastDocSnapshot] = useState(null);
-  const [chosenReflectionId, setChosenReflectionId] = useState(reflectionId);
+  const [reflectionIds, setReflectionIds] = useState([reflectionId]);
+  const [filterReflectionIds, setFilterReflectionIds] = useState([reflectionId]);
   const [count, setCount] = useState(null);
   const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false);
   const classes = useStyles();
 
-  function setNewReflection(newReflectionId) {
+  function handleFilterButtonClick(event, newFilterReflectionIds) {
+    setFilterReflectionIds(newFilterReflectionIds);
+  }
+
+  function filterReset() {
+    setFilterReflectionIds([reflectionId]);
+  }
+
+  function filterApply() {
+    if (filterReflectionIds.length === 0) {
+      // TODO: what if the user selects nothing? display an error? no-op? reset to original chapter?
+      return;
+    }
     setResponses(null);
     setHasMore(true);
     setLastDocSnapshot(null);
-    setChosenReflectionId(newReflectionId);
+    setReflectionIds(filterReflectionIds);
   }
 
   const FilterDrawer = () => {
     const character = reflectionIdToCharacterMap[reflectionId];
     const reflectionIdMap = chapterToReflectionIdMap[character];
-    const buttons = Object.entries(reflectionIdMap).map(([chapt, reflId]) =>
-      <Button variant='contained' onClick={() => setNewReflection(reflId)}>Chpt {chapt}</Button>
-    );
     return (
       <div role='presentation' onKeyDown={toggleFilterDrawer(false)}>
         <h1>Filter stories</h1>
         <h3>CHAPTERS</h3>
-        { buttons }
+        <ToggleButtonGroup value={filterReflectionIds} onChange={handleFilterButtonClick}>
+          {
+            Object.entries(reflectionIdMap).map(([chapt, reflId]) =>
+              <ToggleButton className={classes.filterChaptBtn} value={reflId}>
+                Chpt {chapt}
+              </ToggleButton>
+            )
+          }
+        </ToggleButtonGroup>
+        <br/>
+        <ToggleButtonGroup>
+          <ToggleButton className={classes.filterActionBtn} onClick={filterReset}>Reset</ToggleButton>
+          <ToggleButton className={classes.filterActionBtn} onClick={filterApply}>Apply</ToggleButton>
+        </ToggleButtonGroup>
       </div>
     );
   }
@@ -145,7 +179,7 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
     const { newResponses, newLastDocSnapshot } = await getDbReflectionResponsesPaginated({
       lastDocSnapshot,
       limit: LIMIT,
-      reflectionId: chosenReflectionId,
+      reflectionIds: reflectionIds,
       questionId: 3,  // this is hardcoded to the "share your story textarea question"
     });
     if (newResponses.length < LIMIT) {
@@ -162,7 +196,7 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
   }
 
   async function fetchCount() {
-    setCount(await getDbReflectionResponsesCount(chosenReflectionId, 3));
+    setCount(await getDbReflectionResponsesCounts(reflectionIds));
   }
 
   function toggleFilterDrawer(open) {
@@ -173,8 +207,8 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
     return handler;
   }
 
-  useEffect(() => fetchCount(), [chosenReflectionId]);
-  useEffect(() => fetchMoreResponsesIfNotOverflow(), [hasMore, lastDocSnapshot, chosenReflectionId]);
+  useEffect(() => fetchCount(), [reflectionIds]);
+  useEffect(() => fetchMoreResponsesIfNotOverflow(), [hasMore, lastDocSnapshot, reflectionIds]);
 
   return (
     <React.Fragment key='bottom'>
@@ -195,7 +229,7 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
         <Box className={classes.background}>
           <Container className={classes.container} id={'reflectionsContainerId'}>
             <Typography className={classes.headerText}>Reflections from Others</Typography>
-            <Typography variant="body2" color="error">{count || 0} players have completed this chapter</Typography>
+            <Typography variant="body2" color="error">{count || 0} players have completed these chapters</Typography>
             <Box>
               <InfiniteScroll
                 dataLength={responses.length}

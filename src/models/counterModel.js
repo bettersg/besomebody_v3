@@ -1,6 +1,17 @@
 import { firestore } from '../firebase'
 
-export const getDbReflectionResponsesCount = async (reflectionId, questionId) => {
+export const getDbReflectionResponsesCounts = async (reflectionIds) => {
+  try {
+    const countPromises = reflectionIds.map(reflectionId => getDbReflectionResponsesCount(reflectionId));
+    const counts = await Promise.all(countPromises);
+    const countSum = counts.reduce((acc, i) => acc + i, 0);
+    return countSum;
+  } catch (err) {
+    throw new Error(`Error at getDbReflectionResponsesCounts: ${err}`)
+  }
+}
+
+export const getDbReflectionResponsesCount = async (reflectionId) => {
   try {
     const counter = await firestore
       .collection('counters')
