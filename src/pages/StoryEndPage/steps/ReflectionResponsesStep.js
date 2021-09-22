@@ -11,9 +11,13 @@ import { getDbReflectionResponsesPaginated } from '../../../models/reflectionRes
 import { getDbReflectionResponsesCounts } from '../../../models/counterModel';
 import ChapterResponse from '../../ReflectionsPage/chapter/ChapterResponse';
 import makeStyles from '@material-ui/core/styles/makeStyles'
-import TuneIcon from '@material-ui/icons/Tune';
+import {
+  Close as CloseIcon,
+  Tune as TuneIcon,
+} from '@material-ui/icons';
 import PacmanLoader from 'react-spinners/PacmanLoader'
 import InfiniteScroll from 'react-infinite-scroll-component';
+import { CHARACTER_MAP } from '../../../models/storyMap';
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
@@ -89,6 +93,9 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 'bold',
     textTransform: 'none',
   },
+  closeIcon: {
+    cursor: 'pointer',
+  },
   topText: {
     color: '#A7A9EB',
     fontSize: '0.9rem',
@@ -111,13 +118,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const chapterToReflectionIdMap = {
-  nadia: { 1: 2, 2: 3, 3: 4 },
-};
-const reflectionIdToCharacterMap = {
-  2: 'nadia',
-  3: 'nadia',
-  4: 'nadia',
+function getCharacterId(reflectionId) {
+  return CHARACTER_MAP.find(char => char.chapters.some(chapt => chapt.reflectionId === reflectionId)).characterId;
+}
+
+function getChapterReflectionIds(characterId) {
+  const chapters = CHARACTER_MAP.find(char => char.characterId === characterId).chapters;
+  return chapters.map(chapt => [chapt.chapterId, chapt.reflectionId]);
 }
 
 const ReflectionResponsesStep = ({ reflectionId, next }) => {
@@ -139,10 +146,6 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
   }
 
   function filterApply() {
-    if (filterReflectionIds.length === 0) {
-      // TODO: what if the user selects nothing? display an error? no-op? reset to original chapter?
-      return;
-    }
     setResponses(null);
     setHasMore(true);
     setLastDocSnapshot(null);
@@ -150,25 +153,35 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
   }
 
   const FilterDrawer = () => {
-    const character = reflectionIdToCharacterMap[reflectionId];
-    const reflectionIdMap = chapterToReflectionIdMap[character];
+    const characterId = getCharacterId(reflectionId);
+    const allChapterReflectionIds = getChapterReflectionIds(characterId);
     return (
       <div role='presentation' onKeyDown={toggleFilterDrawer(false)}>
         <h1>Filter stories</h1>
+        <CloseIcon className={classes.closeIcon} onClick={toggleFilterDrawer(false)}/>
         <h3>CHAPTERS</h3>
         <ToggleButtonGroup value={filterReflectionIds} onChange={handleFilterButtonClick}>
           {
-            Object.entries(reflectionIdMap).map(([chapt, reflId]) =>
+            allChapterReflectionIds.map(([chaptId, reflId]) =>
               <ToggleButton className={classes.filterChaptBtn} value={reflId}>
-                Chpt {chapt}
+                Chpt {chaptId}
               </ToggleButton>
             )
           }
         </ToggleButtonGroup>
         <br/>
         <ToggleButtonGroup>
-          <ToggleButton className={classes.filterActionBtn} onClick={filterReset}>Reset</ToggleButton>
-          <ToggleButton className={classes.filterActionBtn} onClick={filterApply}>Apply</ToggleButton>
+          <ToggleButton
+            className={classes.filterActionBtn}
+            onClick={filterReset}>
+            Reset
+          </ToggleButton>
+          <ToggleButton
+            className={classes.filterActionBtn}
+            onClick={filterApply}
+            disabled={filterReflectionIds.length === 0}>
+            Apply
+          </ToggleButton>
         </ToggleButtonGroup>
       </div>
     );
