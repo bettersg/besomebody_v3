@@ -41,7 +41,7 @@ export const CHARACTER_MAP = [
     primaryColour: '#FB5A3F',
     secondaryColour: '#664EFC',
     playable: true,
-    newestChapter: 2,
+    newestChapter: 3,
     variables: {
       nadia_mood: 5,
       gavin_mood: 5,
@@ -193,13 +193,18 @@ export const CHARACTER_MAP = [
         endings: [
           {
             endingId: 1,
-            title: "Public",
+            title: "Nadia and Gavin, together",
             inkVar: "chapter3_ending_1",
           },
           {
             endingId: 2,
-            title: "Private",
+            title: "Nadia keeps her options open",
             inkVar: "chapter3_ending_2",
+          },          
+          {
+            endingId: 3,
+            title: "Nadia moves forward alone",
+            inkVar: "chapter3_ending_3",
           }, 
         ]
       },

@@ -2392,7 +2392,7 @@ Your form teacher asked me to help look for you.  #speaker_right
 I mean you did really well. You’re one of our top scorers.  #speaker_right
 No way. NO WAY. NOOOO WAAAAYYYY. OMG OMG OMG #inner_monologue
 (laughs) I can see you’re in a bit of shock. Come with me, we’re briefing the top 3 students in the teacher’s lounge before you go to the hall with the rest.  #speaker_right
-There’s also some paperwork to collect the school award and we can also start the scholarship application process as we didn't put you on our list before.  #speaker_right
+There’s also some paperwork to collect the school award and we want to take a few photographs of you three for our school website.  #speaker_right
 #speaker_right_image:pixel.png
 #ui:narrator
 #background:bg_nadia_schoolhall.jpg
