@@ -4,12 +4,12 @@
   "description": "Experience life in Singapore as someone else.",
   "icons": [
     {
-      "src": "%PUBLIC_URL%/favicon.ico",
+      "src": "favicon.ico",
       "sizes": "64x64",
       "type": "image/x-icon"
     },
     {
-      "src": "%PUBLIC_URL%/logo192.png",
+      "src": "logo192.png",
       "type": "image/png",
       "sizes": "192x192"
     } 
