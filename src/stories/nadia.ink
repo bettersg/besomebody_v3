@@ -2086,7 +2086,7 @@ Sure? Kinda disappeared after school, thought something happened. You can tell m
     Dammit Gavin Tan Weiliang #speaker_self
     So was I right #speaker_1
     I’m really really really sorry.  #speaker_self
-    My head is a mess rn. I don’t want to pull the both us through it.  #speaker_self
+    My head is a mess rn. I don’t want to pull the both of us through it.  #speaker_self
     It isn’t fair. I don’t want to ruin what we have.  #speaker_self
     Dammit Nadia Rahim #speaker_1
 - I just... I really want to know what’s in your head right now. #speaker_1
@@ -2200,9 +2200,9 @@ Hmm....
 
 + [Sigh, I don’t think this will work]
     I’m not sure this will work Gav. #speaker_self
-    Life is a process of taking small steps until you get somewhere, and one never knows where that somewhere is until one arrives. #speaker_self
+    Life is a process of taking small steps until you get somewhere, and one never knows where that somewhere is until one arrives.  #speaker_1
     Omg isn’t that from the motivational poster in our classroom? Idiot. #speaker_self
-    Haha, I pay attention to the details, you know.  #speaker_self
+    Haha, I pay attention to the details, you know.   #speaker_1
     #ui:scene
     #background:bg_nadia_bedroom.jpg 
     I need him in my life as a friend who can listen to me rant and make me laugh. #inner_monologue
@@ -2213,13 +2213,13 @@ Hmm....
     #chat_group_title:Gavin
     #chat_group_image:ico_nadia_gavin.png
     #speaker_1_name:Gavin 
-    So shall we take the first tiny step together? #speaker_self
+    So shall we take the first tiny step together?  #speaker_1
     Sigh. I wish I had your perpetual optimism, but my head is a mess rn and I don’t want to drag you down.  #speaker_self
     I don’t want to risk losing my best friend. #speaker_self
-    “Best” friend? I was hoping for a different kind of prefix... #speaker_self
+    “Best” friend? I was hoping for a different kind of prefix...  #speaker_1
     I know this isn’t what you wanted but I think staying friends makes more sense right now. #speaker_self
-    😭😭 
-    Is there any chance you’ll be charmed into changing your mind? #speaker_self
+    😭😭  #speaker_1
+    Is there any chance you’ll be charmed into changing your mind?  #speaker_1
     #ui:scene
     #background:bg_nadia_bedroom.jpg 
     Please don’t make this harder than it already is Gavin.  #inner_monologue
@@ -2232,7 +2232,7 @@ Hmm....
     I think...  #speaker_self
     I think we should stay friends.  #speaker_self
     I hope you can understand. I still want to hang out with you and everything. But anything more would just be too… complicated. #speaker_self
-    😔 #speaker_self
+    😔  #speaker_1
     ~ nadia_3_gavinchoice = "no"
 -  I’ll see you in school k?   #speaker_self
 -> nadia_3_2_narration
@@ -2494,10 +2494,9 @@ That’s my plan 🧡 #speaker_1
 12:30pm, School Canteen.
 The months flew by in a blur as we rushed through the A Levels. 
 Late nights, notes covered with scribblings and highlighted lines, practice papers, and lots of sugar and caffeine to keep us going.
-Chloe and I had a long chat about the “library conversation” one night, while revising together. 
-I don’t think she fully realised how hurtful some of her comments were, but she didn’t mean any harm and she heard me out when I explained the situation. 
-Friendships go through ups and downs, but I’m glad we’re on an “up” now.
-All of that studying ... to lead to today. 
+Chloe and I never found a good time to talk about the “library conversation” and she'll never know that what she said stung. 
+But I guess that's how friendships go sometimes. 
+Anyway, all of that studying ... to lead to today. 
 It feels odd being back in the school canteen again. In just a few hours, I'll pick up my results.
 It's good to see some familiar faces again.
 A simple sheet of paper that will determine whether I can enter med school or not. I'm excited, nervous, terrified, and hopeful all at once.
