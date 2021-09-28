@@ -1,7 +1,9 @@
+import React from 'react'
 import ShareableImage from './ShareableImage'
 import * as htmlToImage from 'html-to-image';
 import downloadjs from "downloadjs";
 import {isMobile} from 'react-device-detect';
+import "./style.scss"
 
 // format which Shareable image takes in data (dictionary):
 // const data = {
@@ -71,7 +73,8 @@ const ShareableImageContainer = ({data,  }) =>{
   return <div>
       <h1>Share your experience playing To Be You!</h1>
       <ShareableImage imageData={data} className="htmlToImageVis"/>
-        <button onClick={exportAsPicture}>Share</button>
+      <div className="ShareableImageBorder"></div>
+      <button onClick={exportAsPicture}>Share</button>
   </div>
 };
 

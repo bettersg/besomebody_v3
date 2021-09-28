@@ -6,7 +6,8 @@ const ShareStep = () => {
   // refer to the below for input format required by component
   const data = {
     id: 1, 
-    text: "I've just finished playing Nadia's Story!", 
+    text: `I've just finished playing the Lorem ipsum dolor Nadia's Story! ut labore et dolore magna aliqua. 
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com.`,
     avatar: "nadia"}
   // -- 
 

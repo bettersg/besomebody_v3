@@ -2,20 +2,17 @@
 .ShareableImage {
     
     position: absolute;
-    width: 308px;
-    height: 308px;
-    left: 40px;
+    width: 300px;
+    height: 300px;
+    left: calc(50% - 300px/2 - 0.5px); // centered
     top: 173px;
-    border: 1px solid #FFFFFF;
-    box-sizing: border-box;
     background: #6C70DD;
+    overflow: hidden;
 
     &__gradient {
         position: absolute;
-        width: 638.59px;
-        height: 704.18px;
-        left: 638.58px;
-        top: 679.1px;
+        width: 300px;
+        height: 300px;
         
         background: linear-gradient(179.95deg, rgba(23, 33, 83, 0) 0.04%, #172153 99.96%);
         mix-blend-mode: multiply;
@@ -25,28 +22,31 @@
 
     &__bottomGradient {
         position: absolute;
-        width: 638.59px;
-        height: 491.96px;
+        width: 300px;
+        height: 189px;
         left: 0px;
-        top: 221.86px;
-        
-        background: linear-gradient(360deg, #3835C1 4.74%, rgba(56, 53, 193, 0) 93.39%);
+        top: 111px;
+
+        background: linear-gradient(360deg, rgba(56, 53, 193, 0.71) 4.74%, rgba(56, 53, 193, 0) 93.39%);
         mix-blend-mode: normal;
     }
 
     &__overline {
         position: absolute;
-        width: 201px;
-        height: 31px;
-        left: 48px;
-        top: 179px;
+        // width: 201px;
+        // height: 31px;
+        // left: 48px;
+        // top: 179px;
+        width: 120px;
+        height: 15.5px;
+        left: 24px;
+        top: 89.5px;
 
         font-family: Inter;
         font-style: normal;
         font-weight: 800;
-        font-size: 24px;
+        font-size: 12px; // 24px
         line-height: 130%;
-        /* or 31px */
 
         letter-spacing: 0.05em;
         text-transform: uppercase;
@@ -55,17 +55,21 @@
 
     &__body {
         position: absolute;
-        width: 504px;
-        height: 294px;
-        left: 48px;
-        top: 241px;
+        // width: 504px;
+        // height: 294px;
+        // left: 48px;
+        // top: 241px;
+        max-width: 252px;
+        max-height: 147px;
+        left: 24px;
+        right: 24px;
+        top: 120.5px;
 
         font-family: Inter;
         font-style: normal;
         font-weight: 500;
-        font-size: 32px;
+        font-size: 16px; // was 32px
         line-height: 130%;
-        /* or 42px */
 
 
         color: #FFFFFF;
@@ -73,26 +77,40 @@
 
     &__logo {
         position: absolute;
-        width: 120px;
-        height: 77.42px;
-        left: 236px;
-        top: 56.54px;
+        width: 62px;
+        height: 50px;
+        left: 24px;
+        top: 22px;
 
-        filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.04));
-        transform: rotate(-6deg);
+        filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.04));
+        transform: rotate(-2deg);
     }
 
     &__avatar {
         position: absolute;
-        width: 570px;
-        height: 821px;
-        left: 91px;
-        top: -63px;
+        width: 207px;
+        height: 328.5px;
+        left: 93px;
+        top: -29px;
 
-        background: url("Nadia Uniform.png");
+
+        background: white;
+        object-fit: cover;
         mix-blend-mode: normal;
+        opacity: 0.6;
     }
 
 
 
+}
+// implemented in ShareableImageContainer
+.ShareableImageBorder {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: calc(50% - 300px/2 - 0.5px); // centered
+    top: 173px;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    background-color: transparent;
 }
