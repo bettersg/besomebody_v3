@@ -16,11 +16,11 @@ let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 const useStyles = makeStyles((theme) => ({
-  // reflectionScrollArea: {
-  //   background: "linear-gradient(180deg, rgba(251, 90, 63, 0) 0%, #FB5A3F99 50%)",
-  //   height: "1514px", 
-  //   overflowX: "scroll",  
-  // },
+  reflectionScrollArea: {
+    background: "#FB5A3F99",
+    // height: "1514px", 
+    // overflowX: "scroll",  
+  },
   paragraphWrapper: {
 
     backgroundColor: "white", 
@@ -52,7 +52,8 @@ const useStyles = makeStyles((theme) => ({
   whiteText: {
     color: "white", 
     textAlign: "center", 
-    margin: "50px", 
+    margin: "40px", 
+    fontSize: "18px", 
   }, 
   bottom: {
     bottom: 0,
@@ -154,6 +155,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center", 
     position: "relative", 
     bottom: "50%", 
+    fontSize: "18px", 
   }, 
   reflectionBubbles: {
     width: "295px",
@@ -173,6 +175,14 @@ const useStyles = makeStyles((theme) => ({
     left: 83, 
     width: "200px", 
   },
+  gradientBkgrd: {
+    paddingTop: "50%", 
+    background: "linear-gradient(180deg, rgba(251, 90, 63, 0) 0%, #FB5A3F99 100%)",
+    height: '660px',
+    [theme.breakpoints.only('xs')]: {
+      height: 'calc(var(--vh, 1vh) * 100)',
+    },
+  }, 
 }))
 
 
@@ -241,10 +251,19 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
               <img src="/reflection/reflection_bubbles.png" className={`${classes.reflectionBubbles} reflectionsContainer__reflectionBubbles`}/>
           </div>
           :
+         currentPage === 4 ?
+          <div className={classes.yourStoriesBkgrd}  onClick={() => setCurrentPage(currentPage + 1)}>
+            <div className={classes.gradientBkgrd}>
+              <ChapterResponse key={responses[0].id} response={responses[0]} />
+
+            </div>
+          </div>
+          :
           <div className={classes.reflectionScrollArea}>
+            
             <div className={`${classes.container} reflectionsContainer`} id={'reflectionsContainerId'}>
-              <Typography className={classes.headerText}>Reflections from Others</Typography>
-              <Typography variant="body2" color="error">{count || 0} players have completed this chapter</Typography>
+              {/* <Typography className={classes.headerText}>Reflections from Others</Typography>
+              <Typography variant="body2" color="error">{count || 0} players have completed this chapter</Typography> */}
               <Box>
                 <InfiniteScroll
                   dataLength={responses.length}
