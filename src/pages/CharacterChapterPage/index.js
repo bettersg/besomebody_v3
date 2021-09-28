@@ -111,7 +111,7 @@ const CharacterChapterPage = (props) => {
     history.push('/story/' + name)
   }
 
-  const currentCharCompleted = 'userFromDb?.character_' + characterId + '_complete'
+  const currentCharCompleted = 'userFromDb?.character_' + characterId + '_completed'
   
 
   return (
