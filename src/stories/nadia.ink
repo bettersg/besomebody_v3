@@ -3119,12 +3119,12 @@ Wah Nadia, new look is it.  #speaker_left
     Eh nonsense la Zhihao! In school she wear already to collect results. #speaker_left
     #speaker_left_image:cha_nadia_zhihao_casual_normal.png
     #speaker_left_name:Zhihao
-    Ohhhh yeah...
+    Ohhhh yeah... #speaker_left
 
 - I think you look nice! You always look so comfy. #speaker_right
 #speaker_left_image:cha_nadia_zhihao_casual_normal.png
 #speaker_left_name:Zhihao
-Ya I was only asking.. But a bit warm right?
+Ya I was only asking.. But a bit warm right?  #speaker_left
 #speaker_left_image:cha_nadia_gavin_casual_normal.png
 #speaker_left_name:Gavin
 Oi! She’s not here for an interview leh. #speaker_left
@@ -3239,7 +3239,7 @@ I wonder if he realises now that he was not ready to make all those changes for 
 Azlin: how is it  # message
 -> nadia_3_3d_whatsapp
 
-= nadia_3_3d_whatsapp
+=== nadia_3_3d_whatsapp ===
 #knot:nadia_3_3d_whatsapp
 #ui:whatsapp
 #background:whatsapp.png
