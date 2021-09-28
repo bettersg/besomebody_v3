@@ -2543,9 +2543,8 @@ I know, right? It feels so surreal. #speaker_left
     So at least that’s one load of my back. But I still need to get into a good uni to go to private sector. #speaker_left
     That’s good to hear! I mean, I’m sure you’ll do well enough la. #speaker_self 
     I hope so. #speaker_left
-
+- Anyway, do you know where we’re supposed to go? And where’s Gavin? #speaker_left
 #speaker_left_image:cha_nadia_chloe_school_normal.png
-Anyway, do you know where we’re supposed to go? And where’s Gavin? #speaker_left
 The hall I think, haven’t heard much from the teachers. Do you think they’ll make announcements? #speaker_self 
 Maybe, how the school did and all. Haven’t seen some of the guys around yet either. #speaker_left
 Yeah, some of them are coming in from Tekong, might take a while I guess. I saw a few of the boys by the field. #speaker_self 
