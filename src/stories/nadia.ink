@@ -2061,11 +2061,11 @@ Sure? Kinda disappeared after school, thought something happened. You can tell m
     I’m sorry I didn’t mean that #speaker_self
     I just wanted to help you Nad. Always have. #speaker_1
     I know.  #speaker_self
-    That’s what you always say. I’ll see you in school. #speaker_1
+    That’s what you always say. #speaker_1
 
     + [Decline]
     I don’t think so… it might be tough.. #speaker_self
-    VAR nadia_3_gavinchoice = "no"
+    VAR nadia_3_gavinchoice = "no" // change this to later
     Really? Am gonna be out whole day with them tmr, just join us whenever la #speaker_1
     No as in.. I’m just tired #speaker_self
     😕 #speaker_1
@@ -2074,24 +2074,168 @@ Sure? Kinda disappeared after school, thought something happened. You can tell m
     You sure you don’t wanna talk about it? #speaker_1
     Yeah.. just have a lot going on in my head right now. It’s not your fault.  #speaker_self
     “It’s not you, it’s me.” #speaker_1
-     #ui:scene
-        #background:bg_nadia_bedroom.jpg 
+    #ui:scene
+    #background:bg_nadia_bedroom.jpg 
     What? #inner_monologue
     #ui:whatsapp
-        #background:whatsapp.png
-        #chat_group_title:Gavin
-        #chat_group_image:ico_nadia_gavin.png
-        #speaker_1_name:Gavin 
+    #background:whatsapp.png
+    #chat_group_title:Gavin
+    #chat_group_image:ico_nadia_gavin.png
+    #speaker_1_name:Gavin 
     Just wanted to beat you to it.  #speaker_1
     Dammit Gavin Tan Weiliang #speaker_self
     So was I right #speaker_1
     I’m really really really sorry.  #speaker_self
     My head is a mess rn. I don’t want to pull the both us through it.  #speaker_self
     It isn’t fair. I don’t want to ruin what we have.  #speaker_self
-    Dammit Nadia Binte Rahman #speaker_1
-    I’ll.. see you in school k?   #speaker_self
-- bye  #speaker_1
--> nadia_3_2
+    Dammit Nadia Rahim #speaker_1
+- I just... I really want to know what’s in your head right now. #speaker_1
+    
++ Sigh. Can we do this another time? [] #speaker_self
+    Nad, I know you. There won’t ever be a good time to chat about this.  #speaker_1
++ Aiyoh, ok ok. [] #speaker_self
+    Thanks. Doing it now is better than doing it never.  #speaker_1
+- So, what’s on your mind? #speaker_1
+ 
+Sigh. I don’t know. So many things.   #speaker_self
+Ok, let’s start somewhere, then move step by step until we reach an end. Simple. #speaker_1
+You try to make everything simple... but I don’t think this one can be simplified  #speaker_self
+I’ve just been.. Thinking a lot.   #speaker_self
+About what it means to be me, what it means to be Malay Muslim, and what it would mean to be in a relationship with someone who is not Mulsim.  #speaker_self
+... are you considering being in a relationship with someone who is not Muslim? Is he a dashing young aspiring psychologist? 😝  #speaker_1
+Actually he’s this idiot who keeps referring to himself in the third person.   #speaker_self
+I’m sure he is thinking about the same thing with you. He would be quite happy to officially call her his girlfriend. #speaker_1
+Is he? Does he understand what it entails? I mean, this is really a big deal and I don’t think he realises that.   #speaker_self
+I don’t know how my family would react to such news.  #speaker_self
+So it’s already “news” eh?  #speaker_1
+It’s fake news for now. 😡  #speaker_self
+😔 #speaker_1
+The chat I had with Azlin gave me all sorts of feelings about being Malay  #speaker_self
+I’m not ashamed of being Malay, like NO WAY.   #speaker_self
+Uh huh #speaker_1
+👉 No Judgment Zone #speaker_1
+But I recognise that my experience is .. different. My family is well off. I go to a Christian JC.   #speaker_self
+I don’t know if I know what it’s like for others in my own community.   #speaker_self
+Then THAT makes me feel like a lousy Malay person. Can’t even relate to other Malays who are doing less-great.   #speaker_self
+Sometimes it’s my own cousin. As if I’m so different from them. But I’m not...   #speaker_self
+You’re also your own person tho, a whole individual.  #speaker_1
+You’re also being a bit hard on yourself. Just a bit 👀 #speaker_1
+Maybe. And then there’s this whole thing about me liking that idiot who shall not be named.  #speaker_self
+He Who Shall Not Be Named? Ok, I can roll with  that. #speaker_1
+Azlin teased me about “him”, but she had a serious point to make as well.   #speaker_self
+Like, where does this go? Have I thought this through? Is this the right time to be doing this?    #speaker_self
+It’s not just about changing food preferences and using the right chopsticks, or not hugging in public…   #speaker_self
+I mean, there’s so much more involved if this gets serious.   #speaker_self
+And… I am not sure I want to think about all that now. Actually, I don’t know if I want to think about this ever.   #speaker_self
+I... I don’t know. I’m sorry...  #speaker_self
+Hey, slow down there. Last I checked we’re both still teenagers. #speaker_1
+I know but...   #speaker_self
++ Aren’t you worried as well?  [] #speaker_self
+    Haha, I always prefer to make things simpler.  #speaker_1
+    Do you really think that this is a simple decision? #speaker_self
+    That’s not what I meant. I guess this must be hard for you. Help me understand why? #speaker_1
+
++ How are you so chill about this?! [] #speaker_self
+    I guess I just don’t see why it has to be so difficult or complex.  #speaker_1
+    Boy likes girl. #speaker_1
+    Girl likes boy, I think. #speaker_1
+    QED. Right? #speaker_1
+    lol you definitely prefer to make things simpler. But... #speaker_self
+- I don’t want us to sneak around and hide from others forever. #speaker_self
+Bumping into Azlin was already scary enough - can you imagine bumping into my parents? Or yours? #speaker_self
+I think my dad saw us in school once and I quickly {nadia_liar > 1: lied to him | changed the topic}. #speaker_self
+I don’t want to lie or hide all the time, esp to the people I care about. #speaker_self
+That day at the mall with you was nice… but I also felt people staring at us, as though I had an extra head or something. It didn’t feel comfortable sometimes. #speaker_self
+I didn’t notice that. You should have said something Nad - we could have disappeared into a cinema even earlier!
+Is hiding always going to be the solution? #speaker_self
+I mean, are you going to tell your mom? How would she react to me being Muslim? #speaker_self
+I have told her about you! She knows how brilliant you are! #speaker_1
+Not just that I’m your schoolmate - you know what I mean. #speaker_self
+Oh. Yeah. we can figure it out though, together. One step at a time? #speaker_1
+Sigh, we could. But then ten steps later, we would have to make a very hard choice.  #speaker_self
+So we can enjoy 9 steps together first, then get to that later! #speaker_1
+No, the final step is where we realise this relationship has an “expiry date”...  #speaker_self
+There are many ways this could play out, and almost all of them lead to heartbreak, probably for me.  #speaker_self
+What do you mean? #speaker_1
+Gavin, I’m Muslim.  #speaker_self
+Haha we went through this, and I’m Chinese Christian. But that doesn’t matter to me. #speaker_1
+Sigh... if you’re serious, at some point, you’ll need to think about whether you’re ready to convert.  #speaker_self
+My religion is important to me, but I know it’s important to you too. I don’t know if that has sunk in yet.  #speaker_self
+And even if you want to, what will your parents think? I know how important church life is to you and them. And if you don’t convert, then what does it mean to me? #speaker_self
+Oh. There must be a simpler way around this? #speaker_1
+Oh Gavin. I wish life could always be the simple straight line you make it out to be, but religion, relationships, parents - these are not always… linear.  #speaker_self
+So what does this mean? #speaker_1
+It means that if boy likes girl, and girl likes boy, we’re in for a tough time ahead some day. And it may be more tough than we need in our lives right now.  #speaker_self
+What if boy really likes girl? Does that change how tough things will be?  #speaker_1
+He really is so sweet. #inner_monologue
+#ui:scene
+#background:bg_nadia_bedroom.jpg 
+I wish I didn’t have to think about all these things. #inner_monologue
+I know he’s right - we’re still young. #inner_monologue
+But I’m scared that we’ll have to hide this from everybody, especially our parents. #inner_monologue
+And wouldn’t he be happier with a girl he can hug in public, he can introduce to his mother without any concern or doubt, bring to Chinese New Year and not think about the food? #inner_monologue
+Sigh. Am I imagining all these fears or are these real? #inner_monologue
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Gavin
+#chat_group_image:ico_nadia_gavin.png
+#speaker_1_name:Gavin 
+Hmm....
++ [Maybe, let’s try]
+    I still am really unsure about this Gavin.  #speaker_self
+    Life is a process of taking small steps until you get somewhere, and one never knows where that somewhere is until one arrives. #speaker_1
+    Haha suddenly the philosopher comes out. 🤓  #speaker_self
+    I can be very smart in addition to kind and handsome, you know. #speaker_1
+    🤮🤮🤮🤮🤮 #speaker_self
+    You make me alternate between feeling happy and throwing up, you know.  #speaker_self
+    Hopefully more happy than pukey. That’s my life goal. #speaker_1
+    Ugh. You are an idiot you know. But let’s give this a try.  #speaker_self
+    Step by step. Small steps. #speaker_self
+    Tiny steps. Like a lizard. #speaker_1
+    I hate lizards. #speaker_self
+    I know. But they do have tiny steps. 🤪 #speaker_1
+    Sigh. Thanks for listening to my rants. #speaker_self
+    Anytime. It’s all part of being there for you 😊 #speaker_1
+    ~ nadia_3_gavinchoice = "maybe"
+
++ [Sigh, I don’t think this will work]
+    I’m not sure this will work Gav. #speaker_self
+    Life is a process of taking small steps until you get somewhere, and one never knows where that somewhere is until one arrives. #speaker_self
+    Omg isn’t that from the motivational poster in our classroom? Idiot. #speaker_self
+    Haha, I pay attention to the details, you know.  #speaker_self
+    #ui:scene
+    #background:bg_nadia_bedroom.jpg 
+    I need him in my life as a friend who can listen to me rant and make me laugh. #inner_monologue
+    But if we dated, and things didn’t work out, I would lose both a boyfriend and a best friend at once.  #inner_monologue
+    I’m not ready for that. Sigh. I don’t know how to tell him this. #inner_monologue
+    #ui:whatsapp
+    #background:whatsapp.png
+    #chat_group_title:Gavin
+    #chat_group_image:ico_nadia_gavin.png
+    #speaker_1_name:Gavin 
+    So shall we take the first tiny step together? #speaker_self
+    Sigh. I wish I had your perpetual optimism, but my head is a mess rn and I don’t want to drag you down.  #speaker_self
+    I don’t want to risk losing my best friend. #speaker_self
+    “Best” friend? I was hoping for a different kind of prefix... #speaker_self
+    I know this isn’t what you wanted but I think staying friends makes more sense right now. #speaker_self
+    😭😭 
+    Is there any chance you’ll be charmed into changing your mind? #speaker_self
+    #ui:scene
+    #background:bg_nadia_bedroom.jpg 
+    Please don’t make this harder than it already is Gavin.  #inner_monologue
+    My heart wants to say yes, but every responsible bone in my body is telling me to say no. #inner_monologue
+    #ui:whatsapp
+    #background:whatsapp.png
+    #chat_group_title:Gavin
+    #chat_group_image:ico_nadia_gavin.png
+    #speaker_1_name:Gavin 
+    I think...  #speaker_self
+    I think we should stay friends.  #speaker_self
+    I hope you can understand. I still want to hang out with you and everything. But anything more would just be too… complicated. #speaker_self
+    😔 #speaker_self
+    ~ nadia_3_gavinchoice = "no"
+-  I’ll see you in school k?   #speaker_self
+-> nadia_3_2_narration
 
 = nadia_3_1b
     Yeah. Left school in a bit of a mood 👀 you ever have those days? #speaker_self 
@@ -2157,8 +2301,7 @@ Sure? Kinda disappeared after school, thought something happened. You can tell m
     Huh like what #speaker_self 
     Welllll different la 😎 I mean do *you* think you’re a minah hahaha #speaker_1
     + [Pick a fight]
-     ~ nadia_3_relationship -=1
-    Relationship: {nadia_3_relationship} // remove 
+    ~ nadia_3_relationship -=1  
     Like you’ve even met any minah before 🤨  #speaker_self 
     Hahaha ok fair #speaker_1
     Ya it’s a damn weird thing to say  #speaker_self 
@@ -2178,8 +2321,7 @@ Sure? Kinda disappeared after school, thought something happened. You can tell m
     Yo it’s not that deep, chill  #speaker_1
     And so what if I was like “most Malays” which means what EVEN #speaker_self 
     + [Try to Explain] 
-     ~ nadia_3_relationship +=1
-    Relationship: {nadia_3_relationship} // remove 
+    ~ nadia_3_relationship +=1
     lol don’t think am legit enough to call myself a minah #speaker_self 
     Anyway it’s the same as ah lian or ah beng #speaker_1
     Does anyone ever call YOU ah beng #speaker_self 
@@ -2190,9 +2332,9 @@ Sure? Kinda disappeared after school, thought something happened. You can tell m
     Ok ok  #speaker_1
     It’s weird for Zhihao to so easily throw out “minah” bc duh I’m Malay #speaker_self 
     Ikr  #speaker_1
-    🙄🙄🙄 minah is short for Aminah btw  #speaker_self 
-    Oh wow #speaker_1
+    🙄🙄🙄 minah is short for Aminah btw, like an actual name  #speaker_self 
     So like when OTHER people start using it.. as a label, bc I guess we’re *all* Aminah 🙄🙄🙄 #speaker_self 
+    Oh wow #speaker_1
 - Look I’m on *your* side here, Zhihao WAS being dickish #speaker_1
 + I don’t understand why you’re friends with the guy.[] #speaker_self 
     ~ nadia_3_relationship -=1
@@ -2239,10 +2381,41 @@ Thanks for checking in on me btw 🙂 #speaker_self
 Duh no prob. Got me real worried for a bit, radio silence all #speaker_1 
 😬 lol k will give u advanced warning next time #speaker_self 
 You still wanna meet my church friends? Am gonna see them this weekend #speaker_1 
-Idkkk might be tough. My social batt is like zero, lol. Can just see how it goes? #speaker_self 
-👌 you go rest up then #speaker_1 
-Will see ya in school 👁️👁️ #speaker_self 
--> nadia_3_2
+Idkkk might be tough. My social batt is like zero, lol. Can just see how it goes? #speaker_self  
+You sure you’re ok right?  #speaker_1 
+I think so. I don’t know actually. Maybe. #speaker_self  
+My spidey sense is tingling again… 🕷 #speaker_1 
+Tell me briefly what’s draining you? 👉No Judgment Zone, promise. #speaker_1 
+Oh ok. #speaker_self  
+I guess… Azlin made me think about my life… differently.  #speaker_self  
+There’s stuff that I took for granted, and I feel suuuper guilty about.  #speaker_self  
+She also said something about relationships that got me thinking. #speaker_self  
+This sounds promising. #speaker_1 
+Not what you think.  #speaker_self  
+It may shock you to know that not all my conversations with others are about you. #speaker_self  
+You are right. It does shock me.   #speaker_1 
+But I’ll let it go this time. 😂🤡 #speaker_1 
+I started wondering what the universe would look like if I didn’t have to hide in cinemas from my family... #speaker_self  
+or lie to my dad, or be stared at by strangers when we’re out together. #speaker_self  
+Can’t we just ignore them for now? #speaker_1 
+For now. Maybe.  #speaker_self  
+But one day you’re going to wish you could hug me in public.  #speaker_self  
+or bring a gf home for Chinese New Year, and not have to change the entire menu to a Halal one.  #speaker_self  
+Actually my uncle is vegetarian, so we have catered a veg cny meal before! Nothing is impossible. #speaker_1 
+Is it that simple to you? #speaker_self  
+Nad, I know it’s not.  #speaker_1 
+But you’re putting a lot of pressure on your very small shoulders.  #speaker_1 
+You don’t have to think about that now.  #speaker_1 
+We will have to think about it some day, if this gets serious. #speaker_self  
+I like how you’re thinking. But let’s take tiny little steps for now.  #speaker_1 
+And enjoy one day at a time. Can? #speaker_1 
+Do you ever give up? #speaker_self  
+Nope. One of my finer traits, I think. #speaker_1 
+I wish I could give you a clear answer.  #speaker_self  
+I’ll take a smile, for now. Tiny steps. #speaker_1 
+🙃🙂 #speaker_self  
+~ nadia_3_gavinchoice = "maybe"
+-> nadia_3_2_narration
 
 = nadia_3_1yes
 👁️👁️️ #speaker_self 
@@ -2321,10 +2494,14 @@ That’s my plan 🧡 #speaker_1
 12:30pm, School Canteen.
 The months flew by in a blur as we rushed through the A Levels. 
 Late nights, notes covered with scribblings and highlighted lines, practice papers, and lots of sugar and caffeine to keep us going.
-All of that ... to lead to today. 
+Chloe and I had a long chat about the “library conversation” one night, while revising together. 
+I don’t think she fully realised how hurtful some of her comments were, but she didn’t mean any harm and she heard me out when I explained the situation. 
+Friendships go through ups and downs, but I’m glad we’re on an “up” now.
+All of that studying ... to lead to today. 
 It feels odd being back in the school canteen again. In just a few hours, I'll pick up my results.
-A simple sheet of paper that will determine whether I can enter med school or not. I'm excited, nervous, terrified, and hopeful all at once. 
-And it's good to see some familiar faces again.
+It's good to see some familiar faces again.
+A simple sheet of paper that will determine whether I can enter med school or not. I'm excited, nervous, terrified, and hopeful all at once.
+
 
 
 -> nadia_3_2
@@ -2350,7 +2527,26 @@ It’s all the work. Two years. #speaker_self
 #speaker_left_image:cha_nadia_chloe_school_grinning.png
 (Jokingly) Not like I put down offerings.  #speaker_left
 Well, after today.. #speaker_self 
-Do you know where we’re supposed to go? And where’s Gavin? #speaker_left
+I know, right? It feels so surreal. #speaker_left
++ [Yeah, it's surreal]
+    Haha I guess that's true. Like a dream or something. #speaker_self 
++ [Actually, I'm terrified]
+    It feels terrifying, not surreal.  #speaker_self 
+    I’m pretty sure I was going to throw up this morning. #speaker_self 
+    #speaker_left_image:cha_nadia_chloe_school_normal.png
+    You? Of all the people, you should be the least terrified. It’s the mere mortals like me who need to panic. #speaker_left
+    It’s not just the grades, it’s also all the pressure.  #speaker_self 
+    My dad has all these expectations of me to become a doctor, and he keeps making these “cute” jokes which just stress me out! #speaker_self 
+    Yeah, my mum too.  #speaker_left
+    Ugh, parents.  #speaker_self 
+    I think my mum gave up on the whole scholarship rat race though - luckily her mahjong friends started gossiping about how amazing their kids are doing in private sector, and started dissing scholarships.  #speaker_left
+    #speaker_left_image:cha_nadia_chloe_school_grinning.png
+    So at least that’s one load of my back. But I still need to get into a good uni to go to private sector. #speaker_left
+    That’s good to hear! I mean, I’m sure you’ll do well enough la. #speaker_self 
+    I hope so. #speaker_left
+
+#speaker_left_image:cha_nadia_chloe_school_normal.png
+Anyway, do you know where we’re supposed to go? And where’s Gavin? #speaker_left
 The hall I think, haven’t heard much from the teachers. Do you think they’ll make announcements? #speaker_self 
 Maybe, how the school did and all. Haven’t seen some of the guys around yet either. #speaker_left
 Yeah, some of them are coming in from Tekong, might take a while I guess. I saw a few of the boys by the field. #speaker_self 
@@ -2703,9 +2899,10 @@ Well… #speaker_self
     Oh.. #speaker_right
     Did I warn him that my dad can get long-winded? Yes.  #speaker_self
     Did it go ok though? #speaker_right
-    Better than expected. #speaker_self
+    Well.. Better than expected? #speaker_self
     Is that a high bar? #speaker_right
-    Actually, we think he approves.  #speaker_self
+    Actually, we think he’s ok with it. For now, that’s all I can hope for! #speaker_self
+    I think he’s been rather chill about everything these days - he is probably so happy about the med school thing to care about anything else!  #speaker_self
     That’s good! #speaker_right
     
 + [I’ve never been more stressed... ] We hit a bit of a detour... #speaker_self
@@ -2714,13 +2911,14 @@ Well… #speaker_self
     Whoa! #speaker_right
     I was so nervous my heart nearly flew out of my chest. #speaker_self
     Did it go ok though? #speaker_right
-    I think so? We think so.  #speaker_self
+    I think so? We think so. I hope so.  #speaker_self
     That’s good right! #speaker_right
 - Anyway come on, you must be hungry. Better get to the food before the guys finish everything.  #speaker_right
 Good point.  #speaker_self
 So I made sure we ordered from a halal place. It’s just bee hoon and things, but I double-checked and everything.  #speaker_right
 Wow thanks Chloe. It looks really good. #speaker_self
 The sweet and sour fish is really good. #speaker_right
+This is what friends do. She makes me feel so... welcomed, and part of the group. #inner_monologue
 #speaker_left_image:cha_nadia_zhihao_casual_normal.png
 #speaker_left_name:Zhihao
 That one not nice!! #speaker_left
@@ -2938,7 +3136,11 @@ Got it. Pizza is halal. #speaker_self
 That’s ok right? #speaker_right
 + Got it. Pizza is halal. [] #speaker_self
     Food enough for an army. Pizza for me. #inner_monologue
+    I suppose she expects me to feel grateful that she ordered something for me.  #inner_monologue
+    Should I be?  #inner_monologue
+    Wouldn’t it be nice if someone who you were best friends with at least made you feel a bit more welcomed at her house with something aside from a plain cheese pizza? #inner_monologue
 + Aww, that chicken looked good.[] But oh well.  #speaker_self
+    Thanks for getting the Pizza, I guess. #speaker_self
 - Hurry back Nad! Zhihao is trying to look at your cards! #speaker_left
 OI!! #speaker_self
 
@@ -3019,7 +3221,7 @@ Yeah. That was a surprise.  #speaker_self
 Anyway, I brought food! It’s potluck, right? #speaker_self
 Yup, you can put yours with the rest on the dining table. What did you bring! #speaker_right
 Nothing fancy, just some bee hoon and snacks my mom made.  #speaker_self
-Oh nice! There’s bee hoon already, but I think I saw it had luncheon meat.. #speaker_right
+Oh nice! I think Gavin also prepared some bee hoon already, but I think I saw it had luncheon meat.. #speaker_right
 Yep. Figured as much. #inner_monologue
 Lucky you brought yours, huh. #speaker_right
 + Yeah, it’s no biggie! [] #speaker_self
@@ -3030,6 +3232,9 @@ Lucky you brought yours, huh. #speaker_right
     Oops, forgot I was in the middle of helping him set up a video game.  #speaker_right
 - I’ll come find you when I’m done? #speaker_right
 Yep, see you in a bit Chlo. #speaker_self
+I don’t think they even bothered to cater any food for me.  #inner_monologue
+All that talk about how he will always try to make me feel included, make the extra effort as a friend... #inner_monologue
+I wonder if he realises now that he was not ready to make all those changes for me? #inner_monologue
 
 #ui:notification
 #background:ui_nadia_message.jpg
@@ -3109,6 +3314,7 @@ It’s not even 8 yet. You said 8.30, kan? Plenty of time.. #speaker_right
     #background:bg_nadia_intro.jpg
     Ok, take a deep breath. 
     I'm going to be ok. 
+    I just need... to be me.
     VAR chapter_3_ending = 1 
     -> chapter_3_ending_1
     
@@ -3154,6 +3360,7 @@ It’s not even 8 yet. You said 8.30, kan? Plenty of time.. #speaker_right
     #background:bg_nadia_intro.jpg
     - Ok, take a deep breath. 
     I'm going to be ok. 
+    I just need... to be me.
     ~ chapter_3_ending = 2
 
     -> chapter_3_ending_2
@@ -3192,6 +3399,7 @@ It’s not even 8 yet. You said 8.30, kan? Plenty of time.. #speaker_right
     #background:bg_nadia_intro.jpg
     Ok, take a deep breath. 
     I’m going to be ok.
+    I just need... to be me.
     ~ chapter_3_ending = 3
 
     -> chapter_3_ending_3
