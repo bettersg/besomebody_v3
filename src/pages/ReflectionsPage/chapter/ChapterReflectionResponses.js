@@ -9,18 +9,18 @@ import ChapterResponse from './ChapterResponse';
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import ClipLoader from 'react-spinners/ClipLoader'
 import InfiniteScroll from 'react-infinite-scroll-component';
-
+import "./style.scss"
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 const useStyles = makeStyles((theme) => ({
-  // reflectionScrollArea: {
-  //   background: "linear-gradient(180deg, rgba(251, 90, 63, 0) 0%, #FB5A3F99 50%)",
-  //   height: "1514px", 
-  //   overflowX: "scroll",  
-  // },
+  reflectionScrollArea: {
+    background: "#FB5A3F99",
+    // height: "1514px", 
+    // overflowX: "scroll",  
+  },
   paragraphWrapper: {
 
     backgroundColor: "white", 
@@ -33,7 +33,6 @@ const useStyles = makeStyles((theme) => ({
   },
   background: {
     // backgroundImage: ({ image }) => `url('/images/bg_reflections.jpg')`,
-    background: "linear-gradient(180deg, rgba(251, 90, 63, 0) 0%, #FB5A3F99 50%)",
     backgroundColor: "#26248F", 
     backgroundSize: 'cover',
     backgroundPosition: 'center',
@@ -50,6 +49,12 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 800,
     color: '#ffffff',
   },
+  whiteText: {
+    color: "white", 
+    textAlign: "center", 
+    margin: "40px", 
+    fontSize: "18px", 
+  }, 
   bottom: {
     bottom: 0,
     height: '20vh',
@@ -69,6 +74,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '10%',
     overflow: 'scroll',
     height: "100%", 
+    width: "100%", 
   },
   
   btnSection: {
@@ -115,6 +121,68 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "uppercase",
     textDecoration: 'none',
   },
+  fullPage: {
+    height: '660px',
+    [theme.breakpoints.only('xs')]: {
+      height: 'calc(var(--vh, 1vh) * 100)',
+    },
+    display: "flex", 
+    justifyContent: "center", 
+    alignItems: "center",
+  },
+  yourStories: {
+       
+
+
+    height: '660px',
+    [theme.breakpoints.only('xs')]: {
+      height: 'calc(var(--vh, 1vh) * 100)',
+    },
+
+  }, 
+  yourStoriesBkgrd: {
+    backgroundImage: ({ image }) => `url('/reflection/reflection-bg-yrstories.png')`,
+    backgroundSize: '500px 930px',
+    backgroundPosition: 'center',
+    width: "100%", 
+    height: '660px',
+    [theme.breakpoints.only('xs')]: {
+      height: 'calc(var(--vh, 1vh) * 100)',
+    },
+  },
+  whiteTextWithBkGrd: {
+    color: "white", 
+    textAlign: "center", 
+    position: "relative", 
+    bottom: "50%", 
+    fontSize: "18px", 
+  }, 
+  reflectionBubbles: {
+    width: "295px",
+    alignItems: "center", 
+    marginLeft: "30px", 
+    marginTop: "40%", 
+  }, 
+  reflectionBubblesHeaderText: {
+    fontSize: '24px',
+    textAlign: "center", 
+    lineHeight: '27px',
+    fontWeight: 800, 
+    transform: "rotate(4deg)",
+    color: '#ffffff',
+    position: "relative", 
+    top: 243, 
+    left: 83, 
+    width: "200px", 
+  },
+  gradientBkgrd: {
+    paddingTop: "50%", 
+    background: "linear-gradient(180deg, rgba(251, 90, 63, 0) 0%, #FB5A3F99 100%)",
+    height: '660px',
+    [theme.breakpoints.only('xs')]: {
+      height: 'calc(var(--vh, 1vh) * 100)',
+    },
+  }, 
 }))
 
 
@@ -124,6 +192,7 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
   const [hasMore, setHasMore] = useState(true);
   const [lastDocSnapshot, setLastDocSnapshot] = useState(null);
   const [count, setCount] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1)
   const classes = useStyles()
 
   async function fetchMoreResponses() {
@@ -163,31 +232,60 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
     )
   } else {
     return (
-      <Box className={classes.background}>      
-      <div className={classes.reflectionScrollArea}>
-        <Container className={classes.container} id={'reflectionsContainerId'}>
-          <Typography className={classes.headerText}>Reflections from Others</Typography>
-          <Typography variant="body2" color="error">{count || 0} players have completed this chapter</Typography>
-          <Box>
-            <InfiniteScroll
-              dataLength={responses.length}
-              next={fetchMoreResponses}
-              hasMore={hasMore}
-              loader={<ClipLoader color="#898DE4" size={106} css={{display:'flex', left:'-15px', margin:'auto', height:'30px'}} />}
-              scrollableTarget={'reflectionsContainerId'}
-            >
-              {responses.map(response => (
-                response.answer.length > 5 && <ChapterResponse key={response.id} response={response} />
-              ))}
-            </InfiniteScroll>
-          </Box>
-      
-        </Container>
-        <div className={classes.btnSection}>
-          <Button className={classes.btn} onClick={() => setPage(REFLECTION_PAGE_FORM)} fullWidth>Continue</Button>
+      <div>
+
+        <div className={`${classes.background} reflectionsContainer`}>   
+        {currentPage === 1 ? 
+          <div className={classes.fullPage} onClick={() => setCurrentPage(currentPage + 1)}>
+            <Typography className={classes.whiteText}>While this is the end for this story, it is the start of a new kind of story.</Typography>
+          </div>
+          :
+          currentPage === 2 ?
+          <div className={classes.yourStories} onClick={() => setCurrentPage(currentPage + 1)}>
+            <div className={classes.yourStoriesBkgrd}></div>
+            <Typography className={classes.whiteTextWithBkGrd}>Your stories.</Typography>
+          </div>
+          : currentPage === 3 ?
+          <div className={classes.yourStoriesBkgrd}  onClick={() => setCurrentPage(currentPage + 1)}>
+              <Typography className={classes.reflectionBubblesHeaderText}>375 players have finished the game.</Typography>
+              <img src="/reflection/reflection_bubbles.png" className={`${classes.reflectionBubbles} reflectionsContainer__reflectionBubbles`}/>
+          </div>
+          :
+         currentPage === 4 ?
+          <div className={classes.yourStoriesBkgrd}  onClick={() => setCurrentPage(currentPage + 1)}>
+            <div className={classes.gradientBkgrd}>
+              <ChapterResponse key={responses[0].id} response={responses[0]} />
+
+            </div>
+          </div>
+          :
+          <div className={classes.reflectionScrollArea}>
+            
+            <div className={`${classes.container} reflectionsContainer`} id={'reflectionsContainerId'}>
+              {/* <Typography className={classes.headerText}>Reflections from Others</Typography>
+              <Typography variant="body2" color="error">{count || 0} players have completed this chapter</Typography> */}
+              <Box>
+                <InfiniteScroll
+                  dataLength={responses.length}
+                  next={fetchMoreResponses}
+                  hasMore={hasMore}
+                  loader={<ClipLoader color="#898DE4" size={106} css={{display:'flex', left:'-15px', margin:'auto', height:'30px'}} />}
+                  scrollableTarget={'reflectionsContainerId'}
+                >
+                  {responses.map(response => (
+                    response.answer.length > 5 && <ChapterResponse key={response.id} response={response} />
+                  ))}
+                </InfiniteScroll>
+              </Box>
+          
+            </div>
+            <div className={classes.btnSection}>
+              <Button className={classes.btn} onClick={() => setPage(REFLECTION_PAGE_FORM)} fullWidth>Continue</Button>
+            </div>
+          </div>  
+        }
         </div>
-        </div>  
-    </Box>
+      </div>
     )
     
   }
