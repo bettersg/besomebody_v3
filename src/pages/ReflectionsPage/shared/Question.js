@@ -5,6 +5,7 @@ import { getDbReflectionResponsesChoiceCount } from '../../../models/counterMode
 const Question = ({ question, value, onChange, reflectionId}) => {
 
   const [counts, setCounts] = useState(null);
+  const [answerLength, setAnswerLength] = useState(0);
 
   useEffect(() => fetchCounts(), []);
 
@@ -59,6 +60,7 @@ const Question = ({ question, value, onChange, reflectionId}) => {
         </Box>
       );
     case "OPEN":
+      const CHARACTER_LIMIT = 1000;
       return (
         <Box p={2} bgcolor="rgba(255,255,255,0.6)">
           <Typography variant="body1">
@@ -67,12 +69,14 @@ const Question = ({ question, value, onChange, reflectionId}) => {
           <Box mt={2}>
             <TextField
               value={value}
-              onChange={handleChange}
+              onChange={(event) => { handleChange(event); setAnswerLength(event.target.value.length) }}
               variant="filled"
               placeholder="Please type here. If you do not wish to share, leave this blank."              
+              helperText={`${answerLength}/${CHARACTER_LIMIT}`}
               fullWidth
               multiline
               rows={4}
+              inputProps={{ maxLength: CHARACTER_LIMIT }}
               InputProps={{ disableUnderline: true }}
             />
           </Box>
