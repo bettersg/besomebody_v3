@@ -18,8 +18,10 @@ const ShareableImage = ({imageData, className }) => {
             <div className="ShareableImage__avatar" style={{background : `url(${avatarImage}) no-repeat`}}></div>
             <div className="ShareableImage__bottomGradient"></div>
             <div className="ShareableImage__logo" style={{background : `url('/shareable_avatars/tobeyou-logo-white.svg') center`}}></div>
-            <div className="ShareableImage__overline">{storyName}'s Story</div>
-            <div className="ShareableImage__body">{displayText}</div>
+            <div className="ShareableImage__reflectionContainer">
+                <div className="ShareableImage__overline">{storyName}'s Story</div>
+                <div className="ShareableImage__body">{displayText}</div>
+            </div>
         </div>
     )
 }
