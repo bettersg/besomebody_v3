@@ -218,15 +218,19 @@ export const CHARACTER_MAP = [
         empathyCharacters: [
           {
             characterName: 'Azlin',
-            characterImage: '/images/bg_nadia_intro.jpg',
+            characterImage: '/shareable_avatars/azlin.png',
           },
           {
             characterName: 'Gavin',
-            characterImage: '/images/bg_launch.jpg',
+            characterImage: '/shareable_avatars/gavin.png',
           },
           {
             characterName: 'Chloe',
             characterImage: '/images/bg_reflections.jpg',
+          },
+          {
+            characterName: 'Nadia',
+            characterImage: '/shareable_avatars/nadia.png',
           }
 
 
