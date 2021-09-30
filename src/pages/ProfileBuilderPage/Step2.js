@@ -14,7 +14,7 @@ import {
 import './style.scss'
 
 function Step2(props) {
-  const GENDER_CHARACTER_LIMIT = 100;
+  const GENDER_CHARACTER_LIMIT = 20;
   return(
     <Box className={`PBWhatsapp__messages choices' }`} >
         <Fade in={true} key={props.order} timeout={300}>

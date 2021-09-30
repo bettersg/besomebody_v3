@@ -13,7 +13,7 @@ import {
 import './style.scss'
 
 function Step4(props) {
-  const RELIGION_CHARACTER_LIMIT = 100;
+  const RELIGION_CHARACTER_LIMIT = 50;
   return(
     <Box className={`PBWhatsapp__messages choices' }`} >
     <Fade in={true} key={props.order} timeout={300}>

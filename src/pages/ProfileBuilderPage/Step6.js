@@ -13,7 +13,7 @@ import {
 import './style.scss'
 
 function Step6(props) {
-  const USERNAME_CHARACTER_LIMIT = 100;
+  const USERNAME_CHARACTER_LIMIT = 20;
   return(
     <Box className={`PBWhatsapp__messages choices' }`} >
         <Fade in={true} key={props.order} timeout={300}>
@@ -25,7 +25,7 @@ function Step6(props) {
               <Typography key={props.order}> And the most important one: how can I address you? I usually go by just "Nad" for friends. </Typography>                               
                 <TextField
                   type="text"
-                  placeholder="e.g. Rocky"
+                  placeholder="e.g. Rocky  (<20 characters)"
                   name="username"
                   onBlur={props.handleChange}
                   inputProps={{ maxLength: USERNAME_CHARACTER_LIMIT }}
