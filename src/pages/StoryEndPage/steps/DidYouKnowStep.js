@@ -94,7 +94,7 @@ const DidYouKnowStep = ({ reflection , next}) => {
 
   // const { currentUser } = useAuth()  
   // const [isLoading, setIsLoading] = useState(false)
-  console.log(next)
+  // console.log(next)
   return (
   <Box className={classes.background}>
     <Container maxWidth="md" className={classes.container}>

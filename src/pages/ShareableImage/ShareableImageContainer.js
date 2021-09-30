@@ -11,7 +11,7 @@ import "./style.scss"
 //     text: "I've just finished playing Chapter One of Nadia's Story!", 
 //     avatar: 'nadia'}
 
-const ShareableImageContainer = ({data,  }) =>{
+const ShareableImageContainer = ({data }) =>{
 
   const exportAsPicture = () => {
 
@@ -33,8 +33,8 @@ const ShareableImageContainer = ({data,  }) =>{
             console.log("files array:"+filesArray)
     
             navigator.share({
-                title: "Nadia's Story | To Be You",
-                text: `I've just finished playing Chapter One of Nadia's Story!`,
+                title: "Nadia's Story | To Be You",   // IMPT you should not hard code this -> use the storyName
+                text: `I've just finished playing Chapter One of Nadia's Story!`,  // IMPT you should not hard code this -> use the live data 
                 url: document.location.href,
                 files: filesArray
               })

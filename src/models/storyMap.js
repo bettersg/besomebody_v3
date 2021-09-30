@@ -214,7 +214,23 @@ export const CHARACTER_MAP = [
           "/images/bg_nadia_intro.jpg",         
           "/images/bg_launch.jpg",
           "/images/bg_reflections.jpg",
-        ],        
+        ],
+        empathyCharacters: [
+          {
+            characterName: 'Azlin',
+            characterImage: '/images/bg_nadia_intro.jpg',
+          },
+          {
+            characterName: 'Gavin',
+            characterImage: '/images/bg_launch.jpg',
+          },
+          {
+            characterName: 'Chloe',
+            characterImage: '/images/bg_reflections.jpg',
+          }
+
+
+        ]
       },
     ]
   },

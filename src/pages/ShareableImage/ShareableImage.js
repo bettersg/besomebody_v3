@@ -7,6 +7,7 @@ const ShareableImage = ({imageData, className }) => {
     var displayText = '';
 
     // avatar image is set here
+    // IMPT you should replace this with the dynamic image passed down from the parent
     switch(avatar) {
         case 'nadia':
             avatarImage = '/shareable_avatars/nadia.png';
@@ -45,6 +46,7 @@ const ShareableImage = ({imageData, className }) => {
             <div className="ShareableImage__bottomGradient"></div>
             <div className="ShareableImage__logo" style={{background : `url('/shareable_avatars/tobeyou-logo-white.svg') center`}}></div>
             <div className="ShareableImage__overline">Nadia's Story</div>
+                 {/* IMPT you should replace the name with the dynamic info from the storyName */}
             <div className="ShareableImage__body">{displayText}</div>
         </div>
     )
