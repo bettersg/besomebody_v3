@@ -13,7 +13,7 @@ import {
 import './style.scss'
 
 function Step3(props) {
-  
+  const RACE_CHARACTER_LIMIT = 100;
   return(
     <Box className={`PBWhatsapp__messages choices' }`} >
         <Fade in={true} key={props.order} timeout={300}>
@@ -28,7 +28,14 @@ function Step3(props) {
                 <FormControlLabel value="MALAY" control={<Radio />} label="Malay" />
                 <FormControlLabel value="INDIAN" control={<Radio />} label="Indian" />
                   <FormControlLabel value="OTHER" control={<Radio />} label="Other" />
-                  {props.state.race === 'OTHER' && <TextField name="race" placeholder="How do you identify yourself as?"  onBlur={props.handleChange} />        }
+                  {props.state.race === 'OTHER' &&
+                    <TextField
+                      name="race"
+                      placeholder="How do you identify yourself as?"
+                      onBlur={props.handleChange}
+                      inputProps={{ maxLength: RACE_CHARACTER_LIMIT }}
+                    />
+                  }
                 {/* {formData.race === 'OTHER' && <input type="text" placeholder="e.g. Chinese-Indian , Eurasian" name="race" onBlur={props.handleChange} ></input>}  */}
               </RadioGroup>
               </Box>

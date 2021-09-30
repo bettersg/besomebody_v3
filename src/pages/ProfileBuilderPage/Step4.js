@@ -13,7 +13,7 @@ import {
 import './style.scss'
 
 function Step4(props) {
-  
+  const RELIGION_CHARACTER_LIMIT = 100;
   return(
     <Box className={`PBWhatsapp__messages choices' }`} >
     <Fade in={true} key={props.order} timeout={300}>
@@ -32,7 +32,14 @@ function Step4(props) {
                   <FormControlLabel value="SIKH" control={<Radio />} label="Sikh" />
                   <FormControlLabel value="FREE-THINKER" control={<Radio />} label="Free-thinker" />                  
                   <FormControlLabel value="OTHER" control={<Radio />} label="Other" />
-                  {props.state.religion === 'OTHER' && <TextField name="religion" placeholder="How do you identify yourself as?" onBlur={props.handleChange} />        }
+                  {props.state.religion === 'OTHER' &&
+                    <TextField
+                      name="religion"
+                      placeholder="How do you identify yourself as?"
+                      onBlur={props.handleChange}
+                      inputProps={{ maxLength: RELIGION_CHARACTER_LIMIT }}
+                    />
+                  }
                   {/* {formData.religion === 'OTHER' && <input type="text" placeholder="e.g. Chinese-Indian , Eurasian" name="religion" onBlur={handleChange} ></input>}  */}
                 </RadioGroup>
                 </Box>

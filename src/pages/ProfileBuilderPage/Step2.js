@@ -14,7 +14,7 @@ import {
 import './style.scss'
 
 function Step2(props) {
-  
+  const GENDER_CHARACTER_LIMIT = 100;
   return(
     <Box className={`PBWhatsapp__messages choices' }`} >
         <Fade in={true} key={props.order} timeout={300}>
@@ -28,7 +28,14 @@ function Step2(props) {
                 <FormControlLabel value="MALE" control={<Radio />} label="Male" />
                 <FormControlLabel value="FEMALE" control={<Radio />} label="Female" />
                 <FormControlLabel value="OTHER" control={<Radio />} label="Other" />
-                {props.state.gender === 'OTHER' && <TextField name="gender" placeholder="How do you identify yourself as?"  onBlur={props.handleChange} />        }
+                {props.state.gender === 'OTHER' &&
+                  <TextField
+                    name="gender"
+                    placeholder="How do you identify yourself as?"
+                    onBlur={props.handleChange}
+                    inputProps={{ maxLength: GENDER_CHARACTER_LIMIT }}
+                  />
+                }
 
                   
                 {/* Using onBlur instead of onChange because once changed, the text field disappears. So need to capture the data only once the user moves away. */ } 
