@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ShareableImage from './ShareableImage'
 import * as htmlToImage from 'html-to-image';
 import downloadjs from "downloadjs";
 import {isMobile} from 'react-device-detect';
+import Loader from "../../components/Loader";
+
 import "./style.scss"
 
 // format which Shareable image takes in data (dictionary):
@@ -13,38 +15,150 @@ import "./style.scss"
 
 const ShareableImageContainer = ({data }) =>{
   const { storyName, text, avatar, avatarImage } = data;
+  var exportData, position, exportOptions, imageDataStream = undefined;
 
-  const exportAsPicture = async () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [filesArray, setFilesArray] = useState([]);
 
-    var exportData = document.getElementsByClassName('ShareableImage') // this is the problem. the element htmlToImageVis is null
+  useEffect(() =>{
+    loadImage()
+  }, [])
 
-    const position = exportData[0].getBoundingClientRect();
-    // console.log("position", position)
+  const loadImage = () => {
 
-    const fontEmbedCss = await htmlToImage.getWebFontEmbedCss(exportData[0]);
+    exportData = document.getElementsByClassName('ShareableImage')
+    console.log('export data [0] ', exportData[0])
 
-    var exportOptions = {
+    let fontEmbedCss = undefined;
+
+    async function fetchWebFont() {
+      fontEmbedCss = await htmlToImage.getWebFontEmbedCss(exportData[0]);
+      console.log('fetched web font!')
+    }
+
+    fetchWebFont()
+
+    position = exportData[0].getBoundingClientRect()
+
+    exportOptions = {
       width: position.width,
       height: position.height,
       fontEmbedCss: fontEmbedCss,
-
+  
       style: {
         position: 'static',
         margin: '173 0 0 37'
       }
     }
+    
+    htmlToImage.toBlob(exportData[0], exportOptions)
+    .then(function (blob) {
+      console.log("done generating image!")
+      var file = new File([blob], 'to-be-you-shared-mobile.jpg', { type: blob.type })
+      console.log(file)
+      const files = [file]
+      console.log(files)
+      // imageDataStream = dataUrl
+      // var file = new File([dataUrl], 'to-be-you-shared.jpg', {type: 'image/jpeg'})
+      // console.log(file)
+      // const files = [file]
+      // console.log(files)
+      return files})
+    .then((files) => {
+      setFilesArray(files)
+      console.log("files array: ", filesArray)
+      setIsLoading(false)
+      console.log("loading: ", isLoading)
+    })
 
-    console.log('exportdata[0]', exportData[0]);
+    console.log("hello")
+
+  }
+
+
+  // const fontEmbedCss = await htmlToImage.getWebFontEmbedCss(exportData[0]);
+
+  // const position = exportData[0].getBoundingClientRect();
+
+  // var exportOptions = {
+  //   width: position.width,
+  //   height: position.height,
+  //   // fontEmbedCss: fontEmbedCss,
+
+  //   style: {
+  //     position: 'static',
+  //     margin: '173 0 0 37'
+  //   }
+  // }
+
+  // const filesArray = htmlToImage.toBlob(exportData[0])
+  // .then(function (blob) {
+  //   var file = new File([blob], 'to-be-you-shared-mobile.jpg', { type: blob.type })
+  //   console.log(file)
+  //   const filesArray = [file]
+  //   console.log(filesArray)
+  //   return filesArray})
+
+
+  const exportAsPicture = () => {
+
+    // var exportData = document.getElementsByClassName('ShareableImage') // this is the problem. the element htmlToImageVis is null
+
+    // const position = exportData[0].getBoundingClientRect();
+    // // console.log("position", position)
+
+    // // const fontEmbedCss = await htmlToImage.getWebFontEmbedCss(exportData[0]);
+
+    // var exportOptions = {
+    //   width: position.width,
+    //   height: position.height,
+    //   // fontEmbedCss: fontEmbedCss,
+
+    //   style: {
+    //     position: 'static',
+    //     margin: '173 0 0 37'
+    //   }
+    // }
+
+    // console.log('exportdata[0]', exportData[0]);
 
     if (isMobile) {
 
-      htmlToImage.toBlob(exportData[0])
-        .then(function (blob) {
-          var file = new File([blob], 'to-be-you-shared-mobile.jpg', { type: 'image/jpeg' })
-          console.log(file)
-          const filesArray = [file]
-          console.log(filesArray)
-          return filesArray
+      console.log("1 files array: ", filesArray) 
+
+      if (navigator.canShare && navigator.canShare({ files: filesArray })) {
+
+        console.log("files array:", filesArray)
+
+        navigator.share({
+            title: `${storyName}'s Story`, 
+            text: text,  
+            url: document.location.href,
+            files: filesArray
+          })
+          .then(() => {
+            console.log('Successfully shared');
+          })
+          .catch(error => {
+            console.error('Something went wrong sharing the image', error);
+          });
+      }
+      else {
+
+        htmlToImage.toJpeg(exportData[0], exportOptions)
+          .then(function (dataUrl) {
+            downloadjs(dataUrl, 'to-be-you-download-mobile.jpg');
+          });
+
+      }
+
+      // htmlToImage.toBlob(exportData[0])
+      //   .then(function (blob) {
+      //     var file = new File([blob], 'to-be-you-shared-mobile.jpg', { type: blob.type })
+      //     console.log(file)
+      //     const filesArray = [file]
+      //     console.log(filesArray)
+      //     return filesArray
 
       // htmlToImage.toJpeg(exportData[0], exportOptions) // why not use htmlToImage.toJpeg(exportData[0],exportOptions)
         // .then(function (dataUrl) {
@@ -57,34 +171,34 @@ const ShareableImageContainer = ({data }) =>{
           // link.download = 'my-image-name.jpeg';
           // link.href = dataUrl;
           // link.click();
-        })
-        .then((filesArray) => {
-          if (navigator.canShare && navigator.canShare({ files: filesArray })) {
+        // })
+        // .then((filesArray) => {
+        //   if (navigator.canShare && navigator.canShare({ files: filesArray })) {
 
-            console.log("files array:"+filesArray)
+        //     console.log("files array:"+filesArray)
     
-            navigator.share({
-                title: `${storyName}'s Story`, 
-                text: text,  
-                url: document.location.href,
-                files: filesArray
-              })
-              .then(() => {
-                console.log('Successfully shared');
-              })
-              .catch(error => {
-                console.error('Something went wrong sharing the image', error);
-              });
-          }
-          else {
+        //     navigator.share({
+        //         title: `${storyName}'s Story`, 
+        //         text: text,  
+        //         url: document.location.href,
+        //         files: filesArray
+        //       })
+        //       .then(() => {
+        //         console.log('Successfully shared');
+        //       })
+        //       .catch(error => {
+        //         console.error('Something went wrong sharing the image', error);
+        //       });
+        //   }
+          // else {
 
-            htmlToImage.toJpeg(exportData[0], exportOptions)
-              .then(function (dataUrl) {
-                downloadjs(dataUrl, 'to-be-you-download-mobile.jpg');
-              });
+          //   htmlToImage.toJpeg(exportData[0], exportOptions)
+          //     .then(function (dataUrl) {
+          //       downloadjs(dataUrl, 'to-be-you-download-mobile.jpg');
+          //     });
 
-          }
-        });
+          // }
+        // });
 
     }
 
@@ -106,6 +220,8 @@ const ShareableImageContainer = ({data }) =>{
       <ShareableImage imageData={data} className="htmlToImageVis" id="htmlToImageVis"/>
       <div className="ShareableImageBorder"></div>
       <button onClick={exportAsPicture}>Share</button>
+      <button onClick={loadImage}>Pre-load image</button>
+      { isLoading ? <Loader/> : null }
   </div>
 };
 
