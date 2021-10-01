@@ -19,6 +19,7 @@ const ShareableImageContainer = ({data }) =>{
 
   const [isLoading, setIsLoading] = useState(true);
   const [filesArray, setFilesArray] = useState([]);
+  const [fontEmbedCss, setFontEmbedCss] = useState(null);
 
   useEffect(() =>{
     loadImage()
@@ -29,18 +30,18 @@ const ShareableImageContainer = ({data }) =>{
     exportData = document.getElementsByClassName('ShareableImage')
     console.log('export data [0] ', exportData[0])
 
+    position = exportData[0].getBoundingClientRect()
+    
     let fontEmbedCss = undefined;
 
     async function fetchWebFont() {
       fontEmbedCss = await htmlToImage.getWebFontEmbedCss(exportData[0]);
+      setFontEmbedCss(fontEmbedCss)
       console.log('fetched web font!')
     }
 
     fetchWebFont()
-
-    position = exportData[0].getBoundingClientRect()
-
-    exportOptions = {
+    .then(exportOptions = {
       width: position.width,
       height: position.height,
       fontEmbedCss: fontEmbedCss,
@@ -49,8 +50,8 @@ const ShareableImageContainer = ({data }) =>{
         position: 'static',
         margin: '173 0 0 37'
       }
-    }
-    
+    })
+    .then(
     htmlToImage.toBlob(exportData[0], exportOptions)
     .then(function (blob) {
       console.log("done generating image!")
@@ -69,7 +70,7 @@ const ShareableImageContainer = ({data }) =>{
       console.log("files array: ", filesArray)
       setIsLoading(false)
       console.log("loading: ", isLoading)
-    })
+    }))
 
     console.log("hello")
 
@@ -101,6 +102,21 @@ const ShareableImageContainer = ({data }) =>{
 
 
   const exportAsPicture = () => {
+
+    exportData = document.getElementsByClassName('ShareableImage')
+
+    position = exportData[0].getBoundingClientRect()
+
+    exportOptions = {
+      width: position.width,
+      height: position.height,
+      fontEmbedCss: fontEmbedCss,
+  
+      style: {
+        position: 'static',
+        margin: '173 0 0 37'
+      }
+    }
 
     // var exportData = document.getElementsByClassName('ShareableImage') // this is the problem. the element htmlToImageVis is null
 
