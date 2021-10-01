@@ -13,7 +13,7 @@ import {
 import './style.scss'
 
 function Step5(props) {
-  
+  const HOUSING_CHARACTER_LIMIT = 20;
   return(
     <Box className={`PBWhatsapp__messages choices' }`} >
         <Fade in={true} key={props.order} timeout={300}>
@@ -28,7 +28,14 @@ function Step5(props) {
                 <FormControlLabel value="CONDO" control={<Radio />} label="Condominium" />
                 <FormControlLabel value="LANDED" control={<Radio />} label="Landed" />                                     
                   <FormControlLabel value="OTHER" control={<Radio />} label="Other" />
-                  {props.state.housing === 'OTHER' && <TextField name="housing" placeholder="How would you describe your housing type?" onBlur={props.handleChange} />        }
+                  {props.state.housing === 'OTHER' &&
+                    <TextField
+                      name="housing"
+                      placeholder="How would you describe your housing type?"
+                      onBlur={props.handleChange}
+                      inputProps={{ maxLength: HOUSING_CHARACTER_LIMIT }}
+                    />
+                  }
                 {/* {formData.housing === 'OTHER' && <input type="text" placeholder="e.g. Bungalow" name="housing" onBlur={props.handleChange} ></input>}  */}
               </RadioGroup>
               </Box>

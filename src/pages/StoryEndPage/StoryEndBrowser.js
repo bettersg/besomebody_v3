@@ -46,10 +46,10 @@ const StoryEndBrowser = ({ reflectionId: propsReflectionId, globalVariables }) =
   };
 
   const config = {
-    navigation: {
-      component: Navigation,
-      location: "after"
-    }
+    // navigation: {
+    //   component: Navigation,
+    //   location: "after"
+    // }
   };
 
   return (

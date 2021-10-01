@@ -103,7 +103,7 @@ export const CharacterChoicePage = () => {
             <div className="CharacterChoices__header">
                 <div className="CharacterChoices__header--placeholder"></div>
                 <img src="/commons/tobeyou-logo.svg" />
-                <SideMenu src="/commons/menu-icon.svg" />
+                <SideMenu />
             </div>
              {/* <div className="game-menu"> */}
             {/* </div> */}

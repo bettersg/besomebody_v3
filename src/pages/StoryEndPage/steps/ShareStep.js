@@ -34,6 +34,7 @@ const ShareStep = ({ reflection, characterId, setState, getState, next }) => {
   // -- 
 
   return <ShareableImageContainer data={data}></ShareableImageContainer>;
+
 }
 
 export default ShareStep;
