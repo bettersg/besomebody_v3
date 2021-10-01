@@ -1,103 +1,40 @@
-import ShareableImage from "../../../components/ShareableImage/ShareableImage";
-import {  useParams, useHistory } from 'react-router-dom'
-import { Box, Typography, Button, CircularProgress } from '@material-ui/core'
+import ShareableImageContainer from "../../ShareableImage/ShareableImageContainer";
+import { CHARACTER_MAP } from '../../../models/storyMap'
 
-import {
-  EmailShareButton,
-  FacebookShareButton,
-  InstapaperShareButton,
-  LineShareButton,
-  LinkedinShareButton,
-  RedditShareButton,
-  TelegramShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-  FacebookIcon,
-  TwitterIcon,
-  LinkedinIcon,
-  TelegramIcon,
-  WhatsappIcon,
-  RedditIcon,
-  EmailIcon,
-  InstapaperIcon,
+const ShareStep = ({ reflection, characterId, setState, getState, next }) => {
+
+
   
-} from "react-share";
+  const data2 = getState('answerDocs')
+  // console.log('answerdocs ', data2) // this shows you all the data that has been collected from the state
 
-const ShareStep = () => {
-  const history = useHistory()
-  const { name  } = useParams();
+  const persona = CHARACTER_MAP.find((character) => character.characterId === characterId);  // I modified the last part slightly because  in this component, we know the characterId so we can reference that instead of the useParams option.
 
+  // console.log('persona ', persona)
 
-  const shareUrl = 'https://tobeyou.sg';
-  const title = 'I just unlocked an ending for ' + name.charAt(0).toUpperCase() + name.toLowerCase().slice(1) + ' on ToBeYou.sg, a Singaporean interactive fiction game. Are you ready to explore ' + name.charAt(0).toUpperCase() + name.toLowerCase().slice(1) + '\'s story too?' ;
-   
+  const personaName = persona.name.split(" ")[0]
 
-  // -- remove this section when receiving state variables,
-  // refer to the below for input format required by component
+  const empathyCharacter = persona.reflectionBrowser[0].empathyCharacters.find((character) => character.characterName.toUpperCase() === data2[2].answer.toUpperCase());
+
   const data = {
-    id: 1, 
-    text: "I've just finished playing Nadia's Story!", 
-    avatar: "nadia"}
+    storyName: personaName,
+    text: data2[4].answer,
+    avatar: data2[2].answer, 
+    avatarImage: empathyCharacter.characterImage 
+  }
+  
+
+   // -- remove this section when receiving state variables,
+  // refer to the below for input format required by component
+  // const data = {
+  //   id: 1, 
+  //   text: `I've just finished playing the Lorem ipsum dolor Nadia's Story! ut labore et dolore magna aliqua. 
+  //   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com.`,
+  //   avatar: "nadia"}
   // -- 
 
-  return  (
-    <Box >
-      <ShareableImage data={data}></ShareableImage>;
-      <Button variant="contained"onClick={() => history.push("/")}>
-        Go back to Main Menu
-      </Button>
-      <Box>
-        <br />
-        <a href="mailto:tobeyou@better.sg" target="_blank" rel="noreferrer" style={{ color: '#ffffff' }}>Send us feedback</a>
-      </Box>
-     {/* if the user is using a mobile phone, use the webshare API. If the user is using a web browser, can show these links instead: */}
-      <Box>
-      <br />
-        <FacebookShareButton
-          url={shareUrl}
-          quote={title}
-          
-          >
-          <FacebookIcon size={32} round />
-        </FacebookShareButton>
-        <TwitterShareButton
-          url={shareUrl}
-          title={title}
-          
-          >
-          <TwitterIcon size={32} round />
-        </TwitterShareButton>
-        <TelegramShareButton
-          url={shareUrl}
-          title={title}
-          
-          >
-          <TelegramIcon size={32} round />
-        </TelegramShareButton>
-        <WhatsappShareButton
-          url={shareUrl}
-          title={title}
-          separator=":: "
-          
-          >
-          <WhatsappIcon size={32} round />
-        </WhatsappShareButton>
-        <RedditShareButton
-          url={shareUrl}
-          title={title}
-          windowWidth={660}
-          windowHeight={460}
-          
-          >
-          <RedditIcon size={32} round />
-        </RedditShareButton>
-      </Box>
+  return <ShareableImageContainer data={data}></ShareableImageContainer>;
 
-
-    </Box>
-    )
-  
-  
 }
 
 export default ShareStep;
