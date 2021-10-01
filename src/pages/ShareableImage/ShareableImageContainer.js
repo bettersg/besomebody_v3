@@ -40,7 +40,7 @@ const ShareableImageContainer = ({data }) =>{
 
       htmlToImage.toBlob(exportData[0])
         .then(function (blob) {
-          var file = new File([blob], 'to-be-you-shared.jpg', { type: 'image/jpeg' })
+          var file = new File([blob], 'to-be-you-shared-mobile.jpg', { type: 'image/jpeg' })
           console.log(file)
           const filesArray = [file]
           console.log(filesArray)
@@ -80,7 +80,7 @@ const ShareableImageContainer = ({data }) =>{
 
             htmlToImage.toJpeg(exportData[0], exportOptions)
               .then(function (dataUrl) {
-                downloadjs(dataUrl, 'to-be-you-shared.jpg');
+                downloadjs(dataUrl, 'to-be-you-download-mobile.jpg');
               });
 
           }
@@ -93,7 +93,7 @@ const ShareableImageContainer = ({data }) =>{
       console.log("downloading image..") // to remove once lag issue is resolved
       htmlToImage.toJpeg(exportData[0], exportOptions)
             .then(function (dataUrl) {
-              downloadjs(dataUrl, 'to-be-you-shared.jpg');
+              downloadjs(dataUrl, 'to-be-you-download-desktop.jpg');
               console.log("finished download!") // to remove once lag issue is resolved
             });
 
