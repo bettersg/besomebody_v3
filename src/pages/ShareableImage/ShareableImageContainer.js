@@ -2,7 +2,7 @@ import React from 'react'
 import ShareableImage from './ShareableImage'
 import * as htmlToImage from 'html-to-image';
 import downloadjs from "downloadjs";
-// import {isMobile} from 'react-device-detect';
+import {isMobile} from 'react-device-detect';
 import "./style.scss"
 
 // format which Shareable image takes in data (dictionary):
@@ -13,7 +13,6 @@ import "./style.scss"
 
 const ShareableImageContainer = ({data }) =>{
   const { storyName, text, avatar, avatarImage } = data;
-  const isMobile = true; // for debug
 
   const exportAsPicture = async () => {
 
