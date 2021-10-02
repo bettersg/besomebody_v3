@@ -29,7 +29,10 @@ const ShareableImageContainer = ({data }) =>{
   const [image, takeScreenShot] = useScreenshot()
   const [width, setWidth] = useState(300)
 
-  const getImage = () => takeScreenShot(ref.current)  
+  const getImage = () => {
+    takeScreenShot(ref.current)
+    document.getElementsByClassName("ShareableImage")[0].style.display = "none"
+  }
 
   
 
@@ -80,7 +83,7 @@ const ShareableImageContainer = ({data }) =>{
     
       <button onClick={getImage}>Share</button>
       {/* <button onClick={loadImage}>Pre-load image</button> */}
-      {/* <img width={width} src={image} alt={"ScreenShot"} /> */}
+      <img width={width} src={image} alt={"ScreenShot"} />
   </div>
   )};
 
