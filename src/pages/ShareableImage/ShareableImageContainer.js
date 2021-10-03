@@ -1,9 +1,9 @@
 import React, { useEffect, useState , createRef } from 'react'
-import ShareableImage from './ShareableImage'
+// import ShareableImage from './ShareableImage'
 // import * as htmlToImage from 'html-to-image';
 // import downloadjs from "downloadjs";
 import {isMobile} from 'react-device-detect';
-import Loader from "../../components/Loader";
+// import Loader from "../../components/Loader";
 
 import { useScreenshot , createFileName } from 'use-react-screenshot'
 
