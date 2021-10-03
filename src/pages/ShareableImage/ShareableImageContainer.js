@@ -33,17 +33,52 @@ const ShareableImageContainer = ({data }) =>{
     if (image) {
       if (isMobile) {
         console.log ('isMobile' , isMobile)
+        console.log("image ", image)
+        fetch(image)
+        .then(res => res.blob())
+        .then(blob => {
+          const file = new File([blob], 'to-be-you-shared.png', {type: 'image/png'})
+          console.log(file)
+          const filesArray = [file]
+          return filesArray
+        })
+        .then((filesArray) => {
+        if (navigator.canShare && navigator.canShare({ files: filesArray })) {
+
+          console.log("2 files array:", filesArray)
+  
+          // NOTE: if text not empty, text will be displayed with URL in the shared message,
+          // if text is empty, title will be displayed with URL in shared message 
+          // i.e. text takes precedence over title (only 1 out of the 2 will be shared)
+          navigator.share({
+              title: `${storyName}'s Story`, 
+              text: text,  
+              url: document.location.href,
+              files: filesArray
+            })
+            .then(() => {
+              console.log('Successfully shared');
+            })
+            .catch(error => {
+              console.error('Something went wrong sharing the image', error);
+            });
+        }
+        else {
+          download(image, { name: 'to-be-you', extension: 'png' })
+        }
+      })
+
       }
       else {
         console.log ('isMobile' , isMobile)
-        download(image, { name: 'to-be-you', extension: 'jpg' })
+        download(image, { name: 'to-be-you', extension: 'png' })
       }
     }
   }
 
   
 
-  const download = (image, { name = 'img', extension = 'png' } = {}) => {
+  const download = (image, { name, extension } = {}) => {
     const a = document.createElement('a')
     a.href = image
     a.download = createFileName(extension, name)
@@ -53,9 +88,8 @@ const ShareableImageContainer = ({data }) =>{
   useEffect(() => {
     takeScreenShot(ref.current);
     document.getElementsByClassName("ShareableImage")[0].style.visibility='hidden' 
+    console.log(image)
   }, [])
-
-  // console.log('image', image)
   
     var displayText = '';
 
