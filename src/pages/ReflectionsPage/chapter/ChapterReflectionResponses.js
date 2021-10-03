@@ -55,6 +55,14 @@ const useStyles = makeStyles((theme) => ({
     margin: "40px", 
     fontSize: "18px", 
   }, 
+  whiteTextReflection: {
+    color: "white", 
+    textAlign: "center", 
+    marginTop: "11px", 
+    marginBottom: "11px", 
+    fontSize: "15px", 
+    margin: "50px", 
+  }, 
   bottom: {
     bottom: 0,
     height: '20vh',
@@ -183,6 +191,20 @@ const useStyles = makeStyles((theme) => ({
       height: 'calc(var(--vh, 1vh) * 100)',
     },
   }, 
+  heart:{
+    width: "30px", 
+    '&:hover': {
+      cursor: 'pointer',
+    },
+  },
+  bottomLikeSection: {
+    display: "flex", 
+    flexDirection: "column",
+    opacity: 0.6,  
+    justifyContent: "center", 
+    alignItems: "center", 
+    marginTop: "52px", 
+  }, 
 }))
 
 
@@ -255,7 +277,11 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
           <div className={classes.yourStoriesBkgrd}  onClick={() => setCurrentPage(currentPage + 1)}>
             <div className={classes.gradientBkgrd}>
               <ChapterResponse key={responses[0].id} response={responses[0]} />
+              <div className={classes.bottomLikeSection}>
+                <img src="/reflection/reflection_heart_white.png" className={classes.heart}/>
+                <Typography className={classes.whiteTextReflection}>Tap on this icon to say that you connected with a reflection.</Typography>
 
+              </div>
             </div>
           </div>
           :
@@ -272,7 +298,7 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
                   loader={<ClipLoader color="#898DE4" size={106} css={{display:'flex', left:'-15px', margin:'auto', height:'30px'}} />}
                   scrollableTarget={'reflectionsContainerId'}
                 >
-                  {responses.map(response => (
+                  {responses.map(response => ( 
                     response.answer.length > 5 && <ChapterResponse key={response.id} response={response} />
                   ))}
                 </InfiniteScroll>
