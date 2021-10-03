@@ -4,8 +4,9 @@ import React, { useEffect, useState , createRef } from 'react'
 // import downloadjs from "downloadjs";
 import {isMobile} from 'react-device-detect';
 // import Loader from "../../components/Loader";
+import html2canvas from 'html2canvas'
 
-import { useScreenshot , createFileName } from 'use-react-screenshot'
+import { createFileName } from 'use-react-screenshot'
 
 
 import "./style.scss"
@@ -24,16 +25,23 @@ const ShareableImageContainer = ({data }) =>{
   const [filesArray, setFilesArray] = useState([]);
   const [fontEmbedCss, setFontEmbedCss] = useState(null);
 
-
   const ref = createRef(null)
-  const [image, takeScreenShot] = useScreenshot()
+  const [image, setImage] = useState(null)
   const [width, setWidth] = useState(300)
 
+  const takeScreenShot = (node) => {
+    html2canvas(node, { allowTaint:true, useCORS:true })
+    .then((canvas) => {
+      const dataUrl = canvas.toDataURL("image/png")
+      setImage(dataUrl)
+    })
+  }
+
   const getImage = () => {
+    console.log(image)
     if (image) {
       if (isMobile) {
         console.log ('isMobile' , isMobile)
-        console.log("image ", image)
         fetch(image)
         .then(res => res.blob())
         .then(blob => {
@@ -74,9 +82,10 @@ const ShareableImageContainer = ({data }) =>{
         download(image, { name: 'to-be-you', extension: 'png' })
       }
     }
+    else{
+      takeScreenShot(ref.current)
+    }
   }
-
-  
 
   const download = (image, { name, extension } = {}) => {
     const a = document.createElement('a')
@@ -86,9 +95,8 @@ const ShareableImageContainer = ({data }) =>{
   }
 
   useEffect(() => {
-    takeScreenShot(ref.current);
+    takeScreenShot(ref.current)
     document.getElementsByClassName("ShareableImage")[0].style.visibility='hidden' 
-    console.log(image)
   }, [])
   
     var displayText = '';
@@ -100,231 +108,24 @@ const ShareableImageContainer = ({data }) =>{
         displayText = text
     }
 
-  // useEffect(() =>{
-  //   loadImage()
-  // }, [])
-
-
-
-  // const loadImage = () => {
-
-  //   exportData = document.getElementsByClassName('ShareableImage')
-  //   console.log('export data [0] ', exportData[0])
-
-  //   position = exportData[0].getBoundingClientRect()
-    
-  //   let fontEmbedCss = undefined;
-
-  //   async function fetchWebFont() {
-  //     fontEmbedCss = await htmlToImage.getWebFontEmbedCss(exportData[0]);
-  //     setFontEmbedCss(fontEmbedCss)
-  //     console.log('fetched web font!')
-  //   }
-
-  //   fetchWebFont()
-  //   .then(exportOptions = {
-  //     width: position.width,
-  //     height: position.height,
-  //     fontEmbedCss: fontEmbedCss,
-  
-  //     style: {
-  //       position: 'static',
-  //       margin: '173 0 0 37'
-  //     }
-  //   })
-  //   .then(
-  //   htmlToImage.toBlob(exportData[0], exportOptions)
-  //   .then(function (blob) {
-  //     console.log("done generating image!")
-  //     var file = new File([blob], 'to-be-you-shared-mobile.jpg', { type: blob.type })
-  //     console.log(file)
-  //     const files = [file]
-  //     console.log(files)
-  //     // imageDataStream = dataUrl
-  //     // var file = new File([dataUrl], 'to-be-you-shared.jpg', {type: 'image/jpeg'})
-  //     // console.log(file)
-  //     // const files = [file]
-  //     // console.log(files)
-  //     return files})
-  //   .then((files) => {
-  //     setFilesArray(files)
-  //     console.log("files array: ", filesArray)
-  //     setIsLoading(false)
-  //     console.log("loading: ", isLoading)
-  //   }))
-
-  //   console.log("hello")
-
-  // }
-
-
-  // const fontEmbedCss = await htmlToImage.getWebFontEmbedCss(exportData[0]);
-
-  // const position = exportData[0].getBoundingClientRect();
-
-  // var exportOptions = {
-  //   width: position.width,
-  //   height: position.height,
-  //   // fontEmbedCss: fontEmbedCss,
-
-  //   style: {
-  //     position: 'static',
-  //     margin: '173 0 0 37'
-  //   }
-  // }
-
-  // const filesArray = htmlToImage.toBlob(exportData[0])
-  // .then(function (blob) {
-  //   var file = new File([blob], 'to-be-you-shared-mobile.jpg', { type: blob.type })
-  //   console.log(file)
-  //   const filesArray = [file]
-  //   console.log(filesArray)
-  //   return filesArray})
-
-
-  // const exportAsPicture = () => {
-
-  //   exportData = document.getElementsByClassName('ShareableImage')
-
-  //   position = exportData[0].getBoundingClientRect()
-
-  //   exportOptions = {
-  //     width: position.width,
-  //     height: position.height,
-  //     fontEmbedCss: fontEmbedCss,
-  
-  //     style: {
-  //       position: 'static',
-  //       margin: '173 0 0 37'
-  //     }
-  //   }
-
-  //   // var exportData = document.getElementsByClassName('ShareableImage') // this is the problem. the element htmlToImageVis is null
-
-  //   // const position = exportData[0].getBoundingClientRect();
-  //   // // console.log("position", position)
-
-  //   // // const fontEmbedCss = await htmlToImage.getWebFontEmbedCss(exportData[0]);
-
-  //   // var exportOptions = {
-  //   //   width: position.width,
-  //   //   height: position.height,
-  //   //   // fontEmbedCss: fontEmbedCss,
-
-  //   //   style: {
-  //   //     position: 'static',
-  //   //     margin: '173 0 0 37'
-  //   //   }
-  //   // }
-
-  //   // console.log('exportdata[0]', exportData[0]);
-
-  //   if (isMobile) {
-
-  //     console.log("1 files array: ", filesArray) 
-
-  //     if (navigator.canShare && navigator.canShare({ files: filesArray })) {
-
-  //       console.log("2 files array:", filesArray)
-
-  //       navigator.share({
-  //           title: `${storyName}'s Story`, 
-  //           text: text,  
-  //           url: document.location.href,
-  //           files: filesArray
-  //         })
-  //         .then(() => {
-  //           console.log('Successfully shared');
-  //         })
-  //         .catch(error => {
-  //           console.error('Something went wrong sharing the image', error);
-  //         });
-  //     }
-  //     else {
-
-  //       htmlToImage.toJpeg(exportData[0], exportOptions)
-  //         .then(function (dataUrl) {
-  //           downloadjs(dataUrl, 'to-be-you-download-mobile.jpg');
-  //         });
-
-  //     }
-
-  //     // htmlToImage.toBlob(exportData[0])
-  //     //   .then(function (blob) {
-  //     //     var file = new File([blob], 'to-be-you-shared-mobile.jpg', { type: blob.type })
-  //     //     console.log(file)
-  //     //     const filesArray = [file]
-  //     //     console.log(filesArray)
-  //     //     return filesArray
-
-  //     // htmlToImage.toJpeg(exportData[0], exportOptions) // why not use htmlToImage.toJpeg(exportData[0],exportOptions)
-  //       // .then(function (dataUrl) {
-  //       //   var file = new File([dataUrl], 'to-be-you-shared.jpg')
-  //       //   console.log(file)
-  //       //   const filesArray = [file]
-  //       //   console.log(filesArray)
-  //       //   return filesArray
-  //         // var link = document.createElement('a');
-  //         // link.download = 'my-image-name.jpeg';
-  //         // link.href = dataUrl;
-  //         // link.click();
-  //       // })
-  //       // .then((filesArray) => {
-  //       //   if (navigator.canShare && navigator.canShare({ files: filesArray })) {
-
-  //       //     console.log("files array:"+filesArray)
-    
-  //       //     navigator.share({
-  //       //         title: `${storyName}'s Story`, 
-  //       //         text: text,  
-  //       //         url: document.location.href,
-  //       //         files: filesArray
-  //       //       })
-  //       //       .then(() => {
-  //       //         console.log('Successfully shared');
-  //       //       })
-  //       //       .catch(error => {
-  //       //         console.error('Something went wrong sharing the image', error);
-  //       //       });
-  //       //   }
-  //         // else {
-
-  //         //   htmlToImage.toJpeg(exportData[0], exportOptions)
-  //         //     .then(function (dataUrl) {
-  //         //       downloadjs(dataUrl, 'to-be-you-download-mobile.jpg');
-  //         //     });
-
-  //         // }
-  //       // });
-
-  //   }
-
-  //   else {
-
-  //     console.log("downloading image..") // to remove once lag issue is resolved
-  //     htmlToImage.toJpeg(exportData[0], exportOptions)
-  //           .then(function (dataUrl) {
-  //             downloadjs(dataUrl, 'to-be-you-download-desktop.jpg');
-  //             console.log("finished download!") // to remove once lag issue is resolved
-  //           });
-
-  //   }
-
-  // }
 
   return (
     
     <div>
       <h1 >Share your experience playing To Be You!</h1>
-      <div ref={ref} className="ShareableImage">
+      <div ref={ref} className="ShareableImage" style={{width: "300px", height: "300px"}}>
         
         
             <div className="ShareableImage__gradient"></div>
-            <div className="ShareableImage__avatar" style={{background : `url(${avatarImage}) no-repeat`}}></div>
+            {/* <div className="ShareableImage__avatar" style={{background : `url(${avatarImage}) no-repeat`}}></div> */}
+            <img className="test_avatar" crossOrigin = "anonymous" src={avatarImage} style={{position: "absolute", width: "300px", height: "300px",
+            left: "0px", top: "0px", opacity: "0.6"}} />
             <div className="ShareableImage__bottomGradient"></div>
-            <div className="ShareableImage__logo" style={{background : `url('/shareable_avatars/tobeyou-logo-white.svg') center`}}></div>
+            {/* <div className="ShareableImage__logo" style={{background : `url('/shareable_avatars/tobeyou-logo-white.svg') center`}}></div> */}
+            <img className="test_logo" crossOrigin = "anonymous" src="/shareable_avatars/tobeyou-logo-white.svg" style={{position: "absolute", width: "80px", height: "60px", left: "16px", 
+            top: "22px", filter: "drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.04))", transform: "rotate(-2deg)"}}/>
             <div className="ShareableImage__reflectionContainer">
-                <div className="ShareableImage__overline">{storyName}'s Story</div>
+                <div className="ShareableImage__overline">{storyName}</div>
                 <div className="ShareableImage__body">{displayText}</div>
             </div>
         
