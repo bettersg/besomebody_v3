@@ -14,7 +14,7 @@ const ShareStep = ({ reflection, characterId, setState, getState, next }) => {
 
   const personaName = persona.name.split(" ")[0]
 
-  const empathyCharacter = persona.reflectionBrowser[0].empathyCharacters.find((character) => character.characterName.toUpperCase() === data2[2].answer.toUpperCase());
+  const empathyCharacter = data2[2].answer ? persona.reflectionBrowser[0].empathyCharacters.find((character) => character.characterName.toUpperCase() === data2[2].answer.toUpperCase()) : persona.reflectionBrowser[0].empathyCharacters[0];
 
   const data = {
     storyName: personaName,
