@@ -205,6 +205,16 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center", 
     marginTop: "52px", 
   }, 
+  nextButton: {
+    position: "absolute", 
+    bottom: 20, 
+    opacity: 0.6,  
+    left: "47%", 
+    height: "8px", 
+    '&:hover': {
+      cursor: 'pointer',
+    },
+  }
 }))
 
 
@@ -260,17 +270,20 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
         {currentPage === 1 ? 
           <div className={classes.fullPage} onClick={() => setCurrentPage(currentPage + 1)}>
             <Typography className={classes.whiteText}>While this is the end for this story, it is the start of a new kind of story.</Typography>
+              <img src="/reflection/next_icon.png" className={`${classes.nextButton}`}/>
           </div>
           :
           currentPage === 2 ?
           <div className={classes.yourStories} onClick={() => setCurrentPage(currentPage + 1)}>
             <div className={classes.yourStoriesBkgrd}></div>
             <Typography className={classes.whiteTextWithBkGrd}>Your stories.</Typography>
+              <img src="/reflection/next_icon.png" className={`${classes.nextButton}`}/>
           </div>
           : currentPage === 3 ?
           <div className={classes.yourStoriesBkgrd}  onClick={() => setCurrentPage(currentPage + 1)}>
               <Typography className={classes.reflectionBubblesHeaderText}>375 players have finished the game.</Typography>
               <img src="/reflection/reflection_bubbles.png" className={`${classes.reflectionBubbles} reflectionsContainer__reflectionBubbles`}/>
+              <img src="/reflection/next_icon.png" className={`${classes.nextButton}`}/>
           </div>
           :
          currentPage === 4 ?
