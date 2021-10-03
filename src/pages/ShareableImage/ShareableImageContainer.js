@@ -52,7 +52,7 @@ const ShareableImageContainer = ({data }) =>{
 
   useEffect(() => {
     takeScreenShot(ref.current);
-    document.getElementsByClassName("ShareableImage")[0].display = "none"
+    document.getElementsByClassName("ShareableImage")[0].style.visibility='hidden' 
   }, [])
 
   // console.log('image', image)
@@ -298,7 +298,7 @@ const ShareableImageContainer = ({data }) =>{
       </div>
     
     
-      <button onClick={getImage}>Share {isMobile ? 'via Mobile' : 'via Desktop'}</button>
+      <button onClick={getImage}>{isMobile ? 'Share via Mobile' : 'Download Image'}</button>
       {/* <button onClick={loadImage}>Pre-load image</button> */}
       <img width={width} src={image} alt={"ScreenShot"} />
   </div>
