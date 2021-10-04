@@ -45,7 +45,7 @@
 
     &__overline {
         position: static;
-        width: 100%;
+        width: 150%;
         height: 15.5px;
         left: 0px;
         bottom: 162.5px;
@@ -55,6 +55,7 @@
         font-weight: 800;
         font-size: 12px; 
         line-height: 130%;
+        word-break: break-all;
 
         flex: none;
         order: 0;

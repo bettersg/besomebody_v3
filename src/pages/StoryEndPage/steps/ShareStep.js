@@ -17,7 +17,7 @@ const ShareStep = ({ reflection, characterId, setState, getState, next }) => {
   const empathyCharacter = data2[2].answer ? persona.reflectionBrowser[0].empathyCharacters.find((character) => character.characterName.toUpperCase() === data2[2].answer.toUpperCase()) : persona.reflectionBrowser[0].empathyCharacters[0];
 
   const data = {
-    storyName: personaName,
+    storyName: personaName+"'s Story",
     text: data2[4].answer,
     avatar: data2[2].answer, 
     avatarImage: empathyCharacter.characterImage 
