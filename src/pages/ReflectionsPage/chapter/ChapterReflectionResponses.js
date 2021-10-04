@@ -55,6 +55,14 @@ const useStyles = makeStyles((theme) => ({
     margin: "40px", 
     fontSize: "18px", 
   }, 
+  whiteTextReflection: {
+    color: "white", 
+    textAlign: "center", 
+    marginTop: "11px", 
+    marginBottom: "11px", 
+    fontSize: "15px", 
+    margin: "50px", 
+  }, 
   bottom: {
     bottom: 0,
     height: '20vh',
@@ -183,6 +191,30 @@ const useStyles = makeStyles((theme) => ({
       height: 'calc(var(--vh, 1vh) * 100)',
     },
   }, 
+  heart:{
+    width: "30px", 
+    '&:hover': {
+      cursor: 'pointer',
+    },
+  },
+  bottomLikeSection: {
+    display: "flex", 
+    flexDirection: "column",
+    opacity: 0.6,  
+    justifyContent: "center", 
+    alignItems: "center", 
+    marginTop: "52px", 
+  }, 
+  nextButton: {
+    position: "absolute", 
+    bottom: 20, 
+    opacity: 0.6,  
+    left: "47%", 
+    height: "8px", 
+    '&:hover': {
+      cursor: 'pointer',
+    },
+  }
 }))
 
 
@@ -238,24 +270,31 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
         {currentPage === 1 ? 
           <div className={classes.fullPage} onClick={() => setCurrentPage(currentPage + 1)}>
             <Typography className={classes.whiteText}>While this is the end for this story, it is the start of a new kind of story.</Typography>
+              <img src="/reflection/next_icon.png" className={`${classes.nextButton}`}/>
           </div>
           :
           currentPage === 2 ?
           <div className={classes.yourStories} onClick={() => setCurrentPage(currentPage + 1)}>
             <div className={classes.yourStoriesBkgrd}></div>
             <Typography className={classes.whiteTextWithBkGrd}>Your stories.</Typography>
+              <img src="/reflection/next_icon.png" className={`${classes.nextButton}`}/>
           </div>
           : currentPage === 3 ?
           <div className={classes.yourStoriesBkgrd}  onClick={() => setCurrentPage(currentPage + 1)}>
               <Typography className={classes.reflectionBubblesHeaderText}>375 players have finished the game.</Typography>
               <img src="/reflection/reflection_bubbles.png" className={`${classes.reflectionBubbles} reflectionsContainer__reflectionBubbles`}/>
+              <img src="/reflection/next_icon.png" className={`${classes.nextButton}`}/>
           </div>
           :
          currentPage === 4 ?
           <div className={classes.yourStoriesBkgrd}  onClick={() => setCurrentPage(currentPage + 1)}>
             <div className={classes.gradientBkgrd}>
               <ChapterResponse key={responses[0].id} response={responses[0]} />
+              <div className={classes.bottomLikeSection}>
+                <img src="/reflection/reflection_heart_white.png" className={classes.heart}/>
+                <Typography className={classes.whiteTextReflection}>Tap on this icon to say that you connected with a reflection.</Typography>
 
+              </div>
             </div>
           </div>
           :
@@ -272,7 +311,7 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
                   loader={<ClipLoader color="#898DE4" size={106} css={{display:'flex', left:'-15px', margin:'auto', height:'30px'}} />}
                   scrollableTarget={'reflectionsContainerId'}
                 >
-                  {responses.map(response => (
+                  {responses.map(response => ( 
                     response.answer.length > 5 && <ChapterResponse key={response.id} response={response} />
                   ))}
                 </InfiniteScroll>
