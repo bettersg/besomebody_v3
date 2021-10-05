@@ -8,6 +8,7 @@ const QuickFeedbackStep = ({ reflection, setState, next }) => {
 
   return (
     <ReflectionForm
+      chaptFeedback
       subtitle="OVER TO YOU"
       title="Chapter Feedback"
       questions={reflection.quickQuestions}

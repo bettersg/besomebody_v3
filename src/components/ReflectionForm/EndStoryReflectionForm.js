@@ -7,27 +7,78 @@ import QUESTIONS from '../../reflections/questions.json';
 
 import Question from './Question';
 
-const useStyles = makeStyles(() => ({
-  container: {
-    backgroundColor: 'rgba(255,255,255,0.7)',
+import "./style.scss";
+
+const useStyles = makeStyles((theme) => ({
+  wrapperContainer: {
+    height: '660px',
+    [theme.breakpoints.only('xs')]: {
+      height: 'calc(var(--vh, 1vh) * 100)',
+    },
+    paddingTop: 0, 
+        
+    backgroundColor: '#8ADFE5',
+    overflow: "auto", 
+  }, 
+  btn: {
+    padding: '10px 50px',
+    borderRadius: '40px',
+    marginBottom: '20px',
+    background: '#172153',
+    textDecoration: 'none',
+    color: '#ffffff',
+    fontWeight: '700',
+    width: "252px", 
+    '&:hover': {
+      backgroundColor: '#6C70DD',      
+      boxShadow: 'none',
+      
+    },
   },
   formGroup: {
     backgroundColor: 'white',
   },
   subtitle: {
-    fontSize: '16px',
-    color: 'rgba(0, 0, 0, 0.5)',
+    fontSize: '13px',
+    color: 'white',
+    fontWeight: 700, 
+    fontSize: "13px", 
+    letterSpacing: "0.12em",
+    marginBottom: "12px", 
   },
   title: {
     fontSize: '24px',
     fontWeight: 'bold',
+    color: 'white',
+    fontWeight: 900, 
   },
   textField: {
     // backgroundColor: '#e5e5e5',
   },
+  chaptFeedbackContainer: {
+    height: "151px",
+    backgroundColor: "#3835C1",  
+    marginTop:"0", 
+    paddingTop: "32px", 
+  },
+  reflectionFormContainer: {
+    marginTop: "48px", 
+  }, 
+  skipButton: {
+    color: "#C4C6F1", 
+    marginLeft: "20px", 
+    fontWeight: 700, 
+    fontSize: "13px", 
+    letterSpacing: "0.12em",
+  }, 
+  btnWrapper: {
+    display: "flex", 
+    justifyContent: "center", 
+    alignItems: "center", 
+  }
 }))
 
-const EndStoryReflectionForm = ({ subtitle, title, questions: propsQuestions, onSubmit, onSuccess, onError }) => {
+const EndStoryReflectionForm = ({ subtitle, title, questions: propsQuestions, onSubmit, onSuccess, onError, chaptFeedback }) => {
   const classes = useStyles();
 
   const questions = propsQuestions.map(id => QUESTIONS.find(question => question.id === id));
@@ -61,8 +112,17 @@ const EndStoryReflectionForm = ({ subtitle, title, questions: propsQuestions, on
   };
 
   return (
-    <Box pt={6} pb={2} className={classes.container}>
-      <Box>
+    <Box pt={6} pb={2} className={`${classes.wrapperContainer} chaptFeedbackContainer`}>
+      <Box className={`${chaptFeedback ? classes.chaptFeedbackContainer : classes.reflectionFormContainer} `  }>
+        {chaptFeedback ? 
+          <Box>
+            <Typography className={classes.skipButton}> 
+            {/* TODO: need onclick function to skip the page */}
+              SKIP
+            </Typography>
+          </Box>
+         : null
+        }
         <Box>
           <Typography className={classes.subtitle} variant="subtitle1" align="center">
             {subtitle ?? 'SHARE YOUR THOUGHTS WITH US'}
@@ -88,11 +148,11 @@ const EndStoryReflectionForm = ({ subtitle, title, questions: propsQuestions, on
           />
         </Box>
       ))}
-      <Box mt={2} p={2}>
+      <Box mt={2} p={2} className={classes.btnWrapper}>
         {
           isLoading
             ? <CircularProgress />
-            : <Button variant="contained" color="primary" fullWidth onClick={handleSubmit}>Submit</Button>
+            : <Button variant="contained" color="primary" fullWidth onClick={handleSubmit} className={classes.btn}>Submit</Button>
         }
       </Box>
     </Box>

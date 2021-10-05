@@ -42,7 +42,7 @@ const Question = ({ question, value, onChange }) => {
   switch (question.type) {
     case "MULTI_CHOICE":
       return (
-        <Box p={2} bgcolor="rgba(255,255,255,0.6)">
+        <Box p={2} bgcolor="rgba(255,255,255)">
           <Typography variant="body1">
             <b>{question.body}</b>
           </Typography>
