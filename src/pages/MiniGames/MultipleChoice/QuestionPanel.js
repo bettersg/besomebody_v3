@@ -291,9 +291,7 @@ export default function QuestionPanel({
     setAnswered(answer_id);
     checkUserAnswer(answer_id);
     setMessage('');
-    if (question.correct_answer_id !== answer_id) {
-      setMessage(explanation);
-    }
+    setMessage(explanation);
   };
 
   return (
@@ -353,7 +351,7 @@ export default function QuestionPanel({
                   
                   }
                   
-                  <Typography variant="body1" className={`answerBody ${isCorrectAnswer ? classes.answerCorrect : classes.answerWrong}`}>
+                  <Typography variant="body1" className={`answerBody ${classes.answerWrong}`}>
                     {message}
                   </Typography>
                 </>
