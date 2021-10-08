@@ -2,7 +2,7 @@
   {
     "id": 1,
     "type": "MULTI_CHOICE",
-    "body": "How did the character's story thus far make you feel?",
+    "body": "How did this part of the character's story make you feel?",
     "choices": [
       {
         "id":1,
@@ -41,12 +41,12 @@
   {
     "id": 2,
     "type": "LIKERT_SCALE",
-    "body": "How would you rate your level of engagement with the story?",
+    "body": "How much did you get into the character's head?",
     "leftChoice": {
-      "body": "I'm not feeling it."
+      "body": "I'm not them."
     },
     "rightChoice": {
-      "body": "I'm totally immersed!"
+      "body": "I'm totally them!"
     }
   },
   {
@@ -141,24 +141,68 @@
   {
     "id": 8,
     "type": "MULTI_CHOICE_IMAGE",
-    "body": "Which character do you identify most with in this story?",
+    "body": "Which character do you most resonate with in the character’s journey?",
     "choices": [
       {
         "body": "Nadia",
-        "image_url": "https://cdnb.artstation.com/p/assets/images/images/004/456/215/large/wil-hughes-troll-face.jpg?1483926054"
+        "image_url": "/shareable_avatars/nadia.png"
       },
       {
         "body": "Gavin",
-        "image_url": "https://www.getdigital.eu/web/getdigital/gfx/products/__generated__resized/1100x1100/Aufkleber_Trollface.jpg"
+        "image_url": "/shareable_avatars/gavin.png"
       },
       {
         "body": "Chloe",
-        "image_url": "https://www.nicepng.com/png/detail/2-24510_trollface-deal-with-it-troll-face-png.png"
+        "image_url": "/shareable_avatars/chloe.png"
       },
       {
         "body": "Azlin",
-        "image_url": "https://www.nicepng.com/png/detail/2-24510_trollface-deal-with-it-troll-face-png.png"
+        "image_url": "/shareable_avatars/azlin.png"
       }  
     ]
+  },
+  {
+    "id": 9,
+    "type": "MULTI_CHOICE",
+    "body": "How do you think the main character is feeling now?",
+    "choices": [
+      {
+        "id":1,
+        "body": "Happy"
+      },
+      {
+        "id":2,
+        "body": "Sad"
+      },
+      {
+        "id":3,
+        "body": "Worried"
+      },
+      {
+        "id":4,
+        "body": "Angry"
+      },
+      {
+        "id":5,
+        "body": "Confused"
+      },
+      {
+        "id":6,
+        "body": "Indifferent"
+      },
+      {
+        "id":7,
+        "body": "Unsure"
+      },
+      {
+        "id":8,
+        "body": "None of the above"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "type": "OPEN",
+    "body": "Why did you resonate with that character?"
   }
 ]

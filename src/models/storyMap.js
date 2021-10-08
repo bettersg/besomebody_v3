@@ -166,11 +166,8 @@ export const CHARACTER_MAP = [
           "/images/bg_nadia_intro.jpg",
           "/images/bg_nadia_bedroom.jpg",
           "/images/bg_nadia_selfiehijab.jpg",
-          "/images/bg_nadia_mall.jpg",
-          "/images/bg_nadia_cinema.jpg",
           "/images/bg_nadia_library.jpg",          
           "/images/ui_nadia_message.jpg",
-          "/images/bg_nadia_playgroundnight.jpg",          
           "/images/cha_nadia_gavin_casual_concerned.png",                  
           "/images/cha_nadia_gavin_casual_grinning.png",                  
           "/images/cha_nadia_gavin_casual_nervous.png",                  
@@ -181,14 +178,13 @@ export const CHARACTER_MAP = [
           "/images/cha_nadia_chloe_school_grinning.png",                  
           "/images/cha_nadia_chloe_school_normal.png",
           "/images/cha_nadia_chloe_school_sad.png",
-          "/images/cha_nadia_azlin_normal.png",
-          "/images/cha_nadia_azlin_teasing.png",
-          "/images/cha_nadia_azlin_angry.png",
-          "/images/cha_nadia_azlin_happy.png",
-          "/images/cha_nadia_azlin_confused.png",
-          "/images/cha_nadia_azlin_concerned.png",
+          "/images/cha_nadia_unaisah.png",
+          "/images/cha_nadia_zhihao.png",
           "/images/bg_launch.jpg",
-          "/images/bg_reflections.jpg",
+          "/images/bg_nadia_schoolhall.jpg",
+          "/images/bg_nadia_chloehome.jpg",
+          "/images/bg_nadia_gavinhome.jpg",
+          "/images/bg_nadia_fathercaratday.jpg",        
         ],
         endings: [
           {
@@ -235,7 +231,7 @@ export const CHARACTER_MAP = [
           },
           {
             characterName: 'Chloe',
-            characterImage: '/images/bg_reflections.jpg',
+            characterImage: '/shareable_avatars/chloe.png',
           },
 
 

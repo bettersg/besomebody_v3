@@ -281,7 +281,7 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
           </div>
           : currentPage === 3 ?
           <div className={classes.yourStoriesBkgrd}  onClick={() => setCurrentPage(currentPage + 1)}>
-              <Typography className={classes.reflectionBubblesHeaderText}>375 players have finished the game.</Typography>
+              <Typography className={classes.reflectionBubblesHeaderText}>{count} players have finished the game.</Typography>
               <img src="/reflection/reflection_bubbles.png" className={`${classes.reflectionBubbles} reflectionsContainer__reflectionBubbles`}/>
               <img src="/reflection/next_icon.png" className={`${classes.nextButton}`}/>
           </div>

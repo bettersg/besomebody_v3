@@ -11,7 +11,7 @@ import DidYouKnowStep from './steps/DidYouKnowStep';
 import ReflectionIntroStep from './steps/ReflectionIntroStep';
 import ReflectionResponsesStep from './steps/ReflectionResponsesStep';
 import LongFeedbackStep from './steps/LongFeedbackStep';
-import DataBrowserStep from './steps/DataBrowserStep';
+// import DataBrowserStep from './steps/DataBrowserStep';
 import StoryCompletedStep from './steps/StoryCompletedStep';
 import ShareStep from './steps/ShareStep';
 import AudioPlayer from "../../music/Music"
