@@ -4,12 +4,6 @@ import { CHARACTER_MAP } from '../../../models/storyMap'
 const StoryBrowserShare = ({ reflection, characterId, setState, getState, next }) => {
 
 
-  if (getState('answerDocs')) {
-    console.log ('state true')
-  }
-  else {
-    console.log ('state false')
-  }
   // const data2 = getState('answerDocs')
   // console.log('answerdocs ', data2) // this shows you all the data that has been collected from the state
   // console.log('characterId ', characterId) 

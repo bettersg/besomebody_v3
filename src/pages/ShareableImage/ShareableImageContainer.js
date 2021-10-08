@@ -38,22 +38,22 @@ const ShareableImageContainer = ({data }) =>{
   }
 
   const getImage = () => {
-    console.log(image)
+    // console.log(image)
     if (image) {
       if (isMobile) {
-        console.log ('isMobile' , isMobile)
+        // console.log ('isMobile' , isMobile)
         fetch(image)
         .then(res => res.blob())
         .then(blob => {
           const file = new File([blob], 'to-be-you-shared.png', {type: 'image/png'})
-          console.log(file)
+          // console.log(file)
           const filesArray = [file]
           return filesArray
         })
         .then((filesArray) => {
         if (navigator.canShare && navigator.canShare({ files: filesArray })) {
 
-          console.log("2 files array:", filesArray)
+          // console.log("2 files array:", filesArray)
   
           // NOTE: if text not empty, text will be displayed with URL in the shared message,
           // if text is empty, title will be displayed with URL in shared message 
@@ -78,7 +78,7 @@ const ShareableImageContainer = ({data }) =>{
 
       }
       else {
-        console.log ('isMobile' , isMobile)
+        // console.log ('isMobile' , isMobile)
         download(image, { name: 'to-be-you', extension: 'png' })
       }
     }

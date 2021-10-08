@@ -100,7 +100,7 @@ const OpeningSequence = () => {
 // functions 
     
     function setChoice() {
-        console.log('do nothing')
+        console.log('Opening Sequence')
     }
  
     
