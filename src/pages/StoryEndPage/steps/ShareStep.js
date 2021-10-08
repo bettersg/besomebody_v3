@@ -1,8 +1,14 @@
 import ShareableImageContainer from "../../ShareableImage/ShareableImageContainer";
 import { CHARACTER_MAP } from '../../../models/storyMap'
+import {
+  Button  
+} from '@material-ui/core'
+import {  useHistory } from 'react-router-dom'
+
 
 const ShareStep = ({ reflection, characterId, setState, getState, next }) => {
-
+  const history = useHistory()
+  
   const persona = CHARACTER_MAP.find((character) => character.characterId === characterId);  // I modified the last part slightly because  in this component, we know the characterId so we can reference that instead of the useParams option.
   const personaName = persona.name.split(" ")[0]
     
@@ -35,7 +41,16 @@ const ShareStep = ({ reflection, characterId, setState, getState, next }) => {
   //   avatar: "nadia"}
   // -- 
 
-  return <ShareableImageContainer data={data}></ShareableImageContainer>;
+  return (
+    <div>
+      <h1 >Share your experience playing To Be You!</h1>
+      <ShareableImageContainer data={data}></ShareableImageContainer>
+      <Button variant="contained" onClick={() => history.push('/characterchoice' )}>
+          Character Menu
+      </Button><hr />
+      <a href="mailto:tobeyou@better.sg" target="_blank" rel="noreferrer" style={{color:'#ffffff'}}>Send us feedback</a>
+    </div>
+  );
 
 }
 
