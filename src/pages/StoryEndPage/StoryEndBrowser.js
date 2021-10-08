@@ -12,8 +12,8 @@ import ReflectionIntroStep from './steps/ReflectionIntroStep';
 import ReflectionResponsesStep from './steps/ReflectionResponsesStep';
 // import LongFeedbackStep from './steps/LongFeedbackStep';
 // import DataBrowserStep from './steps/DataBrowserStep';
-// import ShareStep from './steps/ShareStep';
-import StoryBrowserShare from './steps/StoryBrowserShare';
+import ShareStep from './steps/ShareStep';
+// import StoryBrowserShare from './steps/StoryBrowserShare';
 import AudioPlayer from "../../music/Music"
 import Music from '../../music/tobeyou_outrolong.mp3'
 
@@ -59,9 +59,9 @@ const StoryEndBrowser = ({ reflectionId: propsReflectionId, globalVariables }) =
         <Step title="Reflections from Others"  component={(props) => <ReflectionResponsesStep reflectionId={reflectionId}  {...props} />} />
         {/* <Step title="Long Feedback" component={(props) => <LongFeedbackStep reflection={reflection} user={user} {...props} />} /> */}
         {/* <Step title="Data Browser" component={DataBrowserStep} /> */}
-        {/* <Step title="Share" component={(props) => <ShareStep reflection={reflection} characterId={globalVariables.character_id} user={user} {...props} />} /> */}
+        <Step title="Share" component={(props) => <ShareStep reflection={reflection} characterId={globalVariables.character_id} user={user} {...props} />} />
         {/* need to have a final step here to go back to menu */}
-        <Step title="StoryBrowserShare" component={(props) => <StoryBrowserShare characterId={character_id} reflectionId={reflectionId}  {...props} />}  />
+        {/* <Step title="StoryBrowserShare" component={(props) => <StoryBrowserShare characterId={character_id} reflectionId={reflectionId}  {...props} />}  /> */}
       </Steps>
     </Frame>
   );
