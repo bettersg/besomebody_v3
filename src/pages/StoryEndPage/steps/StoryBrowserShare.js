@@ -4,14 +4,19 @@ import { CHARACTER_MAP } from '../../../models/storyMap'
 const StoryBrowserShare = ({ reflection, characterId, setState, getState, next }) => {
 
 
-  
+  if (getState('answerDocs')) {
+    console.log ('state true')
+  }
+  else {
+    console.log ('state false')
+  }
   // const data2 = getState('answerDocs')
   // console.log('answerdocs ', data2) // this shows you all the data that has been collected from the state
-  console.log('characterId ', characterId) 
+  // console.log('characterId ', characterId) 
 
   const persona = CHARACTER_MAP.find((character) => character.characterId === characterId);  // I modified the last part slightly because  in this component, we know the characterId so we can reference that instead of the useParams option.
 
-  console.log('persona ', persona) 
+  // console.log('persona ', persona) 
 
   const personaName = persona.name.split(" ")[0]
 
