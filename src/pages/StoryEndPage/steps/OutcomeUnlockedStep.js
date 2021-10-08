@@ -15,7 +15,7 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 const useStyles = makeStyles((theme) => ({
   background: {
-    backgroundImage: ({ image }) => `url('/reflection/bg_outcomeunlocked.jpg')`,
+    backgroundColor: "#3DCAD3", 
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '660px',
@@ -29,7 +29,8 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '2rem',
     fontWeight: 800,
     color: '#ffffff',
-    marginTop: 60,
+    marginBottom: 16,
+    margin: "0 48px", 
   },
   bottom: {
     bottom: 0,
@@ -47,16 +48,17 @@ const useStyles = makeStyles((theme) => ({
   container: {
     margin: 'auto',
     textAlign: 'center',
+    paddingTop: "100px", 
   },
   btn: {
     padding: '10px 50px',
     borderRadius: '40px',
     marginBottom: '20px',
-    background: '#664EFC',
-    backgroundColor: '#664EFC',
+    background: '#172153',
     textDecoration: 'none',
     color: '#ffffff',
     fontWeight: '700',
+    width: "252px", 
     '&:hover': {
       backgroundColor: '#6C70DD',      
       boxShadow: 'none',
@@ -64,11 +66,20 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   text: {
-    color: '#ffffff',
+    color: '#000A11',
     fontSize: '0.9rem',
     fontWeight: '400',
     textDecoration: 'none',
     marginBottom: 30,
+    margin: "0 40px", 
+    fontSize: "16px", 
+  }, 
+  outcomeIcons: {
+    display: "flex", 
+    justifyContent: "space-evenly", 
+    width: "100%", 
+    marginBottom: "34px", 
+    padding: "0 48px", 
   }
 }))
 
@@ -78,23 +89,26 @@ const OutcomeUnlockedStep = ({ next }) => {
   const [isLoading, setIsLoading] = useState(false)
 
   return (
-  <Box className={classes.background}>
-    <Container maxWidth="md" className={classes.container}>
+  <div className={classes.background}>
+    <Container className={classes.container}>
         <Box py={4} display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-          <div className={classes.headerText}> <img
-            src={'/reflection/icon_outcomeunlocked.png'}            
-            alt={'Outcome Unlocked'}            
-          />
-          <img
-            src={'/reflection/icon_outcomeunlocked.png'}            
-            alt={'Outcome Unlocked'}            
-          />
-          <img
-            src={'/reflection/icon_outcomeunlocked.png'}            
-            alt={'Outcome Unlocked'}            
-          /> </div>
+          <div className={classes.outcomeIcons}> 
+            <img
+              src={'/reflection/icon_outcomeunlocked.png'}            
+              alt={'Outcome Unlocked'}            
+            />
+            <img
+              src={'/reflection/icon_outcomelocked.png'}            
+              alt={'Outcome Unlocked'}            
+            />
+            <img
+              src={'/reflection/icon_outcomelocked.png'}            
+              alt={'Outcome Unlocked'}            
+            /> 
+          </div>
+
           <Typography className={classes.headerText}>Outcome Unlocked!</Typography>
-          <Typography className={classes.text}>You have unlocked an ending for this story! To unlock more endings, you may need to replay this chapter or replay the whole story.</Typography>
+          <Typography className={classes.text}>You’ve unlocked one of Nadia’s three outcomes for chapter 3. <br/><br/>To unlock more outcomes, replay chapters from Nadia’s home screen.</Typography>
       </Box>
         <Box className={classes.bottom}>        
           {/* <Button variant="contained" className={classes.btn} onClick={() => setPage(REFLECTION_PAGE_CHAPTER_REFLECTION_RESPONSES)}> */}
@@ -104,7 +118,7 @@ const OutcomeUnlockedStep = ({ next }) => {
         </Button>
       </Box>
     </Container>
-  </Box>
+  </div>
   )
 }
 
