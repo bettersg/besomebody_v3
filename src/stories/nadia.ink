@@ -2488,6 +2488,12 @@ That’s my plan 🧡 #speaker_1
     
 
 === nadia_3_2_narration ===
+#knot:nadia_2_minigame
+#ui:mcq
+#game_id:4 // must add some text
+Minigame 4 // must add some text
+
+
 #knot:nadia_3_2_narration
 #ui:narrator
 #background:bg_nadia_canteen.jpg
@@ -2867,7 +2873,7 @@ I miss my friends, but at the same time, I'm a bit nervous about the upcoming ga
 === nadia_3_3a ===
 #knot:nadia_3_3a
 #ui:narrator
-#background:bg_nadia_chloehome.jpg
+#background:bg_nadia_selfiehijab.jpg
 6:30pm, outside Chloe's house. 
 Gavin and I arrived a bit late to the party.
 #ui:scene
@@ -2993,7 +2999,7 @@ No!!!! #speaker_right
 === nadia_3_3b ===
 #knot:nadia_3_3b
 #ui:narrator
-#background:bg_nadia_gavinhome.jpg
+#background:bg_nadia_selfiehijab.jpg
 6pm, outside Gavin's apartment. 
 #ui:scene
 #background:bg_nadia_gavinhome.jpg
@@ -3080,7 +3086,7 @@ Absolutely.  #speaker_left
 === nadia_3_3c ===
 #knot:nadia_3_3c
 #ui:narrator
-#background:bg_nadia_chloehome.jpg
+#background:bg_nadia_selfiehijab.jpg
 6pm, outside Chloe's apartment. 
 #ui:scene
 #background:bg_nadia_chloehome.jpg
@@ -3149,7 +3155,7 @@ OI!! #speaker_self
 === nadia_3_3d ===
 #knot:nadia_3_3d
 #ui:narrator
-#background:bg_nadia_gavinhome.jpg
+#background:bg_nadia_selfiehijab.jpg
 6pm, outside Gavin's house. 
 #ui:scene
 #background:bg_nadia_gavinhome.jpg
