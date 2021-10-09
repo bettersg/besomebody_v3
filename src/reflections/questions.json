@@ -144,18 +144,22 @@
     "body": "Which character do you most resonate with in the character’s journey?",
     "choices": [
       {
+        "id":1,
         "body": "Nadia",
         "image_url": "/shareable_avatars/nadia.png"
       },
       {
+        "id":2,
         "body": "Gavin",
         "image_url": "/shareable_avatars/gavin.png"
       },
       {
+        "id":3,
         "body": "Chloe",
         "image_url": "/shareable_avatars/chloe.png"
       },
       {
+        "id":4,
         "body": "Azlin",
         "image_url": "/shareable_avatars/azlin.png"
       }  
