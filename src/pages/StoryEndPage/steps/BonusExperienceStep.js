@@ -7,6 +7,7 @@ import {
 } from '@material-ui/core'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import { useAuth } from '../../../contexts/AuthContext'
+import {  useHistory } from 'react-router-dom'
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
@@ -83,6 +84,7 @@ const BonusExperienceStep = ({ next }) => {
   const classes = useStyles()
   const { currentUser } = useAuth()  
   const [isLoading, setIsLoading] = useState(false)
+  const history = useHistory()
 
   return (
   <Box className={classes.background}>
@@ -98,7 +100,7 @@ const BonusExperienceStep = ({ next }) => {
 
           Start
         </Button>
-        <Typography className={classes.mainMenuButton}>Back to Main Menu</Typography>
+       <Typography className={classes.mainMenuButton} onClick={() => history.push('/characterchoice' )}> Back to Character Menu</Typography>
         {/* link back to main menu */}
       </Box>
     </Container>

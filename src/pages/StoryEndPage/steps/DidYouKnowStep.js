@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     margin: 'auto',
     textAlign: 'center',    
     alignItems: "center",
-    paddingTop:'25%',
+    paddingTop:'15%',
   },
   btn: {
     padding: '10px 50px',
@@ -101,7 +101,12 @@ const DidYouKnowStep = ({ reflection , next}) => {
         <Box className={classes.container}>
           <Typography className={classes.topText}>DID YOU KNOW?</Typography>
           <Typography className={classes.mainText}>{reflection.didyouknow}</Typography>
-          {reflection.media ? <a href={reflection.media} target="_blank" className={classes.link}>FIND OUT MORE</a> : null}
+          {reflection.media ?
+            reflection.mediatype === "video" ?
+              <a href={reflection.media} target="_blank" className={classes.link}><img src={reflection.mediaimage} /></a> :
+              <a href={reflection.media} target="_blank" className={classes.link}>READ MORE</a>
+            : null
+          }
       </Box>
         <Box className={classes.bottom}>        
           <Button variant="contained" className={classes.btn} onClick={() => next()}>

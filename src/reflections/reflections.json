@@ -43,6 +43,8 @@
     "story":"Nadia", 
     "didyouknow": "Inter-cultural relationships are increasingly common in Singapore - but there are still hurdles and hardships along the way.",
     "media": "https://www.facebook.com/mosg.tv/videos/705929542901799/",
+    "mediatype" : "video",
+    "mediaimage" : "/didyouknow/nadia_video.png",
     "quickQuestions": [     
       9,      
       2,

@@ -2015,7 +2015,7 @@ Sure? Kinda disappeared after school, thought something happened. You can tell m
 + [Open up, a little] -> nadia_3_1b
 
 
-= nadia_3_1a 
+=== nadia_3_1a ===
     It was nothing, just tired #speaker_self
     ~ nadia_3_relationship -= 1
     Okayyy. You sound pretty bummed tho #speaker_1
@@ -2237,7 +2237,7 @@ Hmm....
 -  I’ll see you in school k?   #speaker_self
 -> nadia_3_2_narration
 
-= nadia_3_1b
+=== nadia_3_1b ===
     Yeah. Left school in a bit of a mood 👀 you ever have those days? #speaker_self 
     ~ nadia_3_relationship += 1
     Guess so. Talking nonsense with you or whoever’s in the student council room helps  #speaker_1
@@ -2319,7 +2319,8 @@ Hmm....
     Woah  #speaker_1
     What does “not like most Malays” even mean  #speaker_self 
     Yo it’s not that deep, chill  #speaker_1
-    And so what if I was like “most Malays” which means what EVEN #speaker_self 
+    And so what if I was like “most Malays” which means what EVEN #speaker_self
+    Look I’m on *your* side here, Zhihao WAS being dickish #speaker_1
     + [Try to Explain] 
     ~ nadia_3_relationship +=1
     lol don’t think am legit enough to call myself a minah #speaker_self 
@@ -2335,14 +2336,15 @@ Hmm....
     🙄🙄🙄 minah is short for Aminah btw, like an actual name  #speaker_self 
     So like when OTHER people start using it.. as a label, bc I guess we’re *all* Aminah 🙄🙄🙄 #speaker_self 
     Oh wow #speaker_1
-- Look I’m on *your* side here, Zhihao WAS being dickish #speaker_1
+    Hey I'm sorry about that. I'll have a chat with Zhihao if he does it again. #speaker_1
+- Sigh. He can be pretty irritating sometimes. 😡  #speaker_self 
 + I don’t understand why you’re friends with the guy.[] #speaker_self 
     ~ nadia_3_relationship -=1
     Relationship: {nadia_3_relationship} // remove 
 + I’m not pissed at you, but argh! [] #speaker_self 
     ~ nadia_3_relationship +=1
     Relationship: {nadia_3_relationship} // remove 
-- Zhihao's all right... deep down #speaker_1 
+- Sigh... Sorry. Zhihao's all right... deep down? #speaker_1 
 { nadia_3_relationship < 3 : 
     -> nadia_3_1maybe
 }
@@ -2379,7 +2381,7 @@ Yeah tell you next time maybe. I don’t really wanna relive it all in text lol 
 Ok thenn #speaker_1 
 Thanks for checking in on me btw 🙂 #speaker_self 
 Duh no prob. Got me real worried for a bit, radio silence all #speaker_1 
-😬 lol k will give u advanced warning next time #speaker_self 
+😬 lol k will give u advance warning next time #speaker_self 
 You still wanna meet my church friends? Am gonna see them this weekend #speaker_1 
 Idkkk might be tough. My social batt is like zero, lol. Can just see how it goes? #speaker_self  
 You sure you’re ok right?  #speaker_1 
@@ -2424,7 +2426,7 @@ He’s good deeeeep down laaa, and he's fine...  #speaker_1
 ...in small amounts  #speaker_1 
 Ha!!!! Knew it!️ #speaker_self 
 What happened with you and Azlin anyway #speaker_1 
-☹️️ #speaker_self 
+😔️️ #speaker_self 
 No? Don’t wanna talk about it? #speaker_1 
 I do... but I also don’t really wanna relive it in text️ #speaker_self 
 Ya know?️ #speaker_self 
@@ -2438,7 +2440,7 @@ That what you always do? Should I be worried lol️ #speaker_self
 Well I don’t think sulking is a competitive sport #speaker_1 
 So you can take the lead today lol #speaker_1 
 🙄 .. I don’t expect you to get it ok, so it’s fine if you don’t. ️ #speaker_self 
-My ears (👁️👁️) are at your disposal.  #speaker_1 
+My ears (👂👂️) are at your disposal.  #speaker_1 
 The chat I had with Azlin gave me all sorts of feelings about being Malay️ #speaker_self 
 I’m not ashamed of being Malay, like NO WAY. ️ #speaker_self 
 Uh huh #speaker_1 
@@ -2994,7 +2996,15 @@ What?! Since when! #speaker_right
 You know how you like to nap in those armchairs? In the school library?  #speaker_self
 We have videos.#speaker_left
 No!!!! #speaker_right
--> nadia_3_4_narration
+
+This is all so silly.  #inner_monologue
+And yet, it feels so wonderful.  #inner_monologue
+It won’t last forever, so I should cherish these moments while they last.  #inner_monologue
+University will be a whole new world, filled with new challenges.  #inner_monologue
+
+
+
+-> nadia_3_3_epilogue
 
 === nadia_3_3b ===
 #knot:nadia_3_3b
@@ -3081,7 +3091,14 @@ Thanks for putting this together. #speaker_self
 Wasn’t too hard. Most things are easy if you want them to be.  #speaker_left
 Yeah? #speaker_self
 Absolutely.  #speaker_left
--> nadia_3_4_narration
+Things won’t always be this easy.  #inner_monologue
+But he’s trying so hard, and makes me feel so… visible. #inner_monologue
+I should cherish it while it lasts.  #inner_monologue
+I hope my dad is ok with this.  #inner_monologue
+He’s gotten a lot more relaxed about everything now that I have a place in med school.   #inner_monologue
+
+
+-> nadia_3_3_epilogue
 
 === nadia_3_3c ===
 #knot:nadia_3_3c
@@ -3147,9 +3164,12 @@ That’s ok right? #speaker_right
     Thanks for getting the Pizza, I guess. #speaker_self
 - Hurry back Nad! Zhihao is trying to look at your cards! #speaker_left
 OI!! #speaker_self
+I wonder what I’ll feel when I look back on all this some day.  #inner_monologue
+I had these friends, and we had our moments, but perhaps… there’s more out there to look forward to. #inner_monologue
+University will be a whole different ball game. #inner_monologue
 
 
--> nadia_3_4_narration
+-> nadia_3_3_epilogue
 
 
 === nadia_3_3d ===
@@ -3259,10 +3279,28 @@ how is it #speaker_1
 🤞   #speaker_1
 You want to hang out later? I won’t be long here, I think.  #speaker_self
 can, set.  #speaker_1
+#ui:scene
+#background:bg_nadia_gavinhome.jpg
+I’m so glad I have Azlin. #inner_monologue
+I can escape these awkward parties and have real conversations with her… even hard ones. #inner_monologue
+I wonder if I can find people like her in university too. #inner_monologue
+
+
+
+-> nadia_3_3_epilogue
+
+
+=== nadia_3_3_epilogue ===
+#knot:nadia_3_3d
+#ui:narrator
+#background:bg_nadia_selfiehijab.jpg
+Some days flew by, others dragged on.
+More gatherings, some farewells to those who went overseas for uni.
+I wondered what university would be like for me.
+
 
 
 -> nadia_3_4_narration
-
 
 ===  nadia_3_4_narration ===
 #knot:nadia_3_3d
@@ -3317,9 +3355,10 @@ It’s not even 8 yet. You said 8.30, kan? Plenty of time.. #speaker_right
     #ui:narrator
     #background:bg_nadia_intro.jpg
     Ok, take a deep breath. 
+    VAR chapter_3_ending = 1 
     I'm going to be ok. 
     I just need... to be me.
-    VAR chapter_3_ending = 1 
+    
     -> chapter_3_ending_1
     
     = nadia_3_4b
@@ -3363,9 +3402,10 @@ It’s not even 8 yet. You said 8.30, kan? Plenty of time.. #speaker_right
     #ui:narrator
     #background:bg_nadia_intro.jpg
     - Ok, take a deep breath. 
+    ~ chapter_3_ending = 2
     I'm going to be ok. 
     I just need... to be me.
-    ~ chapter_3_ending = 2
+    
 
     -> chapter_3_ending_2
     
@@ -3402,15 +3442,17 @@ It’s not even 8 yet. You said 8.30, kan? Plenty of time.. #speaker_right
     #ui:narrator
     #background:bg_nadia_intro.jpg
     Ok, take a deep breath. 
+    ~ chapter_3_ending = 3
     I’m going to be ok.
     I just need... to be me.
-    ~ chapter_3_ending = 3
+    
 
     -> chapter_3_ending_3
     
 
 
 === chapter_3_ending_1 === // for debug only
+#knot:chapter_3_ending_1
 #ui:story_end
 #reflection_id:4
 the end = 1    
@@ -3421,6 +3463,7 @@ VAR story_finished = true
     -> END
  
 === chapter_3_ending_2 === // for debug only
+#knot:chapter_3_ending_2
 #ui:story_end
 #reflection_id:4
 the end = 2
@@ -3430,6 +3473,7 @@ the end = 2
       -> END
 
 === chapter_3_ending_3 === // for debug only
+#knot:chapter_3_ending_3
 #ui:story_end
 #reflection_id:4
 the end = 3

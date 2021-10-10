@@ -54,14 +54,15 @@ const StoryEndBrowser = ({ reflectionId: propsReflectionId, globalVariables }) =
         {/* <Step title="Outcome Unlocked" component={OutcomeUnlockedStep} /> */}
         {/* <Step title="Quick Feedback" component={(props) => <QuickFeedbackStep reflection={reflection} {...props} />} /> */}
         <Step title="Bonus Experience" component={BonusExperienceStep} />
+        <Step title="Did You Know"  component={(props) => <DidYouKnowStep reflection={reflection} {...props} />} />
         {/* <Step title="ReflectionIntroStep" component={ReflectionIntroStep} /> */}
         <Step title="ReflectionIntro"  component={(props) => <ReflectionIntroStep reflectionId={reflectionId}  {...props} />}/>
         <Step title="Reflections from Others"  component={(props) => <ReflectionResponsesStep reflectionId={reflectionId}  {...props} />} />
         {/* <Step title="Long Feedback" component={(props) => <LongFeedbackStep reflection={reflection} user={user} {...props} />} /> */}
         {/* <Step title="Data Browser" component={DataBrowserStep} /> */}
         <Step title="Share" component={(props) => <ShareStep reflection={reflection} characterId={globalVariables.character_id} user={user} {...props} />} />
-        {/* need to have a final step here to go back to menu */}
-        {/* <Step title="StoryBrowserShare" component={(props) => <StoryBrowserShare characterId={character_id} reflectionId={reflectionId}  {...props} />}  /> */}
+        
+
       </Steps>
     </Frame>
   );
