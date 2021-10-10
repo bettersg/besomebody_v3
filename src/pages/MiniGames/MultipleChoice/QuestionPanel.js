@@ -297,7 +297,7 @@ export default function QuestionPanel({
   return (
     <>
       <Card className={classes.root}>
-        <CardActionArea>
+         
           <CardContent>
             <Typography variant="h5" className={classes.questionNumber}>
               Question {questionNo} of {total}
@@ -308,7 +308,7 @@ export default function QuestionPanel({
               </Typography>
             </Box>
           </CardContent>
-        </CardActionArea>
+        
         <Box m={2}>
           <Grid
             spacing={2}
