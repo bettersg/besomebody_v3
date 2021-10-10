@@ -18,6 +18,7 @@ import AudioPlayer from "../../music/Music"
 import Music from '../../music/tobeyou_outrolong.mp3'
 
 import REFLECTIONS from '../../reflections/reflections.json'
+import QUESTIONS from "../../reflections/questions.json";
 
 const StoryEnd = ({ reflectionId: propsReflectionId, globalVariables }) => {  
   // console.log('story end global vars:', globalVariables)
@@ -37,8 +38,16 @@ const StoryEnd = ({ reflectionId: propsReflectionId, globalVariables }) => {
   const reflection = useMemo(
     () => REFLECTIONS.find((reflection) => reflection.id === reflectionId),
     [reflectionId]
-  )
- 
+  );
+
+  const questions = useMemo(
+    () => {
+      const quickQuestions = reflection.quickQuestions.map(questionId => QUESTIONS.find(question => question.id === questionId));
+      const longQuestions = reflection.longQuestions.map(questionId => QUESTIONS.find(question => question.id === questionId));
+      return [...quickQuestions, ...longQuestions];
+    },
+    [reflection],
+  );
 
   const config = {
     // navigation: {
@@ -58,7 +67,7 @@ const StoryEnd = ({ reflectionId: propsReflectionId, globalVariables }) => {
         <Step title="Bonus Experience" component={BonusExperienceStep} />
         <Step title="ReflectionIntro"  component={(props) => <ReflectionIntroStep reflectionId={reflectionId}  {...props} />}/>
         <Step title="Reflections from Others"  component={(props) => <ReflectionResponsesStep reflectionId={reflectionId}  {...props} />} />
-        <Step title="Long Feedback" component={(props) => <LongFeedbackStep reflection={reflection} characterId={globalVariables.character_id} user={user} {...props} />} />
+        <Step title="Long Feedback" component={(props) => <LongFeedbackStep reflection={reflection} questions={questions} characterId={globalVariables.character_id} user={user} {...props} />} />
         {/* <Step title="Data Browser" component={DataBrowserStep} /> */}
         <Step title="Share" component={(props) => <ShareStep reflection={reflection} characterId={globalVariables.character_id} user={user} {...props} />} />
       </Steps>
