@@ -3353,7 +3353,7 @@ It’s not even 8 yet. You said 8.30, kan? Plenty of time.. #speaker_right
     #background:ui_nadia_message.jpg
     Gavin: Good luck babe!! You got this 💪❤️‍🔥 # message
     #ui:narrator
-    #background:bg_nadia_intro.jpg
+    #background:bg_nadia_selfiehijab.jpg
     Ok, take a deep breath. 
     VAR chapter_3_ending = 1 
     I'm going to be ok. 
@@ -3400,7 +3400,7 @@ It’s not even 8 yet. You said 8.30, kan? Plenty of time.. #speaker_right
         #background:ui_nadia_message.jpg
         Gavin: Good luck Nad! You got this 😉 #message
     #ui:narrator
-    #background:bg_nadia_intro.jpg
+    #background:bg_nadia_selfiehijab.jpg
     - Ok, take a deep breath. 
     ~ chapter_3_ending = 2
     I'm going to be ok. 
@@ -3440,7 +3440,7 @@ It’s not even 8 yet. You said 8.30, kan? Plenty of time.. #speaker_right
     #background:ui_nadia_message.jpg
     Azlin: good luck on your first day! blow them away naddd 🔥x💯 #message
     #ui:narrator
-    #background:bg_nadia_intro.jpg
+    #background:bg_nadia_selfiehijab.jpg
     Ok, take a deep breath. 
     ~ chapter_3_ending = 3
     I’m going to be ok.
