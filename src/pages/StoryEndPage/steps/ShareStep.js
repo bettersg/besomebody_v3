@@ -1,14 +1,89 @@
 import ShareableImageContainer from "../../ShareableImage/ShareableImageContainer";
 import { CHARACTER_MAP } from '../../../models/storyMap'
 import {
-  Button  
+  Box,
+  Button,
+  Typography,
+  Container,
 } from '@material-ui/core'
+import makeStyles from '@material-ui/core/styles/makeStyles'
 import {  useHistory } from 'react-router-dom'
+
+
+
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+
+const useStyles = makeStyles((theme) => ({
+  background: {
+    // backgroundImage: ({ image }) => `url('/images/bg_reflections.jpg')`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    height: '660px',
+    [theme.breakpoints.only('xs')]: {
+      height: 'calc(var(--vh, 1vh) * 100)',
+    },
+    bottom: 0,
+    maxHeight: '100%',
+
+  },
+  headerText: {
+    fontSize: '1.5rem',
+    fontWeight: 700,
+    color: '#ffffff',
+    textAlign: 'center',
+    marginTop: 50,
+    marginBottom:15,
+  },
+  bottom: {
+    bottom: 0,
+    height: '15vh',
+    position: 'absolute',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    left: 0,
+    right:0,
+    textAlign: 'center',
+    // display: 'flex',    
+    // flexDirection: 'column',
+    // alignItems: 'center',
+  },
+  container: {
+    margin: 'auto',
+    textAlign: 'center',
+  },
+  btn: {
+    padding: '10px 50px',
+    borderRadius: '40px',
+    marginBottom: '20px',
+    background: '#664EFC',
+    backgroundColor: '#664EFC',
+    textDecoration: 'none',
+    color: '#ffffff',
+    fontWeight: '700',
+    '&:hover': {
+      backgroundColor: '#6C70DD',      
+      boxShadow: 'none',
+      
+    },
+  },
+  text: {
+    color: '#ffffff',
+    fontSize: '0.9rem',
+    fontWeight: '400',
+    textDecoration: 'none',
+    marginBottom: 30,
+  }
+}))
 
 
 const ShareStep = ({ reflection, characterId, setState, getState, next }) => {
   const history = useHistory()
-  
+  const classes = useStyles()
+
   const persona = CHARACTER_MAP.find((character) => character.characterId === characterId);  // I modified the last part slightly because  in this component, we know the characterId so we can reference that instead of the useParams option.
   const personaName = persona.name.split(" ")[0]
     
@@ -42,14 +117,16 @@ const ShareStep = ({ reflection, characterId, setState, getState, next }) => {
   // -- 
 
   return (
-    <div>
-      <h1 >Share your experience playing To Be You!</h1>
+    <Box className={classes.background}>
+      <Typography className={classes.headerText}>Share your experience on social media!</Typography>
       <ShareableImageContainer data={data}></ShareableImageContainer>
-      <Button variant="contained" onClick={() => history.push('/characterchoice' )}>
-          Character Menu
-      </Button><hr />
-      <a href="mailto:tobeyou@better.sg" target="_blank" rel="noreferrer" style={{color:'#ffffff'}}>Send us feedback</a>
-    </div>
+      <Box className={classes.bottom}>  
+        <Button variant="contained" className={classes.btn} onClick={() => history.push('/characterchoice')}>
+            Character Menu
+        </Button><hr />
+        <a href="mailto:tobeyou@better.sg" target="_blank" rel="noreferrer" style={{ color: '#ffffff' }}>Send us feedback</a>
+      </Box>
+    </Box>
   );
 
 }
