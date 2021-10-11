@@ -2,7 +2,13 @@ import React, { useEffect, useState , createRef } from 'react'
 // import ShareableImage from './ShareableImage'
 // import * as htmlToImage from 'html-to-image';
 // import downloadjs from "downloadjs";
-import {isMobile} from 'react-device-detect';
+import { isMobile } from 'react-device-detect';
+import {
+  Box,
+  Button,
+  Typography,
+  Container,
+} from '@material-ui/core'
 // import Loader from "../../components/Loader";
 import html2canvas from 'html2canvas'
 
@@ -133,9 +139,11 @@ const ShareableImageContainer = ({data }) =>{
       </div>
     
     
-      <button onClick={getImage}>{isMobile ? 'Share via Mobile' : 'Download Image'}</button>
+      
       {/* <button onClick={loadImage}>Pre-load image</button> */}
-      <img width={width} src={image} alt={"ScreenShot"} />
+      <img width={width} src={image} alt={"ScreenShot"} className="ShareableImage" />
+      <Button variant="outlined" className="downloadBtn" onClick={getImage} >{isMobile ? 'Share via Mobile' : 'Download Image'} </Button>
+      {/* <button onClick={getImage} className="btn">{isMobile ? 'Share via Mobile' : 'Download Image'}</button> */}
   </div>
   )};
 
