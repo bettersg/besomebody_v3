@@ -2,7 +2,9 @@ import { useState } from 'react';
 import { Typography, Box, TextField, Slider, RadioGroup, Radio, FormControlLabel } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles((theme) => ({
+import formatString from '../../helpers/formatString';
+
+const useStyles = makeStyles(() => ({
   imageChoiceContainer: {
     display: 'flex',
     overflowX: 'scroll',
@@ -31,11 +33,13 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 0,
     border: '2px solid red',
   },
-}))
+}));
 
-const Question = ({ question, value, onChange }) => {
+const Question = ({ question, value, onChange, context }) => {
   const classes = useStyles();
   const [answerLength, setAnswerLength] = useState(0);
+
+  const body = formatString(question.body, context);
 
   const handleChange = (event) => {
     onChange(event.target.value);
@@ -46,11 +50,11 @@ const Question = ({ question, value, onChange }) => {
       return (
         <Box p={2} bgcolor="rgba(255,255,255)">
           <Typography variant="body1">
-            <b>{question.body}</b>
+            <b>{body}</b>
           </Typography>
           <RadioGroup value={value} onChange={handleChange}>
             {question.choices.map(choice => (
-              <FormControlLabel key={choice.body} value={choice.body} control={<Radio />} label={choice.body}  />
+              <FormControlLabel key={choice.body} value={choice.body} control={<Radio />} label={formatString(choice.body, context)}  />
             ))}
           </RadioGroup>
         </Box>
@@ -59,7 +63,7 @@ const Question = ({ question, value, onChange }) => {
       return (
         <Box p={2} bgcolor="rgba(255,255,255,0.6)">
           <Typography variant="body1">
-            <b>{question.body}</b>
+            <b>{body}</b>
           </Typography>
           <Box className={classes.imageChoiceContainer}>
             {question.choices.map(choice => (
@@ -68,13 +72,13 @@ const Question = ({ question, value, onChange }) => {
                   className={value === choice.body
                     ? `${classes.imageChoiceImg} ${classes.imageChoiceImgSelected}`
                     : classes.imageChoiceImg}
-                  alt={choice.body}
+                  alt={formatString(choice.body, context)}
                   src={choice.image_url}
                   onClick={() => handleChange({
                     target: { value: choice.body }
                   })}
                 />
-                <b>{choice.body}</b>
+                <b>{formatString(choice.body, context)}</b>
               </Box>
             ))}
           </Box>
@@ -84,18 +88,18 @@ const Question = ({ question, value, onChange }) => {
       return (
         <Box p={2} bgcolor="rgba(255,255,255,0.6)">
           <Typography variant="body1">
-            <b>{question.body}</b>
+            <b>{body}</b>
           </Typography>
           <Box mt={2}>
             <Box display="flex" justifyContent="space-between">
               <Box>
                 <Typography variant="body1">
-                  {question.leftChoice.body}
+                  {formatString(question.leftChoice.body, context)}
                 </Typography>
               </Box>
               <Box>
                 <Typography variant="body1">
-                  {question.rightChoice.body}
+                  {formatString(question.rightChoice.body, context)}
                 </Typography>
               </Box>
             </Box>
@@ -108,7 +112,7 @@ const Question = ({ question, value, onChange }) => {
       return (
         <Box p={2} bgcolor="rgba(255,255,255,0.6)">
           <Typography variant="body1">
-            <b>{question.body}</b>
+            <b>{body}</b>
           </Typography>
           <Box mt={2}>
             <TextField

@@ -12,6 +12,7 @@ const QuickFeedbackStep = ({ reflection, setState, next }) => {
       subtitle="OVER TO YOU"
       title="Chapter Feedback"
       questions={reflection.quickQuestions}
+      context={reflection.context}
       onSubmit={handleSubmit}
     />
   );

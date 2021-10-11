@@ -2,7 +2,7 @@
   {
     "id": 1,
     "type": "MULTI_CHOICE",
-    "body": "How did this part of the character's story make you feel?",
+    "body": "How did this part of {character_name}'s story make you feel?",
     "choices": [
       {
         "id":1,
@@ -41,7 +41,7 @@
   {
     "id": 2,
     "type": "LIKERT_SCALE",
-    "body": "How much did you get into the character's head?",
+    "body": "How much did you get into {character_name}'s head?",
     "leftChoice": {
       "body": "I'm not them."
     },
@@ -80,7 +80,7 @@
   {
     "id": 5,
     "type": "MULTI_CHOICE",
-    "body": "Which of the choices did you find the most challenging for Nadia?",
+    "body": "Which of the choices did you find the most challenging for {character_name}?",
     "choices": [
       {
         "id":1,
@@ -103,7 +103,7 @@
   {
     "id": 6,
     "type": "MULTI_CHOICE",
-    "body": "Which of the situations did you find the most challenging for Nadia?",
+    "body": "Which of the situations did you find the most challenging for {character_name}?",
     "choices": [
       {
         "id":1,
@@ -141,7 +141,7 @@
   {
     "id": 8,
     "type": "MULTI_CHOICE_IMAGE",
-    "body": "Which character do you most resonate with in the character’s journey?",
+    "body": "Which character do you most resonate with in {character_name}’s journey?",
     "choices": [
       {
         "id":1,
@@ -168,7 +168,7 @@
   {
     "id": 9,
     "type": "MULTI_CHOICE",
-    "body": "How do you think the main character is feeling now?",
+    "body": "How do you think {character_name} is feeling now?",
     "choices": [
       {
         "id":1,
