@@ -65,7 +65,7 @@ const StoryEnd = ({ reflectionId: propsReflectionId, globalVariables }) => {
         <Step title="Quick Feedback" component={(props) => <QuickFeedbackStep reflection={reflection} {...props} />} />
         <Step title="Did You Know"  component={(props) => <DidYouKnowStep reflection={reflection} {...props} />} />
         <Step title="Bonus Experience" component={BonusExperienceStep} />
-        <Step title="ReflectionIntro"  component={(props) => <ReflectionIntroStep reflectionId={reflectionId}  {...props} />}/>
+        {/* <Step title="ReflectionIntro"  component={(props) => <ReflectionIntroStep reflectionId={reflectionId}  {...props} />}/> */}
         <Step title="Reflections from Others"  component={(props) => <ReflectionResponsesStep reflectionId={reflectionId}  {...props} />} />
         <Step title="Long Feedback" component={(props) => <LongFeedbackStep reflection={reflection} questions={questions} characterId={globalVariables.character_id} user={user} {...props} />} />
         {/* <Step title="Data Browser" component={DataBrowserStep} /> */}

@@ -44,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       color: '#ff0000',
       cursor: 'pointer',
+      filter: 'invert(23%) sepia(29%) saturate(6407%) hue-rotate(346deg) brightness(101%) contrast(146%)',
     },
   },
   heart:{
@@ -51,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
     height: "19px", 
     '&:hover': {
       cursor: 'pointer',
+      filter: 'invert(23%) sepia(29%) saturate(6407%) hue-rotate(346deg) brightness(101%) contrast(146%)',
     },
   }, 
   demoShareBox:{
