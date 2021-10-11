@@ -312,7 +312,7 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
                   scrollableTarget={'reflectionsContainerId'}
                 >
                   {responses.map(response => ( 
-                    response.answer.length > 5 && <ChapterResponse key={response.id} response={response} />
+                    response.answer.length > 10 && <ChapterResponse key={response.id} response={response} />
                   ))}
                 </InfiniteScroll>
               </Box>
