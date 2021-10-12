@@ -230,9 +230,12 @@ export const CHARACTER_MAP = [
           },
           {
             characterName: 'Chloe',
-            characterImage: '/images/bg_reflections.jpg',
+            characterImage: '/shareable_avatars/chloe.png',
           },
-
+          {
+            characterName: 'Rahman',
+            characterImage: '/shareable_avatars/rahman.png',
+          },
 
         ]
       },
