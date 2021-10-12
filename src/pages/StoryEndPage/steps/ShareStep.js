@@ -16,11 +16,16 @@ const ShareStep = ({ reflection, characterId, setState, getState, next }) => {
 
   const empathyCharacter = data2[2].answer ? persona.reflectionBrowser[0].empathyCharacters.find((character) => character.characterName.toUpperCase() === data2[2].answer.toUpperCase()) : persona.reflectionBrowser[0].empathyCharacters[0];
 
-  const data = {
+  const data = getState('answerDocs') ? {
     storyName: personaName+"'s Story",
     text: data2[4].answer,
     avatar: data2[2].answer, 
     avatarImage: empathyCharacter.characterImage 
+  } : {
+    storyName: personaName + "'s Story",
+    text: "I completed playing the interactive fiction game ToBeYou.sg, and I want you to join me!",
+    avatar: personaName.toLowerCase(), 
+    avatarImage: empathyCharacter.characterImage
   }
   
 
