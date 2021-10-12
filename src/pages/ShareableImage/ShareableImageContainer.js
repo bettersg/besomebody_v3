@@ -149,8 +149,11 @@ const ShareableImageContainer = ({data }) =>{
         
       </div>
 
-      <img width={width} src={image} alt={"ScreenShot"} />
+      
+      {/* <button onClick={loadImage}>Pre-load image</button> */}
+      <img width={width} src={image} alt={"ScreenShot"} className="ShareableImage" />
       <Button variant="outlined" className="downloadBtn" onClick={getImage} >{isMobile ? 'Share via Mobile' : 'Download Image'} </Button>
+      {/* <button onClick={getImage} className="btn">{isMobile ? 'Share via Mobile' : 'Download Image'}</button> */}
   </div>
   )};
 
