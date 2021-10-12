@@ -4,7 +4,7 @@ import { useAuth } from '../../../contexts/AuthContext';
 import { createDbReflectionResponses } from "../../../models/reflectionResponseModel";
 import { getDbUser, updateDbUser } from '../../../models/userModel'
 
-const LongFeedbackStep = ({ reflection, characterId, setState, getState, next }) => {
+const LongFeedbackStep = ({ reflection, questions, characterId, setState, getState, next }) => {
   const { currentUser } = useAuth();
   const { setSnackbar } = useSnackbar();
 
@@ -18,16 +18,19 @@ const LongFeedbackStep = ({ reflection, characterId, setState, getState, next })
 
     const answerDocs = answers.map((answer, index) => {
       const questionId = questionIds[index];
+      const question = questions.find(question => question.id === questionId);
+      const choiceId = question.choices?.find(({ body }) => body === answer)?.id ?? null;
       return {
         reflectionId: reflection.id,
         questionId,
+        choiceId,
         userId: currentUser.id,
         answer,
         submittedAt: new Date(),
         timestamp: Date.now(),
-      }
+      };
     });
-    
+
     setState('answerDocs', answerDocs);
 
     await createDbReflectionResponses(answerDocs);
@@ -53,7 +56,7 @@ const LongFeedbackStep = ({ reflection, characterId, setState, getState, next })
     })
   };
 
-  return <ReflectionForm questions={reflection.longQuestions} onSubmit={handleSubmit} onSuccess={handleSuccess} onError={handleError} />;
+  return <ReflectionForm context={reflection.context} questions={reflection.longQuestions} onSubmit={handleSubmit} onSuccess={handleSuccess} onError={handleError} />;
 };
 
 export default LongFeedbackStep;

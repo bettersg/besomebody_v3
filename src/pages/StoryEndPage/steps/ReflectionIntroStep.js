@@ -82,7 +82,7 @@ const ReflectionIntroStep = ({ next , reflectionId }) => {
 
 
   async function fetchCount() {
-    setCount(await getDbReflectionResponsesCount(reflectionId, 3));
+    setCount(await getDbReflectionResponsesCount(reflectionId));
   }
 
   useEffect(() => fetchCount(), []);

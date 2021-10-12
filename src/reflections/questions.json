@@ -2,7 +2,7 @@
   {
     "id": 1,
     "type": "MULTI_CHOICE",
-    "body": "How did the character's story thus far make you feel?",
+    "body": "How did this part of {character_name}'s story make you feel?",
     "choices": [
       {
         "id":1,
@@ -41,12 +41,12 @@
   {
     "id": 2,
     "type": "LIKERT_SCALE",
-    "body": "How would you rate your level of engagement with the story?",
+    "body": "How much did you get into {character_name}'s head?",
     "leftChoice": {
-      "body": "I'm not feeling it."
+      "body": "I'm not them."
     },
     "rightChoice": {
-      "body": "I'm totally immersed!"
+      "body": "I'm totally them!"
     }
   },
   {
@@ -80,7 +80,7 @@
   {
     "id": 5,
     "type": "MULTI_CHOICE",
-    "body": "Which of the choices did you find the most challenging for Nadia?",
+    "body": "Which of the choices did you find the most challenging for {character_name}?",
     "choices": [
       {
         "id":1,
@@ -103,7 +103,7 @@
   {
     "id": 6,
     "type": "MULTI_CHOICE",
-    "body": "Which of the situations did you find the most challenging for Nadia?",
+    "body": "Which of the situations did you find the most challenging for {character_name}?",
     "choices": [
       {
         "id":1,
@@ -141,24 +141,72 @@
   {
     "id": 8,
     "type": "MULTI_CHOICE_IMAGE",
-    "body": "Which character do you identify most with in this story?",
+    "body": "Which character do you most resonate with in {character_name}’s journey?",
     "choices": [
       {
+        "id":1,
         "body": "Nadia",
-        "image_url": "https://cdnb.artstation.com/p/assets/images/images/004/456/215/large/wil-hughes-troll-face.jpg?1483926054"
+        "image_url": "/shareable_avatars/nadia.png"
       },
       {
+        "id":2,
         "body": "Gavin",
-        "image_url": "https://www.getdigital.eu/web/getdigital/gfx/products/__generated__resized/1100x1100/Aufkleber_Trollface.jpg"
+        "image_url": "/shareable_avatars/gavin.png"
       },
       {
+        "id":3,
         "body": "Chloe",
-        "image_url": "https://www.nicepng.com/png/detail/2-24510_trollface-deal-with-it-troll-face-png.png"
+        "image_url": "/shareable_avatars/chloe.png"
       },
       {
+        "id":4,
         "body": "Azlin",
-        "image_url": "https://www.nicepng.com/png/detail/2-24510_trollface-deal-with-it-troll-face-png.png"
+        "image_url": "/shareable_avatars/azlin.png"
       }  
     ]
+  },
+  {
+    "id": 9,
+    "type": "MULTI_CHOICE",
+    "body": "How do you think {character_name} is feeling now?",
+    "choices": [
+      {
+        "id":1,
+        "body": "Happy"
+      },
+      {
+        "id":2,
+        "body": "Sad"
+      },
+      {
+        "id":3,
+        "body": "Worried"
+      },
+      {
+        "id":4,
+        "body": "Angry"
+      },
+      {
+        "id":5,
+        "body": "Confused"
+      },
+      {
+        "id":6,
+        "body": "Indifferent"
+      },
+      {
+        "id":7,
+        "body": "Unsure"
+      },
+      {
+        "id":8,
+        "body": "None of the above"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "type": "OPEN",
+    "body": "Why did you resonate with that character?"
   }
 ]

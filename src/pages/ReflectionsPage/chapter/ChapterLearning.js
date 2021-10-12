@@ -17,7 +17,8 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 const useStyles = makeStyles((theme) => ({
   background: {
-    backgroundImage: ({ image }) => `url('/images/bg_reflections.jpg')`,
+    // backgroundImage: ({ image }) => `url('/images/bg_reflections.jpg')`,
+    backgroundColor: "#3DCAD3",
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '660px',
@@ -34,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 200,
   },
   bottom: {
-    bottom: 0,
+    bottom: "78px",
     height: '20vh',
     position: 'absolute',
     marginLeft: 'auto',
@@ -42,9 +43,9 @@ const useStyles = makeStyles((theme) => ({
     left: 0,
     right:0,
     textAlign: 'center',
-    // display: 'flex',    
-    // flexDirection: 'column',
-    // alignItems: 'center',
+    display: 'flex',    
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   container: {
     margin: 'auto',
@@ -52,14 +53,16 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     paddingTop:'25%',
   },
-  btn: {
+  btnFindout: {
+    width: "252px", 
     padding: '10px 50px',
     borderRadius: '40px',
     marginBottom: '20px',
-    background: '#664EFC',
-    backgroundColor: '#664EFC',
+    background: '#172153',
+    backgroundColor: '#172153',
     textDecoration: 'none',
-    color: '#ffffff',
+    color: 'white',
+    textTransform: "capitalize", 
     fontWeight: '700',
     '&:hover': {
       backgroundColor: '#6C70DD',      
@@ -67,14 +70,31 @@ const useStyles = makeStyles((theme) => ({
       
     },
   },
+  btn: {
+    width: "252px", 
+    padding: '10px 50px',
+    borderRadius: '40px',
+    marginBottom: '20px',
+    background: '#F0F1FC',
+    backgroundColor: '#F0F1FC',
+    textDecoration: 'none',
+    color: '#172153',
+    textTransform: "capitalize", 
+    fontWeight: '700',
+    '&:hover': {
+      backgroundColor: '#E2E2F8',      
+      boxShadow: 'none',
+      
+    },
+  },
   topText: {
-    color: '#A7A9EB',
+    color: 'white',
     fontSize: '0.9rem',
     fontWeight: '600',    
     marginBottom: 30,
   },
   mainText: {
-    color: '#ffffff',
+    color: '#072435',
     fontSize: '1.1rem',
     fontWeight: '400',    
     marginBottom: 30,
@@ -100,9 +120,17 @@ const ChapterLearning = ({ setPage , reflection }) => {
         <Box className={classes.container}>
           <Typography className={classes.topText}>DID YOU KNOW?</Typography>
           <Typography className={classes.mainText}>{reflection.didyouknow}</Typography>
-          {reflection.media ? <a href={reflection.media} target="_blank" className={classes.link}>FIND OUT MORE</a> : null}
       </Box>
-        <Box className={classes.bottom}>        
+        <Box className={classes.bottom}>   
+        {reflection.media ?
+        <Button variant="contained" className={classes.btnFindout} onClick={() => window.open(
+          reflection.media,
+          '_blank' 
+        ) }>
+          Find out more
+        </Button>  
+        : null
+      }   
           <Button variant="contained" className={classes.btn} onClick={() => setPage(REFLECTION_PAGE_CHAPTER_REFLECTION_RESPONSES)}>
           Continue
         </Button>

@@ -226,6 +226,79 @@ export const MINI_GAME_MAP = [
         ],
       },
     ],
+  },
+  //  nadia chapt 3
+  {
+    game_id: 4, 
+    ui: "mcq",
+    introduction: "Interfaith relationships are a difficult and sensitive topic. Let's find out more.",
+    questions: [
+      {
+        question_id: 1,
+        question: "Question 1?",
+        type: "text",
+        explanation:
+          "Yes, non-Muslims may exchange Salam or shake hands with Muslims. The handshake is a palm-to-palm touch with the right hand or with both hands (never the left), the palms are then brought to the heart as a gesture of sincerity. A handshake is only initiated between individuals of the same gender. A Muslim woman does not shake a man’s hand unless he is a a family member or a religious teacher.",
+        correct_answer_id: 1,
+        answers: [
+          {
+            answer_id: 1,
+            title: "YES",
+          },
+          {
+            answer_id: 2,
+            title: "NO",
+          },
+        ],
+      },
+      {
+        question_id: 2,
+        question: "Question 2?",
+        correct_answer_id: 2,
+        explanation:
+          "Some small businesses owned by Muslims (e.g. home-based businesses) are not halal-certified, but will follow Muslim practices and therefore Muslims can eat from them too.",
+        type: "text",
+        answers: [
+          {
+            answer_id: 1,
+            title: "Yes, They can only eat food from halal-certified eateries. ",
+          },
+          {
+            answer_id: 2,
+            title: "No, they can eat from halal-certified eateries /  sources that are Muslim-owned.",
+          },
+          {
+            answer_id: 3,
+            title: "- No, they can eat from any sources so long it has no pork or no lard.",
+          },
+        ],
+      },
+      {
+        question_id: 3,
+        question: "question 3?",
+        correct_answer_id: 3,
+        explanation: "Frog meat is considered as haram (non-halal) by most Islamic scholars, because such ‘water creatures’ are considered unclean (along with alligators and turtles). Halal (lawful) food are items prepared under strict Muslim dietary laws, and animals, like chicken, sheep, cattle, must be slaughtered by Muslims because a short prayer is said when they are being slaughtered.",
+        type: "text",
+        answers: [
+          {
+            answer_id: 1,            
+            title: "Beef",
+          },
+          {
+            answer_id: 2,
+            title: "Camel",
+          },
+          {
+            answer_id: 3,
+            title: "Frog",
+          },
+          {
+            answer_id: 4,
+            title: "Veal",
+          },
+        ],
+      },
+    ],
   }
 ];
   

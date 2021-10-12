@@ -94,6 +94,7 @@ const ReflectionForm = ({ reflection }) => {
           <Question
             key={question.id}
             question={question}
+            context={reflection.context}
             value={answers[index]}
             onChange={answer => setAnswers(
               produce(draftAnswers => {

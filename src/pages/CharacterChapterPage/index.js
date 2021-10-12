@@ -111,7 +111,7 @@ const CharacterChapterPage = (props) => {
     history.push('/story/' + name)
   }
 
-  const currentCharCompleted = 'userFromDb?.character_' + characterId + '_complete'
+  const currentCharCompleted = 'userFromDb?.character_' + characterId + '_completed'
   
 
   return (
@@ -125,7 +125,7 @@ const CharacterChapterPage = (props) => {
                 <div className="CharacterChapterPage__top__nav--name">Menu</div>
               </div>
             </Link>
-            <SideMenu src="/commons/menu-icon.svg" />
+            <SideMenu />
           </div>
           <div className="CharacterChapterPage__top__character">
             <Avatar

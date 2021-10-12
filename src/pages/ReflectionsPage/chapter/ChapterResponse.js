@@ -18,41 +18,50 @@ import { createReflectionLikes } from '../../../models/ReflectionLikes';
 
 const useStyles = makeStyles((theme) => ({
   reflectionBox: {
-    backgroundColor: "#26248F", 
+    background: "linear-gradient(180deg, #FFFCED 0%, #FFF1A7 100%)",
     boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.12)',
     borderRadius: 8,
-    padding: 10,
+    padding: "32px 20px",
     margin:10,
   },
   storyText: {
-    color: '#ffffff',
     fontWeight: 500,
     fontSize: 15,
     lineHeight: '150%',
+    textAlign: "left", 
   },
   demographicsText: {
-    color: '#E2E2F8',
-    marginTop:10,
+    color: '#8A5C00',
     fontWeight: 400,
+    textAlign: "left", 
     fontSize: 11,
+    textTransform: "capitalize", 
+
   },
   flag: {
-    color: '#E2E2F8',
-    marginTop: 10,
-    
+    color: '#3A2A08',
+    height: "24px", 
     '&:hover': {
       color: '#ff0000',
       cursor: 'pointer',
+      filter: 'invert(23%) sepia(29%) saturate(6407%) hue-rotate(346deg) brightness(101%) contrast(146%)',
     },
   },
   heart:{
-    color: '#E2E2F8',
-    marginTop:10,
+    color: '#3A2A08',
+    height: "19px", 
     '&:hover': {
-      color: '#ff0000',
       cursor: 'pointer',
+      filter: 'invert(23%) sepia(29%) saturate(6407%) hue-rotate(346deg) brightness(101%) contrast(146%)',
     },
+  }, 
+  demoShareBox:{
+    display:"flex", 
+    justifyContent: "space-between", 
+    alignItems: "center", 
+    marginTop:16,
   }
+
 }))
 
 
@@ -61,6 +70,9 @@ const ChapterResponse = ({ response }) => {
   const classes = useStyles()
   const { currentUser } = useAuth()
   const { setSnackbar } = useSnackbar()
+
+  const [heartSrc, setHeartSrc] = useState("/reflection/reflection_heart.png")
+  const [flagSrc, setFlagSrc] = useState("/reflection/reflection_flag.png")
 
   const responseMessage = response.answer + ' <br/> reflection ID: ' + response.reflectionId + ' <br/> user ID : ' +   response.userId + ' <br/> submitted at ' + response.submittedAt 
 
@@ -74,7 +86,13 @@ const ChapterResponse = ({ response }) => {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
-    setOpen(true);
+    if (flagSrc === "/reflection/reflection_flag_selected.png") {
+      setFlagSrc("/reflection/reflection_flag.png")
+    } else {
+      setOpen(true);
+      setFlagSrc("/reflection/reflection_flag_selected.png")
+    }
+
   };
 
   const handleClose = () => {
@@ -86,6 +104,11 @@ const ChapterResponse = ({ response }) => {
     e.preventDefault();
 
     createReflectionLikes(response.id, currentUser.id)
+    if (heartSrc === "/reflection/reflection_heart_selected.png") {
+      setHeartSrc("/reflection/reflection_heart.png")
+    } else {
+      setHeartSrc("/reflection/reflection_heart_selected.png")
+    }
   }
   //submit the red flag disagreement
   const onSubmit = (e) => {
@@ -119,13 +142,15 @@ const ChapterResponse = ({ response }) => {
   //   setToSend({ ...toSend, [e.target.name]: e.target.value });
   // };
 
+  
+
   return (
     <Box className={classes.reflectionBox}>
-      <Typography className={classes.storyText}>{response.answer} </Typography> <br/>
-      <Grid container >
-        <Grid item xs={10}><Typography className={classes.demographicsText}>~{response.user.age ? response.user.age + ' YRS OLD' : null} {response.user.race ? ' | ' + response.user.race : null}  {response.user.religion ? ' | ' + response.user.religion : null}   {response.user.gender ? ' | ' + response.user.gender : null}  {response.user.housing ? ' | ' + response.user.housing : null}</Typography></Grid>
-        <Grid item xs={2}><FlagIcon className={classes.flag} fontSize="small"  onClick={handleClickOpen} /></Grid>
-        <Grid item xs={2}><FavoriteIcon className={classes.heart} fontSize="small" onClick={likeReflection}/></Grid>
+      <Typography className={classes.storyText}>{response.answer} </Typography>
+      <Grid container className={classes.demoShareBox}>
+        <Grid item xs={8}><Typography className={classes.demographicsText}>{response.user.race ? response.user.race.toLowerCase() : null}{response.user.gender ? ', ' + response.user.gender.toLowerCase() : null}, ~{response.user.age ? response.user.age : null}{response.user.religion ? ', ' + response.user.religion.toLowerCase() : null}{response.user.housing ? ', ' + response.user.housing.toLowerCase() : null}</Typography></Grid>
+        <Grid item xs={1}><img src={heartSrc} onClick={likeReflection} className={classes.heart} /></Grid>
+        <Grid item xs={1}><img src={flagSrc} onClick={handleClickOpen} className={classes.flag} /></Grid>
       </Grid>
 
       <Dialog

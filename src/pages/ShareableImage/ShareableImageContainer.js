@@ -131,7 +131,7 @@ const ShareableImageContainer = ({data }) =>{
   return (
     
     <div>
-      <h1 >Share your experience playing To Be You!</h1>
+    
       <div ref={ref} className="ShareableImage" style={{width: "300px", height: "300px"}}>
         
         

@@ -291,15 +291,13 @@ export default function QuestionPanel({
     setAnswered(answer_id);
     checkUserAnswer(answer_id);
     setMessage('');
-    if (question.correct_answer_id !== answer_id) {
-      setMessage(explanation);
-    }
+    setMessage(explanation);
   };
 
   return (
     <>
       <Card className={classes.root}>
-        <CardActionArea>
+         
           <CardContent>
             <Typography variant="h5" className={classes.questionNumber}>
               Question {questionNo} of {total}
@@ -310,7 +308,7 @@ export default function QuestionPanel({
               </Typography>
             </Box>
           </CardContent>
-        </CardActionArea>
+        
         <Box m={2}>
           <Grid
             spacing={2}
@@ -353,7 +351,7 @@ export default function QuestionPanel({
                   
                   }
                   
-                  <Typography variant="body1" className={`answerBody ${isCorrectAnswer ? classes.answerCorrect : classes.answerWrong}`}>
+                  <Typography variant="body1" className={`answerBody ${classes.answerWrong}`}>
                     {message}
                   </Typography>
                 </>

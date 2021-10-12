@@ -1,0 +1,10 @@
+.reflectionsContainer {
+    &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__reflectionBubbles {
+      opacity: unset !important;
+  }
+}
+
