@@ -17,7 +17,8 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 const useStyles = makeStyles((theme) => ({
   background: {
-    backgroundImage: ({ image }) => `url('/images/bg_reflections.jpg')`,
+    // backgroundImage: ({ image }) => `url('/images/bg_reflections.jpg')`,
+    backgroundColor: "#3DCAD3", 
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '660px',
@@ -52,12 +53,12 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     paddingTop:'15%',
   },
-  btn: {
+  findOutBtn: {
+    width: "252px", 
     padding: '10px 50px',
     borderRadius: '40px',
-    marginBottom: '20px',
-    background: '#664EFC',
-    backgroundColor: '#664EFC',
+    marginBottom: '12px',
+    backgroundColor: '#172153',
     textDecoration: 'none',
     color: '#ffffff',
     fontWeight: '700',
@@ -67,17 +68,32 @@ const useStyles = makeStyles((theme) => ({
       
     },
   },
+  btn: {
+    width: "252px", 
+    padding: '10px 50px',
+    borderRadius: '40px',
+    marginBottom: '20px',
+    backgroundColor: '#F0F1FC',
+    textDecoration: 'none',
+    color: '#172153',
+    fontWeight: '700',
+    '&:hover': {
+      backgroundColor: '#6C70DD',      
+      boxShadow: 'none',
+      
+    },
+  },
   topText: {
-    color: '#A7A9EB',
+    color: 'white',
     fontSize: '0.9rem',
     fontWeight: '600',    
     marginBottom: 30,
   },
   mainText: {
-    color: '#ffffff',
     fontSize: '1.1rem',
     fontWeight: '400',    
-    marginBottom: 30,
+    margin: "20px",
+
   },
   link: {
     color: '#ffffff',
@@ -100,15 +116,18 @@ const DidYouKnowStep = ({ reflection , next}) => {
     <Container maxWidth="md" className={classes.container}>
         <Box className={classes.container}>
           <Typography className={classes.topText}>DID YOU KNOW?</Typography>
-          <Typography className={classes.mainText}>{reflection.didyouknow}</Typography>
           {reflection.media ?
             reflection.mediatype === "video" ?
               <a href={reflection.media} target="_blank" className={classes.link}><img src={reflection.mediaimage} /></a> :
               <a href={reflection.media} target="_blank" className={classes.link}>READ MORE</a>
             : null
           }
+          <Typography className={classes.mainText}>{reflection.didyouknow}</Typography>
       </Box>
-        <Box className={classes.bottom}>        
+        <Box className={classes.bottom}> 
+        <Button variant="contained" className={classes.findOutBtn} >
+          Find Out More{/* currently not working  */}
+        </Button>       
           <Button variant="contained" className={classes.btn} onClick={() => next()}>
           Continue
         </Button>
