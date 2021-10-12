@@ -2,7 +2,7 @@ import React, { useEffect, useState , createRef } from 'react'
 // import ShareableImage from './ShareableImage'
 // import * as htmlToImage from 'html-to-image';
 // import downloadjs from "downloadjs";
-import {isMobile} from 'react-device-detect';
+import { isMobile, isIOS } from 'react-device-detect';
 // import Loader from "../../components/Loader";
 import html2canvas from 'html2canvas'
 
@@ -58,8 +58,20 @@ const ShareableImageContainer = ({data }) =>{
           // NOTE: if text not empty, text will be displayed with URL in the shared message,
           // if text is empty, title will be displayed with URL in shared message 
           // i.e. text takes precedence over title (only 1 out of the 2 will be shared)
+          if (isIOS) {
+            navigator.share({
+              files: filesArray
+            })
+            .then(() => {
+              console.log('Successfully shared');
+            })
+            .catch(error => {
+              console.error('Something went wrong sharing the image', error);
+            });
+          }
+          else {
           navigator.share({
-              title: `${storyName}'s Story`, 
+              title: `${storyName}`, 
               text: text,  
               url: document.location.href,
               files: filesArray
@@ -70,6 +82,7 @@ const ShareableImageContainer = ({data }) =>{
             .catch(error => {
               console.error('Something went wrong sharing the image', error);
             });
+          }
         }
         else {
           download(image, { name: 'to-be-you', extension: 'png' })
