@@ -1,8 +1,9 @@
 import { Typography, Box, TextField, Slider, RadioGroup, Radio, FormControlLabel } from '@material-ui/core';
 import React, { useState, useEffect } from 'react';
 import { getDbReflectionResponsesChoiceCount } from '../../../models/counterModel';
+import formatString from '../../../helpers/formatString';
 
-const Question = ({ question, value, onChange, reflectionId}) => {
+const Question = ({ question, value, onChange, reflectionId, context }) => {
 
   const [counts, setCounts] = useState(null);
   const [answerLength, setAnswerLength] = useState(0);
@@ -17,6 +18,7 @@ const Question = ({ question, value, onChange, reflectionId}) => {
     setCounts(results);
   }
 
+  const body = formatString(question.body, context);
 
   const handleChange = (event) => {
     onChange(event.target.value);
@@ -27,11 +29,11 @@ const Question = ({ question, value, onChange, reflectionId}) => {
       return (
         <Box p={2} bgcolor="rgba(255,255,255,0.6)">
           <Typography variant="body1">
-            <b>{question.body}</b>
+            <b>{body}</b>
           </Typography>
           <RadioGroup value={value} onChange={handleChange}>
             {question.choices.map((choice) => (
-              <FormControlLabel key={choice.body} value={choice.body} control={<Radio />} label={choice.body}  />
+              <FormControlLabel key={choice.body} value={choice.body} control={<Radio />} label={formatString(choice.body, context)}  />
             ))}
           </RadioGroup>
         </Box>
@@ -40,18 +42,18 @@ const Question = ({ question, value, onChange, reflectionId}) => {
       return (
         <Box p={2} bgcolor="rgba(255,255,255,0.6)">
           <Typography variant="body1">
-            <b>{question.body}</b>
+            <b>{body}</b>
           </Typography>
           <Box mt={2}>
             <Box display="flex" justifyContent="space-between">
               <Box>
                 <Typography variant="body1">
-                  {question.leftChoice.body}
+                  {formatString(question.leftChoice.body, context)}
                 </Typography>
               </Box>
               <Box>
                 <Typography variant="body1">
-                  {question.rightChoice.body}
+                  {formatString(question.rightChoice.body, context)}
                 </Typography>
               </Box>
             </Box>
@@ -64,7 +66,7 @@ const Question = ({ question, value, onChange, reflectionId}) => {
       return (
         <Box p={2} bgcolor="rgba(255,255,255,0.6)">
           <Typography variant="body1">
-            <b>{question.body}</b>
+            <b>{body}</b>
           </Typography>
           <Box mt={2}>
             <TextField

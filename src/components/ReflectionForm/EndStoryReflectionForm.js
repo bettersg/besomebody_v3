@@ -78,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-const EndStoryReflectionForm = ({ subtitle, title, questions: propsQuestions, onSubmit, onSuccess, onError, chaptFeedback }) => {
+const EndStoryReflectionForm = ({ context, subtitle, title, questions: propsQuestions, onSubmit, onSuccess, onError, chaptFeedback }) => {
   const classes = useStyles();
 
   const questions = propsQuestions.map(id => QUESTIONS.find(question => question.id === id));
@@ -139,6 +139,7 @@ const EndStoryReflectionForm = ({ subtitle, title, questions: propsQuestions, on
           <Question
             key={question.id}
             question={question}
+            context={context}
             value={answers[index]}
             onChange={answer => setAnswers(
               produce(draftAnswers => {
