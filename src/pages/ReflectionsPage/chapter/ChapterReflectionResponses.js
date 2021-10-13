@@ -102,7 +102,7 @@ const useStyles = makeStyles((theme) => ({
     width: "253px", 
     position: "absolute", 
     bottom: 28,
-    right: 32, 
+    right: 50, 
     '&:hover': {
       backgroundColor: '#6C70DD',      
       boxShadow: 'none',
@@ -278,7 +278,14 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
               </div>
             </div>
           </div>
-          :
+        :
+        currentPage === 2 ?
+          <div className={classes.yourStoriesBkgrd}  onClick={() => setCurrentPage(currentPage + 1)}>
+              <Typography className={classes.reflectionBubblesHeaderText}>{count} players have finished this chapter</Typography>
+              <img src="/reflection/reflection_bubbles.png" className={`${classes.reflectionBubbles} reflectionsContainer__reflectionBubbles`}/>
+              <img src="/reflection/next_icon.png" className={`${classes.nextButton}`}/>
+          </div>       
+        :     
           <div className={classes.reflectionScrollArea}>
             
             <div className={`${classes.container} reflectionsContainer`} id={'reflectionsContainerId'}>
