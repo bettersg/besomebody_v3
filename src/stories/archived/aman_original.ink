@@ -52,6 +52,9 @@ Minigame // must add some text
 #background:bg_aman_intro.jpg
 #music:aman_intro.mp3
 // DECLARE GLOBAL VARIABLES
+VAR character_id = 2
+VAR chapter_id = 1
+VAR aman_mood = 10
 // VAR chapter_1_ending = 0 
 // VAR chapter_2_ending = 0 
 // VAR chapter_3_ending = 0 
@@ -63,18 +66,76 @@ Minigame // must add some text
 // VAR aman_2_6_secret= 0
 // VAR aman_3_1_drink= 0
 // VAR ending_id = 1;
-Aman Singh #title
-VAR character_id = 2
-VAR chapter_id = 1
-VAR aman_mood = 10
+ Aman Singh #title
+// Sat Sri Akaal (God is Truth)!  I am Aman Singh. 
+// As a Sikh, I keep my turban and beard, and wear the steel bangle, or kara. 
+// Now, I'm not a perfect Sikh by any means, but I am still figuring out who I am... what faith means to me, and how I want to live my life.
+// I’ve recently completed my diploma in accountancy, and NS is just around the corner. That’s going to be ‘fun’...
+// I’m also interested in media, and I’ve been told I’m good looking. I don’t mind exploring acting and modelling jobs.
+// My parents and my older sister Prabhjot (we call her Jothi) have always been important in my life.
+// They’ve been nicer to me than usual, lately. I think it’s because I’m about to enlist. And after NS, I plan to pursue an accountancy degree in Melbourne. 
+// They sometimes joke about losing the baby in the family. I think they genuinely feel a little sad.
+// I’ll miss them, and my girlfriend Selinder. Sel and I met in poly, and people tease us because we're inseparable. It helps that she’s really smart and really pretty.
+// I should mention one more thing. One of my best friends is Zhihao -- we’ve lived in neighbouring HDB blocks since childhood, so we grew up together in a way.
+// Zhihao’s great! But he can also be... a lot, sometimes. You’ll see.
+// So that’s me -- Aman. 
+// And this is what it’s like, to be me.
+// CHAPTER 1 #title
+// Duty Calls #title
+
+-> aman_holding_line
+
+=== aman_holding_line ===
+Dear fans of ToBeYou.sg,
+Over the past two weeks, we have received so much love from the community. Thousands of you have played it and shared such thoughtful and heart-felt responses to the game thus far. 
+We have only released the initial chapters of two characters, and there’s much more to their stories, and many more characters on the way. I am excited for you to play them and to feel empathy for their journeys too.
+
+However, there are some in the Sikh community who felt that the way in which one of our characters, Aman Singh, was presented was not respectful. They have given strong feedback to us and requested that we consider changing key parts of the story. 
+We hear their concerns, and are in close consultation with the leaders of that community to address the issues. Allow us to also explain the philosophy behind the game and the way in which our stories are written.
+
+ToBeYou's purpose is to share the experiences of different groups of Singaporeans, including the different experiences of people within a particular group. 
+We hope that through exploring powerful identity dilemmas,  users will appreciate the complexity behind the choices others make, and engender empathy and goodwill for those around them. 
+
+Firstly, our stories are written after substantial research. We do open source reading, we have an academic Research Advisor, and we hold multiple focus group discussions with members of the community. 
+Our writers and editors are also closely connected to the community, and most are from those communities themselves. 
+We do not put any value judgement on the choices that real people make, and we try to represent their dilemmas in our stories.
+
+Secondly, our game is designed to explore different pathways that a person from that group may take. There are deliberately no right or wrong answers, no winning or losing outcomes, as in life. 
+The pathways are deliberately designed to allow players to explore a variety of choices that shape the character, and mirror the diversity we see even within a community group. 
+We do not favour or promote one pathway over the other. 
+The choices that players make early in the game have consequences that will be played out in later chapters, and this is an important element of the story. Some of the choices that the character makes in the early chapters will have real and serious consequences later on. 
+The objective of this is to let players experience those dilemmas first hand, and in the process, gain empathy for people who have a different identity, or have chosen pathways different from theirs.
+
+// On the specific issue for Aman Singh’s story, there were some in the community who objected to the option of him not keeping his turban. During our interviews and focus group discussions, we heard stories from Sikh participants who struggled and sometimes eventually chose to cut their hair, for personal reasons. 
+// The SAF does not require this, there are many who have kept their turbans and succeeded in NS, we understand what the Sikh faith says about this, and how strictly it is presented. 
+// Nevertheless, there are Sikhs who do choose this path of not keeping their turban. There are prominent and valued Singaporeans who are Sikhs who have opted not to keep their turbans. 
+// Many non-Sikh Singaporeans know too little about this wonderful community, but they see the visible differences between different Sikhs and may have questions about it. 
+// Our game was designed as an attempt to educate, enrich, and engage all of these people. 
+// The game offered both options to players (keep the turban, or not keep the turban), making it clear which is the one that is aligned with the faith before the decision, and showing the familial consequences of a choice that was not aligned with the faith. 
+// In the reflections that players shared, none of the players came away with the impression that not keeping the turban was a convenient, light, or easy choice - the reflections that touched on this topic highlighted that they never knew how serious the issue was prior to the game.
+
+// Unfortunately, the members of the community who objected to this option preferred a different approach altogether, while recognising our desire to encourage empathy and understanding for all members of a wonderful and diverse Sikh community. 
+// We are in close consultation with the leaders of the Sikh community and will manage this delicate issue together. 
+
+The purpose of this game is for us to gain empathy for people unlike ourselves, even though this may make us feel uncomfortable at times. 
+At no point during the research, design, or development of the game and the story did we seek to undermine, judge, or challenge any belief system,  practice, or community. 
+Our hope is to represent the lived experiences of real people, and to cherish them as human beings even if we disagree with their choices. 
+It is difficult, but for Singapore to be better, we must learn to understand and accept these differences between people, even from within the same community. 
+
+Aman Singh will be back soon. Thank you for your support and patience.
+
+Regards,
+The ToBeYou team
+
+RETURN TO MAIN MENU
 
 
-CHAPTER {chapter_id} #title
-Duty Calls #title
- 
- 
- 
--> aman_1_1_narration 
+-> END
+
+
+// -> aman_1_1_narration 
+
+// START STORY
 
 
 === aman_1_1_narration ===
