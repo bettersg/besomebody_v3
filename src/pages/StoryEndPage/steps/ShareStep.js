@@ -91,21 +91,18 @@ const ShareStep = ({ reflection, characterId, setState, getState, next }) => {
   const empathyCharacter = getState('answerDocs') ?
     data2[2].answer ? persona.reflectionBrowser[0].empathyCharacters.find((character) => character.characterName.toUpperCase() === data2[2].answer.toUpperCase()) : persona.reflectionBrowser[0].empathyCharacters[0]
     : persona.reflectionBrowser[0].empathyCharacters.find((character) => character.characterName.toUpperCase() === personaName.toUpperCase());
-  const data = getState('answerDocs') ? {
-      storyName: personaName+"'s Story",
-      text: data2[5].answer,
-      avatar: data2[2].answer, 
-      avatarImage: empathyCharacter.characterImage 
-    } : {
-      storyName: personaName + "'s Story",
-      text: "I completed playing the interactive fiction game ToBeYou.sg, and I want you to join me!",
-      avatar: personaName.toLowerCase(), 
-      avatarImage: empathyCharacter.characterImage
-    }
-
-
-
   
+  const data = getState('answerDocs') ? {
+    storyName: personaName+"'s Story",
+    text: data2[5].answer,
+    avatar: data2[2].answer, 
+    avatarImage: empathyCharacter.characterImage 
+  } : {
+    storyName: personaName + "'s Story",
+    text: "I completed playing the interactive fiction game ToBeYou.sg, and I want you to join me!",
+    avatar: personaName.toLowerCase(), 
+    avatarImage: empathyCharacter.characterImage
+  }
 
    // -- remove this section when receiving state variables,
   // refer to the below for input format required by component

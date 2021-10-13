@@ -2,7 +2,7 @@ import React, { useEffect, useState , createRef } from 'react'
 // import ShareableImage from './ShareableImage'
 // import * as htmlToImage from 'html-to-image';
 // import downloadjs from "downloadjs";
-import { isMobile } from 'react-device-detect';
+import { isMobile, isIOS } from 'react-device-detect';
 import {
   Box,
   Button,
@@ -64,9 +64,21 @@ const ShareableImageContainer = ({data }) =>{
           // NOTE: if text not empty, text will be displayed with URL in the shared message,
           // if text is empty, title will be displayed with URL in shared message 
           // i.e. text takes precedence over title (only 1 out of the 2 will be shared)
+          if (isIOS) {
+            navigator.share({
+              files: filesArray
+            })
+            .then(() => {
+              console.log('Successfully shared');
+            })
+            .catch(error => {
+              console.error('Something went wrong sharing the image', error);
+            });
+          }
+          else {
           navigator.share({
-              title: `${storyName}'s Story`, 
-              text: text,  
+              title: `${storyName}`, 
+              text: "I completed playing the interactive fiction game ToBeYou.sg, and I want you to join me!",  
               url: document.location.href,
               files: filesArray
             })
@@ -76,6 +88,7 @@ const ShareableImageContainer = ({data }) =>{
             .catch(error => {
               console.error('Something went wrong sharing the image', error);
             });
+          }
         }
         else {
           download(image, { name: 'to-be-you', extension: 'png' })
@@ -123,11 +136,9 @@ const ShareableImageContainer = ({data }) =>{
         
         
             <div className="ShareableImage__gradient"></div>
-            {/* <div className="ShareableImage__avatar" style={{background : `url(${avatarImage}) no-repeat`}}></div> */}
             <img className="test_avatar" crossOrigin = "anonymous" src={avatarImage} style={{position: "absolute", width: "300px", height: "300px",
             left: "0px", top: "0px", opacity: "0.6"}} />
             <div className="ShareableImage__bottomGradient"></div>
-            {/* <div className="ShareableImage__logo" style={{background : `url('/shareable_avatars/tobeyou-logo-white.svg') center`}}></div> */}
             <img className="test_logo" crossOrigin = "anonymous" src="/shareable_avatars/tobeyou-logo-white.svg" style={{position: "absolute", width: "80px", height: "60px", left: "16px", 
             top: "22px", filter: "drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.04))", transform: "rotate(-2deg)"}}/>
             <div className="ShareableImage__reflectionContainer">
@@ -137,8 +148,7 @@ const ShareableImageContainer = ({data }) =>{
         
         
       </div>
-    
-    
+
       
       {/* <button onClick={loadImage}>Pre-load image</button> */}
       <img width={width} src={image} alt={"ScreenShot"} className="ShareableImage" />
