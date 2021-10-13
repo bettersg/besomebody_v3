@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
   },
   bottom: {
     bottom: 0,
-    height: '20vh',
+    height: '150px',
     position: 'absolute',
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -116,18 +116,17 @@ const DidYouKnowStep = ({ reflection , next}) => {
     <Container maxWidth="md" className={classes.container}>
         <Box className={classes.container}>
           <Typography className={classes.topText}>DID YOU KNOW?</Typography>
+          <Typography className={classes.mainText}>{reflection.didyouknow}</Typography>
           {reflection.media ?
             reflection.mediatype === "video" ?
               <a href={reflection.media} target="_blank" className={classes.link}><img src={reflection.mediaimage} /></a> :
-              <a href={reflection.media} target="_blank" className={classes.link}>READ MORE</a>
+              <a href={reflection.media} target="_blank" className={classes.link}><Button variant="contained" className={classes.findOutBtn} >Find Out More</Button></a>
             : null
           }
-          <Typography className={classes.mainText}>{reflection.didyouknow}</Typography>
+          
       </Box>
         <Box className={classes.bottom}> 
-        <Button variant="contained" className={classes.findOutBtn} >
-          Find Out More{/* currently not working  */}
-        </Button>       
+            
           <Button variant="contained" className={classes.btn} onClick={() => next()}>
           Continue
         </Button>
