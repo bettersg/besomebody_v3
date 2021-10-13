@@ -11,6 +11,7 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 const useStyles = makeStyles((theme) => ({
   background: {
     backgroundImage: `url('/images/bg_reflections.jpg')`,
+    backgroundColor: "#664EFC", 
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '660px',

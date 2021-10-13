@@ -19,7 +19,7 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 const useStyles = makeStyles((theme) => ({
   background: {
-    // backgroundImage: ({ image }) => `url('/images/bg_reflections.jpg')`,
+    backgroundImage: ({ image }) => `url('/reflection/avatar_bg_purple.png')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '660px',
@@ -31,25 +31,27 @@ const useStyles = makeStyles((theme) => ({
 
   },
   headerText: {
-    fontSize: '1.5rem',
-    fontWeight: 700,
+    fontSize: '24px',
+    fontWeight: 800,
     color: '#ffffff',
     textAlign: 'center',
-    marginTop: 50,
+    paddingTop: 69,
     marginBottom:15,
+    margin: "0 48px"
   },
   bottom: {
     bottom: 0,
-    height: '15vh',
+    height: '100px',
     position: 'absolute',
     marginLeft: 'auto',
     marginRight: 'auto',
     left: 0,
     right:0,
     textAlign: 'center',
-    // display: 'flex',    
-    // flexDirection: 'column',
-    // alignItems: 'center',
+
+    display: 'flex',    
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   container: {
     margin: 'auto',
@@ -70,6 +72,12 @@ const useStyles = makeStyles((theme) => ({
       
     },
   },
+  mainMenu: {
+    fontWeight: '700',
+    fontSize: "16px", 
+    color:"white", 
+    marginBottom: "36px", 
+  }, 
   text: {
     color: '#ffffff',
     fontSize: '0.9rem',
@@ -115,12 +123,12 @@ const ShareStep = ({ reflection, characterId, setState, getState, next }) => {
 
   return (
     <Box className={classes.background}>
-      <Typography className={classes.headerText}>Share your experience on social media!</Typography>
+      <Typography className={classes.headerText}>Share your story on social media!</Typography>
       <ShareableImageContainer data={data}></ShareableImageContainer>
       <Box className={classes.bottom}>  
-        <Button variant="contained" className={classes.btn} onClick={() => history.push('/characterchoice')}>
-            Character Menu
-        </Button><hr />
+        <Typography className={classes.mainMenu} onClick={() => history.push('/characterchoice')}>
+            Return to main menu
+        </Typography>
         <a href="mailto:tobeyou@better.sg" target="_blank" rel="noreferrer" style={{ color: '#ffffff' }}>Send us feedback</a>
       </Box>
     </Box>

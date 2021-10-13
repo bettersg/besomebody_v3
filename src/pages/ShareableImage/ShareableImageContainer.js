@@ -11,6 +11,7 @@ import {
 } from '@material-ui/core'
 // import Loader from "../../components/Loader";
 import html2canvas from 'html2canvas'
+import makeStyles from '@material-ui/core/styles/makeStyles'
 
 import { createFileName } from 'use-react-screenshot'
 
@@ -22,9 +23,34 @@ import "./style.scss"
 //     id: 1, 
 //     text: "I've just finished playing Chapter One of Nadia's Story!", 
 //     avatar: 'nadia'}
+const useStyles = makeStyles((theme) => ({
+  btn: {
+    width: 252, 
+    padding: '10px 50px',
+    borderRadius: '40px',
+    marginBottom: '20px',
+    background: '#664EFC',
+    backgroundColor: '#664EFC',
+    textDecoration: 'none',
+    color: '#ffffff',
+    fontWeight: '700',
+    position: "absolute", 
+    bottom: 120, 
+    margin: "55px", 
+    textTransform: "unset", 
+    '&:hover': {
+      backgroundColor: '#6C70DD',      
+      boxShadow: 'none',
+      
+    },
+  },
+  
+}))
 
 const ShareableImageContainer = ({data }) =>{
   const { storyName, text, avatar, avatarImage } = data;
+  const classes = useStyles()
+
   var exportData, position, exportOptions, imageDataStream = undefined;
 
   const [isLoading, setIsLoading] = useState(true);
@@ -152,7 +178,7 @@ const ShareableImageContainer = ({data }) =>{
       
       {/* <button onClick={loadImage}>Pre-load image</button> */}
       <img width={width} src={image} alt={"ScreenShot"} className="ShareableImage" />
-      <Button variant="outlined" className="downloadBtn" onClick={getImage} >{isMobile ? 'Share via Mobile' : 'Download Image'} </Button>
+      <Button variant="contained"  className={classes.btn} onClick={getImage} >{isMobile ? 'Share via Mobile' : 'Download Image'} </Button>
       {/* <button onClick={getImage} className="btn">{isMobile ? 'Share via Mobile' : 'Download Image'}</button> */}
   </div>
   )};

@@ -8,6 +8,7 @@
     // top: 173px;
     background: #6C70DD;
     overflow: hidden;
+    border: 1px solid #FFFFFF; 
 
     &__gradient {
         position: absolute;
@@ -127,20 +128,20 @@
     background-color: transparent;
 }
 
-.downloadBtn {    
-    font-size: 10px;
-    // height: 40px; 
-    width: 180px;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    text-transform: uppercase;
-    border-radius: 50px !important;
-    border-color: $lapisDark2 !important;
-    color: $white;
-    cursor: pointer;
-    left: calc(50% - 180px/2 - 0.5px) !important; // centered
-    position: relative;
-    top: 315px;
+// .downloadBtn {    
+//     font-size: 10px;
+//     // height: 40px; 
+//     width: 180px;
+//     // display: flex;
+//     // justify-content: center;
+//     // align-items: center;
+//     text-transform: uppercase;
+//     border-radius: 50px !important;
+//     border-color: $lapisDark2 !important;
+//     color: $white;
+//     cursor: pointer;
+//     left: calc(50% - 180px/2 - 0.5px) !important; // centered
+//     position: relative;
+//     top: 315px;
 
-}
+// }
