@@ -78,7 +78,7 @@ const ShareableImageContainer = ({data }) =>{
           else {
           navigator.share({
               title: `${storyName}`, 
-              text: text,  
+              text: "I completed playing the interactive fiction game ToBeYou.sg, and I want you to join me!",  
               url: document.location.href,
               files: filesArray
             })
