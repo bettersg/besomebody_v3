@@ -107,6 +107,7 @@ export default function ReflectionChapter(props) {
   }
 
   return (
+  <div  style={{ display: 'flex', justifyContent: 'center' , marginBottom: '20px'}}>
     <Card className={classes.root} key={chaptDetails.number}>
       <CardContent className={classes.card}>
         <div className="ChapterBox">
@@ -144,5 +145,6 @@ export default function ReflectionChapter(props) {
              
       </CardContent>
     </Card>
+  </div>
   )
 }
