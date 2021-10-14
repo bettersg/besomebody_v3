@@ -115,7 +115,7 @@ const ChapterResponse = ({ response }) => {
     e.preventDefault();
     setOpen(false);
     send(
-      'service_mxyo80c',
+      'service_q3gnqrp',
       'template_r9ys0jd',
       toSend,
       'user_kmfKhjRSSwoovXNarQivp'

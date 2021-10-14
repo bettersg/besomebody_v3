@@ -235,67 +235,74 @@ export const MINI_GAME_MAP = [
     questions: [
       {
         question_id: 1,
-        question: "Question 1?",
+        question: "What % of marriages in Singapore in 2020 were inter-ethnic?",
         type: "text",
         explanation:
-          "Yes, non-Muslims may exchange Salam or shake hands with Muslims. The handshake is a palm-to-palm touch with the right hand or with both hands (never the left), the palms are then brought to the heart as a gesture of sincerity. A handshake is only initiated between individuals of the same gender. A Muslim woman does not shake a man’s hand unless he is a a family member or a religious teacher.",
-        correct_answer_id: 1,
+          "About 1 in 5 marriages is between a bride and groom of different ethnicities in Singapore!",
+          //https://www.statista.com/statistics/995734/singapore-proportion-inter-ethnic-marriages/
+        correct_answer_id: 2,
         answers: [
           {
             answer_id: 1,
-            title: "YES",
+            title: "8%",
           },
           {
-            answer_id: 2,
-            title: "NO",
+            answer_id: 2, 
+            title: "18%",
+          },
+          {
+            answer_id: 3,
+            title: "28%",
+          },
+          {
+            answer_id: 4,
+            title: "38%",
           },
         ],
       },
       {
         question_id: 2,
-        question: "Question 2?",
+        question: "How many Malay Muslim females married Chinese males in 2020?",
         correct_answer_id: 2,
         explanation:
-          "Some small businesses owned by Muslims (e.g. home-based businesses) are not halal-certified, but will follow Muslim practices and therefore Muslims can eat from them too.",
+          "Exactly 103 Malay Muslim females married Chinese males in 2020. This number is slightly lower than previous years (131 in 2018) due to the overall reduction in marriages due to the COVID-19 restrictions.",
+        // https://data.gov.sg/dataset/inter-ethnic-marriages-under-administration-muslim-law-act-ethnic-group-brides-grooms-annual?view_id=138f28fd-7668-4611-a773-8350fe95c5a5&resource_id=9c8d2f0f-af24-402d-83be-a14bdf5e201f
         type: "text",
         answers: [
           {
             answer_id: 1,
-            title: "Yes, They can only eat food from halal-certified eateries. ",
+            title: "10",
           },
           {
-            answer_id: 2,
-            title: "No, they can eat from halal-certified eateries /  sources that are Muslim-owned.",
+            answer_id: 2, 
+            title: "100",
           },
           {
             answer_id: 3,
-            title: "- No, they can eat from any sources so long it has no pork or no lard.",
+            title: "1,000",
+          },
+          {
+            answer_id: 4,
+            title: "10,000",
           },
         ],
       },
       {
         question_id: 3,
-        question: "question 3?",
-        correct_answer_id: 3,
-        explanation: "Frog meat is considered as haram (non-halal) by most Islamic scholars, because such ‘water creatures’ are considered unclean (along with alligators and turtles). Halal (lawful) food are items prepared under strict Muslim dietary laws, and animals, like chicken, sheep, cattle, must be slaughtered by Muslims because a short prayer is said when they are being slaughtered.",
+        question: "Mdm Che Zahara, a Malay Muslim pioneer of Singapore who helped establish the Singapore Women's Charter in Parliament in 1961, was married to a non-Malay.",
+        correct_answer_id: 1,
+        explanation: "Born in Singapore, Che Zahara was the daughter of Noor Mohamed, one of the first Malays during British rule to learn English and work as a mediator and translator. Che Zahara married a businessman from Ceylon, now Sri Lanka. She was inducted to the Singapore Women's Hall of Fame.",
+        // https://www.swhf.sg/profiles/che-zahara-binte-noor-mohamed/
         type: "text",
         answers: [
           {
             answer_id: 1,            
-            title: "Beef",
+            title: "True",
           },
           {
             answer_id: 2,
-            title: "Camel",
-          },
-          {
-            answer_id: 3,
-            title: "Frog",
-          },
-          {
-            answer_id: 4,
-            title: "Veal",
-          },
+            title: "False",
+          }, 
         ],
       },
     ],
