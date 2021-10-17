@@ -3296,8 +3296,8 @@ I wonder if I can find people like her in university too. #inner_monologue
 #background:bg_nadia_selfiehijab.jpg
 Some days flew by, others dragged on.
 More gatherings, some farewells to those who went overseas for uni.
-I wondered what university would be like for me.
-
+As for me? 
+I finally got the acceptance letter from med school!
 
 
 -> nadia_3_4_narration
@@ -3305,7 +3305,8 @@ I wondered what university would be like for me.
 ===  nadia_3_4_narration ===
 #knot:nadia_3_3d
 #ui:narrator
-#background:bg_nadia_fathercaratday.jpg
+#background:bg_nadia_unientrance.jpg
+// change background to uni entrance 
 Abah is driving me to university for my first day.
 He insisted on getting here a "bit" early... so we're here at 8am!
 He's so excited. I'm so nervous. 
