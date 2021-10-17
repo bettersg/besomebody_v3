@@ -94,7 +94,7 @@ The ToBeYou team
 RETURN TO MAIN MENU
 
 
--> END
+// -> END
 
 
 
@@ -202,101 +202,38 @@ good luck 💙 #speaker_1
 #background:bg_aman_bedroom.jpg
 #speaker_left_image:cha_aman_mum.png
 #speaker_left_name:Mum
-MUM
 Aman? Are you done packing? Do you have everything you need, beta? (Term of endearment for child, or son.) #speaker_left
-
-AMAN
 Yes, mum.   #speaker_self
-
-MUM
 Goggles? #speaker_left
-
-AMAN
 Yes.  #speaker_self
-
-MUM
 Alarm clock, hair gel? #speaker_left
-
-AMAN
 Yes.  #speaker_self
-
-MUM
 Underwear? #speaker_left
-
-AMAN
 Yes!  #speaker_self
-
-MUM
 Extra underwear? #speaker_left
-
-AMAN
 Mum!  #speaker_self
-
-MUM
 The government website says to bring extra underwear, you know. I went to research.  #speaker_left
 If it’s not important, the government wouldn’t say EXTRA. #speaker_left
-
-AMAN
 Yes mum, I have hills of underwear. Mountains.  #speaker_self
-
-MUM
 You are so cheeky to your mum. Where do you learn all these bad things? #speaker_left
-
 + [From you] People say I take after you, don’t they?
-    
-    MUM
-    
-    Nonsense, you look just like your Papa-ji.
-    
-    AMAN
-    
-    I mean in character, you know.
-    
-    MUM
-    
-    You and he are more alike than you think.
-    
-    AMAN
-    
-    But Papa-ji is always so serious.
-    
-    MUM
-    
-    Yes, but you have the same stubbornness inside.
-    
-    AMAN
-    
-    I’m not stubborn!
-    
-    MUM (Laughing)
-    
-    Well, if you insist.
+    Nonsense, you look just like your Papa-ji. #speaker_left
+    I mean in character, you know. #speaker_self
+    You and he are more alike than you think. #speaker_left
+    But Papa-ji is always so serious. #speaker_self
+    Yes, but you have the same stubbornness inside. #speaker_left
+    I’m not stubborn! #speaker_self
+    (laughing) Well, if you insist. #speaker_left
 
-+ [From Jothi] Jothi has corrupted me with her bad influence.
-
-    MUM (Laughing)
-    
-    Now that, I can believe.
-    
-    Have you said goodbye to your sister yet?
-    
-    AMAN
-    
-    She was on the phone with Kirpal, but she said she’ll come say goodnight later.
-    
-    MUM
-    
-    Ooh, they must be doing wedding planning.
-    
-    AMAN
-    
-    Yes, I heard something about booking a slot at the gurdwara (Sikh temple).
-    
-    MUM
-    
-    Only six months left - they need to book right now or they will never get the slot they want. 
-    I don’t know why this generation always likes to leave things late. 
-- .
++ [From Jothi] Jothi has corrupted me with her bad influence. #speaker_self
+    (laughing) Now that, I can believe. #speaker_left
+    Have you said goodbye to your sister yet? #speaker_left
+    She was on the phone with Kirpal, but she said she’ll come say goodnight later. #speaker_self
+    Ooh, they must be doing wedding planning. #speaker_left
+    Yes, I heard something about booking a slot at the gurdwara (Sikh temple). #speaker_self
+    Only six months left - they need to book right now or they will never get the slot they want.  #speaker_left
+    I don’t know why this generation always likes to leave things late.  #speaker_left
+- Ok, time to pack everything in... #speaker_self
 -> aman_1_1b
 
 === aman_1_1b ===
@@ -310,25 +247,112 @@ You are so cheeky to your mum. Where do you learn all these bad things? #speaker
 #speaker_3_name:Cousin Harpreet
 #timestamp:21.52
 Tomorrow our Aman is going into NS. We are all proud of him. #speaker_1
-
-
+#ui:scene
+#background:bg_aman_bedroom.jpg
 What is Papa-ji doing? This is so unlike him. He never makes these grand speeches, let alone about me. #inner_monologue
-
-
-I know you will do well, son. #speaker_1
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Extended Family Chat
+#chat_group_image:ico_aman_extendedfamily.png
+#speaker_1_name:Papa
+#speaker_2_name:Uncle Ranjit
+#speaker_3_name:Cousin Harpreet
 🙏🏽 A noble time of life. Aman, remember that Sikhs have always been warriors and defenders. It is in our blood, in our history as a martial people. Do us proud! #speaker_2
-
-
+#ui:scene
+#background:bg_aman_bedroom.jpg
 Wow, it can’t get more stressful than that. #inner_monologue
-
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Extended Family Chat
+#chat_group_image:ico_aman_extendedfamily.png
+#speaker_1_name:Papa
+#speaker_2_name:Uncle Ranjit
+#speaker_3_name:Cousin Harpreet
 In fact, I am sure you will make it into OCS (Officer Cadet School). Just like our Harpreet! #speaker_2
 🙌🏽 All the best Aman! #speaker_3
 And don’t worry BMT is not that bad! haha  #speaker_3
 Am sure you’ve been keeping fit etc   #speaker_3
-
-
+#ui:scene
+#background:bg_aman_bedroom.jpg
 I take it back, it just got worse. Uh... #inner_monologue
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Extended Family Chat
+#chat_group_image:ico_aman_extendedfamily.png
+#speaker_1_name:Papa
+#speaker_2_name:Uncle Ranjit
+#speaker_3_name:Cousin Harpreet
++ [I'll do my best] Thanks everyone 🙏🏽🙏🏽 very touched by the support #speaker_self
+    Will do my best 😅 #speaker_self
++ [I'll make you proud] Thank you so much everyone #speaker_self
+    Won’t let you down 🙏🏽 #speaker_self
+- I know you will do well, son. #speaker_1
 
-  
+ -> aman_1_1c
+ 
+ === aman_1_1c ===
+ #knot:aman_1_1c
+#ui:scene
+#background:bg_aman_bedroom.jpg
+#speaker_left_image:cha_aman_mum.png
+#speaker_left_name:Mum
+Why are you tap-tap-tapping away again, beta? Always got side-business going on. #speaker_left
+Sorry, I had to reply to something. You’ll see later in the family chat with Uncle Ranjit and all. (sigh) #speaker_self
+What’s wrong, beta? #speaker_left
+Nothing’s wrong. #speaker_self
+You think I raised you for 19 years and don’t know how to read your face? #speaker_left
+Well… #speaker_self
+
++ [I'm just worried about not doing well]  I just don’t want to disappoint you all. #speaker_self
+    VAR aman_1_nsworries = "not doing well"
+    You know me, mum. I’m never the guy who’s the loudest in the room, or the one who assumes he should take charge.   #speaker_self
+    I’m not Mr “OK Let’s Go” like Harpreet, or -   #speaker_self
+    Aman, you stop right there. #speaker_left
+    Do you think following the ways of the Khalsa (Sikh saint-soldiers) is about being Number One in the room?   #speaker_left
+    About how fast you run, or how much you can lift, or how many men salute you when you walk past them?   #speaker_left
+    
+        + [I guess not] ...No, I guess not.  #speaker_self
+        Then? #speaker_left
+        But Papa-ji and Uncle Ranjit both did so well. Uncle Ranjit expects me to -   #speaker_self
+        + [But it matters] No, but people do care about that kind of thing. #speaker_self
+        Papa-ji and Uncle Ranjit both did so well in their time, and Uncle Ranjit especially - #speaker_self
+        
+    - Uncle Ranjit, Uncle Ranjit. Is Uncle Ranjit going with you to NS? Will you be taking him to Tekong in your backpack? #speaker_left
+    (Laughs.) Okay mum, okay. You’re right. #speaker_self
+    I know I am. #speaker_left
+    You just focus on being yourself, and make sure you come home safely to me.   #speaker_left
+
++ [I'm worried about being the only Sikh there]     Maybe it’s just the ‘new school’ feeling. #speaker_self
+    ~ aman_1_nsworries = "only sikh"
+    Having to start in a new environment all over again, and being the odd one out.   #speaker_self
+    The odd one out? #speaker_left
+    You know, the only Sikh. #speaker_self
+    Like how everyone will be wearing helmets, and I’ll be only one keeping the turban.   #speaker_self
+    Is lying low what you want to do? #speaker_left
+    Sorry, I know. I have to excel. #speaker_self
+    Aman, I didn’t say that. #speaker_left
+    I asked, what do you want to do?   #speaker_left
+        
+        + [Lie low]
+        Honestly, I just want to survive NS, mum. #speaker_self
+        Then you do that, beta.  #speaker_left
+        It’s all I want for you as well. To come home safe and sound. #speaker_left
+        
+        + [Do well]
+        I’d like to do well, if I can. #speaker_self
+        I know NS is a big deal, and means a lot to Papa-ji… #speaker_self
+        But I am not asking what Papa-ji wants. #speaker_left
+        Never mind Aman, you think about it. #speaker_left
+        Just make sure you come home to me safely. #speaker_left
+
+        + [I don’t know]
+        I haven’t figured that out yet. #speaker_self
+        Well, if you don’t know what you want. #speaker_left
+        (Laughs) You can’t fail, eh? #speaker_left
+        
+   
+   
+   
+   
  
  -> END
