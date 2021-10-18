@@ -12,16 +12,22 @@
       position: absolute !important;
       left: 0;
       bottom: 100px;
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease;
       &.nonSpeaker {
         filter: brightness(50%);
+        transition: filter 0.5s ;
       }
     }
     &--right {
       position: absolute !important;
       right: 0;
       bottom: 100px;
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease;
       &.nonSpeaker {
         filter: brightness(50%);
+        transition: filter 0.5s ;
       }
     }
   }
