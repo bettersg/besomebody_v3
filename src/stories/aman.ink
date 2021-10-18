@@ -244,7 +244,7 @@ You are so cheeky to your mum. Where do you learn all these bad things? #speaker
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Extended Family Chat
-#chat_group_image:ico_aman_extendedfamily.png
+#chat_group_image:ico_aman_family.png
 #speaker_1_name:Papa
 #speaker_2_name:Uncle Ranjit
 #speaker_3_name:Cousin Harpreet
@@ -781,6 +781,217 @@ Me too jaan #speaker_self
 Won’t hold you up #speaker_1
 Goodnight bb #speaker_1
 Night night 🥰🥰 #speaker_self
+
+-> aman_1_4_narration
+
+
+=== aman_1_4_narration ===
+#knot:aman_1_4_narration
+#ui:narrator
+#background:bg_aman_indianrestaurant.jpg
+Two years later.
+Full-time NS is finally behind me!
+I may not have made it into OCS, but I think it worked out for the best. My role feels right to me.
+Lukman didn’t get into OCS either. But he worked hard as a Transport Operator and eventually got his 3SG rank, same as me.
+Jothi is blissfully married to Kirpal by now. I weirdly miss having her around.
+But we still see each other often, and she joins us for dinner sometimes, like tonight.
+
+-> aman_1_4
+
+
+=== aman_1_4 ===
+#knot:aman_1_4
+#ui:scene
+#background:bg_aman_indianrestaurant.jpg
+#speaker_left_image:cha_aman_mama_happy.png
+#speaker_left_name:Mum
+#speaker_right_image:cha_aman_jothi_normal.png
+#speaker_right_name:Jothi
+Wow, this place is atas (fancy). #inner_monologue
+Papa-ji and Mum really pulled out all the stops just to celebrate my ORD (Operationally Ready Date). #inner_monologue
+Congratulations, Third Sergeant Amandeep Singh Sahota! #speaker_left
+You are a senior medic who saves lives! #speaker_left
+Mum, your voice is a bit uh, loud... #speaker_self
+Let everybody hear! #speaker_left
+(Loudly) Fellow diners, my son has served his NS! #speaker_left
+(Even more loudly) And his biceps are STILL BIGGER THAN HIS BRAIN! #speaker_right
+Eh please!! #speaker_self
+Good grief, this family. #inner_monologue
+Papa-ji hasn’t said much tonight. But he’s always quiet, hard to read. #inner_monologue
+I wonder if he wishes I had gotten into OCS instead? #inner_monologue
+When I told him I was assigned to SCS (Specialist Cadet School) to be a medic, he just nodded and went back to his newspaper. #inner_monologue
+Our Aman has big biceps and excellent brains. That’s why Selinder is hanging on to him. #speaker_left
+Mum, it’s more like the other way around. #speaker_self
+Oh, young love. It’s so disgusting. #speaker_right
+Behave yourself, beta. How old are you already, and still bullying your brother like you are teenagers. #speaker_left
+I married out of the house, mummy. Now I rarely get to make Aman suffer, so I must maximise every chance I get. How is this not intuitive? #speaker_right
+
++ [Huh, what logic?!] My dear sister, you seem to be going through a dark time. #speaker_self
+    Is your mid-life crisis everything you thought it would be? #speaker_self
+    #speaker_right_image:cha_aman_jothi_angry.png
+    Excuse me, mid-life?! MID, LI - #speaker_right
+
++ [Your poor spouse!] Boy, Kirpal must have a fun married life. #speaker_self
+    And I must have fun while I skewer you with this for - #speaker_right
+- Children! Mera ser na kayi ja (“Stop eating my head”)!  #speaker_left
+
+#speaker_right_image:cha_aman_jothi_normal.png
+Ha, fine. Aman knows I’m kidding. #speaker_right
+I’m proud of you, chote veer (younger brother). #speaker_right
+Why thank you, penji (elder sister). #speaker_self
+Where’s Selinder, by the way? I thought she was supposed to join us tonight? #speaker_right
+Oh, she’s working late.  #speaker_self
+She says she’s sorry, she wanted to have dinner with us, but her whole team is staying back so she felt like she couldn’t leave. #speaker_self
+Aw, so sad. Same story for Kirpal. I think Kirpal might join us for dessert though. He has a sweet tooth! #speaker_right
+But didn’t you say Selinder was miserable at her job? She’s still there? #speaker_right
+Yes, she always says once she can afford to quit, she’ll quit. She’s not a fan of corporate life. #speaker_self
+I don’t get it. I love working. I couldn’t stand to be home all day. #speaker_right
+Not working doesn’t mean she’ll be at home all day.  #speaker_self
+Sel is just a quiet soul, she’d rather spend her time doing her own things and volunteering. #speaker_self
+No, don’t get me wrong, more power to her. Oh look - our food is here. #speaker_right
+Everything is delicious - parathas, shahi paneer, tandoori aloo. #inner_monologue
+The silence is comfortable, as we eat. Enjoying good food, in good company, on a good night... #inner_monologue
+#speaker_right_image:cha_aman_papa_normal.png
+#speaker_right_name:Papa
+Clears throat.) So, son. #speaker_right
+Uh-oh, what’s coming? #inner_monologue
+Yes, Papa-ji? #speaker_self
+You have some months before university starts. You should make good use of your time. #speaker_right
+What are your plans? #speaker_right
+...Casting calls. Auditions. #inner_monologue
+But I can’t tell him that, right? He’s not going to think that’s a good use of time. #inner_monologue
+
++ [No real plans] I haven’t really made plans, Papa-ji. #speaker_self
+    Idling is no good, beta. #speaker_right
+    Yes, I won’t be idle, I will be doing… things. #speaker_self
+    Things? What things? #speaker_right
+    
++ [Side projects] Just this and that, Papa-ji. Side-projects. #speaker_self
+    Side-projects? #speaker_right
+    What are these side-projects? #speaker_right
+
+- Uh... #speaker_self
+
++ [Acting] -> chapter_1_ending_1
+    
++ [I'll think of something] -> chapter_1_ending_2
+   
+
+
+=== chapter_1_ending_1 ===
+#knot:chapter_1_ending_1
+#ui:scene
+#background:bg_aman_indianrestaurant.jpg
+#speaker_left_image:cha_aman_mama_happy.png
+#speaker_left_name:Mum
+#speaker_right_image:cha_aman_papa_normal.png
+#speaker_right_name:Papa
+Take a deep breath, Aman. #inner_monologue
+I know this may be a surprise, but I was thinking of trying out some professional acting. #speaker_self
+VAR aman_1_familydinner = "acting"
+VAR chapter_1_ending = 1
+... #speaker_left
+... #speaker_right
+Acting? #speaker_left
+Oh no. #inner_monologue
+I can’t read Papa-ji’s face at all. #inner_monologue
+Yes, I was thinking of auditioning for some plays, or television work. I like acting, and I.. I’m good at it. So I would like to try. #speaker_self
+They’re so quiet. #inner_monologue
+Maybe Jothi will save me…? #inner_monologue
+#speaker_right_image:cha_aman_jothi_diva.png
+#speaker_right_name:Jothi
+Well, this sounds like a terrible idea. #speaker_right
+Wait, what? Why? #speaker_self
+What do you mean, why? Isn’t it obvious? #speaker_right
+How many roles do you think are out there for people who look like you?  #speaker_right
+Look like me? #speaker_self
+Yes Aman, people who look like you.  #speaker_right
+Who keep the kesh. Who wear turbans. With brown skin. #speaker_right
+It’s hard enough to find roles for minorities, you think you’ll be able to find roles for minorities-within-minorities?  #speaker_right
+Indians who are Sikhs? #speaker_right
+Wow. #inner_monologue
+It’s not like I hadn’t thought about this at all before.  #inner_monologue
+But I thought Jothi, of all people, would support me on this. #inner_monologue
+I’m sorry Aman, you know me, I’m just being honest.  #speaker_right
+I’m your sister and I can’t lie to you. You are going to have a very tough time. #speaker_right
+My food tastes like ash. #inner_monologue
+And Papa-ji still hasn’t said anything. #inner_monologue
+Well… err. #speaker_left
+Beta, I’m sorry, I was just very surprised. #speaker_left
+We all knew you were talented, but we thought it was just a hobby. #speaker_left
+I believe in you, son. And Jothi, you should be more supportive of your brother. #speaker_left
+
++ [It's fine] It’s fine mum, Jothi is just saying what she thinks. #speaker_self
+    She’s not entirely wrong, I’m not an idiot. I just want to try. #speaker_self
+    Why set yourself up for failure? #speaker_right
+    If I never fail then I’ll never succeed! #speaker_self
+    Wow, nice motivational poster, that’ll - #speaker_right
+    #speaker_right_image:cha_aman_papa_stern.png
+    #speaker_right_name:Papa
+    Enough, Jothi.
+    Is that all he’s going to say? #inner_monologue
+
++ [I'll prove her wrong] No, she’s not obliged to agree with my choices. And I know I’ll have a tough time. #speaker_self
+    You’re wrong though, Jothi - it’s not a terrible idea. It’s just an idea you don’t agree with. #speaker_self
+    But this is my path and I’m going to pursue it. #speaker_self
+    You are in for disappointment, Aman. #speaker_right
+    And you are in for a surprise. #speaker_self
+    Aman… #speaker_right
+    Enough, Jothi, this is for Aman to choose. #speaker_left
+-   Son, we support you no matter what. Go ahead and try. Just give it your best. #speaker_left
+I will, mum.  #speaker_self
+There’s no turning back now. #inner_monologue
+
+-> aman_1_reflection
+
+=== chapter_1_ending_2 ===
+#knot:chapter_1_ending_2
+#ui:scene
+#background:bg_aman_indianrestaurant.jpg
+#speaker_left_image:cha_aman_mama_happy.png
+#speaker_left_name:Mum
+#speaker_right_image:cha_aman_papa_normal.png
+#speaker_right_name:Papa
+I haven’t decided yet. #speaker_self
+~ aman_1_familydinner = "something"
+~ chapter_1_ending = 2
+Could I sound any more pathetic? Someone rescue me. #inner_monologue
+You should spend more time with Selinder, beta. #speaker_left
+You’ve lasted three years already, and she has stayed with you since you were schoolmates, all throughout NS. #speaker_left
+She’s a good girl. And I like her parents too, they always say hello to us at the gurdwara. #speaker_left
+Are you serious with this girl? #speaker_right
+
++ [Yes]
+    Yes Papa-ji, I am. #speaker_self
+    Ahhhhhhh. #speaker_left
+    I don’t like that look in mum’s eye. Like she’s counting the years between imaginary grandkids. #inner_monologue
+    Then Aman, you must take the next few years very seriously. #speaker_left
+    Study hard, and get yourself established. Then you can take the next step. #speaker_left
+    Yes. If you are serious, don’t make the girl wait too long. #speaker_right
+    But what about acting? #inner_monologue
+    Never mind. It’s too late to say anything. #inner_monologue
+    
++ [We're only 21]
+    I like her a lot, but I know we’re still young. #speaker_self
+    Oh, your Papa-ji and I were young when we got married. Well, he was older, but I was only twenty-two. That’s why I’m still young now. #speaker_left
+    Although, the two of you have given me many grey hairs before my time. #speaker_left
+    Well. Think about it, son. You are young, but already a man. #speaker_right
+    So if you are serious about the girl, then be serious with your life. #speaker_right
+    But I am! I’m serious about acting. #inner_monologue
+    How do I tell them - #inner_monologue
+    Never mind. It’s no use. #inner_monologue
+
+- Yes Papa-ji. I understand. #speaker_self
+I’ll just have to do this on my own. #inner_monologue
+
+-> aman_1_reflection
+
+=== aman_1_reflection ===
+#knot:aman_1_reflection
+#ui:chapter_reflection
+#reflection_id:1
+Reflection 1
+
 
  
  -> END
