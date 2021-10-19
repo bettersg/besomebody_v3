@@ -342,7 +342,7 @@ export const CHARACTER_MAP = [
         chapterId: 3,
         number: 3,
         title: "Fight or Flight",
-        knotTag: "aman_4_intro",
+        knotTag: "aman_3_intro",
         summary: "All Aman wants is to celebrate with friends. Why does everything have to be so difficult?",
         playable: false,
         images : ["cat.jpg", "dog.jpg"],
@@ -358,59 +358,15 @@ export const CHARACTER_MAP = [
             inkVar: "aman_chapter3_ending_2",
           },
         ]
-      },
-      {
-        chapterId: 4,
-        number: 4,
-        title: "For The Love of God",
-        knotTag: "aman_4_intro",
-        summary: "Aman is presented with a huge decision that will affect his future and relationship. What will he choose? ",
-        playable: false,
-        images : ["/images/aman_1_intro.jpg", "dog.jpg"],
-
-        endings: [
-          {
-            endingId: 1,
-            title: "Stay",
-            inkVar: "aman_chapter3_ending_1",
-          },
-          {
-            endingId: 2,
-            title: "Leave",
-            inkVar: "aman_chapter3_ending_2",
-          },
-        ]
-      },
-      {
-        chapterId: 5,
-        number: 5,
-        title: "Fly Away",
-        knotTag: "aman_5_intro",
-        summary: "Aman is off to Melbourne. Will he find himself in the land down under?",
-        playable: false,
-        images : ["/images/aman_1_intro.jpg","dog.jpg"],
-
-        endings: [
-          {
-            endingId: 1,
-            title: "Stay",
-            inkVar: "aman_chapter3_ending_1",
-          },
-          {
-            endingId: 2,
-            title: "Leave",
-            inkVar: "aman_chapter3_ending_2",
-          },
-        ]
-      },
+      }, 
     ],
   },
   {
     characterId: 3,
     name: "Ravi Kannaswamy",
     linkName: "",
-    profileImage: "/images/profile_blank.png",
-    characterIntroImage:  "/images/instagram_blank.png",
+    profileImage: "/images/profile_ravi.png",
+    characterIntroImage: "/character_choice_page/ravi.png", 
     description: "Ravi dreams of being an aviation engineer - but can he push past the stereotypes and self-doubts?",
     jsonLink: '../stories/nadia.ink.json',
     playable: false,
