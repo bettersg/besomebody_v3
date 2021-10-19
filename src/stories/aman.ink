@@ -217,7 +217,7 @@ The government website says to bring extra underwear, you know. I went to resear
 If it’s not important, the government wouldn’t say EXTRA. #speaker_left
 Yes mum, I have hills of underwear. Mountains.  #speaker_self
 You are so cheeky to your mum. Where do you learn all these bad things? #speaker_left
-+ [From you] People say I take after you, don’t they?
++ [From you] People say I take after you, don’t they?   #speaker_self
     Nonsense, you look just like your Papa-ji. #speaker_left
     I mean in character, you know. #speaker_self
     You and he are more alike than you think. #speaker_left
@@ -314,13 +314,13 @@ Well… #speaker_self
     Do you think following the ways of the Khalsa (Sikh saint-soldiers) is about being Number One in the room?   #speaker_left
     About how fast you run, or how much you can lift, or how many men salute you when you walk past them?   #speaker_left
     
-        + [I guess not] ...No, I guess not.  #speaker_self
+        ++ [I guess not] ...No, I guess not.  #speaker_self
         Then? #speaker_left
         But Papa-ji and Uncle Ranjit both did so well. Uncle Ranjit expects me to -   #speaker_self
-        + [But it matters] No, but people do care about that kind of thing. #speaker_self
+        ++ [But it matters] No, but people do care about that kind of thing. #speaker_self
         Papa-ji and Uncle Ranjit both did so well in their time, and Uncle Ranjit especially - #speaker_self
         
-    - Uncle Ranjit, Uncle Ranjit. Is Uncle Ranjit going with you to NS? Will you be taking him to Tekong in your backpack? #speaker_left
+    -- Uncle Ranjit, Uncle Ranjit. Is Uncle Ranjit going with you to NS? Will you be taking him to Tekong in your backpack? #speaker_left
     (Laughs.) Okay mum, okay. You’re right. #speaker_self
     I know I am. #speaker_left
     #speaker_left_image:cha_aman_mama_happy.png
@@ -337,13 +337,13 @@ Well… #speaker_self
     Aman, I didn’t say that. #speaker_left
     I asked, what do you want to do?   #speaker_left
         
-        + [Lie low]
+        ++ [Lie low]
         VAR aman_1_nsgoals = "lie low"
         Honestly, I just want to survive NS, mum. #speaker_self
         Then you do that, beta.  #speaker_left
         It’s all I want for you as well. To come home safe and sound. #speaker_left
         
-        + [Do well]
+        ++ [Do well]
         ~ aman_1_nsgoals = "do well"
         I’d like to do well, if I can. #speaker_self
         I know NS is a big deal, and means a lot to Papa-ji… #speaker_self
@@ -351,13 +351,13 @@ Well… #speaker_self
         Never mind Aman, you think about it. #speaker_left
         Just make sure you come home to me safely. #speaker_left
 
-        + [I don’t know]
+        ++ [I don’t know]
         ~ aman_1_nsgoals = "not sure"
         I haven’t figured that out yet. #speaker_self
         Well, if you don’t know what you want. #speaker_left
         (Laughs) You can’t fail, eh? #speaker_left
         
-   - As for worrying about being the odd one out. You know it is not your first time being unique, and it will not be your last time. #speaker_left
+   -- As for worrying about being the odd one out. You know it is not your first time being unique, and it will not be your last time. #speaker_left
    #speaker_left_image:cha_aman_mama_happy.png
     Remember - Nirbhau (without fear), Nirvair (without hate). Maintain your chardikala (serenity regardless of adversity.)  #speaker_left
     Just be yourself, and everything will fall into place. Because you are a good person. And a good son.  #speaker_left
