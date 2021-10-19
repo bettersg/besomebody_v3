@@ -419,7 +419,7 @@ If anyone asks you, why Recruit Singh so special? You can refer them to me. #spe
     Will they ask? #speaker_self
     #speaker_left_image:cha_aman_sergeant_irritated.png
     Wait ah, let me call my grandmother ask her… #speaker_left
-    OI How I know?  #speaker_left
+    Oi! How I know?  #speaker_left
     Please lah, you are how old? I’m sure you know how to handle your own life. #speaker_left
 - Oh boy. #inner_monologue
 #speaker_left_image:cha_aman_sergeant_normal.png
@@ -731,7 +731,7 @@ So you will be the big dollars man. 🤪 #speaker_1
     Really, what a strange and highly specific question #speaker_1
     Do you have some life goals I don’t know about? #speaker_1
     
-        + [Yes, acting.]
+        ++ [Yes, acting.]
         Well, nothing in stone, but I was thinking of taking acting a little further #speaker_self
         Really??? #speaker_1
         I know you are v v good, I’ve seen all your performances #speaker_1
@@ -749,7 +749,7 @@ So you will be the big dollars man. 🤪 #speaker_1
         Yeah I know jaan #speaker_self
         We can talk about it more, but I really have to sleep now #speaker_self
         
-        + [Possibly...]
+        ++ [Possibly...]
         Mayyyyybe. 🤪 #speaker_self
         Whaaaaaaat #speaker_1
         I thought I knew you completely jaan 😭 #speaker_1
@@ -773,7 +773,7 @@ So you will be the big dollars man. 🤪 #speaker_1
         No jaan these things come naturally to me #speaker_self
         🤣🤣 #speaker_1
         Ok sorry bb, I have to sleep. #speaker_self
-    - Lights out already     #speaker_self
+    -- Lights out already     #speaker_self
 
 - Oh yes it’s late… #speaker_1
 Miss you so much. 😘 #speaker_1
