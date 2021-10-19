@@ -523,6 +523,7 @@ Yes, go on, walk away. #inner_monologue
 #background:bg_aman_bmttoilet.jpg
 #speaker_left_image:cha_aman_lukman_hurt.png
 #speaker_left_name:Lukman
+#speaker_right_image:pixel.png
 Hey man, what was that about? #speaker_left
 Oh, they were being fools. #speaker_self
 You okay? #speaker_left
@@ -853,7 +854,7 @@ Everything is delicious - parathas, shahi paneer, tandoori aloo. #inner_monologu
 The silence is comfortable, as we eat. Enjoying good food, in good company, on a good night... #inner_monologue
 #speaker_right_image:cha_aman_papa_normal.png
 #speaker_right_name:Papa
-Clears throat.) So, son. #speaker_right
+(Clears throat) So, son. #speaker_right
 Uh-oh, what’s coming? #inner_monologue
 Yes, Papa-ji? #speaker_self
 You have some months before university starts. You should make good use of your time. #speaker_right
