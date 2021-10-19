@@ -567,7 +567,7 @@ They’d better not pull that crap again with me around, I tell you. Just becaus
 === aman_1_3_lukmanchat ===
 #knot:aman_1_3_lukmanchat
 #ui:scene
-#background:bg_aman_bmtbunk.jpg
+#background:bg_aman_bmtbunknight.jpg
 #speaker_left_image:cha_aman_lukman_normal.png
 #speaker_left_name:Lukman
 I’m really lucky to have a buddy. #inner_monologue
@@ -664,7 +664,7 @@ Quick, turn on my phone. I can only spend 10 minutes max. #inner_monologue
 #timestamp:22.49
 Jaan (term of endearment) how was your day? #speaker_1
 #ui:scene
-#background:bg_aman_bmtbunk.jpg
+#background:bg_aman_bmtbunknight.jpg
 Where do I even begin? I’m so exhausted… #inner_monologue
 #ui:whatsapp
 #background:whatsapp.png
@@ -698,7 +698,7 @@ So you will be the big dollars man. 🤪 #speaker_1
     You have gone v v quiet #speaker_1
     Have I scared you #speaker_1
     #ui:scene
-    #background:bg_aman_bmtbunk.jpg
+    #background:bg_aman_bmtbunknight.jpg
     No, I’m just dozing off, I’m incredibly tired… #inner_monologue
     #ui:whatsapp
     #background:whatsapp.png
@@ -709,7 +709,7 @@ So you will be the big dollars man. 🤪 #speaker_1
     You can’t scare me off #speaker_self
     There’s no right or wrong about it, you just go for the life you want #speaker_self
     #ui:scene
-    #background:bg_aman_bmtbunk.jpg
+    #background:bg_aman_bmtbunknight.jpg
     But I’m not sure I can give it to you… #inner_monologue
     Never mind, it’s too early to think about that. #inner_monologue
     #ui:whatsapp
@@ -738,7 +738,7 @@ So you will be the big dollars man. 🤪 #speaker_1
         So proud of you #speaker_1
         But jaan… professionally? That’s a big step #speaker_1
         #ui:scene
-        #background:bg_aman_bmtbunk.jpg
+        #background:bg_aman_bmtbunknight.jpg
         I shouldn’t have started this conversation, I can’t finish it tonight. #inner_monologue
         It sounds like she has doubts, I don’t blame her. #inner_monologue
         #ui:whatsapp
@@ -755,7 +755,7 @@ So you will be the big dollars man. 🤪 #speaker_1
         I thought I knew you completely jaan 😭 #speaker_1
         You’ve been holding out #speaker_1
         #ui:scene   
-        #background:bg_aman_bmtbunk.jpg
+        #background:bg_aman_bmtbunknight.jpg
         I shouldn’t have said anything, now I can’t finish telling her. #inner_monologue
         #ui:whatsapp
         #background:whatsapp.png

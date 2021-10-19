@@ -325,9 +325,9 @@ export const CHARACTER_MAP = [
       {
         chapterId: 2,
         number: 2,
-        title: "To Be or Not To Be",
+        title: "Price of Admission",
         knotTag: "aman_2_intro",
-        summary: "Aman tries to crack the silver screen - but it’s even harder than he imagined.",
+        summary: "Aman discovers talent is not enough to crack the silver screen. Where will he draw the line?",
         playable: false,
         images : ["/images/aman_1_intro.jpg"],
         endings: [
