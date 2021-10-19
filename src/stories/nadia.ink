@@ -2925,7 +2925,7 @@ So I made sure we ordered from a halal place. It’s just bee hoon and things, b
 Wow thanks Chloe. It looks really good. #speaker_self
 The sweet and sour fish is really good. #speaker_right
 This is what friends do. She makes me feel so... welcomed, and part of the group. #inner_monologue
-#speaker_left_image:cha_nadia_zhihao_casual_normal.png
+#speaker_left_image:cha_nadia_zhihao_normal.png
 #speaker_left_name:Zhihao
 That one not nice!! #speaker_left
 Don’t listen to him. He finished like half the tray. #speaker_right
@@ -2964,7 +2964,7 @@ You were always a bit.. different.  #speaker_left
 #speaker_right_name:Chloe
 I think it was a very lonely two years sometimes. #speaker_right
 Yeah? Felt longer too. #speaker_self
-#speaker_left_image:cha_nadia_zhihao_casual_normal.png
+#speaker_left_image:cha_nadia_zhihao_normal.png
 #speaker_left_name:Zhihao
 Don’t say until like that can.. #speaker_left
 
@@ -2973,7 +2973,7 @@ Don’t say until like that can.. #speaker_left
 Yeah we just started our own two years. #speaker_left
 
 Oops, sorry. You can take the floor. What Tekong-related complaints would you like to file Gavin? #speaker_self
-#speaker_left_image:cha_nadia_zhihao_casual_normal.png
+#speaker_left_image:cha_nadia_zhihao_normal.png
 #speaker_left_name:Zhihao
 OK, number one! The canteen food sucks!! How come the Muslim food always look nicer. #speaker_left
 
@@ -2981,7 +2981,7 @@ OK, number one! The canteen food sucks!! How come the Muslim food always look ni
 #speaker_left_name:Gavin 
 I told you that years ago.#speaker_left
 
-#speaker_left_image:cha_nadia_zhihao_casual_normal.png
+#speaker_left_image:cha_nadia_zhihao_normal.png
 #speaker_left_name:Zhihao
 Number two! People who snore, they should all form their own company.  #speaker_left
 
@@ -3131,7 +3131,7 @@ Come on, hurry up sit down. Zhihao wants to start a board game. #speaker_left
 Ok ok, sure. Chloe you joining? #speaker_self
 Gimme a min.. #speaker_right
 
-#speaker_left_image:cha_nadia_zhihao_casual_normal.png
+#speaker_left_image:cha_nadia_zhihao_normal.png
 #speaker_left_name:Zhihao
 Wah Nadia, new look is it.  #speaker_left
 + Uh no, not really. [] #speaker_self
@@ -3140,12 +3140,12 @@ Wah Nadia, new look is it.  #speaker_left
     #speaker_left_image:cha_nadia_gavin_casual_normal.png
     #speaker_left_name:Gavin
     Eh nonsense la Zhihao! In school she wear already to collect results. #speaker_left
-    #speaker_left_image:cha_nadia_zhihao_casual_normal.png
+    #speaker_left_image:cha_nadia_zhihao_normal.png
     #speaker_left_name:Zhihao
     Ohhhh yeah... #speaker_left
 
 - I think you look nice! You always look so comfy. #speaker_right
-#speaker_left_image:cha_nadia_zhihao_casual_normal.png
+#speaker_left_image:cha_nadia_zhihao_normal.png
 #speaker_left_name:Zhihao
 Ya I was only asking.. But a bit warm right?  #speaker_left
 #speaker_left_image:cha_nadia_gavin_casual_normal.png
