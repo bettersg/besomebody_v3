@@ -3393,6 +3393,8 @@ It’s not even 8 yet. You said 8.30, kan? Plenty of time.. #speaker_right
         #ui:notification
         #background:ui_nadia_message.jpg
         Azlin: text me later when you’re done! easy-peasy 💪💅✨ #message
+         #ui:narrator
+        #background:bg_nadia_selfiehijab.jpg
     + [Gavin]  Ya, I’m meeting Gavin. #speaker_self
         Gavin, hm? #speaker_right
         Ok, be good! #speaker_right
@@ -3400,9 +3402,12 @@ It’s not even 8 yet. You said 8.30, kan? Plenty of time.. #speaker_right
         #ui:notification
         #background:ui_nadia_message.jpg
         Gavin: Good luck Nad! You got this 😉 #message
+         #ui:narrator
+        #background:bg_nadia_selfiehijab.jpg
+    - .
     #ui:narrator
     #background:bg_nadia_selfiehijab.jpg
-    - Ok, take a deep breath. 
+    Ok, take a deep breath. 
     ~ chapter_3_ending = 2
     I'm going to be ok. 
     I just need... to be me.
