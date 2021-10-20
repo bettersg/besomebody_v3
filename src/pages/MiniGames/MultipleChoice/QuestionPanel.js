@@ -351,7 +351,10 @@ export default function QuestionPanel({
                   
                   }
                   
-                  <Typography variant="body1" className={`answerBody ${classes.answerWrong}`}>
+                  <Typography variant="body1" className=
+                    {isCorrectAnswer ?
+                      `answerBody ${classes.answerCorrect}` :
+                      `answerBody ${classes.answerWrong}`}>
                     {message}
                   </Typography>
                 </>
