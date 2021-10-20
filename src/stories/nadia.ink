@@ -3153,7 +3153,6 @@ Ya I was only asking.. But a bit warm right?  #speaker_left
 Oi! She’s not here for an interview leh. #speaker_left
 I’m going to get something to eat. Does anyone want anything? #speaker_self
 Oh Nad! My mum did all the ordering, but I made sure the pizza came from a halal place.  #speaker_right
-Got it. Pizza is halal. #speaker_self
 That’s ok right? #speaker_right
 + Got it. Pizza is halal. [] #speaker_self
     Food enough for an army. Pizza for me. #inner_monologue

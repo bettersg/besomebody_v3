@@ -108,7 +108,7 @@ const OutcomeUnlockedStep = ({ next }) => {
           </div>
 
           <Typography className={classes.headerText}>Outcome Unlocked!</Typography>
-          <Typography className={classes.text}>You’ve unlocked one of Nadia’s three outcomes for chapter 3. <br/><br/>To unlock more outcomes, replay chapters from Nadia’s home screen.</Typography>
+          <Typography className={classes.text}>You’ve unlocked one of the outcomes for chapter 3. <br/><br/>To unlock more outcomes, you may need to replay the previous chapters.</Typography>
       </Box>
         <Box className={classes.bottom}>        
           {/* <Button variant="contained" className={classes.btn} onClick={() => setPage(REFLECTION_PAGE_CHAPTER_REFLECTION_RESPONSES)}> */}
