@@ -6,6 +6,7 @@ import SVG from 'react-inlinesvg'
 import { getDbUser } from '../../models/userModel.js'
 import { Box, Typography, Avatar, Button } from '@material-ui/core'
 import ChapterBox from './ChapterBox'
+import ReflectionChapter from './ReflectionChapter'
 import { IntroBanner } from '../../components/IntroBanner'
 import { CHARACTER_MAP } from '../../models/storyMap'
 import { useAuth } from '../../contexts/AuthContext'
@@ -110,18 +111,21 @@ const CharacterChapterPage = (props) => {
     history.push('/story/' + name)
   }
 
+  const currentCharCompleted = 'userFromDb?.character_' + characterId + '_completed'
+  
+
   return (
     <Box className={classes.CharChaptWrapper}>
       <div className="CharacterChapterPage">
         <div className="CharacterChapterPage__top">
           <div className="CharacterChapterPage__top__nav">
-            <Link to="/" style={{ textDecoration: 'none' }}>
+            <Link to="/" style={{ textDecoration: 'none', paddingLeft: '70px' }}>
               <div style={{ display: 'flex' }}>
                 <SVG src="/chapter_choices_page/arrow.svg" />
-                <div className="CharacterChapterPage__top__nav--name">Menu</div>
+                <div className="CharacterChapterPage__top__nav--name">Character Menu</div>
               </div>
             </Link>
-            <SideMenu src="/commons/menu-icon.svg" />
+            <SideMenu />
           </div>
           <div className="CharacterChapterPage__top__character">
             <Avatar
@@ -142,11 +146,11 @@ const CharacterChapterPage = (props) => {
       </div>
      
       {hasSavedState && (
-            <box             
+            <Box             
               onClick={handleLoadSavedStory}
             >
               <IntroBanner persona={persona} />
-            </box>
+            </Box>
           )}
       <div style={{ paddingTop: '24px' }}>
         {userFromDb && persona.chapters.length > 0 ? (
@@ -168,6 +172,13 @@ const CharacterChapterPage = (props) => {
         ) : (
           <div> No Chapters Available </div>
         )}
+        { eval(currentCharCompleted)  && 
+                <ReflectionChapter
+                userFromDb={userFromDb}
+                characterId={characterId}
+                chaptDetails={persona.reflectionBrowser[0]}            
+              />
+            }
       </div>
     </Box>
   )

@@ -226,6 +226,86 @@ export const MINI_GAME_MAP = [
         ],
       },
     ],
+  },
+  //  nadia chapt 3
+  {
+    game_id: 4, 
+    ui: "mcq",
+    introduction: "Interfaith relationships are a difficult and sensitive topic. Let's find out more.",
+    questions: [
+      {
+        question_id: 1,
+        question: "What % of marriages in Singapore in 2020 were inter-ethnic?",
+        type: "text",
+        explanation:
+          "About 1 in 5 marriages is between a bride and groom of different ethnicities in Singapore!",
+          //https://www.statista.com/statistics/995734/singapore-proportion-inter-ethnic-marriages/
+        correct_answer_id: 2,
+        answers: [
+          {
+            answer_id: 1,
+            title: "8%",
+          },
+          {
+            answer_id: 2, 
+            title: "18%",
+          },
+          {
+            answer_id: 3,
+            title: "28%",
+          },
+          {
+            answer_id: 4,
+            title: "38%",
+          },
+        ],
+      },
+      {
+        question_id: 2,
+        question: "How many Malay Muslim females married Chinese males in 2020?",
+        correct_answer_id: 2,
+        explanation:
+          "Exactly 103 Malay Muslim females married Chinese males in 2020. This number is slightly lower than previous years (131 in 2018) due to the overall reduction in marriages due to the COVID-19 restrictions.",
+        // https://data.gov.sg/dataset/inter-ethnic-marriages-under-administration-muslim-law-act-ethnic-group-brides-grooms-annual?view_id=138f28fd-7668-4611-a773-8350fe95c5a5&resource_id=9c8d2f0f-af24-402d-83be-a14bdf5e201f
+        type: "text",
+        answers: [
+          {
+            answer_id: 1,
+            title: "10",
+          },
+          {
+            answer_id: 2, 
+            title: "100",
+          },
+          {
+            answer_id: 3,
+            title: "1,000",
+          },
+          {
+            answer_id: 4,
+            title: "10,000",
+          },
+        ],
+      },
+      {
+        question_id: 3,
+        question: "Mdm Che Zahara, a Malay Muslim pioneer of Singapore who helped establish the Singapore Women's Charter in Parliament in 1961, was married to a non-Malay.",
+        correct_answer_id: 1,
+        explanation: "Born in Singapore, Che Zahara was the daughter of Noor Mohamed, one of the first Malays during British rule to learn English and work as a mediator and translator. Che Zahara married a businessman from Ceylon, now Sri Lanka. She was inducted to the Singapore Women's Hall of Fame.",
+        // https://www.swhf.sg/profiles/che-zahara-binte-noor-mohamed/
+        type: "text",
+        answers: [
+          {
+            answer_id: 1,            
+            title: "True",
+          },
+          {
+            answer_id: 2,
+            title: "False",
+          }, 
+        ],
+      },
+    ],
   }
 ];
   

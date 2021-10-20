@@ -5,6 +5,9 @@
     "chapter":1,
     "didyouknow": "This story is based on focus group interviews with members from this community, and deals with an important element of the Sikh identiity. ",
     "media": "https://www.ricemedia.co/culture-people-daggers-bracelets-and-boxer-shorts-the-religious-articles-of-sikhs/",
+    "context": {
+      "character_name": "Aman"
+    },
     "questions": [
       1,      
       4,
@@ -18,6 +21,9 @@
     "chapter":1,
     "didyouknow": "This story is based on real stories of inter-faith relationships, and of understanding your own faith as a young adult. There are hidden struggles that many go through.",
     "media": "https://www.ricemedia.co/culture-people-conversion-circumcision-angry-mum-journey-one-couples-interracial-marriage-nhb/",
+    "context": {
+      "character_name": "Nadia"
+    },
     "questions": [
       1,
       5,
@@ -31,10 +37,34 @@
     "chapter":2,
     "didyouknow": "There were many serious issues raised in this chapter, and it may help to research more and discuss these issues with trusted friends from other communities.",
     "media": "https://www.channelnewsasia.com/news/singapore/is-casual-racism-okay-seven-singaporeans-share-stories-7862072",
+    "context": {
+      "character_name": "Nadia"
+    },
     "questions": [
       1,      
       6,
       2,
+      3
+    ]
+  },
+  {
+    "id": 4,  
+    "story":"Nadia", 
+    "didyouknow": "Inter-cultural relationships are increasingly common in Singapore - but there are still hurdles and hardships along the way.",
+    "media": "https://www.facebook.com/mosg.tv/videos/705929542901799/",
+    "mediatype" : "video",
+    "mediaimage" : "/didyouknow/nadia_video.png",
+    "context": {
+      "character_name": "Nadia"
+    },
+    "quickQuestions": [     
+      9,      
+      2,
+      8,
+      10
+    ],
+    "longQuestions": [
+      1,      
       3
     ]
   }

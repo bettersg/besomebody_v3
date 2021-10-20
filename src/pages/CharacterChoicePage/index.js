@@ -103,7 +103,7 @@ export const CharacterChoicePage = () => {
             <div className="CharacterChoices__header">
                 <div className="CharacterChoices__header--placeholder"></div>
                 <img src="/commons/tobeyou-logo.svg" />
-                <SideMenu src="/commons/menu-icon.svg" />
+                <SideMenu />
             </div>
              {/* <div className="game-menu"> */}
             {/* </div> */}
@@ -206,7 +206,7 @@ export const CharacterChoicePage = () => {
                                     <p>Discover {persona.name.split(" ")[0]}'s story</p>
                                 </div>
                                 <div>
-                                    <Link to={'/chapters/' + persona.linkName}><div class="play_button">Play</div></Link>
+                                    <Link to={'/chapters/' + persona.linkName}><div className="play_button">Play</div></Link>
                                 </div>
                             </div>
                             <div className="CharacterChoices__bottomDivider"></div>

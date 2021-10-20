@@ -70,6 +70,7 @@ export default function ChapterBox(props) {
   for (var i = 0; i < getEndingsUnlocked(); i++) {
     rows.push(
       <FiberManualRecordIcon
+        key={`1:${i}`}
         style={{ fontSize: 8, color: '#999999', marginRight: 1 }}
       />
     )
@@ -77,6 +78,7 @@ export default function ChapterBox(props) {
   for (var j = 0; j < chaptDetails.endings.length - getEndingsUnlocked(); j++) {
     rows.push(
       <FiberManualRecordIcon
+        key={`2:${j}`}
         style={{ fontSize: 8, color: '#E5E5E5', marginRight: 1 }}
       />
     )
@@ -106,7 +108,6 @@ export default function ChapterBox(props) {
       <CardContent className={classes.card}>
         <div className="ChapterBox">
           <div className="ChapterBox__chaptDetails">
-            {/* TODO: this needs to be pulled from the player save data, not from the story*/}
             {chaptDetails.new == true ? (
               <div className="ChapterBox__chaptDetails__bubble new">NEW!</div>
             ) : chaptDetails.playable == false ? (
@@ -148,7 +149,7 @@ export default function ChapterBox(props) {
                       LOCKED
                     </div>
                   
-            )}
+            )}            
           </div>
         </div>
 
@@ -160,7 +161,7 @@ export default function ChapterBox(props) {
               unlocked
             </span>
           </div>
-        ) : null}
+        ) : null}        
       </CardContent>
     </Card>
   )

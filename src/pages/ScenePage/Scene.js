@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useRef } from 'react'
 import { Box, Button, Fade, Typography } from '@material-ui/core'
@@ -91,18 +92,40 @@ const Scene = (props) => {
    
   const step = currentParagraphs[currentParagraphs.length - 1]
 
+  console.log('check ', checkSpeakerInCurrentParagraphs().includes('speaker_left'))
+  console.log('step ', step?.tags[0] === 'speaker_left')
+  const speakerLeftClass = step?.tags[0] === 'speaker_left' ? "speaker" : "nonSpeaker";
+  const speakerRightClass = step?.tags[0] === 'speaker_right' ? "speaker" : "nonSpeaker";
+  
   return (
     <Fade  in={true} timeout={500}>
       <div className="ScenePage">
+        {checkSpeakerInCurrentParagraphs().includes('speaker_left') ? 
+          <div className={"ScenePage__" + speakerLeftClass}>
+            <img src={"/images/" + specialTags.speaker_left_image} className={"ScenePage__speaker--left " + speakerLeftClass}/>
+          </div>
+          : null
+        }
+       {checkSpeakerInCurrentParagraphs().includes('speaker_right') ? 
+          <div className={"ScenePage__" + speakerRightClass}>
+            <img src={"/images/" + specialTags.speaker_right_image} className={"ScenePage__speaker--right " + speakerRightClass}/>
+          </div>
+          : null
+        }
+        
+
+
+{/* 
+
         <div className="ScenePage__nonSpeaker">
           {checkSpeakerInCurrentParagraphs().includes('speaker_left')  ? <img src={"/images/" + specialTags.speaker_left_image} className="ScenePage__speaker--left nonSpeaker"/> : null}
           {checkSpeakerInCurrentParagraphs().includes('speaker_right') ? <img src={"/images/" + specialTags.speaker_right_image} className="ScenePage__speaker--right nonSpeaker"/> : null}
         </div>
         <div className="ScenePage__speaker">
           {step?.tags[0] === 'speaker_left' ? <img src={"/images/" + specialTags.speaker_left_image} className="ScenePage__speaker--left"/> : null}
-          {step?.tags[0] === 'speaker_right' ? <img src={"/images/" + specialTags.speaker_right_image} className="ScenePage__speaker--right"/> : null}
-          
-        </div>
+          {step?.tags[0] === 'speaker_right' ? <img src={"/images/" + specialTags.speaker_right_image} className="ScenePage__speaker--right"/> : null}          
+        </div> */}
+
       <Box className={classes.paragraphWrapper}  height="100%">
         <div
           overflow="scroll"

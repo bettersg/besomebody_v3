@@ -2,30 +2,38 @@
   {
     "id": 1,
     "type": "MULTI_CHOICE",
-    "body": "How did the character's story thus far make you feel?",
+    "body": "How did this part of {character_name}'s story make you feel?",
     "choices": [
       {
+        "id":1,
         "body": "Optimistic"
       },
       {
+        "id":2,
         "body": "Happy"
       },
       {
+        "id":3,
         "body": "Indifferent"
       },
       {
+        "id":4,
         "body": "Sad"
       },
       {
+        "id":5,
         "body": "Angry"
       },
       {
+        "id":6,
         "body": "Hurt"
       },
       {
+        "id":7,
         "body": "Confused"
       },
       {
+        "id":8,
         "body": "None of the above"
       }
     ]
@@ -33,12 +41,12 @@
   {
     "id": 2,
     "type": "LIKERT_SCALE",
-    "body": "How would you rate your level of engagement with the story?",
+    "body": "How much did you get into {character_name}'s head?",
     "leftChoice": {
-      "body": "I'm not feeling it."
+      "body": "I'm not them."
     },
     "rightChoice": {
-      "body": "I'm totally immersed!"
+      "body": "I'm totally them!"
     }
   },
   {
@@ -52,15 +60,19 @@
     "body": "Which of the situations did you find the most challenging for Aman?",
     "choices": [
       {
+        "id":1,
         "body": "When his sister Jothi confronted him"
       },
       {
+        "id":2,
         "body": "When his friend Zhihao made fun of him"
       },
       {
+        "id":3,
         "body": "When he faced his dad’s disappointment (not all endings had this)"
       },
       {
+        "id":4,
         "body": "When he was treated badly in NS"
       }
     ]
@@ -68,18 +80,22 @@
   {
     "id": 5,
     "type": "MULTI_CHOICE",
-    "body": "Which of the choices did you find the most challenging for Nadia?",
+    "body": "Which of the choices did you find the most challenging for {character_name}?",
     "choices": [
       {
+        "id":1,
         "body": "Responding to her father’s questions in the car"
       },
       {
+        "id":2,
         "body": "Deciding how to respond to Gavin in the canteen"
       },
       {
+        "id":3,
         "body": "Choosing how to answer Chloe's questions about your attire"
       },
       {
+        "id":4,
         "body": "Answering Azlin's questions about Gavin"
       }
     ]
@@ -87,15 +103,18 @@
   {
     "id": 6,
     "type": "MULTI_CHOICE",
-    "body": "Which of the situations did you find the most challenging for Nadia?",
+    "body": "Which of the situations did you find the most challenging for {character_name}?",
     "choices": [
       {
+        "id":1,
         "body": "Anticipating Gavin's reactions when he saw her dressed in the hijab"
       },
       {
+        "id":2,
         "body": "Dealing with Chloe's perception that Nadia is advantaged unfairly because of her race"
       },
       {
+        "id":3,
         "body": "Understanding Azlin's viewpoints and her struggles as a Malay"
       } 
     ]
@@ -106,15 +125,88 @@
     "body": "What do you think is Nadia's most significant challenge ahead?",
     "choices": [
       {
+        "id":1,
         "body": "Being comfortable with herself (e.g. donning the hijab)"
       },
       {
+        "id":2,
         "body": "Change how her peers perceive her and other Malays"
       },
       {
+        "id":3,
         "body": "Navigating and understanding the experiences of other Malays"
       } 
     ]
+  },
+  {
+    "id": 8,
+    "type": "MULTI_CHOICE_IMAGE",
+    "body": "Which character do you most resonate with in {character_name}’s journey?",
+    "choices": [
+      {
+        "id":1,
+        "body": "Nadia",
+        "image_url": "/shareable_avatars/nadia.png"
+      },
+      {
+        "id":2,
+        "body": "Gavin",
+        "image_url": "/shareable_avatars/gavin.png"
+      },
+      {
+        "id":3,
+        "body": "Chloe",
+        "image_url": "/shareable_avatars/chloe.png"
+      },
+      {
+        "id":4,
+        "body": "Azlin",
+        "image_url": "/shareable_avatars/azlin.png"
+      }  
+    ]
+  },
+  {
+    "id": 9,
+    "type": "MULTI_CHOICE",
+    "body": "How do you think {character_name} is feeling now?",
+    "choices": [
+      {
+        "id":1,
+        "body": "Happy"
+      },
+      {
+        "id":2,
+        "body": "Sad"
+      },
+      {
+        "id":3,
+        "body": "Worried"
+      },
+      {
+        "id":4,
+        "body": "Angry"
+      },
+      {
+        "id":5,
+        "body": "Confused"
+      },
+      {
+        "id":6,
+        "body": "Indifferent"
+      },
+      {
+        "id":7,
+        "body": "Unsure"
+      },
+      {
+        "id":8,
+        "body": "None of the above"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "type": "OPEN",
+    "body": "Why did you resonate with that character?"
   }
-
 ]

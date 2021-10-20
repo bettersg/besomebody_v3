@@ -1,0 +1,13 @@
+{
+  "indexes": [
+    { 
+      "collectionGroup": "reflectionResponses",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "reflectionId", "order": "ASCENDING" },
+        { "fieldPath": "questionId", "order": "ASCENDING" },
+        { "fieldPath": "submittedAt", "order": "DESCENDING" }
+      ]
+    }
+  ]
+}

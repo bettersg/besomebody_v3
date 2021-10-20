@@ -67,9 +67,11 @@ const ReflectionForm = ({ reflection }) => {
   const handleSubmitClick = async () => {
     const answerDocs = answers.map((answer, index) => {
       const question = questions[index];
+      const choiceId = question.choices?.find(({ body }) => body === answer)?.id ?? null;
       return {
         reflectionId: reflection.id,
         questionId: question.id,
+        choiceId,
         userId: currentUser.id,
         answer,
         submittedAt: new Date(),
@@ -108,8 +110,10 @@ const ReflectionForm = ({ reflection }) => {
       {questions.map((question, index) => (
         <Box key={question.id} mt={2}  className={classes.container}>
           <Question
+            reflectionId={reflection.id}
             key={question.id}
             question={question}
+            context={reflection.context}
             value={answers[index]}
             onChange={answer => setAnswers(
               produce(draftAnswers => {

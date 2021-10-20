@@ -41,7 +41,7 @@ export const CHARACTER_MAP = [
     primaryColour: '#FB5A3F',
     secondaryColour: '#664EFC',
     playable: true,
-    newestChapter: 2,
+    newestChapter: 3,
     variables: {
       nadia_mood: 5,
       gavin_mood: 5,
@@ -49,6 +49,7 @@ export const CHARACTER_MAP = [
     chapters: [
       {
         chapterId: 1,
+        reflectionId:2,
         number: 1,
         title: "An Unexpected Invitation",
         knotTag: "nadia_1_intro",
@@ -107,6 +108,7 @@ export const CHARACTER_MAP = [
       {
         chapterId: 2,
         number: 2,
+        reflectionId:3,
         title: "The Date Crasher",
         knotTag: "nadia_2_intro",
         summary: "Nadia runs into some hard realities. Sometimes, having dreams isn't as straightforward as it should be.",
@@ -155,37 +157,97 @@ export const CHARACTER_MAP = [
       {
         chapterId: 3,
         number: 3,
+        reflectionId:4,
         title: "Fork in the Road",
         knotTag: "nadia_3_intro",
         summary: "As one door closes, another opens. But which girl will step through that door? As JC life comes to an end, only Nadia can choose.",
-        playable: false,
+        playable: true,
+        images: [
+          "/images/bg_nadia_intro.jpg",
+          "/images/bg_nadia_bedroom.jpg",
+          "/images/bg_nadia_selfiehijab.jpg",
+          "/images/bg_nadia_library.jpg",          
+          "/images/ui_nadia_message.jpg",
+          "/images/cha_nadia_gavin_casual_concerned.png",                  
+          "/images/cha_nadia_gavin_casual_grinning.png",                  
+          "/images/cha_nadia_gavin_casual_nervous.png",                  
+          "/images/cha_nadia_gavin_casual_normal.png",                  
+          "/images/cha_nadia_chloe_school_concerned.png",                  
+          "/images/cha_nadia_chloe_school_confused.png",
+          "/images/cha_nadia_chloe_school_frustrated.png",                  
+          "/images/cha_nadia_chloe_school_grinning.png",                  
+          "/images/cha_nadia_chloe_school_normal.png",
+          "/images/cha_nadia_chloe_school_sad.png",
+          "/images/cha_nadia_unaisah.png",
+          "/images/cha_nadia_zhihao.png",
+          "/images/bg_launch.jpg",
+          "/images/bg_nadia_schoolhall.jpg",
+          "/images/bg_nadia_chloehome.jpg",
+          "/images/bg_nadia_gavinhome.jpg",
+          "/images/bg_nadia_fathercaratday.jpg",        
+        ],
         endings: [
           {
             endingId: 1,
-            title: "Public",
+            title: "Nadia and Gavin, together",
             inkVar: "chapter3_ending_1",
           },
           {
             endingId: 2,
-            title: "Private",
+            title: "Nadia keeps her options open",
             inkVar: "chapter3_ending_2",
-          },
+          },          
           {
             endingId: 3,
-            title: "Private",
+            title: "Nadia moves forward alone",
             inkVar: "chapter3_ending_3",
-          },
+          }, 
         ]
       },
     ],
+    reflectionBrowser: [
+      {         
+        title: "Reflection Browser",
+        knotTag: "story_end_browser",
+        summary: "Nadia's story in the game has ended, but the stories of all our players are waiting to be explored.",
+        playable: true,
+        images: [
+          "/images/bg_nadia_intro.jpg",         
+          "/images/bg_launch.jpg",
+          "/images/bg_reflections.jpg",
+        ],
+        empathyCharacters: [
+          {
+            characterName: 'Nadia',
+            characterImage: '/shareable_avatars/nadia.png',
+          },
+          {
+            characterName: 'Azlin',
+            characterImage: '/shareable_avatars/azlin.png',
+          },
+          {
+            characterName: 'Gavin',
+            characterImage: '/shareable_avatars/gavin.png',
+          },
+          {
+            characterName: 'Chloe',
+            characterImage: '/shareable_avatars/chloe.png',
+          },
+          {
+            characterName: 'Rahman',
+            characterImage: '/shareable_avatars/rahman.png',
+          },
 
+        ]
+      },
+    ]
   },
   {
     characterId: 2,
     name: "Aman Singh",
     linkName: "aman",
     profileImage: "/images/profile_aman.png",
-    description: "Aman wants to act, model and find happiness in life. Must he change how he looks to fit in and succeed?",
+    description: "National Service, family expectations, personal dreams, and faith - must Aman give up something he values in order to succeed?",
     characterIntroImage: "/character_choice_page/aman.png", 
     jsonLink: '../stories/aman.ink.json',
     jsonFile: AmanInk,
@@ -200,9 +262,10 @@ export const CHARACTER_MAP = [
       {
         chapterId: 1,
         number: 1,
-        title: "Duty Calls",
+        reflectionId:1,
+        title: "Call of Duty",
         knotTag: "aman_1_intro",
-        summary: "Aman prepares to enlist in National Service. Will he go in as he is, or take a big step to blend in?",
+        summary: "Aman enlists in National Service. It’s a proud moment for his family, but Aman is uneasy...",
         playable: true,
         images: [
           "/images/bg_aman_intro.jpg",
