@@ -136,13 +136,34 @@ const useStyles = makeStyles((theme) => ({
   },
   filterChaptBtn: {
     textTransform: 'none',
+    color: '#C4C6F1',
+    '&.Mui-selected': {
+      backgroundColor: '#6C70DD',           
+      color: '#ffffff',
+      fontWeight:'700',
+  }
+  },
+  filterChaptBtnSelected: {
+    
+      backgroundColor: '#6C70DD',           
+      color: '#ffffff'
+ 
   },
   filterActionBtn: {
     fontWeight: 'bold',
     textTransform: 'none',
+    margin: '10px',
   },
   closeIcon: {
     cursor: 'pointer',
+    float: 'right',
+    margin: '10px'
+  },
+  filterDrawer: {
+    padding: '20px',
+    textAlign: 'center',
+    backgroundColor: '#3835C1',
+    color: '#ffffff',
   },
   topText: {
     color: '#A7A9EB',
@@ -287,27 +308,28 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
     setHasMore(true);
     setLastDocSnapshot(null);
     setReflectionIds(filterReflectionIds);
+    toggleFilterDrawer(false);
   }
 
   const FilterDrawer = () => {
     const characterId = getCharacterId(reflectionId);
     const allChapterReflectionIds = getChapterReflectionIds(characterId);
     return (
-      <div role='presentation' onKeyDown={toggleFilterDrawer(false)}>
-        <h1>Filter stories</h1>
-        <CloseIcon className={classes.closeIcon} onClick={toggleFilterDrawer(false)}/>
-        <h3>CHAPTERS</h3>
+      <div role='presentation' onKeyDown={toggleFilterDrawer(false)} className={classes.filterDrawer}>
+        <h1>Filter stories</h1> <CloseIcon className={classes.closeIcon} onClick={toggleFilterDrawer(false)}/>
+        
+        <Typography>View reflections from:</Typography>
         <ToggleButtonGroup value={filterReflectionIds} onChange={handleFilterButtonClick}>
           {
             allChapterReflectionIds.map(([chaptId, reflId]) =>
-              <ToggleButton className={classes.filterChaptBtn} value={reflId}>
-                Chpt {chaptId}
+              <ToggleButton className={ classes.filterChaptBtn} value={reflId}>
+                Chapter {chaptId}
               </ToggleButton>
             )
           }
         </ToggleButtonGroup>
-        <br/>
-        <ToggleButtonGroup>
+        <br />
+        {/* <ToggleButtonGroup>
           <ToggleButton
             className={classes.filterActionBtn}
             onClick={filterReset}>
@@ -319,7 +341,9 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
             disabled={filterReflectionIds.length === 0}>
             Apply
           </ToggleButton>
-        </ToggleButtonGroup>
+
+        </ToggleButtonGroup> */}
+        <Button variant="contained" color="primary"  className={classes.filterActionBtn} onClick={filterApply} disabled={filterReflectionIds.length === 0} >APPLY</Button>
       </div>
     );
   }
@@ -428,10 +452,15 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
                 scrollableTarget={'reflectionsContainerId'}
               >
                 {responses.map(response => (
-                  response.answer.length > 5 && <ChapterResponse key={response.id} response={response} />
+                  response.answer.length > 10 && <ChapterResponse key={response.id} response={response} />
                 ))}
               </InfiniteScroll>
             </Box>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
                         {/* </Container> */}
           </div>
           <div className={classes.btnSection}>
