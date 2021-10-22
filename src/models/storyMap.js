@@ -1,5 +1,6 @@
 import NadiaInk from '../stories/nadia.ink.json'
 import AmanInk from '../stories/aman.ink.json'
+import RaviInk from '../stories/ravi.ink.json'
 
 // TODO: Update with other properties such as character image, character bio, chapter summary, etc
 /* 
@@ -251,8 +252,8 @@ export const CHARACTER_MAP = [
     characterIntroImage: "/character_choice_page/aman.png", 
     jsonLink: '../stories/aman.ink.json',
     jsonFile: AmanInk,
-    primaryColour: '#19A3AD',
-    secondaryColour: '#FFBB0B',
+    primaryColour: '#F4B000',
+    secondaryColour: '#3A2A08',
     playable: true,
     newestChapter: 1,
     variables: {
@@ -406,12 +407,143 @@ export const CHARACTER_MAP = [
   {
     characterId: 3,
     name: "Ravi Kannaswamy",
-    linkName: "",
-    profileImage: "/images/profile_blank.png",
-    characterIntroImage:  "/images/instagram_blank.png",
+    linkName: "ravi",
+    profileImage: "/images/profile_ravi.png",
+    characterIntroImage: "/character_choice_page/ravi.png", 
     description: "Ravi dreams of being an aviation engineer - but can he push past the stereotypes and self-doubts?",
-    jsonLink: '../stories/nadia.ink.json',
-    playable: false,
+    jsonLink: '../stories/ravi.ink.json',
+    jsonFile: RaviInk,
+    playable: true,
+    primaryColour: '#8DC000',
+    secondaryColour: '#FF8944',
+    newestChapter: 1,
+    chapters: [
+      {
+        chapterId: 1,
+        number: 1,
+        reflectionId:7,
+        title: "Home Truths",
+        knotTag: "ravi_1_intro",
+        summary: "Ravi hears some news that will turn his world a little upside down.",
+        playable: true,
+        images: [           
+          "/images/bg_launch.jpg",
+          "/images/bg_reflections.jpg",
+        ],
+        endings: [
+          {
+            endingId: 1,
+            title: "Ravi shows some empathy",
+            inkVar: "chapter_1_ending_1",
+          },
+          {
+            endingId: 2,
+            title: "Ravi puts himself first",
+            inkVar: "chapter_1_ending_2",
+          },
+        ]
+      },
+      {
+        chapterId: 2,
+        number: 2,
+        reflectionId:8,
+        title: "Room For Improvement ",
+        knotTag: "ravi_2_intro",
+        summary: "Ravi decides to move out. But his choices aren’t that straightforward.",
+        playable: false,
+        images: [           
+          "/images/bg_launch.jpg",
+          "/images/bg_reflections.jpg",
+        ],
+        endings: [
+          {
+            endingId: 1,
+            title: "Azlin gets upset with you",
+            inkVar: "chapter2_ending_1",
+          },
+          {
+            endingId: 2,
+            title: "Azlin tells you to give him up",
+            inkVar: "chapter2_ending_2",
+          },
+        ]
+      },
+      {
+        chapterId: 3,
+        number: 3,
+        reflectionId:9,
+        title: "Coffee Shop Kannaswamy ",
+        knotTag: "ravi_3_intro",
+        summary: "Ravi finds a new gig at a cafe. And possibly something more.",
+        playable: false,
+        images: [           
+          "/images/bg_launch.jpg",
+          "/images/bg_reflections.jpg",
+        ],
+        endings: [
+          {
+            endingId: 1,
+            title: "Azlin gets upset with you",
+            inkVar: "chapter2_ending_1",
+          },
+          {
+            endingId: 2,
+            title: "Azlin tells you to give him up",
+            inkVar: "chapter2_ending_2",
+          },
+        ]
+      },
+      {
+        chapterId: 4,
+        number: 4,
+        reflectionId:10,
+        title: "The Internship",
+        knotTag: "ravi_4_intro",
+        summary: "Ravi lands an internship to fulfill his university credits. And finds himself in a situation that tests him.",
+        playable: false,
+        images: [           
+          "/images/bg_launch.jpg",
+          "/images/bg_reflections.jpg",
+        ],
+        endings: [
+          {
+            endingId: 1,
+            title: "Azlin gets upset with you",
+            inkVar: "chapter2_ending_1",
+          },
+          {
+            endingId: 2,
+            title: "Azlin tells you to give him up",
+            inkVar: "chapter2_ending_2",
+          },
+        ]
+      },
+      {
+        chapterId: 5,
+        number: 5,
+        reflectionId:11,
+        title: "Cleared for Take Off",
+        knotTag: "ravi_5_intro",
+        summary: "Ravi breaks down and reveals his fears to both Valerie and Revati. They give him a new perspective, and much-needed reminders. ",
+        playable: false,
+        images: [           
+          "/images/bg_launch.jpg",
+          "/images/bg_reflections.jpg",
+        ],
+        endings: [
+          {
+            endingId: 1,
+            title: "Azlin gets upset with you",
+            inkVar: "chapter2_ending_1",
+          },
+          {
+            endingId: 2,
+            title: "Azlin tells you to give him up",
+            inkVar: "chapter2_ending_2",
+          },
+        ]
+      },
+    ],
   }, 
   {
     characterId: 4,
