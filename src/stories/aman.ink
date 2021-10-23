@@ -244,7 +244,7 @@ You are so cheeky to your mum. Where do you learn all these bad things? #speaker
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Extended Family Chat
-#chat_group_image:ico_aman_family.png
+#chat_group_image:ico_aman_extendedfamily.png
 #speaker_1_name:Papa
 #speaker_2_name:Uncle Ranjit
 #speaker_3_name:Cousin Harpreet
