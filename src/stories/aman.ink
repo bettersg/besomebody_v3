@@ -44,7 +44,7 @@ Minigame // must add some text
 -> aman_1_1_narration 
 
 
--> aman_holding_line
+// -> aman_holding_line
 
 === aman_holding_line ===
 #knot:aman_holding_line
