@@ -481,6 +481,7 @@ It seems to be working out so far...
 #speaker_right_name:Ravi
 Aman, don’t walk around with your hair like that leh.  #speaker_left
 We all cannot sleep seeing your long hair in the dark, nearly to your waist. So scary! #speaker_left
+#background:bg_aman_bmtmirrorsad.jpg
 Am I very scary? #inner_monologue
 Like hantu (ghost) sia. #speaker_right
 Pontianak! #speaker_left
@@ -521,7 +522,7 @@ Yes, go on, walk away. #inner_monologue
 
 = aman_1_3ab
 #background:bg_aman_bmttoilet.jpg
-#speaker_left_image:cha_aman_lukman_hurt.png
+#speaker_left_image:cha_aman_lukman_curious.png
 #speaker_left_name:Lukman
 #speaker_right_image:pixel.png
 Hey man, what was that about? #speaker_left
@@ -588,6 +589,7 @@ With you around, I don’t have to be the only one in our section who eats in th
 Well, it’s also because I’m not used to Chinese food... #inner_monologue
 You’re always reminding me to hydrate when I push myself too hard. #speaker_left
 That’s just normal decency, but okay... #inner_monologue
+#speaker_left_image:cha_aman_lukman_determined.png
 When I told you I wanted to try for OCS, you didn’t laugh or accuse me of trying to be wayang, but you said you thought I had potential. #speaker_left
 But you do! #speaker_self
 See? #speaker_left
@@ -789,13 +791,29 @@ Night night 🥰🥰 #speaker_self
 === aman_1_4_narration ===
 #knot:aman_1_4_narration
 #ui:narrator
-#background:bg_aman_indianrestaurant.jpg
-Two years later.
-Full-time NS is finally behind me!
-I may not have made it into OCS, but I think it worked out for the best. My role feels right to me.
+#background:bg_aman_ordturban.jpg
+NS was tough.
+There were bad days, worse days, and a few good ones sprinkled around.
+{aman_1_nsgoals:
+- "lie low": I was able to lie low for the most parts, but being the only guy with a turban usually made me an easy target.
+- "do well": I pushed myself to do well, but I wasn't always cut out for some of the challenges.
+- "not sure": I didn't really have any goals coming in to NS, so I was satisfied to just cruise along.
+}
+This selfie was a happy memory - my parents and Sel came by for my Passing Out Parade after BMT.
+I became a combat medic. I didn't make it to OCS, but I got promoted to be a Third Sergeant!
+{aman_1_nsworries:
+- "only sikh": I guess I didn't need to be so afraid of being the only Sikh. Some people had it much harder than I did.
+- "not doing well": I guess I didn't need to be worried about not doing well - NS was about proving myself to me, not to others.
+}
+I think it worked out for the best. My role felt right to me. 
 Lukman didn’t get into OCS either. But he worked hard as a Transport Operator and eventually got his 3SG rank, same as me.
-Jothi is blissfully married to Kirpal by now. I weirdly miss having her around.
-But we still see each other often, and she joins us for dinner sometimes, like tonight.
+Jothi got married to Kirpal mid-way and moved in with him. I weirdly miss having her around home on the weekends.
+But we still see each other often, and she joins us for dinner sometimes.
+#background:bg_aman_indianrestaurant.jpg
+Two years later. #title
+My last day of NS was yesterday. I'm a free man today. And it feels... liberating!
+But I'll need to start confronting my future now, which is something I've been putting off. 
+First, it's time to celebrate with the family. I'm hungry!
 
 -> aman_1_4
 
