@@ -2,7 +2,7 @@ export const MINI_GAME_MAP = [
     {
       game_id: 1,
       ui: "mcq",
-      introduction: "Why did Jothi respond this way? Let's find out more.",
+      introduction: "Aman mentioned the five Ks of Sikhism - Let's find out more.",
       questions: [
         {
           question_id: 1,
@@ -52,7 +52,7 @@ export const MINI_GAME_MAP = [
         {
           question_id: 3,
           question:
-            "In Singapore, are Sikhs allowed to wear the Kirpan (a religious dagger)?",
+            "In Singapore, are Sikhs allowed to wear the Kirpan in public (a religious dagger)?",
           type: "text",
           correct_answer_id: 2,
           explanation:
@@ -64,7 +64,7 @@ export const MINI_GAME_MAP = [
             },
             {
               answer_id: 2,
-              title: "Yes, under certain conditions",
+              title: "Yes, under certain specific conditions",
             },
             {
               answer_id: 3,
@@ -73,7 +73,7 @@ export const MINI_GAME_MAP = [
             {
               answer_id: 4,
               title:
-                "No, they carry an image of it instead",
+                "No, so they carry an image of it instead",
             },
           ],
         },  

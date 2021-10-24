@@ -452,6 +452,10 @@ Yup! #speaker_right
 Wait, what - ? #speaker_right
 Okay set, you agreed! I’ll show you later! #speaker_self
 
+#knot:aman_1_minigame
+#ui:mcq
+#game_id:1
+Minigame 1 // must add some text
 
 -> aman_1_3_narration
 
@@ -522,19 +526,21 @@ Yes, go on, walk away. #inner_monologue
 
 = aman_1_3ab
 #background:bg_aman_bmttoilet.jpg
-#speaker_left_image:cha_aman_lukman_curious.png
+#speaker_left_image:cha_aman_lukman_curious_shorts.png
 #speaker_left_name:Lukman
 #speaker_right_image:pixel.png
 Hey man, what was that about? #speaker_left
 Oh, they were being fools. #speaker_self
 You okay? #speaker_left
 Yeah, I’m used to it. Same story since young, being teased. Happens all the time. I just thought people would be more mature in NS. #speaker_self
-#speaker_left_image:cha_aman_lukman_normal.png
+#speaker_left_image:cha_aman_lukman_shorts.png
 I’m also not used to being around other people with my hair not covered. But my hair is wet, so what to do, right. #speaker_self
 Screw them. They don’t matter. #speaker_left
 -> aman_1_3_lukmanchat
 
 = aman_1_3c
+#speaker_right_image:pixel.png
+#speaker_left_image:pixel.png
 #background:bg_aman_bmtmirrorgrin.jpg
 Oh, are they looking for a pontianak? I’ll give them something to remember. #inner_monologue
 Let my eyes glaze over, slowly turn around… #inner_monologue
@@ -543,13 +549,16 @@ Advance on them, step by step... #inner_monologue
 Waaaaaahaha! Ouuaahhkeke! #speaker_self
 #speaker_left_image:cha_aman_bunkmate2_afraid.png
 What the --  #speaker_left
+#speaker_right_image:cha_aman_bunkmate1_mocking.png
 Ha! That was brilliant, dey. I was legit freaked out. #speaker_right
-#background:bg_aman_bmtbunk.jpg
+#speaker_right_image:pixel.png
+#speaker_left_image:pixel.png
+#background:bg_aman_bmtbunknight.jpg
 Well, that seems to have settled them. Glad they’re turning their attention to something else now. #inner_monologue
-#speaker_left_image:cha_aman_lukman_curious.png
+#speaker_left_image:cha_aman_lukman_curious_shorts.png
 #speaker_left_name:Lukman
 Wow, what was that about! #speaker_left
-#speaker_left_image:cha_aman_lukman_normal.png
+#speaker_left_image:cha_aman_lukman_shorts.png
 Didn’t know you can act so well, man! #speaker_left
 When I saw you do that I was honestly shook. #speaker_left
 Ha, thanks. I like acting. #speaker_self
@@ -570,7 +579,7 @@ They’d better not pull that crap again with me around, I tell you. Just becaus
 #knot:aman_1_3_lukmanchat
 #ui:scene
 #background:bg_aman_bmtbunknight.jpg
-#speaker_left_image:cha_aman_lukman_normal.png
+#speaker_left_image:cha_aman_lukman_shorts.png
 #speaker_left_name:Lukman
 I’m really lucky to have a buddy. #inner_monologue
 Hey, time to fold my turban to wear tomorrow. You want to help? #speaker_self
@@ -589,7 +598,7 @@ With you around, I don’t have to be the only one in our section who eats in th
 Well, it’s also because I’m not used to Chinese food... #inner_monologue
 You’re always reminding me to hydrate when I push myself too hard. #speaker_left
 That’s just normal decency, but okay... #inner_monologue
-#speaker_left_image:cha_aman_lukman_determined.png
+#speaker_left_image:cha_aman_lukman_determined_shorts.png
 When I told you I wanted to try for OCS, you didn’t laugh or accuse me of trying to be wayang, but you said you thought I had potential. #speaker_left
 But you do! #speaker_self
 See? #speaker_left
@@ -599,7 +608,7 @@ Yeah, there are some. It’s just... rare. #speaker_left
 To be fair, I think things are slowly getting better. At least now we can go on ships. #speaker_left
 Huh? Why couldn’t you go before? #speaker_self
 No Halal kitchens, supposedly. #speaker_left
-#speaker_left_image:cha_aman_lukman_sad.png
+#speaker_left_image:cha_aman_lukman_sad_shorts.png
 But if you read comments about Muslims in the military online, it’s damn toxic. There are people who think we won’t be loyal to Singapore. #speaker_left
 So is it about my diet, or is it about my loyalty?
 
@@ -614,7 +623,7 @@ So is it about my diet, or is it about my loyalty?
     Then you see what generation you are born in, whether you are lucky or unlucky to suffer from this kind of mindset. #speaker_left
 - But this is my struggle to fight la. No use complaining tonight.  #speaker_left
 
-#speaker_left_image:cha_aman_lukman_normal.png
+#speaker_left_image:cha_aman_lukman_shorts.png
 Eh for you how? You haven’t said what you want - command school or slack? #speaker_left
 I haven’t decided yet. I mean, I’ll do what I can. #speaker_self
 Still early days. How about after NS? #speaker_left
@@ -795,17 +804,17 @@ Night night 🥰🥰 #speaker_self
 NS was tough.
 There were bad days, worse days, and a few good ones sprinkled around.
 {aman_1_nsgoals:
-- "lie low": I was able to lie low for the most parts, but being the only guy with a turban usually made me an easy target.
-- "do well": I pushed myself to do well, but I wasn't always cut out for some of the challenges.
-- "not sure": I didn't really have any goals coming in to NS, so I was satisfied to just cruise along.
+- "lie low": I tried to keep a low profile for the most part, but being the only one with a turban made that tough.
+- "do well": I pushed myself to do well, and I did - but it was hard, and there were days I felt like giving up.
+- "not sure": I wasn't sure what I wanted to achieve coming into NS, so I mostly just focused on surviving it.
 }
 This selfie was a happy memory - my parents and Sel came by for my Passing Out Parade after BMT.
 I became a combat medic. I didn't make it to OCS, but I got promoted to be a Third Sergeant!
 {aman_1_nsworries:
-- "only sikh": I guess I didn't need to be so afraid of being the only Sikh. Some people had it much harder than I did.
+- "only sikh": Being the only Sikh in my platoon wasn't easy, but some people had it much harder than I did.
 - "not doing well": I guess I didn't need to be worried about not doing well - NS was about proving myself to me, not to others.
 }
-I think it worked out for the best. My role felt right to me. 
+I think it worked out for the best. Being a medic felt right to me.
 Lukman didn’t get into OCS either. But he worked hard as a Transport Operator and eventually got his 3SG rank, same as me.
 Jothi got married to Kirpal mid-way and moved in with him. I weirdly miss having her around home on the weekends.
 But we still see each other often, and she joins us for dinner sometimes.

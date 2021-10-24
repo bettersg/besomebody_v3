@@ -84,6 +84,12 @@ const Question = ({ question, value, onChange, reflectionId, context }) => {
           </Box>
         </Box>
       );
+      case "GAP":
+        return (
+          <Box p={2} bgcolor="rgba(255,255,255,0.6)">
+            <hr />
+          </Box>
+        );
     default:
       return (
         <Box p={2} bgcolor="rgba(255,255,255,0.6)">

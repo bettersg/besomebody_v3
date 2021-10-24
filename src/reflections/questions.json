@@ -208,5 +208,9 @@
     "id": 10,
     "type": "OPEN",
     "body": "Why did you resonate with that character?"
+  },
+  {
+    "id": 11,
+    "type": "GAP"
   }
 ]
