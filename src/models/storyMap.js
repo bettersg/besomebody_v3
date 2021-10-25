@@ -251,8 +251,8 @@ export const CHARACTER_MAP = [
     characterIntroImage: "/character_choice_page/aman.png", 
     jsonLink: '../stories/aman.ink.json',
     jsonFile: AmanInk,
-    primaryColour: '#19A3AD',
-    secondaryColour: '#FFBB0B',
+    primaryColour: '#F4B000',
+    secondaryColour: '#3A2A08',
     playable: true,
     newestChapter: 1,
     variables: {
