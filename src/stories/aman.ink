@@ -321,7 +321,7 @@ Well… #speaker_self
         Papa-ji and Uncle Ranjit both did so well in their time, and Uncle Ranjit especially - #speaker_self
         
     -- Uncle Ranjit, Uncle Ranjit. Is Uncle Ranjit going with you to NS? Will you be taking him to Tekong in your backpack? #speaker_left
-    (Laughs.) Okay mum, okay. You’re right. #speaker_self
+    (Laughs) Okay mum, okay. You’re right. #speaker_self
     I know I am. #speaker_left
     #speaker_left_image:cha_aman_mama_happy.png
     You just focus on being yourself, and make sure you come home safely to me.   #speaker_left
@@ -413,7 +413,7 @@ If anyone asks you, why Recruit Singh so special? You can refer them to me. #spe
 + [Thank you]
     Thank you sergeant. #speaker_self
     #speaker_left_image:cha_aman_sergeant_irritated.png
-    Oh please, you believe? Refer them to me for what? 
+    Oh please, you believe? Refer them to me for what?  #speaker_left
     You explain to them yourself. #speaker_left
 + [Will they ask?]
     Will they ask? #speaker_self
@@ -687,7 +687,7 @@ It was good bb, how about yours? #speaker_self
 Hey there you are!! 😍 #speaker_1
 Mine was OK, still waiting to hear back on jobs  #speaker_1
 There’s one accounting position that looks possible #speaker_1
-And a couple of grant admin jobs in govt agencies #speaker_1
+And a couple of finance admin jobs in govt agencies #speaker_1
 You’re gonna be a career woman huh, way ahead of me… #speaker_self
 Don’t be silly jaan. Well, maybe at first #speaker_1
 But you are going to university remember, and doing business #speaker_1
