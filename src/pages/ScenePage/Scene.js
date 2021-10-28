@@ -92,8 +92,8 @@ const Scene = (props) => {
    
   const step = currentParagraphs[currentParagraphs.length - 1]
 
-  console.log('check ', checkSpeakerInCurrentParagraphs().includes('speaker_left'))
-  console.log('step ', step?.tags[0] === 'speaker_left')
+  // console.log('check ', checkSpeakerInCurrentParagraphs().includes('speaker_left'))
+  // console.log('step ', step?.tags[0] === 'speaker_left')
   const speakerLeftClass = step?.tags[0] === 'speaker_left' ? "speaker" : "nonSpeaker";
   const speakerRightClass = step?.tags[0] === 'speaker_right' ? "speaker" : "nonSpeaker";
   
