@@ -427,6 +427,7 @@ Okay, all your items are in order. Bring your things to your bunk. #speaker_left
 Yes sergeant. #speaker_self
 Uh, which way is my bunk? #inner_monologue
 Think quick, before I look like a fool… #inner_monologue
+#speaker_left_image:pixel.png
 #speaker_right_image:cha_aman_lukman_normal.png
 #speaker_right_name:Lukman
 Hey man, Section 3? Let’s go up together. #speaker_right

@@ -52,7 +52,7 @@
   {
     "id": 3,
     "type": "OPEN",
-    "body": "Do you have any reflections or similar stories to share after playing this chapter?"
+    "body": "Do you have any reflections or similar stories to share after playing {character_name}'s current chapter?"
   },
   {
     "id": 4,
@@ -211,6 +211,7 @@
   },
   {
     "id": 11,
-    "type": "GAP"
+    "type": "GAP",
+    "body": " "
   }
 ]

@@ -206,11 +206,13 @@ const useStyles = makeStyles((theme) => ({
   },
   answerWrong: {
     fontSize: "14px",
-    color: "white", 
+    color: "white",
+    paddingBottom: "10px",
   }, 
   answerCorrect: {
     fontSize: "14px",
-    color: "#000A11", 
+    color: "#000A11",
+    paddingBottom: "10px",
   }
 }));
 
@@ -353,6 +355,7 @@ export default function QuestionPanel({
                   
                   <Typography variant="body1" className={`answerBody ${classes.answerWrong}`}>
                     {message}
+                    <br />
                   </Typography>
                 </>
               )}
