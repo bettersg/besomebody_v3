@@ -52,7 +52,7 @@
   {
     "id": 3,
     "type": "OPEN",
-    "body": "Do you have any reflections or similar stories to share after playing this chapter?"
+    "body": "Do you have any reflections or similar stories to share after playing {character_name}'s current chapter?"
   },
   {
     "id": 4,
@@ -69,7 +69,7 @@
       },
       {
         "id":3,
-        "body": "When he faced his dad’s disappointment (not all endings had this)"
+        "body": "When he faced his dad’s expectations"
       },
       {
         "id":4,
@@ -208,5 +208,10 @@
     "id": 10,
     "type": "OPEN",
     "body": "Why did you resonate with that character?"
+  },
+  {
+    "id": 11,
+    "type": "GAP",
+    "body": " "
   }
 ]
