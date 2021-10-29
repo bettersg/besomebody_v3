@@ -917,6 +917,7 @@ But I can’t tell him that, right? He’s not going to think that’s a good us
 #speaker_right_name:Papa
 Take a deep breath, Aman. #inner_monologue
 I know this may be a surprise, but I was thinking of trying out some professional acting. #speaker_self
+#speaker_left_image:cha_aman_mama_concerned.png
 VAR aman_1_familydinner = "acting"
 VAR chapter_1_ending = 1
 ... #speaker_left
@@ -948,6 +949,7 @@ And Papa-ji still hasn’t said anything. #inner_monologue
 Well… err. #speaker_left
 Beta, I’m sorry, I was just very surprised. #speaker_left
 We all knew you were talented, but we thought it was just a hobby. #speaker_left
+#speaker_left_image:cha_aman_mama_happy.png
 I believe in you, son. And Jothi, you should be more supportive of your brother. #speaker_left
 
 + [It's fine] It’s fine mum, Jothi is just saying what she thinks. #speaker_self
