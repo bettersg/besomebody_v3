@@ -34,7 +34,6 @@ const ShareableImageContainer = ({data }) =>{
   const ref = createRef(null)
   const [image, setImage] = useState(null)
   const [width, setWidth] = useState(300)
-
   const takeScreenShot = (node) => {
     html2canvas(node, { allowTaint:true, useCORS:true })
     .then((canvas) => {
@@ -92,6 +91,7 @@ const ShareableImageContainer = ({data }) =>{
         }
         else {
           download(image, { name: 'to-be-you', extension: 'png' })
+          console.log(document.getElementsByClassName("downloadBtn"))
         }
       })
 
@@ -155,7 +155,7 @@ const ShareableImageContainer = ({data }) =>{
       
       {/* <button onClick={loadImage}>Pre-load image</button> */}
       <img width={width} src={image} alt={"ScreenShot"} className="ShareableImage" />
-      <Button variant="outlined" className="downloadBtn" onClick={getImage} >{isMobile ? 'Share via Mobile' : 'Download Image'} </Button>
+      <Button variant="outlined" className="downloadBtn" onClick={getImage} >{isMobile ? 'Share reflection' : 'Download Image'}</Button>
       {/* <button onClick={getImage} className="btn">{isMobile ? 'Share via Mobile' : 'Download Image'}</button> */}
   </div>
   )};
