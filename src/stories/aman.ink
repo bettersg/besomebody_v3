@@ -1024,5 +1024,659 @@ I’ll just have to do this on my own. #inner_monologue
 Reflection 1
 
 
+
+-> aman_2_intro
+
+
+
+
+
+
+
+
+
+
+// CHAPTER 2
+
+
+
+
+
+=== aman_2_intro ===
+#knot:aman_2_intro
+#ui:narrator
+#background:bg_aman_intro.jpg
+A month has flown by since I completed NS, and uni is around the corner.
+I haven’t wasted a single day.
+Each night I search for casting calls, and I’ve applied for dozens and dozens of roles...
+Sometimes, I hear back!
+But it’s always the same refrain:
+‘Sorry, we’re looking for pan-Asian features.’
+‘Sorry, can you shave your beard?’
+‘Sorry, we need a more relatable look.’
+Sorry. Sorry. Sorry!
+{aman_1_familydinner: 
+- "acting" : It’s hard to think that Jothi might be right.
+    But I tell myself it’s early days, too early to give up. 
+- "something" : Maybe it’s a good thing I didn’t tell my family about this.
+If they don’t know I’m trying, they don’t have to know I’m failing.
+}
+~ chapter_id = 2
+//reset chapter 2-5 variables
+CHAPTER {chapter_id} #title
+Price of Admission #title
+
+
+-> aman_2_1_narration 
+
+
+=== aman_2_1_narration ===
+#knot:aman_2_1_narration
+#ui:narrator
+#background:bg_aman_beach.jpg
+Saturday morning.
+It’s just sad that all this has eaten into my time with Sel. She deserves better.
+It’s a beautiful day on the beach, and I can’t even focus on her fully.
+
+-> aman_2_1
+
+=== aman_2_1 ===
+#knot:aman_2_1
+#ui:scene
+#background:bg_aman_beach.jpg
+#speaker_left_image:cha_aman_selinder_normal.png
+#speaker_left_name:Selinder
+Jaan? What are you looking at on your phone? #speaker_left
+FACEBOOK SCREEN GOES HERE // to replace
++ Nothing, let's focus on us.[] #speaker_self
+    -> aman_2_1_1a
++ Just these casting calls. [] #speaker_self
+    -> aman_2_1_1b
+
+= aman_2_1_1a
+Nothing, sorry about that. #speaker_self
+VAR aman_2_selinderfocus = "us"
+Are you sure? #speaker_left
+Yes jaan, don’t worry about it. Today is just about you and me. #speaker_self
+Aww, thank you. I’ve really needed this. #speaker_left
+What do you mean? #speaker_self
+Just… this. Being here. On a beach. With you. Away from things. #speaker_left
+What’s wrong? #speaker_self
+I think I’m really not cut out for this job. #speaker_left
+I’m working late into the night, every single night, taking on duties that are way over my head. #speaker_left
+They say they want to ‘stretch’ my potential, but they clearly don’t want to ‘stretch’ my pay. #speaker_left
+They use the fact that I’m a Poly grad to justify it, you know? They say it’s ‘market rate for Poly grads’ - like, come on. Why can’t they pay me ‘market rate’ for my performance? #speaker_left
+And my boss. She expects me to read her mind, and she gets mad if I don’t. #speaker_left
+She’s always coming after me about the smallest things. The other day she said she wants me to start meeting clients, so I should try to look more ‘presentable’ and ‘modern’. #speaker_left
+She started dropping hints about hair salons and places where you can get your eyebrows trimmed. And she kept sneaking these weird looks at my kara (steel bangle, Sikh article of faith). #speaker_left
+Seriously? Did you explain it to her? #speaker_self
+No, it was all very subtle, you know? Nothing that I could really point to. Like she didn’t outright ask me to cut my hair or change my dressing. So I didn’t want to come across as over-sensitive. #speaker_left
+She’s always saying she has no tolerance for bad attitudes. I don’t want to be on her hitlist. #speaker_left
+This sounds like such a toxic work environment. #speaker_self
+I know right, what era is this? #speaker_left
+You should look for a different job. It’s not right. #speaker_self
+Well, you know the money makes a difference for my family so I can’t just quit. But I’m applying around. #speaker_left
+
+-> aman_2_1_2
+
+= aman_2_1_1b
+Sorry, I was just looking at these casting calls. #speaker_self
+~ aman_2_selinderfocus = "casting"
+Oh, you mean you’re still applying for those? #speaker_left
+Yes, of course I am. #speaker_self
+Sorry - I know you tried for one last week and it didn’t work out, so I thought that was that. #speaker_left
+Which one is she talking about? I applied for like twenty roles last week. #inner_monologue
+I guess you won’t get to do this sort of thing once uni starts, so it’s good that you’re trying now. #speaker_left
++ ... Right []  #speaker_self
+    Oh, yeah… I guess so. #speaker_self
+        I’ll just be glad to have your attention again. I feel like you’ve been so distracted. #speaker_left
+    Really? Sorry about that... #speaker_self
+
++ Actually, I'll keep trying. []  #speaker_self
+    I’m not actually planning to stop, jaan. #speaker_self
+    Really? How will you balance it with school? #speaker_left
+    I’ll be okay, I can juggle my time. #speaker_self
+    Are you sure? #speaker_left
+    Of course. Where is this coming from? #speaker_self
+    Well it just seems like lately, we’ve barely had time together. I thought everything would get better after your NS, but it hasn’t. #speaker_left
+ - Oh man... #inner_monologue
  
+ -> aman_2_1_2
+ 
+ 
+= aman_2_1_2 
+#ui:notification
+#background:ui_aman_message.jpg
+Hi Aman this is Elsa from Everyday Productions. Tks for your pics and showreel. We took a look and the showreel is strong. # message
+#ui:scene
+#background:bg_aman_beach.jpg
+#speaker_left_image:cha_aman_selinder_normal.png
+#speaker_left_name:Selinder
+Yes - they liked it! This is promising. #inner_monologue
+Who is it? #speaker_left
++ [Give me a minute] Hold on one sec, sorry. It’s a casting agent! She’s still typing... #speaker_self
+    VAR aman_2_selinderquestion = "wait"
+    {aman_2_selinderfocus:
+    - "us" : Oh wow! I didn’t know you were still applying for auditions. Yes, better reply quickly. #speaker_left
+    - "casting": ...Right. Of course. A casting agent. #speaker_left
+    Boy, she sounds unhappy about something. I’ll figure it out later. #inner_monologue
+    }
+    -> aman_2_1_3
+
+    
+    
+
++ [Nothing, I'll check it later] 
+    ~ aman_2_selinderquestion = "nothing"
+    {aman_2_selinderfocus:
+    - "us" : Are you sure? You looked so excited. Who’s the other woman? #speaker_left
+        Oi, don’t be cheeky! It’s a casting agent! #speaker_self
+        I’m kidding, jaan. I didn’t even realise you were still applying for auditions! You better check it, maybe it’s good news. #speaker_left
+        Ok, then just give me a second. #speaker_self
+    - "casting":  -> aman_2_1_2b
+    }
+ 
+= aman_2_1_2b
+Okay. Hey, you want to go wade in the water? #speaker_left
+I wonder what that Elsa lady is typing. #inner_monologue
+It looks nice out there, not too crowded for a Saturday. Oh, then we go biking, and have brunch, and - how about a movie after that? #speaker_left
+I’ve been meaning to see that new horror movie for so long, what’s it called…  #speaker_left
+The reviews are not bad. Do you know the one I’m talking about? #speaker_left
+I saw her first message, so she’ll see the blue-tick. I hope she doesn’t get offended by the delay in replying… #inner_monologue
+Seriously, Aman? #speaker_left
+Huh? #speaker_self
+Did you hear anything I said? #speaker_left
+Yes, of course! #speaker_self
+Okay, then what did I say we should do next? #speaker_left
++ [Wade, Bruch, Biking]
+    Go wading, have brunch, then go biking. #speaker_self
+    Incorrect. #speaker_left
+    Is this a test? It’s a bit childish don’t you think? #speaker_self
+    Childish? #speaker_left
+    I can’t believe this. Okay, you should check your messages, those aren’t childish.  #speaker_left
++ [Wade, Biking, Brunch]
+    Go wading, then go biking, then have brunch. #speaker_self
+    ... #speaker_left
+    See, I was listening! #speaker_self
+    Yes, fine. You were listening. Everything is perfect. Go check your messages. #speaker_left
+- If you don’t mind, I think I will. #speaker_self
+ -> aman_2_1_3
+ 
+=== aman_2_1_3 ===
+#knot:aman_2_1_3
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Elsa
+#chat_group_image:ico_aman_elsa.png
+#speaker_1_name:Elsa
+Hi Elsa, thanks, that’s great to hear. #speaker_self
+We hv shortlisted you for auditions, but need to check with you something first. It’s a corporate video so the client wants a very clean look. You ok to shave? #speaker_1
+#ui:scene
+#background:bg_aman_beach.jpg
+Here we go again. #inner_monologue
+What does she even mean by a ‘clean’ look? Do I look dirty?  #inner_monologue
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Elsa
+#chat_group_image:ico_aman_elsa.png
+#speaker_1_name:Elsa
+Thanks for your consideration Elsa.
++ [But I cannot] ... but that is not possible for me, for religious reasons. #speaker_self
++ [I would prefer other roles instead] Please let me know if there are future roles for me that do not require me to change my look. #speaker_self
+- Oh ok. Hm #speaker_1
+You sure? Tbh your reel was v strong. Better than most. #speaker_1
+It’s a waste #speaker_1
+Yes, I’m sure. Thanks 🙏🏽 #speaker_self
+Ok. Your choice #speaker_1
+#ui:scene
+#background:bg_aman_beach.jpg
+My choice... #inner_monologue
+
+{ aman_2_selinderfocus == "us": -> aman_2_1_3a  }
+{ aman_2_selinderfocus == "casting" && aman_2_selinderquestion == "wait": -> aman_2_1_3b  }
+{ aman_2_selinderfocus == "casting" && aman_2_selinderquestion == "nothing": -> aman_2_1_3c  }
+
+-> aman_2_1_3a
+
+= aman_2_1_3a
+#ui:scene
+#background:bg_aman_beach.jpg
+#speaker_left_image:cha_aman_selinder_normal.png
+#speaker_left_name:Selinder
+Is everything alright? You don’t look happy. #speaker_left
+Oh, just another rejection. Sorry you’re stuck with such a loser. #speaker_self
+Don’t talk about yourself like that, jaan. I don’t date losers. #speaker_left
+I know she said that to make me feel better, but I kind of feel worse… #inner_monologue
+But I don’t want to be a downer. Sel has her own problems, and it’s not fair to overload her with mine. She’s the one who needs some cheering up. #inner_monologue
+Now that you mention it. You’re my girlfriend, so that makes me a winner. Let’s get on with our date! #speaker_self
+Love you. #speaker_left
+I love you too. #speaker_self
+-> aman_2_2_narration
+
+= aman_2_1_3b
+#ui:scene
+#background:bg_aman_beach.jpg
+#speaker_left_image:cha_aman_selinder_normal.png
+#speaker_left_name:Selinder
+All done? #speaker_left
+Yes, I’m done. #speaker_self
+You sure? Do you need to text some more? #speaker_left
+Sel, I said I’m done… #speaker_self
+Just checking on your priorities. #speaker_left
+You know, you’re not being very fair. What’s the problem here? #speaker_self
+Where do I start? I have a lot of problems Aman, but you have no time to hear them. I’ve been dealing with a lot of crap at work and you’re not mentally present enough to ask me how my week went. #speaker_left
+I’ve been waiting and looking forward to this date for a long time but I am starting to ask myself if I’ve been waiting for nothing.  #speaker_left
++ [I'm sorry] Jaan, I’m sorry. I should have paid you more attention. #speaker_self
+    What’s the situation at work? #speaker_self
+    I hate my job, that’s all. But I don’t really want to talk about it now. #speaker_left
+    Are you sure? #speaker_self
+    Yes, I’m not in the mood. Let’s just walk, okay? #speaker_left
+    ...If that’s what you want. Okay. #speaker_self
+    -> aman_2_2_narration
++ [I'm nothing?]
+    Is that what I am? Nothing? #speaker_self
+    Now you’re just twisting my words! I didn’t mean it that way! #speaker_left
+    So what did you mean then? #speaker_self
+    I meant I’m right here but your mind is elsewhere, Aman! You’re so wrapped up in this acting nonsense, it’s getting you so upset, and I just feel like it’s not worth it! #speaker_left
+    Nonsense? #speaker_self
+    ... #speaker_left
+    Okay, maybe that was the wrong word, but you get what I mean… #speaker_left
+    No, I get what you mean. You think it’s nonsense. #speaker_self
+    I mean, not *nonsense*, but compared to business school, don’t you think it’s a bit… #speaker_left
+    Frivolous. #speaker_self
+    Yes, fine, frivolous. #speaker_left
+    Okay. #speaker_self
+    Aman... I’m sorry. Does this really mean so much to you? #speaker_left
+    Let’s just keep walking, Sel. We can talk about it another day. #speaker_self
+    -> aman_2_2_narration
+
+= aman_2_1_3c
+All sorted? #speaker_left
+Yes. #speaker_self
+Are you okay? Doesn’t look like good news. #speaker_left
+Just another rejection, I’m getting used to it now. #speaker_self
+Hey... I’m sorry I snapped at you earlier. I know you were trying your best. I’ve just had a really crappy week. #speaker_left
+I’m sorry too. I was trying to focus, I swear… Maybe I’m taking this acting thing too far, I don’t even know what I’m trying to prove anymore. #speaker_self
+Wait, why did you have a crappy week? #speaker_self
+Just my lousy job being lousy - we can talk about it another time. But jaan… can I ask you a question? #speaker_left
+Yes, of course. #speaker_self
+{ aman_1_selinderchat:
+    - "maybe": Are you really serious about acting? #speaker_left
+    I’ve always been serious about acting. #speaker_self
+    I know how much effort you put into your performances, and I always think you are truly amazing on stage. Not just because I’m your girlfriend. #speaker_left
+    But what I mean is, are you going to try and act for a living? #speaker_left
+- "maybe not": Remember way back when you were doing your BMT, and we would WhatsApp frantically at night before your batt ran out? #speaker_left
+    Yes of course, good times. #speaker_self
+    I remember that one time, you kind of hinted that you might want to do acting seriously. Even for a living. Even instead of business. #speaker_left
+    Do you still feel that way? #speaker_left
+}
+
+Right now, I’m just trying to land one small break, take it one step at a time. #speaker_self
+But yes - I think, if I did see a path forward… I might take it. Is that okay with you?
+Even if it means low pay, ‘wasting’ a business degree, not knowing when I can afford to get married or buy a house, and having to explain my life choices to our parents... #inner_monologue
+I see. #speaker_left
+Well honestly… it’s like you said, one step at a time. #speaker_left
+But jaan, I do know you have talent. So I think... if you really care about doing this, then take it as far as you can, so that you have no regrets. #speaker_left
+You’re the best. I love you. #speaker_self
+Love you too. #speaker_left
+I hope that’s enough. #inner_monologue
+-> aman_2_2_narration
+
+=== aman_2_2_narration ===
+#knot:aman_2_2_narration
+#ui:narrator
+#background:bg_aman_cafealegria.jpg
+Later that evening, at a new cafe called Cafe Resipi Alegria.
+
+-> aman_2_2
+
+=== aman_2_2 ===
+#knot:aman_2_2
+#ui:scene
+#background:bg_aman_cafealegria.jpg
+#speaker_right_image:cha_aman_jothi_normal.png
+#speaker_right_name:Jothi
+Where on earth is Jothi? Nearly half an hour late. She keeps breaking records. #inner_monologue
+I’m here. I know. I repent. #speaker_right
+Always late! #speaker_self
+But always divine. #speaker_right
+Oh good, you got us the vindaloo! My favourite. #speaker_right
+Yes, I know the drill. But it’s all cold already. #speaker_self
+Okay bander (monkey), now you’re just sulking. Is something wrong? #speaker_right
+{aman_1_familydinner: 
+- "acting" :   Should I tell her about the rejections? She’ll just say ‘I-told-you-so.’ #inner_monologue
+    But maybe that’s what I need to hear? If this is a fool’s dream, someone should tell me to snap out of it.  #inner_monologue
+- "something" : Maybe I’ll sound her out. Jothi always says it like it is.   #inner_monologue
+}
+So, I’ve been applying to as many casting calls as I can in the last month. #speaker_self
+Ah. #speaker_right
+Let me guess, you haven’t gotten a single audition. #speaker_right
+How did you know? #speaker_self
+Because if they’d seen you act, they would have hired you. #speaker_right
+That’s nice of you to say, but you’re my sister. #speaker_self
+No Aman, I’m not saying it because I’m your sister, I’m saying it because it’s true. #speaker_right
+I’ve never seen a play with you in it that didn’t blow everyone away.  #speaker_right
+So if you haven’t gotten a role yet, it’s because someone has decided that on paper, you don’t fit the mould.  #speaker_right
++ [Those were amateur plays]
+    Those were just crummy school productions, community events... #speaker_self
+    Oh please, no need to be Mr Modesty around your sister. You know you’re talented, right? #speaker_right
+    ...Yes, fine, I think I’ve got something. But if I’m so great, why isn’t that enough to land me a role? #speaker_self
++ [That's not helpful now]
+    That’s nice of you to say, but whatever competence I might have on the stage isn’t helping me right now. It’s very frustrating. #speaker_self
+    Why isn’t it enough to be good at what I do? #speaker_self
+- That’s a rhetorical question, right? You already know. But fine, I’ll answer it. #speaker_right
+You’re a smart boy Aman, going into business school and everything. So you know about demand and purchasing power.  #speaker_right
+Think about the Singapore market. If a local drama is produced, who forms the majority of the audience watching it?  #speaker_right
+...Singaporeans? #speaker_self
+Chinese Singaporeans. #speaker_right
+And if a commercial is put out on the airwaves, and in the movie theatres, advertising - I don’t know, diamond rings - who do you think is going to be buying most of the diamond rings?  #speaker_right
++ [Rich people] People with money. #speaker_self
+    Well, yes. And these are mostly - by sheer numbers, not even talking about any other reasons - Chinese Singaporeans. #speaker_right
++ [Chinese Singaporeans] ...Chinese Singaporeans?  #speaker_self
+    Bingo.  #speaker_right
+- So now, I ask you. If you want to produce a project that achieves popular success… a project that moves audiences to relate with the hero or heroine, or convinces them to go buy diamond rings… who do you think you will cast? #speaker_right
+Wait, wait. If we go with that line of thinking, then everybody will just be watching films and reading books that feature people of their own race. #speaker_self
+And most of the time, don’t they? How many Chinese people do you know who are into Bollywood? #speaker_right
+What about Korean dramas and boy bands? #speaker_self
+Those have cult followings abroad, even in places like Indonesia. Even some Americans are diehard fans! #speaker_self
+So, it’s not true that people can only relate to characters who look or speak like them.  #speaker_self
+Ah - so now we come to supply. #speaker_right
+Where was the Korean entertainment industry born? Where did it first achieve scale? #speaker_right
+Obviously, in Korea. Do you think Korean pop could have grown out of Singapore, or Indonesia, or the US?  #speaker_right
+
++ [But this is defeatist] I see where you’re going, but this is completely defeatist. If we stick to this line of thinking, then are you saying minorities can never achieve success, because we are out-numbered? #speaker_self
+    No, of course not! I agree with you, it would be defeatist and even dangerous to start thinking that way. #speaker_right
++ [So I should go to Bollywood?] What are you saying, then? Singapore is my home, but I should go to Bollywood? #speaker_self
+    Do you want to? #speaker_right
+    No! I can’t imagine leaving. I don’t want to. I shouldn’t have to make a choice like that.  #speaker_self
+    I don’t want to believe that minorities can’t succeed! #speaker_self
+    Aman, calm down! I’m not saying that at all. #speaker_right
+- Obviously, there are plenty of Sikhs who are very successful in Singapore. #speaker_right
+In the military. In business. In the legal profession - and I’m biased because I’m married to him, but Kirpal is an example. #speaker_right
+But Aman, I’m just saying that in the arts and entertainment industry of all places, I think it will be harder for you to find prime roles. #speaker_right
+Not because people are evil and malicious, or out to block you from success. But because of human nature. And, frankly, because you have chosen to be you. #speaker_right
+Me? #speaker_self
+A Sikh who wears the turban. Who keeps the kesh (unshorn hair). #speaker_right
+What are you saying? #speaker_self
+Are you being deliberately obtuse? #speaker_right
+As an actor, you have to pretend to be someone else for a living. How many people look like you, with turbans and beards? #speaker_right
+No, obviously I know that. I mean, what are you trying to get at? What are you implying? #speaker_self
+Okay, you want me to say it? #speaker_right
+Your chances would be better if you looked just a tiny bit more like everyone else, Aman. #speaker_right
+If you could bend and compromise, more roles would open up to you. #speaker_right
+I’m not going down that route, Jothi. You know that faith is important to me. #speaker_self
+It’s important to me too, and to Kirpal. But you know our views on this. #speaker_right
+Sikhism is about service to others. Equality and justice. Learning to be a better person. #speaker_right
+Fine, we don’t keep the kesh (uncut hair). And yes, I know that decision hurts Papa-ji and mum. But we still live the values of Sikhism in our daily lives. #speaker_right
+That’s why Kirpal does all that pro bono work. And I… I’m not perfect, but I try in my own ways. #speaker_right
+We still go to the gurdwara. We will still raise our future children as Sikhs. #speaker_right
+Jothi, I know you’re coming from a place of love, but I’ll never do what you’re implying. #speaker_self
+For that matter - you know Papa-ji and mum are waiting and hoping for you to return to the path and keep the 'form' (uncut hair) again, right? #speaker_self
+Oh I know, trust me. And it is something we think about as well. We may get there one day, but in our own time. #speaker_right
+We’re all on our own journeys, right? #speaker_right
+Right. And on my journey, there are some compromises I just won’t make. #speaker_self
+I respect that, Aman. But this is the real world, and I have to ask. #speaker_right
+If succeeding in acting means you have to choose between your dream, and your faith, what will you do? #speaker_right
+
++ [I would give up acting] If it really came to that, then I would give up the dream. #speaker_self
+    Ah, chote veer. Really? #speaker_right
+    If I were really backed into that corner, yes. Some things are more important. #speaker_self
+    For all I’ve said today, I hope it doesn’t come to that. #speaker_right 
++ [I refuse to choose] I refuse to make that choice. If we live in a world that makes us choose, then maybe we need to do something about the world. #speaker_self
+    You mean - change the world? #speaker_right
+    Sure, why not. #speaker_self
+    Hah. That’s my stubborn baby brother through and through. #speaker_right
+    I despair for you sometimes Aman, but I’m proud of you all the same. #
+    Thanks, penji. #speaker_self 
+- 
+#ui:notification
+#background:ui_aman_message.jpg
+Zhihao: brooooo # message
+-> aman_2_2_1
+
+=== aman_2_2_1 ===
+#knot:aman_2_2_1
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Zhihao
+#chat_group_image:ico_nadia_zhihao.png
+#speaker_1_name:Zhihao
+bro #speaker_1
+still looking for acting jobs?? #speaker_1
+Uh yes #speaker_self
+What’s up? #speaker_self
+got lobang #speaker_1
+call me your bro #speaker_1
+Huh? #speaker_self
+call #speaker_1
+me #speaker_1
+your #speaker_1
+bro #speaker_1
+say #speaker_1
+it #speaker_1
+    #ui:scene
+    #background:bg_aman_cafealegria.jpg
+    What is Zhihao up to this time? #inner_monologue
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Zhihao
+#chat_group_image:ico_nadia_zhihao.png
+#speaker_1_name:Zhihao
+Zhihao, you’re my bro #speaker_self
+yaaaaaaaaaaaaas #speaker_1
+ok i saw this role advertised #speaker_1
+looking for Sikh policeman #speaker_1
+will send u the link #speaker_1
+perfect right #speaker_1
+you are Sikh #speaker_1
+the role is Sikh #speaker_1
+don’t even have to act la omg #speaker_1
+    #ui:scene
+    #background:bg_aman_cafealegria.jpg
+    Interesting. #inner_monologue
+    Sliightly obnoxious way to put it, but interesting. #inner_monologue
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Zhihao
+#chat_group_image:ico_nadia_zhihao.png
+#speaker_1_name:Zhihao
+Hmmmmm #speaker_self
+Sounds good! Yes, please send me the link #speaker_self
+Thanks for thinking of me 🙌🏽 #speaker_self
+
+-> aman_2_2_2
+
+=== aman_2_2_2 ===
+#knot:aman_2_2_2
+#ui:scene
+#background:bg_aman_cafealegria.jpg
+#speaker_right_image:cha_aman_jothi_normal.png
+#speaker_right_name:Jothi
+Who’s that? #speaker_right
+Oh sorry, it’s just Zhihao. #speaker_self
+That clown? You used to run around the void deck when you were kids and he would call you ‘the Singh fella’. #speaker_right
+Not my favourite specimen. #speaker_right
+Wow, you remember? #speaker_self
+Anyway, yes, it’s the same one. He can be a clown, but his intentions are not bad. #speaker_self
+He says he might have found me a role to try for. #speaker_self
+Really? What makes this role so special? #speaker_right
++ [It's for a Sikh character]  It’s for a Sikh policeman. #speaker_self
+    Mmm. #speaker_right
+    Whaaaat? #speaker_self
+    I didn’t say anything! #speaker_right
+    I can see your eyes being sceptical and all. #speaker_self
+    Lies! #speaker_right
+    Fine, I was thinking - Sikh policeman? A bit stereotypical no? #speaker_right
+    But, I don’t want to be a wet blanket. Good luck, okay? They’d be fools not to give you the part. #speaker_right
+    I’ll do my best. #speaker_self
+    -> aman_2_3_narration
++ [I'll tell you if I get it]
+    Oh, I don’t want to jinx anything. I’ll tell you if I land it. #speaker_self
+    Alright, keep me posted. For all the rain I poured on your parade today, you know I’m your number one fan, right? #speaker_right
+    I know, I know. #speaker_self
+    Good luck for this one. #speaker_right
+    I’ll do my best. #speaker_self
+    -> aman_2_3_narration
+ 
+ === aman_2_3_narration ===
+#knot:aman_2_3_narration
+#ui:narrator
+#background:bg_aman_castingoffice.jpg
+I couldn't sleep well last night, because of the casting call today.
+This is it! Finally, make or break.
+I’ve gone through the lines they sent me a hundred times. Let’s see...
+“Now, listen closely. I’ve looked at the files, and I must say. Things don’t add up in your favour.”
+“It says here you’ve been hauled up before for love-scamming an old lady online, stealing grocery vouchers from your neighbour’s letter box, and performing illegal cosmetic surgery in the back room of a KTV lounge.”
+“That’s quite the chequered past you have, Mr Roger Tan.”
+“Your protestations are futile. Your time is simply up.”
+Not hard, not hard at all…
+
+-> aman_2_3
+ 
+=== aman_2_3 ===
+#knot:aman_2_3
+#ui:scene
+#background:bg_aman_castingoffice.jpg
+#speaker_right_image:cha_aman_alison_normal.png
+#speaker_right_name:Alison
+Amandeep Singh Sahota? #speaker_left
+Yes, that’s me. Aman is fine. #speaker_self
+Hi Aman, I’m Alison! Okay, you’re up. #speaker_left
+Just stand there and face us over here… move a little to your left… perfect. #speaker_left
+For this first take, just do the lines according to your own interpretation of the role. #speaker_left
+I’ll be Roger. Are you ready? #speaker_left
+Yes. #speaker_self
+I’m going to make this character... #inner_monologue
+
++ [Intimidating] 
+    VAR aman_2_actingstyle = "intimidating"
+    ...A scary guy. These lines are ridiculous, but if I keep my eyes looking dead and my demeanour uninterested, I can actually make myself quite sinister. #inner_monologue
++ [Comical]
+    ~ aman_2_actingstyle = "comical"
+    ...A ridiculous figure, over-inflated with his delusions of grandeur. This should be fun. #inner_monologue
+- And, rolling. #speaker_left
+
+Let me go! You have no right to keep me here. I demand my rights as a citizen. #speaker_left
+Now, listen closely. #speaker_self
+
++ [I've looked at the files] I’ve looked at the files, and I must say. #speaker_self
+    VAR aman_2_actingaccuracy = 1
++ [I've looked at the facts] I’ve looked at the facts, and I must say. #speaker_self
+    ~ aman_2_actingaccuracy = 0
+- Things don’t add up in your favour. #speaker_self
+
+It says here you’ve been hauled up before for love-scamming an old lady online, stealing grocery vouchers from your neighbour’s letter box, and performing illegal cosmetic surgery... #speaker_self
+
++ In the spare room of a KTV lounge. [] #speaker_self
++ In the back room of a KTV lounge. [] #speaker_self
+    ~ aman_2_actingaccuracy += 1
+- That’s quite the chequered past you have, Mr Roger... #speaker_self
++ Toh [] #speaker_self 
++ Tan [] #speaker_self
+    ~ aman_2_actingaccuracy += 1
+- I was framed! It was my ex. You have to believe me! #speaker_left
+Your protestations are futile. Your time is simply up. #speaker_self
+And...cut! #speaker_left
+
+{ aman_2_actingaccuracy == 3:
+    Wow, that was great! And you nailed all the lines! #speaker_left 
+- else: 
+    Not bad, but you did trip up a bit on your lines. Do you need a minute to look at them again? #speaker_left
+    No, sorry, I was just nervous! This is my first audition for a professional project. #speaker_self
+    Oh, no wonder. #speaker_left
+    Crap. #inner_monologue
+    No worries - you still did a good job. #speaker_left    
+}
+
+{ aman_2_actingstyle == "intimidating": 
+    It’s strange - we didn’t write that role to be a scary one at all, but you actually gave me chills. We haven’t seen it done that way before. #speaker_left
+    Thank you, I’m so glad to hear that! #speaker_self
+    I’m going to have to ask you to redo it in a more comical way though, because that’s what the scriptwriters intended. #speaker_left
+    No problem! I’ll change it up. #speaker_self
+- else: 
+    I loved your delivery, it was hilarious. #speaker_left
+    Can we do just one more take? #speaker_left
+    Yes, of course! #speaker_self
+}
+
+Great. Can you do it with an accent too? #speaker_left
+Oh, you mean… #speaker_self
+An Indian accent, like a really strong one. And can you also do the head wobble? (Attempts to demonstrate.) #speaker_left
+Uh… just to confirm, the character is Singaporean, right? #speaker_self
+Oh, yes! But Singaporean Indian. This is just to make it more funny. #speaker_left
+Funny. #inner_monologue
+The way Indians speak is funny? It’s not funny to me. #inner_monologue
+Should I say something? But won’t that rule me out for the part? #inner_monologue
+
++ [I'm not comfortable with this] -> aman_2_3a
++ [It’s not funny] -> aman_2_3b
++ [Say nothing] -> aman_2_3c
+
+= aman_2_3a
+I’m not sure this is very appropriate. #speaker_self
+Huh? Oh, er... #speaker_left
+Sorry if I offended you. But you see, this is just what the team has in mind for the tone of the scene, and the character. #speaker_left
+We have to think about what the audience would find amusing, so… it’s nothing personal, it’s a professional thing. I hope you understand. #speaker_left
+Of course, you don’t have to do anything you’re not comfortable with. It’s your choice. #speaker_left
+There’s that phrase again. ‘Your choice.’ #inner_monologue
+Why is it that so often, I find myself in situations where there are no good choices? #inner_monologue
+So are you good to roll? #speaker_left
+Okay, I’m ready. #speaker_self
++ [Perform as requested]
+    #ui:narrator
+    #background:bg_aman_castingoffice.jpg
+    I do another take. 
+    I thicken my accent.
+    I shake my head.
+    I feel like a fraud the whole time. 
+    Like I’m betraying someone by doing this.
+    I can’t keep the resentment from seeping into my acting. 
+    I guess I’m not that good an actor after all.
+    I leave... knowing that I didn’t get the part.
+
++ [Do it your own way]
+    #ui:narrator
+    #background:bg_aman_castingoffice.jpg
+    I do another take, but I do it my own way.
+    I think I did great, personally!
+    But she doesn’t like that I’ve ignored her instructions, I can tell.
+    She’s stone-faced the whole way.
+    I leave... knowing that I didn’t get the part.
+- -> aman_2_4
+
+= aman_2_3b
+I think there can be other, better ways to make the scene funny without resorting to this, if you don’t mind. #speaker_self
+Personally, I don’t think Indian accents are funny. #speaker_self
+Oh - hmm, that’s not what I was trying to say. #speaker_left
+Isn’t it literally what you said? #inner_monologue
+I meant, the audience we have in mind for this drama would find that funny, so we are playing more to that kind of humour. #speaker_left
+Okay, but shouldn’t you be better than that? #speaker_self
+Oh god. I did not just tell a casting director how her television series can ‘be better’. #inner_monologue
+Her face has changed completely. Wouldn’t be surprised if it turned 360 degrees and bit me right now. #inner_monologue
+I think there is a misunderstanding. #speaker_left
+I know you don’t have much experience, but I can see that you have talent. #speaker_left
+However, no matter how talented you are, what we care about here is professionalism. #speaker_left
+You may not agree with the brief, but it’s the brief. #speaker_left
+Thank you for your time today, and we will make our decision in due course. #speaker_left
+Goodbye. #speaker_left
+-> aman_2_4
+
+= aman_2_3c
+Okay, if you’re ready - 3, 2, 1…  #speaker_left
+#ui:narrator
+#background:bg_aman_castingoffice.jpg
+The moment passed, there was no time left to think.
+I tuned out my doubts and just did what was asked of me.
+Suddenly it was over, and she was beaming. Somehow I knew I had gotten the part.
+Is this what it feels like to succeed?
+Why do I feel a little empty?
+Like I’ve let myself and other people down?
+I had thought I would be happier than this.
+-> aman_2_4
+
+
+===  aman_2_4 ===
+
+
+
  -> END
