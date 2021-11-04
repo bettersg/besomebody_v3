@@ -307,7 +307,7 @@ export const MINI_GAME_MAP = [
         ],
       },
     ],
-  }
+  },
 
   // aman 2
   {
