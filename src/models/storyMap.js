@@ -256,7 +256,7 @@ export const CHARACTER_MAP = [
     primaryColour: '#172153',
     secondaryColour: '#FFBB0B',
     playable: true,
-    newestChapter: 1,
+    newestChapter: 2,
     variables: {
       aman_mood: 5,
     },
@@ -339,7 +339,7 @@ export const CHARACTER_MAP = [
         title: "Price of Admission",
         knotTag: "aman_2_intro",
         summary: "Aman discovers talent is not enough to crack the silver screen. Where will he draw the line?",
-        playable: false,
+        playable: true,
         images : ["/images/aman_1_intro.jpg"],
         endings: [
           {
