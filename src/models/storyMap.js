@@ -26,6 +26,8 @@ chapters []
  
  -> to add the primary colour and secondary colour info for each character based on the UI design.
  
+// reflectionIDs: aman 1,5,6 | nadia 2,3,4 |  ravi 7,8,9,10,11 |  zhihao 12,13,14 
+
 */
 
 export const CHARACTER_MAP = [
@@ -333,6 +335,7 @@ export const CHARACTER_MAP = [
       {
         chapterId: 2,
         number: 2,
+        reflectionId:5,
         title: "Price of Admission",
         knotTag: "aman_2_intro",
         summary: "Aman discovers talent is not enough to crack the silver screen. Where will he draw the line?",
@@ -341,9 +344,14 @@ export const CHARACTER_MAP = [
         endings: [
           {
             endingId: 1,
-            title: "Movie Role",
-            inkVar: "aman_chapter2_ending_1",
+            title: "Aman did not get the role",
+            inkVar: "chapter_2_ending_1",
           },
+          {
+            endingId: 2,
+            title: "Aman got the role, but is ashamed",
+            inkVar: "chapter_2_ending_2",
+          },          
         ]
       },
       {

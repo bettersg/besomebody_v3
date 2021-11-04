@@ -1,4 +1,5 @@
 export const MINI_GAME_MAP = [
+  // aman 1
     {
       game_id: 1,
       ui: "mcq",
@@ -307,6 +308,89 @@ export const MINI_GAME_MAP = [
       },
     ],
   }
+
+  // aman 2
+  {
+    game_id: 5,
+    ui: "mcq",
+    introduction: "Aman faced hurdles on his journey to become an actor. Let's dive into these.",
+    questions: [
+      {
+        question_id: 1,
+        question:
+          "Sikh men usually have the same last name: Singh",
+        type: "text",
+        correct_answer_id: 1,
+        explanation:
+          "Guru Gobind Singh wanted to create an egalitarian society, and in South Asia, different last names often had socioeconomic and caste-associations. The word Singh means Lion and the word Kaur denotes royalty – a sovereign princess.",
+        answers: [
+          {
+            answer_id: 1,
+            title: "True",
+          },
+          {
+            answer_id: 2,
+            title: "False",
+          },
+        ],
+      },
+      {
+        question_id: 2,
+        question:
+          "Which types of baptised (initiated) Sikhs are allowed to shave their body hair?",
+        correct_answer_id: 3,
+        explanation: "Initiated Sikhs (male or female) are not supposed to cut hair from any part of their body",
+        type: "text",
+        answers: [
+          {
+            answer_id: 1,              
+            title: "Male Sikhs below the age of 12",
+          },
+          {
+            answer_id: 2,
+            title: "Female Sikhs after puberty",
+          },
+          {
+            answer_id: 3,
+            title: "No Sikhs are allowed",
+          },
+          {
+            answer_id: 4,
+            title: "All Sikhs are allowed",
+          },
+        ],
+      },
+      {
+        question_id: 3,
+        question:
+          "In Singapore, are Sikhs allowed to wear the Kirpan in public (a religious dagger)?",
+        type: "text",
+        correct_answer_id: 2,
+        explanation:
+          "Singaporean law has made allowances to ensure Sikhs can carry the kirpan in public (under some specific conditions), since 2012. ",
+        answers: [
+          {
+            answer_id: 1,
+            title: "Yes, without constraint.",
+          },
+          {
+            answer_id: 2,
+            title: "Yes, under certain specific conditions",
+          },
+          {
+            answer_id: 3,
+            title: "No, it is an illegal weapon",
+          },
+          {
+            answer_id: 4,
+            title:
+              "No, so they carry an image of it instead",
+          },
+        ],
+      },  
+    ],
+  },
+
 ];
   
 

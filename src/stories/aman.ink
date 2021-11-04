@@ -1439,7 +1439,7 @@ Zhihao: brooooo # message
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Zhihao
-#chat_group_image:ico_nadia_zhihao.png
+#chat_group_image:ico_aman_zhihao.png
 #speaker_1_name:Zhihao
 bro #speaker_1
 still looking for acting jobs?? #speaker_1
@@ -1460,7 +1460,7 @@ it #speaker_1
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Zhihao
-#chat_group_image:ico_nadia_zhihao.png
+#chat_group_image:ico_aman_zhihao.png
 #speaker_1_name:Zhihao
 Zhihao, you’re my bro #speaker_self
 yaaaaaaaaaaaaas #speaker_1
@@ -1478,7 +1478,7 @@ don’t even have to act la omg #speaker_1
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Zhihao
-#chat_group_image:ico_nadia_zhihao.png
+#chat_group_image:ico_aman_zhihao.png
 #speaker_1_name:Zhihao
 Hmmmmm #speaker_self
 Sounds good! Yes, please send me the link #speaker_self
@@ -1613,13 +1613,16 @@ Should I say something? But won’t that rule me out for the part? #inner_monolo
 + [Say nothing] -> aman_2_3c
 
 = aman_2_3a
+VAR aman_2_funnyindian = "not comfortable"
 I’m not sure this is very appropriate. #speaker_self
+#speaker_right_image:cha_aman_alison_upset.png
 Huh? Oh, er... #speaker_left
 Sorry if I offended you. But you see, this is just what the team has in mind for the tone of the scene, and the character. #speaker_left
 We have to think about what the audience would find amusing, so… it’s nothing personal, it’s a professional thing. I hope you understand. #speaker_left
 Of course, you don’t have to do anything you’re not comfortable with. It’s your choice. #speaker_left
 There’s that phrase again. ‘Your choice.’ #inner_monologue
 Why is it that so often, I find myself in situations where there are no good choices? #inner_monologue
+#speaker_right_image:cha_aman_alison_normal.png
 So are you good to roll? #speaker_left
 Okay, I’m ready. #speaker_self
 + [Perform as requested]
@@ -1642,15 +1645,17 @@ Okay, I’m ready. #speaker_self
     But she doesn’t like that I’ve ignored her instructions, I can tell.
     She’s stone-faced the whole way.
     I leave... knowing that I didn’t get the part.
-- -> aman_2_4
+- -> aman_2_4_intro
 
 = aman_2_3b
+~ aman_2_funnyindian = "not funny"
 I think there can be other, better ways to make the scene funny without resorting to this, if you don’t mind. #speaker_self
 Personally, I don’t think Indian accents are funny. #speaker_self
 Oh - hmm, that’s not what I was trying to say. #speaker_left
 Isn’t it literally what you said? #inner_monologue
 I meant, the audience we have in mind for this drama would find that funny, so we are playing more to that kind of humour. #speaker_left
 Okay, but shouldn’t you be better than that? #speaker_self
+#speaker_right_image:cha_aman_alison_upset.png
 Oh god. I did not just tell a casting director how her television series can ‘be better’. #inner_monologue
 Her face has changed completely. Wouldn’t be surprised if it turned 360 degrees and bit me right now. #inner_monologue
 I think there is a misunderstanding. #speaker_left
@@ -1659,9 +1664,10 @@ However, no matter how talented you are, what we care about here is professional
 You may not agree with the brief, but it’s the brief. #speaker_left
 Thank you for your time today, and we will make our decision in due course. #speaker_left
 Goodbye. #speaker_left
--> aman_2_4
+-> aman_2_4_intro
 
 = aman_2_3c
+~ aman_2_funnyindian = "nothing"
 Okay, if you’re ready - 3, 2, 1…  #speaker_left
 #ui:narrator
 #background:bg_aman_castingoffice.jpg
@@ -1672,10 +1678,100 @@ Is this what it feels like to succeed?
 Why do I feel a little empty?
 Like I’ve let myself and other people down?
 I had thought I would be happier than this.
+-> aman_2_4_intro
+
+
+===  aman_2_4_intro ===
+#knot:aman_2_4_intro
+#ui:narrator
+#background:bg_aman_bedroom.jpg
+Later that night.
+
 -> aman_2_4
 
-
 ===  aman_2_4 ===
+#knot:aman_2_4
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Lukman
+#chat_group_image:ico_aman_lukman.png
+#speaker_1_name:Lukman
+They told you to do what??? #speaker_1
+Do the accent and shake my head. Because it’s funny. #speaker_self
+Not cool sia #speaker_1
+Eh this kind of thing can post on social media #speaker_1
+Go viral #speaker_1
+Serve them right #speaker_1
+Oh… nah I think that’s not my style 😅 #speaker_self
+Always peace loving #speaker_1
+It’s not just that. I don’t want to be known as a troublemaker in the industry #speaker_self
+Especially just starting out. #speaker_self
+Maybe it would be viral for one week… #speaker_self
+But then the public will forget, while I get blacklisted forever. #speaker_self
+Yea... true dat #speaker_1
+So what did you do?? #
+{ aman_2_funnyindian == "nothing" : 
+    VAR chapter_2_ending = 1
+    Um… I just did it 😔 #speaker_self
+    Hey no judgment #speaker_1
+    They are the ones who should be ashamed not you #speaker_1
+    Still… if I do get the role, maybe don’t watch this one 😳 #speaker_self
+    I’ll tell you if I ever do anything worth watching. #speaker_self
+    I’m sure you will act in some amazing movies one day bro #speaker_1
+    There will be many other parts #speaker_1
+- else: 
+    ~ chapter_2_ending = 2
+    Haha #speaker_self
+    Let’s just say #speaker_self
+    I don’t think I got the part. #speaker_self
+    😔 #speaker_self
+    Screw that part #speaker_1
+    Seriously #speaker_1
+    There will be other chances #speaker_1
+}
++ [Not according to Jothi]
+    My sister doesn’t think so. Lol #speaker_self
+    She says my chances are poor, especially being Sikh. #speaker_self
+    Is she right? Do you have a sense? #speaker_1
+    Actually there ARE roles for minorities out there. But maybe not so many major ones? #speaker_self
+    Tough to say for sure since I’m just starting out. #speaker_self
+    There are a few roles that are open to minorities. Rare to find roles that are specifically for Sikhs #speaker_self
+    That’s why I was quite excited about this one. #speaker_self
+    Don’t give up. #speaker_1
++ [Maybe I should quit]
+    I’m not sure I want to continue #speaker_self
+    Hey what happened to the dream #speaker_1
+    What if that’s the problem, it’s a dream #speaker_self
+    🤯 #speaker_1
+    Sorry, I got emo #speaker_self
+    Hey no worries #speaker_1
+    Don’t rush and decide now after one bad incident #speaker_1
+- I support you ok? Man United #speaker_1
+Haha what?? #speaker_self
+Lukman and Aman #speaker_1
+Man and Man #speaker_1
+Man United #speaker_1
+Why you make me explain 🤣🤣 #speaker_1
+Hahaha #speaker_self
+Thanks bro. #speaker_self
+Gnight. #speaker_self
+
+
+-> aman_2_reflection
+
+=== aman_2_reflection ===
+#knot:aman_2_reflection
+#ui:chapter_reflection
+#reflection_id:5
+Reflection 5
+
+
+
+
+
+
+
+
 
 
 
