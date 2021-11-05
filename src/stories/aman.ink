@@ -1087,15 +1087,18 @@ It’s a beautiful day on the beach, and I can’t even focus on her fully.
 #speaker_left_image:cha_aman_selinder_normal.png
 #speaker_left_name:Selinder
 Jaan? What are you looking at on your phone? #speaker_left
-#background:bg_aman_casting_calls1.jpg
-FACEBOOK SCREEN GOES HERE  
-+ Nothing, let's focus on us.[] #speaker_self
-    -> aman_2_1_1a
-+ Just these casting calls. [] #speaker_self
-    -> aman_2_1_1b
+#background:bg_aman_casting_calls.jpg
+#speaker_left_image:pixel.png
+hmm #inner_monologue
+uh-huh #inner_monologue
+Oh... #speaker_self
++ [Sorry, let's focus on us.] -> aman_2_1_1a
++ [These casting calls. ] -> aman_2_1_1b
 
 = aman_2_1_1a
 #background:bg_aman_beach.jpg
+#speaker_left_image:cha_aman_selinder_normal.png
+#speaker_left_name:Selinder
 Nothing, sorry about that. #speaker_self
 VAR aman_2_selinderfocus = "us"
 Are you sure? #speaker_left
@@ -1124,13 +1127,15 @@ Well, you know the money makes a difference for my family so I can’t just quit
 -> aman_2_1_2
 
 = aman_2_1_1b
-#background:bg_aman_beach.jpg
 Sorry, I was just looking at these casting calls. #speaker_self
 ~ aman_2_selinderfocus = "casting"
+#speaker_left_image:cha_aman_selinder_normal.png
+#speaker_left_name:Selinder
 Oh, you mean you’re still applying for those? #speaker_left
 Yes, of course I am. #speaker_self
 Sorry - I know you tried for one last week and it didn’t work out, so I thought that was that. #speaker_left
 Which one is she talking about? I applied for like twenty roles last week. #inner_monologue
+#background:bg_aman_beach.jpg
 I guess you won’t get to do this sort of thing once uni starts, so it’s good that you’re trying now. #speaker_left
 + ... Right []  #speaker_self
     Oh, yeah… I guess so. #speaker_self
@@ -1152,7 +1157,7 @@ I guess you won’t get to do this sort of thing once uni starts, so it’s good
 = aman_2_1_2 
 #ui:notification
 #background:ui_aman_message.jpg
-Hi Aman this is Elsa from Everyday Productions. Tks for your pics and showreel. We took a look and the showreel is strong. # message
+Elsa: Hi Aman this is Elsa from Everyday Productions. Tks for your pics and showreel. We took a look and the showreel is strong. # message
 #ui:scene
 #background:bg_aman_beach.jpg
 #speaker_left_image:cha_aman_selinder_confused.png
@@ -1172,7 +1177,7 @@ Who is it? #speaker_left
     
     
 
-+ [Nothing, I'll check it later] 
++ Nothing, I'll check it later []  #speaker_self
     ~ aman_2_selinderquestion = "nothing"
     {aman_2_selinderfocus:
     - "us" : Are you sure? You looked so excited. Who’s the other woman? #speaker_left
@@ -1216,6 +1221,7 @@ Okay, then what did I say we should do next? #speaker_left
 #chat_group_title:Elsa
 #chat_group_image:ico_aman_elsa.png
 #speaker_1_name:Elsa
+Hi Aman this is Elsa from Everyday Productions. Tks for your pics and showreel. We took a look and the showreel is strong.  #speaker_1
 Hi Elsa, thanks, that’s great to hear. #speaker_self
 We hv shortlisted you for auditions, but need to check with you something first. It’s a corporate video so the client wants a very clean look. You ok to shave? #speaker_1
 #ui:scene
@@ -1245,11 +1251,12 @@ My choice... #inner_monologue
 
 -> aman_2_1_3a
 
-= aman_2_1_3a
+=== aman_2_1_3a ===
+#knot:aman_2_1_3a
 #ui:scene
 #background:bg_aman_beach.jpg
-#speaker_left_image:cha_aman_selinder_confusedl.png
-#speaker_left_name:Selinder
+#speaker_left_image:cha_aman_selinder_confused.png
+#speaker_left_name:Selinder 
 Is everything alright? You don’t look happy. #speaker_left
 Oh, just another rejection. Sorry you’re stuck with such a loser. #speaker_self
 Don’t talk about yourself like that, jaan. I don’t date losers. #speaker_left
@@ -1261,7 +1268,8 @@ Love you. #speaker_left
 I love you too. #speaker_self
 -> aman_2_2_narration
 
-= aman_2_1_3b
+=== aman_2_1_3b ===
+#knot:aman_2_1_3b
 #ui:scene
 #background:bg_aman_beach.jpg
 #speaker_left_image:cha_aman_selinder_annoyed.png
@@ -1298,8 +1306,12 @@ I’ve been waiting and looking forward to this date for a long time but I am st
     Let’s just keep walking, Sel. We can talk about it another day. #speaker_self
     -> aman_2_2_narration
 
-= aman_2_1_3c
+=== aman_2_1_3c ===
+#knot:aman_2_1_3c
+#ui:scene
+#background:bg_aman_beach.jpg
 #speaker_left_image:cha_aman_selinder_annoyed.png
+#speaker_left_name:Selinder
 All sorted? #speaker_left
 Yes. #speaker_self
 Are you okay? Doesn’t look like good news. #speaker_left
@@ -1477,8 +1489,13 @@ it #speaker_1
 #chat_group_title:Zhihao
 #chat_group_image:ico_aman_zhihao.png
 #speaker_1_name:Zhihao
-Zhihao, you’re my bro #speaker_self
-yaaaaaaaaaaaaas #speaker_1
+Zhihao, you’re my ...  #speaker_self
++ bro [] #speaker_self
++ friend, and a really good one [] #speaker_self
+    no count #speaker_1
+    must bro  #speaker_1
+    sigh. ok. bro. what is it?  #speaker_self
+- yaaaaaaaaaaaaas #speaker_1
 ok i saw this role advertised #speaker_1
 looking for Sikh policeman #speaker_1
 will send u the link #speaker_1
@@ -1538,7 +1555,7 @@ Really? What makes this role so special? #speaker_right
  === aman_2_3_narration ===
 #knot:aman_2_3_narration
 #ui:narrator
-#background:bg_aman_castingoffice.jpg
+#background:bg_aman_casting.jpg
 I couldn't sleep well last night, because of the casting call today.
 This is it! Finally, make or break.
 I’ve gone through the lines they sent me a hundred times. Let’s see...
@@ -1553,15 +1570,15 @@ Not hard, not hard at all…
 === aman_2_3 ===
 #knot:aman_2_3
 #ui:scene
-#background:bg_aman_castingoffice.jpg
+#background:bg_aman_casting.jpg
 #speaker_right_image:cha_aman_alison_normal.png
 #speaker_right_name:Alison
-Amandeep Singh Sahota? #speaker_left
+Amandeep Singh Sahota? #speaker_right
 Yes, that’s me. Aman is fine. #speaker_self
-Hi Aman, I’m Alison! Okay, you’re up. #speaker_left
-Just stand there and face us over here… move a little to your left… perfect. #speaker_left
-For this first take, just do the lines according to your own interpretation of the role. #speaker_left
-I’ll be Roger. Are you ready? #speaker_left
+Hi Aman, I’m Alison! Okay, you’re up. #speaker_right
+Just stand there and face us over here… move a little to your left… perfect. #speaker_right
+For this first take, just do the lines according to your own interpretation of the role. #speaker_right
+I’ll be Roger. Are you ready? #speaker_right
 Yes. #speaker_self
 I’m going to make this character... #inner_monologue
 
@@ -1571,9 +1588,9 @@ I’m going to make this character... #inner_monologue
 + [Comical]
     ~ aman_2_actingstyle = "comical"
     ...A ridiculous figure, over-inflated with his delusions of grandeur. This should be fun. #inner_monologue
-- And, rolling. #speaker_left
+- And, rolling. #speaker_right
 
-Let me go! You have no right to keep me here. I demand my rights as a citizen. #speaker_left
+Let me go! You have no right to keep me here. I demand my rights as a citizen. #speaker_right
 Now, listen closely. #speaker_self
 
 + [I've looked at the files] I’ve looked at the files, and I must say. #speaker_self
@@ -1591,36 +1608,36 @@ It says here you’ve been hauled up before for love-scamming an old lady online
 + Toh [] #speaker_self 
 + Tan [] #speaker_self
     ~ aman_2_actingaccuracy += 1
-- I was framed! It was my ex. You have to believe me! #speaker_left
+- I was framed! It was my ex. You have to believe me! #speaker_right
 Your protestations are futile. Your time is simply up. #speaker_self
-And...cut! #speaker_left
+And...cut! #speaker_right
 
 { aman_2_actingaccuracy == 3:
-    Wow, that was great! And you nailed all the lines! #speaker_left 
+    Wow, that was great! And you nailed all the lines! #speaker_right 
 - else: 
-    Not bad, but you did trip up a bit on your lines. Do you need a minute to look at them again? #speaker_left
+    Not bad, but you did trip up a bit on your lines. Do you need a minute to look at them again? #speaker_right
     No, sorry, I was just nervous! This is my first audition for a professional project. #speaker_self
-    Oh, no wonder. #speaker_left
+    Oh, no wonder. #speaker_right
     Crap. #inner_monologue
-    No worries - you still did a good job. #speaker_left    
+    No worries - you still did a good job. #speaker_right    
 }
 
 { aman_2_actingstyle == "intimidating": 
-    It’s strange - we didn’t write that role to be a scary one at all, but you actually gave me chills. We haven’t seen it done that way before. #speaker_left
+    It’s strange - we didn’t write that role to be a scary one at all, but you actually gave me chills. We haven’t seen it done that way before. #speaker_right
     Thank you, I’m so glad to hear that! #speaker_self
-    I’m going to have to ask you to redo it in a more comical way though, because that’s what the scriptwriters intended. #speaker_left
+    I’m going to have to ask you to redo it in a more comical way though, because that’s what the scriptwriters intended. #speaker_right
     No problem! I’ll change it up. #speaker_self
 - else: 
-    I loved your delivery, it was hilarious. #speaker_left
-    Can we do just one more take? #speaker_left
+    I loved your delivery, it was hilarious. #speaker_right
+    Can we do just one more take? #speaker_right
     Yes, of course! #speaker_self
 }
 
-Great. Can you do it with an accent too? #speaker_left
+Great. Can you do it with an accent too? #speaker_right
 Oh, you mean… #speaker_self
-An Indian accent, like a really strong one. And can you also do the head wobble? (Attempts to demonstrate.) #speaker_left
+An Indian accent, like a really strong one. And can you also do the head wobble? (Attempts to demonstrate.) #speaker_right
 Uh… just to confirm, the character is Singaporean, right? #speaker_self
-Oh, yes! But Singaporean Indian. This is just to make it more funny. #speaker_left
+Oh, yes! But Singaporean Indian. This is just to make it more funny. #speaker_right
 Funny. #inner_monologue
 The way Indians speak is funny? It’s not funny to me. #inner_monologue
 Should I say something? But won’t that rule me out for the part? #inner_monologue
@@ -1633,18 +1650,18 @@ Should I say something? But won’t that rule me out for the part? #inner_monolo
 VAR aman_2_funnyindian = "not comfortable"
 I’m not sure this is very appropriate. #speaker_self
 #speaker_right_image:cha_aman_alison_upset.png
-Huh? Oh, er... #speaker_left
-Sorry if I offended you. But you see, this is just what the team has in mind for the tone of the scene, and the character. #speaker_left
-We have to think about what the audience would find amusing, so… it’s nothing personal, it’s a professional thing. I hope you understand. #speaker_left
-Of course, you don’t have to do anything you’re not comfortable with. It’s your choice. #speaker_left
+Huh? Oh, er... #speaker_right
+Sorry if I offended you. But you see, this is just what the team has in mind for the tone of the scene, and the character. #speaker_right
+We have to think about what the audience would find amusing, so… it’s nothing personal, it’s a professional thing. I hope you understand. #speaker_right
+Of course, you don’t have to do anything you’re not comfortable with. It’s your choice. #speaker_right
 There’s that phrase again. ‘Your choice.’ #inner_monologue
 Why is it that so often, I find myself in situations where there are no good choices? #inner_monologue
 #speaker_right_image:cha_aman_alison_normal.png
-So are you good to roll? #speaker_left
+So are you good to roll? #speaker_right
 Okay, I’m ready. #speaker_self
 + [Perform as requested]
     #ui:narrator
-    #background:bg_aman_castingoffice.jpg
+    #background:bg_aman_casting.jpg
     I do another take. 
     I thicken my accent.
     I shake my head.
@@ -1656,7 +1673,7 @@ Okay, I’m ready. #speaker_self
 
 + [Do it your own way]
     #ui:narrator
-    #background:bg_aman_castingoffice.jpg
+    #background:bg_aman_casting.jpg
     I do another take, but I do it my own way.
     I think I did great, personally!
     But she doesn’t like that I’ve ignored her instructions, I can tell.
@@ -1668,26 +1685,26 @@ Okay, I’m ready. #speaker_self
 ~ aman_2_funnyindian = "not funny"
 I think there can be other, better ways to make the scene funny without resorting to this, if you don’t mind. #speaker_self
 Personally, I don’t think Indian accents are funny. #speaker_self
-Oh - hmm, that’s not what I was trying to say. #speaker_left
+Oh - hmm, that’s not what I was trying to say. #speaker_right
 Isn’t it literally what you said? #inner_monologue
-I meant, the audience we have in mind for this drama would find that funny, so we are playing more to that kind of humour. #speaker_left
+I meant, the audience we have in mind for this drama would find that funny, so we are playing more to that kind of humour. #speaker_right
 Okay, but shouldn’t you be better than that? #speaker_self
 #speaker_right_image:cha_aman_alison_upset.png
 Oh god. I did not just tell a casting director how her television series can ‘be better’. #inner_monologue
 Her face has changed completely. Wouldn’t be surprised if it turned 360 degrees and bit me right now. #inner_monologue
-I think there is a misunderstanding. #speaker_left
-I know you don’t have much experience, but I can see that you have talent. #speaker_left
-However, no matter how talented you are, what we care about here is professionalism. #speaker_left
-You may not agree with the brief, but it’s the brief. #speaker_left
-Thank you for your time today, and we will make our decision in due course. #speaker_left
-Goodbye. #speaker_left
+I think there is a misunderstanding. #speaker_right
+I know you don’t have much experience, but I can see that you have talent. #speaker_right
+However, no matter how talented you are, what we care about here is professionalism. #speaker_right
+You may not agree with the brief, but it’s the brief. #speaker_right
+Thank you for your time today, and we will make our decision in due course. #speaker_right
+Goodbye. #speaker_right
 -> aman_2_4_intro
 
 = aman_2_3c
 ~ aman_2_funnyindian = "nothing"
-Okay, if you’re ready - 3, 2, 1…  #speaker_left
+Okay, if you’re ready - 3, 2, 1…  #speaker_right
 #ui:narrator
-#background:bg_aman_castingoffice.jpg
+#background:bg_aman_casting.jpg
 The moment passed, there was no time left to think.
 I tuned out my doubts and just did what was asked of me.
 Suddenly it was over, and she was beaming. Somehow I knew I had gotten the part.
