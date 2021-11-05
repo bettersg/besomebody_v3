@@ -1087,7 +1087,9 @@ It’s a beautiful day on the beach, and I can’t even focus on her fully.
 #speaker_left_image:cha_aman_selinder_normal.png
 #speaker_left_name:Selinder
 Jaan? What are you looking at on your phone? #speaker_left
-FACEBOOK SCREEN GOES HERE // to replace
+#background:bg_aman_casting_calls1.jpg
+FACEBOOK SCREEN GOES HERE #inner_monologue // to replace
+#background:bg_aman_beach.jpg
 + Nothing, let's focus on us.[] #speaker_self
     -> aman_2_1_1a
 + Just these casting calls. [] #speaker_self
@@ -1102,6 +1104,7 @@ Aww, thank you. I’ve really needed this. #speaker_left
 What do you mean? #speaker_self
 Just… this. Being here. On a beach. With you. Away from things. #speaker_left
 What’s wrong? #speaker_self
+#speaker_left_image:cha_aman_selinder_sad.png
 I think I’m really not cut out for this job. #speaker_left
 I’m working late into the night, every single night, taking on duties that are way over my head. #speaker_left
 They say they want to ‘stretch’ my potential, but they clearly don’t want to ‘stretch’ my pay. #speaker_left
@@ -1110,6 +1113,7 @@ And my boss. She expects me to read her mind, and she gets mad if I don’t. #sp
 She’s always coming after me about the smallest things. The other day she said she wants me to start meeting clients, so I should try to look more ‘presentable’ and ‘modern’. #speaker_left
 She started dropping hints about hair salons and places where you can get your eyebrows trimmed. And she kept sneaking these weird looks at my kara (steel bangle, Sikh article of faith). #speaker_left
 Seriously? Did you explain it to her? #speaker_self
+#speaker_left_image:cha_aman_selinder_annoyed.png
 No, it was all very subtle, you know? Nothing that I could really point to. Like she didn’t outright ask me to cut my hair or change my dressing. So I didn’t want to come across as over-sensitive. #speaker_left
 She’s always saying she has no tolerance for bad attitudes. I don’t want to be on her hitlist. #speaker_left
 This sounds like such a toxic work environment. #speaker_self
@@ -1150,7 +1154,7 @@ I guess you won’t get to do this sort of thing once uni starts, so it’s good
 Hi Aman this is Elsa from Everyday Productions. Tks for your pics and showreel. We took a look and the showreel is strong. # message
 #ui:scene
 #background:bg_aman_beach.jpg
-#speaker_left_image:cha_aman_selinder_normal.png
+#speaker_left_image:cha_aman_selinder_confused.png
 #speaker_left_name:Selinder
 Yes - they liked it! This is promising. #inner_monologue
 Who is it? #speaker_left
@@ -1159,6 +1163,7 @@ Who is it? #speaker_left
     {aman_2_selinderfocus:
     - "us" : Oh wow! I didn’t know you were still applying for auditions. Yes, better reply quickly. #speaker_left
     - "casting": ...Right. Of course. A casting agent. #speaker_left
+    #speaker_left_image:cha_aman_selinder_annoyed.png
     Boy, she sounds unhappy about something. I’ll figure it out later. #inner_monologue
     }
     -> aman_2_1_3
@@ -1178,6 +1183,7 @@ Who is it? #speaker_left
  
 = aman_2_1_2b
 Okay. Hey, you want to go wade in the water? #speaker_left
+#speaker_left_image:cha_aman_selinder_annoyed.png
 I wonder what that Elsa lady is typing. #inner_monologue
 It looks nice out there, not too crowded for a Saturday. Oh, then we go biking, and have brunch, and - how about a movie after that? #speaker_left
 I’ve been meaning to see that new horror movie for so long, what’s it called…  #speaker_left
@@ -1241,13 +1247,14 @@ My choice... #inner_monologue
 = aman_2_1_3a
 #ui:scene
 #background:bg_aman_beach.jpg
-#speaker_left_image:cha_aman_selinder_normal.png
+#speaker_left_image:cha_aman_selinder_confusedl.png
 #speaker_left_name:Selinder
 Is everything alright? You don’t look happy. #speaker_left
 Oh, just another rejection. Sorry you’re stuck with such a loser. #speaker_self
 Don’t talk about yourself like that, jaan. I don’t date losers. #speaker_left
 I know she said that to make me feel better, but I kind of feel worse… #inner_monologue
 But I don’t want to be a downer. Sel has her own problems, and it’s not fair to overload her with mine. She’s the one who needs some cheering up. #inner_monologue
+#speaker_left_image:cha_aman_selinder_normal.png
 Now that you mention it. You’re my girlfriend, so that makes me a winner. Let’s get on with our date! #speaker_self
 Love you. #speaker_left
 I love you too. #speaker_self
@@ -1256,7 +1263,7 @@ I love you too. #speaker_self
 = aman_2_1_3b
 #ui:scene
 #background:bg_aman_beach.jpg
-#speaker_left_image:cha_aman_selinder_normal.png
+#speaker_left_image:cha_aman_selinder_annoyed.png
 #speaker_left_name:Selinder
 All done? #speaker_left
 Yes, I’m done. #speaker_self
@@ -1291,10 +1298,12 @@ I’ve been waiting and looking forward to this date for a long time but I am st
     -> aman_2_2_narration
 
 = aman_2_1_3c
+#speaker_left_image:cha_aman_selinder_annoyed.png
 All sorted? #speaker_left
 Yes. #speaker_self
 Are you okay? Doesn’t look like good news. #speaker_left
 Just another rejection, I’m getting used to it now. #speaker_self
+#speaker_left_image:cha_aman_selinder_normal.png
 Hey... I’m sorry I snapped at you earlier. I know you were trying your best. I’ve just had a really crappy week. #speaker_left
 I’m sorry too. I was trying to focus, I swear… Maybe I’m taking this acting thing too far, I don’t even know what I’m trying to prove anymore. #speaker_self
 Wait, why did you have a crappy week? #speaker_self
@@ -1325,7 +1334,7 @@ I hope that’s enough. #inner_monologue
 === aman_2_2_narration ===
 #knot:aman_2_2_narration
 #ui:narrator
-#background:bg_aman_cafealegria.jpg
+#background:bg_aman_cafe.jpg
 Later that evening, at a new cafe called Cafe Resipi Alegria.
 
 -> aman_2_2
@@ -1333,7 +1342,7 @@ Later that evening, at a new cafe called Cafe Resipi Alegria.
 === aman_2_2 ===
 #knot:aman_2_2
 #ui:scene
-#background:bg_aman_cafealegria.jpg
+#background:bg_aman_cafe.jpg
 #speaker_right_image:cha_aman_jothi_normal.png
 #speaker_right_name:Jothi
 Where on earth is Jothi? Nearly half an hour late. She keeps breaking records. #inner_monologue
@@ -1352,6 +1361,7 @@ So, I’ve been applying to as many casting calls as I can in the last month. #s
 Ah. #speaker_right
 Let me guess, you haven’t gotten a single audition. #speaker_right
 How did you know? #speaker_self
+#speaker_right_image:cha_aman_jothi_eyeroll.png
 Because if they’d seen you act, they would have hired you. #speaker_right
 That’s nice of you to say, but you’re my sister. #speaker_self
 No Aman, I’m not saying it because I’m your sister, I’m saying it because it’s true. #speaker_right
@@ -1365,6 +1375,7 @@ So if you haven’t gotten a role yet, it’s because someone has decided that o
     That’s nice of you to say, but whatever competence I might have on the stage isn’t helping me right now. It’s very frustrating. #speaker_self
     Why isn’t it enough to be good at what I do? #speaker_self
 - That’s a rhetorical question, right? You already know. But fine, I’ll answer it. #speaker_right
+#speaker_right_image:cha_aman_jothi_hairflip.png
 You’re a smart boy Aman, going into business school and everything. So you know about demand and purchasing power.  #speaker_right
 Think about the Singapore market. If a local drama is produced, who forms the majority of the audience watching it?  #speaker_right
 ...Singaporeans? #speaker_self
@@ -1398,6 +1409,7 @@ Not because people are evil and malicious, or out to block you from success. But
 Me? #speaker_self
 A Sikh who wears the turban. Who keeps the kesh (unshorn hair). #speaker_right
 What are you saying? #speaker_self
+#speaker_right_image:cha_aman_jothi_diva.png
 Are you being deliberately obtuse? #speaker_right
 As an actor, you have to pretend to be someone else for a living. How many people look like you, with turbans and beards? #speaker_right
 No, obviously I know that. I mean, what are you trying to get at? What are you implying? #speaker_self
@@ -1412,6 +1424,7 @@ That’s why Kirpal does all that pro bono work. And I… I’m not perfect, but
 We still go to the gurdwara. We will still raise our future children as Sikhs. #speaker_right
 Jothi, I know you’re coming from a place of love, but I’ll never do what you’re implying. #speaker_self
 For that matter - you know Papa-ji and mum are waiting and hoping for you to return to the path and keep the 'form' (uncut hair) again, right? #speaker_self
+#speaker_right_image:cha_aman_jothi_sad.png
 Oh I know, trust me. And it is something we think about as well. We may get there one day, but in our own time. #speaker_right
 We’re all on our own journeys, right? #speaker_right
 Right. And on my journey, there are some compromises I just won’t make. #speaker_self
@@ -1425,6 +1438,7 @@ If succeeding in acting means you have to choose between your dream, and your fa
 + [I refuse to choose] I refuse to make that choice. If we live in a world that makes us choose, then maybe we need to do something about the world. #speaker_self
     You mean - change the world? #speaker_right
     Sure, why not. #speaker_self
+    #speaker_right_image:cha_aman_jothi_normal.png
     Hah. That’s my stubborn baby brother through and through. #speaker_right
     I despair for you sometimes Aman, but I’m proud of you all the same. #
     Thanks, penji. #speaker_self 
@@ -1455,7 +1469,7 @@ bro #speaker_1
 say #speaker_1
 it #speaker_1
     #ui:scene
-    #background:bg_aman_cafealegria.jpg
+    #background:bg_aman_cafe.jpg
     What is Zhihao up to this time? #inner_monologue
 #ui:whatsapp
 #background:whatsapp.png
@@ -1472,7 +1486,7 @@ you are Sikh #speaker_1
 the role is Sikh #speaker_1
 don’t even have to act la omg #speaker_1
     #ui:scene
-    #background:bg_aman_cafealegria.jpg
+    #background:bg_aman_cafe.jpg
     Interesting. #inner_monologue
     Sliightly obnoxious way to put it, but interesting. #inner_monologue
 #ui:whatsapp
@@ -1489,16 +1503,18 @@ Thanks for thinking of me 🙌🏽 #speaker_self
 === aman_2_2_2 ===
 #knot:aman_2_2_2
 #ui:scene
-#background:bg_aman_cafealegria.jpg
+#background:bg_aman_cafe.jpg
 #speaker_right_image:cha_aman_jothi_normal.png
 #speaker_right_name:Jothi
 Who’s that? #speaker_right
 Oh sorry, it’s just Zhihao. #speaker_self
 That clown? You used to run around the void deck when you were kids and he would call you ‘the Singh fella’. #speaker_right
+#speaker_right_image:cha_aman_jothi_eyeroll.png
 Not my favourite specimen. #speaker_right
 Wow, you remember? #speaker_self
 Anyway, yes, it’s the same one. He can be a clown, but his intentions are not bad. #speaker_self
 He says he might have found me a role to try for. #speaker_self
+#speaker_right_image:cha_aman_jothi_normal.png
 Really? What makes this role so special? #speaker_right
 + [It's for a Sikh character]  It’s for a Sikh policeman. #speaker_self
     Mmm. #speaker_right
