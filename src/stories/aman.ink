@@ -1157,7 +1157,7 @@ I guess you won’t get to do this sort of thing once uni starts, so it’s good
 = aman_2_1_2 
 #ui:notification
 #background:ui_aman_message.jpg
-Elsa: Hi Aman this is Elsa from Everyday Productions. Tks for your pics and showreel. We took a look and the showreel is strong. # message
+Elsa: Hi Aman this is Elsa from Everyday Productions. Tks for your pics and showreel. We took a look and the showreel is strong. #message
 #ui:scene
 #background:bg_aman_beach.jpg
 #speaker_left_image:cha_aman_selinder_confused.png
@@ -1458,7 +1458,7 @@ If succeeding in acting means you have to choose between your dream, and your fa
 - 
 #ui:notification
 #background:ui_aman_message.jpg
-Zhihao: brooooo # message
+Zhihao: brooooo #message
 -> aman_2_2_1
 
 === aman_2_2_1 ===
@@ -1635,9 +1635,11 @@ And...cut! #speaker_right
 
 Great. Can you do it with an accent too? #speaker_right
 Oh, you mean… #speaker_self
+#speaker_right_image:cha_aman_alison_headbobble.gif
 An Indian accent, like a really strong one. And can you also do the head wobble? (Attempts to demonstrate.) #speaker_right
 Uh… just to confirm, the character is Singaporean, right? #speaker_self
 Oh, yes! But Singaporean Indian. This is just to make it more funny. #speaker_right
+#speaker_right_image:cha_aman_alison_normal.png
 Funny. #inner_monologue
 The way Indians speak is funny? It’s not funny to me. #inner_monologue
 Should I say something? But won’t that rule me out for the part? #inner_monologue
@@ -1743,7 +1745,7 @@ Especially just starting out. #speaker_self
 Maybe it would be viral for one week… #speaker_self
 But then the public will forget, while I get blacklisted forever. #speaker_self
 Yea... true dat #speaker_1
-So what did you do?? #
+So what did you do?? #speaker_1
 { aman_2_funnyindian == "nothing" : 
     VAR chapter_2_ending = 1
     Um… I just did it 😔 #speaker_self
@@ -1789,6 +1791,16 @@ Why you make me explain 🤣🤣 #speaker_1
 Hahaha #speaker_self
 Thanks bro. #speaker_self
 Gnight. #speaker_self
+
+#ui:narrator
+#background:bg_aman_bedroom.jpg
+I know he’s the kind of bro who will always be supportive no matter what. 
+I appreciate his constant positivity in my life. 
+Even if I’m wrong, I know he’ll back me up.
+But that’s a problem isn’t it? 
+What if I’m wrong? What if Jothi is right? 
+How will I know?
+
 
 
 -> aman_2_reflection

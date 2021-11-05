@@ -378,21 +378,21 @@ export const CHARACTER_MAP = [
       {
         chapterId: 3,
         number: 3,
-        title: "Fight or Flight",
+        title: "The Show Must Go On",
         knotTag: "aman_3_intro",
-        summary: "All Aman wants is to celebrate with friends. Why does everything have to be so difficult?",
+        summary: "After a shocking argument, Aman must decide how his life’s script will unfold.",
         playable: false,
         images : ["cat.jpg", "dog.jpg"],
         endings: [
           {
             endingId: 1,
             title: "Stay",
-            inkVar: "aman_chapter3_ending_1",
+            inkVar: "chapter_3_ending_1",
           },
           {
             endingId: 2,
             title: "Leave",
-            inkVar: "aman_chapter3_ending_2",
+            inkVar: "chapter_3_ending_2",
           },
         ]
       }, 

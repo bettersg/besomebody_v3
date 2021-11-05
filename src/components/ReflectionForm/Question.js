@@ -39,9 +39,6 @@ const Question = ({ question, value, onChange, context }) => {
   const classes = useStyles();
   const [answerLength, setAnswerLength] = useState(0);
 
-  console.log('2 qb',question.body)
-  console.log('2 context', context)
-
   const body = formatString(question.body, context);
 
   const handleChange = (event) => {
