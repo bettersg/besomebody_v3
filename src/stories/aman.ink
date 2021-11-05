@@ -1088,14 +1088,14 @@ It’s a beautiful day on the beach, and I can’t even focus on her fully.
 #speaker_left_name:Selinder
 Jaan? What are you looking at on your phone? #speaker_left
 #background:bg_aman_casting_calls1.jpg
-FACEBOOK SCREEN GOES HERE #inner_monologue // to replace
-#background:bg_aman_beach.jpg
+FACEBOOK SCREEN GOES HERE  
 + Nothing, let's focus on us.[] #speaker_self
     -> aman_2_1_1a
 + Just these casting calls. [] #speaker_self
     -> aman_2_1_1b
 
 = aman_2_1_1a
+#background:bg_aman_beach.jpg
 Nothing, sorry about that. #speaker_self
 VAR aman_2_selinderfocus = "us"
 Are you sure? #speaker_left
@@ -1124,6 +1124,7 @@ Well, you know the money makes a difference for my family so I can’t just quit
 -> aman_2_1_2
 
 = aman_2_1_1b
+#background:bg_aman_beach.jpg
 Sorry, I was just looking at these casting calls. #speaker_self
 ~ aman_2_selinderfocus = "casting"
 Oh, you mean you’re still applying for those? #speaker_left
