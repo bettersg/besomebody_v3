@@ -4,21 +4,50 @@
 //     height: 100%; 
 // }
 .Whatsapp {
-    &__header {
+    &__toolbar {
         height: 64px;
-        background-color: $midnight100;
-        display: flex;
-        padding: 14px 20px; 
-        &--profile {
-            height: 36px; 
-            width: 36px; 
-            border-radius: 50%;
-            margin-right: 12px;
+        left: 0px;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    }
+    &__video {
+        height: 184px;
+        // object-fit: cover;
+        overflow: hidden;
+        // object-position: 0px -20px;
+        &--image{
+            object-fit: cover;
+            object-position:0px -200px;
         }
+    }
+    &__header {
+        height: 40px;
+        left: 0px;
+        padding: 8px 12px;
+        background-color: #FFFFFF;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+        display: flex;
+    
+        // height: 64px;
+        // background-color: $midnight100;
+        // display: flex;
+        // padding: 14px 20px; 
+        // &--profile {
+        //     height: 36px; 
+        //     width: 36px; 
+        //     border-radius: 50%;
+        //     margin-right: 12px;
+        // }
         &__description {
-            color: $white;
+            color: $midnight100;
             &--name {
-                @include inter-whatsappName; 
+                // @include inter-whatsappName; 
+                font-family: Inter;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 140%;
+                text-transform: uppercase;
             }
             &--status {
                 @include p2-normal-body; 
@@ -31,46 +60,77 @@
         overflow-y: scroll;
         user-select: none;
         // height: 100vh; 
-        height: calc(calc(var(--vh, 1vh) * 100) - 148px); 
+        height: calc(calc(var(--vh, 1vh) * 100) - 382px); // edited from 148px to 382px
         @media screen and (min-device-width:600px) {
-            height: 515px; 
+            height: 290px; 
         }
         > div {
             scroll-snap-align: end;
         }
-        &--sender {
-            background: #C9F3F9;
-            width: 304px; 
-            padding: 12px;
-            border-radius: 12px 3px 3px 12px;
-            margin-bottom: 4px;
-            &.newSpeaker { 
-                border-radius: 12px 12px 3px 12px;
-            }
-        }
-        &--receiver {
+        // &--sender {
+        //     background: #C9F3F9;
+        //     width: 304px; 
+        //     padding: 12px;
+        //     border-radius: 12px 3px 3px 12px;
+        //     margin-bottom: 4px;
+        //     &.newSpeaker { 
+        //         border-radius: 12px 12px 3px 12px;
+        //     }
+        // }
+        &--twitchreceiver {
             background: $white;
-            width: 304px; 
-            padding: 12px; 
-            margin-bottom: 4px;
-            margin-left: 16px;
-            border-radius: 3px 12px 12px 3px;
-            &.newSpeaker { 
-                border-radius: 12px 12px 12px 3px;
-            }
+            color: $midnight100;
+            // width: 100%;
+            padding: 10px 8px 8px; //edited left-right padding values from 12 to 8px
+            // font-family: Inter;
+            // font-style: normal;
+            // font-weight: normal;
+            // font-size: 14px;
+            // line-height: 150%;
+            display: flex;
+            // align-items: center;
+
+            // margin-bottom: 4px;
+            // margin-left: 16px;
+            // border-radius: 3px 12px 12px 3px;
+            // &.newSpeaker { 
+            //     border-radius: 12px 12px 12px 3px;
+            // }
             
             &--name {
-                @include inter-whatsapp; 
-                text-transform: capitalize;
-                margin-bottom: 4px;
+                // @include inter-whatsapp; 
+                // text-transform: capitalize;
+                // margin-bottom: 4px;
+
+                font-family: Inter;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 150%;
+                padding-left: 4px;
+
+                color: #664EFC;
+            }
+
+            &--profile {
+                width: 20px;
+                height: 20px;
+            }
+
+            &--message {
+                font-family: Inter;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 150%;
             }
         }
         &.choices {
             transition: height 0.4s; 
-            height: calc(calc(var(--vh, 1vh) * 100) - 313px); 
-        // height: 55.3vh; 
+            // height: calc(calc(var(--vh, 1vh) * 100) - 547px); // edited from 313px to 547px
+        height: 55.3vh; 
             @media screen and (min-device-width:600px) {
-                height: 350px; 
+                height: 280px;  // change from 350 to 280px
             }
         }
         &--sender, &--receiver {
@@ -80,7 +140,7 @@
         }
     }
     &__sendWrapper {
-        background-color: $dark1;
+        background-color: white;
         padding: 10px 16px; 
         display: flex;
         justify-content: space-between;
@@ -94,17 +154,22 @@
             display: flex;
             align-items: center;
             height: 44px; 
-            color: $white;
+            color: $midnight100;
+            // may remove
+            // font-family: Inter;
+            // font-style: normal;
+            // font-weight: normal;
+            // line-height: 140%;
             font-size: 14px;
             opacity: 80%;
-            background-color: $midnight80;
+            background-color: $midnight10;
             &.choice {
                 border: $aqua100 solid 2px;
                 background-color: transparent;
                 color: white; 
             }
-            &--right {
-                background-color: $aqua100;
+            &--purpleright {
+                background-color: #664EFC; // lapis base not a colour yet
                 border-radius: 30px;
                 height: 40px;
                 width: 40px;

@@ -23,6 +23,8 @@ import Help from '../pages/HelpPage/HelpPage'
 import Music1 from '../music/tobeyou_intro.mp3'
 // import Music2 from '../music/tobeyou_outrolong.mp3'
 import ChapterEnd from '../pages/ChapterEndPage/ChapterEnd'
+import WhatsappPage from '../pages/WhatsappPage/Whatsapp'
+import TwitchPage from '../pages/TwitchPage/TestTwitch'
 
 
 class Router extends Component {
@@ -118,6 +120,15 @@ class Router extends Component {
 
             <PrivateRoute path="/user/:userId">
               {user ? <UserPage /> : <Redirect to="/" />}
+            </PrivateRoute>
+
+            {/* to remove after ink controller added */}
+            <PrivateRoute path="/twitch" exact>
+              <TwitchPage />
+            </PrivateRoute>
+
+            <PrivateRoute path="/whatsapp" exact>
+              <WhatsappPage />
             </PrivateRoute>
 
             <Route>
