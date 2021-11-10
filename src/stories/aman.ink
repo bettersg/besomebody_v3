@@ -1334,7 +1334,7 @@ Yes, of course. #speaker_self
 }
 
 Right now, I’m just trying to land one small break, take it one step at a time. #speaker_self
-But yes - I think, if I did see a path forward… I might take it. Is that okay with you?
+But yes - I think, if I did see a path forward… I might take it. Is that okay with you? #speaker_self
 Even if it means low pay, ‘wasting’ a business degree, not knowing when I can afford to get married or buy a house, and having to explain my life choices to our parents... #inner_monologue
 I see. #speaker_left
 Well honestly… it’s like you said, one step at a time. #speaker_left
@@ -1453,7 +1453,7 @@ If succeeding in acting means you have to choose between your dream, and your fa
     Sure, why not. #speaker_self
     #speaker_right_image:cha_aman_jothi_normal.png
     Hah. That’s my stubborn baby brother through and through. #speaker_right
-    I despair for you sometimes Aman, but I’m proud of you all the same. #
+    I despair for you sometimes Aman, but I’m proud of you all the same. #speaker_right
     Thanks, penji. #speaker_self 
 - 
 #ui:notification
@@ -1588,12 +1588,12 @@ I’ll be Roger. Are you ready? #speaker_right
 Yes. #speaker_self
 I’m going to make this character... #inner_monologue
 
-+ [Intimidating] 
++ [Intimidating] ...A scary guy. #inner_monologue
     VAR aman_2_actingstyle = "intimidating"
-    ...A scary guy. These lines are ridiculous, but if I keep my eyes looking dead and my demeanour uninterested, I can actually make myself quite sinister. #inner_monologue
-+ [Comical]
+    These lines are ridiculous, but if I keep my eyes looking dead and my demeanour uninterested, I can actually make myself quite sinister. #inner_monologue
++ [Comical] ...A ridiculous figure, over-inflated with his delusions of grandeur. #inner_monologue
     ~ aman_2_actingstyle = "comical"
-    ...A ridiculous figure, over-inflated with his delusions of grandeur. This should be fun. #inner_monologue
+     This should be fun. #inner_monologue
 - And, rolling. #speaker_right
 #speaker_right_image:cha_aman_alison_reading.png
 Let me go! You have no right to keep me here. I demand my rights as a citizen. #speaker_right
@@ -1617,7 +1617,7 @@ It says here you’ve been hauled up before for love-scamming an old lady online
 - I was framed! It was my ex. You have to believe me! #speaker_right
 Your protestations are futile. Your time is simply up. #speaker_self
 And...cut! #speaker_right
-
+#speaker_right_image:cha_aman_alison_normal.png
 { aman_2_actingaccuracy == 3:
     Wow, that was great! And you nailed all the lines! #speaker_right 
 - else: 
