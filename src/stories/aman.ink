@@ -1553,6 +1553,12 @@ Really? What makes this role so special? #speaker_right
     -> aman_2_3_narration
  
  === aman_2_3_narration ===
+#knot:aman_2_minigame
+#ui:mcq
+#game_id:5
+Minigame 5 // must add some text
+ 
+ 
 #knot:aman_2_3_narration
 #ui:narrator
 #background:bg_aman_casting.jpg

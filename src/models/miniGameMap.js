@@ -313,16 +313,16 @@ export const MINI_GAME_MAP = [
   {
     game_id: 5,
     ui: "mcq",
-    introduction: "Aman faced hurdles on his journey to become an actor. Let's dive into these.",
+    introduction: "Aman faced hurdles on his journey to become an actor. Let's explore these.",
     questions: [
       {
         question_id: 1,
         question:
-          "Sikh men usually have the same last name: Singh",
+          "Singapore already has a famous Sikh actor: Gurmit Singh.",
         type: "text",
-        correct_answer_id: 1,
+        correct_answer_id: 2,
         explanation:
-          "Guru Gobind Singh wanted to create an egalitarian society, and in South Asia, different last names often had socioeconomic and caste-associations. The word Singh means Lion and the word Kaur denotes royalty – a sovereign princess.",
+          "False. Gurmit Singh converted from Sikhism to Christianity before he started acting professionally (when he was about 20). He retained his surname of Singh, which often leads people to mistakenly believe that he is still a Sikh.",
         answers: [
           {
             answer_id: 1,
@@ -337,56 +337,39 @@ export const MINI_GAME_MAP = [
       {
         question_id: 2,
         question:
-          "Which types of baptised (initiated) Sikhs are allowed to shave their body hair?",
-        correct_answer_id: 3,
-        explanation: "Initiated Sikhs (male or female) are not supposed to cut hair from any part of their body",
+          "Perceived discrimination in the workplace has gotten better in recent years.",
+        correct_answer_id: 2,
+        explanation: "No. Almost 60 per cent of Malays and 56 per cent of Indians perceived discriminatory treatment at work, based on an IPS Survey in 2018. This figure actually worsened compared to the 2013 survey, where only 58% of Malays and 52% of Indians felt this way.",
         type: "text",
         answers: [
           {
-            answer_id: 1,              
-            title: "Male Sikhs below the age of 12",
+            answer_id: 1,
+            title: "True",
           },
           {
             answer_id: 2,
-            title: "Female Sikhs after puberty",
-          },
-          {
-            answer_id: 3,
-            title: "No Sikhs are allowed",
-          },
-          {
-            answer_id: 4,
-            title: "All Sikhs are allowed",
+            title: "False",
           },
         ],
       },
       {
         question_id: 3,
         question:
-          "In Singapore, are Sikhs allowed to wear the Kirpan in public (a religious dagger)?",
+          "Sharanjit Leyl (a Singaporean-born Sikh newscaster who works for BBC) said that she faced discrimination when seeking employment in Mediacorp many years ago.",
         type: "text",
-        correct_answer_id: 2,
+        correct_answer_id: 1,
         explanation:
-          "Singaporean law has made allowances to ensure Sikhs can carry the kirpan in public (under some specific conditions), since 2012. ",
-        answers: [
-          {
-            answer_id: 1,
-            title: "Yes, without constraint.",
-          },
-          {
-            answer_id: 2,
-            title: "Yes, under certain specific conditions",
-          },
-          {
-            answer_id: 3,
-            title: "No, it is an illegal weapon",
-          },
-          {
-            answer_id: 4,
-            title:
-              "No, so they carry an image of it instead",
-          },
-        ],
+          "Her comments were made about the hiring policies more than 20 years ago. Mediacorp disputed the remarks, and added that the CNA newsroom consists of 40% minorities today, which is above the national average.",
+          answers: [
+            {
+              answer_id: 1,
+              title: "True",
+            },
+            {
+              answer_id: 2,
+              title: "False",
+            },
+          ],
       },  
     ],
   },
