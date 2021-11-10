@@ -1589,7 +1589,7 @@ I’m going to make this character... #inner_monologue
     ~ aman_2_actingstyle = "comical"
     ...A ridiculous figure, over-inflated with his delusions of grandeur. This should be fun. #inner_monologue
 - And, rolling. #speaker_right
-
+#speaker_right_image:cha_aman_alison_reading.png
 Let me go! You have no right to keep me here. I demand my rights as a citizen. #speaker_right
 Now, listen closely. #speaker_self
 
