@@ -1137,13 +1137,11 @@ Sorry - I know you tried for one last week and it didn’t work out, so I though
 Which one is she talking about? I applied for like twenty roles last week. #inner_monologue
 #background:bg_aman_beach.jpg
 I guess you won’t get to do this sort of thing once uni starts, so it’s good that you’re trying now. #speaker_left
-+ ... Right []  #speaker_self
-    Oh, yeah… I guess so. #speaker_self
++ [... Right ] Oh, yeah… I guess so. #speaker_self
         I’ll just be glad to have your attention again. I feel like you’ve been so distracted. #speaker_left
     Really? Sorry about that... #speaker_self
 
-+ Actually, I'll keep trying. []  #speaker_self
-    I’m not actually planning to stop, jaan. #speaker_self
++ [Actually, I'll keep trying. ]  I’m not actually planning to stop, jaan. #speaker_self
     Really? How will you balance it with school? #speaker_left
     I’ll be okay, I can juggle my time. #speaker_self
     Are you sure? #speaker_left
@@ -1200,7 +1198,7 @@ Huh? #speaker_self
 Did you hear anything I said? #speaker_left
 Yes, of course! #speaker_self
 Okay, then what did I say we should do next? #speaker_left
-+ [Wade, Bruch, Biking]
++ [Wade, Brunch, Biking]
     Go wading, have brunch, then go biking. #speaker_self
     Incorrect. #speaker_left
     Is this a test? It’s a bit childish don’t you think? #speaker_self
