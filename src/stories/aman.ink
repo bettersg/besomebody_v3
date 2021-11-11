@@ -634,6 +634,7 @@ Er, it’s okay lah. Honestly, if I could do something else, I might consider it
 Like what? #speaker_left
 
 + [Confide in him about your dream] I’ve actually been thinking about trying… acting? #speaker_self
+    VAR aman_1_sharedreamslukman = true
     Whoa. Not bad huh, Aman Got Talent. #speaker_left
     Hurr. Not sure about talent, but I’ve always been in drama since young. #speaker_self
     I like acting. People say I’m good at it, and I like how I feel when I do it. #speaker_self
@@ -649,8 +650,8 @@ Like what? #speaker_left
     Oh damn bro, that’s cheem.  #speaker_left
     (laughs) I know, right. #speaker_self
     
-+ [Hesitate to share]
-    Top secret. #speaker_self
++ [Hesitate to share] Top secret. #speaker_self
+    ~ aman_1_sharedreamslukman = false
     Wah lao, like that also can. #speaker_left
     What I would really want to do is act. #inner_monologue
     After NS, the plan is to go for some casting calls, maybe do some headshots and demo reels… #inner_monologue
@@ -1736,6 +1737,41 @@ Later that night.
 #chat_group_title:Lukman
 #chat_group_image:ico_aman_lukman.png
 #speaker_1_name:Lukman
+{aman_1_sharedreamslukman == true: 
+    Bro, so I had my audition today. #speaker_self
+    How did it go? I’m sure you blew them away! #speaker_1 
+    Well, it got really weird. The casting director asked me to be “more indian”. Like, make fun of how Indian people talk. #speaker_self
+    -> aman_2_4b
+- else: -> aman_2_4a
+    
+}
+
+= aman_2_4a
+Bro, free to chat? #speaker_self
+Eh anytime man. What’s up? You ok? #speaker_1
+Well, I don’t know if you remember this but remember during the last Tekong field camp we spoke about what we were going to do after NS, and I said I was thinking of doing something different? #speaker_self
+Yeah, I remember. You were hinting pretty strongly that it would be media related. I didn’t want to push you... but I think you’d be amazing. #speaker_1
+Haha you’re always so supportive! And you’re right - I’m interested in acting. #speaker_self
+I knew it! You’re super talented man at acting.  #speaker_1
+Uh, not that you were damn drama in NS or anything 😂 ... but I can see that you’ve got that aura of a star, you know? 🤩 #speaker_1
+Hurr. Not sure about talent and aura, but I’ve always been in drama since young. I like acting. People say I’m good at it, and I like how I feel when I do it. #speaker_self
+How does it feel? #speaker_1
++ It’s going to sound really weird and philosophical.[] #speaker_self
+    Try me. #speaker_1
+    So… acting is about pretending to be someone else, right? #speaker_self
+    But when I act, I feel like I’m being me. #speaker_self
+    Like I’m putting myself on the line. The parts of me that feel the same emotions my character feels, think the same way my character thinks. #speaker_self
+    In real life, we’re always presenting ourselves the way we want to be seen. When I’m acting, it’s like... I’m revealing the way I am, and the way I am is… seen. #speaker_self
+    Oh damn bro, that’s cheem. #speaker_1
+    I know, right.  #speaker_self
++ It feels... liberating! []    #speaker_self
+    That's awesome! Happy for you man. So what's up?  #speaker_1
+- Anyway, I did my first real audition today... #speaker_self
+How did it go? I’m sure you blew them away! #speaker_1
+Well, it got really weird. The casting director asked me to be “more indian”. Like, make fun of how Indian people talk. #speaker_self
+-> aman_2_4b
+
+= aman_2_4b    
 They told you to do what??? #speaker_1
 Do the accent and shake my head. Because it’s funny. #speaker_self
 Not cool sia #speaker_1
