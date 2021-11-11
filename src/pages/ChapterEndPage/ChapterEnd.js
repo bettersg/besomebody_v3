@@ -105,7 +105,7 @@ const ChapterEnd = ({ setPage , user }) => {
   const [isLoading, setIsLoading] = useState(false)
   
     const shareUrl = 'https://tobeyou.sg';
-  const title = 'I just unlocked an ending for ' + name.charAt(0).toUpperCase() + name.toLowerCase().slice(1) + ' on ToBeYou.sg, a Singaporean interactive fiction game. Are you ready to explore ' + name.charAt(0).toUpperCase() + name.toLowerCase().slice(1) + '\'s story too?' ;
+  const title = 'I am learning what it is like to be ' + name.charAt(0).toUpperCase() + name.toLowerCase().slice(1) + '. Join me on ToBeYou.sg, a Singaporean interactive fiction game, and take the pledge to make Singapore a more empathetic society.' + name.charAt(0).toUpperCase() + name.toLowerCase().slice(1) + '\'s story too?' ;
     
     
   return (

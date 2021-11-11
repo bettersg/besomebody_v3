@@ -26,6 +26,8 @@ chapters []
  
  -> to add the primary colour and secondary colour info for each character based on the UI design.
  
+// reflectionIDs: aman 1,5,6 | nadia 2,3,4 |  ravi 7,8,9,10,11 |  zhihao 12,13,14 
+
 */
 
 export const CHARACTER_MAP = [
@@ -254,7 +256,7 @@ export const CHARACTER_MAP = [
     primaryColour: '#172153',
     secondaryColour: '#FFBB0B',
     playable: true,
-    newestChapter: 1,
+    newestChapter: 2,
     variables: {
       aman_mood: 5,
     },
@@ -333,37 +335,64 @@ export const CHARACTER_MAP = [
       {
         chapterId: 2,
         number: 2,
+        reflectionId:5,
         title: "Price of Admission",
         knotTag: "aman_2_intro",
         summary: "Aman discovers talent is not enough to crack the silver screen. Where will he draw the line?",
-        playable: false,
-        images : ["/images/aman_1_intro.jpg"],
+        playable: true,
+        images: [
+          '/images/bg_aman_beach.jpg',
+          '/images/bg_aman_bedroom.jpg',
+          '/images/bg_aman_cafe.jpg',
+          '/images/bg_aman_casting_calls.jpg',
+          '/images/bg_aman_casting.jpg',
+          '/images/bg_aman_intro.jpg',
+          '/images/cha_aman_alison_normal.png',
+          '/images/cha_aman_alison_upset.png',
+          '/images/cha_aman_jothi_diva.png',
+          '/images/cha_aman_jothi_eyeroll.png',
+          '/images/cha_aman_jothi_hairflip.png',
+          '/images/cha_aman_jothi_normal.png',
+          '/images/cha_aman_jothi_sad.png',
+          '/images/cha_aman_selinder_annoyed.png',
+          '/images/cha_aman_selinder_confused.png',
+          '/images/cha_aman_selinder_normal.png',
+          '/images/cha_aman_selinder_sad.png',
+          '/images/pixel.png',
+          '/images/ui_aman_message.jpg',
+          '/images/whatsapp.png',
+        ],
         endings: [
           {
             endingId: 1,
-            title: "Movie Role",
-            inkVar: "aman_chapter2_ending_1",
+            title: "Aman did not get the role",
+            inkVar: "chapter_2_ending_1",
           },
+          {
+            endingId: 2,
+            title: "Aman got the role, but is ashamed",
+            inkVar: "chapter_2_ending_2",
+          },          
         ]
       },
       {
         chapterId: 3,
         number: 3,
-        title: "Fight or Flight",
+        title: "The Show Must Go On",
         knotTag: "aman_3_intro",
-        summary: "All Aman wants is to celebrate with friends. Why does everything have to be so difficult?",
+        summary: "After a shocking argument, Aman must decide how his life’s script will unfold.",
         playable: false,
         images : ["cat.jpg", "dog.jpg"],
         endings: [
           {
             endingId: 1,
             title: "Stay",
-            inkVar: "aman_chapter3_ending_1",
+            inkVar: "chapter_3_ending_1",
           },
           {
             endingId: 2,
             title: "Leave",
-            inkVar: "aman_chapter3_ending_2",
+            inkVar: "chapter_3_ending_2",
           },
         ]
       }, 
