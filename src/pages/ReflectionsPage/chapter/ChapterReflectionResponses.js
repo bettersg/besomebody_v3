@@ -255,6 +255,19 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
   useEffect(() => fetchCount(), []);
   useEffect(() => fetchMoreResponsesIfNotOverflow(), [hasMore, lastDocSnapshot]);
 
+  const defaultResponse = [{
+    id: 1,
+    answer: "You are the first person to finish this chapter!",
+    user: [{
+      race: '-',
+      gender: '-',
+      age: '-',
+      housing: '-',
+      religion: '-',
+    }]
+  }]
+
+
   if (responses == null) {
     // if (responses ) {
     return (
@@ -262,15 +275,19 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
         <ClipLoader size={106} width={"10"} css={{position: "absolute", top: 253, left: 134, border: "10px solid #898DE4", borderBottomColor:"transparent"}} />
       </Box>
     )
-  } else {
+  }  else {
     return (
       <div>
 
         <div className={`${classes.background} reflectionsContainer`}>   
         {currentPage === 1 ? 
           <div className={classes.yourStoriesBkgrd}  onClick={() => setCurrentPage(currentPage + 1)}>
-            <div className={classes.gradientBkgrd}>
-              <ChapterResponse key={responses[0].id} response={responses[0]} />
+              <div className={classes.gradientBkgrd}>
+                {responses.length === 0 ? 
+                  <ChapterResponse response={defaultResponse[0]} />
+                  : <ChapterResponse key={responses[0].id} response={responses[0]} />
+                }
+              {/* <ChapterResponse key={responses[0].id} response={responses[0]} /> */}
               <div className={classes.bottomLikeSection}>
                 <img src="/reflection/reflection_heart_white.png" className={classes.heart}/>
                 <Typography className={classes.whiteTextReflection}>Tap on this icon to say that you connected with a reflection.</Typography>
