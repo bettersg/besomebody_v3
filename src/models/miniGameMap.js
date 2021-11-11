@@ -337,9 +337,9 @@ export const MINI_GAME_MAP = [
       {
         question_id: 2,
         question:
-          "Perceived discrimination in the workplace has gotten better in recent years.",
-        correct_answer_id: 2,
-        explanation: "No. Almost 60 per cent of Malays and 56 per cent of Indians perceived discriminatory treatment at work, based on an IPS Survey in 2018. This figure actually worsened compared to the 2013 survey, where only 58% of Malays and 52% of Indians felt this way.",
+          "A 2018 national survey found that Chinese employers were more likely than Malay and Indian employers to feel that a person’s race is a relevant factor when hiring.",
+        correct_answer_id: 1,
+        explanation: "Based on the 2018 IPS Survey, 34% of Chinese respondents felt that a job applicant's race was sometimes important when hiring someone to work for them (compared to only 21% of Malays and 16% of Indians).",
         type: "text",
         answers: [
           {
@@ -355,11 +355,11 @@ export const MINI_GAME_MAP = [
       {
         question_id: 3,
         question:
-          "Sharanjit Leyl (a Singaporean-born Sikh newscaster who works for BBC) said that she faced discrimination when seeking employment in Mediacorp many years ago.",
+          "A local Indian actor was asked to be 'more Indian' in his casting for Ah Boys To Men 4, which created significant controversy in 2017.",
         type: "text",
         correct_answer_id: 1,
         explanation:
-          "Her comments were made about the hiring policies more than 20 years ago. Mediacorp disputed the remarks, and added that the CNA newsroom consists of 40% minorities today, which is above the national average.",
+          "Shrey Bhargava, a freelance actor, shared his experience during the casting for Ah Boys To Men 4. There was heated discussion online - some felt that he over-reacted, while others defended his remarks.",
           answers: [
             {
               answer_id: 1,
