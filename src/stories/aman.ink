@@ -1183,6 +1183,7 @@ Who is it? #speaker_left
         Oi, don’t be cheeky! It’s a casting agent! #speaker_self
         I’m kidding, jaan. I didn’t even realise you were still applying for auditions! You better check it, maybe it’s good news. #speaker_left
         Ok, then just give me a second. #speaker_self
+        -> aman_2_1_3
     - "casting":  -> aman_2_1_2b
     }
  
