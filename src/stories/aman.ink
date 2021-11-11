@@ -1608,17 +1608,19 @@ Now, listen closely. #speaker_self
 It says here you’ve been hauled up before for love-scamming an old lady online, stealing grocery vouchers from your neighbour’s letter box, and performing illegal cosmetic surgery... #speaker_self
 
 + In the spare room of a KTV lounge. [] #speaker_self
+    ~ aman_2_actingaccuracy -= 1
 + In the back room of a KTV lounge. [] #speaker_self
     ~ aman_2_actingaccuracy += 1
 - That’s quite the chequered past you have, Mr Roger... #speaker_self
 + Toh [] #speaker_self 
+    ~ aman_2_actingaccuracy -= 1
 + Tan [] #speaker_self
     ~ aman_2_actingaccuracy += 1
 - I was framed! It was my ex. You have to believe me! #speaker_right
 Your protestations are futile. Your time is simply up. #speaker_self
 And...cut! #speaker_right
 #speaker_right_image:cha_aman_alison_normal.png
-{ aman_2_actingaccuracy == 3:
+{ aman_2_actingaccuracy >= 3:
     Wow, that was great! And you nailed all the lines! #speaker_right 
 - else: 
     Not bad, but you did trip up a bit on your lines. Do you need a minute to look at them again? #speaker_right
