@@ -1658,6 +1658,7 @@ Should I say something? But won’t that rule me out for the part? #inner_monolo
 
 = aman_2_3a
 VAR aman_2_funnyindian = "not comfortable"
+VAR chapter_2_ending = 2
 I’m not sure this is very appropriate. #speaker_self
 #speaker_right_image:cha_aman_alison_upset.png
 Huh? Oh, er... #speaker_right
@@ -1693,6 +1694,7 @@ Okay, I’m ready. #speaker_self
 
 = aman_2_3b
 ~ aman_2_funnyindian = "not funny"
+~ chapter_2_ending = 2
 I think there can be other, better ways to make the scene funny without resorting to this, if you don’t mind. #speaker_self
 Personally, I don’t think Indian accents are funny. #speaker_self
 Oh - hmm, that’s not what I was trying to say. #speaker_right
@@ -1713,6 +1715,7 @@ Goodbye. #speaker_right
 = aman_2_3c
 ~ aman_2_funnyindian = "nothing"
 Okay, if you’re ready - 3, 2, 1…  #speaker_right
+~ chapter_2_ending = 1
 #ui:narrator
 #background:bg_aman_casting.jpg
 The moment passed, there was no time left to think.
@@ -1790,8 +1793,8 @@ But then the public will forget, while I get blacklisted forever. #speaker_self
 Yea... true dat #speaker_1
 So what did you do?? #speaker_1
 { aman_2_funnyindian == "nothing" : 
-    VAR chapter_2_ending = 1
     Um… I just did it 😔 #speaker_self
+    ~ chapter_2_ending = 1
     Hey no judgment #speaker_1
     They are the ones who should be ashamed not you #speaker_1
     Still… if I do get the role, maybe don’t watch this one 😳 #speaker_self
@@ -1799,8 +1802,8 @@ So what did you do?? #speaker_1
     I’m sure you will act in some amazing movies one day bro #speaker_1
     There will be many other parts #speaker_1
 - else: 
-    ~ chapter_2_ending = 2
     Haha #speaker_self
+    ~ chapter_2_ending = 2
     Let’s just say #speaker_self
     I don’t think I got the part. #speaker_self
     😔 #speaker_self
