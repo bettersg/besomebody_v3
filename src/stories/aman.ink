@@ -1121,6 +1121,7 @@ Seriously? Did you explain it to her? #speaker_self
 No, it was all very subtle, you know? Nothing that I could really point to. Like she didn’t outright ask me to cut my hair or change my dressing. So I didn’t want to come across as over-sensitive. #speaker_left
 She’s always saying she has no tolerance for bad attitudes. I don’t want to be on her hitlist. #speaker_left
 This sounds like such a toxic work environment. #speaker_self
+#speaker_left_image:cha_aman_selinder_sad.png
 I know right, what era is this? #speaker_left
 You should look for a different job. It’s not right. #speaker_self
 Well, you know the money makes a difference for my family so I can’t just quit. But I’m applying around. #speaker_left
@@ -1143,10 +1144,12 @@ I guess you won’t get to do this sort of thing once uni starts, so it’s good
     Really? Sorry about that... #speaker_self
 
 + [Actually, I'll keep trying. ]  I’m not actually planning to stop, jaan. #speaker_self
+    #speaker_left_image:cha_aman_selinder_confused.png
     Really? How will you balance it with school? #speaker_left
     I’ll be okay, I can juggle my time. #speaker_self
     Are you sure? #speaker_left
     Of course. Where is this coming from? #speaker_self
+    #speaker_left_image:cha_aman_selinder_sad.png
     Well it just seems like lately, we’ve barely had time together. I thought everything would get better after your NS, but it hasn’t. #speaker_left
  - Oh man... #inner_monologue
  
@@ -1167,8 +1170,9 @@ Who is it? #speaker_left
     VAR aman_2_selinderquestion = "wait"
     {aman_2_selinderfocus:
     - "us" : Oh wow! I didn’t know you were still applying for auditions. Yes, better reply quickly. #speaker_left
-    - "casting": ...Right. Of course. A casting agent. #speaker_left
+    - "casting": ...Right.  #speaker_left
     #speaker_left_image:cha_aman_selinder_annoyed.png
+    Of course. A casting agent. #speaker_left
     Boy, she sounds unhappy about something. I’ll figure it out later. #inner_monologue
     }
     -> aman_2_1_3
@@ -1188,17 +1192,19 @@ Who is it? #speaker_left
     }
  
 = aman_2_1_2b
+#speaker_left_image:cha_aman_selinder_normal.png
 Okay. Hey, you want to go wade in the water? #speaker_left
-#speaker_left_image:cha_aman_selinder_annoyed.png
 I wonder what that Elsa lady is typing. #inner_monologue
 It looks nice out there, not too crowded for a Saturday. Oh, then we go biking, and have brunch, and - how about a movie after that? #speaker_left
 I’ve been meaning to see that new horror movie for so long, what’s it called…  #speaker_left
 The reviews are not bad. Do you know the one I’m talking about? #speaker_left
 I saw her first message, so she’ll see the blue-tick. I hope she doesn’t get offended by the delay in replying… #inner_monologue
+#speaker_left_image:cha_aman_selinder_sad.png
 Seriously, Aman? #speaker_left
 Huh? #speaker_self
 Did you hear anything I said? #speaker_left
 Yes, of course! #speaker_self
+#speaker_left_image:cha_aman_selinder_annoyed.png
 Okay, then what did I say we should do next? #speaker_left
 + [Wade, Brunch, Biking]
     Go wading, have brunch, then go biking. #speaker_self
@@ -1314,6 +1320,7 @@ I’ve been waiting and looking forward to this date for a long time but I am st
 #speaker_left_name:Selinder
 All sorted? #speaker_left
 Yes. #speaker_self
+#speaker_left_image:cha_aman_selinder_confused.png
 Are you okay? Doesn’t look like good news. #speaker_left
 Just another rejection, I’m getting used to it now. #speaker_self
 #speaker_left_image:cha_aman_selinder_normal.png
@@ -1359,9 +1366,11 @@ Later that evening, at a new cafe called Cafe Resipi Alegria.
 #speaker_right_image:cha_aman_jothi_normal.png
 #speaker_right_name:Jothi
 Where on earth is Jothi? Nearly half an hour late. She keeps breaking records. #inner_monologue
+#speaker_right_image:cha_aman_jothi_hairflip.png
 I’m here. I know. I repent. #speaker_right
 Always late! #speaker_self
 But always divine. #speaker_right
+#speaker_right_image:cha_aman_jothi_normal.png
 Oh good, you got us the vindaloo! My favourite. #speaker_right
 Yes, I know the drill. But it’s all cold already. #speaker_self
 Okay bander (monkey), now you’re just sulking. Is something wrong? #speaker_right
@@ -1374,7 +1383,7 @@ So, I’ve been applying to as many casting calls as I can in the last month. #s
 Ah. #speaker_right
 Let me guess, you haven’t gotten a single audition. #speaker_right
 How did you know? #speaker_self
-#speaker_right_image:cha_aman_jothi_eyeroll.png
+#speaker_right_image:cha_aman_jothi_normal.png
 Because if they’d seen you act, they would have hired you. #speaker_right
 That’s nice of you to say, but you’re my sister. #speaker_self
 No Aman, I’m not saying it because I’m your sister, I’m saying it because it’s true. #speaker_right
@@ -1388,7 +1397,7 @@ So if you haven’t gotten a role yet, it’s because someone has decided that o
     That’s nice of you to say, but whatever competence I might have on the stage isn’t helping me right now. It’s very frustrating. #speaker_self
     Why isn’t it enough to be good at what I do? #speaker_self
 - That’s a rhetorical question, right? You already know. But fine, I’ll answer it. #speaker_right
-#speaker_right_image:cha_aman_jothi_hairflip.png
+#speaker_right_image:cha_aman_jothi_diva.png
 You’re a smart boy Aman, going into business school and everything. So you know about demand and purchasing power.  #speaker_right
 Think about the Singapore market. If a local drama is produced, who forms the majority of the audience watching it?  #speaker_right
 ...Singaporeans? #speaker_self
@@ -1417,6 +1426,7 @@ Obviously, in Korea. Do you think Korean pop could have grown out of Singapore, 
     Aman, calm down! I’m not saying that at all. #speaker_right
 - Obviously, there are plenty of Sikhs who are very successful in Singapore. #speaker_right
 In the military. In business. In the legal profession - and I’m biased because I’m married to him, but Kirpal is an example. #speaker_right
+#speaker_right_image:cha_aman_jothi_sad.png
 But Aman, I’m just saying that in the arts and entertainment industry of all places, I think it will be harder for you to find prime roles. #speaker_right
 Not because people are evil and malicious, or out to block you from success. But because of human nature. And, frankly, because you have chosen to be you. #speaker_right
 Me? #speaker_self
