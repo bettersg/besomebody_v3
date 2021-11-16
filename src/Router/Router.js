@@ -53,7 +53,6 @@ class Router extends Component {
     return (
       <BrowserRouter basename={process.env.REACT_APP_BASENAME}>
 
-        {/* {bar} // TODO: implement "bar" as a menubar above the game components below */}
         <ThemeProvider theme={theme}>
           <Switch>
             <Route path={["/", "/intro", "/profilebuilder", "/signup", "/login", "/help", "/characterchoice", "/chapters/:name", "/chapterend/:name/:chapter"]} exact>              
@@ -69,6 +68,12 @@ class Router extends Component {
             <Route path="/intro" exact>
               <IntroMaster />
             </Route>
+
+            {/* students will enter through game.tobeyou.sg/room/A1b2C3  */}
+            <Route path="/room/:roomId" exact>
+                {/* need to validate that roomId exists first.  */}
+               {user ? <CharacterChoicePage /> : <LandingPage  />} 
+            </Route>            
 
             <PrivateRoute path="/characterchoice" exact>
               <CharacterChoicePage />
