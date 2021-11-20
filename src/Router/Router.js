@@ -23,7 +23,7 @@ import Help from '../pages/HelpPage/HelpPage'
 import Music1 from '../music/tobeyou_intro.mp3'
 // import Music2 from '../music/tobeyou_outrolong.mp3'
 import ChapterEnd from '../pages/ChapterEndPage/ChapterEnd'
-
+import RoomLaunchPage from '../pages/RoomLaunchPage/RoomLaunchOage'
 
 class Router extends Component {
   render() {
@@ -71,8 +71,8 @@ class Router extends Component {
 
             {/* students will enter through game.tobeyou.sg/room/A1b2C3  */}
             <Route path="/room/:roomId" exact>
-                {/* need to validate that roomId exists first.  */}
-               {user ? <CharacterChoicePage /> : <LandingPage  />} 
+                {/* need to validate that roomId exists first. Then need to set global context */}
+               <RoomLaunchPage />
             </Route>            
 
             <PrivateRoute path="/characterchoice" exact>
