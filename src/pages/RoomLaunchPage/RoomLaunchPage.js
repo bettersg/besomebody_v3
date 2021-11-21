@@ -7,7 +7,7 @@ import {
 } from '@material-ui/core'
 
 import { useAuth } from '../../contexts/AuthContext'
-import { useRoomContext, RoomProvider } from '../../contexts/RoomContext'
+import { useRoomContext } from '../../contexts/RoomContext'
 import { Link } from 'react-router-dom'
 
 const RoomLaunchPage = () => {
@@ -23,11 +23,10 @@ const RoomLaunchPage = () => {
   const value  = useRoomContext()
   // const room  = useContext(RoomContext)
   
-  console.log(value[0].roomId)
+  // console.log(value[0].roomId)
   
   return (
     <Box>
-      <RoomProvider>
       <section>
         <Container maxWidth="md">
           <Box py={8} textAlign="center">
@@ -43,8 +42,7 @@ const RoomLaunchPage = () => {
             </Box>
           </Box>
         </Container>
-      </section>
-      </RoomProvider>
+      </section>      
     </Box>
   )
 }
