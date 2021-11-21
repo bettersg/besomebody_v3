@@ -2,17 +2,12 @@ import React, { useState } from 'react'
 import {
   Box,
   Button,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogContentText,
-  DialogTitle,
-  Snackbar,
   Typography,
   Container,
 } from '@material-ui/core'
 
 import { useAuth } from '../../contexts/AuthContext'
+import { useRoomContext } from '../../contexts/RoomContext'
 import { Link } from 'react-router-dom'
 
 const RoomLaunchPage = () => {
@@ -23,9 +18,9 @@ const RoomLaunchPage = () => {
     open: false,
     type: 'error',
   })
-  const { roomId } = useParams()
+  // const { roomId } = useParams()
   const { currentUser } = useAuth()
- 
+  const { room } = useRoomContext()
 
   return (
     <Box>

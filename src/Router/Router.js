@@ -70,8 +70,7 @@ class Router extends Component {
             </Route>
 
             {/* students will enter through game.tobeyou.sg/room/A1b2C3  */}
-            <Route path="/room/:roomId" exact>
-                {/* need to validate that roomId exists first. Then need to set global context */}
+            <Route path="/room/:roomId" exact>                
                <RoomLaunchPage />
             </Route>            
 
