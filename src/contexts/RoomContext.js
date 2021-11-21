@@ -1,7 +1,7 @@
-import React, { useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import { useParams } from 'react-router-dom'
 
-const RoomContext = React.createContext(null)
+export const RoomContext = React.createContext(null)
 
 export const useRoomContext = () => {
   return useContext(RoomContext)
@@ -12,12 +12,22 @@ export const useRoomContext = () => {
 // 2. Get the other info about the room (teacher, school, chapter etc)
 // 3. store that into the context as an object
 
-export const RoomProvider = ({ children }) => {
-  const { roomId  } = useParams()
-  const [room, setRoom] = useState(null)
-  
-  
+export const RoomProvider =  ({ children })  => {  
+  const [room, setRoom] = useState([
+    {
+      roomId: 'abc123',
+      schoolName: 'My Secondary School',
+      className: 'Sec 3F',
+      instructions: 'Please finish Aman Chapter 2',
+      teachers: [
+        { name: 'John Smith' },
+        { name: 'Jane Doe'}
+      ]
+    }
+  ])
+  // const { roomId } = useParams()
 
-  return <RoomContext.Provider value={roomId}>{children}</RoomContext.Provider>
+  // console.log(room)
+  return <RoomContext.Provider value={room}>{children}</RoomContext.Provider>
 }
 

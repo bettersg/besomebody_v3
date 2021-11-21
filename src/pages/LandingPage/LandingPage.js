@@ -81,7 +81,7 @@ const LandingPage = ( props ) => {
   // })
   const classes = useStyles()  
   const history = useHistory()
-  const { roomId } = useParams()
+  // const { roomId } = useParams()
 
   // console.log(roomId)
 
@@ -95,15 +95,15 @@ const LandingPage = ( props ) => {
       
         <Container maxWidth="md" className={classes.container}>
           <Box py={4} textAlign="center">
-          {roomId && <Typography variant="body2">Your game results will be saved to room code: {roomId} </Typography>}
+          {/* {roomId && <Typography variant="body2">Your game results will be saved to room code: {roomId} </Typography>} */}
           <Typography className='LandingPage__text'>Experience life in Singapore as someone else.</Typography>  
           </Box>
           
           
           <Box className={classes.bottom}>
-          <Button variant="contained" className={classes.btn} onClick={() => history.push('/intro', {params: roomId})}>Start New Game</Button>
+          <Button variant="contained" className={classes.btn} onClick={() => history.push('/intro')}>Start New Game</Button>
           <br />
-          {!roomId && <Link to="/login" className={classes.link}> Login to Resume</Link>}
+          <Link to="/login" className={classes.link}> Login to Resume</Link>
           </Box>
           
         </Container>
