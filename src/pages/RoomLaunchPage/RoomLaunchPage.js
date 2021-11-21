@@ -20,10 +20,10 @@ const RoomLaunchPage = () => {
   })
   // const { roomId } = useParams()
   // const { currentUser } = useAuth()
-  const value  = useRoomContext()
+  const [room, setRoom]  = useRoomContext()
   // const room  = useContext(RoomContext)
   
-  // console.log(value[0].roomId)
+  console.log(room)
   
   return (
     <Box>
@@ -32,10 +32,10 @@ const RoomLaunchPage = () => {
           <Box py={8} textAlign="center">
             <Typography variant="h4" gutterBottom={true}>Participant Page</Typography>
             <Typography variant="body2">Your game results will be visible to the facilitator: </Typography>
-            <Typography  color="textSecondary" paragraph={true}>Room Code: {value[0].roomId}</Typography>
-            <Typography  color="textSecondary" paragraph={true}>School Name: {value[0].schoolName}</Typography>
-            <Typography  color="textSecondary" paragraph={true}>Class Name: {value[0].className}</Typography>
-            <Typography  color="textSecondary" variant="body2">Instructions: {value[0].instructions}</Typography>
+            <Typography  color="textSecondary" paragraph={true}>Room Code: {room.roomId}</Typography>
+            <Typography  color="textSecondary" paragraph={true}>School Name: {room.schoolName}</Typography>
+            <Typography  color="textSecondary" paragraph={true}>Class Name: {room.className}</Typography>
+            <Typography  color="textSecondary" variant="body2">Instructions: {room.instructions}</Typography>
             <Box mt={4}>
               <Link to="/signup"><Button variant="contained" color="primary" >Sign Up to Play Game</Button></Link>
               

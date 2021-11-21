@@ -15,7 +15,7 @@ export const useRoomContext = () => {
 export const RoomProvider =  ({ children })  => {  
   // const { roomId } = useParams()
   
-  const [room, setRoom] = useState([
+  const [room, setRoom] = useState(
     {
       roomId: 'abc123',
       schoolName: 'My Secondary School',
@@ -26,10 +26,10 @@ export const RoomProvider =  ({ children })  => {
         { name: 'Jane Doe'}
       ]
     }
-  ])
+  )
   
 
   // console.log(room)
-  return <RoomContext.Provider value={room}>{children}</RoomContext.Provider>
+  return <RoomContext.Provider value={[room, setRoom]}>{children}</RoomContext.Provider>
 }
 
