@@ -1,4 +1,4 @@
-import React, { useState , useContext } from 'react'
+import React, { useState , useContext , useEffect} from 'react'
 import {
   Box,
   Button,
@@ -8,7 +8,10 @@ import {
 
 import { useAuth } from '../../contexts/AuthContext'
 import { RoomContext, useRoomContext } from '../../contexts/RoomContext'
-import { Link , useParams} from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import { getRoomDb } from '../../models/roomModel'
+// import { firestore} from '../../firebase'
+
 
 const RoomLaunchPage = () => {
   const [isLoading, setIsLoading] = useState(false)
@@ -25,11 +28,52 @@ const RoomLaunchPage = () => {
   
   
   const { roomId } = useParams()
-  console.log(roomId)
-  console.log(room)
+  // console.log('live id',roomId)
+  // console.log('live room',room)
+  
+//   useEffect() => {
+//   const asyncFn = async () => {
+//     const response = await getRoomDb('abc123');
+//     const { results } = await response.json();
+//     setRoom(results);
+//   }
+//   asyncFn();
+// }, [roomId];
 
   
+  const [roomFromDb, setRoomFromDb] = useState(null)
+
+  // useEffect(() => {
+  //   const getRoomDb = async () => {
+  //     const response = await firestore.collection('rooms').where('roomId','in',roomId).get()
+  //     const results = await response()
+  //     return setRoomFromDb(results)      
+  //   }
+  //   getRoomDb()
+  // }, [roomId])
+  // console.log(roomFromDb)
   
+  const asyncRoom = async () => {
+    const room2 = await getRoomDb()    
+    return room2
+  }
+  // console.log('async', asyncRoom())
+  
+  useEffect(() => {
+    const loadRoom = async () => {
+      try {
+        const room3 = await asyncRoom()
+        setRoomFromDb(room3)
+      }
+      catch (err) { console.log(err) }
+    }
+    loadRoom()
+  }, [])
+  
+  console.log(roomFromDb)
+  
+  // console.log(room2) // -> returns promise fulfilled
+
 // 0. get roomID from URL params X unable to call useParams from inside Provider
 // 1. check if the roomId exists 
 // 2. Get the other info about the room (teacher, school, chapter etc)
