@@ -16,7 +16,8 @@ import { updateDbUser } from '../../models/userModel'
 import { Link , useHistory } from 'react-router-dom'
 import { useSnackbar } from '../../contexts/SnackbarContext'
 import './style.scss'
-import Step0 from './Step0'
+
+import { useRoomContext } from '../../contexts/RoomContext'
 
 
 
@@ -27,6 +28,9 @@ function Step7(props) {
   const { currentUser } = useAuth()  
   const [isLoading, setIsLoading] = useState(false)
 
+  const [room]  = useRoomContext()
+  console.log(room)
+
   const formData = {
     age: props.state.age?props.state.age:null,
     gender: props.state.gender? props.state.gender.toUpperCase():null,
@@ -35,6 +39,7 @@ function Step7(props) {
     housing: props.state.housing?props.state.housing.toUpperCase():null,
     username: props.state.username ? props.state.username : null,
     timestamp: Date.now(),
+    room: room,
     }
 
   const handleSubmit = async (e) => {
@@ -77,7 +82,9 @@ function Step7(props) {
                   <div>Religion: {props.state.religion?props.state.religion.toUpperCase():"You left this blank"}</div>
                   <div>Housing Type: {props.state.housing?props.state.housing.toUpperCase():"You left this blank"}</div>
                   <div>Username: {props.state.username?props.state.username:"You left this blank"}</div>   
-                        
+                  {room &&
+                    <div>Participant: You are a participant in {room.className} from {room.schoolName}</div>
+                  }
                   
                 <br />
                 <Button
