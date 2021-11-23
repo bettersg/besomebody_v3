@@ -28,8 +28,8 @@ const RoomLaunchPage = () => {
   
   
   const { roomId } = useParams()
-  // console.log('live id',roomId)
-  // console.log('live room',room)
+  console.log('live params',roomId)
+  console.log('static room',room)
   
 //   useEffect() => {
 //   const asyncFn = async () => {
@@ -43,36 +43,26 @@ const RoomLaunchPage = () => {
   
   const [roomFromDb, setRoomFromDb] = useState(null)
 
-  // useEffect(() => {
-  //   const getRoomDb = async () => {
-  //     const response = await firestore.collection('rooms').where('roomId','in',roomId).get()
-  //     const results = await response()
-  //     return setRoomFromDb(results)      
-  //   }
-  //   getRoomDb()
-  // }, [roomId])
-  // console.log(roomFromDb)
-  
   const asyncRoom = async () => {
-    const room2 = await getRoomDb()    
-    return room2
+    const room = await getRoomDb(roomId)
+    return room
   }
-  // console.log('async', asyncRoom())
   
   useEffect(() => {
     const loadRoom = async () => {
       try {
-        const room3 = await asyncRoom()
-        setRoomFromDb(room3)
+        const room = await asyncRoom()
+        setRoomFromDb(room)
+        console.log('loaded')
       }
       catch (err) { console.log(err) }
     }
     loadRoom()
   }, [])
   
-  console.log(roomFromDb)
+  console.log('roomFromDb',roomFromDb)
+
   
-  // console.log(room2) // -> returns promise fulfilled
 
 // 0. get roomID from URL params X unable to call useParams from inside Provider
 // 1. check if the roomId exists 
