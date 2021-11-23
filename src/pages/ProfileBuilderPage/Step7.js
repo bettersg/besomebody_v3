@@ -39,7 +39,7 @@ function Step7(props) {
     housing: props.state.housing?props.state.housing.toUpperCase():null,
     username: props.state.username ? props.state.username : null,
     timestamp: Date.now(),
-    room: room,
+    room: [room],
     }
 
   const handleSubmit = async (e) => {
