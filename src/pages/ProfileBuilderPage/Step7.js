@@ -18,6 +18,7 @@ import { useSnackbar } from '../../contexts/SnackbarContext'
 import './style.scss'
 
 import { useRoomContext } from '../../contexts/RoomContext'
+import { updateRoomParticipantsDb } from '../../models/roomModel'
 
 
 
@@ -50,6 +51,7 @@ function Step7(props) {
       try {
         setIsLoading(true)          
         await updateDbUser(formData, currentUser.id)
+        updateRoomParticipantsDb(room.id,currentUser.id)
         history.push('/')  // redirect to root which will be the characterchoice page now.
        
       } catch (err) {

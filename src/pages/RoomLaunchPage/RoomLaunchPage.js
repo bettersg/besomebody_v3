@@ -28,20 +28,7 @@ const RoomLaunchPage = () => {
   
   
   const { roomId } = useParams()
-  console.log('live params',roomId)
-  console.log('static room',room)
-  
-//   useEffect() => {
-//   const asyncFn = async () => {
-//     const response = await getRoomDb('abc123');
-//     const { results } = await response.json();
-//     setRoom(results);
-//   }
-//   asyncFn();
-// }, [roomId];
 
-  
-  const [roomFromDb, setRoomFromDb] = useState(null)
 
   const asyncRoom = async () => {
     const room = await getRoomDb(roomId)
@@ -52,15 +39,15 @@ const RoomLaunchPage = () => {
     const loadRoom = async () => {
       try {
         const room = await asyncRoom()
-        setRoomFromDb(room)
-        console.log('loaded')
+        setRoom(room)        
       }
       catch (err) { console.log(err) }
     }
     loadRoom()
   }, [])
   
-  console.log('roomFromDb',roomFromDb)
+  console.log('Room: ',room)
+  console.log('RoomId params: ',roomId)
 
   
 
@@ -74,22 +61,33 @@ const RoomLaunchPage = () => {
     <Box>
       <section>
         <Container maxWidth="md">
-          <Box py={8} textAlign="center">
+          {room &&
+            <Box py={8} textAlign="center">
             <Typography variant="h4" gutterBottom={true}>Participant Page</Typography>
-            <Typography variant="body2">Your game results will be visible to the facilitator: </Typography>
-            {room && 
+            <Typography variant="body2">Your game results will be visible to the facilitator: </Typography>            
             <Box>
               <Typography  color="textSecondary" paragraph={true}>Room Code: {room.roomId}</Typography>
-              <Typography  color="textSecondary" paragraph={true}>School Name: {room.schoolName}</Typography>
+              <Typography  color="textSecondary" paragraph={true}>Organisation Name: {room.schoolName}</Typography>
               <Typography  color="textSecondary" paragraph={true}>Class Name: {room.className}</Typography>
               <Typography  color="textSecondary" variant="body2">Instructions: {room.instructions}</Typography>
             </Box>
-            }
+            
             <Box mt={4}>
               <Link to="/intro"><Button variant="contained" color="primary" >Start game as participant</Button></Link>
               
             </Box>
           </Box>
+          }
+          {!room &&
+            <Box py={8} textAlign="center">
+              <Typography variant="body2">
+              The URL you provided does not match an active room. Please check the URL or return home.
+              </Typography>  
+            <Box mt={4}>
+            <Link to="/intro"><Button variant="contained" color="primary" >Start New Game</Button></Link>            
+            </Box>
+          </Box>
+          }
         </Container>
       </section>      
     </Box>
