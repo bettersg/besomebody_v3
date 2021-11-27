@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   },
   bottom: {
     bottom: 0,
-    height: '20vh',
+    height: '10vh',
     position: 'absolute',
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#664EFC',
     color: '#ffffff',
     width: '100%',
-  
+    padding: '15px',
   },
   link: {
     color: '#000A11',
@@ -92,7 +92,7 @@ const ParticipantStartPage = () => {
   const { roomId } = useParams()
 
   setRoom(roomId)
-  
+  console.log('room',room)  
 
   return (
     <Box className={classes.background}>

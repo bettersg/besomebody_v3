@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import {
   Box,
   Button,
@@ -19,6 +19,7 @@ import './style.scss'
 
 import { useRoomContext } from '../../contexts/RoomContext'
 import { updateRoomParticipantsDb } from '../../models/roomModel'
+import { getRoomDb } from '../../models/roomModel'
 
 
 
@@ -29,8 +30,31 @@ function Step7(props) {
   const { currentUser } = useAuth()  
   const [isLoading, setIsLoading] = useState(false)
 
-  const [room]  = useRoomContext()
-  console.log(room)
+  const [room, setRoom] = useRoomContext()
+  
+  // let roomId = room
+  // console.log('roomId' , roomId)
+  console.log('room' , room)
+
+  const asyncRoom = async () => {
+    const room = await getRoomDb(room)
+    return room
+  }
+  
+  useEffect(() => {
+    const loadRoom = async () => {
+      try {
+        const room = await asyncRoom()
+        setRoom(room)        
+      }
+      catch (err) { console.log(err) }
+    }
+    loadRoom()
+  }, [])
+  
+
+  // console.log(room)
+  // console.log(roomId)
 
   const formData = {
     age: props.state.age?props.state.age:null,
@@ -42,6 +66,7 @@ function Step7(props) {
     timestamp: Date.now(),
     room: [room],
     }
+    // console.log(room.id)
 
   const handleSubmit = async (e) => {
       e.preventDefault()
@@ -52,8 +77,8 @@ function Step7(props) {
         setIsLoading(true)          
         await updateDbUser(formData, currentUser.id)
         if (room) {
-          updateRoomParticipantsDb(room.id, currentUser.id)
-          history.push('/room/'+room) // room currently only the URL params
+          updateRoomParticipantsDb(room.id, currentUser.id) 
+          history.push('/room/'+room.roomId) 
         }
         else {
           history.push('/')  // redirect to root which will be the characterchoice page now.
@@ -89,8 +114,10 @@ function Step7(props) {
                   <div>Religion: {props.state.religion?props.state.religion.toUpperCase():"You left this blank"}</div>
                   <div>Housing Type: {props.state.housing?props.state.housing.toUpperCase():"You left this blank"}</div>
                   <div>Username: {props.state.username?props.state.username:"You left this blank"}</div>   
-                  {room &&
-                  <div>Participant: You are a participant in a facilitated room: {room}</div>
+                {room &&
+                  <Box>
+                      <div>You are a participant in room: {room.roomId}.</div>
+                    </Box>
                   }
                   
                 <br />

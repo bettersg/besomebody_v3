@@ -38,9 +38,9 @@ const IntroMaster = (props) => {
     
     const classes = useStyles()  
     const history = useHistory()
-    const { roomId } = useParams()
+    // const { roomId } = useParams()
    
-    console.log(roomId)
+    // console.log(roomId)
     
     return (
       <Box className={classes.background}>

@@ -115,7 +115,7 @@ const RoomInfoPage = () => {
     loadRoom()
   }, [roomId])
   
-  console.log('Room Info Page: ',room)
+  console.log('Room: ',room)
   console.log('RoomId params: ',roomId)
 
   
