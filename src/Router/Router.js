@@ -23,7 +23,8 @@ import Help from '../pages/HelpPage/HelpPage'
 import Music1 from '../music/tobeyou_intro.mp3'
 // import Music2 from '../music/tobeyou_outrolong.mp3'
 import ChapterEnd from '../pages/ChapterEndPage/ChapterEnd'
-import RoomLaunchPage from '../pages/RoomLaunchPage/RoomLaunchPage'
+import ParticipantStartPage from '../pages/RoomPage/ParticipantStartPage'
+import RoomInfoPage from '../pages/RoomPage/RoomInfoPage'
 
 class Router extends Component {
   render() {
@@ -69,9 +70,9 @@ class Router extends Component {
               <IntroMaster />
             </Route>
 
-            {/* students will enter through game.tobeyou.sg/room/A1b2C3  */}
+            {/* participants will enter through game.tobeyou.sg/room/A1b2C3  */}
             <Route path="/room/:roomId" exact>                
-               <RoomLaunchPage />
+              {user ? <RoomInfoPage /> : <ParticipantStartPage /> }
             </Route>            
 
             <PrivateRoute path="/characterchoice" exact>

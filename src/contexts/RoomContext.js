@@ -8,16 +8,7 @@ export const useRoomContext = () => {
 
 export const RoomProvider =  ({ children })  => {  
   // const { roomId } = useParams()
-  const [room, setRoom] = useState({
-    roomId: 'abc123',
-    schoolName: 'My Secondary School',
-    className: 'Sec 3F',
-    instructions: 'Please finish Aman Chapter 2',
-    teachers: [
-      { name: 'John Smith' },
-      { name: 'Jane Doe'}
-    ]
-  })
+  const [room, setRoom] = useState(null)
 
   
   // const [room, setRoom] = useState(

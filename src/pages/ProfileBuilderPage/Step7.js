@@ -51,8 +51,13 @@ function Step7(props) {
       try {
         setIsLoading(true)          
         await updateDbUser(formData, currentUser.id)
-        updateRoomParticipantsDb(room.id,currentUser.id)
-        history.push('/')  // redirect to root which will be the characterchoice page now.
+        if (room) {
+          updateRoomParticipantsDb(room.id, currentUser.id)
+          history.push('/room/'+room) // room currently only the URL params
+        }
+        else {
+          history.push('/')  // redirect to root which will be the characterchoice page now.
+        }
        
       } catch (err) {
         setSnackbar({
@@ -85,7 +90,7 @@ function Step7(props) {
                   <div>Housing Type: {props.state.housing?props.state.housing.toUpperCase():"You left this blank"}</div>
                   <div>Username: {props.state.username?props.state.username:"You left this blank"}</div>   
                   {room &&
-                    <div>Participant: You are a participant in {room.className} from {room.schoolName}</div>
+                  <div>Participant: You are a participant in a facilitated room: {room}</div>
                   }
                   
                 <br />
