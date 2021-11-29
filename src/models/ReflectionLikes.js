@@ -1,19 +1,23 @@
 import { firestore} from '../firebase'
 
 export const createReflectionLikes = (id, uidLike)=>{
-  var washingtonRef = firestore.collection('reflectionResponses').doc(id);
-  washingtonRef.get().then((doc) => {
+  var likeRef = firestore.collection('reflectionResponses').doc(id);
+  likeRef.get().then((doc) => {
     if (doc.exists) {
         
         if (doc.data().numLikes == null){
-            washingtonRef.set({
+            likeRef.set({
                 numLikes: 1,
                 userLikes: [uidLike]
             },{merge: true})
             
         }
+        if (doc.data().userLikes.includes(uidLike)) {
+            console.log("User already liked this");
+            return null
+          }
         else{
-            washingtonRef.update(
+            likeRef.update(
                 {
                     numLikes: doc.data().numLikes + 1,
                     userLikes: [...doc.data().userLikes,uidLike]
