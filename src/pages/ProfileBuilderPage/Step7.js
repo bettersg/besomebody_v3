@@ -17,8 +17,8 @@ import { Link , useHistory } from 'react-router-dom'
 import { useSnackbar } from '../../contexts/SnackbarContext'
 import './style.scss'
 
-import { useRoomContext } from '../../contexts/RoomContext'
-import { updateRoomParticipantsDb } from '../../models/roomModel'
+import { RoomContext } from '../../contexts/RoomContext'
+// import { updateRoomParticipantsDb } from '../../models/roomModel'
 import { getRoomDb } from '../../models/roomModel'
 
 
@@ -30,14 +30,18 @@ function Step7(props) {
   const { currentUser } = useAuth()  
   const [isLoading, setIsLoading] = useState(false)
 
-  const [room, setRoom] = useRoomContext()
-  
-  // let roomId = room
-  // console.log('roomId' , roomId)
-  console.log('room' , room)
+  const { roomValue, roomCodeValue } = React.useContext(RoomContext);
+  const [room, setRoom] = roomValue;
+  const [roomCode, setroomCode] = roomCodeValue;
 
+  
+  // setroomCode('abc123')
+  // let roomCode = room
+  // console.log('roomCode' , roomCode)
+  // console.log('room' , room)
+  
   const asyncRoom = async () => {
-    const room = await getRoomDb(room)
+    const room = await getRoomDb(roomCode)
     return room
   }
   
@@ -54,7 +58,7 @@ function Step7(props) {
   
 
   // console.log(room)
-  // console.log(roomId)
+  // console.log(roomCode)
 
   const formData = {
     age: props.state.age?props.state.age:null,
@@ -76,9 +80,8 @@ function Step7(props) {
       try {
         setIsLoading(true)          
         await updateDbUser(formData, currentUser.id)
-        if (room) {
-          updateRoomParticipantsDb(room.id, currentUser.id) 
-          history.push('/room/'+room.roomId) 
+        if (room) {         
+          history.push('/room/'+room.roomCode) 
         }
         else {
           history.push('/')  // redirect to root which will be the characterchoice page now.
@@ -116,7 +119,7 @@ function Step7(props) {
                   <div>Username: {props.state.username?props.state.username:"You left this blank"}</div>   
                 {room &&
                   <Box>
-                      <div>You are a participant in room: {room.roomId}.</div>
+                      <div>You are a participant in room.</div>
                     </Box>
                   }
                   

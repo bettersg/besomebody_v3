@@ -81,9 +81,9 @@ const LandingPage = ( props ) => {
   // })
   const classes = useStyles()  
   const history = useHistory()
-  // const { roomId } = useParams()
+  // const { roomCode } = useParams()
 
-  // console.log(roomId)
+  // console.log(roomCode)
 
   // const { currentUser } = useAuth()  
 
@@ -95,7 +95,7 @@ const LandingPage = ( props ) => {
       
         <Container maxWidth="md" className={classes.container}>
           <Box py={4} textAlign="center">
-          {/* {roomId && <Typography variant="body2">Your game results will be saved to room code: {roomId} </Typography>} */}
+          {/* {roomCode && <Typography variant="body2">Your game results will be saved to room code: {roomCode} </Typography>} */}
           <Typography className='LandingPage__text'>Experience life in Singapore as someone else.</Typography>  
           </Box>
           

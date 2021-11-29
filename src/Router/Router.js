@@ -71,7 +71,7 @@ class Router extends Component {
             </Route>
 
             {/* participants will enter through game.tobeyou.sg/room/A1b2C3  */}
-            <Route path="/room/:roomId" exact>                
+            <Route path="/room/:roomUrl" exact>                
               {user ? <RoomInfoPage /> : <ParticipantStartPage /> }
             </Route>            
 

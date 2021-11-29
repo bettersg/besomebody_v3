@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {
   Box,
   Button,
@@ -7,7 +7,7 @@ import {
 } from '@material-ui/core'
 
 import { useAuth } from '../../contexts/AuthContext'
-import { useRoomContext } from '../../contexts/RoomContext'
+import { RoomContext, useRoomContext } from '../../contexts/RoomContext'
 import { Link, useParams, useHistory } from 'react-router-dom'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 
@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   },
   bottom: {
     bottom: 0,
-    height: '10vh',
+    height: '15vh',
     position: 'absolute',
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -83,21 +83,25 @@ const ParticipantStartPage = () => {
   const classes = useStyles()  
   const history = useHistory()
 
-
+  const { roomValue, roomCodeValue } = React.useContext(RoomContext);
+  const [room, setRoom] = roomValue;
+  const [roomCode, setroomCode] = roomCodeValue;
 
   // const { currentUser } = useAuth()
-  const [room, setRoom]  = useRoomContext()
+  // const [roomCode, setroomCode]  = useRoomContext()
   
+  const { roomUrl } = useParams()
+  setroomCode(roomUrl)
   
-  const { roomId } = useParams()
-
-  setRoom(roomId)
+  // console.log('roomURL',roomUrl)  
+  console.log('roomCode',roomCode)  
   console.log('room',room)  
+  
 
   return (
     <Box className={classes.background}>
       <Box py={1} textAlign="center"  className={classes.overline}>
-        <Typography variant="overline" > You are a participant in a facilitated room. </Typography>
+        <Typography variant="overline" > You are joining a facilitated game. </Typography>
       </Box>
       
       <Container maxWidth="md" className={classes.container}>

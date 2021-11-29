@@ -33,26 +33,20 @@ const useStyles = makeStyles((theme) => ({
   
 const IntroMaster = (props) => {
     // const { introParagraphs } = props;
-    // const { roomId } = props;
+    // const { roomCode } = props;
     const [isLoading, setIsLoading] = useState(false)
     
     const classes = useStyles()  
     const history = useHistory()
-    // const { roomId } = useParams()
+    // const { roomCode } = useParams()
    
-    // console.log(roomId)
+    // console.log(roomCode)
     
     return (
       <Box className={classes.background}>
-        
+      
         <OpeningSequence />
-           
-          
-        
-   
-   
-  
-        
+         
       </Box>
     )
   }

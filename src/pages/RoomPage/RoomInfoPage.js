@@ -7,10 +7,12 @@ import {
 } from '@material-ui/core'
 
 import { useAuth } from '../../contexts/AuthContext'
-import { RoomContext, useRoomContext } from '../../contexts/RoomContext'
+import { RoomContext } from '../../contexts/RoomContext'
 import { Link, useParams , useHistory } from 'react-router-dom'
 import { getRoomDb } from '../../models/roomModel'
 // import { firestore} from '../../firebase'
+import { updateRoomParticipantsDb } from '../../models/roomModel'
+import { useSnackbar } from '../../contexts/SnackbarContext'
 
 import makeStyles from '@material-ui/core/styles/makeStyles'
 
@@ -87,20 +89,25 @@ const useStyles = makeStyles((theme) => ({
 
 
 const RoomInfoPage = () => {
-  // const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
   const classes = useStyles()  
   const history = useHistory()
   const { currentUser } = useAuth()
+  const { setSnackbar } = useSnackbar()
 
-  const [room, setRoom]  = useRoomContext()
-  // const room  = useContext(RoomContext)
+ 
+  const { roomValue, roomCodeValue } = React.useContext(RoomContext);
+  const [room, setRoom] = roomValue;
+  const [roomCode, setroomCode] = roomCodeValue;
   
-  
-  const { roomId } = useParams()
+  const { roomUrl } = useParams()
+  if (roomCode == null) {
+    setroomCode(roomUrl)
+  }
 
 
   const asyncRoom = async () => {
-    const room = await getRoomDb(roomId)
+    const room = await getRoomDb(roomCode)
     return room
   }
   
@@ -113,15 +120,38 @@ const RoomInfoPage = () => {
       catch (err) { console.log(err) }
     }
     loadRoom()
-  }, [roomId])
+  }, [roomCode])
   
-  console.log('Room: ',room)
-  console.log('RoomId params: ',roomId)
+  // console.log('Room.id ',room.id)
+  // console.log('roomCode params: ',roomCode)
+  // console.log('UserId: ',currentUser.id)
 
   
+  const saveRoomStartGame = async () => {
+    // e.preventDefault()
+      
+    // console.log(formData);        
+    
+    try {
+      setIsLoading(true)          
+      await updateRoomParticipantsDb(room.id, currentUser.id)  
+      console.log('Room Updated', room.id)
+      history.push('/')  // redirect to root which will be the characterchoice page now.     
+    } catch (err) {
+      setSnackbar({
+        message: `There was an error: ${err.message}`,
+        open: true,
+        type: 'error',
+      })
+    }
+    setIsLoading(false)      
 
-// 0. get roomID from URL params X unable to call useParams from inside Provider
-// 1. check if the roomId exists 
+  };
+  
+
+
+// 0. get roomCode from URL params X unable to call useParams from inside Provider
+// 1. check if the roomCode exists 
 // 2. Get the other info about the room (teacher, school, chapter etc)
 // 3. store that into the context as an object  -> DONE
  
@@ -141,9 +171,9 @@ const RoomInfoPage = () => {
         <Box py={3} textAlign="center" className={classes.whiteBox}>
           <Typography>Your game reflections will be visible to the facilitator</Typography>
           <Box py={3} px={5}>
-            <Typography paragraph={true}>Room Code: {room.roomId}</Typography>
-            <Typography paragraph={true}>Organisation Name: {room.schoolName}</Typography>
-            <Typography paragraph={true}>Class Name: {room.className}</Typography>
+            <Typography paragraph={true}>Room Code: {room.roomCode}</Typography>
+            <Typography paragraph={true}>Organisation Name: {room.organisation}</Typography>
+            <Typography paragraph={true}>Class Name: {room.name}</Typography>
             <Typography paragraph={true}>Instructions: {room.instructions}</Typography>
           </Box>
         </Box>
@@ -151,7 +181,7 @@ const RoomInfoPage = () => {
 
       </Container>          
         <Box className={classes.bottom}>
-          <Button variant="contained" className={classes.btn} onClick={() => history.push('/')}>Start Game</Button>         
+          <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} onClick={() => saveRoomStartGame()}>Start Game</Button>         
         </Box>        
     </Box>
 

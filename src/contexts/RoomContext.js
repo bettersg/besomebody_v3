@@ -7,13 +7,14 @@ export const useRoomContext = () => {
 }
 
 export const RoomProvider =  ({ children })  => {  
-  // const { roomId } = useParams()
+  // const { roomCode } = useParams()
   const [room, setRoom] = useState(null)
-
+  const [roomCode, setroomCode] = useState(null)
+  
   
   // const [room, setRoom] = useState(
   //   {
-  //     roomId: 'abc123',
+  //     roomCode: 'abc123',
   //     schoolName: 'My Secondary School',
   //     className: 'Sec 3F',
   //     instructions: 'Please finish Aman Chapter 2',
@@ -26,7 +27,7 @@ export const RoomProvider =  ({ children })  => {
   
 
   // console.log(room)
-  return <RoomContext.Provider value={[room, setRoom]}>{children}</RoomContext.Provider>
+  return <RoomContext.Provider value={{ roomValue: [room, setRoom], roomCodeValue: [roomCode, setroomCode] }}>{children}</RoomContext.Provider>
 }
 
 export const RoomConsumer = RoomContext.Consumer
