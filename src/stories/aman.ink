@@ -2105,10 +2105,10 @@ They never, ever do. Thanks mummy! #speaker_right
 #speaker_left_image:pixel.png
 #speaker_right_image:cha_aman_jothi_diva.png
 Okay, we’re alone. Now you can tell me what’s going on. #speaker_right
+
 + [Nothing] Huh? Nothing lah. #speaker_self
     Don’t bluff, you looked miserable from the moment you stepped inside the house. #speaker_right
-
-+ [What do you mean?]   Huh? #speaker_self
++ [What do you mean?] Huh? #speaker_self
     Don’t act blur, you look miserable. #speaker_right
 - What’s going on? #speaker_right
 #speaker_right_image:cha_aman_jothi_sad.png
@@ -2481,7 +2481,9 @@ Sel?? #speaker_self
 #timestamp:0931
 WELL DONE BABY BRO!! 🥳🥳 #speaker_4
 bg_aman_reviewscreenshot.jpg #speaker_4 #image
-“Turns out The Loser is a winner, thanks to a superb effort by this student theatre club. Especially memorable is lead actor and antihero Aman Singh as Jay: the mysterious new boy in school, with shrouded motives. At first shy and unassuming, Jay reveals his darker shades as he orchestrates a series of escalating antics: from psychological manipulation, to a cynical social media campaign, and finally a rage-fuelled campus protest where all hell breaks loose. Singh delivers a masterful transformation, from awkward newcomer to anarchist-crusader. His physical theatre is remarkable, from the subtlest tics to his slow, prowling swagger. There is nothing pretentious, ever, in his delivery; we are allowed to forget he is acting. He is definitely one to watch.”  #speaker_4
+“Turns out The Loser is a winner, thanks to a superb effort by this student theatre club. Especially memorable is lead actor and antihero Aman Singh as Jay: the mysterious new boy in school, with shrouded motives.  #speaker_4
+At first shy and unassuming, Jay reveals his darker shades as he orchestrates a series of escalating antics: from psychological manipulation, to a cynical social media campaign, and finally a rage-fuelled campus protest where all hell breaks loose.  #speaker_4
+Singh delivers a masterful transformation, from awkward newcomer to anarchist-crusader. His physical theatre is remarkable, from the subtlest tics to his slow, prowling swagger. There is nothing pretentious, ever, in his delivery; we are allowed to forget he is acting. He is definitely one to watch.”  #speaker_4
 Whoa! Good job Aman! #speaker_3
 { aman_3_tickets != "Lukman and Zhihao":  
     It was a strong performance. #speaker_1 
@@ -2714,8 +2716,8 @@ I knock on the door of Jothi’s old bedroom, which Papa-ji uses as a study now.
 #knot:aman_3_5
 #ui:scene
 #background:bg_aman_papastudy.jpg
-#speaker_left_image:cha_aman_papa_normal.png
-#speaker_left_name:Papa
+#speaker_right_image:cha_aman_papa_normal.png
+#speaker_right_name:Papa
 Yes? #speaker_right
 Hi Papa-ji. I just wanted to… #speaker_self
 
