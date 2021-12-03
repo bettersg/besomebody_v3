@@ -256,7 +256,7 @@ export const CHARACTER_MAP = [
     primaryColour: '#172153',
     secondaryColour: '#FFBB0B',
     playable: true,
-    newestChapter: 2,
+    newestChapter: 3,
     variables: {
       aman_mood: 5,
     },

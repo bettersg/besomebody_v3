@@ -2034,7 +2034,7 @@ I can only walk away. #inner_monologue
 === aman_3_2_narration ===
 #knot:aman_3_2_narration
 #ui:narrator
-#background:bg_aman_home.jpg
+#background:bg_aman_bedroom.jpg
 I’m feeling numb when I return home.
 Could this be how a 7 year relationship ends?
 Has it already ended?
@@ -2048,7 +2048,7 @@ Jothi is visiting today, and she’ll be quick to pick up on it if I seem off.
 #knot:aman_3_2
 #ui:scene
 #background:bg_aman_home.jpg
-#speaker_left_image:cha_aman_mama_normal.png
+#speaker_left_image:cha_aman_mama_happy.png
 #speaker_left_name:Mum
 #speaker_right_image:cha_aman_jothi_normal.png
 #speaker_right_name:Jothi
@@ -2103,8 +2103,8 @@ Need help, mummy? #speaker_right
 No, no. You two rarely get to see each other, make good use of it. Just tell me later if Tina and Mukesh decide to elope. #speaker_left
 They never, ever do. Thanks mummy! #speaker_right
 #speaker_left_image:pixel.png
-Okay, we’re alone. Now you can tell me what’s going on. #speaker_right
 #speaker_right_image:cha_aman_jothi_diva.png
+Okay, we’re alone. Now you can tell me what’s going on. #speaker_right
 + [Nothing] Huh? Nothing lah. #speaker_self
     Don’t bluff, you looked miserable from the moment you stepped inside the house. #speaker_right
 
@@ -2222,7 +2222,7 @@ Both of you give everything to what you’re doing. #speaker_right
 And sometimes, along the way, you can both come across as a bit… unaware of what other people are going through. #speaker_right
 But you both have marshmallow hearts. Papa-ji just hides it better. #speaker_right
 
-#speaker_left_image:cha_aman_mama_normal.png
+#speaker_left_image:cha_aman_mama_happy.png
 Wow, you two look like you’re having a serious conversation! #speaker_left
 Dinner is ready! Can you go call your Papa-ji? He’s in his study. #speaker_left
 You mean my bedroom, that he now calls his study? #speaker_right
@@ -2621,7 +2621,7 @@ Thanks penji #speaker_self
 #knot:aman_3_4d
 #ui:scene
 #background:bg_aman_bedroom.jpg
-#speaker_left_image:cha_aman_mama_normal.png
+#speaker_left_image:cha_aman_mama_happy.png
 #speaker_left_name:Mum
 Lunch is ready, beta. Come and eat with me. #speaker_left
 Sure, mum. #speaker_self
@@ -2680,7 +2680,7 @@ Do you know that your Papa-ji has faced such choices too? #speaker_left
 - Well don’t tell him I told you this, but he is quite a fine writer. #speaker_left
 
 That’s how he stole my heart. With poetry! #speaker_left
-#speaker_left_image:cha_aman_mama_normal.png
+#speaker_left_image:cha_aman_mama_happy.png
 What?! Papa-ji… and poetry?! #speaker_self
 It’s true! He likes to write more fiction, but he wrote poems just for me. #speaker_left
 He considered switching careers to journalism, but with Jothi on the way, he decided not to. #speaker_left
