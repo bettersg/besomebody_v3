@@ -1938,7 +1938,7 @@ Speaking of which, Aman, what are your plans now that you’ve graduated? #speak
 + [I haven't decided yet...] Ah, I still haven’t really made up my mind… #speaker_self
     VAR aman_3_lietoselparents = true
     Oh? Have you started applying for jobs? #speaker_left
-    #speaker_left_image:cha_aman_unclepritam_puzzled.png
+    #speaker_left_image:cha_aman_unclepritam_confused.png
     Uh… here and there, but I haven’t landed on anything yet... #speaker_self
     Let’s not put the boy in a tight spot, I’m sure he knows what he’s doing. #speaker_right
     Yes, of course. #speaker_left
@@ -1948,13 +1948,15 @@ Speaking of which, Aman, what are your plans now that you’ve graduated? #speak
     Well, be patient! I am sure the companies will be lucky to have you. #speaker_left
     Thank you, uncle! #speaker_self
 - We’d better get going, we’re expecting guests. When you see Selinder, tell her to take her time and we’ll see her at home. #speaker_left
-
+#speaker_left_image:cha_aman_unclepritam_normal.png
 Sure, I’ll do that. #speaker_self
 Whew! That was a little stressful. #inner_monologue
+#speaker_left_image:pixel.png
+#speaker_right_image:pixel.png
 I’m just glad they didn’t ask me when I’m going to propose to Selinder or anything like that. #inner_monologue
 Speaking of… uh-oh. #inner_monologue
 Here comes Sel, and she doesn’t look happy. #inner_monologue
-#speaker_left_image:cha_aman_selindergurdwara_annoyed.png
+#speaker_left_image:cha_aman_selinder2_annoyed.png
 #speaker_left_name:Selinder
 Hey, did you see my parents? #speaker_left
 Hey. Yes, they left already, they said to take your time. #speaker_self
@@ -2000,9 +2002,9 @@ They’ve confirmed they want you already, right? So the hold-up is just you. #s
 - Sel, what on earth is going on? #speaker_self
 
 I know we didn’t end our conversation well last night… #speaker_self
-#speaker_left_image:cha_aman_selindergurdwara_angry.png
+#speaker_left_image:cha_aman_selinder2_angry.png
 No KIDDING, Aman. You FELL ASLEEP! #speaker_left
-#speaker_left_image:cha_aman_selindergurdwara_sad.png
+#speaker_left_image:cha_aman_selinder2_sad.png
 While I was waiting for you to reply, like an idiot. CRYING! #speaker_left
 
 + [I didn't mean to!]    I didn’t mean to! #speaker_self
@@ -2013,7 +2015,7 @@ While I was waiting for you to reply, like an idiot. CRYING! #speaker_left
 - You’re always tired, because you’re always off doing things that don’t involve me! #speaker_left
 
 Rehearsals have been - #speaker_self
-#speaker_left_image:cha_aman_selindergurdwara_angry.png
+#speaker_left_image:cha_aman_selinder2_angry.png
 Aman, this is NOT the time to be talking about your STUPID ACTING! #speaker_left
 NO ONE CARES! #speaker_left
 Grow UP! #speaker_left
@@ -2034,7 +2036,7 @@ I can only walk away. #inner_monologue
 === aman_3_2_narration ===
 #knot:aman_3_2_narration
 #ui:narrator
-#background:bg_aman_bedroom.jpg
+#background:bg_aman_bedroom_day.jpg
 I’m feeling numb when I return home.
 Could this be how a 7 year relationship ends?
 Has it already ended?
