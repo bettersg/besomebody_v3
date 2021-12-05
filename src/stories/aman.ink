@@ -2798,8 +2798,8 @@ Thanks, Papa-ji. #speaker_self
 + [Ever have regrets?] -> aman_3_5b
 
 = aman_3_5a
-Goodnight. #speaker_self
 #speaker_left_image:cha_aman_papa_happy.png
+Goodnight. #speaker_self
 VAR aman_3_paparegrets = false
 Goodnight, son. #speaker_right
 -> aman_3_6
@@ -2819,8 +2819,8 @@ Honestly speaking, there was a time - a short period of time, when your sister w
 We were not doing well financially, and I felt a heavy responsibility on my shoulders to make sure that all of you would be provided for. #speaker_right
 I never wanted to walk away. But I did wonder what life would be like if I didn’t have all of these… responsibilities. #speaker_right
 I did have dreams of my own and I would have liked to pursue them. #speaker_right
-Then you were born, Aman. And over time, as I saw how you and your sister were growing, these thoughts faded. #speaker_right
 #speaker_left_image:cha_aman_papa_happy.png
+Then you were born, Aman. And over time, as I saw how you and your sister were growing, these thoughts faded. #speaker_right
 Because of my past choices, I now have your mother. Your sister. And I have you. #speaker_right
 If I had made different choices, perhaps I would still have a good life. Even a wonderful life. #speaker_right
 But I would not have this life. #speaker_right
