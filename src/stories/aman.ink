@@ -1937,8 +1937,8 @@ Speaking of which, Aman, what are your plans now that you’ve graduated? #speak
 
 + [I haven't decided yet...] Ah, I still haven’t really made up my mind… #speaker_self
     VAR aman_3_lietoselparents = true
-    Oh? Have you started applying for jobs? #speaker_left
     #speaker_left_image:cha_aman_unclepritam_confused.png
+    Oh? Have you started applying for jobs? #speaker_left
     Uh… here and there, but I haven’t landed on anything yet... #speaker_self
     Let’s not put the boy in a tight spot, I’m sure he knows what he’s doing. #speaker_right
     Yes, of course. #speaker_left
@@ -2069,18 +2069,21 @@ I have five tickets to give away, so there’s you two, Selinder... #speaker_sel
 
 + Papa-ji and Lukman.[] #speaker_self
     Oh, is that your army friend you always talk about? He sounds like a very nice boy. #speaker_left
-    VAR aman_3_tickets = "Papa-ji and Lukman"
+    // VAR aman_3_tickets = "Papa-ji and Lukman"
+    VAR aman_3_tickets = 1
     Glad it’s the beefcake and not the clown. #speaker_right
     -> aman_3_2a
 + Papa-ji and Zhihao.[] #speaker_self
     Oh, Zhihao!  #speaker_left
-    ~  aman_3_tickets = "Papa-ji and Zhihao"
+    // ~  aman_3_tickets = "Papa-ji and Zhihao"
+    ~ aman_3_tickets = 2
     Eee, Zhihao. #speaker_right
     -> aman_3_2a
 + Lukman and Zhihao.[] #speaker_self
     Eee, Zhihao. Why not Papa-ji? #speaker_right
     #speaker_right_image:cha_aman_jothi_eyeroll.png
-    ~  aman_3_tickets = "Lukman and Zhihao"
+    // ~  aman_3_tickets = "Lukman and Zhihao"
+    ~ aman_3_tickets = 3
     Exactly my question, Jothi. I tried to get him to invite Papa-ji, but this stubborn boy would not listen. #speaker_left
     #speaker_right_image:cha_aman_jothi_normal.png
     It’s not like Papa-ji doesn’t know about the show, but he’s never said he wants to turn up... #speaker_self
@@ -2357,7 +2360,9 @@ I thought about it for a long time. #speaker_self
 
 = aman_3_3a
 I’ll take the job. Acting can wait. #speaker_self
-VAR aman_3_career = "consulting"
+VAR aman_3_career = ""
+~ aman_3_career = "consulting"
+VAR aman_3_consulting = true
 Our future together is more important #speaker_self
 Oh jaan… #speaker_1
 Are you sure?? #speaker_1
@@ -2402,6 +2407,7 @@ Goodnight ❤️   #speaker_1
 = aman_3_3b
 I can’t take the job. I’m sorry. #speaker_self
 ~ aman_3_career = "acting"
+~ aman_3_consulting = false
 I think I would never forgive myself for turning my back on the chance to act in a professional play #speaker_self
 I would always question myself, and regret things #speaker_self
 And over time that might become resentment #speaker_self
@@ -2448,8 +2454,8 @@ Sel?? #speaker_self
 #knot:aman_3_4_narration
 #ui:narrator
 #background:bg_aman_bedroom.jpg
-{aman_3_career:
-- "consulting":
+{aman_3_consulting:
+- true:
     Two weeks later.
     Opening night was a success. We got a standing ovation!
     I knew it would be my last time acting on stage for a long while - if ever again.
@@ -2458,7 +2464,7 @@ Sel?? #speaker_self
     I saw Sel in the front row, standing and cheering, at the end. 
     She even ran up to hand me flowers, which the audience loved. 
     She was radiant.
-- "acting":
+- false:
     Two weeks later.
     After Sel and I broke up, I felt numb and empty.
     But I still had a job to do.
@@ -2488,22 +2494,22 @@ bg_aman_reviewscreenshot.jpg #speaker_4 #image
 At first shy and unassuming, Jay reveals his darker shades as he orchestrates a series of escalating antics: from psychological manipulation, to a cynical social media campaign, and finally a rage-fuelled campus protest where all hell breaks loose.  #speaker_4
 Singh delivers a masterful transformation, from awkward newcomer to anarchist-crusader. His physical theatre is remarkable, from the subtlest tics to his slow, prowling swagger. There is nothing pretentious, ever, in his delivery; we are allowed to forget he is acting. He is definitely one to watch.”  #speaker_4
 Whoa! Good job Aman! #speaker_3
-{ aman_3_tickets != "Lukman and Zhihao":  
+{ aman_3_tickets != 3:  
     It was a strong performance. #speaker_1 
 }
 My talented boy 🥰 #speaker_5
 { aman_3_tickets: 
-- "Papa-ji and Lukman":
+- 1:
     Everyone cheered the loudest for our Aman. #speaker_5
     Especially that tall boy with the huge banner that said Man United’. Very strange. #speaker_5
     😅 That was Lukman, mum #speaker_self
     Thanks everyone 🙏🏽🙏🏽 Really grateful for the support #speaker_self
-- "Papa-ji and Zhihao":
+- 2:
     Everyone cheered loudly for our Aman. #speaker_5
     I saw that boy Zhihao nodding off during the performance, but at the end, he shouted and clapped the loudest! #speaker_5
     😅 Not really Zhihao’s scene #speaker_self
     But really, thanks everyone 🙏🏽🙏🏽 I’m grateful for the support #speaker_self
-- "Lukman and Zhihao":
+- 3:
     Everyone cheered loudly for our Aman. #speaker_5
     There was even a tall boy with a huge banner that said ‘Man and Man United’. I don’t see how it was relevant to the play but he was certainly very enthusiastic. #speaker_5
     I also saw the neighbour’s boy Zhihao. He was dozing off during the performance, but at the end, he cheered the loudest! #speaker_5
@@ -2518,8 +2524,8 @@ What comes next? How is your job hunt going? #speaker_2
 
 
 = aman_3_4a
-{aman_3_career:
-- "consulting":
+{aman_3_consulting:
+- true:
     So I’m actually starting a new job soon :) in business consulting #speaker_self
     Sorry Papa-ji and Mummy-ji, I didn’t have the chance to tell yet... #speaker_self
     I got the job offer some weeks ago and I’ve replied them to accept #speaker_self
@@ -2527,7 +2533,7 @@ What comes next? How is your job hunt going? #speaker_2
     Wonderful 😍 We will find a time to celebrate #speaker_5
     Congratulations! #speaker_2
     Our Harpreet is in banking, I’m sure you will have a lot to talk about. #speaker_2
-- "acting":
+- false:
     So I will actually be acting in an upcoming play :) Rehearsals start very soon. #speaker_self
     It will open at the Esplanade and I would love to invite all of you to see it #speaker_self
     🙌🏽 AMAZING #speaker_4
@@ -2540,12 +2546,12 @@ What comes next? How is your job hunt going? #speaker_2
 
 = aman_3_4b
 
-{aman_3_career:
-- "consulting":
+{aman_3_consulting:
+- true:
     It’s going well :) I expect to go into consulting soon #speaker_self
     Good choice. #speaker_2
     Our Harpreet is in banking, I’m sure you will have a lot to talk about. #speaker_2
-- "acting":
+- false:
     So I might try my hand at professional acting :) #speaker_self
     I do have an opportunity lined up and hope to share more soon #speaker_self
     Awaiting the good news, beta! #speaker_5
@@ -2577,9 +2583,9 @@ Jothi: hey # message
 #chat_group_title:Jothi Penji
 #chat_group_image:ico_aman_jothi.png
 #speaker_1_name:Jothi
-{aman_3_career:
-- "consulting": -> aman_3_4c1
-- "acting": -> aman_3_4c2
+{aman_3_consulting:
+- true: -> aman_3_4c1
+- false: -> aman_3_4c2
 }
 
 = aman_3_4c1
@@ -2632,9 +2638,9 @@ Lunch is ready, beta. Come and eat with me. #speaker_left
 Sure, mum. #speaker_self
 #speaker_left_image:cha_aman_mama_concerned.png
 Is everything alright? You look a bit pensive. #speaker_left
-{aman_3_career:
-- "consulting": -> aman_3_4d1
-- "acting": -> aman_3_4d2
+{aman_3_consulting:
+- true: -> aman_3_4d1
+- false: -> aman_3_4d2
 }
 
 = aman_3_4d1
@@ -2761,7 +2767,7 @@ What is he typing? Could it be one of his short stories? #inner_monologue
 #speaker_left_image:cha_aman_papa_happy.png
 - Since you’re here, Aman. #speaker_right
 
-{aman_3_tickets == "Lukman and Zhihao":
+{aman_3_tickets == 3:
     I’m glad to hear your performance went well the other night. #speaker_right
     I should have invited him. #inner_monologue
 - else: 
@@ -2770,9 +2776,10 @@ What is he typing? Could it be one of his short stories? #inner_monologue
     He says he’s proud… of me! #inner_monologue
 }
 
-{aman_3_career == "consulting" :
+{aman_3_consulting:
+- true:
     It’s too bad, there might never be another chance for him to see me on the stage. #inner_monologue
-- else:
+- false:
     Would you like to come and see the next play I’ll be in? #speaker_self
     Certainly. I would like that. #speaker_right
 }
@@ -2816,10 +2823,10 @@ Goodnight, son. I love you too. #speaker_right
 -> aman_3_6
 
 = aman_3_6
-{aman_3_career == "consulting" && aman_3_paparegrets == false: -> aman_3_6_ending_1}
-{aman_3_career == "acting" && aman_3_paparegrets == false: -> aman_3_6_ending_2}
-{aman_3_career == "consulting" && aman_3_paparegrets == true: -> aman_3_6_ending_3}
-{aman_3_career == "acting" && aman_3_paparegrets == true: -> aman_3_6_ending_4}
+{aman_3_consulting == true && aman_3_paparegrets == false: -> aman_3_6_ending_1}
+{aman_3_consulting == false && aman_3_paparegrets == false: -> aman_3_6_ending_2}
+{aman_3_consulting == true && aman_3_paparegrets == true: -> aman_3_6_ending_3}
+{aman_3_consulting == false && aman_3_paparegrets == true: -> aman_3_6_ending_4}
 
 === aman_3_6_ending_1 ===
 #knot:aman_3_6_ending_1
