@@ -305,9 +305,10 @@ What’s wrong, beta? #speaker_left
 Nothing’s wrong. #speaker_self
 You think I raised you for 19 years and don’t know how to read your face? #speaker_left
 Well… #speaker_self
+VAR aman_1_nsworries = ""
 
 + [I'm just worried about not doing well]  I just don’t want to disappoint you all. #speaker_self
-    VAR aman_1_nsworries = "not doing well"
+    ~ aman_1_nsworries = "not doing well"
     You know me, mum. I’m never the guy who’s the loudest in the room, or the one who assumes he should take charge.   #speaker_self
     I’m not Mr “OK Let’s Go” like Harpreet, or -   #speaker_self
     Aman, you stop right there. #speaker_left
@@ -336,9 +337,10 @@ Well… #speaker_self
     Sorry, I know. I have to excel. #speaker_self
     Aman, I didn’t say that. #speaker_left
     I asked, what do you want to do?   #speaker_left
+        VAR aman_1_nsgoals = ""
         
         ++ [Lie low]
-        VAR aman_1_nsgoals = "lie low"
+        ~ aman_1_nsgoals = "lie low"
         Honestly, I just want to survive NS, mum. #speaker_self
         Then you do that, beta.  #speaker_left
         It’s all I want for you as well. To come home safe and sound. #speaker_left
@@ -696,7 +698,8 @@ But you are going to university remember, and doing business #speaker_1
 So you will be the big dollars man. 🤪 #speaker_1
 
 + [Maybe] Gotta work for my bb, I know #speaker_self
-    VAR aman_1_selinderchat = "maybe"
+    VAR aman_1_selinderchat = ""
+    ~ aman_1_selinderchat = "maybe"
     😘 #speaker_self
     I meant it about you being a career woman though, you shouldn’t hold yourself back at all while I’m stomping mud on this island #speaker_self
     I know how talented you are #speaker_self
@@ -901,6 +904,7 @@ But I can’t tell him that, right? He’s not going to think that’s a good us
     What are these side-projects? #speaker_right
 
 - Uh... #speaker_self
+VAR aman_1_familydinner = ""
 
 + [Acting] -> chapter_1_ending_1
     
@@ -919,7 +923,7 @@ But I can’t tell him that, right? He’s not going to think that’s a good us
 Take a deep breath, Aman. #inner_monologue
 I know this may be a surprise, but I was thinking of trying out some professional acting. #speaker_self
 #speaker_left_image:cha_aman_mama_concerned.png
-VAR aman_1_familydinner = "acting"
+~ aman_1_familydinner = "acting"
 VAR chapter_1_ending = 1
 ... #speaker_left
 ... #speaker_right
@@ -1093,6 +1097,7 @@ Jaan? What are you looking at on your phone? #speaker_left
 hmm #inner_monologue
 uh-huh #inner_monologue
 Oh... #speaker_self
+VAR aman_2_selinderfocus = ""
 + [Sorry, let's focus on us.] -> aman_2_1_1a
 + [These casting calls. ] -> aman_2_1_1b
 
@@ -1101,7 +1106,7 @@ Oh... #speaker_self
 #speaker_left_image:cha_aman_selinder_normal.png
 #speaker_left_name:Selinder
 Nothing, sorry about that. #speaker_self
-VAR aman_2_selinderfocus = "us"
+~ aman_2_selinderfocus = "us"
 Are you sure? #speaker_left
 Yes jaan, don’t worry about it. Today is just about you and me. #speaker_self
 Aww, thank you. I’ve really needed this. #speaker_left
@@ -1166,8 +1171,9 @@ Elsa: Hi Aman this is Elsa from Everyday Productions. Tks for your pics and show
 #speaker_left_name:Selinder
 Yes - they liked it! This is promising. #inner_monologue
 Who is it? #speaker_left
+VAR aman_2_selinderquestion = ""
 + [Give me a minute] Hold on one sec, sorry. It’s a casting agent! She’s still typing... #speaker_self
-    VAR aman_2_selinderquestion = "wait"
+    ~ aman_2_selinderquestion = "wait"
     {aman_2_selinderfocus:
     - "us" : Oh wow! I didn’t know you were still applying for auditions. Yes, better reply quickly. #speaker_left
     - "casting": ...Right.  #speaker_left
@@ -1599,7 +1605,8 @@ Yes. #speaker_self
 I’m going to make this character... #inner_monologue
 
 + [Intimidating] ...A scary guy. #inner_monologue
-    VAR aman_2_actingstyle = "intimidating"
+    VAR aman_2_actingstyle = ""
+    ~ aman_2_actingstyle = "intimidating"
     These lines are ridiculous, but if I keep my eyes looking dead and my demeanour uninterested, I can actually make myself quite sinister. #inner_monologue
 + [Comical] ...A ridiculous figure, over-inflated with his delusions of grandeur. #inner_monologue
     ~ aman_2_actingstyle = "comical"
@@ -1661,13 +1668,14 @@ Oh, yes! But Singaporean Indian. This is just to make it more funny. #speaker_ri
 Funny. #inner_monologue
 The way Indians speak is funny? It’s not funny to me. #inner_monologue
 Should I say something? But won’t that rule me out for the part? #inner_monologue
+VAR aman_2_funnyindian = ""
 
 + [I'm not comfortable with this] -> aman_2_3a
 + [It’s not funny] -> aman_2_3b
 + [Say nothing] -> aman_2_3c
 
 = aman_2_3a
-VAR aman_2_funnyindian = "not comfortable"
+~ aman_2_funnyindian = "not comfortable"
 VAR chapter_2_ending = 2
 I’m not sure this is very appropriate. #speaker_self
 #speaker_right_image:cha_aman_alison_upset.png
@@ -2354,13 +2362,14 @@ not anymore. #speaker_1
 I hear you Sel #speaker_self
 I know where you’re coming from now. #speaker_self
 
+VAR aman_3_career = ""
 I thought about it for a long time. #speaker_self
+and....
 + [I will take the consulting job, and be with you] -> aman_3_3a
-+ [I can’t take the consulting job. I’m sorry]  -> aman_3_3b
++ [I cannot take the consulting job. Sorry, I want try acting]  -> aman_3_3b
 
 = aman_3_3a
 I’ll take the job. Acting can wait. #speaker_self
-VAR aman_3_career = ""
 ~ aman_3_career = "consulting"
 VAR aman_3_consulting = true
 Our future together is more important #speaker_self
