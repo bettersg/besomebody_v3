@@ -2448,7 +2448,8 @@ Sel?? #speaker_self
 #knot:aman_3_4_narration
 #ui:narrator
 #background:bg_aman_bedroom.jpg
-{aman_3_career == "consulting":
+{aman_3_career:
+- "consulting":
     Two weeks later.
     Opening night was a success. We got a standing ovation!
     I knew it would be my last time acting on stage for a long while - if ever again.
@@ -2457,7 +2458,7 @@ Sel?? #speaker_self
     I saw Sel in the front row, standing and cheering, at the end. 
     She even ran up to hand me flowers, which the audience loved. 
     She was radiant.
-- else:
+- "acting":
     Two weeks later.
     After Sel and I broke up, I felt numb and empty.
     But I still had a job to do.
