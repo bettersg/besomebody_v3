@@ -2366,7 +2366,7 @@ VAR aman_3_career = ""
 I thought about it for a long time. #speaker_self
 and....
 + [I will take the consulting job, and be with you] -> aman_3_3a
-+ [I cannot take the consulting job. Sorry, I want try acting]  -> aman_3_3b
++ [I cannot take the consulting job. Sorry, I want to try acting]  -> aman_3_3b
 
 = aman_3_3a
 I’ll take the job. Acting can wait. #speaker_self
@@ -2810,7 +2810,7 @@ May I ask you a personal question? #speaker_self
 You may. #speaker_right
 #speaker_left_image:cha_aman_papa_normal.png
 Do you ever regret anything? #speaker_self
-Like, your life choices… or in your career? #
+Like, your life choices… or in your career? #speaker_self
 ... #speaker_right
 There are some things that I think would have been interesting to explore, if circumstances were different. #speaker_right
 But had I done any of those things, then life would have turned out quite differently. #speaker_right
