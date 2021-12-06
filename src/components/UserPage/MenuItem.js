@@ -17,11 +17,11 @@ const useStyles = makeStyles ({
     }
 })
 
-export const MenuItem = ({logo, name, description, editRedirect}) => {
+export const MenuItem = ({logo, name, description, editRedirect, onClick}) => {
     const classes = useStyles();
 
     return (
-        <div className={classes.root}>
+        <div className={classes.root} onClick={onClick} style={{cursor:`${onClick? "pointer":"unset"}`}}>
             <div className={classes.leftSide}>
                 <img src={logo} height="23px" style={{marginRight:24}}/>
                 <div>
