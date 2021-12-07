@@ -161,7 +161,7 @@ function UserPage() {
       <Box className={classes.root} >
         <div>
             <Box className={classes.topBar}>
-              <img src="/account_page/left-arrow.png" width="8px" style={{marginRight: "18px"}}/>
+            <Link to="/"><img src="/account_page/left-arrow.png" width="8px" style={{marginRight: "18px"}}/></Link>
               <Typography style={{fontWeight:700}}>Account</Typography>
             </Box>
             <SideMenu  />
