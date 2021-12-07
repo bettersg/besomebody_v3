@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { useParams, Link , useHistory } from "react-router-dom";
 
-import { Grid, Fab, Box } from "@material-ui/core";
+import { Grid, Fab, Box, Typography } from "@material-ui/core";
 
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -21,17 +21,34 @@ import { ReactComponent as NoDataIllustration } from "../../illustrations/no-dat
 import { useAuth } from '../../contexts/AuthContext'
 import { useSnackbar } from '../../contexts/SnackbarContext'
 import SideMenu from '../../pages/SimpleSideMenu/SideMenu'
+import { MenuItem } from "./MenuItem";
 
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     background: '#eeeeee',
-    borderRadius: 3,
-    color: 'black',
-    height: 200,
-    padding: '50px 30px',
+    height: '660px',
+    [theme.breakpoints.only('xs')]: {
+        height: 'calc(var(--vh, 1vh) * 100)',
+    },
+    position: "absolute", 
+    top: 0, 
+    width:"100%", 
   },
-});
+  topBar: {
+    background: "white", 
+    height: 68, 
+    padding: 28, 
+    display: "flex", 
+    alignItems:"center", 
+    position: "absolute", 
+    top: 0, 
+    width:"100%", 
+  }, 
+  accountMenu: {
+    marginTop: 75, 
+  }
+}));
 
 function UserPage() {
   const [loading, setLoading] = useState(true);
@@ -141,11 +158,21 @@ function UserPage() {
 
   if (hasProfile) {
     return (
-      <Box >
-        <div className="game-menu">
+      <Box className={classes.root} >
+        <div>
+            <Box className={classes.topBar}>
+              <img src="/account_page/left-arrow.png" width="8px" style={{marginRight: "18px"}}/>
+              <Typography style={{fontWeight:700}}>Account</Typography>
+            </Box>
             <SideMenu  />
         </div>
-        <UserCard user={user} />
+        <div className={classes.accountMenu}>
+          <MenuItem logo="/account_page/profile.png" name="Your Profile" description={`${user.age ? user.age + ", " : ""}${user.gender ? user.gender + ", " : ""}${user.race ? user.race + ", " : ""}${user.religion ? user.religion + ", " : ""}${user.housing ? user.housing + ", " : ""}`} editRedirect="/profilebuilder"/>
+          <MenuItem logo="/account_page/email.png" name="Email" description={`${user.email ? user.email : ""}`} editRedirect="/profilebuilder"/>
+          <MenuItem logo="/account_page/password.png" onClick={() => handleResetPassword()} name="Reset Password"/>
+          <MenuItem logo="/account_page/logout.png" onClick={logoutUser} name="Logout"/>
+        </div>
+        {/* <UserCard user={user} />
         <br />
         <Box className={classes.root}>
           <Link to="/">Back to Main Menu</Link> <br />
@@ -154,7 +181,7 @@ function UserPage() {
           <Link onClick={() => handleResetPassword()}>Reset your password</Link> <br />
           <Link to="/profilebuilder">Rebuild Your Profile</Link> <br />
           <Link to="/" onClick={logoutUser}><span>Sign Out</span></Link> <br />
-        </Box>
+        </Box> */}
       </Box>       
     );
   }

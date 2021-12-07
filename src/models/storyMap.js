@@ -256,7 +256,7 @@ export const CHARACTER_MAP = [
     primaryColour: '#172153',
     secondaryColour: '#FFBB0B',
     playable: true,
-    newestChapter: 2,
+    newestChapter: 3,
     variables: {
       aman_mood: 5,
     },
@@ -381,22 +381,95 @@ export const CHARACTER_MAP = [
         title: "The Show Must Go On",
         knotTag: "aman_3_intro",
         summary: "After a shocking argument, Aman must decide how his life’s script will unfold.",
-        playable: false,
-        images : ["cat.jpg", "dog.jpg"],
+        playable: true,
+        images: [
+          '/images/bg_aman_intro.jpg',
+          '/images/bg_aman_gurdwara.jpg',
+          '/images/bg_aman_home.jpg',
+          '/images/bg_aman_bedroom.jpg',
+          '/images/bg_aman_papastudy.jpg',          
+          '/images/cha_aman_unclepritam_normal.png',
+          '/images/cha_aman_unclepritam_puzzled.png',
+          '/images/cha_aman_auntysuvinder_normal.png',
+          '/images/cha_aman_selindergurdwara_annoyed.png',
+          '/images/cha_aman_selindergurdwara_sad.png',
+          '/images/cha_aman_selindergurdwara_angry.png',
+          '/images/cha_aman_mama_normal.png',
+          '/images/cha_aman_mama_concerned.png',
+          '/images/cha_aman_papa_normal.png',
+          '/images/cha_aman_papa_happy.png',
+          '/images/cha_aman_jothi_normal.png',
+          '/images/cha_aman_jothi_eyeroll.png',
+          '/images/cha_aman_jothi_hairflip.png',
+          '/images/cha_aman_jothi_diva.png',
+          '/images/cha_aman_jothi_sad.png',
+          '/images/pixel.png',
+          '/images/whatsapp.png',
+          '/images/ui_aman_message.jpg',
+          '/images/ico_aman_selinder.png',
+          '/images/ico_aman_extendedfamily.png',
+          '/images/ico_aman_jothi.png',
+        ],
         endings: [
           {
             endingId: 1,
-            title: "Stay",
+            title: "Aman chose consulting, but did not speak to his father",
             inkVar: "chapter_3_ending_1",
           },
           {
             endingId: 2,
-            title: "Leave",
+            title: "Aman chose acting, but did not speak to his father",
             inkVar: "chapter_3_ending_2",
+          },
+          {
+            endingId: 3,
+            title: "Aman chose consulting, and spoke to his father",
+            inkVar: "chapter_3_ending_3",
+          },
+          {
+            endingId: 4,
+            title: "Aman chose acting, and spoke to his father",
+            inkVar: "chapter_3_ending_4",
           },
         ]
       }, 
     ],
+    reflectionBrowser: [
+      {         
+        title: "Reflection Browser",
+        knotTag: "story_end_browser",
+        summary: "Aman's story in the game has ended, but the stories of all our players are waiting to be explored.",
+        playable: true,
+        images: [
+          "/images/bg_aman_intro.jpg",         
+          "/images/bg_launch.jpg",
+          "/images/bg_reflections.jpg",
+        ],
+        empathyCharacters: [
+          {
+            characterName: 'Aman',
+            characterImage: '/shareable_avatars/nadia.png',
+          },
+          {
+            characterName: 'Jothi',
+            characterImage: '/shareable_avatars/azlin.png',
+          },
+          {
+            characterName: 'Selinder',
+            characterImage: '/shareable_avatars/gavin.png',
+          },
+          {
+            characterName: 'Lukman',
+            characterImage: '/shareable_avatars/chloe.png',
+          },
+          {
+            characterName: 'Zhihao',
+            characterImage: '/shareable_avatars/rahman.png',
+          },
+
+        ]
+      },
+    ]
   },
   {
     characterId: 3,

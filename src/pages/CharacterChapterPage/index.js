@@ -112,7 +112,7 @@ const CharacterChapterPage = (props) => {
   }
 
   const currentCharCompleted = 'userFromDb?.character_' + characterId + '_completed'
-  
+  console.log(eval(currentCharCompleted))  
 
   return (
     <Box className={classes.CharChaptWrapper}>
