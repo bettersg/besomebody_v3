@@ -2953,7 +2953,7 @@ the end = 4
 
 === story_end_browser ===
 #ui:story_end_browser
-#reflection_id:4
+#reflection_id:6
 reflection browser
 
     -> END

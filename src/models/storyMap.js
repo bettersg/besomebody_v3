@@ -434,6 +434,42 @@ export const CHARACTER_MAP = [
         ]
       }, 
     ],
+    reflectionBrowser: [
+      {         
+        title: "Reflection Browser",
+        knotTag: "story_end_browser",
+        summary: "Aman's story in the game has ended, but the stories of all our players are waiting to be explored.",
+        playable: true,
+        images: [
+          "/images/bg_aman_intro.jpg",         
+          "/images/bg_launch.jpg",
+          "/images/bg_reflections.jpg",
+        ],
+        empathyCharacters: [
+          {
+            characterName: 'Aman',
+            characterImage: '/shareable_avatars/nadia.png',
+          },
+          {
+            characterName: 'Jothi',
+            characterImage: '/shareable_avatars/azlin.png',
+          },
+          {
+            characterName: 'Selinder',
+            characterImage: '/shareable_avatars/gavin.png',
+          },
+          {
+            characterName: 'Lukman',
+            characterImage: '/shareable_avatars/chloe.png',
+          },
+          {
+            characterName: 'Zhihao',
+            characterImage: '/shareable_avatars/rahman.png',
+          },
+
+        ]
+      },
+    ]
   },
   {
     characterId: 3,
