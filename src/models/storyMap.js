@@ -448,25 +448,20 @@ export const CHARACTER_MAP = [
         empathyCharacters: [
           {
             characterName: 'Aman',
-            characterImage: '/shareable_avatars/nadia.png',
+            characterImage: '/shareable_avatars/aman.png',
           },
           {
             characterName: 'Jothi',
-            characterImage: '/shareable_avatars/azlin.png',
+            characterImage: '/shareable_avatars/jothi.png',
           },
           {
             characterName: 'Selinder',
-            characterImage: '/shareable_avatars/gavin.png',
+            characterImage: '/shareable_avatars/selinder.png',
           },
           {
             characterName: 'Lukman',
-            characterImage: '/shareable_avatars/chloe.png',
-          },
-          {
-            characterName: 'Zhihao',
-            characterImage: '/shareable_avatars/rahman.png',
-          },
-
+            characterImage: '/shareable_avatars/lukman.png',
+          }
         ]
       },
     ]
