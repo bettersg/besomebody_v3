@@ -1932,31 +1932,31 @@ Oh - there they are! Sel’s parents, Uncle Pritam and Aunty Suvinder.
 #knot:aman_3_1
 #ui:scene
 #background:bg_aman_gurdwara.jpg
-#speaker_left_image:cha_aman_unclepritam_normal.png
-#speaker_left_name:Uncle Pritam
-#speaker_right_image:cha_aman_auntysuvinder_normal.png
-#speaker_right_name:Aunty Suvinder
-Aman! How are you, young man? You haven’t visited us in a while. #speaker_left
+#speaker_left_image:cha_aman_auntysuvinder_normal.png
+#speaker_left_name:Aunty Suvinder
+#speaker_right_image:cha_aman_unclepritam_normal.png
+#speaker_right_name:Uncle Pritam
+Aman! How are you, young man? You haven’t visited us in a while. #speaker_right
 Hi uncle, hi aunty! So sorry about that, I’ve been busy with rehearsals for our theatre club’s production. #speaker_self
-Oh, but I thought you graduated already! #speaker_right
+Oh, but I thought you graduated already! #speaker_left
 Yes aunty, this is the last production for our cohort, before we hand over the reins fully. #speaker_self
-That’s good, you will be very busy once you start work. #speaker_right
-Speaking of which, Aman, what are your plans now that you’ve graduated? #speaker_left
+That’s good, you will be very busy once you start work. #speaker_left
+Speaking of which, Aman, what are your plans now that you’ve graduated? #speaker_right
 
 + [I haven't decided yet...] Ah, I still haven’t really made up my mind… #speaker_self
     VAR aman_3_lietoselparents = true
-    #speaker_left_image:cha_aman_unclepritam_confused.png
-    Oh? Have you started applying for jobs? #speaker_left
+    #speaker_right_image:cha_aman_unclepritam_confused.png
+    Oh? Have you started applying for jobs? #speaker_right
     Uh… here and there, but I haven’t landed on anything yet... #speaker_self
-    Let’s not put the boy in a tight spot, I’m sure he knows what he’s doing. #speaker_right
-    Yes, of course. #speaker_left
+    Let’s not put the boy in a tight spot, I’m sure he knows what he’s doing. #speaker_left
+    Yes, of course. #speaker_right
 
 + [I've been applying to jobs] I’ve been applying to jobs, Uncle Pritam. But nothing is confirmed yet. #speaker_self
     ~ aman_3_lietoselparents = false
-    Well, be patient! I am sure the companies will be lucky to have you. #speaker_left
+    Well, be patient! I am sure the companies will be lucky to have you. #speaker_right
     Thank you, uncle! #speaker_self
-- We’d better get going, we’re expecting guests. When you see Selinder, tell her to take her time and we’ll see her at home. #speaker_left
-#speaker_left_image:cha_aman_unclepritam_normal.png
+- We’d better get going, we’re expecting guests. When you see Selinder, tell her to take her time and we’ll see her at home. #speaker_right
+#speaker_right_image:cha_aman_unclepritam_normal.png
 Sure, I’ll do that. #speaker_self
 Whew! That was a little stressful. #inner_monologue
 #speaker_left_image:pixel.png
@@ -1966,7 +1966,7 @@ Speaking of… uh-oh. #inner_monologue
 Here comes Sel, and she doesn’t look happy. #inner_monologue
 #speaker_left_image:cha_aman_selinder2_annoyed.png
 #speaker_left_name:Selinder
-Hey, did you see my parents? #speaker_left
+Hey, did you see my parents? #speaker_leftspeaker_righ
 Hey. Yes, they left already, they said to take your time. #speaker_self
 Darn, I needed a lift. #speaker_left
 So what did you guys talk about? #speaker_left
@@ -2640,7 +2640,7 @@ Thanks penji #speaker_self
 === aman_3_4d ===
 #knot:aman_3_4d
 #ui:scene
-#background:bg_aman_bedroom.jpg
+#background:bg_aman_bedroom_day.jpg
 #speaker_left_image:cha_aman_mama_happy.png
 #speaker_left_name:Mum
 Lunch is ready, beta. Come and eat with me. #speaker_left
