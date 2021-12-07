@@ -168,7 +168,7 @@ function UserPage() {
         </div>
         <div className={classes.accountMenu}>
           <MenuItem logo="/account_page/profile.png" name="Your Profile" description={`${user.age ? user.age + ", " : ""}${user.gender ? user.gender + ", " : ""}${user.race ? user.race + ", " : ""}${user.religion ? user.religion + ", " : ""}${user.housing ? user.housing + ", " : ""}`} editRedirect="/profilebuilder"/>
-          <MenuItem logo="/account_page/email.png" name="Email" description={`${user.email ? user.email : ""}`} editRedirect="/profilebuilder"/>
+          <MenuItem logo="/account_page/email.png" name="Email" description={`${user.email ? user.email : ""}`} />
           <MenuItem logo="/account_page/password.png" onClick={() => handleResetPassword()} name="Reset Password"/>
           <MenuItem logo="/account_page/logout.png" onClick={logoutUser} name="Logout"/>
         </div>
