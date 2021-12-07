@@ -88,8 +88,11 @@ const Twitch = (props) => {
     <Fade in={true} timeout={500}>
       <Box className={classes.WhatsappWrapper}>
         {/* Whatsapp Header */}
-        <div className="Whatsapp__toolbar"/>
-        <div className="Whatsapp__video"><img className="Whatsapp__video--image" src="/images/bg_nadia_playground.jpg"/></div>
+        {/* <div className="Whatsapp__toolbar"/> */}
+        <div className="Whatsapp__video">
+          <img className="Whatsapp__video--image" src="/images/bg_nadia_playground.jpg"/>
+        </div>
+        <div className="Whatsapp__gradient"/>
         <div className="Whatsapp__header">
           {/* <img 
             src='/images/profile_nadia.png'
@@ -105,9 +108,9 @@ const Twitch = (props) => {
         
         <Box>
             <Box
-              className={`Whatsapp__messages ${0 > 0 ? 'choices' : ''}`}
+              className={`Whatsapp__messages ${0 === 0 ? 'choices' : ''}`}
               dir="ltr">
-              <Box style={{textAlign:'center', paddingTop:5, fontSize:12}}> 1000hr </Box>
+              {/* <Box style={{textAlign:'center', paddingTop:5, fontSize:12}}> 1000hr </Box> */}
               <Box
                     //   key={step.text}
                       mx={1}
@@ -156,28 +159,112 @@ const Twitch = (props) => {
                       </Fade>
                       
                 </Box>
+
+                <Box
+                    //   key={step.text}
+                      mx={1}
+                      display="flex"
+                      justifyContent="flex-end"
+                    >
+                      <Fade in='test' key='test' timeout={300}>
+                        <Box
+                          className={`Whatsapp__messages--twitchreceiver`}
+                        //   borderRadius={5}
+                        //   key={step.text}
+                        >
+                            <div class="Whatsapp__messages--twitchreceiver--message">
+                            <span>
+                                <img class="Whatsapp__messages--twitchreceiver--profile" src="/images/profile_nadia.png"></img></span>
+                            <span className="Whatsapp__messages--twitchreceiver--name">Nadia: </span>
+                            Hello world! Lorem ipsum sin amat dolores uluros.
+                            </div>
+                          {/* {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.whatsappImage} /> :  <Typography key={step.text}>{step.text}</Typography> )} */}
+                          {/* {setCurrentSpeaker(step.tags[0])} */}
+                        </Box>
+                      </Fade>
+                      
+                </Box>
+
+                <Box
+                    //   key={step.text}
+                      mx={1}
+                      display="flex"
+                      justifyContent="flex-end"
+                    >
+                      <Fade in='test' key='test' timeout={300}>
+                        <Box
+                          className={`Whatsapp__messages--twitchreceiver`}
+                        //   borderRadius={5}
+                        //   key={step.text}
+                        >
+                            <div class="Whatsapp__messages--twitchreceiver--message">
+                            <span>
+                                <img class="Whatsapp__messages--twitchreceiver--profile" src="/images/profile_nadia.png"></img></span>
+                            <span className="Whatsapp__messages--twitchreceiver--name">Nadia: </span>
+                            Hello world! Lorem ipsum sin amat dolores uluros.
+                            </div>
+                          {/* {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.whatsappImage} /> :  <Typography key={step.text}>{step.text}</Typography> )} */}
+                          {/* {setCurrentSpeaker(step.tags[0])} */}
+                        </Box>
+                      </Fade>
+                      
+                </Box>
+
+                <Box
+                    //   key={step.text}
+                      mx={1}
+                      display="flex"
+                      justifyContent="flex-end"
+                    >
+                      <Fade in='test' key='test' timeout={300}>
+                        <Box
+                          className={`Whatsapp__messages--twitchreceiver`}
+                        //   borderRadius={5}
+                        //   key={step.text}
+                        >
+                            <div class="Whatsapp__messages--twitchreceiver--message">
+                            <span>
+                                <img class="Whatsapp__messages--twitchreceiver--profile" src="/images/profile_nadia.png"></img></span>
+                            <span className="Whatsapp__messages--twitchreceiver--name" style={{color:'#D12419'}}>Zhihao: </span>
+                            Hello world! Lorem ipsum sin amat dolores uluros.
+                            </div>
+                          {/* {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.whatsappImage} /> :  <Typography key={step.text}>{step.text}</Typography> )} */}
+                          {/* {setCurrentSpeaker(step.tags[0])} */}
+                        </Box>
+                      </Fade>
+                      
+                </Box>
+
               <div ref={elementRef} />
             </Box>
-            <Box className="Whatsapp__sendWrapper">
+            <Box className="Whatsapp__twitchSendWrapper">
               <Box
-                className={`Whatsapp__sendWrapper__sendButton ${
-                  0 === 0 ? '' : 'choice'
+                className={`Whatsapp__twitchSendWrapper__twitchSendButton ${
+                  1 === 0 ? '' : 'choice'
                 }`}
               >
-                Tap to continue
+                {1 === 0 ? "Tap to continue" : "Choose your reply"}
               </Box>
-              <Box className="Whatsapp__sendWrapper__sendButton--purpleright">
+              <Box className="Whatsapp__twitchSendWrapper__twitchSendButton--purpleright">
                 <ExpandMoreIcon />
               </Box>
             </Box>
             {/* this if else is needed to toggle between "Next Button" and choices (if any) */}
-            {0 > 0 ? (
+            {0 === 0 ? (
               <Box
                 className={`Whatsapp__choicesWrapper ${
                   1 === 0 ? 'no-choices' : 'w3-animate-fading'
                 }`}
                 // ref={choicesRef}
               >
+                    <Box
+                      className="choices"
+                    //   onClick={() => setChoice(choice.index)}
+                    //   key={i}
+                    >
+                      Test Choice
+                    </Box>
+
                     <Box
                       className="choices"
                     //   onClick={() => setChoice(choice.index)}
