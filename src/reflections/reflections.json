@@ -86,7 +86,7 @@
     "didyouknow": "Dealing with expectations can be tough, whether they are cultural, parental, or societal. Watch a video by the Young Sikh Association to find out more.",
     "media": "https://firebasestorage.googleapis.com/v0/b/besomebody.appspot.com/o/videos%2Faman_video.mp4?alt=media&token=4c46d7b9-f47d-4201-8135-a4a29c4c6902",
     "mediatype" : "video",
-    "mediaimage" : "/didyouknow/aman_video.png",
+    "mediaimage" : "/didyouknow/aman_video.jpg",
     "context": {
       "character_name": "Aman"
     },
