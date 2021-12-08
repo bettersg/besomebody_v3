@@ -150,7 +150,7 @@ const ShareableImageContainer = ({data }) =>{
         displayText = text.slice(0,198)+"..."
     }
     else if (text.length == 0) {
-      displayText = "I completed playing the interactive fiction game ToBeYou.sg, and I want you to join me!"
+      displayText = "I pledge to be curious about what it's like to be you, and let you be curious about what it's like to be me. #ToBeYou.sg"
     }
     else {
         displayText = text
