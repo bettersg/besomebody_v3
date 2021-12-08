@@ -2371,9 +2371,9 @@ and....
 = aman_3_3a
 I’ll take the job. Acting can wait. #speaker_self
 ~ aman_3_career = "consulting"
-VAR aman_3_consulting = true
 Our future together is more important #speaker_self
 Oh jaan… #speaker_1
+VAR aman_3_consulting = true
 Are you sure?? #speaker_1
 I feel so bad like I’ve pressured you into this #speaker_1
 No, don’t think that at all!! #speaker_self
@@ -2416,9 +2416,9 @@ Goodnight ❤️   #speaker_1
 = aman_3_3b
 I can’t take the job. I’m sorry. #speaker_self
 ~ aman_3_career = "acting"
-~ aman_3_consulting = false
 I think I would never forgive myself for turning my back on the chance to act in a professional play #speaker_self
 I would always question myself, and regret things #speaker_self
+~ aman_3_consulting = false
 And over time that might become resentment #speaker_self
 That can’t be healthy for either of us #speaker_self
 I love you. So much #speaker_self
@@ -2844,6 +2844,7 @@ Goodnight, son. I love you too. #speaker_right
 #ui:narrator
 #background:bg_aman_intro.jpg
 My talk with Papa-ji left my heart feeling lighter.
+~ chapter_3_ending = 1 
 But I never summoned up the courage to ask him if he had any regrets.
 Maybe one day.
 Putting acting aside was the hardest thing I’ve ever done. 
@@ -2860,6 +2861,7 @@ There are many ways in the world... to be me.
 #ui:narrator
 #background:bg_aman_intro.jpg
 My talk with Papa-ji left my heart feeling lighter.
+~ chapter_3_ending = 2
 But I never summoned up the courage to ask him if he had any regrets.
 Maybe one day.
 Sel and I could have had a life together… something like what Papa-ji and mum have.
@@ -2879,6 +2881,7 @@ I won’t give up on being me.
 #ui:narrator
 #background:bg_aman_intro.jpg
 That night in Papa-ji’s study was the most he’d ever opened up to me.
+~ chapter_3_ending = 3
 It left my heart feeling lighter, and helped me feel braver and better about my choice.
 Like me, Papa-ji chose to leave something behind… or at least postpone it for a while.
 He did that out of love, and hopes and dreams.
@@ -2895,6 +2898,7 @@ I’m ready to just be me.
 #ui:narrator
 #background:bg_aman_intro.jpg
 That night in Papa-ji’s study was the most he’d ever opened up to me.
+~ chapter_3_ending = 4
 It left my heart feeling lighter, but I also had a flicker of doubt.
 By choosing acting, was I shutting the door on a different life?
 A life like Papa-ji came to have with mum, and Jothi and me?
