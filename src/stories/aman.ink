@@ -2585,7 +2585,7 @@ What comes next? How is your job hunt going? #speaker_2
 === aman_3_4c ===
 #knot:aman_3_4c
 #ui:notification
-#background:ui_nadia_message.jpg
+#background:ui_aman_message.jpg
 Jothi: hey # message
 #ui:whatsapp
 #background:whatsapp.png
@@ -2699,8 +2699,8 @@ Do you know that your Papa-ji has faced such choices too? #speaker_left
     He’s always been all about his work. #speaker_self
 - Well don’t tell him I told you this, but he is quite a fine writer. #speaker_left
 
-That’s how he stole my heart. With poetry! #speaker_left
 #speaker_left_image:cha_aman_mama_happy.png
+That’s how he stole my heart. With poetry! #speaker_left
 What?! Papa-ji… and poetry?! #speaker_self
 It’s true! He likes to write more fiction, but he wrote poems just for me. #speaker_left
 He considered switching careers to journalism, but with Jothi on the way, he decided not to. #speaker_left
