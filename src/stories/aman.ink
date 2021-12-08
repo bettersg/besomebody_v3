@@ -2074,28 +2074,26 @@ Here you go, one each. #speaker_self
 How exciting! I’ll keep them safely. #speaker_left
 Neat! Who else is going? #speaker_right
 I have five tickets to give away, so there’s you two, Selinder... #speaker_self
+// VAR aman_3_tickets -- 1 =  "Papa-ji and Lukman", 2 = "Papa-ji and Zhihao", 3 = "Lukman and Zhihao"
 
 + Papa-ji and Lukman.[] #speaker_self
     Oh, is that your army friend you always talk about? He sounds like a very nice boy. #speaker_left
-    // VAR aman_3_tickets = "Papa-ji and Lukman"
     VAR aman_3_tickets = 1
     Glad it’s the beefcake and not the clown. #speaker_right
     -> aman_3_2a
 + Papa-ji and Zhihao.[] #speaker_self
     Oh, Zhihao!  #speaker_left
-    // ~  aman_3_tickets = "Papa-ji and Zhihao"
     ~ aman_3_tickets = 2
     Eee, Zhihao. #speaker_right
     -> aman_3_2a
 + Lukman and Zhihao.[] #speaker_self
     Eee, Zhihao. Why not Papa-ji? #speaker_right
     #speaker_right_image:cha_aman_jothi_eyeroll.png
-    // ~  aman_3_tickets = "Lukman and Zhihao"
-    ~ aman_3_tickets = 3
     Exactly my question, Jothi. I tried to get him to invite Papa-ji, but this stubborn boy would not listen. #speaker_left
     #speaker_right_image:cha_aman_jothi_normal.png
     It’s not like Papa-ji doesn’t know about the show, but he’s never said he wants to turn up... #speaker_self
     Maybe he is waiting for you to ask him! #speaker_left
+    ~ aman_3_tickets = 3
     He always seems so busy. Anyway, my tickets are given out already. Maybe next time. #speaker_self
     What am I going to do with this boy? #speaker_left
     -> aman_3_2b
@@ -2361,7 +2359,6 @@ that life is not for me #speaker_1
 not anymore. #speaker_1
 I hear you Sel #speaker_self
 I know where you’re coming from now. #speaker_self
-
 VAR aman_3_career = ""
 I thought about it for a long time. #speaker_self
 and....
