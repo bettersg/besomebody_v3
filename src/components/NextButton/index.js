@@ -1,21 +1,24 @@
-import React from 'react'
-import NavigateNextIcon from '@material-ui/icons/NavigateNext'
-import { Box, Button, Divider, Typography } from '@material-ui/core'
+import React, { useEffect, useCallback } from 'react'
 
 //* Stylesheet
 import "./style.scss"
 
 const NextButton = (props) => {
     const { getStory } = props
-    return (
-      <div 
-      className="next-button" 
-      onClick={() => {
-        getStory()
-      }}
-      >
-      </div>
-    )
+
+    // Trigger next on right arrow key
+    const handleUserKeyPress = useCallback((event) => {
+      const { key } = event;
+      if (key === 'ArrowRight') getStory()
+    }, [getStory]);
+    useEffect(() => {
+      window.addEventListener("keydown", handleUserKeyPress);
+      return () => {
+        window.removeEventListener("keydown", handleUserKeyPress);
+      };
+    }, [handleUserKeyPress]);
+
+    return <div className="next-button" onClick={getStory} />
 }
 
 export default NextButton
