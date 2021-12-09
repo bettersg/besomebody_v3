@@ -2460,8 +2460,8 @@ Sel?? #speaker_self
 #knot:aman_3_4_narration
 #ui:narrator
 #background:bg_aman_bedroom.jpg
-{aman_3_consulting:
-- true:
+{aman_3_career:
+- "consulting":
     Two weeks later.
     Opening night was a success. We got a standing ovation!
     I knew it would be my last time acting on stage for a long while - if ever again.
@@ -2470,7 +2470,7 @@ Sel?? #speaker_self
     I saw Sel in the front row, standing and cheering, at the end. 
     She even ran up to hand me flowers, which the audience loved. 
     She was radiant.
-- false:
+- "acting":
     Two weeks later.
     After Sel and I broke up, I felt numb and empty.
     But I still had a job to do.
@@ -2530,8 +2530,8 @@ What comes next? How is your job hunt going? #speaker_2
 
 
 = aman_3_4a
-{aman_3_consulting:
-- true:
+{aman_3_career:
+- "consulting":
     So I’m actually starting a new job soon :) in business consulting #speaker_self
     Sorry Papa-ji and Mummy-ji, I didn’t have the chance to tell yet... #speaker_self
     I got the job offer some weeks ago and I’ve replied them to accept #speaker_self
@@ -2539,7 +2539,7 @@ What comes next? How is your job hunt going? #speaker_2
     Wonderful 😍 We will find a time to celebrate #speaker_5
     Congratulations! #speaker_2
     Our Harpreet is in banking, I’m sure you will have a lot to talk about. #speaker_2
-- false:
+- else:
     So I will actually be acting in an upcoming play :) Rehearsals start very soon. #speaker_self
     It will open at the Esplanade and I would love to invite all of you to see it #speaker_self
     🙌🏽 AMAZING #speaker_4
@@ -2552,12 +2552,12 @@ What comes next? How is your job hunt going? #speaker_2
 
 = aman_3_4b
 
-{aman_3_consulting:
-- true:
+{aman_3_career:
+- "consulting":
     It’s going well :) I expect to go into consulting soon #speaker_self
     Good choice. #speaker_2
     Our Harpreet is in banking, I’m sure you will have a lot to talk about. #speaker_2
-- false:
+- else:
     So I might try my hand at professional acting :) #speaker_self
     I do have an opportunity lined up and hope to share more soon #speaker_self
     Awaiting the good news, beta! #speaker_5
@@ -2589,9 +2589,10 @@ Jothi: hey # message
 #chat_group_title:Jothi Penji
 #chat_group_image:ico_aman_jothi.png
 #speaker_1_name:Jothi
-{aman_3_consulting:
-- true: -> aman_3_4c1
-- false: -> aman_3_4c2
+{aman_3_career:
+- "consulting":
+ -> aman_3_4c1
+- else: -> aman_3_4c2
 }
 
 = aman_3_4c1
@@ -2644,9 +2645,10 @@ Lunch is ready, beta. Come and eat with me. #speaker_left
 Sure, mum. #speaker_self
 #speaker_left_image:cha_aman_mama_concerned.png
 Is everything alright? You look a bit pensive. #speaker_left
-{aman_3_consulting:
-- true: -> aman_3_4d1
-- false: -> aman_3_4d2
+{aman_3_career:
+- "consulting":
+ -> aman_3_4d1
+- else : -> aman_3_4d2
 }
 
 = aman_3_4d1
@@ -2784,10 +2786,10 @@ What is he typing? Could it be one of his short stories? #inner_monologue
     He says he’s proud… of me! #inner_monologue
 }
 
-{aman_3_consulting:
-- true:
+{aman_3_career:
+- "consulting":
     It’s too bad, there might never be another chance for him to see me on the stage. #inner_monologue
-- false:
+- else:
     Would you like to come and see the next play I’ll be in? #speaker_self
     Certainly. I would like that. #speaker_right
 }
@@ -2831,10 +2833,10 @@ Goodnight, son. I love you too. #speaker_right
 -> aman_3_6
 
 = aman_3_6
-{aman_3_consulting == true && aman_3_paparegrets == false: -> aman_3_6_ending_1}
-{aman_3_consulting == false && aman_3_paparegrets == false: -> aman_3_6_ending_2}
-{aman_3_consulting == true && aman_3_paparegrets == true: -> aman_3_6_ending_3}
-{aman_3_consulting == false && aman_3_paparegrets == true: -> aman_3_6_ending_4}
+{aman_3_career == "consulting" && aman_3_paparegrets == false: -> aman_3_6_ending_1}
+{aman_3_career == "acting"  && aman_3_paparegrets == false: -> aman_3_6_ending_2}
+{aman_3_career == "consulting" && aman_3_paparegrets == true: -> aman_3_6_ending_3}
+{aman_3_career == "acting"  && aman_3_paparegrets == true: -> aman_3_6_ending_4}
 
 === aman_3_6_ending_1 ===
 #knot:aman_3_6_ending_1
