@@ -2074,28 +2074,26 @@ Here you go, one each. #speaker_self
 How exciting! I’ll keep them safely. #speaker_left
 Neat! Who else is going? #speaker_right
 I have five tickets to give away, so there’s you two, Selinder... #speaker_self
+// VAR aman_3_tickets -- 1 =  "Papa-ji and Lukman", 2 = "Papa-ji and Zhihao", 3 = "Lukman and Zhihao"
 
 + Papa-ji and Lukman.[] #speaker_self
     Oh, is that your army friend you always talk about? He sounds like a very nice boy. #speaker_left
-    // VAR aman_3_tickets = "Papa-ji and Lukman"
     VAR aman_3_tickets = 1
     Glad it’s the beefcake and not the clown. #speaker_right
     -> aman_3_2a
 + Papa-ji and Zhihao.[] #speaker_self
     Oh, Zhihao!  #speaker_left
-    // ~  aman_3_tickets = "Papa-ji and Zhihao"
     ~ aman_3_tickets = 2
     Eee, Zhihao. #speaker_right
     -> aman_3_2a
 + Lukman and Zhihao.[] #speaker_self
     Eee, Zhihao. Why not Papa-ji? #speaker_right
     #speaker_right_image:cha_aman_jothi_eyeroll.png
-    // ~  aman_3_tickets = "Lukman and Zhihao"
-    ~ aman_3_tickets = 3
     Exactly my question, Jothi. I tried to get him to invite Papa-ji, but this stubborn boy would not listen. #speaker_left
     #speaker_right_image:cha_aman_jothi_normal.png
     It’s not like Papa-ji doesn’t know about the show, but he’s never said he wants to turn up... #speaker_self
     Maybe he is waiting for you to ask him! #speaker_left
+    ~ aman_3_tickets = 3
     He always seems so busy. Anyway, my tickets are given out already. Maybe next time. #speaker_self
     What am I going to do with this boy? #speaker_left
     -> aman_3_2b
@@ -2361,7 +2359,6 @@ that life is not for me #speaker_1
 not anymore. #speaker_1
 I hear you Sel #speaker_self
 I know where you’re coming from now. #speaker_self
-
 VAR aman_3_career = ""
 I thought about it for a long time. #speaker_self
 and....
@@ -2371,9 +2368,9 @@ and....
 = aman_3_3a
 I’ll take the job. Acting can wait. #speaker_self
 ~ aman_3_career = "consulting"
-VAR aman_3_consulting = true
 Our future together is more important #speaker_self
 Oh jaan… #speaker_1
+VAR aman_3_consulting = true
 Are you sure?? #speaker_1
 I feel so bad like I’ve pressured you into this #speaker_1
 No, don’t think that at all!! #speaker_self
@@ -2416,9 +2413,9 @@ Goodnight ❤️   #speaker_1
 = aman_3_3b
 I can’t take the job. I’m sorry. #speaker_self
 ~ aman_3_career = "acting"
-~ aman_3_consulting = false
 I think I would never forgive myself for turning my back on the chance to act in a professional play #speaker_self
 I would always question myself, and regret things #speaker_self
+~ aman_3_consulting = false
 And over time that might become resentment #speaker_self
 That can’t be healthy for either of us #speaker_self
 I love you. So much #speaker_self
@@ -2585,7 +2582,7 @@ What comes next? How is your job hunt going? #speaker_2
 === aman_3_4c ===
 #knot:aman_3_4c
 #ui:notification
-#background:ui_nadia_message.jpg
+#background:ui_aman_message.jpg
 Jothi: hey # message
 #ui:whatsapp
 #background:whatsapp.png
@@ -2699,8 +2696,8 @@ Do you know that your Papa-ji has faced such choices too? #speaker_left
     He’s always been all about his work. #speaker_self
 - Well don’t tell him I told you this, but he is quite a fine writer. #speaker_left
 
-That’s how he stole my heart. With poetry! #speaker_left
 #speaker_left_image:cha_aman_mama_happy.png
+That’s how he stole my heart. With poetry! #speaker_left
 What?! Papa-ji… and poetry?! #speaker_self
 It’s true! He likes to write more fiction, but he wrote poems just for me. #speaker_left
 He considered switching careers to journalism, but with Jothi on the way, he decided not to. #speaker_left
@@ -2844,6 +2841,7 @@ Goodnight, son. I love you too. #speaker_right
 #ui:narrator
 #background:bg_aman_intro.jpg
 My talk with Papa-ji left my heart feeling lighter.
+~ chapter_3_ending = 1 
 But I never summoned up the courage to ask him if he had any regrets.
 Maybe one day.
 Putting acting aside was the hardest thing I’ve ever done. 
@@ -2860,6 +2858,7 @@ There are many ways in the world... to be me.
 #ui:narrator
 #background:bg_aman_intro.jpg
 My talk with Papa-ji left my heart feeling lighter.
+~ chapter_3_ending = 2
 But I never summoned up the courage to ask him if he had any regrets.
 Maybe one day.
 Sel and I could have had a life together… something like what Papa-ji and mum have.
@@ -2879,6 +2878,7 @@ I won’t give up on being me.
 #ui:narrator
 #background:bg_aman_intro.jpg
 That night in Papa-ji’s study was the most he’d ever opened up to me.
+~ chapter_3_ending = 3
 It left my heart feeling lighter, and helped me feel braver and better about my choice.
 Like me, Papa-ji chose to leave something behind… or at least postpone it for a while.
 He did that out of love, and hopes and dreams.
@@ -2895,6 +2895,7 @@ I’m ready to just be me.
 #ui:narrator
 #background:bg_aman_intro.jpg
 That night in Papa-ji’s study was the most he’d ever opened up to me.
+~ chapter_3_ending = 4
 It left my heart feeling lighter, but I also had a flicker of doubt.
 By choosing acting, was I shutting the door on a different life?
 A life like Papa-ji came to have with mum, and Jothi and me?
