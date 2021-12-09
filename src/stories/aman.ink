@@ -305,9 +305,10 @@ What’s wrong, beta? #speaker_left
 Nothing’s wrong. #speaker_self
 You think I raised you for 19 years and don’t know how to read your face? #speaker_left
 Well… #speaker_self
+VAR aman_1_nsworries = ""
 
 + [I'm just worried about not doing well]  I just don’t want to disappoint you all. #speaker_self
-    VAR aman_1_nsworries = "not doing well"
+    ~ aman_1_nsworries = "not doing well"
     You know me, mum. I’m never the guy who’s the loudest in the room, or the one who assumes he should take charge.   #speaker_self
     I’m not Mr “OK Let’s Go” like Harpreet, or -   #speaker_self
     Aman, you stop right there. #speaker_left
@@ -336,9 +337,10 @@ Well… #speaker_self
     Sorry, I know. I have to excel. #speaker_self
     Aman, I didn’t say that. #speaker_left
     I asked, what do you want to do?   #speaker_left
+        VAR aman_1_nsgoals = ""
         
         ++ [Lie low]
-        VAR aman_1_nsgoals = "lie low"
+        ~ aman_1_nsgoals = "lie low"
         Honestly, I just want to survive NS, mum. #speaker_self
         Then you do that, beta.  #speaker_left
         It’s all I want for you as well. To come home safe and sound. #speaker_left
@@ -696,7 +698,8 @@ But you are going to university remember, and doing business #speaker_1
 So you will be the big dollars man. 🤪 #speaker_1
 
 + [Maybe] Gotta work for my bb, I know #speaker_self
-    VAR aman_1_selinderchat = "maybe"
+    VAR aman_1_selinderchat = ""
+    ~ aman_1_selinderchat = "maybe"
     😘 #speaker_self
     I meant it about you being a career woman though, you shouldn’t hold yourself back at all while I’m stomping mud on this island #speaker_self
     I know how talented you are #speaker_self
@@ -901,6 +904,7 @@ But I can’t tell him that, right? He’s not going to think that’s a good us
     What are these side-projects? #speaker_right
 
 - Uh... #speaker_self
+VAR aman_1_familydinner = ""
 
 + [Acting] -> chapter_1_ending_1
     
@@ -919,7 +923,7 @@ But I can’t tell him that, right? He’s not going to think that’s a good us
 Take a deep breath, Aman. #inner_monologue
 I know this may be a surprise, but I was thinking of trying out some professional acting. #speaker_self
 #speaker_left_image:cha_aman_mama_concerned.png
-VAR aman_1_familydinner = "acting"
+~ aman_1_familydinner = "acting"
 VAR chapter_1_ending = 1
 ... #speaker_left
 ... #speaker_right
@@ -1093,6 +1097,7 @@ Jaan? What are you looking at on your phone? #speaker_left
 hmm #inner_monologue
 uh-huh #inner_monologue
 Oh... #speaker_self
+VAR aman_2_selinderfocus = ""
 + [Sorry, let's focus on us.] -> aman_2_1_1a
 + [These casting calls. ] -> aman_2_1_1b
 
@@ -1101,7 +1106,7 @@ Oh... #speaker_self
 #speaker_left_image:cha_aman_selinder_normal.png
 #speaker_left_name:Selinder
 Nothing, sorry about that. #speaker_self
-VAR aman_2_selinderfocus = "us"
+~ aman_2_selinderfocus = "us"
 Are you sure? #speaker_left
 Yes jaan, don’t worry about it. Today is just about you and me. #speaker_self
 Aww, thank you. I’ve really needed this. #speaker_left
@@ -1166,8 +1171,9 @@ Elsa: Hi Aman this is Elsa from Everyday Productions. Tks for your pics and show
 #speaker_left_name:Selinder
 Yes - they liked it! This is promising. #inner_monologue
 Who is it? #speaker_left
+VAR aman_2_selinderquestion = ""
 + [Give me a minute] Hold on one sec, sorry. It’s a casting agent! She’s still typing... #speaker_self
-    VAR aman_2_selinderquestion = "wait"
+    ~ aman_2_selinderquestion = "wait"
     {aman_2_selinderfocus:
     - "us" : Oh wow! I didn’t know you were still applying for auditions. Yes, better reply quickly. #speaker_left
     - "casting": ...Right.  #speaker_left
@@ -1599,7 +1605,8 @@ Yes. #speaker_self
 I’m going to make this character... #inner_monologue
 
 + [Intimidating] ...A scary guy. #inner_monologue
-    VAR aman_2_actingstyle = "intimidating"
+    VAR aman_2_actingstyle = ""
+    ~ aman_2_actingstyle = "intimidating"
     These lines are ridiculous, but if I keep my eyes looking dead and my demeanour uninterested, I can actually make myself quite sinister. #inner_monologue
 + [Comical] ...A ridiculous figure, over-inflated with his delusions of grandeur. #inner_monologue
     ~ aman_2_actingstyle = "comical"
@@ -1661,13 +1668,14 @@ Oh, yes! But Singaporean Indian. This is just to make it more funny. #speaker_ri
 Funny. #inner_monologue
 The way Indians speak is funny? It’s not funny to me. #inner_monologue
 Should I say something? But won’t that rule me out for the part? #inner_monologue
+VAR aman_2_funnyindian = ""
 
 + [I'm not comfortable with this] -> aman_2_3a
 + [It’s not funny] -> aman_2_3b
 + [Say nothing] -> aman_2_3c
 
 = aman_2_3a
-VAR aman_2_funnyindian = "not comfortable"
+~ aman_2_funnyindian = "not comfortable"
 VAR chapter_2_ending = 2
 I’m not sure this is very appropriate. #speaker_self
 #speaker_right_image:cha_aman_alison_upset.png
@@ -1871,10 +1879,1086 @@ Reflection 5
 
 
 
+-> aman_3_intro
 
 
 
 
 
 
- -> END
+
+
+
+
+// CHAPTER 3
+
+
+
+
+
+=== aman_3_intro ===
+#knot:aman_3_intro
+#ui:narrator
+#background:bg_aman_gurdwara.jpg
+Four years later. 
+
+
+~ chapter_id = 3
+//reset chapter 2-5 variables
+CHAPTER {chapter_id} #title
+The Show Must Go On #title
+
+
+-> aman_3_1_narration 
+
+
+=== aman_3_1_narration ===
+#knot:aman_3_1_narration
+#ui:narrator
+#background:bg_aman_gurdwara.jpg
+Just outside the gurdwara (Sikh temple) my family has attended since I was born, after weekly prayers.
+Where are Sel and her parents? I should say hi before we leave.
+I wonder if Sel is still mad at me. We argued again last night.
+It seems like we quarrel about the smallest things, lately.
+How did it get to this point? 
+We’ve been together seven years already.
+Through school, NS, and the past four years of university...
+Maybe she’s tired of me.
+Oh - there they are! Sel’s parents, Uncle Pritam and Aunty Suvinder.
+ 
+-> aman_3_1
+
+=== aman_3_1 ===
+#knot:aman_3_1
+#ui:scene
+#background:bg_aman_gurdwara.jpg
+#speaker_left_image:cha_aman_auntysuvinder_normal.png
+#speaker_left_name:Aunty Suvinder
+#speaker_right_image:cha_aman_unclepritam_normal.png
+#speaker_right_name:Uncle Pritam
+Aman! How are you, young man? You haven’t visited us in a while. #speaker_right
+Hi uncle, hi aunty! So sorry about that, I’ve been busy with rehearsals for our theatre club’s production. #speaker_self
+Oh, but I thought you graduated already! #speaker_left
+Yes aunty, this is the last production for our cohort, before we hand over the reins fully. #speaker_self
+That’s good, you will be very busy once you start work. #speaker_left
+Speaking of which, Aman, what are your plans now that you’ve graduated? #speaker_right
+
++ [I haven't decided yet...] Ah, I still haven’t really made up my mind… #speaker_self
+    VAR aman_3_lietoselparents = true
+    #speaker_right_image:cha_aman_unclepritam_confused.png
+    Oh? Have you started applying for jobs? #speaker_right
+    Uh… here and there, but I haven’t landed on anything yet... #speaker_self
+    Let’s not put the boy in a tight spot, I’m sure he knows what he’s doing. #speaker_left
+    Yes, of course. #speaker_right
+
++ [I've been applying to jobs] I’ve been applying to jobs, Uncle Pritam. But nothing is confirmed yet. #speaker_self
+    ~ aman_3_lietoselparents = false
+    Well, be patient! I am sure the companies will be lucky to have you. #speaker_right
+    Thank you, uncle! #speaker_self
+- We’d better get going, we’re expecting guests. When you see Selinder, tell her to take her time and we’ll see her at home. #speaker_right
+#speaker_right_image:cha_aman_unclepritam_normal.png
+Sure, I’ll do that. #speaker_self
+Whew! That was a little stressful. #inner_monologue
+#speaker_left_image:pixel.png
+#speaker_right_image:pixel.png
+I’m just glad they didn’t ask me when I’m going to propose to Selinder or anything like that. #inner_monologue
+Speaking of… uh-oh. #inner_monologue
+Here comes Sel, and she doesn’t look happy. #inner_monologue
+#speaker_left_image:cha_aman_selinder2_annoyed.png
+#speaker_left_name:Selinder
+Hey, did you see my parents? #speaker_leftspeaker_righ
+Hey. Yes, they left already, they said to take your time. #speaker_self
+Darn, I needed a lift. #speaker_left
+So what did you guys talk about? #speaker_left
+Oh… job hunting. #speaker_self
+I see. #speaker_left
+What’s with her tone of voice? #inner_monologue
+Something wrong? #speaker_self
+I bet you didn’t tell them. #speaker_left
+Tell them what? #speaker_self
+That you have a job offer. #speaker_left
+{aman_3_lietoselparents: 
+Well, nothing is confirmed yet so I didn’t want to get anyone’s expectations up. #speaker_self
+- else: 
+I didn’t hide anything, they just didn’t ask. #speaker_self
+Anyway, nothing is confirmed yet. #speaker_self
+}
+That’s a weird way to put it. #speaker_left
+They’ve confirmed they want you already, right? So the hold-up is just you. #speaker_left
+
++ [Implying something?] Okay, and? #speaker_self
+    You’re being a bit hostile. #speaker_self
+    No one is attacking you. #speaker_left
+    Sorry, I meant passive aggressive. #speaker_self
+    Ah, crap. I shouldn’t have said that… #inner_monologue
+    Wow. Okay. I’m passive aggressive. #speaker_left
+    Not like you Aman, always the hero. #speaker_left
++ [Is something wrong?] Yes, you could say that. But is something going on? #speaker_self
+    You seem like you’re not in a great mood. #speaker_self
+    I’m fine. #speaker_left
+    I just thought we should speak clearly, not in code language. #speaker_left
+    But I was stating a fact - I haven’t decided, so nothing is confirmed. #speaker_self
+    I wasn’t trying to upset you. #speaker_self
+    Yes, you’re never *trying* to upset me. #speaker_left
+   
+    ++ [What do you mean?] What does that mean, Sel? I’m really trying to understand. #speaker_self
+        You’re always the hero of your own story, right. #speaker_left
+        You never do anything wrong and you’re never *trying* to hurt anyone. #speaker_left
+        Even if you keep hurting them, and you can make it stop. #speaker_left
+    ++ [Okay I'm out]  I think maybe we should have this conversation later, when we’ve… cooled down. #speaker_self
+        Yup, just leave. Avoid. Again. #speaker_left
+- Sel, what on earth is going on? #speaker_self
+
+I know we didn’t end our conversation well last night… #speaker_self
+#speaker_left_image:cha_aman_selinder2_angry.png
+No KIDDING, Aman. You FELL ASLEEP! #speaker_left
+#speaker_left_image:cha_aman_selinder2_sad.png
+While I was waiting for you to reply, like an idiot. CRYING! #speaker_left
+
++ [I didn't mean to!]    I didn’t mean to! #speaker_self
+    Next thing I knew, it was morning and my phone was lying next to me. #speaker_self
+    I was just so tired. #speaker_self
++ [I'm so sorry]    I’m sorry, I’m so sorry! #speaker_self  
+    I was just so tired and I couldn’t stay awake on the phone. #speaker_self
+- You’re always tired, because you’re always off doing things that don’t involve me! #speaker_left
+
+Rehearsals have been - #speaker_self
+#speaker_left_image:cha_aman_selinder2_angry.png
+Aman, this is NOT the time to be talking about your STUPID ACTING! #speaker_left
+NO ONE CARES! #speaker_left
+Grow UP! #speaker_left
+… #inner_monologue
+Wow. #inner_monologue
+I’m literally speechless. #inner_monologue
+What happened to the girl who loved me? #inner_monologue
+Did she ever even - for one moment - understand me? #inner_monologue
+Nothing she or I can say right now could make this right. #inner_monologue
+I can only walk away. #inner_monologue
+
+
+
+
+-> aman_3_2_narration 
+
+
+=== aman_3_2_narration ===
+#knot:aman_3_2_narration
+#ui:narrator
+#background:bg_aman_bedroom_day.jpg
+I’m feeling numb when I return home.
+Could this be how a 7 year relationship ends?
+Has it already ended?
+But I have to put my brave face on.
+I don’t want mum to guess anything is wrong.
+Jothi is visiting today, and she’ll be quick to pick up on it if I seem off.
+
+-> aman_3_2
+
+=== aman_3_2 ===
+#knot:aman_3_2
+#ui:scene
+#background:bg_aman_home.jpg
+#speaker_left_image:cha_aman_mama_happy.png
+#speaker_left_name:Mum
+#speaker_right_image:cha_aman_jothi_normal.png
+#speaker_right_name:Jothi
+Ah, it’s Aman! #speaker_left
+Come sit with us, beta. We’re watching TV together. #speaker_left
+Mum’s favourite soap opera. Will Tina finally elope with Mukesh?! Dng dng dnggg. Better than anything on Netflix. #speaker_right
+Hi mum, hi Jothi. Okay, sure. #speaker_self
+You look tired beta, have you not been getting enough sleep? #speaker_left
+Just worn out from rehearsals. #speaker_self
+When is opening night again? #speaker_right
+This Friday. Actually that reminds me, your tickets. Wait, I have them here somewhere… #speaker_self
+Here you go, one each. #speaker_self
+How exciting! I’ll keep them safely. #speaker_left
+Neat! Who else is going? #speaker_right
+I have five tickets to give away, so there’s you two, Selinder... #speaker_self
+// VAR aman_3_tickets -- 1 =  "Papa-ji and Lukman", 2 = "Papa-ji and Zhihao", 3 = "Lukman and Zhihao"
+
++ Papa-ji and Lukman.[] #speaker_self
+    Oh, is that your army friend you always talk about? He sounds like a very nice boy. #speaker_left
+    VAR aman_3_tickets = 1
+    Glad it’s the beefcake and not the clown. #speaker_right
+    -> aman_3_2a
++ Papa-ji and Zhihao.[] #speaker_self
+    Oh, Zhihao!  #speaker_left
+    ~ aman_3_tickets = 2
+    Eee, Zhihao. #speaker_right
+    -> aman_3_2a
++ Lukman and Zhihao.[] #speaker_self
+    Eee, Zhihao. Why not Papa-ji? #speaker_right
+    #speaker_right_image:cha_aman_jothi_eyeroll.png
+    Exactly my question, Jothi. I tried to get him to invite Papa-ji, but this stubborn boy would not listen. #speaker_left
+    #speaker_right_image:cha_aman_jothi_normal.png
+    It’s not like Papa-ji doesn’t know about the show, but he’s never said he wants to turn up... #speaker_self
+    Maybe he is waiting for you to ask him! #speaker_left
+    ~ aman_3_tickets = 3
+    He always seems so busy. Anyway, my tickets are given out already. Maybe next time. #speaker_self
+    What am I going to do with this boy? #speaker_left
+    -> aman_3_2b
+    
+= aman_3_2a
+Zhihao isn’t so bad, if you’d give him a chance… #speaker_self
+Mm, okay. Actually, the more exciting thing is that you’re inviting Papa-ji. #speaker_right
+Isn’t this the first time in many years he’ll be seeing you on stage? #
+Yes, mum made me invite him. #speaker_self
+Hai Rabba (oh god). He’s your father, of course you must invite him! #speaker_left
+He’s always so busy, I don’t like to even ask him. #speaker_self
+Well it’s a good thing that you asked him, and he said yes! #speaker_left
+-> aman_3_2b
+
+= aman_3_2b
+I need to prepare dinner, the both of you carry on. #speaker_left
+Need help, mummy? #speaker_right
+No, no. You two rarely get to see each other, make good use of it. Just tell me later if Tina and Mukesh decide to elope. #speaker_left
+They never, ever do. Thanks mummy! #speaker_right
+#speaker_left_image:pixel.png
+#speaker_right_image:cha_aman_jothi_diva.png
+Okay, we’re alone. Now you can tell me what’s going on. #speaker_right
+
++ [Nothing] Huh? Nothing lah. #speaker_self
+    Don’t bluff, you looked miserable from the moment you stepped inside the house. #speaker_right
++ [What do you mean?] Huh? #speaker_self
+    Don’t act blur, you look miserable. #speaker_right
+- What’s going on? #speaker_right
+#speaker_right_image:cha_aman_jothi_sad.png
+Uh… fine, Sel and I had a big fight. #speaker_self
+What happened? #speaker_right
+I don’t know, we were fighting last night on the phone, and then this morning again… #speaker_self
+She called my acting stupid. #speaker_self
+Whoa. I wouldn’t have seen that coming from Sel. #speaker_right
+But rewind, what started the fight last night? #speaker_right
+Okay so, I have this job offer. #speaker_self
+Oooh. #speaker_right
+Yes, but don’t tell anyone. I only told Sel. #speaker_self
+It’s a consultancy job, I would go in as an associate. #speaker_self
+The pay is good, and it’s one of the big companies… so Sel doesn’t understand why I haven’t accepted, when the offer is about to expire. #speaker_self
+Wow, you’ve sat on it that long? #speaker_right
+Um, yes. #speaker_self
+What am I missing, what’s the alternative? #speaker_right
+I’ve also been offered a big part in a new play… #speaker_self
+Like an actual paying professional production, at the Esplanade and everything. And the rehearsal schedule is going to be exhausting. #speaker_self
+Whoa! Congrats, chote veer! #speaker_right
+But what now? You’ll turn your back on corporate life and ride off into the arts? Oh god, what a cliche. #speaker_right
+I haven’t decided! #speaker_self
+That’s an even bigger cliche. #speaker_right
+Okay, you might hate me for this, but I can see why Sel is pissed. #speaker_right
+
++ [Me too] She’s been really patient with me, I know. #speaker_self
+    She works so hard, for less pay than I’m being offered. #speaker_self
+    And she’s never said anything about it, but I know she’s been quietly hoping that after I graduate, we could both work, and afford to get married… #speaker_self
+    She has certain dreams about how she wants to be a full-time mom and do volunteer work on the side, one day. #speaker_self
+    She’s even been saving up for a BTO flat. #speaker_self
+    
++ [What right does she have?] But it’s my life, right? #speaker_self
+    It’s not like I’m being a slacker in either option, I have valid choices to make. It’s not an easy decision. #speaker_self
+    Yes, but think about it from Sel’s perspective. #speaker_right
+    She’s been working a crappy job for years, for much less pay than what you’re being offered. #speaker_right
+    Has she ever said anything about getting married? #speaker_right
+    Not explicitly… but we’ve talked about the future, like how we’d both like to have kids. #speaker_self
+    She has certain dreams about how she wants to be a full-time mom and do volunteer work on the side, one day. #speaker_self
+    I know she’s been saving up for a BTO flat. #speaker_self
+
+- Not surprised. I know this girl by now lah, she’s been waiting for you to graduate. Get a job. Make babies. #speaker_right
+#speaker_right_image:cha_aman_jothi_normal.png
+It’s not easy slogging away while your boyfriend is in university, you know. #speaker_right
+And then when he finally graduates from business, he decides to go build an acting career, and compete with all the actual theatre graduates. #speaker_right
+Of course that’s going to be stressful, especially for a girl like Sel. #speaker_right
+What do you mean? #speaker_self
+A bit more traditional, maybe. Seems like the super faithful and devoted type. #speaker_right
+How much time do you spend with her really? First NS, then with uni, and your theatre club. #speaker_right
+I wouldn’t be surprised if she’s been worried about you going off and partying with friends, or meeting Chinese girls. #speaker_right
+I hate parties! I never drink. And what’s the issue with the Chinese girls? #speaker_self
+I don’t fool around, but in any case, inter-racial dating is totally okay. It’s the 21st century. #speaker_self
+Let me think about how to say this. #speaker_right
+Yes, there’s absolutely nothing wrong with dating outside of your race. Love is love. #speaker_right
+Lots of Indian guys date Chinese girls nowadays, and they should do whatever brings them happiness. #speaker_right
+But... have you noticed that it’s not as common for Chinese guys to date Indian girls? #speaker_right
+I guess I never thought about it. #speaker_self
+Right. So I can’t read minds and I can’t say for sure what’s their reason. #speaker_right
+But growing up, I always felt like I was different from the typical girl that Singaporean guys find attractive. #speaker_right
+And it’s not just about having a different skin tone. #speaker_right
+For someone like Sel especially, who would never dream of going clubbing or drinking, or using one of those dodgy dating apps… #speaker_right
+It can be harder to meet people. #speaker_right
+#speaker_right_image:cha_aman_jothi_diva.png
+You look surprised. Did you think it was easy being a Sikh girl? #speaker_right
+
++ [No]  No, of course not. #speaker_self
+    I guess I just never thought hard about it from that perspective. #speaker_self
+    Right. I think it’s easy for people to overlook, because the guys wear turbans and the girls, maybe we don’t stick out as much. #speaker_right
++ [I thought Sikh guys had it harder]
+    No, of course not. #speaker_self
+    I guess I always assumed it was harder for the guys, since we all follow the same faith and the same rules, but the girls can leave their hair long without the turban. #speaker_self
+    Right. Maybe we don’t stick out quite as much. #speaker_right
+- But that doesn’t mean we have an easy time. #speaker_right
+#speaker_right_image:cha_aman_jothi_hairflip.png
+Remember when I kept my hair long as a kid? #speaker_right
+Yes, you kept it long until you entered JC. #speaker_self
+#speaker_right_image:cha_aman_jothi_sad.png
+Well, when I was in school, the kids used to make a big deal about my hair. #speaker_right
+One girl especially, she really had it out for me. #speaker_right
+When we were in Sec Three, she wrote a letter to the teacher, and she made a copy of the letter just for me. #speaker_right
+Huh? What did it say? #speaker_self
+That she had a sensitive sense of smell, and allergies. So she said my hair was very ‘pungent’. Because of the oils I used. #speaker_right
+She said that she couldn’t stand the smell and it made her sick. #speaker_right
+She gave the letter to our form teacher and she dropped a copy on my desk in an envelope labelled “FYI”. #speaker_right
+Oh my god, that is twisted. #speaker_self
+Right. The teacher didn’t do anything, I guess she saw through what was happening. #speaker_right
+But the girl never got off my case. And she even said to me once that since she sits behind me, it would be so easy for her to cut off the end of my braid. #speaker_right
+You know how traumatised I was? I couldn’t concentrate in class at all, I was constantly terrified. #speaker_right
++ [That's awful] That’s awful. #speaker_self
+    Well, it was a long time ago. #speaker_right
+    You know who was really supportive about it though? #speaker_right
+    Who? #speaker_self
++ [You should have told someone!] Why didn’t you tell the teacher? Or any of us at home? #speaker_self
+    I did tell someone. #speaker_right
+    Who? #speaker_self
+- Papa-ji. #speaker_right
+What?! #speaker_self
+Yup. I told him what was going on because he found me crying at the dining table in the dark one night. #speaker_right
+I’m not sure what he did, but the teacher got the whole class to re-shuffle our seating arrangements the next week. #speaker_right
+And she never assigned me to work with that girl for any school projects again. #speaker_right
+Is that why, when you decided to keep your hair short in JC, he never yelled at you? #speaker_self
+#speaker_right_image:cha_aman_jothi_normal.png
+I always found it surprising that he took it so calmly. #speaker_self
+He said he would wait for me to be ready to return, and make the right decision in the future. #speaker_right
+That was actually when I first truly realised that Papa-ji is compassionate inside. #speaker_right
+I think he just doesn’t know how to express it. #speaker_right
+You know, Papa-ji and you are the same in some ways. #speaker_right
+What do you mean? We’re like night and day. #speaker_self
+Yes, but there are similarities. You can both be very absorbed in whatever it is you’re pursuing. #speaker_right
+For Papa-ji, it’s his business. For you, it’s your acting. #speaker_right
+Both of you give everything to what you’re doing. #speaker_right
+And sometimes, along the way, you can both come across as a bit… unaware of what other people are going through. #speaker_right
+But you both have marshmallow hearts. Papa-ji just hides it better. #speaker_right
+
+#speaker_left_image:cha_aman_mama_happy.png
+Wow, you two look like you’re having a serious conversation! #speaker_left
+Dinner is ready! Can you go call your Papa-ji? He’s in his study. #speaker_left
+You mean my bedroom, that he now calls his study? #speaker_right
+Well, now it’s his study. #speaker_left
+When you and Kirpal are rich, you can buy us a big home, and he can have his own study, and you can have your bedroom back, okay? #speaker_left
+Erm. Okay, let me go call Papa-ji from his study. #speaker_right
+
+
+
+
+-> aman_3_3_narration 
+
+
+=== aman_3_3_narration ===
+#knot:aman_3_3_narration
+#ui:narrator
+#background:bg_aman_bedroom.jpg
+Later that night, back in my room.
+My talk with Jothi left me with a lot to think about.
+The more I think about it, the more I see how hard things must have been for Sel.
+...And how my choices don’t just affect my own dreams.
+It must have really hurt her when I just fell asleep halfway last night.
+I need to talk to her.
+I need to tell her what I’ve decided for my future.
+
+-> aman_3_3
+
+=== aman_3_3 ===
+#knot:aman_3_3
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Sel 😍😍 
+#chat_group_image:ico_aman_selinder.png
+#speaker_1_name:Selinder
+#timestamp:22.53
+Hey #speaker_self
+...hey #speaker_1
+
++ [Apologise] I’m sorry I fell asleep while we were fighting last night #speaker_self
+    I didn’t know you were crying on the other end. I wasn’t thinking about how much you were affected #speaker_self
+    No, I’m sorry. #speaker_1
++ [Let her continue]  I was going to msg you too. #speaker_1
+    I’m sorry #speaker_1
+- I said some really awful things #speaker_1
+
+I didn’t mean them #speaker_1
+I shouldn’t have said them #speaker_1
+I don’t know why they came out of my mouth. #speaker_1
+It’s okay #speaker_self
+I mean honestly it hurts. #speaker_self
+But you needed to get it off your chest #speaker_self
+I had a talk with Jothi and she helped me see some things more clearly. I know that all of this hasn’t been easy for you either. #speaker_self
+...And that sometimes, I can be a little self absorbed. #speaker_self
+Thank you for acknowledging that, it actually means a lot. #speaker_1
+We’ve been through so much #speaker_self
+We should know better than to hurt each other like this… #speaker_self
+Hmm sometimes I think #speaker_1
+The longer you know someone, the more you know how to hurt them #speaker_1
+But you’re right, that makes it more important not to misuse what we know #speaker_1
+I shouldn’t have said any of that stuff about your acting. #speaker_1
+You are honestly amazing. #speaker_1
+You always have been… #speaker_1
+Haha… seven years babe. #speaker_self
+More than that #speaker_1
+Lol #speaker_1
+Remember when we met in Punjabi school?? #speaker_1
+We were like how old?? kids!! #speaker_1
+You looked so cute in your patka (headwear for Sikh boys) #speaker_1
+And so chubby #speaker_1
+You were cuter la #speaker_self
+I was such a nerd, and you offered to help me with my math #speaker_self
+Your math hopeless la #speaker_1
+Hahaha #speaker_1
+I miss those days… #speaker_1
+Rmb when you asked me to be your girlfriend? #speaker_1
+Um yes. #speaker_self
+Haha and you got down on one knee. So cringe #speaker_1
+Omg. I was being sincere! #speaker_self
+I knowwwwww and it melted my heart #speaker_1
+I actually had a crush on you for so many years already #speaker_1
+Even though we went to different schools, we always had that weekend Punjabi school connection #speaker_1
+I would look for your family at the gurdwara every week and come up and say hello to your parents, they thought I was such a good kid #speaker_1
+I just wanted to see you 🤣🤣 #speaker_1
+
++ [Do you still feel the same way?] And now?  #speaker_self
+    How do you feel about me? #speaker_self
+    About us #speaker_self
+
++ [It’s been an amazing journey] You were always my best friend Sel #speaker_self
+    Past tense?  #speaker_1
+    ++ [It’s still the same] Present tense #speaker_self
+        Unless you feel differently? #speaker_self
+
+    ++ [We’ve drifted] I don’t mean it that way, but it’s true that things have not been the same #speaker_self
+        For a while now #speaker_self
+        I didn’t know to talk about it with you #speaker_self
+        How do you feel?? #speaker_self
+- Ah… now #speaker_1
+The hard part #speaker_1
+
+#ui:scene
+#background:bg_aman_bedroom.jpg
+Why does my stomach feel hollow? #inner_monologue
+Like my heart is clenching. #inner_monologue
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Sel 😍😍 
+#chat_group_image:ico_aman_selinder.png
+#speaker_1_name:Selinder
+Last night and today were tough for me jaan #speaker_1
+I cried last night #speaker_1
+I cried all afternoon #speaker_1
+I know that your dreams are important to you, and I always told myself we shared the same dreams. #speaker_1
+Or if not, then I would follow yours. #speaker_1
+But now I know, my dreams are important too #speaker_1
+And I’m really sorry, I can’t bear the uncertainty anymore… the waiting, and worrying #speaker_1
+I think I’m in a time of life when I need a bit more stability. #speaker_1
+I love you so much, you have no idea. #speaker_1
+But if we are going to stay together, I need to know if you want the same thing… #speaker_1
+or if you are still exploring and trying things with the acting route #speaker_1
+And if you are, then I’m so happy for you!! but #speaker_1
+that life is not for me #speaker_1
+not anymore. #speaker_1
+I hear you Sel #speaker_self
+I know where you’re coming from now. #speaker_self
+VAR aman_3_career = ""
+I thought about it for a long time. #speaker_self
+and....
++ [I will take the consulting job, and be with you] -> aman_3_3a
++ [I cannot take the consulting job. Sorry, I want to try acting]  -> aman_3_3b
+
+= aman_3_3a
+I’ll take the job. Acting can wait. #speaker_self
+~ aman_3_career = "consulting"
+Our future together is more important #speaker_self
+Oh jaan… #speaker_1
+VAR aman_3_consulting = true
+Are you sure?? #speaker_1
+I feel so bad like I’ve pressured you into this #speaker_1
+No, don’t think that at all!! #speaker_self
+You know, biz school wasn’t all that bad, I actually enjoyed myself #speaker_self
+Might actually be good at it 😬 #speaker_self
+The job offer actually sounds really exciting. I was on the fence either way #speaker_self
+So this isn’t about choosing between you and acting or anything like that #speaker_self
+But it helps me make my choice more peacefully bc the way forward for us will be clearer #speaker_self
+And if you are willing to walk that path with me.... Then that will make me the happiest idiot in the world #speaker_self
+Jaaaaaaan #speaker_1
+I promised myself I was done crying for the day 🤣🤣 #speaker_1
+I was bracing myself to get ditched #speaker_1
+I love you Amandeep Singh Sahota #speaker_1
+Love you more, Selinder Kaur #speaker_self
+I have this big smile on my face #speaker_1
+But jaan, acting #speaker_1
+Don’t close the door on it, ok? I know it will be more difficult with your job #speaker_1
+But maybe you can still do some community theatre on the side, idk #speaker_1
+
++ [Definitely] Sure bb, don’t worry about it. I will find some way 💪 #speaker_self
++ [No, I think I’m done] Ah… I think it’s probably best that I close the door on that for now. #speaker_self
+    I don’t want to split my time  #speaker_self
+- Right now I just want to focus on starting the next part of our lives together #speaker_self
+
+Like saving for BTO #speaker_self
+Omg don’t start #speaker_1
+I’m dreaming already #speaker_1
+Hahahah #speaker_1
+I love you so much bb. I’m gonna sleep happily tonight #speaker_1
+Better go rest, what a big day #speaker_self
+😘😘 #speaker_self
+See you at opening night ok? #speaker_self
+I’ll be front row can’t wait #speaker_1
+Sleep tight bb and get enough rest otherwise can see your panda eyes from the stage #speaker_1
+Goodnight ❤️   #speaker_1
+🥰😘️ Night! #speaker_self
+-> aman_3_4_narration
+
+
+= aman_3_3b
+I can’t take the job. I’m sorry. #speaker_self
+~ aman_3_career = "acting"
+I think I would never forgive myself for turning my back on the chance to act in a professional play #speaker_self
+I would always question myself, and regret things #speaker_self
+~ aman_3_consulting = false
+And over time that might become resentment #speaker_self
+That can’t be healthy for either of us #speaker_self
+I love you. So much #speaker_self
+Can’t we make it work? #speaker_self
+I wish that with all my heart #speaker_1
+But I can’t keep kidding myself. #speaker_1
+I guess this is the last time I’ll ever say it #speaker_1
+I love you, Aman. #speaker_1
+Loved you for a decade #speaker_1
+Always will. #speaker_1
+Thank you for everything #speaker_1
+Goodbye. #speaker_1
+
+#ui:scene
+#background:bg_aman_bedroom.jpg
+Wait, this can’t be it… just like that? #inner_monologue
+
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Sel 😍😍 
+#chat_group_image:ico_aman_selinder.png
+#speaker_1_name:Selinder
+Wait, Sel #speaker_self
+Sel?? #speaker_self
+
++ [Leave it be]
+#ui:scene
+#background:bg_aman_bedroom.jpg
+    It’s no use. #inner_monologue
+    We’ve both made our choices. #inner_monologue
+    My best friend is gone. #inner_monologue
+    -> aman_3_4_narration
++ [Write your last goodbye]
+    I guess that’s it then. I am sorry I couldn’t be what you need in the end. #speaker_self
+    I love you too. I respect your decision. #speaker_self
+    If you ever need me… I’ll be out there. #speaker_self
+    Goodbye Sel. #speaker_self
+    -> aman_3_4_narration
+
+
+=== aman_3_4_narration ===
+#knot:aman_3_4_narration
+#ui:narrator
+#background:bg_aman_bedroom.jpg
+{aman_3_career:
+- "consulting":
+    Two weeks later.
+    Opening night was a success. We got a standing ovation!
+    I knew it would be my last time acting on stage for a long while - if ever again.
+    So I gave everything I had to my performance.
+    A swan song…
+    I saw Sel in the front row, standing and cheering, at the end. 
+    She even ran up to hand me flowers, which the audience loved. 
+    She was radiant.
+- "acting":
+    Two weeks later.
+    After Sel and I broke up, I felt numb and empty.
+    But I still had a job to do.
+    I threw all my energy into my performance for opening night.
+    It was a big success. We even got a standing ovation.
+    As everyone stood and cheered, I scanned the front row for Sel’s face.
+    But of course, she wasn’t there.
+}
+
+-> aman_3_4
+
+=== aman_3_4 ===
+#knot:aman_3_4
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Extended Family Chat
+#chat_group_image:ico_aman_extendedfamily.png
+#speaker_1_name:Papa
+#speaker_2_name:Uncle Ranjit
+#speaker_3_name:Cousin Harpreet
+#speaker_4_name:Jothi
+#speaker_5_name:Mum
+#timestamp:0931
+WELL DONE BABY BRO!! 🥳🥳 #speaker_4
+bg_aman_reviewscreenshot.jpg #speaker_4 #image
+“Turns out The Loser is a winner, thanks to a superb effort by this student theatre club. Especially memorable is lead actor and antihero Aman Singh as Jay: the mysterious new boy in school, with shrouded motives.  #speaker_4
+At first shy and unassuming, Jay reveals his darker shades as he orchestrates a series of escalating antics: from psychological manipulation, to a cynical social media campaign, and finally a rage-fuelled campus protest where all hell breaks loose.  #speaker_4
+Singh delivers a masterful transformation, from awkward newcomer to anarchist-crusader. His physical theatre is remarkable, from the subtlest tics to his slow, prowling swagger. There is nothing pretentious, ever, in his delivery; we are allowed to forget he is acting. He is definitely one to watch.”  #speaker_4
+Whoa! Good job Aman! #speaker_3
+{ aman_3_tickets != 3:  
+    It was a strong performance. #speaker_1 
+}
+My talented boy 🥰 #speaker_5
+{ aman_3_tickets: 
+- 1:
+    Everyone cheered the loudest for our Aman. #speaker_5
+    Especially that tall boy with the huge banner that said Man United’. Very strange. #speaker_5
+    😅 That was Lukman, mum #speaker_self
+    Thanks everyone 🙏🏽🙏🏽 Really grateful for the support #speaker_self
+- 2:
+    Everyone cheered loudly for our Aman. #speaker_5
+    I saw that boy Zhihao nodding off during the performance, but at the end, he shouted and clapped the loudest! #speaker_5
+    😅 Not really Zhihao’s scene #speaker_self
+    But really, thanks everyone 🙏🏽🙏🏽 I’m grateful for the support #speaker_self
+- 3:
+    Everyone cheered loudly for our Aman. #speaker_5
+    There was even a tall boy with a huge banner that said ‘Man and Man United’. I don’t see how it was relevant to the play but he was certainly very enthusiastic. #speaker_5
+    I also saw the neighbour’s boy Zhihao. He was dozing off during the performance, but at the end, he cheered the loudest! #speaker_5
+    Aman, you have a real fan club. #speaker_5
+    😅 Just very enthu friends #speaker_self
+    Thanks everyone 🙏🏽🙏🏽 Really grateful for the support #speaker_self
+}
+Congratulations, Aman. Sounds like you were acting as a real troublemaker, eh! #speaker_2
+What comes next? How is your job hunt going? #speaker_2
++ [Break the news] -> aman_3_4a
++ [Drop a hint] -> aman_3_4b
+
+
+= aman_3_4a
+{aman_3_career:
+- "consulting":
+    So I’m actually starting a new job soon :) in business consulting #speaker_self
+    Sorry Papa-ji and Mummy-ji, I didn’t have the chance to tell yet... #speaker_self
+    I got the job offer some weeks ago and I’ve replied them to accept #speaker_self
+    That’s good, son. #speaker_1
+    Wonderful 😍 We will find a time to celebrate #speaker_5
+    Congratulations! #speaker_2
+    Our Harpreet is in banking, I’m sure you will have a lot to talk about. #speaker_2
+- else:
+    So I will actually be acting in an upcoming play :) Rehearsals start very soon. #speaker_self
+    It will open at the Esplanade and I would love to invite all of you to see it #speaker_self
+    🙌🏽 AMAZING #speaker_4
+    Whoa, that’s awesome! #speaker_3
+    Banking hours are brutal but would love to see it if I can #speaker_3
+    😍 We will find a time to celebrate #speaker_5
+    Thanks everyone! #speaker_self
+}
+-> aman_3_4c
+
+= aman_3_4b
+
+{aman_3_career:
+- "consulting":
+    It’s going well :) I expect to go into consulting soon #speaker_self
+    Good choice. #speaker_2
+    Our Harpreet is in banking, I’m sure you will have a lot to talk about. #speaker_2
+- else:
+    So I might try my hand at professional acting :) #speaker_self
+    I do have an opportunity lined up and hope to share more soon #speaker_self
+    Awaiting the good news, beta! #speaker_5
+    Acting, hmm? Your work life balance should be good. #speaker_2
+    Not like our Harpreet, he is in banking and always meeting with bigshots, so we never get to see him. #speaker_2
+    #ui:scene
+    #background:bg_aman_bedroom.jpg
+    Oh, Uncle Ranjit…… always trying to humblebrag about your Harpreet. #inner_monologue
+    #ui:whatsapp
+    #background:whatsapp.png
+    #chat_group_title:Extended Family Chat
+    #chat_group_image:ico_aman_extendedfamily.png
+    #speaker_1_name:Papa
+    #speaker_2_name:Uncle Ranjit
+    #speaker_3_name:Cousin Harpreet
+    #speaker_4_name:Jothi
+    #speaker_5_name:Mum
+}
+
+-> aman_3_4c
+
+=== aman_3_4c ===
+#knot:aman_3_4c
+#ui:notification
+#background:ui_aman_message.jpg
+Jothi: hey # message
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Jothi Penji
+#chat_group_image:ico_aman_jothi.png
+#speaker_1_name:Jothi
+{aman_3_career:
+- "consulting":
+ -> aman_3_4c1
+- else: -> aman_3_4c2
+}
+
+= aman_3_4c1
+What happened to acting? #speaker_1
++ [I'm giving it up]  I said no to the production #speaker_self
+    I guess I’m done with acting. #speaker_self
+    I just have to be pragmatic #speaker_self
++ [I'm putting it on hold] I said no to the production ☹️  #speaker_self
+    Maybe when work is more stable, I can look for chances on the side #speaker_self
+    But for now I just have to be pragmatic #speaker_self
+- Acting is my first love but it’s not the only thing that matters in my life #speaker_self
+    Hm. #speaker_1
+    That sucks, not gonna lie. #speaker_1
+    But you’ll do well. #speaker_1
+    Buy Sel some nice things. #speaker_1
+    She’s not a materialistic girl #speaker_self
+    Never asks for anything #speaker_self
+    That’s cool #speaker_1
+    But do it anyway ;) free advice from your penji. #speaker_1
+    Haha. Got it. #speaker_self
+-> aman_3_4d
+
+= aman_3_4c2
+So you said no to being a wage slave? #speaker_1
+Yup. #speaker_self
+How did Sel take it? #speaker_1
+Not sure… since we broke up. #speaker_self
+Oh shit. No wonder she wasn’t at your play. #speaker_1
+I’m sorry. #speaker_1
+It’s ok. Keep it to yourself first ok? #speaker_self
+I’ll tell mum next. But not the rest yet #speaker_self
+Still processing. #speaker_self
+Yes. #speaker_1
+You okay? #speaker_1
++ [No] Not really #speaker_self
++ [I will be]  Taking it day by day. I’ll get there #speaker_self
+- You know my address, use it anytime. Here for you #speaker_1
+Thanks penji #speaker_self
+🥰 #speaker_1
+
+-> aman_3_4d
+
+=== aman_3_4d ===
+#knot:aman_3_4d
+#ui:scene
+#background:bg_aman_bedroom_day.jpg
+#speaker_left_image:cha_aman_mama_happy.png
+#speaker_left_name:Mum
+Lunch is ready, beta. Come and eat with me. #speaker_left
+Sure, mum. #speaker_self
+#speaker_left_image:cha_aman_mama_concerned.png
+Is everything alright? You look a bit pensive. #speaker_left
+{aman_3_career:
+- "consulting":
+ -> aman_3_4d1
+- else : -> aman_3_4d2
+}
+
+= aman_3_4d1
+Just thinking about the future. Once I start work, I won’t have time for acting. #speaker_self
+How do you feel about that? #speaker_left
+
++ [At peace] I think I’ll be okay.  #speaker_self
+    It’s hard to give up something you love, but I also have to think about Sel and our future together. #speaker_self
++ [Conflicted] I’m not sure.  #speaker_self
+    I made my choice, and I think it will allow Sel and I to have a better future together. #speaker_self
+    But I still go back and forth in my head. #speaker_self
+    I’m afraid I’ll live my life thinking about the what-ifs. #speaker_self
+- Oh beta... #speaker_left
+
+-> aman_3_4e
+
+= aman_3_4d2
+I noticed Papa-ji didn’t say anything when I talked about going into acting. #speaker_self
+Maybe he disapproves. #speaker_self
+Would you change your decision if he did? #speaker_left
+
++ [Maybe] I don’t know. I don’t know if I’m doing the right thing. #speaker_self
++ [No] I guess not. But I don’t want him to be disappointed. #speaker_self
+- And mum, I have to tell you... #speaker_self
+
+I’m sorry, but Sel and I broke up over this. #speaker_self
+Oh, beta… #speaker_left
+Come and give me a hug. #speaker_left
+It hurts. #speaker_self
+It’s all my fault… #speaker_self
+Don’t cry, beta. It’s not your fault. #speaker_left
+I’m proud of you for being so talented, and following your passion. #speaker_left
+
+-> aman_3_4e
+
+= aman_3_4e
+Let me tell you something I have learned in this life. #speaker_left
+There are no perfect endings. No perfect choices. #speaker_left
+No matter what you decide, nothing will always be rosy. #speaker_left
+What matters is that you don’t spend your life looking over one shoulder, and building up regrets. #speaker_left
+If you can move forward with your eyes open, knowing that any path you take has its sacrifices… #speaker_left
+You can face the future with serenity. With chardikala. #speaker_left
+Do you know that your Papa-ji has faced such choices too? #speaker_left
+
++ [Like what?] Like what choices? #speaker_self
++ [I don’t believe it] I can’t imagine that. He never hesitates in anything.  #speaker_self
+    He’s always been all about his work. #speaker_self
+- Well don’t tell him I told you this, but he is quite a fine writer. #speaker_left
+
+#speaker_left_image:cha_aman_mama_happy.png
+That’s how he stole my heart. With poetry! #speaker_left
+What?! Papa-ji… and poetry?! #speaker_self
+It’s true! He likes to write more fiction, but he wrote poems just for me. #speaker_left
+He considered switching careers to journalism, but with Jothi on the way, he decided not to. #speaker_left
+But when he locks himself up in his study late at night, sometimes he is working on his short stories. #speaker_left
+The closer he gets to retirement, the more he writes. #speaker_left
+But he never talks about it. Why wouldn’t he share this with his family? #speaker_self
+You know, he was not always such a stern-looking man. #speaker_left
+Sometimes, I do think, he might have regrets in his heart. #speaker_left
+He deals with them quietly, on his own. Maybe that is why he has become so reserved. #speaker_left
+You should talk to him, Aman. #speaker_left
+You two are more alike than you think. #speaker_left
+That’s weird. Jothi said the same thing. #inner_monologue
+
+-> aman_3_5_narration
+
+=== aman_3_5_narration ===
+#knot:aman_3_5_narration
+#ui:narrator
+#background:bg_aman_papastudy.jpg
+Later that night.
+I can’t stop thinking about what mum and Jothi said.
+Could it be true?
+Do we have more in common than I ever imagined?
+I should talk to him... if I can remember how.
+I knock on the door of Jothi’s old bedroom, which Papa-ji uses as a study now.
+
+-> aman_3_5
+
+
+=== aman_3_5 ===
+#knot:aman_3_5
+#ui:scene
+#background:bg_aman_papastudy.jpg
+#speaker_right_image:cha_aman_papa_normal.png
+#speaker_right_name:Papa
+Yes? #speaker_right
+Hi Papa-ji. I just wanted to… #speaker_self
+
++ [Say goodnight] Say goodnight. #speaker_self
+    Ah. Goodnight, son. #speaker_right
++ [See what you're up to] See what you’re up to. #speaker_self
+    I.. er.. Just curious. #speaker_self
+    Just my own matters. #speaker_right
+    Ah… cool. #speaker_self
+- Crap. Think hard… #inner_monologue
+What is he typing? Could it be one of his short stories? #inner_monologue
+
++ [What are you working on?]
+    Are you working on - work stuff? #speaker_self
+    #speaker_right_image:cha_aman_papa_kind.png
+    Why do I always sound like such an idiot in front of him? #inner_monologue
+    Actually, I’m working on some personal things. #speaker_right
+    ...A bit of fiction. Just a hobby. #speaker_right
+    Really! #speaker_self
+
+    ++ [What's it about?] What’s it about? #speaker_self
+        Well, it’s not in any state to show anyone. #speaker_right
+        When I’m done, I might let you have a look. #speaker_right
+        You would probably have a better eye than me, since you are active in the arts. #speaker_right
+    ++ [That sounds cool]
+        That sounds really interesting. #speaker_self
+        I’m glad you think so. #speaker_right
+        There is a young chap in the story. Maybe when it is drafted, I’ll let you have a look. #speaker_right
+        You would know better than me what young people are like these days. #speaker_right
+    -- Yes, that sounds great. #speaker_self
+        I never knew you liked to write. #speaker_self
+        Well, you never asked. #speaker_right
+        Ouch. #inner_monologue
+        But fair. #inner_monologue
+    
++ [Don’t sleep too late]
+    Don’t sleep too late, Papa-ji. #speaker_self
+    #speaker_right_image:cha_aman_papa_kind.png
+    Well, thank you for checking in on me. #speaker_right
+    
+- Since you’re here, Aman. #speaker_right
+
+{aman_3_tickets == 3:
+    I’m glad to hear your performance went well the other night. #speaker_right
+    I should have invited him. #inner_monologue
+- else: 
+    You did a very good job in your play the other night. #speaker_right
+    I was proud. #speaker_right
+    He says he’s proud… of me! #inner_monologue
+}
+
+{aman_3_career:
+- "consulting":
+    It’s too bad, there might never be another chance for him to see me on the stage. #inner_monologue
+- else:
+    Would you like to come and see the next play I’ll be in? #speaker_self
+    Certainly. I would like that. #speaker_right
+}
+Thanks, Papa-ji. #speaker_self
+
++ [Goodnight, then] -> aman_3_5a
++ [Ever have regrets?] -> aman_3_5b
+
+= aman_3_5a
+#speaker_right_image:cha_aman_papa_kind.png
+Goodnight. #speaker_self
+VAR aman_3_paparegrets = false
+Goodnight, son. #speaker_right
+-> aman_3_6
+
+= aman_3_5b
+May I ask you a personal question? #speaker_self
+~ aman_3_paparegrets = true
+You may. #speaker_right
+Do you ever regret anything? #speaker_self
+#speaker_right_image:cha_aman_papa_sad.png
+Like, your life choices… or in your career? #speaker_self
+... #speaker_right
+There are some things that I think would have been interesting to explore, if circumstances were different. #speaker_right
+But had I done any of those things, then life would have turned out quite differently. #speaker_right
+But what if that life would have been better? #speaker_self
+Honestly speaking, there was a time - a short period of time, when your sister was still young, and you were a few months from being born - that I was in a dark place. #speaker_right
+We were not doing well financially, and I felt a heavy responsibility on my shoulders to make sure that all of you would be provided for. #speaker_right
+I never wanted to walk away. But I did wonder what life would be like if I didn’t have all of these… responsibilities. #speaker_right
+I did have dreams of my own and I would have liked to pursue them. #speaker_right
+#speaker_right_image:cha_aman_papa_kind.png
+Then you were born, Aman. And over time, as I saw how you and your sister were growing, these thoughts faded. #speaker_right
+Because of my past choices, I now have your mother. Your sister. And I have you. #speaker_right
+If I had made different choices, perhaps I would still have a good life. Even a wonderful life. #speaker_right
+But I would not have this life. #speaker_right
+And this is the life I want. #speaker_right
+Mum and Jothi were right. #inner_monologue
+We do have more in common than I thought. #inner_monologue
+Goodnight, Papa-ji. I love you. #speaker_self
+Goodnight, son. I love you too. #speaker_right
+-> aman_3_6
+
+= aman_3_6
+{aman_3_career == "consulting" && aman_3_paparegrets == false: -> aman_3_6_ending_1}
+{aman_3_career == "acting"  && aman_3_paparegrets == false: -> aman_3_6_ending_2}
+{aman_3_career == "consulting" && aman_3_paparegrets == true: -> aman_3_6_ending_3}
+{aman_3_career == "acting"  && aman_3_paparegrets == true: -> aman_3_6_ending_4}
+
+=== aman_3_6_ending_1 ===
+#knot:aman_3_6_ending_1
+#ui:narrator
+#background:bg_aman_intro.jpg
+My talk with Papa-ji left my heart feeling lighter.
+~ chapter_3_ending = 1 
+But I never summoned up the courage to ask him if he had any regrets.
+Maybe one day.
+Putting acting aside was the hardest thing I’ve ever done. 
+But I think it’s the right choice.
+With Sel by my side, I’ll work hard every day to make it so.
+For so long, acting was the only way I knew how to show my true self.
+Not just as a Sikh with a turban, but as me. 
+But I know there are other ways out there that I can live a joyful and meaningful life.
+There are many ways in the world... to be me.
+-> chapter_3_ending_1
+
+=== aman_3_6_ending_2 ===
+#knot:aman_3_6_ending_2
+#ui:narrator
+#background:bg_aman_intro.jpg
+My talk with Papa-ji left my heart feeling lighter.
+~ chapter_3_ending = 2
+But I never summoned up the courage to ask him if he had any regrets.
+Maybe one day.
+Sel and I could have had a life together… something like what Papa-ji and mum have.
+I wonder what that life would have looked like.
+But as mum would remind me, we can only move forward.
+I don’t know if I can succeed in the world of acting.
+If there are enough roles out there for a guy like me.
+But even if there aren’t, I’ll write new roles.
+I will make my own script.
+I won’t give up on being me.
+-> chapter_3_ending_2
+
+
+
+=== aman_3_6_ending_3 ===
+#knot:aman_3_6_ending_3
+#ui:narrator
+#background:bg_aman_intro.jpg
+That night in Papa-ji’s study was the most he’d ever opened up to me.
+~ chapter_3_ending = 3
+It left my heart feeling lighter, and helped me feel braver and better about my choice.
+Like me, Papa-ji chose to leave something behind… or at least postpone it for a while.
+He did that out of love, and hopes and dreams.
+Talking to him made me realise that when you give up some dreams, you don’t do it for anybody else.
+You do it for yourself. Because you have a different dream.
+I’m ready to move forward, for a new dream.
+I am more than my acting. I am full of possibilities.
+I’m ready to just be me.
+-> chapter_3_ending_3
+
+
+=== aman_3_6_ending_4 ===
+#knot:aman_3_6_ending_4
+#ui:narrator
+#background:bg_aman_intro.jpg
+That night in Papa-ji’s study was the most he’d ever opened up to me.
+~ chapter_3_ending = 4
+It left my heart feeling lighter, but I also had a flicker of doubt.
+By choosing acting, was I shutting the door on a different life?
+A life like Papa-ji came to have with mum, and Jothi and me?
+But as mum would remind me, we can only move forward.
+My heart remains open to start a family one day.
+But right now, I have a different dream to run after.
+I know it won’t be easy - reality won’t change overnight.
+But I believe I can help that change happen faster. 
+If I need to, I’ll write my own roles. I’ll make my own script.
+By staying true to my art.
+True... to being me.
+-> chapter_3_ending_4
+
+
+
+
+=== chapter_3_ending_1 === // for debug only
+#knot:chapter_3_ending_1
+#ui:story_end
+#reflection_id:6
+the end = 1    
+VAR chapter_3_ending = 0 
+~ chapter_3_ending = 1 
+VAR story_finished = true
+.
+
+    -> END
+ 
+=== chapter_3_ending_2 === // for debug only
+#knot:chapter_3_ending_2
+#ui:story_end
+#reflection_id:6
+the end = 2
+~ chapter_3_ending = 2
+~ story_finished = true
+.
+      -> END
+
+=== chapter_3_ending_3 === // for debug only
+#knot:chapter_3_ending_3
+#ui:story_end
+#reflection_id:6
+the end = 3
+~ chapter_3_ending = 3
+~ story_finished = true
+.
+    -> END
+
+=== chapter_3_ending_4 === // for debug only
+#knot:chapter_3_ending_4
+#ui:story_end
+#reflection_id:6
+the end = 4
+~ chapter_3_ending = 4
+~ story_finished = true
+.
+      -> END
+
+=== story_end_browser ===
+#ui:story_end_browser
+#reflection_id:6
+reflection browser
+
+    -> END
