@@ -378,6 +378,7 @@ export const CHARACTER_MAP = [
       {
         chapterId: 3,
         number: 3,
+        reflectionId:6,
         title: "The Show Must Go On",
         knotTag: "aman_3_intro",
         summary: "After a shocking argument, Aman must decide how his life’s script will unfold.",
