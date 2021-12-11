@@ -124,7 +124,9 @@ RETURN TO MAIN MENU
 // VAR ending_id = 1;
 Aman Singh #title
 VAR character_id = 2
+~ character_id = 2
 VAR chapter_id = 1
+~ chapter_id = 1
 VAR aman_mood = 10
 Sat Sri Akaal! (Sikh greeting: True is the Immortal one!)
 I’m Amandeep Singh Sahota. I usually go by Aman (peaceful one).
@@ -637,6 +639,7 @@ Like what? #speaker_left
 
 + [Confide in him about your dream] I’ve actually been thinking about trying… acting? #speaker_self
     VAR aman_1_sharedreamslukman = true
+    ~ aman_1_sharedreamslukman = true
     Whoa. Not bad huh, Aman Got Talent. #speaker_left
     Hurr. Not sure about talent, but I’ve always been in drama since young. #speaker_self
     I like acting. People say I’m good at it, and I like how I feel when I do it. #speaker_self
@@ -925,6 +928,7 @@ I know this may be a surprise, but I was thinking of trying out some professiona
 #speaker_left_image:cha_aman_mama_concerned.png
 ~ aman_1_familydinner = "acting"
 VAR chapter_1_ending = 1
+~ chapter_1_ending = 1
 ... #speaker_left
 ... #speaker_right
 Acting? #speaker_left
@@ -1618,6 +1622,7 @@ Now, listen closely. #speaker_self
 
 + [I've looked at the files] I’ve looked at the files, and I must say. #speaker_self
     VAR aman_2_actingaccuracy = 1
+    ~ aman_2_actingaccuracy = 1
 + [I've looked at the facts] I’ve looked at the facts, and I must say. #speaker_self
     ~ aman_2_actingaccuracy = 0
 - Things don’t add up in your favour. #speaker_self
@@ -1677,6 +1682,7 @@ VAR aman_2_funnyindian = ""
 = aman_2_3a
 ~ aman_2_funnyindian = "not comfortable"
 VAR chapter_2_ending = 2
+~ chapter_2_ending = 2
 I’m not sure this is very appropriate. #speaker_self
 #speaker_right_image:cha_aman_alison_upset.png
 Huh? Oh, er... #speaker_right
@@ -1945,6 +1951,7 @@ Speaking of which, Aman, what are your plans now that you’ve graduated? #speak
 
 + [I haven't decided yet...] Ah, I still haven’t really made up my mind… #speaker_self
     VAR aman_3_lietoselparents = true
+    ~ aman_3_lietoselparents = true
     #speaker_right_image:cha_aman_unclepritam_confused.png
     Oh? Have you started applying for jobs? #speaker_right
     Uh… here and there, but I haven’t landed on anything yet... #speaker_self
@@ -2079,6 +2086,7 @@ I have five tickets to give away, so there’s you two, Selinder... #speaker_sel
 + Papa-ji and Lukman.[] #speaker_self
     Oh, is that your army friend you always talk about? He sounds like a very nice boy. #speaker_left
     VAR aman_3_tickets = 1
+    ~ aman_3_tickets = 1
     Glad it’s the beefcake and not the clown. #speaker_right
     -> aman_3_2a
 + Papa-ji and Zhihao.[] #speaker_self
@@ -2371,6 +2379,7 @@ I’ll take the job. Acting can wait. #speaker_self
 Our future together is more important #speaker_self
 Oh jaan… #speaker_1
 VAR aman_3_consulting = true
+~ aman_3_consulting = true
 Are you sure?? #speaker_1
 I feel so bad like I’ve pressured you into this #speaker_1
 No, don’t think that at all!! #speaker_self
@@ -2802,6 +2811,7 @@ Thanks, Papa-ji. #speaker_self
 #speaker_right_image:cha_aman_papa_kind.png
 Goodnight. #speaker_self
 VAR aman_3_paparegrets = false
+~ aman_3_paparegrets = false
 Goodnight, son. #speaker_right
 -> aman_3_6
 
@@ -2919,9 +2929,10 @@ True... to being me.
 #ui:story_end
 #reflection_id:6
 the end = 1    
-VAR chapter_3_ending = 0 
+VAR chapter_3_ending = 1
 ~ chapter_3_ending = 1 
 VAR story_finished = true
+~ story_finished = true
 .
 
     -> END

@@ -44,6 +44,7 @@ Minigame // must add some text
 
 // DECLARE GLOBAL VARIABLES
 VAR character_id = 1
+~ character_id = 1
 VAR nadia_mood = 10
 VAR gavin_mood = 10
 VAR nadia_liar = 0
@@ -65,6 +66,7 @@ VAR nadia_liar = 0
 CHAPTER 1 #title
 NADIA BINTE RAHIM #title
 VAR chapter_id = 1
+~ chapter_id = 1
 Hey there. I’m Nadia.
 This is a big year for me, since my A Levels are coming up. 
 That’s going to decide whether I make it into medical school like I’m hoping, so... No pressure.
@@ -77,7 +79,7 @@ It’s fine though, I’m mostly used to it by now. When I need someone who just
 She’s a nurse, so that’s very cool. We’re super close, and she always keeps it real.
 So that’s me -- Nadia.
 And this is what it’s like, to be me.
-CHAPTER 1 #title
+CHAPTER {chapter_id} #title
 An Unexpected Invitation #title
 
 
@@ -269,6 +271,7 @@ It's not weird, right? #speaker_self
 = nadia_1_2a
 I feel more comfortable in these, actually. My mom just got them for me. #speaker_self
 VAR nadia_trackpants_choice = 1
+~ nadia_trackpants_choice = 1
 Really? It looks a bit warm, don't you think? #speaker_right
 Yeah they are, a bit. But that's just the material. #speaker_self
 Well, do you want to borrow my shorts? I have an extra pair. #speaker_right
@@ -536,6 +539,7 @@ Wait a minute. Is he really coming for my plate with his chopsticks? #inner_mono
 = nadia_1_3a
 (Jokingly) Eh, who said I was done! #speaker_self
 VAR nadia_gavinsharefood = 1
+~ nadia_gavinsharefood = 1
 Sharing is caring, Nad. #speaker_left
 Please, like you haven’t been eyeing it since just now. #speaker_self
 Oh come on! Pleaaaaaase? #speaker_left
@@ -802,6 +806,7 @@ MAMPOS. #speaker_1
 #speaker_1_name:Azlin
 So do you 😐 #speaker_self
 VAR chapter_1_ending = 1
+~ chapter_1_ending = 1
 haha that’s my own pasal and problem 😬 #speaker_1
 Do your parents know about gavin? #speaker_1
 Not really. It’s very early for anything right? You know how my dad can be #speaker_self
@@ -1042,6 +1047,7 @@ Okok, gimme a min #speaker_self
 bg_nadia_selfiehijab.jpg #speaker_self #image
 + 😎 Rocking it![] #speaker_self
     VAR nadia_2_confidenthijab = true
+    ~ nadia_2_confidenthijab = true
     I’m turning up like this.  #speaker_self
     Still a cutie!  #speaker_1
     Whew, what a relief 😏  #speaker_self
@@ -1096,6 +1102,7 @@ Oh! He’s reaching out for a hug. #inner_monologue
 = nadia_2_2a1
 Gee thanks. You clean up well too. So where’s this cafe? #speaker_self
 VAR nadia_2_huggavin = true
+~ nadia_2_huggavin = true
 It’s just outside, I heard they have really good tempeh — #speaker_left
 ... seriously?? #speaker_self
 Hahaha no, just kidding. #speaker_left
@@ -1289,6 +1296,7 @@ Well.. I hope not.	#speaker_left
 Good. Can’t believe we bumped into your cousin. Are you sure she’s not stalking us? 	#speaker_left
 + [Let's hide - just you and me] I wouldn’t put it past her. How about we go hide somewhere? #speaker_self
     VAR nadia_2_hidewithgavin = true
+    ~ nadia_2_hidewithgavin = true
     Do you still want coffee? 	#speaker_left
     Ooh I don’t know. How caffeinated do we want to be? #speaker_self
     Haha, you’re right - I feel quite awake already after all that. 	#speaker_left
@@ -1405,6 +1413,7 @@ Oh boy. Should I tell her about med school? #inner_monologue
 = nadia_2_3a1
 Ok, I have to tell you something.  #speaker_self
 VAR nadia_2_chloelibrarychoice = 1
+~ nadia_2_chloelibrarychoice = 1
 What is it? #speaker_left
 I’m going to try for med school too.  #speaker_self
 Oh shit. Really? #speaker_left
@@ -1501,6 +1510,7 @@ Nad, it’s easier for you to get into things.  #speaker_left
 === nadia_2_3d ===
 Right. #speaker_self
 VAR nadia_2_confrontchloe = false
+~ nadia_2_confrontchloe = false
 Argh it’s so unfair. You fill the "quota", you know?  #speaker_left
 No, I don’t know, Chloe. #inner_monologue
 #speaker_left_image:cha_nadia_chloe_school_concerned.png
@@ -1730,6 +1740,7 @@ You’re right. I need to unclench. I wanted to talk to you about... #speaker_se
 #speaker_right_name:Azlin
 ..what Chloe said. Like it doesn’t even make sense!  #speaker_self
 VAR chapter_2_ending = 1
+~ chapter_2_ending = 1
 I couldn’t even say anything back you know, I was stunned - like has she always felt this way? Is that really how she thinks? #speaker_self
 #speaker_right_image:cha_nadia_azlin_concerned.png
 Ok ok, one thing at a time. This Chloe person, your volleyball friend? #speaker_right
@@ -2066,6 +2077,7 @@ Sure? Kinda disappeared after school, thought something happened. You can tell m
     + [Decline]
     I don’t think so… it might be tough.. #speaker_self
     VAR nadia_3_gavinchoice = "no" // change this to later
+    ~ nadia_3_gavinchoice = "no" 
     Really? Am gonna be out whole day with them tmr, just join us whenever la #speaker_1
     No as in.. I’m just tired #speaker_self
     😕 #speaker_1
@@ -3356,6 +3368,7 @@ It’s not even 8 yet. You said 8.30, kan? Plenty of time.. #speaker_right
     #background:bg_nadia_selfiehijab.jpg
     Ok, take a deep breath. 
     VAR chapter_3_ending = 1 
+    ~ chapter_3_ending = 1 
     I'm going to be ok. 
     I just need... to be me.
     
@@ -3463,6 +3476,7 @@ It’s not even 8 yet. You said 8.30, kan? Plenty of time.. #speaker_right
 the end = 1    
 ~ chapter_3_ending = 1 
 VAR story_finished = true
+~ story_finished = true
 .
 
     -> END
