@@ -67,5 +67,42 @@
       1,      
       3
     ]
+  },
+  {
+    "id": 7,  
+    "story":"Ravi", 
+    "chapter":2,
+    "didyouknow": "Hardship affects different communities in different ways.",
+    "media": "https://www.channelnewsasia.com/news/singapore/is-casual-racism-okay-seven-singaporeans-share-stories-7862072",
+    "context": {
+      "character_name": "Ravi"
+    },
+    "questions": [
+      1,      
+      6,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 10,  
+    "story":"Ravi", 
+    "didyouknow": "Hardship affects different communities in different ways.",
+    "media": "https://www.facebook.com/mosg.tv/videos/705929542901799/",
+    "mediatype" : "video",
+    "mediaimage" : "/didyouknow/nadia_video.png",
+    "context": {
+      "character_name": "Ravi"
+    },
+    "quickQuestions": [     
+      9,      
+      2,
+      8,
+      10
+    ],
+    "longQuestions": [
+      1,      
+      3
+    ]
   }
 ]

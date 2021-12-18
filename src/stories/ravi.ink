@@ -79,9 +79,9 @@ VAR character_id = 3
 #ui:narrator
 #background:bg_ravi_intro.jpg
 #music:ravi_intro.mp3
-CHAPTER 1 #title
 Ravi Kannaswamy #title
 VAR chapter_id = 1
+~ chapter_id = 1
 Hey there. I’m Ravi. I’m 24. Aviation engineer.  
 Well, ASPIRING aviation engineer, anyway. I’m still in uni. 
 One more year to go until I join the working world! I want to be able to support my family soon.
@@ -91,18 +91,18 @@ He used to be in the airline industry too. He’s part of the reason I wanted to
 He used to sneak Revati and I into the hangars on the weekends, just to look at those airplanes he’d be working on. 
 Just looking at those planes, and imagining them take off to the skies – it filled my heart with a great sense of wonder.
 And then...one day, it happened. 
-It was just another regular day of work. Appa left early in the morning, but nobody knew he was not coming back.
+It was just another regular day of work. Appa left early in the morning... and didn't come back.
 He left us that day and he’s been uncontactable since. We called and called, but he never picked up. 
 Sometimes I think he wanted to be like the airplanes he worked on, free to roam the skies, to go anywhere they pleased. But I might never find out.
-Sounds dramatic, but a true story.
+Sounds dramatic, but that's my story.
 Since then, Amma, Revati and I have had to fend for ourselves. 
 It’s not been easy, especially for Amma. She works a 12-hour shift everyday as a sales assistant at the department store. 
-Revati is doing her A levels, but she’s done part-time jobs too. 
+Revati is doing her A levels, and she’s done part-time jobs too. 
 My dream is to make it a little easier for them. If I can fulfill mine, I would be helping theirs too.  
 But first, I have grades to keep up, an internship to find, and then hopefully, a job! Like a good Indian boy haha. 
 So that’s me -- Ravi.
 And this is what it’s like, to be me.
-CHAPTER 1 #title
+CHAPTER {chapter_id} #title
 Home Truths #title
 
 
@@ -152,6 +152,7 @@ Ravi, could you wait for just a minute? We need to talk about something. This is
 
 + [Keep eating] Oh my god, this is so good! How in the world did Amma Pushpa Aunty make this?  #speaker_self
     VAR ravi_1_motherempathy = 0
+    ~ ravi_1_motherempathy = 0
     The way it blends with the richness of the coconut milk and the kick of the curry leaves. You can really taste the - #speaker_self
     ...Ravi. Listen to me. #speaker_left
     ...Sorry, please continue. #speaker_self
@@ -261,7 +262,7 @@ Am I a burden to you?  #inner_monologue
     Ravi, we have no choice. We have to move on. #speaker_left
 
 + [Question her]  I need to find out why she kept the rent a secret from us. #inner_monologue
-    ~ ravi_1_motherempathy -= 1
+    // ~ ravi_1_motherempathy -= 1
     More importantly, I need to know why she mentioned my uni fees like that. She didn’t mention Revati’s school fees!  #inner_monologue
     Are my uni fees that much of a burden? #inner_monologue
     Oh. We’re two months late? Why didn’t you tell us? #speaker_self
@@ -397,33 +398,45 @@ Ok. But, I think I’ll go stay in Lukman’s house tonight. His place is nearer
 Much easier to make it to class tomorrow. I’m sure he has an extra bed to spare me. #speaker_self
 Besides, I don’t think I can get any rest on this couch. Either my feet are dangling out, or I have to curl up like an armadillo. #speaker_self
 
-#ui:narrator
-#background:bg_ravi_pushpahome.jpg
-So much happened in those few days. 
-Moving out from a place we lived nearly all our lives, staying with Pushpa Aunty, and learning so much about Amma. 
-Moving so many boxes, everything that we’ve ever owned, into a small room. 
-And all of that, on top of uni. I’m so tired. 
-I’m thankful we managed to stay with Pushpa Aunty – we can save money this way, for a while. 
-But I think I’ll just ask Lukman to help me with the readings, and I’ll just sleep as soon as I can. 
-I’m so tired, I could fall asleep just sitting...here...ZZZZZ… 
-Little did I know, those weren’t the end of my problems. There were more to come...
 
 {ravi_1_motherempathy >= 3 : 
-    VAR chapter_1_ending = 1
     -> chapter_1_ending_1
     else 
-    ~ chapter_1_ending = 2
     -> chapter_1_ending_2
 }
 
 === chapter_1_ending_1 ===
 #knot:chapter_1_ending_1
+#ui:narrator
+#background:bg_ravi_pushpahome.jpg
+So much happened in those few days. 
+VAR chapter_1_ending = 1
 ~ chapter_1_ending = 1
+Moving out from a place we lived nearly all our lives, staying with Pushpa Aunty, and learning so much about Amma. 
+I tried my best to be there for her, and to comfort her.
+Moving so many boxes, everything that we’ve ever owned, into a small room. 
+And all of that, on top of uni. I’m so tired. 
+I’m thankful we managed to stay with Pushpa Aunty – we can save money this way, for a while. 
+But I think I’ll just ask Lukman to help me with the readings, and I’ll just sleep as soon as I can. 
+I’m so tired, I could fall asleep just sitting...here...ZZZZZ… 
+
 -> ravi_1_reflection
 
 === chapter_1_ending_2 ===
 #knot:chapter_1_ending_2
+#ui:narrator
+#background:bg_ravi_pushpahome.jpg
+So much happened in those few days. 
 ~ chapter_1_ending = 2
+Moving out from a place we lived nearly all our lives, staying with Pushpa Aunty, and learning so much about Amma. 
+Moving so many boxes, everything that we’ve ever owned, into a small room. 
+And all of that, on top of uni. I’m so tired. 
+I don't know why this had to happen to us, again. Why am I so unlucky? 
+Why can't my life just be a little easier?
+I guess I should be grateful that at least we managed to stay with Pushpa Aunty – we can save money this way, for a while. 
+But I think I’ll just ask Lukman to help me with the readings, and I’ll just sleep as soon as I can. 
+I’m so tired, I could fall asleep just sitting...here...ZZZZZ… 
+
 -> ravi_1_reflection
 
 === ravi_1_reflection ===
@@ -431,6 +444,81 @@ Little did I know, those weren’t the end of my problems. There were more to co
 #ui:chapter_reflection
 #reflection_id:7
 Reflection 7
+
+
+
+
+
+
+
+
+
+
+-> ravi_2_intro
+
+
+
+
+
+
+
+
+
+
+// CHAPTER 2
+
+
+
+
+
+=== ravi_2_intro ===
+#knot:ravi_2_intro
+#ui:narrator
+#background:bg_ravi_pushpahome.jpg
+
+It’s been a few weeks since we’ve made the move. I’d had so much delicious food, I think I’ve gained weight. How am I going to pass IPPT?
+My schedule nowadays is a bit boring. I come here after class, get a scrumptious dinner (yay for Pushpa aunty!), do my schoolwork, then head over to Lukman’s to rest. It was going well, for a while.
+ ButI can’t do this forever though. I can’t go to Lukman’s every day. He’s probably getting sick of my face already. The first time was fun, kind of like a sleepover. 
+ The second time was like we were roommates. The third, fourth, fifth times...he’s probably expecting me to pay rent or something. 
+ His parents must be really annoyed with me too. They don’t say it, but I can feel their eyes in the back of my skull whenever I go over. I mean, I even hang around on the weekends. It must be awkward for them too. I can’t keep being a burden to Lukman either.
+ I need to find some other place to stay. Maybe stay on my own if I can. That might be nice, for a change. I’ve always shared a room with Revati, anyway.
+ So that brings me to what I’m doing nowadays. I’ve been scouring so many websites, trying to find a good place to rent. PropertyMagic, HouseHero, Room4Rent – you name it, I’ve tried it. But I can’t afford to rent most places. Not too many options for my budget.
+
+~ chapter_id = 2
+CHAPTER {chapter_id} #title
+Room For Improvement  #title
+
+
+-> ravi_2_1_narration 
+
+
+=== ravi_2_1_narration ===
+#knot:ravi_2_1_narration
+#ui:narrator
+#background:bg_ravi_rentals.jpg
+Hmm...this listing sounds good. one bedroom apartment, 11th floor, 5 minutes away from university? This must be a dream! **** $2222 per month?? This must be a nightmare! Who can afford that? Maybe if I just sort by “price”… ****
+ Oh, this room sounds about right. Seems promising. It’s a small room – maybe other people are staying there too? But it’s cheap, and relatively close to uni. 
+ Maybe I can make friends with whoever’s staying there. Or better yet, I might be able to talk them down to my price. They should take some pity on me. I’m just a student.
+ Let me see if he’s offering any other rooms ... oh wow, he has two! Maybe I can rent the other room instead – it’s a bit bigger though, so it’s probably more expensive... I’ll see how it goes.
+ Who do I talk to? I see an agent’s name here. “Agent James” huh? Sounds like a reliable guy. Actually, no. Sounds like James Bond.
+ Oh, his phone number is here. Maybe I should drop him a text. Well, here goes nothing.
+
+
+-> ravi_2_1
+
+
+=== ravi_2_1 ===
+#knot:ravi_2_1
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Property Agent James
+#chat_group_image:ico_ravi_james.png
+#speaker_1_name:James
+
+
+
+
+
 
 
 -> END
