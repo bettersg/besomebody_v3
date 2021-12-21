@@ -2250,6 +2250,10 @@ When you and Kirpal are rich, you can buy us a big home, and he can have his own
 Erm. Okay, let me go call Papa-ji from his study. #speaker_right
 
 
+#knot:aman_3_minigame
+#ui:mcq
+#game_id:6
+Minigame 6 // must add some text
 
 
 -> aman_3_3_narration 
