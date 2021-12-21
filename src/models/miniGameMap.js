@@ -374,6 +374,83 @@ export const MINI_GAME_MAP = [
     ],
   },
 
+  // aman 3
+  {
+    game_id: 6,
+    ui: "mcq",
+    introduction: "Aman met Sel at a Gurdwara. Let's explore what this means to Sikhs.",
+    questions: [
+      {
+        question_id: 1,
+        question:
+          "A Gurdwara is a Sikh temple.",
+        type: "text",
+        correct_answer_id: 1,
+        explanation:
+          "True. The first Gurdwara in Singapore was established in 1912 and is called the Central Sikh Temple, or Wadda Gurdwara ('The Big Temple')",
+        answers: [
+          {
+            answer_id: 1,
+            title: "True",
+          },
+          {
+            answer_id: 2,
+            title: "False",
+          },
+        ],
+      },
+      {
+        question_id: 2,
+        question:
+          "Which one of these is most likely a Gurdwara?",
+        correct_answer_id: 3,
+        explanation: "It's option 3. A gurdwara can be identified from a distance by tall flagpoles bearing the orange & black Sikh flag, the Nishan Sahib (a logo with three swords and a special throwing weapon).",
+        type: "image",
+        answers: [
+          {
+            answer_id: 1,
+            imageUrl: "aman_3_temple.jpg",
+            title: "Option 1",
+          },
+          {
+            answer_id: 2,
+            imageUrl: "aman_3_mosque.jpg",
+            title: "Option 2",
+          },
+          {
+            answer_id: 3,
+            imageUrl: "aman_3_gurdwara.jpg",
+            title: "Option 3",
+          },
+          {
+            answer_id: 4,
+            imageUrl: "aman_3_church.jpg",
+            title: "Option 4",
+          },
+        ],
+      },
+      {
+        question_id: 3,
+        question:
+          "Any visitor and devotee to a Gurdwara will be served food, as part of Sikh practice.",
+        type: "text",
+        correct_answer_id: 1,
+        explanation:
+          "True. Langgar (originally meaning anchor) was instituted by Guru Nanak, to cater food for visitors and devotees who came to meet the Guru. This now includes community service and assistance to the needy, in addition to its original purpose of food distribution, funded by donations from the Sikh community.",
+          answers: [
+            {
+              answer_id: 1,
+              title: "True",
+            },
+            {
+              answer_id: 2,
+              title: "False",
+            },
+          ],
+      },  
+    ],
+  },
+
 ];
   
 
