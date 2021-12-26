@@ -90,7 +90,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 30,
   },
   mainText: {
-    fontSize: '1.1rem',
+    fontSize: '1.0rem',
     fontWeight: '400',    
     margin: "20px",
 
@@ -103,6 +103,9 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "uppercase",
     textDecoration: 'none',
   },
+  videoImage: {
+    width: '100%'
+  }
 }))
 
 const DidYouKnowStep = ({ reflection , next}) => {
@@ -119,7 +122,7 @@ const DidYouKnowStep = ({ reflection , next}) => {
           <Typography className={classes.mainText}>{reflection.didyouknow}</Typography>
           {reflection.media ?
             reflection.mediatype === "video" ?
-              <a href={reflection.media} target="_blank" className={classes.link}><img src={reflection.mediaimage} /></a> :
+              <a href={reflection.media} target="_blank" className={classes.link}><img src={reflection.mediaimage} className={classes.videoImage}/></a> :
               <a href={reflection.media} target="_blank" className={classes.link}><Button variant="contained" className={classes.findOutBtn} >Find Out More</Button></a>
             : null
           }

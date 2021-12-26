@@ -384,6 +384,9 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
   useEffect(() => fetchCount(), [reflectionIds]);
   useEffect(() => fetchMoreResponsesIfNotOverflow(), [hasMore, lastDocSnapshot, reflectionIds]);
 
+  console.log(responses)
+  console.log(reflectionId)
+
   return (
     <div>
       <SwipeableDrawer

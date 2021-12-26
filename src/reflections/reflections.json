@@ -1,18 +1,17 @@
-[
+[ 
   {
     "id": 1,  
     "story":"Aman", 
     "chapter":1,
-    "didyouknow": "This story is based on focus group interviews with members from this community, and deals with an important element of the Sikh identiity. ",
+    "didyouknow": "This story is based on focus group interviews with members from this community, and deals with an important element of the Sikh identiity and gender expectations. ",
     "media": "https://www.ricemedia.co/culture-people-daggers-bracelets-and-boxer-shorts-the-religious-articles-of-sikhs/",
     "context": {
       "character_name": "Aman"
     },
     "questions": [
-      1,      
-      4,
-      2,
-      3
+     9,2,11,1,3
+
+   
     ]
   },
   {
@@ -97,7 +96,7 @@
     "quickQuestions": [     
       9,      
       2,
-      8,
+      12,
       10
     ],
     "longQuestions": [
@@ -106,3 +105,6 @@
     ]
   }
 ]
+
+
+
