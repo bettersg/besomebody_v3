@@ -122,7 +122,7 @@ After a tiring day at school, I come home to our little apartment in Tampines.
 #knot:ravi_1_1
 #ui:scene
 #background:bg_ravi_home.jpg
-#speaker_left_image:cha_ravi_amma_normal.png
+#speaker_left_image:cha_ravi_mum_normal.png
 #speaker_left_name:Amma
 Halooo ma! #speaker_self
 Vaada kanna (welcome, darling). Have you eaten? #speaker_left
@@ -138,7 +138,7 @@ It’s definitely Amma’s signature dish, to say the least. #inner_monologue
 Anyway, go shower, you look so sweaty. Then you can eat. I’ll reheat the curry for you. #speaker_left
 + Hmm ok. See you in 10 minutes.[] #speaker_self
 + It's ok ma, let's eat while it's hot! []  #speaker_self
-#background:bg_ravi_homedinner.jpg
+#background:bg_ravi_home.jpg
 - As always, it smells amazing! I feel like I could eat 10 bowls all by myself. Did you do anything different this time? #speaker_self
 Ah, so you found my secret ingredient! I put in some garam masala that Pushpa Aunty gave to us when we went over last week. #speaker_left
 It’s very fragrant. I think she made it herself. You know how she is. #speaker_left
@@ -177,7 +177,7 @@ Ravi, could you wait for just a minute? We need to talk about something. This is
 - Yes. #speaker_left
 Isn’t today supposed to be a late shift for you? How come you’re back home early? #speaker_self
 That’s what I wanted to talk about... #speaker_left
-#speaker_left_image:cha_ravi_amma_sad.png
+#speaker_left_image:cha_ravi_mum_worried.png
 So, today at the shop...they told me that they had to let me go. #speaker_left
 What? #speaker_self
 Yeah. The manager told me this morning. #speaker_left
@@ -233,7 +233,7 @@ I tried my best to be a good employee. I made sure to go early every day, and to
 I cleaned the shop during breaks, I never took a sick day. #speaker_left
 I thought that I could stay there, and that everything would be fine. #speaker_left
 But that’s no longer true. #speaker_left
-#speaker_left_image:cha_ravi_amma_crying.png
+#speaker_left_image:cha_ravi_mum_worried.png
 But it’s ok. What’s done is done. We will have to move on. And also, more importantly, we will have to move out of here. #speaker_left
 Move out? Why? #speaker_self
 I didn’t tell you or Revati about this, but...kanna, we are already two months late for rent.  #speaker_left
@@ -277,7 +277,7 @@ Am I a burden to you?  #inner_monologue
     We have no choice. We have to move on. #speaker_self
 
 - Ok... I get it. Where are we moving to? How much will it cost?  #speaker_self
-#speaker_left_image:cha_ravi_amma_normal.png
+#speaker_left_image:cha_ravi_mum_normal.png
 I have some good news. It won’t cost anything. #speaker_left
 What do you mean? #speaker_self
 We’re moving to Pushpa aunty’s house. She has a spare room, now that Kamala has moved out with her husband.  #speaker_left
@@ -297,7 +297,7 @@ As it is, my course is extremely tough. This is not making it any easier. #inner
 === ravi_1_2_narration ===
 #knot:ravi_1_2_narration
 #ui:narrator
-#background:bg_ravi_pushpahome.jpg
+#background:bg_ravi_pushpa_home.jpg
 We packed our lives into bags and started moving in to Pushpa Aunty's house.
 -> ravi_1_2
 
@@ -305,8 +305,8 @@ We packed our lives into bags and started moving in to Pushpa Aunty's house.
 === ravi_1_2 ===
 #knot:ravi_1_2
 #ui:scene
-#background:bg_ravi_pushpahome.jpg
-#speaker_left_image:cha_ravi_amma_normal.png
+#background:bg_ravi_pushpa_home.jpg
+#speaker_left_image:cha_ravi_mum_normal.png
 #speaker_left_name:Amma
 #speaker_right_image:cha_ravi_revati_normal.png 
 #speaker_right_name:Revati
@@ -328,11 +328,11 @@ Wait, I’m unpacking! There’s so much to do. #speaker_right
 (picks up suitcase) Oh god, Amma was right, this IS heavy! #speaker_right
 I guess that’s how you can tell we’re siblings. #inner_monologue
 #ui:narrator
-#background:bg_ravi_pushpahome.jpg
+#background:bg_ravi_pushpa_home.jpg
 10 minutes later.
 #ui:scene
-#background:bg_ravi_pushpahome.jpg
-#speaker_left_image:cha_ravi_amma_normal.png
+#background:bg_ravi_pushpa_home.jpg
+#speaker_left_image:cha_ravi_mum_normal.png
 #speaker_left_name:Amma
 #speaker_right_image:cha_ravi_revati_normal.png 
 #speaker_right_name:Revati
@@ -374,7 +374,9 @@ Maybe I need to take a stand. #inner_monologue
     You know the prof, the strict one I told you about?  #speaker_self
     He’ll kill me if I go to his class late, or worse, fall asleep... #speaker_self
     And my class is at 9. It’s so far away, I’ll need to leave at 7. At least Revati is near to her school. #speaker_self
+    #speaker_right_image:cha_ravi_revati_concerned.png 
     Oh. In that case, your sister and I will move everything. But you’ll have to help again tomorrow, ok? #speaker_left
+    #speaker_right_image:cha_ravi_revati_normal.png 
     Okay, I will. #speaker_self
 
 + [Protest] I can’t keep doing this! It’s already so late.  #inner_monologue
@@ -389,6 +391,7 @@ Maybe I need to take a stand. #inner_monologue
     And my class is at 9. It’s so far away, I’ll need to leave at 7. #speaker_self
     The prof will kill me if I go to his class late. Or worse, fall asleep during class. #speaker_self
     At least Revati is near to her school. #speaker_self
+    #speaker_right_image:cha_ravi_revati_concerned.png 
     Can you do just a bit? #speaker_left
     Amma, I wish I could, but I’m really tired. I still haven’t prepared for tomorrow’s class yet. It’s already really late. #speaker_self
 - Anna (brother), why don’t you help a bit? #speaker_right
@@ -396,6 +399,7 @@ Just whatever Amma needs for the storage room. I will do the rest. #speaker_righ
 Then we can all go to sleep. We can finish this quickly. #speaker_right
 Ok. But, I think I’ll go stay in Lukman’s house tonight. His place is nearer to campus.  #speaker_self
 Much easier to make it to class tomorrow. I’m sure he has an extra bed to spare me. #speaker_self
+#speaker_right_image:cha_ravi_revati_normal.png 
 Besides, I don’t think I can get any rest on this couch. Either my feet are dangling out, or I have to curl up like an armadillo. #speaker_self
 
 
@@ -408,7 +412,7 @@ Besides, I don’t think I can get any rest on this couch. Either my feet are da
 === chapter_1_ending_1 ===
 #knot:chapter_1_ending_1
 #ui:narrator
-#background:bg_ravi_pushpahome.jpg
+#background:bg_ravi_pushpa_home.jpg
 So much happened in those few days. 
 VAR chapter_1_ending = 1
 ~ chapter_1_ending = 1
@@ -425,7 +429,7 @@ I’m so tired, I could fall asleep just sitting...here...ZZZZZ…
 === chapter_1_ending_2 ===
 #knot:chapter_1_ending_2
 #ui:narrator
-#background:bg_ravi_pushpahome.jpg
+#background:bg_ravi_pushpa_home.jpg
 So much happened in those few days. 
 ~ chapter_1_ending = 2
 Moving out from a place we lived nearly all our lives, staying with Pushpa Aunty, and learning so much about Amma. 
@@ -474,7 +478,7 @@ Reflection 7
 === ravi_2_intro ===
 #knot:ravi_2_intro
 #ui:narrator
-#background:bg_ravi_pushpahome.jpg
+#background:bg_ravi_pushpa_home.jpg
 
 It’s been a few weeks since we’ve made the move. I’d had so much delicious food, I think I’ve gained weight. How am I going to pass IPPT?
 My schedule nowadays is a bit boring. I come here after class, get a scrumptious dinner (yay for Pushpa aunty!), do my schoolwork, then head over to Lukman’s to rest. It was going well, for a while.
