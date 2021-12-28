@@ -470,7 +470,7 @@ export const CHARACTER_MAP = [
   },
   {
     characterId: 3,
-    name: "Ravi Kannaswamy",
+    name: "Ravi Kannasamy",
     linkName: "ravi",
     profileImage: "/images/profile_ravi.png",
     characterIntroImage: "/character_choice_page/ravi.png", 
@@ -497,12 +497,12 @@ export const CHARACTER_MAP = [
         endings: [
           {
             endingId: 1,
-            title: "Ravi shows some empathy",
+            title: "Ravi shows concern for mum"",
             inkVar: "chapter_1_ending_1",
           },
           {
             endingId: 2,
-            title: "Ravi puts himself first",
+            title: "Ravi is confused and questions mum",
             inkVar: "chapter_1_ending_2",
           },
         ]
@@ -513,7 +513,7 @@ export const CHARACTER_MAP = [
         reflectionId:8,
         title: "Room For Improvement ",
         knotTag: "ravi_2_intro",
-        summary: "Ravi decides to move out. But his choices aren’t that straightforward.",
+        summary: "Ravi decides to move out. But his choices are not that straightforward.",
         playable: false,
         images: [           
           "/images/bg_launch.jpg",
@@ -536,7 +536,7 @@ export const CHARACTER_MAP = [
         chapterId: 3,
         number: 3,
         reflectionId:9,
-        title: "Coffee Shop Kannaswamy ",
+        title: "Coffee Shop Kannasamy ",
         knotTag: "ravi_3_intro",
         summary: "Ravi finds a new gig at a cafe. And possibly something more.",
         playable: false,
@@ -547,12 +547,12 @@ export const CHARACTER_MAP = [
         endings: [
           {
             endingId: 1,
-            title: "Azlin gets upset with you",
+            title: "Ravi shows concern for mum",
             inkVar: "chapter2_ending_1",
           },
           {
             endingId: 2,
-            title: "Azlin tells you to give him up",
+            title: "Ravi is confused by the news",
             inkVar: "chapter2_ending_2",
           },
         ]
