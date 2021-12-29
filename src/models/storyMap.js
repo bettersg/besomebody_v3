@@ -497,7 +497,7 @@ export const CHARACTER_MAP = [
         endings: [
           {
             endingId: 1,
-            title: "Ravi shows concern for mum"",
+            title: "Ravi shows concern for mum",
             inkVar: "chapter_1_ending_1",
           },
           {
@@ -512,9 +512,9 @@ export const CHARACTER_MAP = [
         number: 2,
         reflectionId:8,
         title: "Room For Improvement ",
-        knotTag: "ravi_2_intro",
+        knotTag: "ravi_2_2",
         summary: "Ravi decides to move out. But his choices are not that straightforward.",
-        playable: false,
+        playable: true,
         images: [           
           "/images/bg_launch.jpg",
           "/images/bg_reflections.jpg",

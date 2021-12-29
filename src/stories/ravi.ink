@@ -499,16 +499,18 @@ Room For Improvement  #title
 === ravi_2_1_narration ===
 #knot:ravi_2_1_narration
 #ui:narrator
-#background:bg_ravi_rentals.jpg
+#background:bg_ravi_rentals1.jpg
 Hmm...this listing sounds good. one bedroom apartment, 11th floor, 5 minutes away from university? This must be a dream! **** $2222 per month?? This must be a nightmare! Who can afford that? Maybe if I just sort by “price”… ****
+#background:bg_ravi_rentals2.jpg
  Oh, this room sounds about right. Seems promising. It’s a small room – maybe other people are staying there too? But it’s cheap, and relatively close to uni. 
  Maybe I can make friends with whoever’s staying there. Or better yet, I might be able to talk them down to my price. They should take some pity on me. I’m just a student.
  Let me see if he’s offering any other rooms ... oh wow, he has two! Maybe I can rent the other room instead – it’s a bit bigger though, so it’s probably more expensive... I’ll see how it goes.
+#background:bg_ravi_rentals3.jpg 
  Who do I talk to? I see an agent’s name here. “Agent James” huh? Sounds like a reliable guy. Actually, no. Sounds like James Bond.
  Oh, his phone number is here. Maybe I should drop him a text. Well, here goes nothing.
 
 
--> ravi_2_1
+-> ravi_2_2
 
 
 === ravi_2_1 ===
@@ -518,11 +520,229 @@ Hmm...this listing sounds good. one bedroom apartment, 11th floor, 5 minutes awa
 #chat_group_title:Property Agent James
 #chat_group_image:ico_ravi_james.png
 #speaker_1_name:James
+Hi, is this James? #speaker_self
+
+I saw the listing on PleaseLeaseThese. The one for two different rooms? #speaker_self
+
+I would like to rent a room, if that’s possible! #speaker_self
+
+Hi, yes! This is James. Pleasure to “e-meet” you. #speaker_1
+
+Yes, I think I know which rooms you’re referring to. The ones rented out by Mr Lim? #speaker_1
+
+Good news. The listings are currently available. #speaker_1
+
+Ah...nobody I know says “e-meet”. This man must be a professional agent after all! This looks good. Maybe I’ll be able to get a room faster than I thought. #inner_monologue
+
+Great! Yes, I am interested in the rooms. #speaker_self
+
+
+Which room are you interested in? #speaker_1
+
+The big room, or the small room? #speaker_1
+
+
+The smaller room please. #speaker_self
+
+The one for $500 per month. #speaker_self
+
+
+Ok. The 4 bedroom apartment in Clementi? #speaker_1
+
+It’s shared housing you know right? The other rooms are rented out already. #speaker_1
+
+The landlord is staying there also. #speaker_1
+
+Yep! That’s fine with me. #speaker_self
+
+Ok, how many people are renting? #speaker_1
+
+The landlord has a strict policy and each room can only be rented out to one tenant at a time. #speaker_1
+
+
+Yeah, I understand. #speaker_self
+
+It’ll just be me renting the room. Don’t worry about it. #speaker_self
+
+Will you be expecting any frequent visitors? #speaker_1
+
+Girlfriend, family etc? #speaker_1
+
+
+No...no girlfriend. #speaker_1
+
+Don’t think my family will visit either. #speaker_1
+
+Wow… way to rub it in. Was that really necessary? But ok, I can work on that next time. The room is more important. #inner_monologue
+
+
+Ok, no girlfriend right? Great. #speaker_1
+
+Great, he says. Sheeeeesh! #inner_monologue
+
+To rent the room, there’s a process we need to go through. #speaker_1
+
+Firstly, can I have your profile? #speaker_1
+
+
+Profile? Sorry, what do you mean? #speaker_self
+
+What kind of profile? You’re setting up a dating profile for me ah? #inner_monologue
+
+
+What are you doing? Working here? #speaker_1
+
+
+Oh. That’s what you meant by profile. #speaker_self
+
+Nah, I’m just a student. Still studying in uni. #speaker_self
+
+
+Ok. What’s your background? #speaker_1
+
+
+I’m sorry. Background? #speaker_self
+
+I think if I say my background is currently a blank wall he’ll just block me. #inner_monologue
+
+
+Your details lah. #speaker_1
+
+Name, IC all that. #speaker_1
+
+
+Just fill up for me. #speaker_1
+
+Wait ah, let me send. #speaker_1
+
+
+
+Name: #speaker_1
+Pax: #speaker_1
+Occupation: #speaker_1
+Ethnicity: #speaker_1
+Budget: #speaker_1
+Years of lease: #speaker_1
+Expected shift in date: #speaker_1
+
+
+
+I just need the small room for $500. Is it available? #speaker_self
+
+
+Yes, available. #speaker_1
+
+But I need to know your details first. We need to follow the procedure. #speaker_1
+
+
+
+Ok, sure. Give me a second. #speaker_self
 
 
 
 
 
+Done, here you go. #speaker_self
 
+
+
+Name: Ravi Kannasamy #speaker_self
+Pax: 1 #speaker_self
+Occupation: Student #speaker_self
+Ethnicity: Indian #speaker_self
+Budget: $500 #speaker_self
+Years of lease: 1 #speaker_self
+Expected shift in date: Aug 20 #speaker_self
+
+
+Ok, great. #speaker_1
+I check with landlord first. #
+
+
+Ok, thank you! #speaker_self
+
+
+
+
+Hi Ravi. #speaker_1
+
+That was fast. #speaker_self
+
+So, what did he say? #
+
+
+Sorry, landlord says cannot. #
+
+But don’t worry. I have other room for you. You want or not? #
+
+Other location. You want? Yishun got one room. Jurong also got. #
+
+
+Sorry, why cannot? #speaker_self
+
+Was the room already taken? #
+
+I can still take the bigger room. #
+
+Sorry, no. #speaker_1
+
+The room isn’t taken yet. #
+
+Huh? #speaker_self
+
+Then what? #
+
+
+Landlord say this room not suitable for Indian, sorry. #speaker_1
+
+WHAT? How can he say that? It doesn’t make any sense. What do you mean the room not suitable for Indians? #inner_monologue
+
+-> END
+
+=== ravi_2_2 ===
+#knot:ravi_2_2
+#ui:email
+#background:email.png
+#emailfrom:Ravi <ravi@email.com>
+#emailto:Univ Housing <admin@univ.edu.sg>
+#emailsubject: Query about dorm room
+To whom it may concern, #email
+
+I’m writing to inquire about the possibility of housing in the university dorm. My student number is A0155007R. #email
+I understand that I might be a little late, but I need to move out immediately due to family matters. It would be great if I could stay on campus, if possible.  #email
+Do let me know if there are any options available. Any room is fine. Please let me know if you need more details.#email
+Thank you, #email
+Ravi #email
+.
+-> ravi_2_2a
+
+=== ravi_2_2a ===
+#knot:ravi_2_2a
+#ui:email
+#background:email.png
+#emailfrom:Univ Housing <admin@univ.edu.sg>
+#emailto:Ravi <ravi@email.com>
+#emailsubject: Query about dorm room
+#replyemaildate:On Wed 6 Oct 2021, Ravi <ravi@email.com> wrote:  
+#replyemailtext: To whom it may concern /n I’m writing to inquire about the possibility of housing in the university dorm. My student number is A0155007R. /n I understand that I might be a little late, but I need to move out immediately due to family matters. It would be great if I could stay on campus, if possible. /n Do let me know if there are any options available. Any room is fine. Please let me know if you need more details.  /n Thank you, /n Ravi 
+Hello Ravi, #email
+I’m afraid you are a little late. Housing occupancy has been settled before the beginning of the semester. You would need to wait for the next semester to get a room. #email
+You mentioned that you had to move due to family matters. While we may not be currently able to offer you a room, the school is concerned for the wellbeing of its students. Is there anything else we could do to help? #email
+
+Regards, #email
+Rebecca #email
+.
+-> ravi_2_2b
+
+=== ravi_2_2b ===
+#knot:ravi_2_2b
+#ui:emailinbox
+
+#newemailfrom: Rebecca
+#newemailprofileicon:ico_nadia_nadia.png
+#newemailsubject:Enquiry on Dorm Housing
+#newemailpreview: Hello Ravi, I'm afraid you are a little late...
+
+-> ravi_2_2a
 
 -> END
