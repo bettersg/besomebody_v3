@@ -14,12 +14,14 @@ import Notification from '../NotificationPage/Notification'
 import Reflection from '../ReflectionsPage/Reflection'
 import StoryEnd from '../StoryEndPage/StoryEnd'
 import StoryEndBrowser from '../StoryEndPage/StoryEndBrowser'
+import Email from '../EmailPage/EmailPage'
 
 const getUi = ({
   currentParagraphs,
   specialTags,
   globalVariables,
   whatsAppParagraphs,
+  emailParagraphs,
 }) => {
   switch (specialTags.ui) {
     case 'scene': {
@@ -33,6 +35,9 @@ const getUi = ({
     }
     case 'notification': {
       return <Notification currentParagraphs={currentParagraphs} />
+    }  
+    case 'email': {
+      return <Email currentParagraphs={emailParagraphs} />
     }  
     // case 'survey': {
     //   // TODO: update this component
@@ -102,7 +107,7 @@ const InkController = () => {
     currentKnot,
     globalVariables,
     isStoryStarted,
-
+    
     // Methods
     saveStory,
   } = useInkContext()
@@ -111,14 +116,16 @@ const InkController = () => {
   const { name } = useParams()
   // console.log('inkController globalVar: ' , globalVariables)
   // console.log('inkController specialTags: ' , specialTags)
-  // console.log('inkController paragraphs: ' , paragraphs)
+  console.log('inkController paragraphs: ' , paragraphs)
   // console.log('inkController knot: ' + currentKnot)
   // ==============================================================
   // Filter paragraphs based on current knot
   // ==============================================================
   const [currentParagraphs, setCurrentParagraphs] = useState([])
   const [whatsAppParagraphs, setWhatsAppParagraphs] = useState([])
+  const [emailParagraphs, setEmailParagraphs] = useState([])
 
+  console.log('paragraphs', paragraphs)
   useEffect(() => {
     if (currentKnot || paragraphs[paragraphs.length - 1]?.currentKnot) {
       const nextParagraphs = paragraphs.filter((paragraph) => {
@@ -127,6 +134,11 @@ const InkController = () => {
       if (specialTags.ui === 'whatsapp') {
         setWhatsAppParagraphs([...nextParagraphs])
         return setCurrentParagraphs([...whatsAppParagraphs, ...nextParagraphs])
+      }
+      if (specialTags.ui === 'email') {        
+        
+        setEmailParagraphs([...nextParagraphs])        
+        return setCurrentParagraphs([...emailParagraphs, ...nextParagraphs])
       }
       return setCurrentParagraphs([...nextParagraphs])
     }
@@ -162,6 +174,7 @@ const InkController = () => {
         specialTags,
         globalVariables,
         whatsAppParagraphs,
+        emailParagraphs,
       })}
 
       {/* Render event triggers */}
