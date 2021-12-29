@@ -14,6 +14,7 @@ import { useParams, Link, useHistory } from 'react-router-dom'
 import SideMenu from '../SimpleSideMenu/SideMenu'
 import NadiaInk from '../../stories/nadia.ink.json'
 import AmanInk from '../../stories/aman.ink.json'
+import RaviInk from '../../stories/ravi.ink.json'
 
 import './styles.scss'
 import '../styles.css'
@@ -56,6 +57,12 @@ const getInkJson = (nameParam) => {
       return {
         inkJson: AmanInk,
         characterId: 2,
+      }
+    }
+    case 'ravi': {
+      return {
+        inkJson: RaviInk,
+        characterId: 3,
       }
     }
     default: {
