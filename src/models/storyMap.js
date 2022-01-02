@@ -513,35 +513,35 @@ export const CHARACTER_MAP = [
           },
         ]
       },
+      // {
+      //   chapterId: 2,
+      //   number: 2,
+      //   reflectionId:8,
+      //   title: "(merged with Chapter 1) ",
+      //   knotTag: "ravi_2_2",
+      //   summary: "Ravi decides to move out. But his choices are not that straightforward.",
+      //   playable: true,
+      //   images: [           
+      //     "/images/bg_launch.jpg",
+      //     "/images/bg_reflections.jpg",
+      //   ],
+      //   endings: [
+      //     {
+      //       endingId: 1,
+      //       title: "Azlin gets upset with you",
+      //       inkVar: "chapter2_ending_1",
+      //     },
+      //     {
+      //       endingId: 2,
+      //       title: "Azlin tells you to give him up",
+      //       inkVar: "chapter2_ending_2",
+      //     },
+      //   ]
+      // },
       {
         chapterId: 2,
         number: 2,
         reflectionId:8,
-        title: "(merged with Chapter 1) ",
-        knotTag: "ravi_2_2",
-        summary: "Ravi decides to move out. But his choices are not that straightforward.",
-        playable: true,
-        images: [           
-          "/images/bg_launch.jpg",
-          "/images/bg_reflections.jpg",
-        ],
-        endings: [
-          {
-            endingId: 1,
-            title: "Azlin gets upset with you",
-            inkVar: "chapter2_ending_1",
-          },
-          {
-            endingId: 2,
-            title: "Azlin tells you to give him up",
-            inkVar: "chapter2_ending_2",
-          },
-        ]
-      },
-      {
-        chapterId: 3,
-        number: 3,
-        reflectionId:9,
         title: "Coffee Shop Kannasamy ",
         knotTag: "ravi_2_intro",
         summary: "Ravi finds a new gig at a cafe. And possibly something more.",
@@ -564,9 +564,9 @@ export const CHARACTER_MAP = [
         ]
       },
       {
-        chapterId: 4,
-        number: 4,
-        reflectionId:10,
+        chapterId: 3,
+        number: 3,
+        reflectionId:9,
         title: "The Internship",
         knotTag: "ravi_3_intro",
         summary: "Ravi lands an internship to fulfill his university credits. And finds himself in a situation that tests him.",
@@ -589,11 +589,11 @@ export const CHARACTER_MAP = [
         ]
       },
       {
-        chapterId: 5,
-        number: 5,
-        reflectionId:11,
+        chapterId: 4,
+        number: 4,
+        reflectionId:10,
         title: "Cleared for Take Off",
-        knotTag: "ravi_5_intro",
+        knotTag: "ravi_4_intro",
         summary: "Ravi breaks down and reveals his fears to both Valerie and Revati. They give him a new perspective, and much-needed reminders. ",
         playable: false,
         images: [           
