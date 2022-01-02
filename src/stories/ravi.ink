@@ -595,8 +595,8 @@ WHAT?!? What does he mean the room not suitable for Indians? Oh god is this one 
 #chat_group_title:Property Agent James
 #chat_group_image:ico_ravi_james.png
 #speaker_1_name:James
-Why is it not suitable? #speaker_self
-+ [Stay polite]
+Uh.... #speaker_self
++ [Stay polite] Why is it not suitable? #speaker_self
     I don’t know lah. #speaker_1
     VAR ravi_1_agent = "polite"
     ~ ravi_1_agent = "polite"
@@ -631,7 +631,7 @@ Why is it not suitable? #speaker_self
     Cheaper. $450 only. #speaker_1
     Smaller room but only one other person in the house. Landlord no stay. #speaker_1
     
-+ [Get angry]
++ [Get angry] Why is it not suitable? #speaker_self
     I don’t know lah. #speaker_1
     ~ ravi_1_agent = "angry"
     Landlord just say cannot. I also really cannot ask him why. #speaker_1
