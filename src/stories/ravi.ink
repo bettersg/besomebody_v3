@@ -461,7 +461,7 @@ My schedule nowadays is a bit boring. I come here after class, get a scrumptious
 #knot:ravi_1_4_narration
 #ui:narrator
 #background:bg_ravi_rentals1.jpg
-Hmm...this listing sounds good. one bedroom apartment, 11th floor, 5 minutes away from university? This must be a dream! **** $2222 per month?? This must be a nightmare! Who can afford that? Maybe if I just sort by “price”… ****
+Hmm...this listing sounds good. one bedroom apartment, 11th floor, 5 minutes away from university? This must be a dream... wait $2222 per month?? This must be a nightmare! Who can afford that? Maybe if I just sort by “price”…
 #background:bg_ravi_rentals2.jpg
  Oh, this room sounds about right. Seems promising. It’s a small room – maybe other people are staying there too? But it’s cheap, and relatively close to uni. 
  Maybe I can make friends with whoever’s staying there. Or better yet, I might be able to talk them down to my price. They should take some pity on me. I’m just a student.
@@ -589,17 +589,17 @@ Landlord say this room not suitable for Indian, sorry. #speaker_1
 #ui:narrator
 #background:bg_ravi_pushpa_home.jpg
 WHAT?!? What does he mean the room not suitable for Indians? Oh god is this one of those horrible landlords I've read about online? I never thought this would happen to me.  #inner_monologue
+
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Property Agent James
 #chat_group_image:ico_ravi_james.png
 #speaker_1_name:James
-
+Why is it not suitable? #speaker_self
 + [Stay polite]
-    Sorry, but why is it not suitable? #speaker_self
+    I don’t know lah. #speaker_1
     VAR ravi_1_agent = "polite"
     ~ ravi_1_agent = "polite"
-    I don’t know lah. #speaker_1
     Landlord just say cannot. I also really can’t ask him why. #speaker_1
     I also don’t know what he’ll say if I do ask. Sometimes landlord just tells me these things and my job is just to tell you. #speaker_1
     
@@ -632,9 +632,8 @@ WHAT?!? What does he mean the room not suitable for Indians? Oh god is this one 
     Smaller room but only one other person in the house. Landlord no stay. #speaker_1
     
 + [Get angry]
-    Why is it not suitable? #speaker_self
-    ~ ravi_1_agent = "angry"
     I don’t know lah. #speaker_1
+    ~ ravi_1_agent = "angry"
     Landlord just say cannot. I also really cannot ask him why. #speaker_1
     This is ridiculous. #speaker_self
     You are saying no because of me being Indian? #speaker_self
