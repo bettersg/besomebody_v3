@@ -404,18 +404,16 @@ Besides, I don’t think I can get any rest on this couch. Either my feet are da
 
 
 {ravi_1_motherempathy >= 3 : 
-    -> chapter_1_ending_1
+    -> ravi_1_2_empathy
     else 
-    -> chapter_1_ending_2
+    -> ravi_1_2_notempathy
 }
 
-=== chapter_1_ending_1 ===
-#knot:chapter_1_ending_1
+=== ravi_1_2_empathy ===
+#knot:ravi_1_2_empathy
 #ui:narrator
 #background:bg_ravi_pushpa_home.jpg
 So much happened in those few days. 
-VAR chapter_1_ending = 1
-~ chapter_1_ending = 1
 Moving out from a place we lived nearly all our lives, staying with Pushpa Aunty, and learning so much about Amma. 
 I tried my best to be there for her, and to comfort her.
 Moving so many boxes, everything that we’ve ever owned, into a small room. 
@@ -424,14 +422,13 @@ I’m thankful we managed to stay with Pushpa Aunty – we can save money this w
 But I think I’ll just ask Lukman to help me with the readings, and I’ll just sleep as soon as I can. 
 I’m so tired, I could fall asleep just sitting...here...ZZZZZ… 
 
--> ravi_1_reflection
+-> ravi_1_3
 
-=== chapter_1_ending_2 ===
-#knot:chapter_1_ending_2
+=== ravi_1_2_notempathy ===
+#knot:ravi_1_2_notempathy
 #ui:narrator
 #background:bg_ravi_pushpa_home.jpg
 So much happened in those few days. 
-~ chapter_1_ending = 2
 Moving out from a place we lived nearly all our lives, staying with Pushpa Aunty, and learning so much about Amma. 
 Moving so many boxes, everything that we’ve ever owned, into a small room. 
 And all of that, on top of uni. I’m so tired. 
@@ -441,63 +438,27 @@ I guess I should be grateful that at least we managed to stay with Pushpa Aunty 
 But I think I’ll just ask Lukman to help me with the readings, and I’ll just sleep as soon as I can. 
 I’m so tired, I could fall asleep just sitting...here...ZZZZZ… 
 
--> ravi_1_reflection
-
-=== ravi_1_reflection ===
-#knot:ravi_1_reflection
-#ui:chapter_reflection
-#reflection_id:7
-Reflection 7
+-> ravi_1_3
 
 
 
-
-
-
-
-
-
-
--> ravi_2_intro
-
-
-
-
-
-
-
-
-
-
-// CHAPTER 2
-
-
-
-
-
-=== ravi_2_intro ===
-#knot:ravi_2_intro
+=== ravi_1_3 ===
+#knot:ravi_1_3
 #ui:narrator
-#background:bg_ravi_pushpa_home.jpg
-
-It’s been a few weeks since we’ve made the move. I’d had so much delicious food, I think I’ve gained weight. How am I going to pass IPPT?
+#background:bg_ravi_intro.jpg
+It’s been two weeks since we’ve made the move. I’d had so much delicious food, I think I’ve gained weight. How am I going to pass my reservist IPPT?
 My schedule nowadays is a bit boring. I come here after class, get a scrumptious dinner (yay for Pushpa aunty!), do my schoolwork, then head over to Lukman’s to rest. It was going well, for a while.
- ButI can’t do this forever though. I can’t go to Lukman’s every day. He’s probably getting sick of my face already. The first time was fun, kind of like a sleepover. 
+ ButI can’t do this forever though. I can’t go to Lukman’s almost every day. He’s probably getting sick of my face already. The first time was fun, kind of like a sleepover. 
  The second time was like we were roommates. The third, fourth, fifth times...he’s probably expecting me to pay rent or something. 
- His parents must be really annoyed with me too. They don’t say it, but I can feel their eyes in the back of my skull whenever I go over. I mean, I even hang around on the weekends. It must be awkward for them too. I can’t keep being a burden to Lukman either.
+ His parents must be really annoyed with me too. They don’t say it, but I can feel their eyes in the back of my skull whenever I go over. I can’t keep being a burden to Lukman either.
  I need to find some other place to stay. Maybe stay on my own if I can. That might be nice, for a change. I’ve always shared a room with Revati, anyway.
- So that brings me to what I’m doing nowadays. I’ve been scouring so many websites, trying to find a good place to rent. PropertyMagic, HouseHero, Room4Rent – you name it, I’ve tried it. But I can’t afford to rent most places. Not too many options for my budget.
+ I’ve been scouring so many websites, trying to find a good place to rent. PropertyMagic, 999co, Room4Rent – you name it, I’ve tried it. But I can’t afford to rent most places. Not too many options for my budget, sigh.
 
-~ chapter_id = 2
-CHAPTER {chapter_id} #title
-Room For Improvement  #title
+-> ravi_1_4_narration 
 
 
--> ravi_2_1_narration 
-
-
-=== ravi_2_1_narration ===
-#knot:ravi_2_1_narration
+=== ravi_1_4_narration ===
+#knot:ravi_1_4_narration
 #ui:narrator
 #background:bg_ravi_rentals1.jpg
 Hmm...this listing sounds good. one bedroom apartment, 11th floor, 5 minutes away from university? This must be a dream! **** $2222 per month?? This must be a nightmare! Who can afford that? Maybe if I just sort by “price”… ****
@@ -506,201 +467,246 @@ Hmm...this listing sounds good. one bedroom apartment, 11th floor, 5 minutes awa
  Maybe I can make friends with whoever’s staying there. Or better yet, I might be able to talk them down to my price. They should take some pity on me. I’m just a student.
  Let me see if he’s offering any other rooms ... oh wow, he has two! Maybe I can rent the other room instead – it’s a bit bigger though, so it’s probably more expensive... I’ll see how it goes.
 #background:bg_ravi_rentals3.jpg 
- Who do I talk to? I see an agent’s name here. “Agent James” huh? Sounds like a reliable guy. Actually, no. Sounds like James Bond.
+ Who do I talk to? I see an agent’s name here. “Agent James” huh? Sounds like a reliable guy. Actually, no. Sounds like James Bond wannabe.
  Oh, his phone number is here. Maybe I should drop him a text. Well, here goes nothing.
 
+-> ravi_1_4
 
--> ravi_2_2
 
-
-=== ravi_2_1 ===
-#knot:ravi_2_1
+=== ravi_1_4 ===
+#knot:ravi_1_4
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Property Agent James
 #chat_group_image:ico_ravi_james.png
 #speaker_1_name:James
 Hi, is this James? #speaker_self
-
-I saw the listing on PleaseLeaseThese. The one for two different rooms? #speaker_self
-
+I saw the listing on Room4Rent. The one for two different rooms? #speaker_self
 I would like to rent a room, if that’s possible! #speaker_self
-
 Hi, yes! This is James. Pleasure to “e-meet” you. #speaker_1
-
 Yes, I think I know which rooms you’re referring to. The ones rented out by Mr Lim? #speaker_1
-
 Good news. The listings are currently available. #speaker_1
 
+#ui:narrator
+#background:bg_ravi_pushpa_home.jpg
 Ah...nobody I know says “e-meet”. This man must be a professional agent after all! This looks good. Maybe I’ll be able to get a room faster than I thought. #inner_monologue
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Property Agent James
+#chat_group_image:ico_ravi_james.png
+#speaker_1_name:James
 
 Great! Yes, I am interested in the rooms. #speaker_self
-
-
 Which room are you interested in? #speaker_1
-
 The big room, or the small room? #speaker_1
-
-
 The smaller room please. #speaker_self
-
 The one for $500 per month. #speaker_self
-
-
 Ok. The 4 bedroom apartment in Clementi? #speaker_1
-
 It’s shared housing you know right? The other rooms are rented out already. #speaker_1
-
 The landlord is staying there also. #speaker_1
-
 Yep! That’s fine with me. #speaker_self
-
 Ok, how many people are renting? #speaker_1
-
 The landlord has a strict policy and each room can only be rented out to one tenant at a time. #speaker_1
-
-
 Yeah, I understand. #speaker_self
-
 It’ll just be me renting the room. Don’t worry about it. #speaker_self
-
 Will you be expecting any frequent visitors? #speaker_1
-
 Girlfriend, family etc? #speaker_1
-
-
 No...no girlfriend. #speaker_1
-
 Don’t think my family will visit either. #speaker_1
 
+#ui:narrator
+#background:bg_ravi_pushpa_home.jpg
 Wow… way to rub it in. Was that really necessary? But ok, I can work on that next time. The room is more important. #inner_monologue
-
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Property Agent James
+#chat_group_image:ico_ravi_james.png
+#speaker_1_name:James
 
 Ok, no girlfriend right? Great. #speaker_1
 
+#ui:narrator
+#background:bg_ravi_pushpa_home.jpg
 Great, he says. Sheeeeesh! #inner_monologue
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Property Agent James
+#chat_group_image:ico_ravi_james.png
+#speaker_1_name:James
 
 To rent the room, there’s a process we need to go through. #speaker_1
-
 Firstly, can I have your profile? #speaker_1
-
-
 Profile? Sorry, what do you mean? #speaker_self
 
-What kind of profile? You’re setting up a dating profile for me ah? #inner_monologue
 
+#ui:narrator
+#background:bg_ravi_pushpa_home.jpg
+What kind of profile? You’re setting up a dating profile for me ah? #inner_monologue
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Property Agent James
+#chat_group_image:ico_ravi_james.png
+#speaker_1_name:James
 
 What are you doing? Working here? #speaker_1
-
-
 Oh. That’s what you meant by profile. #speaker_self
-
 Nah, I’m just a student. Still studying in uni. #speaker_self
-
-
 Ok. What’s your background? #speaker_1
-
-
 I’m sorry. Background? #speaker_self
 
+#ui:narrator
+#background:bg_ravi_pushpa_home.jpg
 I think if I say my background is currently a blank wall he’ll just block me. #inner_monologue
-
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Property Agent James
+#chat_group_image:ico_ravi_james.png
+#speaker_1_name:James
 
 Your details lah. #speaker_1
-
 Name, IC all that. #speaker_1
-
-
 Just fill up for me. #speaker_1
 
-Wait ah, let me send. #speaker_1
-
-
-
-Name: #speaker_1
-Pax: #speaker_1
-Occupation: #speaker_1
-Ethnicity: #speaker_1
-Budget: #speaker_1
-Years of lease: #speaker_1
-Expected shift in date: #speaker_1
-
-
-
-I just need the small room for $500. Is it available? #speaker_self
-
-
-Yes, available. #speaker_1
-
-But I need to know your details first. We need to follow the procedure. #speaker_1
-
-
-
-Ok, sure. Give me a second. #speaker_self
-
-
-
-
-
-Done, here you go. #speaker_self
-
-
-
-Name: Ravi Kannasamy #speaker_self
-Pax: 1 #speaker_self
-Occupation: Student #speaker_self
-Ethnicity: Indian #speaker_self
-Budget: $500 #speaker_self
-Years of lease: 1 #speaker_self
-Expected shift in date: Aug 20 #speaker_self
-
-
-Ok, great. #speaker_1
-I check with landlord first. #
-
-
+Name:  /n  Pax:  /n  Occupation:  /n  Ethnicity:  /n Budget:  /n Years of lease:  /n  Expected shift in date:  /n  #speaker_1
++ [Agree to fill in the details] Sure, give me a second, #speaker_self
++ [Just request for the rental details]  I just need the small room for $500. Is it available? #speaker_self
+    Yes, available. But I need to know your details first. We need to follow the procedure. #speaker_1
+    Aiyoh. Ok, ok, fine. Totally not relevant though. #speaker_self
+- Done, here you go. /n Name: Ravi Kannasamy /n Pax: 1  /n Occupation: Student  /n Ethnicity: Indian  /n Budget: $500  /n Years of lease: 1  /n  Expected shift in date: Aug 20 #speaker_self
+Ok, great. I check with landlord first. #speaker_1
 Ok, thank you! #speaker_self
-
-
-
-
 Hi Ravi. #speaker_1
-
 That was fast. #speaker_self
-
-So, what did he say? #
-
-
-Sorry, landlord says cannot. #
-
-But don’t worry. I have other room for you. You want or not? #
-
-Other location. You want? Yishun got one room. Jurong also got. #
-
-
-Sorry, why cannot? #speaker_self
-
-Was the room already taken? #
-
-I can still take the bigger room. #
-
-Sorry, no. #speaker_1
-
-The room isn’t taken yet. #
-
-Huh? #speaker_self
-
-Then what? #
-
-
+So, what did he say? #speaker_self
+Sorry, landlord says cannot. #speaker_1
+But don’t worry. I have other room for you. You want or not? #speaker_1
+Other location. You want? Yishun got one room. Jurong also got. #speaker_1
+Sorry, why cannot? Was the room already taken? I can still take the bigger room. #speaker_self
+Sorry, no. The room isn’t taken yet. #speaker_1
+Huh? Then what? #speaker_self
 Landlord say this room not suitable for Indian, sorry. #speaker_1
 
-WHAT? How can he say that? It doesn’t make any sense. What do you mean the room not suitable for Indians? #inner_monologue
+#ui:narrator
+#background:bg_ravi_pushpa_home.jpg
+WHAT?!? What does he mean the room not suitable for Indians? Oh god is this one of those horrible landlords I've read about online? I never thought this would happen to me.  #inner_monologue
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Property Agent James
+#chat_group_image:ico_ravi_james.png
+#speaker_1_name:James
 
--> END
++ [Stay polite]
+    Sorry, but why is it not suitable? #speaker_self
+    VAR ravi_1_agent = "polite"
+    ~ ravi_1_agent = "polite"
+    I don’t know lah. #speaker_1
+    Landlord just say cannot. I also really can’t ask him why. #speaker_1
+    I also don’t know what he’ll say if I do ask. Sometimes landlord just tells me these things and my job is just to tell you. #speaker_1
+    
+    Wait, is this because of the whole Indian cooking thing? #speaker_self
+    I’ve seen people post horror stories like this online before. #speaker_self
+    Just tell him that the only thing I know how to cook are instant noodles! 😂😂  #speaker_self
+    Uh I think it’s not just cooking la.  #speaker_1
+    What do you mean, not just cooking? Tell me, what else? #speaker_self
+    Aiyah, I don’t know la. #speaker_1
+    The landlord say no Indian. His property, his decision right? I can’t argue with him also. If he angry then later he change agent. #speaker_1
+    Don’t worry, I have other room for you. I have a good room in Yishun for you. #speaker_1
+    But Yishun is too far from my uni. #speaker_self
+    Yishun is too far from everything! This place is close to my uni. It’s the perfect place for me. #speaker_self
+    
+    ++ [Try to persuade landlord that you are not like "those" Indians] Eh but you tell him that I don't cook, and I'm a student in university ok. Very clean. Not like what he might think or hear from others. #speaker_self
+        VAR ravi_1_notlikeotherindians = true
+        ~ ravi_1_notlikeotherindians = true
+        Aiyah why so troublesome? Eh pls understand I cannot do anything without landlord permission. I don't think he will care about those reasons la, trust me. Not like I don’t want to help you ok! #speaker_1
+        Yes, but this is not right. #speaker_self
+        Right, not right, the landlord decided lah. #speaker_1
+        
+    ++ [Accept the landlord's decision] Sigh. I don't think this is right but what can I do la. #speaker_self
+        ~ ravi_1_notlikeotherindians = false
+        I guess this is what the older generation are like. Even the government said that they are not willing to accept a non-Chinese as their Prime Minister, so I guess this is their mental model. Sigh. #speaker_self
+    -- But you seem like a nice guy. Let me see what I can do to help. #speaker_1
+    What about the room in Jurong? #speaker_1
+    I can check on the other room for you? #speaker_1
+    Yes please. The one in Jurong. How much is that? #speaker_self
+    Cheaper. $450 only. #speaker_1
+    Smaller room but only one other person in the house. Landlord no stay. #speaker_1
+    
++ [Get angry]
+    Why is it not suitable? #speaker_self
+    ~ ravi_1_agent = "angry"
+    I don’t know lah. #speaker_1
+    Landlord just say cannot. I also really cannot ask him why. #speaker_1
+    This is ridiculous. #speaker_self
+    You are saying no because of me being Indian? #speaker_self
+    No no not me! Landlord say. It’s not my decision lah. #speaker_1
+    Did you even check with the landlord? #speaker_self
+    You replied within 2 minutes. #speaker_self
+    
+    Yes, I did. He replied me very fast #speaker_1
+    
+     ++ [Try to persuade landlord that you are not like "those" Indians] Did you tell him I’m Singaporean? #speaker_self
+        ~ ravi_1_notlikeotherindians = true
+        Yes #speaker_1
+        And? What did he say? I am local born ok! Did NS! #speaker_self
+        Sorry, landlord said no Indian. Said all types cannot. Sorry.  #speaker_1
+        
+    ++ [Criticise the Agent's handling] I think this is just you making this up. #speaker_self
+        ~ ravi_1_notlikeotherindians = false
+        You scared the house will smell of curry is it? #speaker_self
+        It’s not just your smell lah. #speaker_1
+        Not JUST smell? So you think Indian got a smell issit? #speaker_self
+        No, that’s not what I meant. #speaker_1
+        I mean it’s not just your cooking lah. #speaker_1
+        First of all, I’m NOT going to be cooking ok. #speaker_self
+        Secondly, whether I cook or not is not important. SO it’s ok for other people to cook, but not Indians? #speaker_self
+    
+    -- Eh, I'm not the bad guy la. The landlord say no Indian. Not I say. #speaker_1
+    His property, his decision right? I can’t argue with him also. If he angry then later he change agent. #speaker_1
+    Don’t worry, I have other room for you. #speaker_1
+    I have a good room in Yishun for you. #speaker_1
+    I want nothing from a racist agent. #speaker_self
+    Hello boss. Don’t anyhow throw name like that. #speaker_1
+    I didn’t say no ok. It’s the landlord. #speaker_1
+    It’s not my choice whether you can rent the room ok? #speaker_1
+    I’m trying to help you also. Not like I say you can stay means you can what. #speaker_1
+    Huh then he say no Indian, you just reply ok. You’re not helping me. Have you at least tried convincing him to let me stay? #speaker_self
+    I told you I can’t argue with him. I don’t want him to change agent. Anyway you know how people are like lah. #speaker_1
+    What do you mean? Racist people? #speaker_self
+    Aiyah, you know how some people are like that. Times changed but their mindsets still from don’t know when. this landlord older generation la. Even gahmen also say that they are not ready for non-chinese prime minister! #speaker_1
+    Anyway even if I argue with him, you want to stay with him meh? He’s staying at the place eh. Don’t know what he’ll treat you like in person with this kind of mindset. #speaker_1
+    I have another room in Yishun. You interested? I think this landlord is better la. Don’t worry about this one. I can’t do more than that already. #speaker_1
+    Please understand. I’m only the agent. #speaker_1
+    Yishun is too far. #speaker_self
+    The room in Jurong. How much is that? #speaker_self
+    Cheaper. $450 only. #speaker_1
+    Smaller room but only one other person in the house. Landlord no stay. No problem. #speaker_1
 
-=== ravi_2_2 ===
-#knot:ravi_2_2
+
+#ui:narrator
+#background:bg_ravi_pushpa_home.jpg
+- Why do I feel like a foreigner in my own country? I don’t want to be forced into a house like this. #inner_monologue
+I thought “regardless of race”? Did we not say it every damn morning like machines? Or is there a different pledge for landlords? #inner_monologue
+But damn, a room for myself for $450 sounds good. Maybe I should check with the uni as well though. See if they have any options for me. #inner_monologue
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Property Agent James
+#chat_group_image:ico_ravi_james.png
+#speaker_1_name:James
+Hmm, sounds good. Let me think about it for a while. #speaker_self
+Ok. Let me know. #speaker_1
+
+-> ravi_1_5_narration
+
+=== ravi_1_5_narration ===
+#knot:ravi_1_5_narration
+#ui:narrator
+#background:bg_ravi_pushpa_home.jpg
+Can’t hurt to try my luck with uni. Maybe I can get a room if I’m lucky enough. I’ve always wanted to try and stay on campus, anyway. Seems fun.
+Let’s just hope the school admin is better than the agent…
+-> ravi_1_5
+
+=== ravi_1_5 ===
+#knot:ravi_1_5
 #ui:email
 #background:email.png
 #emailfrom:Ravi <ravi@email.com>
@@ -713,11 +719,29 @@ I understand that I might be a little late, but I need to move out immediately d
 Do let me know if there are any options available. Any room is fine. Please let me know if you need more details.#email
 Thank you, #email
 Ravi #email
-.
--> ravi_2_2a
 
-=== ravi_2_2a ===
-#knot:ravi_2_2a
+#ui:narrator
+#background:bg_ravi_pushpa_home.jpg
+ Ok, that sounded formal enough….
+ Oh, they replied already! That was quick. Let’s see…
+
+-> ravi_1_5a
+
+=== ravi_1_5a ===
+#knot:ravi_1_5a
+#ui:emailinbox
+
+#newemailfrom: Rebecca
+#newemailprofileicon:ico_nadia_nadia.png
+#newemailsubject:Enquiry on Dorm Housing
+#newemailpreview: Hello Ravi, Thanks for your email. I'm ...
+.
+
+-> ravi_1_5b
+
+
+=== ravi_1_5b ===
+#knot:ravi_1_5b
 #ui:email
 #background:email.png
 #emailfrom:Univ Housing <admin@univ.edu.sg>
@@ -726,23 +750,189 @@ Ravi #email
 #replyemaildate:On Wed 6 Oct 2021, Ravi <ravi@email.com> wrote:  
 #replyemailtext: To whom it may concern /n I’m writing to inquire about the possibility of housing in the university dorm. My student number is A0155007R. /n I understand that I might be a little late, but I need to move out immediately due to family matters. It would be great if I could stay on campus, if possible. /n Do let me know if there are any options available. Any room is fine. Please let me know if you need more details.  /n Thank you, /n Ravi 
 Hello Ravi, #email
-I’m afraid you are a little late. Housing occupancy has been settled before the beginning of the semester. You would need to wait for the next semester to get a room. #email
+Thanks for your email. I’m afraid you are a little late. Housing occupancy has been settled before the beginning of the semester. You would need to wait for the next semester to get a room. #email
 You mentioned that you had to move due to family matters. While we may not be currently able to offer you a room, the school is concerned for the wellbeing of its students. Is there anything else we could do to help? #email
 
 Regards, #email
 Rebecca #email
-.
--> ravi_2_2b
 
-=== ravi_2_2b ===
-#knot:ravi_2_2b
-#ui:emailinbox
+#ui:narrator
+#background:bg_ravi_pushpa_home.jpg
+ Ah, I knew it. Rooms on campus are always snapped up.
 
-#newemailfrom: Rebecca
-#newemailprofileicon:ico_nadia_nadia.png
-#newemailsubject:Enquiry on Dorm Housing
-#newemailpreview: Hello Ravi, I'm afraid you are a little late...
+-> ravi_1_5c
 
--> ravi_2_2a
+=== ravi_1_5c ===
+#knot:ravi_1_5c
+#ui:email
+#background:email.png
+#emailto:Univ Housing <admin@univ.edu.sg>
+#emailfrom:Ravi <ravi@email.com>
+#emailsubject: Query about dorm room
+#replyemaildate:On Wed 6 Oct 2021, Univ Housing <admin@univ.edu.sg> wrote:  
+#replyemailtext: Hello Ravi, /n I’m afraid you are a little late. Housing occupancy has been settled before the beginning of the semester. You would need to wait for the next semester to get a room. /n You mentioned that you had to move due to family matters. While we may not be currently able to offer you a room, the school is concerned for the wellbeing of its students. Is there anything else we could do to help? /n Regards, /n Rebecca
+
+Hello Rebecca,  #email
+Thank you for your reply.  #email
+I am a little out of options. I don’t have space at home to study or sleep, and I would really love if I could somehow stay on campus. #email
+I hope you could check for me whether there was any space left in the dorm at all. Like I said, I’m ok to take any room. #email
+Thank you, #email
+Ravi #email
+
+#ui:narrator
+#background:bg_ravi_pushpa_home.jpg
+Maybe I have to go with the Agent after all.
+Wait, a reply just came in. Wah this Rebecca is super on the ball.
+
+-> ravi_1_5d
+
+
+=== ravi_1_5d ===
+#knot:ravi_1_5d
+#ui:email
+#background:email.png
+#emailfrom:Univ Housing <admin@univ.edu.sg>
+#emailto:Ravi <ravi@email.com>
+#emailsubject: Query about dorm room
+#replyemaildate:On Wed 6 Oct 2021, Ravi <ravi@email.com> wrote:  
+#replyemailtext: Hello Rebecca, /n Thank you for your reply. /n I am a little out of options. I don’t have space at home to study or sleep, and I would really love if I could somehow stay on campus. /n I hope you could check for me whether there was any space left in the dorm at all. Like I said, I’m ok to take any room.  /n Thank you, /n Ravi 
+Hello Ravi, #email
+We have one room available now but I'm actually supposed to release it later. One of the foreign exchange students is moving back home for an emergency next week. Given your difficult situation, I think I can offer it to you first. #email
+It’s a single room in the Farquhar Hall with an aircon. There is a shared bathroom on the same floor. The room’s $700 per month, without food. If you want food, you’ll have to choose a meal plan. #email
+Would you like to take the room? If so, please let me know as soon as possible so that the school can make the necessary arrangements. #email
+Regards, #email
+Rebecca #email
+
+#ui:narrator
+#background:bg_ravi_pushpa_home.jpg
+At least it’s an option. But ... it’s a little over budget. My savings would be enough for $450 a month, at least for this semester, but $700 is just a bit too much.
+On the other hand, this is the closest I could possibly be to campus. I’ll never be late for class again! I might save money on transport too. And at least I know I won’t have to deal with any racist landlords.
+
++ [Take the room] -> ravi_1_5e_take
++ [Decline the room] -> ravi_1_5e_decline
+
+
+=== ravi_1_5e_take ===
+#knot:ravi_1_5e_take
+#ui:email
+#background:email.png
+#emailto:Univ Housing <admin@univ.edu.sg>
+#emailfrom:Ravi <ravi@email.com>
+#emailsubject: Query about dorm room
+#replyemaildate:On Wed 6 Oct 2021, Univ Housing <admin@univ.edu.sg> wrote:  
+#replyemailtext: Hello Ravi,  /n Good news! We have one room available now. One of the foreign exchange students is moving back home for an emergency.  /n It’s a single room in the Farquhar Hall with an aircon. There is a shared bathroom on the same floor. The room’s $700 per month, without food. If you want food, you’ll have to choose a meal plan.  /n Would you like to take the room? If so, please let me know as soon as possible so that the school can make the necessary arrangements.  /n Regards,   /n Rebecca
+Hello Rebecca, #email
+VAR ravi_1_dormhousing = true
+~ ravi_1_dormhousing = true
+Thank you so much! I would like to take the room. It would be amazing to stay on campus, and this solves a few of my problems! #email
+I’m ok without the meal plan. Please let me know what else I need to do to move in! #email
+Thank you, #email
+Ravi #email
+
+#ui:narrator
+#background:bg_ravi_pushpa_home.jpg
+At least it’s an option. But ... it’s a little over budget. My savings would be enough for $450 a month, at least for this semester, but $700 is just a bit too much.
+On the other hand, this is the closest I could possibly be to campus. I’ll never be late for class again! I might save money on transport too. And at least I know I won’t have to deal with any racist landlords.
+
+
+-> ravi_1_5e_take2
+
+=== ravi_1_5e_take2 ===
+#knot:ravi_1_5e_take2
+#ui:email
+#background:email.png
+#emailfrom:Univ Housing <admin@univ.edu.sg>
+#emailto:Ravi <ravi@email.com>
+#emailsubject: Query about dorm room
+#replyemaildate:On Wed 6 Oct 2021, Ravi <ravi@email.com> wrote:  
+#replyemailtext: Hello Rebecca, /n Thank you so much! I would like to take the room. It would be amazing to stay on campus, and this solves a few of my problems! /n I’m ok without the meal plan. Please let me know what else I need to do to move in!  /n Thank you, /n Ravi 
+Hello Ravi,  #email
+Great! Please let me know your earliest possible move-in date, so we can arrange for the access card and keys. #email
+There are forms to fill up which I will follow up with in a separate email.
+There will most likely be an orientation session at the dorm as well, with the Residential Assistant. Each floor has a Residential Assistant, who is a student volunteer assigned to deal with any issues faced by the students living in the dorm. #email
+Hope you will enjoy the rest of your semester staying on campus! #email
+Regards,  #email
+Rebecca #email
+-> chapter_1_ending_1
+
+=== chapter_1_ending_1 ===
+#knot: chapter_1_ending_1
+#ui:narrator
+#background:bg_ravi_pushpa_home.jpg
+ Yes! I don’t know how this will go, but at least I don’t have to deal with stupid questions from the agent. And I’ll def save on transport. 
+VAR chapter_1_ending = 1
+~ chapter_1_ending = 1
+ It sounds like I’ll be able to make some friends too. Orientation? This feels like year one all over again. Not that I mind, it does sound fun.
+Maybe I’ll finally find a girlfriend? Then I can tell the agent off lol. Why did he have to ask whether I have a girlfriend or not? I’m still thinking about it…
+Anyhow, cheers to independence! I’ve taken a further step in adulting, and I guess that’s something to be proud of…
+Better let Amma know the news.
+
+-> ravi_1_reflection
+
+
+=== ravi_1_5e_decline ===
+#knot:ravi_1_5e_decline
+#ui:email
+#background:email.png
+#emailto:Univ Housing <admin@univ.edu.sg>
+#emailfrom:Ravi <ravi@email.com>
+#emailsubject: Query about dorm room
+#replyemaildate:On Wed 6 Oct 2021, Univ Housing <admin@univ.edu.sg> wrote:  
+#replyemailtext: Hello Ravi,  /n Good news! We have one room available now. One of the foreign exchange students is moving back home for an emergency.  /n It’s a single room in the Farquhar Hall with an aircon. There is a shared bathroom on the same floor. The room’s $700 per month, without food. If you want food, you’ll have to choose a meal plan.  /n Would you like to take the room? If so, please let me know as soon as possible so that the school can make the necessary arrangements.  /n Regards,   /n Rebecca
+Hello Rebecca,  #email
+Thank you so much. #email
+Unfortunately, the room is a little too expensive for me at the moment. As such, I am unable to take the room. #email
+Apologies for any inconvenience caused. I hope you find somebody to take that room soon. #email
+Thank you, #email
+Ravi #email
+
+-> ravi_1_5e_decline2
+
+=== ravi_1_5e_decline2 ===
+#knot:ravi_1_5e_decline2
+#ui:email
+#background:email.png
+#emailfrom:Univ Housing <admin@univ.edu.sg>
+#emailto:Ravi <ravi@email.com>
+#emailsubject: Query about dorm room
+#replyemaildate:On Wed 6 Oct 2021, Ravi <ravi@email.com> wrote:  
+#replyemailtext: Hello Rebecca, /n Thank you so much. Unfortunately, the room is a little too expensive for me at the moment. As such, I am unable to take the room. /n Apologies for any inconvenience caused. I hope you find somebody to take that room soon.  /n Thank you, /n Ravi 
+Hello Ravi, #email
+We understand. In that case, unfortunately, you will have to make other arrangements.#email
+I can keep an eye out for a room opening up, but nothing else is available at the moment. I can’t guarantee that any rooms will be cheaper though.#email
+All the best. Please feel free to contact the school if you require any financial assistance.#email
+Regards, #email
+Rebecca #email
+
+-> chapter_1_ending_2
+
+=== chapter_1_ending_2 ===
+#knot: chapter_1_ending_2
+#ui:narrator
+#background:bg_ravi_pushpa_home.jpg
+Sigh. This is way over my budget. But I’m not going to apply for financial assistance. I don’t want to be *that* guy. I'll find a way to make the cash.
+It’s still better than sleeping on that couch though. 
+~ chapter_1_ending = 2
+Looks like I have to deal with finding my own room and agents again.  I should try to get back at that racist landlord and agent...Maybe I post the convo online? 
+Hmm... actually I don’t want to end up on Mothership and read through all the comments. Just makes my own life harder later if people think of me as that troublesome tenant.
+I’ll just take the room in Jurong and be done with it. Save some money. Don’t think I can get a better deal. I should message him.
+Hope the landlord is better this time.
+Better let Amma know the news
+Anyhow, cheers to independence! I’ve taken a further step in adulting, and I guess that’s something to be proud of…
+
+-> ravi_1_reflection
+
+
+
+=== ravi_1_reflection ===
+#knot:ravi_1_reflection
+#ui:chapter_reflection
+#reflection_id:7
+Reflection 7
+
+
+
+// -> ravi_2_intro
+
 
 -> END
