@@ -120,7 +120,8 @@ const Whatsapp = (props) => {
                           borderRadius={5}
                           key={step.text}
                         >
-                          {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.whatsappImage} /> :  <Typography key={step.text}>{step.text}</Typography> )}
+                          {(step.tags[1]?.includes('image') ? <img src={'/images/' + step.text} alt={step.text} className={classes.whatsappImage} />
+                            : <Typography key={step.text}>{step.text.split('/n').map((line, i) => <span key={i}>{line}<br /></span>)}</Typography>)}
                           {setCurrentSpeaker(step.tags[0])}
                         </Box>
                       </Fade>
@@ -138,11 +139,13 @@ const Whatsapp = (props) => {
                           {(step.tags[0]?.includes('speaker_2') ? specialTags.speaker_2_name : "")}
                           {(step.tags[0]?.includes('speaker_3') ? specialTags.speaker_3_name : "")}
                           {(step.tags[0]?.includes('speaker_4') ? specialTags.speaker_4_name : "")}
+                          {(step.tags[0]?.includes('speaker_5') ? specialTags.speaker_5_name : "")}
                         </div>
                         {setCurrentSpeaker(step.tags[0])}
                         {/* <div>{step.text}</div> */}
                        
-                        {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.whatsappImage} /> :  <Typography key={step.text}>{step.text}</Typography> )}
+                        {(step.tags[1]?.includes('image') ? <img src={'/images/' + step.text} alt={step.text} className={classes.whatsappImage} />
+                          : <Typography key={step.text}>{step.text.split('/n').map((line, i) => <span key={i}>{line}<br /></span>)}</Typography>)}
 
                       </div>
                     </Fade>

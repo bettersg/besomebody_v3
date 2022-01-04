@@ -213,5 +213,32 @@
     "id": 11,
     "type": "GAP",
     "body": " "
+  },
+  {
+    "id": 12,
+    "type": "MULTI_CHOICE_IMAGE",
+    "body": "Which character do you most resonate with in {character_name}’s journey?",
+    "choices": [
+      {
+        "id":1,
+        "body": "Aman",
+        "image_url": "/shareable_avatars/aman.png"
+      },
+      {
+        "id":2,
+        "body": "Jothi",
+        "image_url": "/shareable_avatars/jothi.png"
+      },
+      {
+        "id":3,
+        "body": "Selinder",
+        "image_url": "/shareable_avatars/selinder.png"
+      },
+      {
+        "id":4,
+        "body": "Lukman",
+        "image_url": "/shareable_avatars/lukman.png"
+      }  
+    ]
   }
 ]

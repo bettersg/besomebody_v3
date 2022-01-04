@@ -149,6 +149,9 @@ const ShareableImageContainer = ({data }) =>{
     if (text.length > 200) {
         displayText = text.slice(0,198)+"..."
     }
+    else if (text.length == 0) {
+      displayText = "I pledge to be curious about what it's like to be you, and let you be curious about what it's like to be me. #ToBeYou.sg"
+    }
     else {
         displayText = text
     }
@@ -178,7 +181,7 @@ const ShareableImageContainer = ({data }) =>{
       
       {/* <button onClick={loadImage}>Pre-load image</button> */}
       <img width={width} src={image} alt={"ScreenShot"} className="ShareableImage" />
-      <Button variant="contained"  className={classes.btn} onClick={getImage} >{isMobile ? 'Share via Mobile' : 'Download Image'} </Button>
+      <Button variant="contained"  className={classes.btn} onClick={getImage} >{isMobile ? 'Share reflection' : 'Download Image'} </Button>
       {/* <button onClick={getImage} className="btn">{isMobile ? 'Share via Mobile' : 'Download Image'}</button> */}
   </div>
   )};

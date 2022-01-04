@@ -1,4 +1,5 @@
 export const MINI_GAME_MAP = [
+  // aman 1
     {
       game_id: 1,
       ui: "mcq",
@@ -306,7 +307,150 @@ export const MINI_GAME_MAP = [
         ],
       },
     ],
-  }
+  },
+
+  // aman 2
+  {
+    game_id: 5,
+    ui: "mcq",
+    introduction: "Aman faced hurdles on his journey to become an actor. Let's explore these.",
+    questions: [
+      {
+        question_id: 1,
+        question:
+          "Singapore already has a famous Sikh actor: Gurmit Singh.",
+        type: "text",
+        correct_answer_id: 2,
+        explanation:
+          "False. Gurmit Singh converted from Sikhism to Christianity before he started acting professionally (when he was about 20). He retained his surname of Singh, which often leads people to mistakenly believe that he is still a Sikh.",
+        answers: [
+          {
+            answer_id: 1,
+            title: "True",
+          },
+          {
+            answer_id: 2,
+            title: "False",
+          },
+        ],
+      },
+      {
+        question_id: 2,
+        question:
+          "A 2018 national survey found that Chinese employers were more likely than Malay and Indian employers to feel that a person’s race is a relevant factor when hiring.",
+        correct_answer_id: 1,
+        explanation: "Based on the 2018 IPS Survey, 34% of Chinese respondents felt that a job applicant's race was sometimes important when hiring someone to work for them (compared to only 21% of Malays and 16% of Indians).",
+        type: "text",
+        answers: [
+          {
+            answer_id: 1,
+            title: "True",
+          },
+          {
+            answer_id: 2,
+            title: "False",
+          },
+        ],
+      },
+      {
+        question_id: 3,
+        question:
+          "A local Indian actor was asked to be 'more Indian' in his casting for Ah Boys To Men 4, which created significant controversy in 2017.",
+        type: "text",
+        correct_answer_id: 1,
+        explanation:
+          "Shrey Bhargava, a freelance actor, shared his experience during the casting for Ah Boys To Men 4. There was heated discussion online - some felt that he over-reacted, while others defended his remarks.",
+          answers: [
+            {
+              answer_id: 1,
+              title: "True",
+            },
+            {
+              answer_id: 2,
+              title: "False",
+            },
+          ],
+      },  
+    ],
+  },
+
+  // aman 3
+  {
+    game_id: 6,
+    ui: "mcq",
+    introduction: "Aman met Sel at a Gurdwara. Let's explore what this means to Sikhs.",
+    questions: [
+      {
+        question_id: 1,
+        question:
+          "A Gurdwara is a Sikh temple.",
+        type: "text",
+        correct_answer_id: 1,
+        explanation:
+          "True. The first Gurdwara in Singapore was established in 1912 and is called the Central Sikh Temple, or Wadda Gurdwara ('The Big Temple')",
+        answers: [
+          {
+            answer_id: 1,
+            title: "True",
+          },
+          {
+            answer_id: 2,
+            title: "False",
+          },
+        ],
+      },
+      {
+        question_id: 2,
+        question:
+          "Which one of these is most likely a Gurdwara?",
+        correct_answer_id: 3,
+        explanation: "It's option 3. A gurdwara can be identified from a distance by tall flagpoles bearing the orange & black Sikh flag, the Nishan Sahib (a logo with three swords and a special throwing weapon).",
+        type: "image",
+        answers: [
+          {
+            answer_id: 1,
+            imageUrl: "aman_3_temple.jpg",
+            title: "Option 1",
+          },
+          {
+            answer_id: 2,
+            imageUrl: "aman_3_mosque.jpg",
+            title: "Option 2",
+          },
+          {
+            answer_id: 3,
+            imageUrl: "aman_3_gurdwara.jpg",
+            title: "Option 3",
+          },
+          {
+            answer_id: 4,
+            imageUrl: "aman_3_church.jpg",
+            title: "Option 4",
+          },
+        ],
+      },
+      {
+        question_id: 3,
+        question:
+          "Any visitor and devotee to a Gurdwara will be served food, as part of Sikh practice.",
+        type: "text",
+        correct_answer_id: 1,
+        explanation:
+          "True. Langgar (originally meaning anchor) was instituted by Guru Nanak, to cater food for visitors and devotees who came to meet the Guru. This now includes community service and assistance to the needy, in addition to its original purpose of food distribution, funded by donations from the Sikh community.",
+          answers: [
+            {
+              answer_id: 1,
+              title: "True",
+            },
+            {
+              answer_id: 2,
+              title: "False",
+            },
+          ],
+      },  
+    ],
+  },
+
 ];
   
 

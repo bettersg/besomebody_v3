@@ -107,7 +107,7 @@ const ShareStep = ({ reflection, characterId, setState, getState, next }) => {
     avatarImage: empathyCharacter.characterImage 
   } : {
     storyName: personaName + "'s Story",
-    text: "I completed playing the interactive fiction game ToBeYou.sg, and I want you to join me!",
+    text: "I pledge to be curious about what it's like to be you, and let you be curious about what it's like to be me. #ToBeYou.sg",
     avatar: personaName.toLowerCase(), 
     avatarImage: empathyCharacter.characterImage
   }
