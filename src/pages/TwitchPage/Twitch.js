@@ -43,8 +43,8 @@ const Twitch = (props) => {
   //   }
   // }, []);
   const useStyles = makeStyles((theme) => ({
-    WhatsappWrapper: {
-      backgroundImage: `url('/images/bg_ui_whatsapp.png')`,
+    TwitchWrapper: {
+      backgroundImage: `url('/images/bg_ui_Twitch.png')`,
       backgroundSize: "cover", 
       height: '660px',
       [theme.breakpoints.only('xs')]: {
@@ -53,11 +53,11 @@ const Twitch = (props) => {
       width: "100%", 
       // overflow: "hidden", 
     },
-    whatsappImage: {
+    TwitchImage: {
       maxWidth: 150,
       maxHeight: 150,
     }
-    // WhatsappMsgs: {
+    // TwitchMsgs: {
     //   maxHeight: maxHeight,
     // }
   }))
@@ -82,27 +82,27 @@ const Twitch = (props) => {
   // import sound from "react-sound"
 // inside render will put <sound> object
 
-  // TO DO: make whatsapp screen fit the screen and customise controls
+  // TO DO: make Twitch screen fit the screen and customise controls
   return (
     <Fade in={true} timeout={500}>
-      <Box className={classes.WhatsappWrapper}>
-        {/* Whatsapp Header */}
-        <div className="Whatsapp__header">
+      <Box className={classes.TwitchWrapper}>
+        {/* Twitch Header */}
+        <div className="Twitch__header">
           <img 
             src={`/images/${specialTags.chat_group_image}`}
             alt="Chat Profile"
-            className="Whatsapp__header--profile"
+            className="Twitch__header--profile"
           />
-          <div className="Whatsapp__header__description">
-            <div className="Whatsapp__header__description--name">{specialTags.chat_group_title}</div>
-            <div className="Whatsapp__header__description--status">Online</div>
+          <div className="Twitch__header__description">
+            <div className="Twitch__header__description--name">{specialTags.chat_group_title}</div>
+            <div className="Twitch__header__description--status">Online</div>
           </div>
         </div>
         
         
         <Box>
             <Box
-              className={`Whatsapp__messages ${choices.length > 0 ? 'choices' : ''}`}
+              className={`Twitch__messages ${choices.length > 0 ? 'choices' : ''}`}
               dir="ltr">
               {specialTags.timestamp ? <Box style={{textAlign:'center', paddingTop:5, fontSize:12}}> {specialTags.timestamp}hr </Box>: null}
               {currentParagraphs.map((step, i) => {
@@ -116,11 +116,11 @@ const Twitch = (props) => {
                     >
                       <Fade in={step.text} key={step.text} timeout={300}>
                         <Box
-                          className={`Whatsapp__messages--sender ${isNotPrevSpeaker(step.tags[0])?"newSpeaker":""}`}
+                          className={`Twitch__messages--sender ${isNotPrevSpeaker(step.tags[0])?"newSpeaker":""}`}
                           borderRadius={5}
                           key={step.text}
                         >
-                          {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.whatsappImage} /> :  <Typography key={step.text}>{step.text}</Typography> )}
+                          {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.TwitchImage} /> :  <Typography key={step.text}>{step.text}</Typography> )}
                           {setCurrentSpeaker(step.tags[0])}
                         </Box>
                       </Fade>
@@ -129,10 +129,10 @@ const Twitch = (props) => {
                 } else if (step.tags[0]?.includes('speaker')) {     // this is needed to avoid rendering inner_monologue
                   return (
                     <Fade in={step.text} timeout={300}>
-                      <div key={step.text} className={`Whatsapp__messages--receiver ${isNotPrevSpeaker(step.tags[0])?"newSpeaker":""}`} 
+                      <div key={step.text} className={`Twitch__messages--receiver ${isNotPrevSpeaker(step.tags[0])?"newSpeaker":""}`} 
                         style={{}}
                       >
-                        <div className="Whatsapp__messages--receiver--name"
+                        <div className="Twitch__messages--receiver--name"
                             style={{color:persona.primaryColour,textTransform:"capitalize", display:isNotPrevSpeaker(step.tags[0])?"block":"none"}}>
                           {(step.tags[0]?.includes('speaker_1') ? specialTags.speaker_1_name : "")}
                           {(step.tags[0]?.includes('speaker_2') ? specialTags.speaker_2_name : "")}
@@ -142,7 +142,7 @@ const Twitch = (props) => {
                         {setCurrentSpeaker(step.tags[0])}
                         {/* <div>{step.text}</div> */}
                        
-                        {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.whatsappImage} /> :  <Typography key={step.text}>{step.text}</Typography> )}
+                        {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.TwitchImage} /> :  <Typography key={step.text}>{step.text}</Typography> )}
 
                       </div>
                     </Fade>
@@ -157,22 +157,22 @@ const Twitch = (props) => {
               })}
               <div ref={elementRef} />
             </Box>
-            <Box className="Whatsapp__sendWrapper">
+            <Box className="Twitch__sendWrapper">
               <Box
-                className={`Whatsapp__sendWrapper__sendButton ${
+                className={`Twitch__sendWrapper__sendButton ${
                   choices.length === 0 ? '' : 'choice'
                 }`}
               >
                 Continue...
               </Box>
-              <Box className="Whatsapp__sendWrapper__sendButton--right">
+              <Box className="Twitch__sendWrapper__sendButton--right">
                 <ExpandMoreIcon />
               </Box>
             </Box>
             {/* this if else is needed to toggle between "Next Button" and choices (if any) */}
             {choices.length > 0 ? (
               <Box
-                className={`Whatsapp__choicesWrapper ${
+                className={`Twitch__choicesWrapper ${
                   choices.length === 0 ? 'no-choices' : 'w3-animate-fading'
                 }`}
                 // ref={choicesRef}

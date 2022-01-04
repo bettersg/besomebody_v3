@@ -25,6 +25,7 @@ import Music1 from '../music/tobeyou_intro.mp3'
 import ChapterEnd from '../pages/ChapterEndPage/ChapterEnd'
 import WhatsappPage from '../pages/WhatsappPage/Whatsapp'
 import TwitchPage from '../pages/TwitchPage/TestTwitch'
+import TwitchPageData from '../pages/TwitchPage/Twitch'
 
 
 class Router extends Component {
@@ -123,8 +124,12 @@ class Router extends Component {
             </PrivateRoute>
 
             {/* to remove after ink controller added */}
-            <PrivateRoute path="/twitch" exact>
+            <PrivateRoute path="/twitchtest" exact>
               <TwitchPage />
+            </PrivateRoute>
+
+            <PrivateRoute path="/twitch" exact>
+              <TwitchPageData />
             </PrivateRoute>
 
             <PrivateRoute path="/whatsapp" exact>

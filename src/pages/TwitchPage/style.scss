@@ -3,7 +3,7 @@
 // html, body {
 //     height: 100%; 
 // }
-.Whatsapp {
+.Twitch {
     &__toolbar {
         height: 64px;
         left: 0px;
@@ -88,7 +88,55 @@
         //         border-radius: 12px 12px 3px 12px;
         //     }
         // }
-        &--twitchreceiver {
+        &--sender {
+            // background: $white;
+            color: $midnight100;
+            // width: 100%;
+            padding: 10px 8px 8px; //edited left-right padding values from 12 to 8px
+            // font-family: Inter;
+            // font-style: normal;
+            // font-weight: normal;
+            // font-size: 14px;
+            // line-height: 150%;
+            display: flex;
+            // align-items: center;
+
+            // margin-bottom: 4px;
+            // margin-left: 16px;
+            // border-radius: 3px 12px 12px 3px;
+            // &.newSpeaker { 
+            //     border-radius: 12px 12px 12px 3px;
+            // }
+            
+            &--name {
+                // @include inter-whatsapp; 
+                // text-transform: capitalize;
+                // margin-bottom: 4px;
+
+                font-family: Inter;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 150%;
+                padding-left: 4px;
+
+                color: #664EFC;
+            }
+
+            &--profile {
+                width: 20px;
+                height: 20px;
+            }
+
+            &--message {
+                font-family: Inter;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 150%;
+            }
+        }
+        &--receiver {
             // background: $white;
             color: $midnight100;
             // width: 100%;
@@ -150,7 +198,7 @@
             }
         }
     }
-    &__twitchSendWrapper {
+    &__sendWrapper {
 
         background-color: white;
         padding: 10px 16px; 
@@ -159,7 +207,7 @@
         align-items: center;
         height: 64px; 
         // margin-top: 20px;
-        &__twitchSendButton {
+        &__sendButton {
             border-radius: 48px;
             padding: 12px 16px; 
             width: 85%; 

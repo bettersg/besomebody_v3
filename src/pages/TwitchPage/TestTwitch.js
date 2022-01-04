@@ -43,8 +43,8 @@ const Twitch = (props) => {
   //   }
   // }, []);
   const useStyles = makeStyles((theme) => ({
-    WhatsappWrapper: {
-    //   backgroundImage: `url('/images/bg_ui_whatsapp.png')`,
+    TwitchWrapper: {
+    //   backgroundImage: `url('/images/bg_ui_Twitch.png')`,
     //   backgroundSize: "cover", 
       backgroundColor: 'white',
       height: '660px',
@@ -54,11 +54,11 @@ const Twitch = (props) => {
       width: "100%", 
       // overflow: "hidden", 
     },
-    whatsappImage: {
+    twitchImage: {
       maxWidth: 150,
       maxHeight: 150,
     }
-    // WhatsappMsgs: {
+    // TwitchMsgs: {
     //   maxHeight: maxHeight,
     // }
   }))
@@ -83,32 +83,32 @@ const Twitch = (props) => {
   // import sound from "react-sound"
 // inside render will put <sound> object
 
-  // TO DO: make whatsapp screen fit the screen and customise controls
+  // TO DO: make Twitch screen fit the screen and customise controls
   return (
     <Fade in={true} timeout={500}>
-      <Box className={classes.WhatsappWrapper}>
-        {/* Whatsapp Header */}
-        {/* <div className="Whatsapp__toolbar"/> */}
-        <div className="Whatsapp__video">
-          <img className="Whatsapp__video--image" src="/images/bg_nadia_playground.jpg"/>
+      <Box className={classes.TwitchWrapper}>
+        {/* Twitch Header */}
+        {/* <div className="Twitch__toolbar"/> */}
+        <div className="Twitch__video">
+          <img className="Twitch__video--image" src="/images/bg_nadia_playground.jpg"/>
         </div>
-        <div className="Whatsapp__gradient"/>
-        <div className="Whatsapp__header">
+        <div className="Twitch__gradient"/>
+        <div className="Twitch__header">
           {/* <img 
             src='/images/profile_nadia.png'
             alt="Chat Profile"
-            className="Whatsapp__header--profile"
+            className="Twitch__header--profile"
           /> */}
-          <div className="Whatsapp__header__description">
-            <div className="Whatsapp__header__description--name">Chat</div>
-            {/* <div className="Whatsapp__header__description--status">Online</div> */}
+          <div className="Twitch__header__description">
+            <div className="Twitch__header__description--name">Chat</div>
+            {/* <div className="Twitch__header__description--status">Online</div> */}
           </div>
         </div>
         
         
         <Box>
             <Box
-              className={`Whatsapp__messages ${0 === 0 ? 'choices' : ''}`}
+              className={`Twitch__messages ${0 === 0 ? 'choices' : ''}`}
               dir="ltr">
               {/* <Box style={{textAlign:'center', paddingTop:5, fontSize:12}}> 1000hr </Box> */}
               <Box
@@ -119,17 +119,17 @@ const Twitch = (props) => {
                     >
                       <Fade in='test' key='test' timeout={300}>
                         <Box
-                          className={`Whatsapp__messages--twitchreceiver`}
+                          className={`Twitch__messages--receiver`}
                         //   borderRadius={5}
                         //   key={step.text}
                         >
-                            <div class="Whatsapp__messages--twitchreceiver--message">
+                            <div class="Twitch__messages--receiver--message">
                             <span>
-                                <img class="Whatsapp__messages--twitchreceiver--profile" src="/images/profile_aman.png"></img></span>
-                            <span className="Whatsapp__messages--twitchreceiver--name" style={{color:'#19A3AD'}}>Aman: </span>
+                                <img class="Twitch__messages--receiver--profile" src="/images/profile_aman.png"></img></span>
+                            <span className="Twitch__messages--receiver--name" style={{color:'#19A3AD'}}>Aman: </span>
                             Hello world! Lorem ipsum sin amat dolores uluros.
                             </div>
-                          {/* {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.whatsappImage} /> :  <Typography key={step.text}>{step.text}</Typography> )} */}
+                          {/* {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.TwitchImage} /> :  <Typography key={step.text}>{step.text}</Typography> )} */}
                           {/* {setCurrentSpeaker(step.tags[0])} */}
                         </Box>
                       </Fade>
@@ -143,23 +143,22 @@ const Twitch = (props) => {
                     >
                       <Fade in='test' key='test' timeout={300}>
                         <Box
-                          className={`Whatsapp__messages--twitchreceiver`}
+                          className={`Twitch__messages--receiver`}
                         //   borderRadius={5}
                         //   key={step.text}
                         >
-                            <div class="Whatsapp__messages--twitchreceiver--message">
+                            <div class="Twitch__messages--receiver--message">
                             <span>
-                                <img class="Whatsapp__messages--twitchreceiver--profile" src="/images/profile_nadia.png"></img></span>
-                            <span className="Whatsapp__messages--twitchreceiver--name">Nadia: </span>
+                                <img class="Twitch__messages--receiver--profile" src="/images/profile_nadia.png"></img></span>
+                            <span className="Twitch__messages--receiver--name">Nadia: </span>
                             Hello world! Lorem ipsum sin amat dolores uluros.
                             </div>
-                          {/* {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.whatsappImage} /> :  <Typography key={step.text}>{step.text}</Typography> )} */}
+                          {/* {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.TwitchImage} /> :  <Typography key={step.text}>{step.text}</Typography> )} */}
                           {/* {setCurrentSpeaker(step.tags[0])} */}
                         </Box>
                       </Fade>
                       
                 </Box>
-
                 <Box
                     //   key={step.text}
                       mx={1}
@@ -168,42 +167,17 @@ const Twitch = (props) => {
                     >
                       <Fade in='test' key='test' timeout={300}>
                         <Box
-                          className={`Whatsapp__messages--twitchreceiver`}
+                          className={`Twitch__messages--receiver`}
                         //   borderRadius={5}
                         //   key={step.text}
                         >
-                            <div class="Whatsapp__messages--twitchreceiver--message">
+                            <div class="Twitch__messages--receiver--message">
                             <span>
-                                <img class="Whatsapp__messages--twitchreceiver--profile" src="/images/profile_nadia.png"></img></span>
-                            <span className="Whatsapp__messages--twitchreceiver--name">Nadia: </span>
+                                <img class="Twitch__messages--receiver--profile" src="/images/profile_nadia.png"></img></span>
+                            <span className="Twitch__messages--receiver--name">Nadia: </span>
                             Hello world! Lorem ipsum sin amat dolores uluros.
                             </div>
-                          {/* {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.whatsappImage} /> :  <Typography key={step.text}>{step.text}</Typography> )} */}
-                          {/* {setCurrentSpeaker(step.tags[0])} */}
-                        </Box>
-                      </Fade>
-                      
-                </Box>
-
-                <Box
-                    //   key={step.text}
-                      mx={1}
-                      display="flex"
-                      justifyContent="flex-end"
-                    >
-                      <Fade in='test' key='test' timeout={300}>
-                        <Box
-                          className={`Whatsapp__messages--twitchreceiver`}
-                        //   borderRadius={5}
-                        //   key={step.text}
-                        >
-                            <div class="Whatsapp__messages--twitchreceiver--message">
-                            <span>
-                                <img class="Whatsapp__messages--twitchreceiver--profile" src="/images/profile_nadia.png"></img></span>
-                            <span className="Whatsapp__messages--twitchreceiver--name">Nadia: </span>
-                            Hello world! Lorem ipsum sin amat dolores uluros.
-                            </div>
-                          {/* {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.whatsappImage} /> :  <Typography key={step.text}>{step.text}</Typography> )} */}
+                          {/* {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.TwitchImage} /> :  <Typography key={step.text}>{step.text}</Typography> )} */}
                           {/* {setCurrentSpeaker(step.tags[0])} */}
                         </Box>
                       </Fade>
@@ -218,17 +192,42 @@ const Twitch = (props) => {
                     >
                       <Fade in='test' key='test' timeout={300}>
                         <Box
-                          className={`Whatsapp__messages--twitchreceiver`}
+                          className={`Twitch__messages--receiver`}
                         //   borderRadius={5}
                         //   key={step.text}
                         >
-                            <div class="Whatsapp__messages--twitchreceiver--message">
+                            <div class="Twitch__messages--receiver--message">
                             <span>
-                                <img class="Whatsapp__messages--twitchreceiver--profile" src="/images/profile_nadia.png"></img></span>
-                            <span className="Whatsapp__messages--twitchreceiver--name" style={{color:'#D12419'}}>Zhihao: </span>
+                                <img class="Twitch__messages--receiver--profile" src="/images/profile_nadia.png"></img></span>
+                            <span className="Twitch__messages--receiver--name">Nadia: </span>
                             Hello world! Lorem ipsum sin amat dolores uluros.
                             </div>
-                          {/* {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.whatsappImage} /> :  <Typography key={step.text}>{step.text}</Typography> )} */}
+                          {/* {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.TwitchImage} /> :  <Typography key={step.text}>{step.text}</Typography> )} */}
+                          {/* {setCurrentSpeaker(step.tags[0])} */}
+                        </Box>
+                      </Fade>
+                      
+                </Box>
+
+                <Box
+                    //   key={step.text}
+                      mx={1}
+                      display="flex"
+                      justifyContent="flex-end"
+                    >
+                      <Fade in='test' key='test' timeout={300}>
+                        <Box
+                          className={`Twitch__messages--receiver`}
+                        //   borderRadius={5}
+                        //   key={step.text}
+                        >
+                            <div class="Twitch__messages--receiver--message">
+                            <span>
+                                <img class="Twitch__messages--receiver--profile" src="/images/profile_nadia.png"></img></span>
+                            <span className="Twitch__messages--receiver--name" style={{color:'#D12419'}}>Zhihao: </span>
+                            Hello world! Lorem ipsum sin amat dolores uluros.
+                            </div>
+                          {/* {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.TwitchImage} /> :  <Typography key={step.text}>{step.text}</Typography> )} */}
                           {/* {setCurrentSpeaker(step.tags[0])} */}
                         </Box>
                       </Fade>
@@ -237,22 +236,22 @@ const Twitch = (props) => {
 
               <div ref={elementRef} />
             </Box>
-            <Box className="Whatsapp__twitchSendWrapper">
+            <Box className="Twitch__sendWrapper">
               <Box
-                className={`Whatsapp__twitchSendWrapper__twitchSendButton ${
+                className={`Twitch__sendWrapper__sendButton ${
                   1 === 0 ? '' : 'choice'
                 }`}
               >
                 {1 === 0 ? "Tap to continue" : "Choose your reply"}
               </Box>
-              <Box className="Whatsapp__twitchSendWrapper__twitchSendButton--purpleright">
+              <Box className="Twitch__sendWrapper__sendButton--purpleright">
                 <ExpandMoreIcon />
               </Box>
             </Box>
             {/* this if else is needed to toggle between "Next Button" and choices (if any) */}
             {0 === 0 ? (
               <Box
-                className={`Whatsapp__choicesWrapper ${
+                className={`Twitch__choicesWrapper ${
                   1 === 0 ? 'no-choices' : 'w3-animate-fading'
                 }`}
                 // ref={choicesRef}
