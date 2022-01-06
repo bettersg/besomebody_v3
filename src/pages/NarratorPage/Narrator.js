@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react'
 import { Box, Button, Fade, Typography } from '@material-ui/core'
 import NextButton from "../../components/NextButton" 
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import { useInkContext } from '../../contexts/InkContext'
 
@@ -44,6 +45,15 @@ const useStyles = makeStyles((theme) => ({
       borderColor: '#B1EAEE',
       boxShadow: 'none',
     },
+  },
+  ExpandMoreButton: {
+    position: 'absolute',
+    bottom: 50,
+    color: 'white',
+    left: '46%',
+    background: 'rgba(0,0,0,0.5)',
+    borderRadius: 100,
+
   },
 }))
  
@@ -118,8 +128,10 @@ const Narrator = (props) => {
               ))}
             </div>
             : 
-            <NextButton getStory={getStory}/>
-
+            <div>
+              <ExpandMoreIcon color="white" fontSize="large" className={classes.ExpandMoreButton}/> 
+              <NextButton getStory={getStory}/>
+            </div>
           }
       </Box>
       
