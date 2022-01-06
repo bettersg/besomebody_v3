@@ -9,9 +9,13 @@
     justify-content: space-between;
     // background-color: darkgrey;
     .MenuWrapper__menuButton {
-      position: unset;
+      // position: unset;
       width: 35px; 
       margin-right: 20px;
+      position: absolute;
+      // width: 24px; 
+      top: 11px;
+      right: 20px;
     }
     &--placeholder {
       width: 44px; 
