@@ -9,7 +9,7 @@ html, body {
 }
 @media screen and (min-device-width:600px) {
   html, body {
-    background-image: url("../section1_bg.png");
+    background-image: url("../assets/section1_bg.jpg");
 
   }
   html {
