@@ -79,7 +79,7 @@ VAR character_id = 3
 #ui:narrator
 #background:bg_ravi_intro.jpg
 #music:ravi_intro.mp3
-Ravi Kannaswamy #title
+Ravi Kannasamy #title
 VAR chapter_id = 1
 ~ chapter_id = 1
 Hey there. I’m Ravi. I’m 24. Aviation engineer.  
@@ -443,6 +443,12 @@ I’m so tired, I could fall asleep just sitting...here...ZZZZZ…
 
 
 === ravi_1_3 ===
+#knot:ravi_1_minigame
+#ui:mcq
+#game_id:7
+Minigame 7 // must add some text
+
+
 #knot:ravi_1_3
 #ui:narrator
 #background:bg_ravi_intro.jpg
@@ -931,7 +937,60 @@ Reflection 7
 
 
 
-// -> ravi_2_intro
+-> ravi_2_intro
+
+
+
+
+
+
+
+
+
+
+
+
+// CHAPTER 3
+
+
+
+
+
+=== ravi_2_intro ===
+#knot:ravi_2_intro
+#ui:narrator
+#background:bg_ravi_bedroom.jpg
+One month after the move. Ravi, lying in bed in his new room.
+
+~ chapter_id = 2
+
+CHAPTER {chapter_id} #title
+Coffee Shop Kannasamy #title
+
+
+-> ravi_2_1_narration
+
+
+=== ravi_2_1_narration ===
+#knot:ravi_2_1_narration
+#ui:narrator
+#background:bg_ravi_intro.jpg
+Just outside the gurdwara (Sikh temple) my family has attended since I was born, after weekly prayers.
+Where are Sel and her parents? I should say hi before we leave.
+I wonder if Sel is still mad at me. We argued again last night.
+It seems like we quarrel about the smallest things, lately.
+How did it get to this point? 
+We’ve been together seven years already.
+Through school, NS, and the past four years of university...
+Maybe she’s tired of me.
+Oh - there they are! Sel’s parents, Uncle Pritam and Aunty Suvinder.
+ 
+-> ravi_2_1
+
+=== ravi_2_1 ===
+#knot:ravi_2_1
+
+
 
 
 -> END
