@@ -119,7 +119,7 @@ const CharacterChapterPage = (props) => {
       <div className="CharacterChapterPage">
         <div className="CharacterChapterPage__top">
           <div className="CharacterChapterPage__top__nav">
-            <Link to="/" style={{ textDecoration: 'none', paddingLeft: '70px' }}>
+            <Link to="/" style={{ textDecoration: 'none' }}>
               <div style={{ display: 'flex' }}>
                 <SVG src="/chapter_choices_page/arrow.svg" />
                 <div className="CharacterChapterPage__top__nav--name">Character Menu</div>
