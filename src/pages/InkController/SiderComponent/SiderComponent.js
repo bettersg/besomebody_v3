@@ -105,17 +105,17 @@ export default function SwipeableTemporaryDrawer(props) {
           {/* I know why you did it as a map, but this makes it very hard to pass in dynamic values to the links. I've reverted it to individual links */}
           <div className="SideMenu__menuitems__item">
           <Link to="/" className="SideMenu__menuitems__label"><SVG src="/side_menu/icon.svg" className="SideMenu__menuitems__icons"/>
-            <span>Character Menu</span></Link>
+            <span>Characters</span></Link>
           </div>
 
           <div className="SideMenu__menuitems__item">
           <Link to={"/chapters/"+ name} className="SideMenu__menuitems__label"><SVG src="/side_menu/heart.svg" className="SideMenu__menuitems__icons"/>
-            <span>Chapter Menu</span></Link>
+            <span>Chapters</span></Link>
           </div>
 
           <div className="SideMenu__menuitems__item">
           <Link to={"/user/" + currentUser.id} className="SideMenu__menuitems__label"><SVG src="/side_menu/profile.svg" className="SideMenu__menuitems__icons"/>
-            <span>Account Menu</span></Link>
+            <span>Account</span></Link>
           </div>
 
           <div className="SideMenu__menuitems__item">

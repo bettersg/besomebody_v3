@@ -148,7 +148,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   answerWrapper: {
-    padding: "20px",
+    padding: "32px 20px 32px 20px",
+    
   },
 
   bar: {
@@ -207,12 +208,12 @@ const useStyles = makeStyles((theme) => ({
   answerWrong: {
     fontSize: "14px",
     color: "white",
-    paddingBottom: "10px",
+    paddingBottom: "32px",
   }, 
   answerCorrect: {
     fontSize: "14px",
     color: "#000A11",
-    paddingBottom: "10px",
+    paddingBottom: "32px",
   }
 }));
 

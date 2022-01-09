@@ -1,6 +1,7 @@
 @import "../../scss/global/global";
 .ScenePage {
   user-select: none;
+  font-family: 'Inter', Roboto;
   &__speaker {
     &--left,
     &--right {

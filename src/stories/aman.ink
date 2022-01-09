@@ -1973,7 +1973,7 @@ Speaking of… uh-oh. #inner_monologue
 Here comes Sel, and she doesn’t look happy. #inner_monologue
 #speaker_left_image:cha_aman_selinder2_annoyed.png
 #speaker_left_name:Selinder
-Hey, did you see my parents? #speaker_leftspeaker_righ
+Hey, did you see my parents? #speaker_left 
 Hey. Yes, they left already, they said to take your time. #speaker_self
 Darn, I needed a lift. #speaker_left
 So what did you guys talk about? #speaker_left

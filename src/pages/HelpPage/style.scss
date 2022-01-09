@@ -8,8 +8,10 @@
         align-items: center;
         justify-content: space-between;
         .MenuWrapper__menuButton {
-            position: unset;
-            width: 24px; 
+            position: absolute;
+            // width: 24px; 
+            top: 11px;
+            right: 20px;
         }
         &--name {
             margin-left: 18px; 

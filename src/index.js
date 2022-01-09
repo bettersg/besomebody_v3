@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 // import * as Sentry from "@sentry/browser";
 import * as serviceWorker from "./serviceWorker";
-import "typeface-roboto";
+// import "typeface-inter";
 import "./index.css";
 import App from "./App";
 
