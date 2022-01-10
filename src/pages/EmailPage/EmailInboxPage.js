@@ -7,6 +7,9 @@ import './style.scss'
 import { useInkContext } from '../../contexts/InkContext'
 import { CHARACTER_MAP } from '../../models/storyMap';
 import { useParams } from 'react-router-dom'
+import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
+import { InboxItem } from './InboxItem'
+
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
@@ -45,6 +48,7 @@ const EmailInbox = (props) => {
   const useStyles = makeStyles((theme) => ({
     EmailWrapper: {
       backgroundImage: `url('/images/bg_ui_email.png')`,
+      background: "white", 
       backgroundSize: "cover", 
       height: '660px',
       [theme.breakpoints.only('xs')]: {
@@ -123,44 +127,22 @@ const EmailInbox = (props) => {
     <Fade in={true} timeout={500}>
       <Box className={classes.EmailWrapper}>
         {/* Email Header */}
-        <div className="Email__header">
           
-          <div className="Email__header__description">
-            Email Inbox
+          <div className="Email__inbox__header">
+            <MenuRoundedIcon />
           </div>
-        </div>
         
         
       
-        <Box mt={2} >
+        <Box>
           {/* New Email Message */}
-            <Box>
-                {specialTags.newemailfrom} <br />
-                {specialTags.newemailprofileicon} <br />
-                {specialTags.newemailsubject} <br />
-                {specialTags.newemailpreview} <br />              
-            </Box>
-            <Box mt={2}>
-                      {/* Static Read Email Messages */}
-                      John Tan <br />
-                      Static Email Subject 1 <br />
-                      Static Preview Line 1 <br />                      
-            </Box>
-            <Box mt={2}>                      
-                      Lisa Lim <br />
-                      Static Email Subject 2 <br />
-                      Static Preview Line 2 <br />                      
-            </Box>      
-            <Box mt={2}>
-                      John Tan <br />
-                      Static Email Subject 1 <br />
-                      Static Preview Line 1 <br />                      
-            </Box>
-            <Box mt={2}>
-                      Lisa Lim <br />
-                      Static Email Subject 2 <br />
-                      Static Preview Line 2 <br />                      
-            </Box>      
+              <InboxItem storyline from={specialTags.newemailfrom} profileIcon={specialTags.newemailprofileicon} subject={specialTags.newemailsubject} emailPreview={specialTags.newemailpreview}/>
+              <InboxItem from={"John Tan"} subject={"Static Email Subject 1"} emailPreview={"Static Preview Line 1"}/>
+              <InboxItem from={"Lisa Lim"} subject={"Static Email Subject 1"} emailPreview={"Static Preview Line 1"}/>
+              <InboxItem from={"John Tan"} subject={"Static Email Subject 1"} emailPreview={"Static Preview Line 1"}/>
+              <InboxItem from={"Lisa Lim"} subject={"Static Email Subject 1"} emailPreview={"Static Preview Line 1"}/>
+
+               
 
           
         </Box>

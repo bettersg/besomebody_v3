@@ -119,6 +119,16 @@
 }   
 
 .Email {
+    &__inbox {
+        &__header {
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); 
+            background: white;
+            height: 75px; 
+            padding: 14px 20px; 
+            align-items: center;
+            display: flex;
+        }
+    }
     &__header {
         height: 75px;
         background-color: $white;
@@ -250,6 +260,41 @@
     
         }
     }
+}
+
+.InboxItem {
+    padding: 12px 12px; 
+    background: white;
+    display: flex;
+    align-items: center;
+    
+    &--image {
+        border-radius: 50px;
+        height: 48px; 
+        width: 48px; 
+        margin-right: 14px; 
+    }
+    &--from {
+        font-weight: 700 !important;
+        color: $midnight100;
+        &--nonStoryline {
+            color: rgb(171, 171, 171);
+        }
+    }
+    &--subject {
+        font-weight: 700 !important;
+        color: $midnight100;
+        &--nonStoryline {
+            color: rgb(171, 171, 171);
+        }
+    }
+    &--preview {
+        color: $midnight60; 
+        &--nonStoryline {
+            color: rgb(171, 171, 171);
+        }
+    }
+    
 }
 
 // .Email-box {
