@@ -285,6 +285,7 @@ function getChapterReflectionIds(characterId) {
 
 const ReflectionResponsesStep = ({ reflectionId, next }) => {
   const [responses, setResponses] = useState(null);
+  const [highlightedResponse, setHighlightedResponse] = useState(null);
   const [hasMore, setHasMore] = useState(true);
   const [lastDocSnapshot, setLastDocSnapshot] = useState(null);
   const [reflectionIds, setReflectionIds] = useState([reflectionId]);
@@ -348,6 +349,17 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
     );
   }
 
+  function getHighlightedResponse(responses) {
+    console.log("responses: "+responses)
+    for (let i = 0; i < responses.length; i++) {
+      console.log("check response answer: "+responses[i].answer)
+      if (responses[i].answer != ""){
+        setHighlightedResponse(responses[i])
+        break
+      }
+    }
+  }
+
   async function fetchMoreResponses() {
     const LIMIT = 300;
     const { newResponses, newLastDocSnapshot } = await getDbReflectionResponsesPaginated({
@@ -356,10 +368,15 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
       reflectionIds: reflectionIds,
       questionId: 3,  // this is hardcoded to the "share your story textarea question"
     });
+    var firstload = 0;
     if (newResponses.length < LIMIT) {
       setHasMore(false);
     }
     setResponses((prevResponses) => prevResponses === null ? newResponses : prevResponses.concat(newResponses));
+    if (firstload === 0) {
+      getHighlightedResponse(newResponses);
+      firstload = 1;
+    }
     setLastDocSnapshot(newLastDocSnapshot);
   }
 
@@ -430,7 +447,7 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
           currentPage === 4 ?
           <div className={classes.yourStoriesBkgrd}  onClick={() => setCurrentPage(currentPage + 1)}>
             <div className={classes.gradientBkgrd}>
-              <ChapterResponse key={responses[0].id} response={responses[0]} />
+              <ChapterResponse key={highlightedResponse.id} response={highlightedResponse} />
               <div className={classes.bottomLikeSection}>
                 <img src="/reflection/reflection_heart_white.png" className={classes.heart}/>
                 <Typography className={classes.whiteTextReflection}>Tap on this icon to say that you connected with a reflection.</Typography>
