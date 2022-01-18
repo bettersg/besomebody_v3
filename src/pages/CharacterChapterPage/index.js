@@ -45,23 +45,29 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const getInkJson = (nameParam) => {
-  switch (nameParam) {
-    case 'nadia': {
-      return {
-        inkJson: NadiaInk,
-        characterId: 1,
-      }
-    }
-    case 'aman': {
-      return {
-        inkJson: AmanInk,
-        characterId: 2,
-      }
-    }
-    default: {
-      return null
-    }
+  const persona = CHARACTER_MAP.find((character) => character.linkName === nameParam)
+  return {
+    inkJson: persona.jsonFile,
+    characterId:persona.characterId,
   }
+
+  // switch (nameParam) {
+  //   case 'nadia': {
+  //     return {
+  //       inkJson: NadiaInk,
+  //       characterId: 1,
+  //     }
+  //   }
+  //   case 'aman': {
+  //     return {
+  //       inkJson: AmanInk,
+  //       characterId: 2,
+  //     }
+  //   }
+  //   default: {
+  //     return null
+  //   }
+  // }
 }
 
 const CharacterChapterPage = (props) => {

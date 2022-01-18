@@ -13,7 +13,7 @@ let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 
-const Email = (props) => {
+const EmailInbox = (props) => {
   const { currentParagraphs } = props
   const { getStory, choices, setChoice, specialTags } = useInkContext()
 
@@ -84,14 +84,14 @@ const Email = (props) => {
     audio.play();
   }
 
-  // console.log(currentParagraphs)
-  const mergedEmail = currentParagraphs =>
-    currentParagraphs
-      // .filter(paragraph => paragraph.tags[0].includes('email'))
-      .map(paragraph => paragraph.text);
+//   // console.log(currentParagraphs)
+//   const mergedEmail = currentParagraphs =>
+//     currentParagraphs
+//       // .filter(paragraph => paragraph.tags[0].includes('email'))
+//       .map(paragraph => paragraph.text);
     
-  // console.log('mergedEmail', mergedEmail(currentParagraphs))
-  console.log('specialTags', specialTags)
+//   // console.log('mergedEmail', mergedEmail(currentParagraphs))
+//   console.log('specialTags', specialTags)
 
   // const mergedEmail = currentParagraphs =>
   //   currentParagraphs.map((step, i) => {
@@ -126,26 +126,42 @@ const Email = (props) => {
         <div className="Email__header">
           
           <div className="Email__header__description">
-            <div >To: {specialTags.emailto}</div>            
-            <div >From: {specialTags.emailfrom}</div>            
-            <div >Subject: {specialTags.emailsubject}</div>            
+            Email Inbox
           </div>
         </div>
         
         
+      
         <Box mt={2} >
-          {/* Email Messages */}
-          {mergedEmail(currentParagraphs)}
-        </Box>
-        <Box mt={2} >
-          {/* Reply Email Message */}
-          {specialTags.replyemaildate &&
+          {/* New Email Message */}
             <Box>
-              {specialTags.replyemaildate} <br />
-              {specialTags.replyemailtext.split('/n').map((line, i) => <span key={i}>{line}<br /></span>)}
+                {specialTags.newemailfrom} <br />
+                {specialTags.newemailprofileicon} <br />
+                {specialTags.newemailsubject} <br />
+                {specialTags.newemailpreview} <br />              
             </Box>
-          
-          }
+            <Box mt={2}>
+                      {/* Static Read Email Messages */}
+                      John Tan <br />
+                      Static Email Subject 1 <br />
+                      Static Preview Line 1 <br />                      
+            </Box>
+            <Box mt={2}>                      
+                      Lisa Lim <br />
+                      Static Email Subject 2 <br />
+                      Static Preview Line 2 <br />                      
+            </Box>      
+            <Box mt={2}>
+                      John Tan <br />
+                      Static Email Subject 1 <br />
+                      Static Preview Line 1 <br />                      
+            </Box>
+            <Box mt={2}>
+                      Lisa Lim <br />
+                      Static Email Subject 2 <br />
+                      Static Preview Line 2 <br />                      
+            </Box>      
+
           
         </Box>
         <NextButton getStory={getStory} />
@@ -154,4 +170,4 @@ const Email = (props) => {
   )
 }
 
-export default Email
+export default EmailInbox
