@@ -92,17 +92,55 @@
     display: inline-block;
 }
 .typed-out {
+    // margin-top: 12px !important; 
 
-    &:after{
-        content: "|";
-        animation: blink 500ms linear infinite alternate;
+    &:last-child {
+        &:after{
+            content: "|";
+            animation: blink 500ms linear infinite alternate;
+        }
     }
 }
+// .typing {
+//     width: 100%;
+//     overflow: hidden;
+//     top: 0px;
+//     position: relative;
+//     animation: typeIt 320s steps(10) infinite;
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
+//     p {
+//         line-height: 2em;
+//         margin: 0; // Turn off margin bottom to make typing animation easier
+//         // text-indent: 2em; // give it indents for first line
+//     }
+// }
+// .text-cover {
+//     position: absolute;
+//     left: 0;
+//     bottom: 0;
+//     height: 2.5em;
+//     background: #fff;
+//     width: 100%;
+//     animation: revealLine 2s steps(1) infinite;
+// }
+
+// @keyframes typeIt {
+//     0% {
+//         // top: 0;
+//         height: 2em;}
+//     100% {
+//         // top: -60em;
+//         height: 100%;
+//     }
+// }
+// @keyframes revealLine {
+//     0% { left: 0%; }
+//     100% { left: 100%; }
+// }
+// @keyframes typing {
+//     from { width: 0 }
+//     to { width: 100% }
+// }
 @-webkit-keyframes blink{
 	0%{opacity: 0;}
 	100%{opacity: 1;}
@@ -122,7 +160,7 @@
     &__inbox {
         &__header {
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); 
-            background: white;
+            background: $tangerine100;
             height: 75px; 
             padding: 14px 20px; 
             align-items: center;
@@ -131,7 +169,7 @@
     }
     &__header {
         height: 75px;
-        background-color: $white;
+        background-color: $tangerine100;
         display: flex;
         justify-content: space-between;
         align-items: center;

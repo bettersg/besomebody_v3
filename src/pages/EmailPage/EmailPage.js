@@ -92,7 +92,7 @@ const Email = (props) => {
   const mergedEmail = () =>
     currentParagraphs
       // .filter(paragraph => paragraph.tags[0].includes('email'))
-      .map((paragraph, idx) => {return (<div>{paragraph.text}<br/><br/></div>)});
+      .map((paragraph, idx) => {return (<p className="typed-out">{paragraph.text}</p>)});
     
   console.log('mergedEmail', mergedEmail(currentParagraphs))    
   console.log('specialTags', specialTags)
@@ -130,11 +130,11 @@ const Email = (props) => {
       <Box className={classes.EmailWrapper}>
         {/* Email Header */}
         <div className="Email__header">
-          <ClearRoundedIcon />  
-          <div className='Email__header--right'>
-            <AttachmentRoundedIcon style={{marginRight: "10px"}} />
-            <SendIcon />
-          </div>
+          <Typography style={{color: "white"}}>Compose email</Typography>
+          {/* <div className='Email__header--right'>
+            <AttachmentRoundedIcon style={{marginRight: "10px", color: "white"}} />
+            <SendIcon style={{color: "white"}}  />
+          </div> */}
         </div>  
 
           {/* <div className="Email__header__description"> */}
@@ -147,8 +147,10 @@ const Email = (props) => {
         
         <Box id='EmailText' className='Email__messages'>
           {/* Email Messages */}
-          <div className='typed-out'>
-            {mergedEmail()}
+          <div className="typing">
+            <div className="text-cover"></div>
+              {mergedEmail()}
+            
           </div>
           <div>
               {/* Reply Email Message */}
