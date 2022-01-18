@@ -131,7 +131,7 @@ const Email = (props) => {
         {/* Email Header */}
         <div className="Email__header">
 
-          <Typography style={{color: "white"}}>Compose email</Typography>
+          <Typography style={{color: "white"}}>{specialTags.emailheader}</Typography>
           {/* <div className='Email__header--right'>
             <AttachmentRoundedIcon style={{marginRight: "10px", color: "white"}} />
             <SendIcon style={{color: "white"}}  />
