@@ -316,7 +316,7 @@ The Samsonite? #speaker_self
 Yeah, that one. Can you manage? It’s a little heavy. #speaker_left
 Why can’t the movers bring it up? #speaker_self
 Because you know how much they charge for every staircase? $20! #speaker_left
-*sigh* Ok I’ll be your cheap labour. #speaker_self
+Sigh... Ok I’ll be your cheap labour. #speaker_self
 Even until today, my mom talks to me as if I were a child. Do this. Do that. #inner_monologue
 Then also doubts if I can manage this, manage that. It’s like she doesn’t trust me enough to do things on my own. #inner_monologue
 Like, am I supposed to do everything? Or am I just useless? #inner_monologue
@@ -454,7 +454,7 @@ Minigame 7 // must add some text
 #background:bg_ravi_intro.jpg
 It’s been two weeks since we’ve made the move. I’d had so much delicious food, I think I’ve gained weight. How am I going to pass my reservist IPPT?
 My schedule nowadays is a bit boring. I come here after class, get a scrumptious dinner (yay for Pushpa aunty!), do my schoolwork, then head over to Lukman’s to rest. It was going well, for a while.
- ButI can’t do this forever though. I can’t go to Lukman’s almost every day. He’s probably getting sick of my face already. The first time was fun, kind of like a sleepover. 
+ But I can’t do this forever though. I can’t go to Lukman’s almost every day. He’s probably getting sick of my face already. The first time was fun, kind of like a sleepover. 
  The second time was like we were roommates. The third, fourth, fifth times...he’s probably expecting me to pay rent or something. 
  His parents must be really annoyed with me too. They don’t say it, but I can feel their eyes in the back of my skull whenever I go over. I can’t keep being a burden to Lukman either.
  I need to find some other place to stay. Maybe stay on my own if I can. That might be nice, for a change. I’ve always shared a room with Revati, anyway.
@@ -975,16 +975,7 @@ Coffee Shop Kannasamy #title
 === ravi_2_1_narration ===
 #knot:ravi_2_1_narration
 #ui:narrator
-#background:bg_ravi_intro.jpg
-Just outside the gurdwara (Sikh temple) my family has attended since I was born, after weekly prayers.
-Where are Sel and her parents? I should say hi before we leave.
-I wonder if Sel is still mad at me. We argued again last night.
-It seems like we quarrel about the smallest things, lately.
-How did it get to this point? 
-We’ve been together seven years already.
-Through school, NS, and the past four years of university...
-Maybe she’s tired of me.
-Oh - there they are! Sel’s parents, Uncle Pritam and Aunty Suvinder.
+#background:bg_ravi_intro.jpg 
  
 -> ravi_2_1
 
