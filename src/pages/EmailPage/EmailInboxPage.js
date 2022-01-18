@@ -129,7 +129,7 @@ const EmailInbox = (props) => {
         {/* Email Header */}
           
           <div className="Email__inbox__header">
-            <MenuRoundedIcon />
+            <Typography style={{color:"white", fontWeight: 600}}>Inbox</Typography>
           </div>
         
         
