@@ -20,6 +20,8 @@ import { createDbUserIfNotExists } from '../../models/userModel'
 import { useSnackbar } from '../../contexts/SnackbarContext'
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from "../../firebase";
+import { RoomContext } from '../../contexts/RoomContext'
+
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
@@ -54,6 +56,11 @@ const useStyles = makeStyles((theme) => ({
   },
   header: {
     marginTop: 100,
+  },
+  overline: {
+    backgroundColor: '#6C70DD',
+    color: '#ffffff',
+    width: '100%',
   },
   btn: {
     padding: '10px 50px',
@@ -96,6 +103,13 @@ const Login = () => {
   // Auth Context
   const { login } = useAuth()
 
+  // Room Context
+  const { roomValue, roomCodeValue } = React.useContext(RoomContext);
+  const [room, setRoom] = roomValue;
+  const [roomCode, setroomCode] = roomCodeValue;
+  // console.log(room)
+  console.log(roomCode)
+
   // Init form
   const defaultValues = {
     email: '',
@@ -121,18 +135,30 @@ const Login = () => {
       setIsLoading(true)
       if (!isThirdPartyAuth) {
         await login(formValues.email, formValues.password)
-        history.push('/')
+        if (roomCode) { // check if the user is in a room, and if so, push them to the roomInfo page instead.         
+          history.push('/room/' + roomCode)
+        }
+        else {          
+          history.push('/')
+        }
       } else {
         const user = {
           email: authResult.user.email,
           id: authResult.user.uid,
         }
         const isCreated = await createDbUserIfNotExists(user)
-        if (isCreated) { // If user was not created, user is an existing user and we skip profilebuilder
+        if (isCreated) { 
           history.push('/profilebuilder')
-        } else {
+          
+        }        
+        if (roomCode) { // check if the user is in a room, and if so, push them to the roomInfo page instead.
+          // console.log('going to room')
+          history.push('/room/' + roomCode)
+        }
+        else {          
           history.push('/')
         }
+        
       }
 
     } catch (err) {
@@ -169,6 +195,11 @@ const Login = () => {
 
   return (
     <Box className={classes.background}>
+      {roomCode &&
+        <Box py={1} textAlign="center" className={classes.overline}>
+          <Typography variant="overline" > You are a participant in a facilitated room. </Typography>
+        </Box>
+      }
       <Grid container alignItems="center" justify="center" className={classes.grid}>
         <Card raised={true}  className={classes.card}>
           <CardContent>
