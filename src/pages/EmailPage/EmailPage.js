@@ -17,6 +17,7 @@ let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 
+
 const Email = (props) => {
   const { currentParagraphs } = props
   const { getStory, choices, setChoice, specialTags } = useInkContext()
@@ -25,6 +26,7 @@ const Email = (props) => {
   // Help to scroll to bottom of the paragraphs render screen
   // ========================================================
   const elementRef = useRef()
+
 
   // Eveytime currentParagraphs gets updated or choices appear, scroll to the elementRef
   useEffect(() => {
@@ -88,14 +90,15 @@ const Email = (props) => {
     audio.play();
   }
 
-  console.log(currentParagraphs)
+
+//  console.log(currentParagraphs)
   const mergedEmail = () =>
     currentParagraphs
       // .filter(paragraph => paragraph.tags[0].includes('email'))
       .map((paragraph, idx) => {return (<p className="typed-out">{paragraph.text}</p>)});
     
-  console.log('mergedEmail', mergedEmail(currentParagraphs))    
-  console.log('specialTags', specialTags)
+//  console.log('mergedEmail', mergedEmail(currentParagraphs))    
+//  console.log('specialTags', specialTags)
 
   // const mergedEmail = currentParagraphs =>
   //   currentParagraphs.map((step, i) => {
@@ -121,15 +124,13 @@ const Email = (props) => {
   //   })
   //   console.log(mergedEmail)
   // }
-
-
-
   
   return (
     <Fade in={true} timeout={500}>
       <Box className={classes.EmailWrapper}>
         {/* Email Header */}
         <div className="Email__header">
+
           <Typography style={{color: "white"}}>Compose email</Typography>
           {/* <div className='Email__header--right'>
             <AttachmentRoundedIcon style={{marginRight: "10px", color: "white"}} />
@@ -169,6 +170,7 @@ const Email = (props) => {
           <div className='Email__sendWrapper__sendButton'>Tap to draft email</div>
           <div className='Email__sendWrapper__sendButton--right '><ExpandMoreRoundedIcon/></div>
         </div>
+
         <NextButton getStory={getStory} />
       </Box>
     </Fade>

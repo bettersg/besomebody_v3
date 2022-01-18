@@ -46,29 +46,29 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const getInkJson = (nameParam) => {
-  switch (nameParam) {
-    case 'nadia': {
-      return {
-        inkJson: NadiaInk,
-        characterId: 1,
-      }
-    }
-    case 'aman': {
-      return {
-        inkJson: AmanInk,
-        characterId: 2,
-      }
-    }
-    case 'ravi': {
-      return {
-        inkJson: RaviInk,
-        characterId: 3,
-      }
-    }
-    default: {
-      return null
-    }
+  const persona = CHARACTER_MAP.find((character) => character.linkName === nameParam)
+  return {
+    inkJson: persona.jsonFile,
+    characterId:persona.characterId,
   }
+
+  // switch (nameParam) {
+  //   case 'nadia': {
+  //     return {
+  //       inkJson: NadiaInk,
+  //       characterId: 1,
+  //     }
+  //   }
+  //   case 'aman': {
+  //     return {
+  //       inkJson: AmanInk,
+  //       characterId: 2,
+  //     }
+  //   }
+  //   default: {
+  //     return null
+  //   }
+  // }
 }
 
 const CharacterChapterPage = (props) => {
@@ -126,7 +126,7 @@ const CharacterChapterPage = (props) => {
       <div className="CharacterChapterPage">
         <div className="CharacterChapterPage__top">
           <div className="CharacterChapterPage__top__nav">
-            <Link to="/" style={{ textDecoration: 'none', paddingLeft: '70px' }}>
+            <Link to="/" style={{ textDecoration: 'none' }}>
               <div style={{ display: 'flex' }}>
                 <SVG src="/chapter_choices_page/arrow.svg" />
                 <div className="CharacterChapterPage__top__nav--name">Character Menu</div>

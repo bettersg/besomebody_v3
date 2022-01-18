@@ -451,6 +451,83 @@ export const MINI_GAME_MAP = [
     ],
   },
 
+// ravi 1
+  {
+  game_id: 7,
+  ui: "mcq",
+  introduction: "Ravi is struggling with housing. Let's see how deep this issue is here.",
+  questions: [
+    {
+      question_id: 1,
+      question:
+        "There are no homeless people in Singapore.",
+      type: "text",
+      correct_answer_id: 1,
+      explanation:
+        "False. blah blah",
+      answers: [
+        {
+          answer_id: 1,
+          title: "True",
+        },
+        {
+          answer_id: 2,
+          title: "False",
+        },
+      ],
+    },
+    {
+      question_id: 2,
+      question:
+        "A Chinese, Malay, and Indian buy a nearly identical HDB flat. Due to the Ethnic Integration Policy, which is able to resell their HDB at the highest price?",
+      correct_answer_id: 3,
+      explanation: "The Chinese, because the market (C) is larger this gives them higher windfall gains and helps them escape the poverty cycle.",
+      type: "image",
+      answers: [
+        {
+          answer_id: 1,
+          imageUrl: "aman_3_temple.jpg",
+          title: "C",
+        },
+        {
+          answer_id: 2,
+          imageUrl: "aman_3_mosque.jpg",
+          title: "M 2",
+        },
+        {
+          answer_id: 3,
+          imageUrl: "aman_3_gurdwara.jpg",
+          title: "I 3",
+        },
+        {
+          answer_id: 4,
+          imageUrl: "aman_3_church.jpg",
+          title: "O 4",
+        },
+      ],
+    },
+    {
+      question_id: 3,
+      question:
+        "Rental HDB flats are for individuals earning less than $X,000 per month, and approximately xx% of Singaporeans live in them.",
+      type: "text",
+      correct_answer_id: 1,
+      explanation:
+        "True. ",
+        answers: [
+          {
+            answer_id: 1,
+            title: "True",
+          },
+          {
+            answer_id: 2,
+            title: "False",
+          },
+        ],
+    },  
+  ],
+  },
+
 ];
   
 

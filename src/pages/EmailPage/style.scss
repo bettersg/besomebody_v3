@@ -198,6 +198,7 @@
         background-color: $white;
         padding: 9px 16px; 
         scroll-snap-type: y mandatory;   
+
         overflow-y: scroll;
         user-select: none;
         // height: 100vh; 
@@ -208,7 +209,7 @@
         > div {
             scroll-snap-align: end;
         }
-        
+
         &.choices {
             transition: height 0.4s; 
             height: calc(calc(var(--vh, 1vh) * 100) - 313px); 
@@ -260,6 +261,7 @@
             }
             &--right {
                 background-color: #FF3715;
+
                 border-radius: 30px;
                 height: 40px;
                 width: 40px;
@@ -334,6 +336,7 @@
     }
     
 }
+
 
 // .Email-box {
 //     width: 100%; 

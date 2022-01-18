@@ -101,7 +101,7 @@ export const CharacterChoicePage = () => {
     return (
         <Box className={classes.CharChoiceWrapper} >
             <div className="CharacterChoices__header">
-                <div className="CharacterChoices__header--placeholder"></div>
+                {/* <div className="CharacterChoices__header--placeholder"></div> */}
                 <img src="/commons/tobeyou-logo.svg" />
                 <SideMenu />
             </div>

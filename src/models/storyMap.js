@@ -488,56 +488,62 @@ export const CHARACTER_MAP = [
         reflectionId:7,
         title: "Home Truths",
         knotTag: "ravi_1_intro",
-        summary: "Ravi hears some news that will turn his world a little upside down.",
+        summary: "Ravi's world is turned upside down, and he faces difficult choices in moving on.",
         playable: true,
         images: [           
           "/images/bg_launch.jpg",
           "/images/bg_reflections.jpg",
+          "/images/bg_ravi_pushpa_home.jpg",
+          "/images/bg_ravi_home.jpg",
+          "/images/cha_ravi_mum_normal.jpg",
+          "/images/cha_ravi_mum_worried.jpg",
+          "/images/cha_ravi_revati_normal.jpg",
+          "/images/cha_ravi_revati_concerned.jpg",
         ],
         endings: [
           {
             endingId: 1,
-            title: "Ravi shows concern for mum",
+            title: "Ravi moves into the university dorm",
             inkVar: "chapter_1_ending_1",
           },
           {
             endingId: 2,
-            title: "Ravi is confused and questions mum",
+            title: "Ravi is still looking for a place to stay",
             inkVar: "chapter_1_ending_2",
           },
         ]
       },
+      // {
+      //   chapterId: 2,
+      //   number: 2,
+      //   reflectionId:8,
+      //   title: "(merged with Chapter 1) ",
+      //   knotTag: "ravi_2_2",
+      //   summary: "Ravi decides to move out. But his choices are not that straightforward.",
+      //   playable: true,
+      //   images: [           
+      //     "/images/bg_launch.jpg",
+      //     "/images/bg_reflections.jpg",
+      //   ],
+      //   endings: [
+      //     {
+      //       endingId: 1,
+      //       title: "Azlin gets upset with you",
+      //       inkVar: "chapter2_ending_1",
+      //     },
+      //     {
+      //       endingId: 2,
+      //       title: "Azlin tells you to give him up",
+      //       inkVar: "chapter2_ending_2",
+      //     },
+      //   ]
+      // },
       {
         chapterId: 2,
         number: 2,
         reflectionId:8,
-        title: "Room For Improvement ",
-        knotTag: "ravi_2_2",
-        summary: "Ravi decides to move out. But his choices are not that straightforward.",
-        playable: true,
-        images: [           
-          "/images/bg_launch.jpg",
-          "/images/bg_reflections.jpg",
-        ],
-        endings: [
-          {
-            endingId: 1,
-            title: "Azlin gets upset with you",
-            inkVar: "chapter2_ending_1",
-          },
-          {
-            endingId: 2,
-            title: "Azlin tells you to give him up",
-            inkVar: "chapter2_ending_2",
-          },
-        ]
-      },
-      {
-        chapterId: 3,
-        number: 3,
-        reflectionId:9,
         title: "Coffee Shop Kannasamy ",
-        knotTag: "ravi_3_intro",
+        knotTag: "ravi_2_intro",
         summary: "Ravi finds a new gig at a cafe. And possibly something more.",
         playable: false,
         images: [           
@@ -558,11 +564,11 @@ export const CHARACTER_MAP = [
         ]
       },
       {
-        chapterId: 4,
-        number: 4,
-        reflectionId:10,
+        chapterId: 3,
+        number: 3,
+        reflectionId:9,
         title: "The Internship",
-        knotTag: "ravi_4_intro",
+        knotTag: "ravi_3_intro",
         summary: "Ravi lands an internship to fulfill his university credits. And finds himself in a situation that tests him.",
         playable: false,
         images: [           
@@ -583,11 +589,11 @@ export const CHARACTER_MAP = [
         ]
       },
       {
-        chapterId: 5,
-        number: 5,
-        reflectionId:11,
+        chapterId: 4,
+        number: 4,
+        reflectionId:10,
         title: "Cleared for Take Off",
-        knotTag: "ravi_5_intro",
+        knotTag: "ravi_4_intro",
         summary: "Ravi breaks down and reveals his fears to both Valerie and Revati. They give him a new perspective, and much-needed reminders. ",
         playable: false,
         images: [           
