@@ -28,7 +28,7 @@ export const updateRoomParticipantsDb = async (id, userId) => {
         if (doc.data().numParticipants == null) {
           roomRef.set({ // or should it be set
             // numParticipants: 1,
-            participants: [userId]
+            participantIds: [userId]
           },{merge: true})
         }
         if (doc.data().participants.includes(userId)) {
@@ -39,7 +39,7 @@ export const updateRoomParticipantsDb = async (id, userId) => {
           roomRef.update(
             {
               // numParticipants: doc.data().numParticipants + 1,
-              participants: [...doc.data().participants,userId]
+              participantIds: [...doc.data().participantIds,userId]
             }
           )
         }

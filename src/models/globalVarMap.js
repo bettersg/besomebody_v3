@@ -61,8 +61,7 @@ export const GLOBAL_VAR_MAP = [
                   value: 3,
                   description: "Nadia gets upset with Gavin",
                 },
-              ],
-              ]
+              ],              
             },
             {
               name: 'nadia_trackpants_choice',
@@ -99,25 +98,7 @@ export const GLOBAL_VAR_MAP = [
                   description: "Nadia lied more than once",
                 },
               ]
-            },
-            {
-                name: 'nadia_liar',
-                description: "Nadia lies or tells the truth",
-                values: [
-                  {                   
-                    value: 0,
-                    description: "Nadia tells the truth when confronted",
-                  },
-                  {                   
-                    value: 1,
-                    description: "Nadia lied to her father when confronted",
-                  },
-                  {                   
-                    value: 2,
-                    description: "Nadia lied more than once",
-                  },
-                ]
-              },
+            }
           ]
         },
         {
