@@ -513,7 +513,7 @@ export const MINI_GAME_MAP = [
       type: "text",
       correct_answer_id: 1,
       explanation:
-        "True. Langgar (originally meaning anchor) was instituted by Guru Nanak, to cater food for visitors and devotees who came to meet the Guru. This now includes community service and assistance to the needy, in addition to its original purpose of food distribution, funded by donations from the Sikh community.",
+        "True. ",
         answers: [
           {
             answer_id: 1,
