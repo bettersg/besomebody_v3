@@ -102,6 +102,11 @@ export default function SideMenu ({src="/side_menu/menu-icon.svg", ...rest}) {
             </div>
 
             <div className="SideMenu__menuitems__item">
+            <Link to="/joinroom" className="SideMenu__menuitems__label"><SVG src="/side_menu/room.svg" className="SideMenu__menuitems__icons"/>
+              <span>Join Room</span></Link>
+            </div>
+            
+            <div className="SideMenu__menuitems__item">
             <Link to="/help" className="SideMenu__menuitems__label"><SVG src="/side_menu/help.svg" className="SideMenu__menuitems__icons"/>
               <span>Help</span></Link>
             </div>
