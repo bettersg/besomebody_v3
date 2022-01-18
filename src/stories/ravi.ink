@@ -129,16 +129,17 @@ Vaada kanna (welcome, darling). Have you eaten? #speaker_left
 Yup, I had dinner. I ate with my classmates after class. #speaker_self
 Ok. But you should know, you missed a great fish curry. Looks like I’ll have to throw the rest away- #speaker_left
 Oh! Maybe I am a little bit hungry after all. Could I have some curry please? #speaker_self
+#background:bg_ravi_fishcurry.jpg
 Aha! I knew it. I don’t think you’ve ever said no to my fish curry. Not once in 24 years. #speaker_left
 Hmm...I think you’re probably right! #speaker_self
 Amma always cooks fish curries for important occasions. Revati and I had it for almost every birthday we had growing up. #inner_monologue
 I remember having it at parties, family functions – sometimes, we’d cook some for the nosy neighbours as well. I don’t think we’ve ever celebrated anything without it. #inner_monologue
 Amma also cooked fish curry when there was bad news. Like the day Appa left the family. We sat around, crying over fish curry. #inner_monologue
 It’s definitely Amma’s signature dish, to say the least. #inner_monologue
+#background:bg_ravi_home.jpg
 Anyway, go shower, you look so sweaty. Then you can eat. I’ll reheat the curry for you. #speaker_left
 + Hmm ok. See you in 10 minutes.[] #speaker_self
 + It's ok ma, let's eat while it's hot! []  #speaker_self
-#background:bg_ravi_home.jpg
 - As always, it smells amazing! I feel like I could eat 10 bowls all by myself. Did you do anything different this time? #speaker_self
 Ah, so you found my secret ingredient! I put in some garam masala that Pushpa Aunty gave to us when we went over last week. #speaker_left
 It’s very fragrant. I think she made it herself. You know how she is. #speaker_left
@@ -466,7 +467,7 @@ My schedule nowadays is a bit boring. I come here after class, get a scrumptious
 === ravi_1_4_narration ===
 #knot:ravi_1_4_narration
 #ui:narrator
-#background:bg_ravi_rentals1.jpg
+#background:bg_ravi_phone.jpg
 Hmm...this listing sounds good. one bedroom apartment, 11th floor, 5 minutes away from university? This must be a dream... wait $2222 per month?? This must be a nightmare! Who can afford that? Maybe if I just sort by “price”…
 #background:bg_ravi_rentals2.jpg
  Oh, this room sounds about right. Seems promising. It’s a small room – maybe other people are staying there too? But it’s cheap, and relatively close to uni. 
@@ -714,6 +715,7 @@ Let’s just hope the school admin is better than the agent…
 #knot:ravi_1_5
 #ui:email
 #background:email.png
+#emailheader:Compose Email
 #emailfrom:Ravi <ravi@email.com>
 #emailto:Univ Housing <admin@univ.edu.sg>
 #emailsubject: Query about dorm room
@@ -749,6 +751,7 @@ Ravi #speaker_self
 #knot:ravi_1_5b
 #ui:email
 #background:email.png
+#emailheader:Read Email
 #emailfrom:Univ Housing <admin@univ.edu.sg>
 #emailto:Ravi <ravi@email.com>
 #emailsubject: Query about dorm room
@@ -771,6 +774,7 @@ Rebecca #speaker_1
 #knot:ravi_1_5c
 #ui:email
 #background:email.png
+#emailheader:Compose Email
 #emailto:Univ Housing <admin@univ.edu.sg>
 #emailfrom:Ravi <ravi@email.com>
 #emailsubject: Query about dorm room
@@ -796,6 +800,7 @@ Wait, a reply just came in. Wah this Rebecca is super on the ball.
 #knot:ravi_1_5d
 #ui:email
 #background:email.png
+#emailheader:Read Email
 #emailfrom:Univ Housing <admin@univ.edu.sg>
 #emailto:Ravi <ravi@email.com>
 #emailsubject: Query about dorm room
@@ -821,6 +826,7 @@ On the other hand, this is the closest I could possibly be to campus. I’ll nev
 #knot:ravi_1_5e_take
 #ui:email
 #background:email.png
+#emailheader:Compose Email
 #emailto:Univ Housing <admin@univ.edu.sg>
 #emailfrom:Ravi <ravi@email.com>
 #emailsubject: Query about dorm room
@@ -846,6 +852,7 @@ On the other hand, this is the closest I could possibly be to campus. I’ll nev
 #knot:ravi_1_5e_take2
 #ui:email
 #background:email.png
+#emailheader:Read Email
 #emailfrom:Univ Housing <admin@univ.edu.sg>
 #emailto:Ravi <ravi@email.com>
 #emailsubject: Query about dorm room
@@ -879,6 +886,7 @@ Better let Amma know the news.
 #knot:ravi_1_5e_decline
 #ui:email
 #background:email.png
+#emailheader:Compose Email
 #emailto:Univ Housing <admin@univ.edu.sg>
 #emailfrom:Ravi <ravi@email.com>
 #emailsubject: Query about dorm room
@@ -898,6 +906,7 @@ Ravi #speaker_self
 #knot:ravi_1_5e_decline2
 #ui:email
 #background:email.png
+#emailheader:Read Email
 #emailfrom:Univ Housing <admin@univ.edu.sg>
 #emailto:Ravi <ravi@email.com>
 #emailsubject: Query about dorm room
