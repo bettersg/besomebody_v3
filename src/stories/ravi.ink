@@ -487,6 +487,7 @@ Hmm...this listing sounds good. one bedroom apartment, 11th floor, 5 minutes awa
 #chat_group_title:Property Agent James
 #chat_group_image:ico_ravi_james.png
 #speaker_1_name:James
+#timestamp:15.20
 Hi, is this James? #speaker_self
 I saw the listing on Room4Rent. The one for two different rooms? #speaker_self
 I would like to rent a room, if that’s possible! #speaker_self
@@ -518,8 +519,8 @@ Yeah, I understand. #speaker_self
 It’ll just be me renting the room. Don’t worry about it. #speaker_self
 Will you be expecting any frequent visitors? #speaker_1
 Girlfriend, family etc? #speaker_1
-No...no girlfriend. #speaker_1
-Don’t think my family will visit either. #speaker_1
+No...no girlfriend. #speaker_self
+Don’t think my family will visit either. #speaker_self
 
 #ui:narrator
 #background:bg_ravi_pushpa_home.jpg
@@ -582,6 +583,7 @@ Name:  /n  Pax:  /n  Occupation:  /n  Ethnicity:  /n Budget:  /n Years of lease:
 - Done, here you go. /n Name: Ravi Kannasamy /n Pax: 1  /n Occupation: Student  /n Ethnicity: Indian  /n Budget: $500  /n Years of lease: 1  /n  Expected shift in date: Aug 20 #speaker_self
 Ok, great. I check with landlord first. #speaker_1
 Ok, thank you! #speaker_self
+#timestamp:15.30
 Hi Ravi. #speaker_1
 That was fast. #speaker_self
 So, what did he say? #speaker_self
