@@ -15,6 +15,8 @@ import Reflection from '../ReflectionsPage/Reflection'
 import StoryEnd from '../StoryEndPage/StoryEnd'
 import StoryEndBrowser from '../StoryEndPage/StoryEndBrowser'
 import Email from '../EmailPage/EmailPage'
+import EmailInbox from '../EmailPage/EmailInboxPage'
+
 
 const getUi = ({
   currentParagraphs,
@@ -38,6 +40,9 @@ const getUi = ({
     }  
     case 'email': {
       return <Email currentParagraphs={emailParagraphs} />
+    }  
+    case 'emailinbox': {
+      return <EmailInbox currentParagraphs={emailParagraphs} />
     }  
     // case 'survey': {
     //   // TODO: update this component

@@ -422,6 +422,7 @@ I’m thankful we managed to stay with Pushpa Aunty – we can save money this w
 But I think I’ll just ask Lukman to help me with the readings, and I’ll just sleep as soon as I can. 
 I’m so tired, I could fall asleep just sitting...here...ZZZZZ… 
 
+
 -> ravi_1_3
 
 === ravi_1_2_notempathy ===
@@ -473,6 +474,7 @@ Hmm...this listing sounds good. one bedroom apartment, 11th floor, 5 minutes awa
  Maybe I can make friends with whoever’s staying there. Or better yet, I might be able to talk them down to my price. They should take some pity on me. I’m just a student.
  Let me see if he’s offering any other rooms ... oh wow, he has two! Maybe I can rent the other room instead – it’s a bit bigger though, so it’s probably more expensive... I’ll see how it goes.
 #background:bg_ravi_rentals3.jpg 
+
  Who do I talk to? I see an agent’s name here. “Agent James” huh? Sounds like a reliable guy. Actually, no. Sounds like James Bond wannabe.
  Oh, his phone number is here. Maybe I should drop him a text. Well, here goes nothing.
 
@@ -951,7 +953,7 @@ Reflection 7
 
 
 
-// CHAPTER 3
+// CHAPTER 2
 
 
 

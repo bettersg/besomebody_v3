@@ -88,71 +88,128 @@
 
 @import "../../scss/global/global"; 
 
-// html, body {
-//     height: 100%; 
-// }
-.Email {
-    &__header {
-        height: 64px;
-        background-color: $midnight100;
-        display: flex;
-        padding: 14px 20px; 
-        &--profile {
-            height: 36px; 
-            width: 36px; 
-            border-radius: 50%;
-            margin-right: 12px;
+.typed-container {
+    display: inline-block;
+}
+.typed-out {
+    // margin-top: 12px !important; 
+
+    &:last-child {
+        &:after{
+            content: "|";
+            animation: blink 500ms linear infinite alternate;
         }
-        &__description {
-            color: $white;
-            &--name {
-                // @include inter; 
-            }
-            &--status {
-                @include p2-normal-body; 
-                font-size: 12px !important;
-            }
+    }
+}
+// .typing {
+//     width: 100%;
+//     overflow: hidden;
+//     top: 0px;
+//     position: relative;
+//     animation: typeIt 320s steps(10) infinite;
+
+//     p {
+//         line-height: 2em;
+//         margin: 0; // Turn off margin bottom to make typing animation easier
+//         // text-indent: 2em; // give it indents for first line
+//     }
+// }
+// .text-cover {
+//     position: absolute;
+//     left: 0;
+//     bottom: 0;
+//     height: 2.5em;
+//     background: #fff;
+//     width: 100%;
+//     animation: revealLine 2s steps(1) infinite;
+// }
+
+// @keyframes typeIt {
+//     0% {
+//         // top: 0;
+//         height: 2em;}
+//     100% {
+//         // top: -60em;
+//         height: 100%;
+//     }
+// }
+// @keyframes revealLine {
+//     0% { left: 0%; }
+//     100% { left: 100%; }
+// }
+// @keyframes typing {
+//     from { width: 0 }
+//     to { width: 100% }
+// }
+@-webkit-keyframes blink{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+@-moz-keyframes blink{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+@keyframes blink{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}   
+
+.Email {
+    &__inbox {
+        &__header {
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); 
+            background: $tangerine100;
+            height: 75px; 
+            padding: 14px 20px; 
+            align-items: center;
+            display: flex;
+        }
+    }
+    &__header {
+        height: 75px;
+        background-color: $tangerine100;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 20px; 
+
+        &--right {
+            margin-right: 50px; 
+            align-items: center;
+            display: flex;
+        }
+
+    }
+    &__details {
+        background-color: $white;
+        border-style: none none solid none;
+        padding: 11px 16px; 
+        border-width: 1px; 
+        border-color: rgba(0, 0, 0, 0.1);
+        display: flex;
+        &--name {
+            color: #747A98;   
+            margin-right: 8px;
         }
     }
     &__messages {
-        scroll-snap-type: y mandatory;
+        background-color: $white;
+        padding: 9px 16px; 
+        scroll-snap-type: y mandatory;   
+
         overflow-y: scroll;
         user-select: none;
         // height: 100vh; 
         height: calc(calc(var(--vh, 1vh) * 100) - 148px); 
         @media screen and (min-device-width:600px) {
-            height: 515px; 
+            height: 395px; 
         }
         > div {
             scroll-snap-align: end;
         }
-        &--sender {
-            background: #C9F3F9;
-            width: 304px; 
-            padding: 12px;
-            border-radius: 12px 3px 3px 12px;
-            margin-bottom: 4px;
-            &.newSpeaker { 
-                border-radius: 12px 12px 3px 12px;
-            }
-        }
-        &--receiver {
-            background: $white;
-            width: 304px; 
-            padding: 12px; 
-            margin-bottom: 4px;
-            margin-left: 16px;
-            border-radius: 3px 12px 12px 3px;
-            &.newSpeaker { 
-                border-radius: 12px 12px 12px 3px;
-            }
-            
-            &--name {
-                // @include inter; 
-                text-transform: capitalize;
-                margin-bottom: 4px;
-            }
-        }
+
         &.choices {
             transition: height 0.4s; 
             height: calc(calc(var(--vh, 1vh) * 100) - 313px); 
@@ -167,14 +224,25 @@
             }
         }
     }
+    &__replySection {
+        margin-top: 22px; 
+        &--content {
+            margin-left: 24px; 
+            border-left: 1px solid #0000003a;
+            padding-left: 12px;
+        }
+        
+    }
     &__sendWrapper {
-        background-color: $dark1;
+        border-style:solid none none none;
+        border-width: 1px; 
+        border-color: rgba(0, 0, 0, 0.1);
+        background-color: $white;
         padding: 10px 16px; 
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 64px; 
-        margin-top: 20px;
         &__sendButton {
             border-radius: 48px;
             padding: 12px 16px; 
@@ -182,17 +250,18 @@
             display: flex;
             align-items: center;
             height: 44px; 
-            color: $white;
+            color: $midnight100;
             font-size: 14px;
-            opacity: 80%;
-            background-color: $midnight80;
+            // opacity: 80%;
+            background-color: $midnight10;
             &.choice {
                 border: $aqua100 solid 2px;
                 background-color: transparent;
                 color: white; 
             }
             &--right {
-                background-color: $aqua100;
+                background-color: #FF3715;
+
                 border-radius: 30px;
                 height: 40px;
                 width: 40px;
@@ -232,6 +301,42 @@
         }
     }
 }
+
+.InboxItem {
+    padding: 12px 12px; 
+    background: white;
+    display: flex;
+    align-items: center;
+    
+    &--image {
+        border-radius: 50px;
+        height: 48px; 
+        width: 48px; 
+        margin-right: 14px; 
+    }
+    &--from {
+        font-weight: 700 !important;
+        color: $midnight100;
+        &--nonStoryline {
+            color: rgb(171, 171, 171);
+        }
+    }
+    &--subject {
+        font-weight: 700 !important;
+        color: $midnight100;
+        &--nonStoryline {
+            color: rgb(171, 171, 171);
+        }
+    }
+    &--preview {
+        color: $midnight60; 
+        &--nonStoryline {
+            color: rgb(171, 171, 171);
+        }
+    }
+    
+}
+
 
 // .Email-box {
 //     width: 100%; 
