@@ -91,7 +91,7 @@ const Email = (props) => {
       .map(paragraph => paragraph.text);
     
   // console.log('mergedEmail', mergedEmail(currentParagraphs))
-  console.log('specialTags', specialTags)
+  // console.log('specialTags', specialTags)
 
   // const mergedEmail = currentParagraphs =>
   //   currentParagraphs.map((step, i) => {
@@ -135,7 +135,17 @@ const Email = (props) => {
         
         <Box mt={2} >
           {/* Email Messages */}
-          {mergedEmail(currentParagraphs)}
+          {/* {mergedEmail(currentParagraphs)} */}
+          {currentParagraphs.map((paragraph, i) => { 
+            if (paragraph.tags[0].includes('speaker_1')) {
+              return (
+                <div key={i} className="Email__msg">
+                  <div className="Email__msg__text">{paragraph.text.split('/n').map((line, i) => <span key={i}>{line}<br /></span>)}</div>
+                </div>
+              )
+            }
+          })}
+
         </Box>
         <Box mt={2} >
           {/* Reply Email Message */}
