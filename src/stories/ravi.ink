@@ -129,6 +129,7 @@ Vaada kanna (welcome, darling). Have you eaten? #speaker_left
 Yup, I had dinner. I ate with my classmates after class. #speaker_self
 Ok. But you should know, you missed a great fish curry. Looks like I’ll have to throw the rest away- #speaker_left
 Oh! Maybe I am a little bit hungry after all. Could I have some curry please? #speaker_self
+#background:bg_ravi_fishcurry.jpg
 Aha! I knew it. I don’t think you’ve ever said no to my fish curry. Not once in 24 years. #speaker_left
 Hmm...I think you’re probably right! #speaker_self
 Amma always cooks fish curries for important occasions. Revati and I had it for almost every birthday we had growing up. #inner_monologue
@@ -138,10 +139,10 @@ It’s definitely Amma’s signature dish, to say the least. #inner_monologue
 Anyway, go shower, you look so sweaty. Then you can eat. I’ll reheat the curry for you. #speaker_left
 + Hmm ok. See you in 10 minutes.[] #speaker_self
 + It's ok ma, let's eat while it's hot! []  #speaker_self
-#background:bg_ravi_home.jpg
 - As always, it smells amazing! I feel like I could eat 10 bowls all by myself. Did you do anything different this time? #speaker_self
 Ah, so you found my secret ingredient! I put in some garam masala that Pushpa Aunty gave to us when we went over last week. #speaker_left
 It’s very fragrant. I think she made it herself. You know how she is. #speaker_left
+#background:bg_ravi_home.jpg
 Oh nice. Pushpa Aunty always gives us the best things! Usually food. #speaker_self
 Last time we visited her, the sambal she made… also power! I think it’s the best sambal I’ve ever had.  #speaker_self
 She should really look into selling it. She could probably run a chain restaurant selling nothing but sambal.  #speaker_self
@@ -455,7 +456,7 @@ Minigame 7 // must add some text
 #background:bg_ravi_intro.jpg
 It’s been two weeks since we’ve made the move. I’d had so much delicious food, I think I’ve gained weight. How am I going to pass my reservist IPPT?
 My schedule nowadays is a bit boring. I come here after class, get a scrumptious dinner (yay for Pushpa aunty!), do my schoolwork, then head over to Lukman’s to rest. It was going well, for a while.
- ButI can’t do this forever though. I can’t go to Lukman’s almost every day. He’s probably getting sick of my face already. The first time was fun, kind of like a sleepover. 
+ But I can’t do this forever though. I can’t go to Lukman’s almost every day. He’s probably getting sick of my face already. The first time was fun, kind of like a sleepover. 
  The second time was like we were roommates. The third, fourth, fifth times...he’s probably expecting me to pay rent or something. 
  His parents must be really annoyed with me too. They don’t say it, but I can feel their eyes in the back of my skull whenever I go over. I can’t keep being a burden to Lukman either.
  I need to find some other place to stay. Maybe stay on my own if I can. That might be nice, for a change. I’ve always shared a room with Revati, anyway.
@@ -466,17 +467,16 @@ My schedule nowadays is a bit boring. I come here after class, get a scrumptious
 
 === ravi_1_4_narration ===
 #knot:ravi_1_4_narration
-#ui:narrator
+#ui:scene
 #background:bg_ravi_rentals1.jpg
-Hmm...this listing sounds good. one bedroom apartment, 11th floor, 5 minutes away from university? This must be a dream... wait $2222 per month?? This must be a nightmare! Who can afford that? Maybe if I just sort by “price”…
+Hmm...this listing sounds good. one bedroom apartment, 11th floor, 5 minutes away from university? This must be a dream... wait $2222 per month?? This must be a nightmare! Who can afford that? Maybe if I just sort by “price”… #inner_monologue
 #background:bg_ravi_rentals2.jpg
- Oh, this room sounds about right. Seems promising. It’s a small room – maybe other people are staying there too? But it’s cheap, and relatively close to uni. 
- Maybe I can make friends with whoever’s staying there. Or better yet, I might be able to talk them down to my price. They should take some pity on me. I’m just a student.
- Let me see if he’s offering any other rooms ... oh wow, he has two! Maybe I can rent the other room instead – it’s a bit bigger though, so it’s probably more expensive... I’ll see how it goes.
+ Oh, this room sounds about right. Seems promising. It’s a small room – maybe other people are staying there too? But it’s cheap, and relatively close to uni. #inner_monologue
+ Maybe I can make friends with whoever’s staying there. Or better yet, I might be able to talk them down to my price. They should take some pity on me. I’m just a student.#inner_monologue
 #background:bg_ravi_rentals3.jpg 
-
- Who do I talk to? I see an agent’s name here. “Agent James” huh? Sounds like a reliable guy. Actually, no. Sounds like James Bond wannabe.
- Oh, his phone number is here. Maybe I should drop him a text. Well, here goes nothing.
+ Let me see if he’s offering any other rooms ... oh wow, he has two! Maybe I can rent the other room instead – it’s a bit bigger though, so it’s probably more expensive... I’ll see how it goes.#inner_monologue
+ Who do I talk to? I see an agent’s name here. “Agent James” huh? Sounds like a reliable guy. Actually, no. Sounds like James Bond wannabe.#inner_monologue
+ Oh, his phone number is here. Maybe I should drop him a text. Well, here goes nothing.#inner_monologue
 
 -> ravi_1_4
 
