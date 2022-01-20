@@ -802,12 +802,7 @@ Wait, a reply just came in. Wah this Rebecca is super on the ball.
 #emailsubject: Query about dorm room
 #replyemaildate:On Wed 6 Oct 2021, Ravi <ravi@email.com> wrote:  
 #replyemailtext: Hello Rebecca, /n Thank you for your reply. /n I am a little out of options. I don’t have space at home to study or sleep, and I would really love if I could somehow stay on campus. /n I hope you could check for me whether there was any space left in the dorm at all. Like I said, I’m ok to take any room.  /n Thank you, /n Ravi 
-Hello Ravi, #speaker_1
-We have one room available now but I'm actually supposed to release it later. One of the foreign exchange students is moving back home for an emergency next week. Given your difficult situation, I think I can offer it to you first. #speaker_1
-It’s a single room in the Farquhar Hall with an aircon. There is a shared bathroom on the same floor. The room’s $700 per month, without food. If you want food, you’ll have to choose a meal plan. #speaker_1
-Would you like to take the room? If so, please let me know as soon as possible so that the school can make the necessary arrangements. #speaker_1
-Regards, #speaker_1
-Rebecca #speaker_1
+Hello Ravi, /n /n We have one room available now but I'm actually supposed to release it later. One of the foreign exchange students is moving back home for an emergency next week. Given your difficult situation, I think I can offer it to you first. /n It’s a single room in the Farquhar Hall with an aircon. There is a shared bathroom on the same floor. The room’s $700 per month, without food. If you want food, you’ll have to choose a meal plan. /n Would you like to take the room? If so, please let me know as soon as possible so that the school can make the necessary arrangements. /n /n Regards, /n Rebecca #speaker_1
 
 #ui:narrator
 #background:bg_ravi_pushpa_home.jpg
@@ -854,13 +849,7 @@ On the other hand, this is the closest I could possibly be to campus. I’ll nev
 #emailsubject: Query about dorm room
 #replyemaildate:On Wed 6 Oct 2021, Ravi <ravi@email.com> wrote:  
 #replyemailtext: Hello Rebecca, /n Thank you so much! I would like to take the room. It would be amazing to stay on campus, and this solves a few of my problems! /n I’m ok without the meal plan. Please let me know what else I need to do to move in!  /n Thank you, /n Ravi 
-Hello Ravi,  #speaker_1
-Great! Please let me know your earliest possible move-in date, so we can arrange for the access card and keys. #speaker_1
-There are forms to fill up which I will follow up with in a separate email.
-There will most likely be an orientation session at the dorm as well, with the Residential Assistant. Each floor has a Residential Assistant, who is a student volunteer assigned to deal with any issues faced by the students living in the dorm. #speaker_1
-Hope you will enjoy the rest of your semester staying on campus! #speaker_1
-Regards,  #speaker_1
-Rebecca #speaker_1
+Hello Ravi,  /n /n Great! Please let me know your earliest possible move-in date, so we can arrange for the access card and keys. /n There are forms to fill up which I will follow up with in a separate email. /n There will most likely be an orientation session at the dorm as well, with the Residential Assistant. Each floor has a Residential Assistant, who is a student volunteer assigned to deal with any issues faced by the students living in the dorm.  /n Hope you will enjoy the rest of your semester staying on campus! /n /n Regards,  /n Rebecca #speaker_1
 -> chapter_1_ending_1
 
 === chapter_1_ending_1 ===
@@ -908,12 +897,7 @@ Ravi #speaker_self
 #emailsubject: Query about dorm room
 #replyemaildate:On Wed 6 Oct 2021, Ravi <ravi@email.com> wrote:  
 #replyemailtext: Hello Rebecca, /n Thank you so much. Unfortunately, the room is a little too expensive for me at the moment. As such, I am unable to take the room. /n Apologies for any inconvenience caused. I hope you find somebody to take that room soon.  /n Thank you, /n Ravi 
-Hello Ravi, #email
-We understand. In that case, unfortunately, you will have to make other arrangements.#email
-I can keep an eye out for a room opening up, but nothing else is available at the moment. I can’t guarantee that any rooms will be cheaper though.#email
-All the best. Please feel free to contact the school if you require any financial assistance.#email
-Regards, #email
-Rebecca #email
+Hello Ravi, /n /n We understand. In that case, unfortunately, you will have to make other arrangements. /n I can keep an eye out for a room opening up, but nothing else is available at the moment. I can’t guarantee that any rooms will be cheaper though. /n All the best. Please feel free to contact the school if you require any financial assistance. /n /n Regards, /n Rebecca #speaker_1
 
 -> chapter_1_ending_2
 
