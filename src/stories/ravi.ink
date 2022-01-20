@@ -622,7 +622,7 @@ Uh.... #speaker_self
     But Yishun is too far from my uni. #speaker_self
     Yishun is too far from everything! This place is close to my uni. It’s the perfect place for me. #speaker_self
     
-    ++ [Try to persuade landlord that you are not like "those" Indians] Eh but you tell him that I don't cook, and I'm a student in university ok. Very clean. Not like what he might think or hear from others. #speaker_self
+    ++ [Try to persuade landlord that I am not like "those" Indians] Eh but you tell him that I don't cook, and I'm a student in university ok. Very clean. Not like what he might think or hear from others. #speaker_self
         VAR ravi_1_notlikeotherindians = true
         ~ ravi_1_notlikeotherindians = true
         Aiyah why so troublesome? Eh pls understand I cannot do anything without landlord permission. I don't think he will care about those reasons la, trust me. Not like I don’t want to help you ok! #speaker_1
