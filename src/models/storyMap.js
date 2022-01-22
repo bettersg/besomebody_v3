@@ -619,14 +619,24 @@ export const CHARACTER_MAP = [
     characterId: 4,
     name: "Zhihao Lim",
     linkName: "",
-    profileImage: "/images/profile_blank.png",
-    characterIntroImage:  "/images/instagram_blank.png",
+    profileImage: "/images/profile_zhihao.png",
+    characterIntroImage:  "/character_choice_page/zhihao.png",
     description: "Zhihao might have a future in e-sports, but will it disappear before his eyes? Life is about to get complicated, as a fateful Tweet gains a life of its own...",
     jsonLink: '../stories/nadia.ink.json',
     playable: false,
   }, 
   {
     characterId: 5,
+    name: "Unaisah Begum",
+    linkName: "",
+    profileImage: "/images/profile_unaisah.png",
+    characterIntroImage:  "/character_choice_page/unaisah.png",
+    description: "Unaisah wants to excel as a new teacher - but can she break the glass ceiling while dealing with things at home?",
+    jsonLink: '../stories/nadia.ink.json',
+    playable: false,
+  }, 
+  {
+    characterId: 6,
     name: "Marie da Costa",
     linkName: "",
     profileImage: "/images/profile_blank.png",
@@ -635,16 +645,6 @@ export const CHARACTER_MAP = [
     jsonLink: '../stories/nadia.ink.json',
     playable: false,
   },
-  {
-    characterId: 6,
-    name: "Unaisah Begum",
-    linkName: "",
-    profileImage: "/images/profile_blank.png",
-    characterIntroImage:  "/images/instagram_blank.png",
-    description: "Unaisah wants to excel as a new teacher - but can she break the glass ceiling while dealing with things at home?",
-    jsonLink: '../stories/nadia.ink.json',
-    playable: false,
-  }, 
 ];
 
 // export const STORY_MAP = [
