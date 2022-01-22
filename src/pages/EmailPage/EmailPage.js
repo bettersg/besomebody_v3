@@ -95,7 +95,13 @@ const Email = (props) => {
   const mergedEmail = () =>
     currentParagraphs
       // .filter(paragraph => paragraph.tags[0].includes('email'))
-      .map((paragraph, idx) => {return (<p className="typed-out">{paragraph.text}</p>)});
+      .map((paragraph, idx) => {
+        return (
+         paragraph.tags[0].includes('speaker_1') ?
+           <p className="typed-out">{paragraph.text.split('/n').map((line, i) => <span key={i}>{line}<br /></span>)}</p> :
+           (<p className="typed-out">{paragraph.text}</p>)
+           )
+      });
     
 //  console.log('mergedEmail', mergedEmail(currentParagraphs))    
 //  console.log('specialTags', specialTags)
@@ -148,6 +154,7 @@ const Email = (props) => {
         
         <Box id='EmailText' className='Email__messages'>
           {/* Email Messages */}
+
           <div className="typing">
             <div className="text-cover"></div>
               {mergedEmail()}
@@ -165,6 +172,7 @@ const Email = (props) => {
               
               }
           </div>
+
         </Box>
         <div className="Email__sendWrapper">
           <div className='Email__sendWrapper__sendButton'>Tap to draft email</div>

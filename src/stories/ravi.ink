@@ -129,6 +129,7 @@ Vaada kanna (welcome, darling). Have you eaten? #speaker_left
 Yup, I had dinner. I ate with my classmates after class. #speaker_self
 Ok. But you should know, you missed a great fish curry. Looks like I’ll have to throw the rest away- #speaker_left
 Oh! Maybe I am a little bit hungry after all. Could I have some curry please? #speaker_self
+#background:bg_ravi_fishcurry.jpg
 Aha! I knew it. I don’t think you’ve ever said no to my fish curry. Not once in 24 years. #speaker_left
 Hmm...I think you’re probably right! #speaker_self
 Amma always cooks fish curries for important occasions. Revati and I had it for almost every birthday we had growing up. #inner_monologue
@@ -138,10 +139,10 @@ It’s definitely Amma’s signature dish, to say the least. #inner_monologue
 Anyway, go shower, you look so sweaty. Then you can eat. I’ll reheat the curry for you. #speaker_left
 + Hmm ok. See you in 10 minutes.[] #speaker_self
 + It's ok ma, let's eat while it's hot! []  #speaker_self
-#background:bg_ravi_home.jpg
 - As always, it smells amazing! I feel like I could eat 10 bowls all by myself. Did you do anything different this time? #speaker_self
 Ah, so you found my secret ingredient! I put in some garam masala that Pushpa Aunty gave to us when we went over last week. #speaker_left
 It’s very fragrant. I think she made it herself. You know how she is. #speaker_left
+#background:bg_ravi_home.jpg
 Oh nice. Pushpa Aunty always gives us the best things! Usually food. #speaker_self
 Last time we visited her, the sambal she made… also power! I think it’s the best sambal I’ve ever had.  #speaker_self
 She should really look into selling it. She could probably run a chain restaurant selling nothing but sambal.  #speaker_self
@@ -455,7 +456,7 @@ Minigame 7 // must add some text
 #background:bg_ravi_intro.jpg
 It’s been two weeks since we’ve made the move. I’d had so much delicious food, I think I’ve gained weight. How am I going to pass my reservist IPPT?
 My schedule nowadays is a bit boring. I come here after class, get a scrumptious dinner (yay for Pushpa aunty!), do my schoolwork, then head over to Lukman’s to rest. It was going well, for a while.
- ButI can’t do this forever though. I can’t go to Lukman’s almost every day. He’s probably getting sick of my face already. The first time was fun, kind of like a sleepover. 
+ But I can’t do this forever though. I can’t go to Lukman’s almost every day. He’s probably getting sick of my face already. The first time was fun, kind of like a sleepover. 
  The second time was like we were roommates. The third, fourth, fifth times...he’s probably expecting me to pay rent or something. 
  His parents must be really annoyed with me too. They don’t say it, but I can feel their eyes in the back of my skull whenever I go over. I can’t keep being a burden to Lukman either.
  I need to find some other place to stay. Maybe stay on my own if I can. That might be nice, for a change. I’ve always shared a room with Revati, anyway.
@@ -466,17 +467,16 @@ My schedule nowadays is a bit boring. I come here after class, get a scrumptious
 
 === ravi_1_4_narration ===
 #knot:ravi_1_4_narration
-#ui:narrator
+#ui:scene
 #background:bg_ravi_rentals1.jpg
-Hmm...this listing sounds good. one bedroom apartment, 11th floor, 5 minutes away from university? This must be a dream... wait $2222 per month?? This must be a nightmare! Who can afford that? Maybe if I just sort by “price”…
+Hmm...this listing sounds good. one bedroom apartment, 11th floor, 5 minutes away from university? This must be a dream... wait $2222 per month?? This must be a nightmare! Who can afford that? Maybe if I just sort by “price”… #inner_monologue
 #background:bg_ravi_rentals2.jpg
- Oh, this room sounds about right. Seems promising. It’s a small room – maybe other people are staying there too? But it’s cheap, and relatively close to uni. 
- Maybe I can make friends with whoever’s staying there. Or better yet, I might be able to talk them down to my price. They should take some pity on me. I’m just a student.
- Let me see if he’s offering any other rooms ... oh wow, he has two! Maybe I can rent the other room instead – it’s a bit bigger though, so it’s probably more expensive... I’ll see how it goes.
+ Oh, this room sounds about right. Seems promising. It’s a small room – maybe other people are staying there too? But it’s cheap, and relatively close to uni. #inner_monologue
+ Maybe I can make friends with whoever’s staying there. Or better yet, I might be able to talk them down to my price. They should take some pity on me. I’m just a student.#inner_monologue
 #background:bg_ravi_rentals3.jpg 
-
- Who do I talk to? I see an agent’s name here. “Agent James” huh? Sounds like a reliable guy. Actually, no. Sounds like James Bond wannabe.
- Oh, his phone number is here. Maybe I should drop him a text. Well, here goes nothing.
+ Let me see if he’s offering any other rooms ... oh wow, he has two! Maybe I can rent the other room instead – it’s a bit bigger though, so it’s probably more expensive... I’ll see how it goes.#inner_monologue
+ Who do I talk to? I see an agent’s name here. “Agent James” huh? Sounds like a reliable guy. Actually, no. Sounds like James Bond wannabe.#inner_monologue
+ Oh, his phone number is here. Maybe I should drop him a text. Well, here goes nothing.#inner_monologue
 
 -> ravi_1_4
 
@@ -622,7 +622,7 @@ Uh.... #speaker_self
     But Yishun is too far from my uni. #speaker_self
     Yishun is too far from everything! This place is close to my uni. It’s the perfect place for me. #speaker_self
     
-    ++ [Try to persuade landlord that you are not like "those" Indians] Eh but you tell him that I don't cook, and I'm a student in university ok. Very clean. Not like what he might think or hear from others. #speaker_self
+    ++ [Try to persuade landlord that I am not like "those" Indians] Eh but you tell him that I don't cook, and I'm a student in university ok. Very clean. Not like what he might think or hear from others. #speaker_self
         VAR ravi_1_notlikeotherindians = true
         ~ ravi_1_notlikeotherindians = true
         Aiyah why so troublesome? Eh pls understand I cannot do anything without landlord permission. I don't think he will care about those reasons la, trust me. Not like I don’t want to help you ok! #speaker_1
@@ -715,8 +715,9 @@ Let’s just hope the school admin is better than the agent…
 === ravi_1_5 ===
 #knot:ravi_1_5
 #ui:email
-#background:email.png
+#emailheader:Compose Email
 #emailfrom:Ravi <ravi@email.com>
+#emailfromicon: ico_ravi_ravi.png
 #emailto:Univ Housing <admin@univ.edu.sg>
 #emailsubject: Query about dorm room
 To whom it may concern, #speaker_self
@@ -750,18 +751,14 @@ Ravi #speaker_self
 === ravi_1_5b ===
 #knot:ravi_1_5b
 #ui:email
-#background:email.png
+#emailheader:Read Email
 #emailfrom:Univ Housing <admin@univ.edu.sg>
 #emailto:Ravi <ravi@email.com>
+#emailfromicon: ico_ravi_rebecca.png
 #emailsubject: Query about dorm room
 #replyemaildate:On Wed 6 Oct 2021, Ravi <ravi@email.com> wrote:  
 #replyemailtext: To whom it may concern /n I’m writing to inquire about the possibility of housing in the university dorm. My student number is A0155007R. /n I understand that I might be a little late, but I need to move out immediately due to family matters. It would be great if I could stay on campus, if possible. /n Do let me know if there are any options available. Any room is fine. Please let me know if you need more details.  /n Thank you, /n Ravi 
-Hello Ravi, #speaker_1
-Thanks for your email. I’m afraid you are a little late. Housing occupancy has been settled before the beginning of the semester. You would need to wait for the next semester to get a room. #speaker_1
-You mentioned that you had to move due to family matters. While we may not be currently able to offer you a room, the school is concerned for the wellbeing of its students. Is there anything else we could do to help? #speaker_1
-
-Regards, #speaker_1
-Rebecca #speaker_1
+Hello Ravi, /n Thanks for your email. I’m afraid you are a little late. Housing occupancy has been settled before the beginning of the semester. You would need to wait for the next semester to get a room. /n You mentioned that you had to move due to family matters. While we may not be currently able to offer you a room, the school is concerned for the wellbeing of its students. Is there anything else we could do to help? /n  Regards, /n  Rebecca #speaker_1
 
 #ui:narrator
 #background:bg_ravi_pushpa_home.jpg
@@ -772,9 +769,10 @@ Rebecca #speaker_1
 === ravi_1_5c ===
 #knot:ravi_1_5c
 #ui:email
-#background:email.png
+#emailheader:Compose Email
 #emailto:Univ Housing <admin@univ.edu.sg>
 #emailfrom:Ravi <ravi@email.com>
+#emailfromicon: ico_ravi_ravi.png
 #emailsubject: Query about dorm room
 #replyemaildate:On Wed 6 Oct 2021, Univ Housing <admin@univ.edu.sg> wrote:  
 #replyemailtext: Hello Ravi, /n I’m afraid you are a little late. Housing occupancy has been settled before the beginning of the semester. You would need to wait for the next semester to get a room. /n You mentioned that you had to move due to family matters. While we may not be currently able to offer you a room, the school is concerned for the wellbeing of its students. Is there anything else we could do to help? /n Regards, /n Rebecca
@@ -797,18 +795,14 @@ Wait, a reply just came in. Wah this Rebecca is super on the ball.
 === ravi_1_5d ===
 #knot:ravi_1_5d
 #ui:email
-#background:email.png
+#emailheader:Read Email
 #emailfrom:Univ Housing <admin@univ.edu.sg>
+#emailfromicon: ico_ravi_rebecca.png
 #emailto:Ravi <ravi@email.com>
 #emailsubject: Query about dorm room
 #replyemaildate:On Wed 6 Oct 2021, Ravi <ravi@email.com> wrote:  
 #replyemailtext: Hello Rebecca, /n Thank you for your reply. /n I am a little out of options. I don’t have space at home to study or sleep, and I would really love if I could somehow stay on campus. /n I hope you could check for me whether there was any space left in the dorm at all. Like I said, I’m ok to take any room.  /n Thank you, /n Ravi 
-Hello Ravi, #speaker_1
-We have one room available now but I'm actually supposed to release it later. One of the foreign exchange students is moving back home for an emergency next week. Given your difficult situation, I think I can offer it to you first. #speaker_1
-It’s a single room in the Farquhar Hall with an aircon. There is a shared bathroom on the same floor. The room’s $700 per month, without food. If you want food, you’ll have to choose a meal plan. #speaker_1
-Would you like to take the room? If so, please let me know as soon as possible so that the school can make the necessary arrangements. #speaker_1
-Regards, #speaker_1
-Rebecca #speaker_1
+Hello Ravi, /n /n We have one room available now but I'm actually supposed to release it later. One of the foreign exchange students is moving back home for an emergency next week. Given your difficult situation, I think I can offer it to you first. /n It’s a single room in the Farquhar Hall with an aircon. There is a shared bathroom on the same floor. The room’s $700 per month, without food. If you want food, you’ll have to choose a meal plan. /n Would you like to take the room? If so, please let me know as soon as possible so that the school can make the necessary arrangements. /n /n Regards, /n Rebecca #speaker_1
 
 #ui:narrator
 #background:bg_ravi_pushpa_home.jpg
@@ -822,9 +816,10 @@ On the other hand, this is the closest I could possibly be to campus. I’ll nev
 === ravi_1_5e_take ===
 #knot:ravi_1_5e_take
 #ui:email
-#background:email.png
+#emailheader:Compose Email
 #emailto:Univ Housing <admin@univ.edu.sg>
 #emailfrom:Ravi <ravi@email.com>
+#emailfromicon: ico_ravi_ravi.png
 #emailsubject: Query about dorm room
 #replyemaildate:On Wed 6 Oct 2021, Univ Housing <admin@univ.edu.sg> wrote:  
 #replyemailtext: Hello Ravi,  /n Good news! We have one room available now. One of the foreign exchange students is moving back home for an emergency.  /n It’s a single room in the Farquhar Hall with an aircon. There is a shared bathroom on the same floor. The room’s $700 per month, without food. If you want food, you’ll have to choose a meal plan.  /n Would you like to take the room? If so, please let me know as soon as possible so that the school can make the necessary arrangements.  /n Regards,   /n Rebecca
@@ -847,19 +842,14 @@ On the other hand, this is the closest I could possibly be to campus. I’ll nev
 === ravi_1_5e_take2 ===
 #knot:ravi_1_5e_take2
 #ui:email
-#background:email.png
+#emailheader:Read Email
 #emailfrom:Univ Housing <admin@univ.edu.sg>
+#emailfromicon: ico_ravi_rebecca.png
 #emailto:Ravi <ravi@email.com>
 #emailsubject: Query about dorm room
 #replyemaildate:On Wed 6 Oct 2021, Ravi <ravi@email.com> wrote:  
 #replyemailtext: Hello Rebecca, /n Thank you so much! I would like to take the room. It would be amazing to stay on campus, and this solves a few of my problems! /n I’m ok without the meal plan. Please let me know what else I need to do to move in!  /n Thank you, /n Ravi 
-Hello Ravi,  #speaker_1
-Great! Please let me know your earliest possible move-in date, so we can arrange for the access card and keys. #speaker_1
-There are forms to fill up which I will follow up with in a separate email.
-There will most likely be an orientation session at the dorm as well, with the Residential Assistant. Each floor has a Residential Assistant, who is a student volunteer assigned to deal with any issues faced by the students living in the dorm. #speaker_1
-Hope you will enjoy the rest of your semester staying on campus! #speaker_1
-Regards,  #speaker_1
-Rebecca #speaker_1
+Hello Ravi,  /n /n Great! Please let me know your earliest possible move-in date, so we can arrange for the access card and keys. /n There are forms to fill up which I will follow up with in a separate email. /n There will most likely be an orientation session at the dorm as well, with the Residential Assistant. Each floor has a Residential Assistant, who is a student volunteer assigned to deal with any issues faced by the students living in the dorm.  /n Hope you will enjoy the rest of your semester staying on campus! /n /n Regards,  /n Rebecca #speaker_1
 -> chapter_1_ending_1
 
 === chapter_1_ending_1 ===
@@ -880,9 +870,10 @@ Better let Amma know the news.
 === ravi_1_5e_decline ===
 #knot:ravi_1_5e_decline
 #ui:email
-#background:email.png
+#emailheader:Compose Email
 #emailto:Univ Housing <admin@univ.edu.sg>
 #emailfrom:Ravi <ravi@email.com>
+#emailfromicon: ico_ravi_ravi.png
 #emailsubject: Query about dorm room
 #replyemaildate:On Wed 6 Oct 2021, Univ Housing <admin@univ.edu.sg> wrote:  
 #replyemailtext: Hello Ravi,  /n Good news! We have one room available now. One of the foreign exchange students is moving back home for an emergency.  /n It’s a single room in the Farquhar Hall with an aircon. There is a shared bathroom on the same floor. The room’s $700 per month, without food. If you want food, you’ll have to choose a meal plan.  /n Would you like to take the room? If so, please let me know as soon as possible so that the school can make the necessary arrangements.  /n Regards,   /n Rebecca
@@ -899,18 +890,14 @@ Ravi #speaker_self
 === ravi_1_5e_decline2 ===
 #knot:ravi_1_5e_decline2
 #ui:email
-#background:email.png
+#emailheader:Read Email
 #emailfrom:Univ Housing <admin@univ.edu.sg>
+#emailfromicon: ico_ravi_rebecca.png
 #emailto:Ravi <ravi@email.com>
 #emailsubject: Query about dorm room
 #replyemaildate:On Wed 6 Oct 2021, Ravi <ravi@email.com> wrote:  
 #replyemailtext: Hello Rebecca, /n Thank you so much. Unfortunately, the room is a little too expensive for me at the moment. As such, I am unable to take the room. /n Apologies for any inconvenience caused. I hope you find somebody to take that room soon.  /n Thank you, /n Ravi 
-Hello Ravi, #email
-We understand. In that case, unfortunately, you will have to make other arrangements.#email
-I can keep an eye out for a room opening up, but nothing else is available at the moment. I can’t guarantee that any rooms will be cheaper though.#email
-All the best. Please feel free to contact the school if you require any financial assistance.#email
-Regards, #email
-Rebecca #email
+Hello Ravi, /n /n We understand. In that case, unfortunately, you will have to make other arrangements. /n I can keep an eye out for a room opening up, but nothing else is available at the moment. I can’t guarantee that any rooms will be cheaper though. /n All the best. Please feel free to contact the school if you require any financial assistance. /n /n Regards, /n Rebecca #speaker_1
 
 -> chapter_1_ending_2
 
