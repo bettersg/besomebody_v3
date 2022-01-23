@@ -455,16 +455,16 @@ export const MINI_GAME_MAP = [
   {
   game_id: 7,
   ui: "mcq",
-  introduction: "Ravi is struggling with housing. Let's see how deep this issue is here.",
+  introduction: "Ravi is struggling with housing issues. Many Singaporeans face similiar struggles daily.",
   questions: [
     {
       question_id: 1,
       question:
-        "There are no homeless people in Singapore.",
+        "There are no homeless people in Singapore",
       type: "text",
-      correct_answer_id: 1,
+      correct_answer_id: 2,
       explanation:
-        "False. blah blah",
+        "False. According to a 2019 study by Dr Ng Kok Hoe of the Lee Kuan Yew School of Public Policy, around 1000 people sleep on the streets every night. If you find a homeless person who needs help, please call the ComCare hotline at 1800-222-0000.",
       answers: [
         {
           answer_id: 1,
@@ -479,41 +479,37 @@ export const MINI_GAME_MAP = [
     {
       question_id: 2,
       question:
-        "A Chinese, Malay, and Indian buy a nearly identical HDB flat. Due to the Ethnic Integration Policy, which is able to resell their HDB at the highest price?",
-      correct_answer_id: 3,
-      explanation: "The Chinese, because the market (C) is larger this gives them higher windfall gains and helps them escape the poverty cycle.",
-      type: "image",
+        "A Chinese, Malay, and Indian buy a nearly identical HDB flat. Statistically, who is able to resell their HDB at the highest price and make more profit?",
+      correct_answer_id: 1,
+      explanation: "The Ethnic Integration Policy limits the total percentage of a block or neighbourhood that may be occupied by a certain ethnicity, which means minority owners can only resell their property to minority buyers. In a 2013 study by Maisy Wong, she found that Chinese-constrained HDB resale units (only Chinese buyers eligible) were 5-8% more expensive than almost identical Indian or Malay-constrained properties.",
+      type: "text",
       answers: [
         {
           answer_id: 1,
-          imageUrl: "aman_3_temple.jpg",
-          title: "C",
+          title: "Chinese",
         },
         {
           answer_id: 2,
-          imageUrl: "aman_3_mosque.jpg",
-          title: "M 2",
+          title: "Malay",
         },
         {
           answer_id: 3,
-          imageUrl: "aman_3_gurdwara.jpg",
-          title: "I 3",
+          title: "Indian",
         },
         {
-          answer_id: 4,
-          imageUrl: "aman_3_church.jpg",
-          title: "O 4",
+          answer_id: 2,
+          title: "None (all are equal)",
         },
       ],
     },
     {
       question_id: 3,
       question:
-        "Rental HDB flats are for individuals earning less than $X,000 per month, and approximately xx% of Singaporeans live in them.",
+        "Individuals of different races all have an equal and fair chance of renting out a house in Singapore's open market.",
       type: "text",
-      correct_answer_id: 1,
+      correct_answer_id: 2,
       explanation:
-        "True. ",
+        "False. A 2017 CNBC article highlighted that even in a weak rental market, some landlords explicitly deny rental opportunities to some races. Singaporean Malays, Singaporean Indians & PRCs are amongst those who face the issue of rental discrimination.",
         answers: [
           {
             answer_id: 1,
