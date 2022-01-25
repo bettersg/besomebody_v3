@@ -460,19 +460,27 @@ export const MINI_GAME_MAP = [
     {
       question_id: 1,
       question:
-        "There are no homeless people in Singapore",
+        "Approximately how many homeless people are there in Singapore?",
       type: "text",
       correct_answer_id: 2,
       explanation:
-        "False. According to a 2019 study by Dr Ng Kok Hoe of the Lee Kuan Yew School of Public Policy, around 1000 people sleep on the streets every night. If you find a homeless person who needs help, please call the ComCare hotline at 1800-222-0000.",
+        "According to a 2019 study by Dr Ng Kok Hoe of the Lee Kuan Yew School of Public Policy, around 1,000 people sleep on the streets every night. If you find a homeless person who needs help, please call the ComCare hotline at 1800-222-0000.",
       answers: [
         {
           answer_id: 1,
-          title: "True",
+          title: "100",
         },
         {
           answer_id: 2,
-          title: "False",
+          title: "1,000",
+        },
+        {
+          answer_id: 3,
+          title: "10,000",
+        },
+        {
+          answer_id: 4,
+          title: "100,000",
         },
       ],
     },

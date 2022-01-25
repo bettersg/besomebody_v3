@@ -133,19 +133,25 @@ Aha! I knew it. I don’t think you’ve ever said no to my fish curry.  #speake
 Hmm...I think you’re probably right! #speaker_self
 Mmmm... Amma's fish curry... Amma doesn't really talk about her feelings, so she expresses her emotions through her cooking, especially her curries. #inner_monologue
 Even the neighbours came for it, sold on the bright heat of masala and turmeric that’d waft through the window grilles. Not all our neighbours enjoyed the smell though. #inner_monologue
-The dish spoke celebration, until the day Appa disappeared. That day, we sat around crying as Amma heaped thick curry onto our plates – knowing it was the only comfort we could have, a piece of the past we could bring to life through Amma’s cooking skills. She conveyed her love, and sometimes sadness, through it. #inner_monologue
+The dish spoke celebration, until the day Appa disappeared. That day, we sat around crying as Amma heaped thick curry onto our plates – knowing it was the only comfort we could have, a piece of the past we could bring to life through Amma’s cooking skills. #inner_monologue
+She conveyed her love, and sometimes sadness, through it. #inner_monologue
 Anyway, go shower, you look so sweaty. Then you can eat. I’ll reheat the curry for you. #speaker_left
 + Hmm ok. See you in 10 minutes.[] #speaker_self
+    #ui:narrator
+    #background:bg_ravi_home.jpg
+    A few minutes later, after the fastest cold shower ever...
+    #ui:scene
+    #background:bg_ravi_fishcurry.jpg
 + It's ok ma, let's eat while it's hot! []  #speaker_self
 - As always, it smells amazing! I feel like I could eat 10 bowls all by myself. Did you do anything different this time? #speaker_self
 Ah, so you found my secret ingredient! I put in some garam masala that Pushpa Aunty gave to us when we went over last week. #speaker_left
 It’s very fragrant. I think she made it herself. You know how she is. #speaker_left
-#background:bg_ravi_home.jpg
 Oh nice. Pushpa Aunty always gives us the best things! Usually food. #speaker_self
 Last time we visited her, the sambal she made… also power! I think it’s the best sambal I’ve ever had.  #speaker_self
 She should really look into selling it. She could probably run a chain restaurant selling nothing but sambal.  #speaker_self
 I must have dreamt of her sambal so many times… #speaker_self
 Yeah... she’s really good at cooking, isn’t she. #speaker_left
+#background:bg_ravi_home.jpg
 ... #speaker_left
 Ravi, could you wait for just a minute? We need to talk about something. This is important. #speaker_left
 
