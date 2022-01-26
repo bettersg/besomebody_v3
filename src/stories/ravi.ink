@@ -85,15 +85,15 @@ VAR chapter_id = 1
 Hey there. I’m Ravi. I’m 24. Aviation engineer.  
 Well, ASPIRING aviation engineer, anyway. I’m still in uni. 
 One more year to go until I join the working world! I want to be able to support my family soon.
-Speaking of family, it’s been just Amma (mother), Revati and I for a while.
-As for Appa... Appa is no longer family.
-He used to be in the airline industry too. He’s part of the reason I wanted to become an aviation engineer in the first place. 
+Family has been just Amma (mother), Revati and I for a while.
+As for Appa... Appa (father) is no longer family.
+He used to be in the airline industry. He’s part of the reason I wanted to become an aviation engineer in the first place. 
 He used to sneak Revati and I into the hangars on the weekends, just to look at those airplanes he’d be working on. 
 Just looking at those planes, and imagining them take off to the skies – it filled my heart with a great sense of wonder.
-And then...one day, it happened. 
-It was just another regular day. Appa left early in the morning... and didn't come back.
-He left us that day and he’s been uncontactable since. We called and called, but he never picked up. 
-Sometimes I think he wanted to be like the airplanes he worked on, free to roam the skies, to go anywhere they pleased. But I might never find out.
+And then...one day, it happened.  It was just another regular day. 
+Appa left early in the morning... and didn't come back.
+He left us that day. He’s been uncontactable since. We called and called, but he never picked up. 
+Sometimes... I think he wanted to be like the airplanes he worked on, free to roam the skies, to go anywhere they pleased. But I might never find out.
 Since then, Amma, Revati and I have had to fend for ourselves. 
 It’s not been easy, especially for Amma. She works a 12-hour shift as a sales assistant at the department store. 
 Revati is doing her A levels, and she’s done part-time jobs too. 
@@ -132,7 +132,7 @@ Oh! Maybe I am a little bit hungry after all. Can I have some curry please? #spe
 Aha! I knew it. I don’t think you’ve ever said no to my fish curry.  #speaker_left
 Hmm...I think you’re probably right! #speaker_self
 Mmmm... Amma's fish curry... Amma doesn't really talk about her feelings, so she expresses her emotions through her cooking, especially her curries. #inner_monologue
-Even the neighbours came for it, sold on the bright heat of masala and turmeric that’d waft through the window grilles. Not all our neighbours enjoyed the smell though. #inner_monologue
+Even the neighbours came for it, sold on the bright heat of masala and turmeric that’d waft through the window grilles (not all our neighbours enjoyed the smell though.) #inner_monologue
 The dish spoke celebration, until the day Appa disappeared. That day, we sat around crying as Amma heaped thick curry onto our plates – knowing it was the only comfort we could have, a piece of the past we could bring to life through Amma’s cooking skills. #inner_monologue
 She conveyed her love, and sometimes sadness, through it. #inner_monologue
 Anyway, go shower, you look so sweaty. Then you can eat. I’ll reheat the curry for you. #speaker_left
@@ -144,43 +144,35 @@ Anyway, go shower, you look so sweaty. Then you can eat. I’ll reheat the curry
     #background:bg_ravi_fishcurry.jpg
 + It's ok ma, let's eat while it's hot! []  #speaker_self
 - As always, it smells amazing! I feel like I could eat 10 bowls all by myself. Did you do anything different this time? #speaker_self
-Ah, so you found my secret ingredient! I put in some garam masala that Pushpa Aunty gave to us when we went over last week. #speaker_left
-It’s very fragrant. I think she made it herself. You know how she is. #speaker_left
-Oh nice. Pushpa Aunty always gives us the best things! Usually food. #speaker_self
-Last time we visited her, the sambal she made… also power! I think it’s the best sambal I’ve ever had.  #speaker_self
-She should really look into selling it. She could probably run a chain restaurant selling nothing but sambal.  #speaker_self
-I must have dreamt of her sambal so many times… #speaker_self
-Yeah... she’s really good at cooking, isn’t she. #speaker_left
+Ah, so you found my secret ingredient! I put in some garam masala (a spice) that Pushpa Aunty gave to us when we went over last week. Very fragrant! #speaker_left
+I think she made it herself. You know how she is. #speaker_left
+Oh nice. Last time we visited her, the sambal she made… also power! She could probably run a sambal chain restaurant! I must have dreamt of her sambal so many times… #speaker_self
 #background:bg_ravi_home.jpg
 ... #speaker_left
-Ravi, could you wait for just a minute? We need to talk about something. This is important. #speaker_left
+Ravi, before you start... we need to talk about something.  #speaker_left
 
-+ [Keep eating] Oh my god, this is so good! How in the world did Amma Pushpa Aunty make this?  #speaker_self
++ [Take just one bite first] Oh my god, this is so good!   #speaker_self
     VAR ravi_1_motherempathy = 0
     ~ ravi_1_motherempathy = 0
     The way it blends with the richness of the coconut milk and the kick of the curry leaves. You can really taste the - #speaker_self
-    ...Ravi. Listen to me. #speaker_left
+    ...Ravi? #speaker_left
     ...Sorry, please continue. #speaker_self
-    Yikes, how embarrassing...I totally lost myself for a sec there. #inner_monologue
-    What do we have to talk about? #speaker_self
+    Yikes...I totally lost myself for a sec there. #inner_monologue
     So...today at the shop.. #speaker_left
-    What happened? Oh, sorry Amma, could you pass me the vadai please? #speaker_self
+    Oh, sorry Amma, could you pass me the vadai (a snack) please? #speaker_self
     ...Here. But let me finish. #speaker_left
-    Now I don’t know why I ate that very average mee hoon in uni. I got so hungry waiting for class to get over.  #speaker_self
-    I didn’t have lunch, so my stomach was growling. My classmates really overhyped the mee hoon. Should have texted you to ask what was for dinner- #speaker_self
-    Wait! I’m getting distracted by the food again. Curse you, Amma, and your culinary magic! #inner_monologue
-    I really have to stop eating. I’ll put the bowl down for now. #inner_monologue
-    Oh wait. I remember why I didn’t text you. Today is Wednesday, right? #speaker_self
+    Now I don’t know why I ate that very average mee hoon in uni. I got so hungry waiting for class to get over.  Should have texted you to ask what was for dinner- #speaker_self
+    Wait! I’m getting distracted by the food again. I really have to stop eating.  #inner_monologue
+    Oh wait. I remember why I didn’t text you. Today is Wednesday, right? Isn’t today supposed to be a late shift for you?  #speaker_self
     
 + [Stop and listen] Amma’s looking very quiet. This can’t be good… #inner_monologue
     ~ ravi_1_motherempathy = 1
-    Amma’s looking very quiet. This can’t be good… #inner_monologue
+    Something feels off about all this … she made fish curry and looks sad  #inner_monologue
     Sure...what do we have to talk about? #inner_monologue
-    Something feels off about all this … I can’t help but feel uneasy. #inner_monologue
     ... #speaker_left
-    Wait a minute, amma, weren’t you supposed to be working today? #speaker_self
+    Wait a minute, amma, weren’t you supposed to be working late today? #speaker_self
 - Yes. #speaker_left
-Isn’t today supposed to be a late shift for you? How come you’re back home early? #speaker_self
+How come you’re back home early? #speaker_self
 That’s what I wanted to talk about... #speaker_left
 #speaker_left_image:cha_ravi_mum_worried.png
 So, today at the shop...they told me that they had to let me go. #speaker_left
@@ -188,112 +180,101 @@ What? #speaker_self
 Yeah. The manager told me this morning. #speaker_left
 How did this happen? I thought you were doing well. You’ve never missed a day of work. #speaker_self
 Well, it didn’t matter. They asked me to hand in my card anyway. #speaker_left
-I asked why I had to be let go. They told me that it was tough lah. #speaker_left
+They told me that it was tough for the business to survive lah. #speaker_left
 Not enough people coming into the stores these days. And even when people come in, they don’t like us to approach them when they’re shopping. #speaker_left
 They’d rather just shop on their own, in quiet. #speaker_left
 But still... I thought they would give us some time you know? At least let me finish the month… #speaker_left
 Amma looks really sad. I really don’t know what to do to make her feel better, or even what to say...what should I do? #inner_monologue
 
-+ [Comfort her] Oh ma. I am so sorry. I really am. #speaker_self
++ [I'm so sorry to hear that amma] Oh ma. I am so sorry. I really am. #speaker_self
     ~ ravi_1_motherempathy += 1
     Thank you, Ravi. I know it’s hard for you. It’s hard for me, too. #speaker_left
-    I haven’t seen ma so sad in a long time. I don’t know what to say to her.  #inner_monologue
+    I haven’t seen amma so sad in a long time. I don’t know what to say to her.  #inner_monologue
 
-+ [Question her] This is so sudden. That’s it? After so many years? #speaker_self
++ [How could they do this?!] This is so sudden. That’s it? After so many years? How could they?! #speaker_self
     That’s how it is...I thought they would have let me stay a bit longer.  #speaker_left
     I’ve been there for half my life. I’ve been loyal. But all that didn’t help in the end. #speaker_left
     It’s just not fair. Amma worked so hard and this is how they reward her?  #inner_monologue
 
 - Anyway...I think I saw this coming. #speaker_left
 What do you mean? #speaker_self
-After all, these days, work is hard. Business isn’t booming. There’s no commission, because there’s no sales. #speaker_left
-And everyone’s buying everything online nowadays. There are so many apps to choose from.  #speaker_left
-You’ve seen all the annoying ads, right? #speaker_left
-Even I can’t get some of those songs out of my head. The ads work. #speaker_left
-Youngsters like you also like the internet more. You also buy everything online right?  #speaker_left
+Business isn’t booming. There’s no commission, because there’s no sales. Everyone is buying things online nowadays. #speaker_left
+You also buy everything online right? There are so many platforms to choose from. Every bus also has some online sale ad - 11.11, 10.10, Mid-Week sale, Mid-year sale. How to compete?  #speaker_left
 Hmm...yeah... #speaker_self
 So that’s why lah. #speaker_left
-I know Amma is trying to be tough right now...even if sales were not as good as before, it doesn’t mean she should just be fired!  #inner_monologue
-It’s not her fault...I can see the tears, welling in her eyes. It’s so unfair. #inner_monologue
+What the hell! If the shopping centre is not doing well, they should fire the CEO! Or the manager! Why fire amma? She’s been so loyal and hardworking. Fire those idiots on top who are responsible. #inner_monologue
+It’s not her fault…  Stupid rich businessmen - all they care about is profit and not people! I can see the tears, welling in her eyes. It’s so unfair. #inner_monologue
 
-+ [Comfort her] I hope you’re ok ma. #speaker_self
+
++ [I hope you're ok ma] I hope you’re ok ma. #speaker_self
     ~ ravi_1_motherempathy += 1
     I’m ok kanna #speaker_left
     ... #speaker_left
-    But you’re crying. #speaker_self
+    Amma... you’re crying. #speaker_self
     What do you want me to do? I can’t go back there and beg for my job back. #speaker_left
     It’s just… like I said, I’ve worked there for so long. It’s all I know. #speaker_left
     
 
-+ [Question her]  Have you told Revati? #speaker_self
++ [Have you told Revati?]  Have you told Revati? #speaker_self
     Yeah, I did. She is in her room. #speaker_left
     What did she say? #speaker_self
     What else? Same thing. She’s upset. #speaker_left
     ...  #speaker_left
-    Why wouldn’t she be? Like I said, I’ve worked there for so long.  #speaker_left
-    Ever since she was in primary school, I’ve been a sales assistant. And now, all of that suddenly coming to an end.  #speaker_left
-- I really thought I’d be able to work there until Revati finishes uni. #speaker_left
+    Why wouldn’t she be?  #speaker_left
+    Ever since she was in primary school, I’ve been a sales assistant. I really thought I’d be able to work there until Revati finishes uni. #speaker_left
 
-I tried my best to be a good employee. I made sure to go early every day, and to be the last one to leave. #speaker_left
-I cleaned the shop during breaks, I never took a sick day. #speaker_left
-I thought that I could stay there, and that everything would be fine. #speaker_left
+- I thought that I could stay there, and that everything would be fine. #speaker_left
 But that’s no longer true. #speaker_left
-#speaker_left_image:cha_ravi_mum_worried.png
 But it’s ok. What’s done is done. We will have to move on. And also, more importantly, we will have to move out of here. #speaker_left
 Move out? Why? #speaker_self
-I didn’t tell you or Revati about this, but...kanna, we are already two months late for rent.  #speaker_left
+I didn’t tell you or Revati about this, but...kanna (dear), we are already two months late for rent.  #speaker_left
 We’ve been barely paying it off before then. I don’t earn a lot of money, and I don’t have much savings to spare. I barely have enough to pay it off. #speaker_left
 This place was too big anyway. And I didn’t want to affect Revati. You know she’s studying hard for her A-Levels.  #speaker_left
 And for your uni fees next year...I don’t want to touch that money. I can’t afford to. #speaker_left
-Two months late? Why didn’t you tell me or Revati? We could have helped. You don’t tell us how much the rent is.  #inner_monologue
-We didn’t even know what you’ve been dealing with all this time. We could have helped before this. We could have worked part-time, we could have made the move sooner… #inner_monologue
-And my uni money? I’m not studying just for myself you know? Is it a lot of money?  #inner_monologue
-I need to earn and save for this family. I thought I’m doing good for us.  #inner_monologue
-You make it sound like such a problem for us. It’s almost like my uni fees are the reason we’re about to be forced out of a home!  #inner_monologue
-Am I a burden to you?  #inner_monologue
+Two months late? Why didn’t you tell me or Revati? We could have helped. Even now she isn't telling us how much the rent is.  #inner_monologue
+If we knew what she'd been dealing with, we could have worked part-time more, we could have made the move sooner… #inner_monologue
+And my uni money? I’m not studying just for myself. I need to earn and save for this family. I thought.. my going to uni was good for the family  #inner_monologue
+Are my uni fees are the reason we’re about to be forced out of a home? I’m not a kid anymore. I have the right to know about our finances so I can help. #inner_monologue
  
-+ [Comfort her] Ok, Ravi, deep breaths. Calm down. Amma is emotional right now.  #inner_monologue
++ [We'll figure this out together. Let me help.] Ok, Ravi, deep breaths. Calm down. Amma is emotional right now.  #inner_monologue
     ~ ravi_1_motherempathy += 1
     She can’t help it, and you can’t blame her for it. You know she didn’t mean anything bad. #inner_monologue
     It’s time to be the man of the house. You have to step up, Ravi. #inner_monologue
     Don’t worry about me. We can figure something out. Maybe we don’t have to move. #speaker_self
     I don’t have a choice! My job is to worry about you. #speaker_left
-    And I don’t think we can afford to stay. I need to find a new job.  #speaker_left
-    And the landlord has already been very accommodating.  #speaker_left
+    And I don’t think we can afford to stay. The landlord has already been very accommodating.  #speaker_left
     He’s already waited 2 months for his rent. I don’t think he’ll be willing to wait for one more. We must move out. #speaker_left
     But you love this place. #speaker_self
     It’s so near to the park, and the neighbours are so friendly...we’ve lived here for so long, Amma.  #speaker_self
-    Ever since Appa left. #inner_monologue
+    ...Ever since Appa left. #inner_monologue
     Ravi, we have no choice. We have to move on. #speaker_left
 
-+ [Question her]  I need to find out why she kept the rent a secret from us. #inner_monologue
-    // ~ ravi_1_motherempathy -= 1
-    More importantly, I need to know why she mentioned my uni fees like that. She didn’t mention Revati’s school fees!  #inner_monologue
-    Are my uni fees that much of a burden? #inner_monologue
++ [Why didn't you tell us?]  I need to let Amma know she cannot keep such things a secret.  #inner_monologue
+    Because of her need to ‘protect’ us, we’ve ended up in such a bad state. But it’s my fault too... For just coasting along in my ignorance and not bothering to ask. #inner_monologue
     Oh. We’re two months late? Why didn’t you tell us? #speaker_self
     You know I can’t. I wanted you and Revati to focus on your studies. I couldn’t have you all worrying about me, or finding another job. #speaker_left
     And it’s not like we’re completely broke! I still have enough saved for your uni fees- #speaker_left
-    So it’s my fault, right? You keep talking about the uni fees, you make it sound like it’s my fault we’re moving out! #speaker_self
-    Is it because I’m the one taking up all the money? Because of my studies? #speaker_self
-    When did I say that? #speaker_left
-    You don’t have to say anything. #speaker_self
-    ...Ravi, it’s not your fault. I chose to save for your uni fees, because I want you and Revati to have a bright future. Brighter than mine. #speaker_left
-    But to reach that future, we have to deal with the problem now. #speaker_self
-    We have no choice. We have to move on. #speaker_self
+    Amma, you don’t have to do it all on your own, you know. Me and Revati are old enough to help. In fact, I should already be helping out. I’ve been such a blissful idiot. #speaker_self
+    Ravi, don’t worry about the money. It’s not your responsibility. It’s mine, and it’s solved. #speaker_left
+    Come on, Amma. I’m not a kid anymore. At least please let me find a way to chip in so we don’t lose our home. I feel so useless just standing by. #speaker_self
+    ...Ravi, it’s not your fault. I want you and Revati to have a bright future. Brighter than mine. #speaker_left
+    Which means you have to focus on your uni. Once you’re out and you land a good job, of course it’d be my time to relax. #speaker_left
+    Ughh. Amma’s too stubborn already.  #inner_monologue
+    Right now, we have no choice. We have to move. #speaker_self
 
 - Ok... I get it. Where are we moving to? How much will it cost?  #speaker_self
 #speaker_left_image:cha_ravi_mum_normal.png
 I have some good news. It won’t cost anything. #speaker_left
 What do you mean? #speaker_self
-We’re moving to Pushpa aunty’s house. She has a spare room, now that Kamala has moved out with her husband.  #speaker_left
+We’re moving to Pushpa aunty’s house. She has a spare room, now that Kamala has moved out with her husband. #speaker_left
 She also needs help around the house. When I called her to ask for help, she was so excited to let us stay with her. #speaker_left
-Taking care of the house on your own is not easy. Poor thing. She must also be a bit lonely nowadays.  #speaker_left
-I think it will be nice to be there and help her out too. Give her some company. #speaker_left
-And ... on the bright side, you can have all the power sambal you like. I’m sure she won’t mind cooking for everyone again. #speaker_left
-Why did this have to happen now? Why did this have to happen at all? Amma is saying this just so we don’t feel too bad.  #inner_monologue
-It’s good that it’s going to save us some money. Still...we have lived here for so long, it feels strange to get uprooted all of a sudden. #inner_monologue
-Anyway, I like Pushpa Aunty, but I know I can’t study there - three of us in that small house - it’s going to be very noisy!  #inner_monologue
-As it is, my course is extremely tough. This is not making it any easier. #inner_monologue
+I think it will be nice to give her some company and help her out #speaker_left
+And when she was growing up in Chennai (in India), it was normal for relatives to stay with each other. So she's happy to have us. #speaker_left
+... but we're not from India amma - we're from Singapore! #speaker_self
+Kanna, we are still Indian, and families stick together where we are from. On the bright side, you can have all the power sambal you like. I’m sure she won’t mind cooking for everyone again. #speaker_left
+I like Pushpa Aunty and I think that Amma and Revati would love bonding and catching up with her. It’s good that it’s going to save us some money. #inner_monologue
+...but I know I can’t study there - three of us in that small house - it’s going to be very noisy! #inner_monologue
+I can’t afford any bad grades if I’m getting my family a better life. And hell, a better life is what I’m trying to achieve for us.   #inner_monologue
 
 
 
@@ -315,65 +296,98 @@ We packed our lives into bags and started moving in to Pushpa Aunty's house.
 #speaker_left_name:Amma
 #speaker_right_image:cha_ravi_revati_normal.png 
 #speaker_right_name:Revati
-Can you help me bring my suitcase up? Think it’s still downstairs. It’s the red one. #speaker_left
-The Samsonite? #speaker_self
-...I don’t know why I asked that. It’s not like anyone else is moving in today. #inner_monologue
-Yeah, that one. Can you manage? It’s a little heavy. #speaker_left
+We should move the sofa up first, so we have space to arrange it before the rest of the boxes come in. Ravi could you go downstairs with Revati and take it up? #speaker_left
 Why can’t the movers bring it up? #speaker_self
-Because you know how much they charge for every staircase? $20! #speaker_left
+Because you know how much they charge for every staircase? $20! And be careful! #speaker_left
 *sigh* Ok I’ll be your cheap labour. #speaker_self
-Even until today, my mom talks to me as if I were a child. Do this. Do that. #inner_monologue
-Then also doubts if I can manage this, manage that. It’s like she doesn’t trust me enough to do things on my own. #inner_monologue
-Like, am I supposed to do everything? Or am I just useless? #inner_monologue
+My mom still talks to me as if I were a child. Do this. Do that. #inner_monologue
+Then doubts if I can manage this, manage that. It’s like she doesn’t trust me enough to do things on my own. #inner_monologue
+#speaker_left_image:pixel.png
 Oh god, she was right, this IS heavy! #inner_monologu
 Revati, can you come down to help? #speaker_self
 Wait, I’m unpacking! There’s so much to do. #speaker_right
-...Please? #speaker_self
-...fine. How heavy could one suitcase be? #speaker_right
-(picks up suitcase) Oh god, Amma was right, this IS heavy! #speaker_right
-I guess that’s how you can tell we’re siblings. #inner_monologue
-#ui:narrator
-#background:bg_ravi_pushpa_home.jpg
-10 minutes later.
-#ui:scene
-#background:bg_ravi_pushpa_home.jpg
+...I can't move it by myself #speaker_self
+...fine. How heavy can half a small sofa be? #speaker_right
+#speaker_right_image:cha_ravi_revati_grin.png 
+(picks up other end) Oh god, Amma was right, this IS heavy! #speaker_right
+Clearly, we’re siblings. #inner_monologue
+#speaker_right_image:cha_ravi_revati_confused.png 
+I hate this. #speaker_right
+Wow her mood just flipped 180. #inner_monologue
+Hate what? #speaker_self
+Wasting the whole day moving things into a house that’s not even ours. Amma can spin it all she wants .... #speaker_right
+but it sucks lah! I don’t understand how we got such a lousy life. What did we do wrong to deserve all this? #speaker_right
+Sigh, truth is I ask myself the same thing. But saying that out loud won't help her deal. Maybe I should be the big brother she needs now. #inner_monologue
+
++ [Look on the bright side] Hey, at least we can afford to study. And we’re not working yet. #speaker_self
+    VAR ravi_1_sharefrustrations = false
+    ~ ravi_1_sharefrustrations = false
+    We have no home, no Appa, and no frigging dignity. I don’t think still being in school makes up for all that. #speaker_right
+    Whoa thangachi (little sister), who says we don’t have dignity? #speaker_self
+    I don’t know how else to say it… it’s just… it’s embarrassing, you know? #speaker_right
+    Sigh. Even school is hard. My teacher keeps scolding me when I don’t do enough practice exams on my own, but I don’t know how to explain to her that I can’t afford to buy all those ten year series books. #speaker_right
+    And even if i could, I just don’t have time to do it. It’s not like I’m lazy..#speaker_right
+    Nobody ever said you were lazy. #speaker_self
+    I think my classmates think I'm too lazy to iron my uniform. And they see my books are all tattered and think I don't take care of my stuff. #speaker_right
+    I am trying my best. I think I work harder than all of them, just to stay afloat. #speaker_right
+    What did we do to deserve this terrible life?!  #speaker_right
+    Sometimes the world is just like that. You didn’t do anything wrong. Amma didn’t either. We can’t control what happens to us, but at least we can control how we deal with it. #speaker_self
+    Sigh. Maybe I need to take another job to help pay bills. #speaker_right
+    No! I will take care of all that for you. You focus on studies. #speaker_self
+    I wonder what life would have been like if Appa had stayed and Amma didn't lose her job. I could have done so many things with my life. #speaker_right
+    There’s no point wishing life was different. But this is our life, and we have to make the best of it. It may be harder than other peoples’ lives, but at least we are healthy, and we have each other. Ok? #speaker_self
+    
++ [I have the same frustrations] I wish Amma hadn’t kept the rent issue to herself. We definitely could have worked something out. #speaker_self
+    ~ ravi_1_sharefrustrations = true
+    I’m angry about that, too. Like I know she’s trying to protect us and all but look where it landed us! #speaker_right
+    Now it’s about starting up from the bottom. #speaker_self
+    I’m just so tired of struggling. First Appa, then losing our place, and now we’re squashed in with Pushpa Aunty. #speaker_right
+    It’s like we’re always discarded goods. Or we’re the leftovers. #speaker_right
+    Look Revati, we’ve had our fair share of challenges, but we’re not leftovers. Why’re you always comparing us to food, anyways? #speaker_self
+    I’m not joking, anna. Where’s our dignity, man! #speaker_right
+    My classmates think I'm too lazy to iron my uniform. And they see my books are all tattered and think I don't take care of my stuff. #speaker_right
+    Sometimes I just want to scream at them and say that this is my only set of uniform, I don't have an iron that works, and my books are all second hand! I AM trying my best. #speaker_right
+    I think I work harder than all of them, just to stay afloat. #speaker_right
+    I don't get dropped off at the gate by a nice daddy car. I take the bloody bus. #speaker_right
+    Okay I really need to do a better job comforting her. Sharing my frustrations made it worse. #inner_monologue
+    You know Pushpa Aunty loves having you and Amma around! She sounded really excited. And it’s not a one-way thing, she needs us to help her out too. #speaker_self
+    Oh don’t pretend you’re happy about it, anna. You won’t be able to study with the noise. #speaker_right
+    Gah she knows me too well. #inner_monologue
+
+- Revati, look at it this way. We’re in a really crappy situation now, but things can only get better from here. And at least you have my corny jokes to keep you laughing. Right? #speaker_self
+… #speaker_right
+We all know you’re not agreeing out loud because I’m your bro, but you love my jokes. #speaker_self
 #speaker_left_image:cha_ravi_mum_normal.png
-#speaker_left_name:Amma
-#speaker_right_image:cha_ravi_revati_normal.png 
-#speaker_right_name:Revati
+Ah, that smirk. Now she’s looking more herself. #inner_monologue
+Shuddup anna (big brother). So annoying… #speaker_right
+My pleasure. Eh don’t drop the couch! #speaker_self
+#speaker_left_image:cha_ravi_mum_normal.png
 That took a while! #speaker_left
-Yah…why were the suitcases so heavy? What did you put in them? Rocks? #speaker_self
+Yah… as a long as a sofa should take. #speaker_self
 Don’t be rude, kanna! Maybe we just had more things that we thought we did. Now’s a good time to sell some extra clothes, jewellery… #speaker_left
-There she goes, worrying about money again. I wish she had told us about all our money woes sooner. We could have worked something out. #inner_monologue
+There she goes, worrying about money again.  #inner_monologue
 So, let’s see… Revati and I will sleep in the extra room. We can share Kamala’s old bed, for now.  #speaker_left
 For washing up, we can use the small toilet, the one behind, near the kitchen.... #speaker_left
 (stops her abruptly) Wait a minute, what about me? Where should I sleep? #speaker_self
 For tonight, you can sleep on the couch. #speaker_left
 Wait, on the couch? #speaker_self
-There just isn’t enough space in the extra room. I told you, there’s just Kamala’s bed. Revati and I will need to share it. Unless you want to sleep with me and Revati?  #speaker_left
-Don’t know if the bed has space for the 3 of us though...and I don’t think Revati would want to share a bed with 2 other people either. It was already difficult getting her to share it with me. #speaker_left
-...Maybe not. #speaker_self
+There just isn’t enough space in the extra room. I told you, there’s just Kamala’s bed. Revati and I will need to share it.  #speaker_left
 There’s some room on the floor, but not enough to lay down a mattress. The couch is better for your back. Better than the floor, anyway. #speaker_left
-Other than that, I still have an entire list of stuff you need to do, starting with clearing out the storage room.  #speaker_left
-We need some space to put all the suitcases. You can fold all the old cardboard boxes, and stack them up there. #speaker_left
-Ok. I still need to study though. Maybe it’s because she was usually busy at work, but she needs to understand that my life is mine too! I need my study time, I can’t just be free labour forever. #inner_monologue
-I have an early class tomorrow and Prof. Tan’s course is no joke. He already yelled at me for being just 2 minutes late once! I haven’t even prepared for class yet... #inner_monologue
+I still have an entire list of stuff you need to do, starting with clearing out the storage room.  #speaker_left
+I haven’t even prepared for class yet...I have an early class tomorrow and Prof. Tan’s course is no joke. He already yelled at me for being just 2 minutes late once!  #inner_monologue
 Not to mention, this place is so far from uni. it’s going to take, like, an extra hour to get there. #inner_monologue
 Maybe I need to take a stand. #inner_monologue
 
 + [Comply] I guess maybe I can do it tomorrow, if I come home from uni fast enough. #inner_monologue
-    I’ll have to cancel my dinner plans. This is more important. #inner_monologue
+    I’ll have to cancel my other plans. This is more important. #inner_monologue
     ~ ravi_1_motherempathy += 1
     Ok sure. I’ll do it tomorrow, after school. #speaker_self
-    I’m so tired from moving all those suitcases. #speaker_self
     You can’t...we need to clear up everything. We can’t leave it lying around like this. #speaker_left
     ...ok, fine. I’ll do it, but not for too long. What do I need to do? #speaker_self
     Just fold the cardboard boxss first. Then I’ll tell you. #speaker_left
     There’s a lot more to be done. #speaker_left
     Ok… #speaker_self
     Sigh. #inner_monologue
-    Good job folding all those boxes! That was fast. You don’t seem that tired. #speaker_left
-    Then I must be a really good actor then. Why does Pushpa Aunty have so many boxes??? #inner_monologue
     I’ll pass you a blanket you can use when you sleep, after you’re done. Next, we have to- #speaker_left
     Amma, I have an early class tomorrow... #speaker_self
     You know the prof, the strict one I told you about?  #speaker_self
@@ -384,8 +398,7 @@ Maybe I need to take a stand. #inner_monologue
     #speaker_right_image:cha_ravi_revati_normal.png 
     Okay, I will. #speaker_self
 
-+ [Protest] I can’t keep doing this! It’s already so late.  #inner_monologue
-    If this goes on, who knows when her “list of stuff” ends? I need to stop now, by any means necessary. #inner_monologue
++ [Protest] If this goes on, who knows when her “list of stuff” ends? I need to stop now, by any means necessary. #inner_monologue
     Why ma! #speaker_self
     Why what? #speaker_left
     I’m so tired. I just want to crash! #speaker_self
@@ -394,15 +407,14 @@ Maybe I need to take a stand. #inner_monologue
     So you want your sister and I to move everything? On our own? #speaker_left
     I’ve already moved so much! #speaker_self
     And my class is at 9. It’s so far away, I’ll need to leave at 7. #speaker_self
-    The prof will kill me if I go to his class late. Or worse, fall asleep during class. #speaker_self
+    The prof will kill me if I go to his class late.  #speaker_self
     At least Revati is near to her school. #speaker_self
     #speaker_right_image:cha_ravi_revati_concerned.png 
     Can you do just a bit? #speaker_left
-    Amma, I wish I could, but I’m really tired. I still haven’t prepared for tomorrow’s class yet. It’s already really late. #speaker_self
+    Amma, I wish I could, but I still haven’t prepared for tomorrow’s class yet. It’s already really late. #speaker_self
 - Anna (brother), why don’t you help a bit? #speaker_right
-Just whatever Amma needs for the storage room. I will do the rest. #speaker_right
-Then we can all go to sleep. We can finish this quickly. #speaker_right
-Ok. But, I think I’ll go stay in Lukman’s house tonight. His place is nearer to campus.  #speaker_self
+Just whatever Amma needs for the storage room. Then we can all go to sleep. We can finish this quickly. #speaker_right
+I think I’ll go stay in Lukman’s house tonight. His place is nearer to campus.  #speaker_self
 Much easier to make it to class tomorrow. I’m sure he has an extra bed to spare me. #speaker_self
 #speaker_right_image:cha_ravi_revati_normal.png 
 Besides, I don’t think I can get any rest on this couch. Either my feet are dangling out, or I have to curl up like an armadillo. #speaker_self
@@ -459,13 +471,12 @@ Minigame 7 // must add some text
 #knot:ravi_1_3
 #ui:narrator
 #background:bg_ravi_intro.jpg
-It’s been two weeks since we’ve made the move. I’d had so much delicious food, I think I’ve gained weight. How am I going to pass my reservist IPPT?
-My schedule nowadays is a bit boring. I come here after class, get a scrumptious dinner (yay for Pushpa aunty!), do my schoolwork, then head over to Lukman’s to rest. It was going well, for a while.
+It’s been two weeks since we’ve made the move. 
  But I can’t do this forever though. I can’t go to Lukman’s almost every day. He’s probably getting sick of my face already. The first time was fun, kind of like a sleepover. 
  The second time was like we were roommates. The third, fourth, fifth times...he’s probably expecting me to pay rent or something. 
  His parents must be really annoyed with me too. They don’t say it, but I can feel their eyes in the back of my skull whenever I go over. I can’t keep being a burden to Lukman either.
  I need to find some other place to stay. Maybe stay on my own if I can. That might be nice, for a change. I’ve always shared a room with Revati, anyway.
- I’ve been scouring so many websites, trying to find a good place to rent. PropertyMagic, 999co, Room4Rent – you name it, I’ve tried it. But I can’t afford to rent most places. Not too many options for my budget, sigh.
+ I’ve been scouring so many websites, trying to find a good place to rent. PropertyMagic, 999co, Room4Rent – you name it, I’ve tried it. But not too many options for my budget, sigh.
 
 -> ravi_1_4_narration 
 
@@ -582,12 +593,13 @@ Just fill up for me. #speaker_1
 
 Name:  /n  Pax:  /n  Occupation:  /n  Ethnicity:  /n Budget:  /n Years of lease:  /n  Expected shift in date:  /n  #speaker_1
 + [Agree to fill in the details] Sure, give me a second, #speaker_self
-+ [Just request for the rental details]  I just need the small room for $500. Is it available? #speaker_self
++ [Just insist on getting the rental details]  I just need the small room for $500. Is it available? Can send details? #speaker_self
     Yes, available. But I need to know your details first. We need to follow the procedure. #speaker_1
     Aiyoh. Ok, ok, fine. Totally not relevant though. #speaker_self
 - Done, here you go. /n Name: Ravi Kannasamy /n Pax: 1  /n Occupation: Student  /n Ethnicity: Indian  /n Budget: $500  /n Years of lease: 1  /n  Expected shift in date: Aug 20 #speaker_self
 Ok, great. I check with landlord first. #speaker_1
 Ok, thank you! #speaker_self
+2 minutes later #timestamp
 Hi Ravi. #speaker_1
 That was fast. #speaker_self
 So, what did he say? #speaker_self
@@ -712,7 +724,7 @@ Ok. Let me know. #speaker_1
 === ravi_1_5_narration ===
 #knot:ravi_1_5_narration
 #ui:narrator
-#background:bg_ravi_pushpa_home.jpg
+#background:ui_emailinbox.png
 Can’t hurt to try my luck with uni. Maybe I can get a room if I’m lucky enough. I’ve always wanted to try and stay on campus, anyway. Seems fun.
 Let’s just hope the school admin is better than the agent…
 -> ravi_1_5
@@ -734,8 +746,9 @@ Thank you, #speaker_self
 Ravi #speaker_self
 
 #ui:narrator
-#background:bg_ravi_pushpa_home.jpg
+#background:ui_emailsending.png
  Ok, that sounded formal enough….
+#background:ui_emailsent.png
  Oh, they replied already! That was quick. Let’s see…
 
 -> ravi_1_5a
@@ -766,7 +779,7 @@ Ravi #speaker_self
 Hello Ravi, /n Thanks for your email. I’m afraid you are a little late. Housing occupancy has been settled before the beginning of the semester. You would need to wait for the next semester to get a room. /n You mentioned that you had to move due to family matters. While we may not be currently able to offer you a room, the school is concerned for the wellbeing of its students. Is there anything else we could do to help? /n  Regards, /n  Rebecca #speaker_1
 
 #ui:narrator
-#background:bg_ravi_pushpa_home.jpg
+#background:ui_emailinbox.png
  Ah, I knew it. Rooms on campus are always snapped up.
 
 -> ravi_1_5c
@@ -790,9 +803,24 @@ Thank you, #speaker_self
 Ravi #speaker_self
 
 #ui:narrator
-#background:bg_ravi_pushpa_home.jpg
+#background:ui_emailsending.png
 Maybe I have to go with the Agent after all.
+#background:ui_emailsent.png
 Wait, a reply just came in. Wah this Rebecca is super on the ball.
+
+-> ravi_1_5c2
+
+=== ravi_1_5c2 ===
+#knot:ravi_1_5c2
+#ui:emailinbox
+
+#newemailfrom: Rebecca
+#newemailprofileicon:ico_ravi_rebecca.png
+#newemailsubject:Enquiry on Dorm Housing
+#newemailpreview: Hello Ravi, We have one room available ...
+.
+
+
 
 -> ravi_1_5d
 
@@ -810,7 +838,7 @@ Wait, a reply just came in. Wah this Rebecca is super on the ball.
 Hello Ravi, /n /n We have one room available now but I'm actually supposed to release it later. One of the foreign exchange students is moving back home for an emergency next week. Given your difficult situation, I think I can offer it to you first. /n It’s a single room in the Farquhar Hall with an aircon. There is a shared bathroom on the same floor. The room’s $700 per month, without food. If you want food, you’ll have to choose a meal plan. /n Would you like to take the room? If so, please let me know as soon as possible so that the school can make the necessary arrangements. /n /n Regards, /n Rebecca #speaker_1
 
 #ui:narrator
-#background:bg_ravi_pushpa_home.jpg
+#background:ui_emailinbox.png
 At least it’s an option. But ... it’s a little over budget. My savings would be enough for $450 a month, at least for this semester, but $700 is just a bit too much.
 On the other hand, this is the closest I could possibly be to campus. I’ll never be late for class again! I might save money on transport too. And at least I know I won’t have to deal with any racist landlords.
 
@@ -837,9 +865,10 @@ Thank you, #speaker_self
 Ravi #speaker_self
 
 #ui:narrator
-#background:bg_ravi_pushpa_home.jpg
-At least it’s an option. But ... it’s a little over budget. My savings would be enough for $450 a month, at least for this semester, but $700 is just a bit too much.
-On the other hand, this is the closest I could possibly be to campus. I’ll never be late for class again! I might save money on transport too. And at least I know I won’t have to deal with any racist landlords.
+#background:ui_emailsending.png
+.
+#background:ui_emailsent.png
+.
 
 
 -> ravi_1_5e_take2
@@ -890,6 +919,10 @@ Apologies for any inconvenience caused. I hope you find somebody to take that ro
 Thank you, #speaker_self
 Ravi #speaker_self
 
+#background:ui_emailsending.png
+.
+#background:ui_emailsent.png
+.
 -> ravi_1_5e_decline2
 
 === ravi_1_5e_decline2 ===
