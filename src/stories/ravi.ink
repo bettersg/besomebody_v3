@@ -85,20 +85,19 @@ VAR chapter_id = 1
 Hey there. I’m Ravi. I’m 24. Aviation engineer.  
 Well, ASPIRING aviation engineer, anyway. I’m still in uni. 
 One more year to go until I join the working world! I want to be able to support my family soon.
-Speaking of family, it’s been just Amma, Revati and I motoring along.
-As for Appa... Appa is no longer in the family.
+Speaking of family, it’s been just Amma (mother), Revati and I for a while.
+As for Appa... Appa is no longer family.
 He used to be in the airline industry too. He’s part of the reason I wanted to become an aviation engineer in the first place. 
 He used to sneak Revati and I into the hangars on the weekends, just to look at those airplanes he’d be working on. 
 Just looking at those planes, and imagining them take off to the skies – it filled my heart with a great sense of wonder.
 And then...one day, it happened. 
-It was just another regular day of work. Appa left early in the morning... and didn't come back.
+It was just another regular day. Appa left early in the morning... and didn't come back.
 He left us that day and he’s been uncontactable since. We called and called, but he never picked up. 
 Sometimes I think he wanted to be like the airplanes he worked on, free to roam the skies, to go anywhere they pleased. But I might never find out.
-Sounds dramatic, but that's my story.
 Since then, Amma, Revati and I have had to fend for ourselves. 
-It’s not been easy, especially for Amma. She works a 12-hour shift everyday as a sales assistant at the department store. 
+It’s not been easy, especially for Amma. She works a 12-hour shift as a sales assistant at the department store. 
 Revati is doing her A levels, and she’s done part-time jobs too. 
-My dream is to make it a little easier for them. If I can fulfill mine, I would be helping theirs too.  
+My dream is to make life easier for them. If I can fulfill mine, I would be helping theirs too.  
 But first, I have grades to keep up, an internship to find, and then hopefully, a job! Like a good Indian boy haha. 
 So that’s me -- Ravi.
 And this is what it’s like, to be me.
@@ -128,26 +127,31 @@ Halooo ma! #speaker_self
 Vaada kanna (welcome, darling). Have you eaten? #speaker_left
 Yup, I had dinner. I ate with my classmates after class. #speaker_self
 Ok. But you should know, you missed a great fish curry. Looks like I’ll have to throw the rest away- #speaker_left
-Oh! Maybe I am a little bit hungry after all. Could I have some curry please? #speaker_self
+Oh! Maybe I am a little bit hungry after all. Can I have some curry please? #speaker_self
 #background:bg_ravi_fishcurry.jpg
-Aha! I knew it. I don’t think you’ve ever said no to my fish curry. Not once in 24 years. #speaker_left
+Aha! I knew it. I don’t think you’ve ever said no to my fish curry.  #speaker_left
 Hmm...I think you’re probably right! #speaker_self
-Amma always cooks fish curries for important occasions. Revati and I had it for almost every birthday we had growing up. #inner_monologue
-I remember having it at parties, family functions – sometimes, we’d cook some for the nosy neighbours as well. I don’t think we’ve ever celebrated anything without it. #inner_monologue
-Amma also cooked fish curry when there was bad news. Like the day Appa left the family. We sat around, crying over fish curry. #inner_monologue
-It’s definitely Amma’s signature dish, to say the least. #inner_monologue
+Mmmm... Amma's fish curry... Amma doesn't really talk about her feelings, so she expresses her emotions through her cooking, especially her curries. #inner_monologue
+Even the neighbours came for it, sold on the bright heat of masala and turmeric that’d waft through the window grilles. Not all our neighbours enjoyed the smell though. #inner_monologue
+The dish spoke celebration, until the day Appa disappeared. That day, we sat around crying as Amma heaped thick curry onto our plates – knowing it was the only comfort we could have, a piece of the past we could bring to life through Amma’s cooking skills. #inner_monologue
+She conveyed her love, and sometimes sadness, through it. #inner_monologue
 Anyway, go shower, you look so sweaty. Then you can eat. I’ll reheat the curry for you. #speaker_left
 + Hmm ok. See you in 10 minutes.[] #speaker_self
+    #ui:narrator
+    #background:bg_ravi_home.jpg
+    A few minutes later, after the fastest cold shower ever...
+    #ui:scene
+    #background:bg_ravi_fishcurry.jpg
 + It's ok ma, let's eat while it's hot! []  #speaker_self
 - As always, it smells amazing! I feel like I could eat 10 bowls all by myself. Did you do anything different this time? #speaker_self
 Ah, so you found my secret ingredient! I put in some garam masala that Pushpa Aunty gave to us when we went over last week. #speaker_left
 It’s very fragrant. I think she made it herself. You know how she is. #speaker_left
-#background:bg_ravi_home.jpg
 Oh nice. Pushpa Aunty always gives us the best things! Usually food. #speaker_self
 Last time we visited her, the sambal she made… also power! I think it’s the best sambal I’ve ever had.  #speaker_self
 She should really look into selling it. She could probably run a chain restaurant selling nothing but sambal.  #speaker_self
 I must have dreamt of her sambal so many times… #speaker_self
 Yeah... she’s really good at cooking, isn’t she. #speaker_left
+#background:bg_ravi_home.jpg
 ... #speaker_left
 Ravi, could you wait for just a minute? We need to talk about something. This is important. #speaker_left
 
@@ -169,7 +173,7 @@ Ravi, could you wait for just a minute? We need to talk about something. This is
     Oh wait. I remember why I didn’t text you. Today is Wednesday, right? #speaker_self
     
 + [Stop and listen] Amma’s looking very quiet. This can’t be good… #inner_monologue
-    ~ ravi_1_motherempathy += 1
+    ~ ravi_1_motherempathy = 1
     Amma’s looking very quiet. This can’t be good… #inner_monologue
     Sure...what do we have to talk about? #inner_monologue
     Something feels off about all this … I can’t help but feel uneasy. #inner_monologue
@@ -212,7 +216,7 @@ So that’s why lah. #speaker_left
 I know Amma is trying to be tough right now...even if sales were not as good as before, it doesn’t mean she should just be fired!  #inner_monologue
 It’s not her fault...I can see the tears, welling in her eyes. It’s so unfair. #inner_monologue
 
-+ {ravi_1_motherempathy >= 1} [Comfort her] I hope you’re ok ma. #speaker_self
++ [Comfort her] I hope you’re ok ma. #speaker_self
     ~ ravi_1_motherempathy += 1
     I’m ok kanna #speaker_left
     ... #speaker_left
@@ -406,7 +410,8 @@ Besides, I don’t think I can get any rest on this couch. Either my feet are da
 
 {ravi_1_motherempathy >= 3 : 
     -> ravi_1_2_empathy
-    else 
+}
+{ravi_1_motherempathy < 3 : 
     -> ravi_1_2_notempathy
 }
 
