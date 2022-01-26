@@ -131,14 +131,16 @@ const EmailInbox = (props) => {
           <div className="Email__inbox__header">
             <Typography style={{color:"white", fontWeight: 600}}>Inbox</Typography>
           </div>
-        
+          <NextButton className="Email__inbox__nextbutton" getStory={getStory} />
         <Box>
           {/* New Email Message */}
               <InboxItem storyline from={specialTags.newemailfrom} profileIcon={specialTags.newemailprofileicon} subject={specialTags.newemailsubject} emailPreview={specialTags.newemailpreview}/>
-              <InboxItem from={"John Tan"} subject={"Static Email Subject 1"} emailPreview={"Static Preview Line 1"}/>
-              <InboxItem from={"Lisa Lim"} subject={"Static Email Subject 1"} emailPreview={"Static Preview Line 1"}/>
-              <InboxItem from={"John Tan"} subject={"Static Email Subject 1"} emailPreview={"Static Preview Line 1"}/>
-              <InboxItem from={"Lisa Lim"} subject={"Static Email Subject 1"} emailPreview={"Static Preview Line 1"}/>
+              <InboxItem />
+              <InboxItem />
+              <InboxItem />
+              <InboxItem />
+              <InboxItem />
+              <InboxItem />
           
         </Box>
         <NextButton getStory={getStory} />

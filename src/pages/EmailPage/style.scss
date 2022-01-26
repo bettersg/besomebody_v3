@@ -117,7 +117,7 @@
         background-repeat:no-repeat;
         animation: 
         b .5s infinite steps(1),   
-        t calc(var(--n)*.05s) steps(var(--n)) forwards;
+        t calc(var(--n)*.03s) steps(var(--n)) forwards;
     }
     br {
         display: block;
@@ -133,46 +133,7 @@
   @keyframes b{
     50% {background-position:0 -100%,0 0}
   }
-// .typing {
-//     width: 100%;
-//     overflow: hidden;
-//     top: 0px;
-//     position: relative;
-//     animation: typeIt 320s steps(10) infinite;
 
-//     p {
-//         line-height: 2em;
-//         margin: 0; // Turn off margin bottom to make typing animation easier
-//         // text-indent: 2em; // give it indents for first line
-//     }
-// }
-// .text-cover {
-//     position: absolute;
-//     left: 0;
-//     bottom: 0;
-//     height: 2.5em;
-//     background: #fff;
-//     width: 100%;
-//     animation: revealLine 2s steps(1) infinite;
-// }
-
-// @keyframes typeIt {
-//     0% {
-//         // top: 0;
-//         height: 2em;}
-//     100% {
-//         // top: -60em;
-//         height: 100%;
-//     }
-// }
-// @keyframes revealLine {
-//     0% { left: 0%; }
-//     100% { left: 100%; }
-// }
-// @keyframes typing {
-//     from { width: 0 }
-//     to { width: 100% }
-// }
 @-webkit-keyframes blink{
 	0%{opacity: 0;}
 	100%{opacity: 1;}
@@ -197,6 +158,11 @@
             padding: 14px 20px; 
             align-items: center;
             display: flex;
+        }
+        &__nextbutton {
+            position: absolute; 
+            top: 75px; 
+            height: 100px !important; 
         }
     }
     &__header {
@@ -339,7 +305,12 @@
     background: white;
     display: flex;
     align-items: center;
-    
+    &__nonStory { 
+        height: 12px; 
+        background-color: $lapis20;
+        border-radius: 10px;
+        margin: 4.5px 0; 
+    }
     &--image {
         border-radius: 50px;
         height: 48px; 
@@ -356,9 +327,6 @@
     &--subject {
         font-weight: 700 !important;
         color: $midnight100;
-        &--nonStoryline {
-            color: rgb(171, 171, 171);
-        }
     }
     &--preview {
         color: $midnight60; 

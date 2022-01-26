@@ -98,7 +98,7 @@ const Email = (props) => {
       .map((paragraph, idx) => {
         return (
          paragraph.tags[0].includes('speaker_1') ?
-           <p className="typed-out">{paragraph.text.split('/n').map((line, i) => <span key={i}>{line}<br /></span>)}</p> :
+           <p>{paragraph.text.split('/n').map((line, i) => <span key={i}>{line}<br /></span>)}</p> :
            (<span className="typed-out type" style={{"--n": paragraph.text.length}}>{paragraph.text}<br/></span>)
            )
       });
