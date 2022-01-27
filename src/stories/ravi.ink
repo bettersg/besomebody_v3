@@ -742,7 +742,9 @@ To whom it may concern, #speaker_self
 I’m writing to inquire about the possibility of housing in the university dorm. My student number is A0155007R. #speaker_self
 I understand that I might be a little late, but I need to move out immediately due to family matters. It would be great if I could stay on campus, if possible.  #speaker_self
 Do let me know if there are any options available. Any room is fine. Please let me know if you need more details.#speaker_self
-Thank you, #speaker_self
++ [Test option] I would like to test this option please.#speaker_self
++ [Another different choice] How about this one? Does it work? #speaker_self
+- Thank you, #speaker_self
 Ravi #speaker_self
 
 #ui:narrator
