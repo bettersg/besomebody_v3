@@ -357,7 +357,7 @@ Sigh, truth is I ask myself the same thing. But saying that out loud won't help 
 - Revati, look at it this way. We’re in a really crappy situation now, but things can only get better from here. And at least you have my corny jokes to keep you laughing. Right? #speaker_self
 … #speaker_right
 We all know you’re not agreeing out loud because I’m your bro, but you love my jokes. #speaker_self
-#speaker_left_image:cha_ravi_mum_normal.png
+#speaker_right_image:cha_ravi_revati_normal.png
 Ah, that smirk. Now she’s looking more herself. #inner_monologue
 Shuddup anna (big brother). So annoying… #speaker_right
 My pleasure. Eh don’t drop the couch! #speaker_self
