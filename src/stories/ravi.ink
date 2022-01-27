@@ -299,7 +299,7 @@ We packed our lives into bags and started moving in to Pushpa Aunty's house.
 We should move the sofa up first, so we have space to arrange it before the rest of the boxes come in. Ravi could you go downstairs with Revati and take it up? #speaker_left
 Why can’t the movers bring it up? #speaker_self
 Because you know how much they charge for every staircase? $20! And be careful! #speaker_left
-*sigh* Ok I’ll be your cheap labour. #speaker_self
+Sigh. Ok I’ll be your cheap labour. #speaker_self
 My mom still talks to me as if I were a child. Do this. Do that. #inner_monologue
 Then doubts if I can manage this, manage that. It’s like she doesn’t trust me enough to do things on my own. #inner_monologue
 #speaker_left_image:pixel.png
@@ -943,7 +943,7 @@ Hello Ravi, /n /n We understand. In that case, unfortunately, you will have to m
 #knot: chapter_1_ending_2
 #ui:narrator
 #background:bg_ravi_pushpa_home.jpg
-Sigh. This is way over my budget. But I’m not going to apply for financial assistance. I don’t want to be *that* guy. I'll find a way to make the cash.
+Sigh. This is way over my budget. But I’m not going to apply for financial assistance. I don’t want to be THAT guy. I'll find a way to make the cash.
 It’s still better than sleeping on that couch though. 
 ~ chapter_1_ending = 2
 Looks like I have to deal with finding my own room and agents again.  I should try to get back at that racist landlord and agent...Maybe I post the convo online? 
