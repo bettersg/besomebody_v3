@@ -170,7 +170,7 @@ Ravi, before you start... we need to talk about something.  #speaker_left
     Something feels off about all this … she made fish curry and looks sad  #inner_monologue
     Sure...what do we have to talk about? #inner_monologue
     ... #speaker_left
-    Wait a minute, amma, weren’t you supposed to be working late today? #speaker_self
+    Wait a minute, Amma, weren’t you supposed to be working late today? #speaker_self
 - Yes. #speaker_left
 How come you’re back home early? #speaker_self
 That’s what I wanted to talk about... #speaker_left
@@ -186,10 +186,9 @@ They’d rather just shop on their own, in quiet. #speaker_left
 But still... I thought they would give us some time you know? At least let me finish the month… #speaker_left
 Amma looks really sad. I really don’t know what to do to make her feel better, or even what to say...what should I do? #inner_monologue
 
-+ [I'm so sorry to hear that amma] Oh ma. I am so sorry. I really am. #speaker_self
++ [I'm so sorry to hear that Amma] Oh ma. I am so sorry. I really am. #speaker_self
     ~ ravi_1_motherempathy += 1
     Thank you, Ravi. I know it’s hard for you. It’s hard for me, too. #speaker_left
-    I haven’t seen amma so sad in a long time. I don’t know what to say to her.  #inner_monologue
 
 + [How could they do this?!] This is so sudden. That’s it? After so many years? How could they?! #speaker_self
     That’s how it is...I thought they would have let me stay a bit longer.  #speaker_left
@@ -202,7 +201,7 @@ Business isn’t booming. There’s no commission, because there’s no sales. E
 You also buy everything online right? There are so many platforms to choose from. Every bus also has some online sale ad - 11.11, 10.10, Mid-Week sale, Mid-year sale. How to compete?  #speaker_left
 Hmm...yeah... #speaker_self
 So that’s why lah. #speaker_left
-What the hell! If the shopping centre is not doing well, they should fire the CEO! Or the manager! Why fire amma? She’s been so loyal and hardworking. Fire those idiots on top who are responsible. #inner_monologue
+What the hell! If the shopping centre is not doing well, they should fire the CEO! Or the manager! Why fire Amma? She’s been so loyal and hardworking. Fire those idiots on top who are responsible. #inner_monologue
 It’s not her fault…  Stupid rich businessmen - all they care about is profit and not people! I can see the tears, welling in her eyes. It’s so unfair. #inner_monologue
 
 
@@ -270,9 +269,9 @@ We’re moving to Pushpa aunty’s house. She has a spare room, now that Kamala 
 She also needs help around the house. When I called her to ask for help, she was so excited to let us stay with her. #speaker_left
 I think it will be nice to give her some company and help her out #speaker_left
 And when she was growing up in Chennai (in India), it was normal for relatives to stay with each other. So she's happy to have us. #speaker_left
-... but we're not from India amma - we're from Singapore! #speaker_self
+... but we're not from India Amma - we're from Singapore! #speaker_self
 Kanna, we are still Indian, and families stick together where we are from. On the bright side, you can have all the power sambal you like. I’m sure she won’t mind cooking for everyone again. #speaker_left
-I like Pushpa Aunty and I think that Amma and Revati would love bonding and catching up with her. It’s good that it’s going to save us some money. #inner_monologue
+I like Pushpa Aunty and Amma and Revati love talking to her. It’s good that it’ll save us some money. #inner_monologue
 ...but I know I can’t study there - three of us in that small house - it’s going to be very noisy! #inner_monologue
 I can’t afford any bad grades if I’m getting my family a better life. And hell, a better life is what I’m trying to achieve for us.   #inner_monologue
 
@@ -344,7 +343,7 @@ Sigh, truth is I ask myself the same thing. But saying that out loud won't help 
     I’m just so tired of struggling. First Appa, then losing our place, and now we’re squashed in with Pushpa Aunty. #speaker_right
     It’s like we’re always discarded goods. Or we’re the leftovers. #speaker_right
     Look Revati, we’ve had our fair share of challenges, but we’re not leftovers. Why’re you always comparing us to food, anyways? #speaker_self
-    I’m not joking, anna. Where’s our dignity, man! #speaker_right
+    I’m not joking, Anna. Where’s our dignity, man! #speaker_right
     My classmates think I'm too lazy to iron my uniform. And they see my books are all tattered and think I don't take care of my stuff. #speaker_right
     Sometimes I just want to scream at them and say that this is my only set of uniform, I don't have an iron that works, and my books are all second hand! I AM trying my best. #speaker_right
     I think I work harder than all of them, just to stay afloat. #speaker_right
@@ -360,7 +359,7 @@ We all know you’re not agreeing out loud because I’m your bro, but you love 
 #speaker_right_image:cha_ravi_revati_normal.png
 Ah, that smirk. Now she’s looking more herself. #inner_monologue
 Shuddup anna (big brother). So annoying… #speaker_right
-My pleasure. Eh don’t drop the couch! #speaker_self
+My pleasure. Eh don’t drop the sofa! #speaker_self
 #speaker_left_image:cha_ravi_mum_normal.png
 That took a while! #speaker_left
 Yah… as a long as a sofa should take. #speaker_self
@@ -368,11 +367,11 @@ Don’t be rude, kanna! Maybe we just had more things that we thought we did. No
 There she goes, worrying about money again.  #inner_monologue
 So, let’s see… Revati and I will sleep in the extra room. We can share Kamala’s old bed, for now.  #speaker_left
 For washing up, we can use the small toilet, the one behind, near the kitchen.... #speaker_left
-(stops her abruptly) Wait a minute, what about me? Where should I sleep? #speaker_self
-For tonight, you can sleep on the couch. #speaker_left
-Wait, on the couch? #speaker_self
+Wait a minute, what about me? Where should I sleep? #speaker_self
+For tonight, you can sleep on the sofa. #speaker_left
+Wait, on the sofa? #speaker_self
 There just isn’t enough space in the extra room. I told you, there’s just Kamala’s bed. Revati and I will need to share it.  #speaker_left
-There’s some room on the floor, but not enough to lay down a mattress. The couch is better for your back. Better than the floor, anyway. #speaker_left
+There’s some room on the floor, but not enough to lay down a mattress. The sofa is better for your back. Better than the floor, anyway. #speaker_left
 I still have an entire list of stuff you need to do, starting with clearing out the storage room.  #speaker_left
 I haven’t even prepared for class yet...I have an early class tomorrow and Prof. Tan’s course is no joke. He already yelled at me for being just 2 minutes late once!  #inner_monologue
 Not to mention, this place is so far from uni. it’s going to take, like, an extra hour to get there. #inner_monologue
@@ -384,7 +383,7 @@ Maybe I need to take a stand. #inner_monologue
     Ok sure. I’ll do it tomorrow, after school. #speaker_self
     You can’t...we need to clear up everything. We can’t leave it lying around like this. #speaker_left
     ...ok, fine. I’ll do it, but not for too long. What do I need to do? #speaker_self
-    Just fold the cardboard boxss first. Then I’ll tell you. #speaker_left
+    Just fold the cardboard boxes first. Then I’ll tell you. #speaker_left
     There’s a lot more to be done. #speaker_left
     Ok… #speaker_self
     Sigh. #inner_monologue
@@ -417,7 +416,7 @@ Just whatever Amma needs for the storage room. Then we can all go to sleep. We c
 I think I’ll go stay in Lukman’s house tonight. His place is nearer to campus.  #speaker_self
 Much easier to make it to class tomorrow. I’m sure he has an extra bed to spare me. #speaker_self
 #speaker_right_image:cha_ravi_revati_normal.png 
-Besides, I don’t think I can get any rest on this couch. Either my feet are dangling out, or I have to curl up like an armadillo. #speaker_self
+Besides, I don’t think I can get any rest on this sofa. Either my feet are dangling out, or I have to curl up like an armadillo. #speaker_self
 
 
 {ravi_1_motherempathy >= 3 : 
@@ -470,12 +469,13 @@ Minigame 7 // must add some text
 
 #knot:ravi_1_3
 #ui:narrator
-#background:bg_ravi_intro.jpg
+#background:bg_ravi_pushpa_home.jpg
 It’s been two weeks since we’ve made the move. 
  But I can’t do this forever though. I can’t go to Lukman’s almost every day. He’s probably getting sick of my face already. The first time was fun, kind of like a sleepover. 
  The second time was like we were roommates. The third, fourth, fifth times...he’s probably expecting me to pay rent or something. 
  His parents must be really annoyed with me too. They don’t say it, but I can feel their eyes in the back of my skull whenever I go over. I can’t keep being a burden to Lukman either.
  I need to find some other place to stay. Maybe stay on my own if I can. That might be nice, for a change. I’ve always shared a room with Revati, anyway.
+#background:bg_ravi_rentals1.jpg
  I’ve been scouring so many websites, trying to find a good place to rent. PropertyMagic, 999co, Room4Rent – you name it, I’ve tried it. But not too many options for my budget, sigh.
 
 -> ravi_1_4_narration 
@@ -487,8 +487,8 @@ It’s been two weeks since we’ve made the move.
 #background:bg_ravi_rentals1.jpg
 Hmm...this listing sounds good. one bedroom apartment, 11th floor, 5 minutes away from university? This must be a dream... wait $2222 per month?? This must be a nightmare! Who can afford that? Maybe if I just sort by “price”… #inner_monologue
 #background:bg_ravi_rentals2.jpg
- Oh, this room sounds about right. Seems promising. It’s a small room – maybe other people are staying there too? But it’s cheap, and relatively close to uni. #inner_monologue
- Maybe I can make friends with whoever’s staying there. Or better yet, I might be able to talk them down to my price. They should take some pity on me. I’m just a student.#inner_monologue
+ Oh, this room sounds about right. Seems promising. It’s a small room – maybe other people are staying there too? But it’s cheap, and pretty close to uni. #inner_monologue
+ Maybe I can make friends with whoever’s staying there. Or better yet, I might be able to talk them down to my price. They should take some pity on a student.#inner_monologue
 #background:bg_ravi_rentals3.jpg 
  Let me see if he’s offering any other rooms ... oh wow, he has two! Maybe I can rent the other room instead – it’s a bit bigger though, so it’s probably more expensive... I’ll see how it goes.#inner_monologue
  Who do I talk to? I see an agent’s name here. “Agent James” huh? Sounds like a reliable guy. Actually, no. Sounds like James Bond wannabe.#inner_monologue
@@ -508,8 +508,8 @@ Hi, is this James? #speaker_self
 I saw the listing on Room4Rent. The one for two different rooms? #speaker_self
 I would like to rent a room, if that’s possible! #speaker_self
 Hi, yes! This is James. Pleasure to “e-meet” you. #speaker_1
-Yes, I think I know which rooms you’re referring to. The ones rented out by Mr Lim? #speaker_1
-Good news. The listings are currently available. #speaker_1
+The one in Clementi? #speaker_1
+Still available. Got two - big room with bathroom and a smaller room #speaker_1
 
 #ui:narrator
 #background:bg_ravi_pushpa_home.jpg
@@ -521,22 +521,17 @@ Ah...nobody I know says “e-meet”. This man must be a professional agent afte
 #speaker_1_name:James
 
 Great! Yes, I am interested in the rooms. #speaker_self
-Which room are you interested in? #speaker_1
-The big room, or the small room? #speaker_1
+Which room you're interested in? #speaker_1
 The smaller room please. #speaker_self
 The one for $500 per month. #speaker_self
-Ok. The 4 bedroom apartment in Clementi? #speaker_1
-It’s shared housing you know right? The other rooms are rented out already. #speaker_1
-The landlord is staying there also. #speaker_1
+It’s shared housing you know right? The landlord is staying there also. #speaker_1
 Yep! That’s fine with me. #speaker_self
 Ok, how many people are renting? #speaker_1
-The landlord has a strict policy and each room can only be rented out to one tenant at a time. #speaker_1
+The landlord got strict policy - only one tenant per room. #speaker_1
 Yeah, I understand. #speaker_self
 It’ll just be me renting the room. Don’t worry about it. #speaker_self
-Will you be expecting any frequent visitors? #speaker_1
-Girlfriend, family etc? #speaker_1
-No...no girlfriend. #speaker_1
-Don’t think my family will visit either. #speaker_1
+Will you have visitors over? #speaker_1
+No...no girlfriend. Don’t think my family will visit either. #speaker_self
 
 #ui:narrator
 #background:bg_ravi_pushpa_home.jpg
@@ -593,18 +588,18 @@ Just fill up for me. #speaker_1
 
 Name:  /n  Pax:  /n  Occupation:  /n  Ethnicity:  /n Budget:  /n Years of lease:  /n  Expected shift in date:  /n  #speaker_1
 + [Agree to fill in the details] Sure, give me a second, #speaker_self
-+ [Just insist on getting the rental details]  I just need the small room for $500. Is it available? Can send details? #speaker_self
-    Yes, available. But I need to know your details first. We need to follow the procedure. #speaker_1
++ [Just insist on getting the rental details]  I just need the small room for $500. Can you please send over the details? #speaker_self
+    Yes, available. But I need to know your details first. Standard procedure. #speaker_1
     Aiyoh. Ok, ok, fine. Totally not relevant though. #speaker_self
 - Done, here you go. /n Name: Ravi Kannasamy /n Pax: 1  /n Occupation: Student  /n Ethnicity: Indian  /n Budget: $500  /n Years of lease: 1  /n  Expected shift in date: Aug 20 #speaker_self
 Ok, great. I check with landlord first. #speaker_1
 Ok, thank you! #speaker_self
-2 minutes later #timestamp
+15:02 #timestamp
 Hi Ravi. #speaker_1
 That was fast. #speaker_self
 So, what did he say? #speaker_self
 Sorry, landlord says cannot. #speaker_1
-But don’t worry. I have other room for you. You want or not? #speaker_1
+But don’t worry. I have other room for you.  #speaker_1
 Other location. You want? Yishun got one room. Jurong also got. #speaker_1
 Sorry, why cannot? Was the room already taken? I can still take the bigger room. #speaker_self
 Sorry, no. The room isn’t taken yet. #speaker_1
@@ -648,13 +643,22 @@ Uh.... #speaker_self
         
     ++ [Accept the landlord's decision] Sigh. I don't think this is right but what can I do la. #speaker_self
         ~ ravi_1_notlikeotherindians = false
-        I guess this is what the older generation are like. Even the government said that they are not willing to accept a non-Chinese as their Prime Minister, so I guess this is their mental model. Sigh. #speaker_self
+        #ui:narrator
+        #background:bg_ravi_pushpa_home.jpg
+        I guess this is what the older generation are like. Even the government said that they are not willing to accept a non-Chinese as their Prime Minister, so I guess this is their mental model. Sigh. #inner_monologue
+        #ui:whatsapp
+        #background:whatsapp.png
+        #chat_group_title:Property Agent James
+        #chat_group_image:ico_ravi_james.png
+        #speaker_1_name:James        
+        Fine.
+        
     -- But you seem like a nice guy. Let me see what I can do to help. #speaker_1
     What about the room in Jurong? #speaker_1
-    I can check on the other room for you? #speaker_1
+    I check on the other room for you? #speaker_1
     Yes please. The one in Jurong. How much is that? #speaker_self
     Cheaper. $450 only. #speaker_1
-    Smaller room but only one other person in the house. Landlord no stay. #speaker_1
+    Smaller room but only one other person in the house. Landlord not staying there. #speaker_1
     
 + [Get angry] Why is it not suitable? #speaker_self
     I don’t know lah. #speaker_1
@@ -662,7 +666,7 @@ Uh.... #speaker_self
     Landlord just say cannot. I also really cannot ask him why. #speaker_1
     This is ridiculous. #speaker_self
     You are saying no because of me being Indian? #speaker_self
-    No no not me! Landlord say. It’s not my decision lah. #speaker_1
+    No no not me! Is the landlord's decision. I want also cannot do anything. #speaker_1
     Did you even check with the landlord? #speaker_self
     You replied within 2 minutes. #speaker_self
     
@@ -696,7 +700,7 @@ Uh.... #speaker_self
     Huh then he say no Indian, you just reply ok. You’re not helping me. Have you at least tried convincing him to let me stay? #speaker_self
     I told you I can’t argue with him. I don’t want him to change agent. Anyway you know how people are like lah. #speaker_1
     What do you mean? Racist people? #speaker_self
-    Aiyah, you know how some people are like that. Times changed but their mindsets still from don’t know when. this landlord older generation la. Even gahmen also say that they are not ready for non-chinese prime minister! #speaker_1
+    Aiyah, you know how some people are like that. Times changed but their mindsets still from don’t know when. This landlord older generation la. Even gahmen also say they  not ready for a non-chinese prime minister! #speaker_1
     Anyway even if I argue with him, you want to stay with him meh? He’s staying at the place eh. Don’t know what he’ll treat you like in person with this kind of mindset. #speaker_1
     I have another room in Yishun. You interested? I think this landlord is better la. Don’t worry about this one. I can’t do more than that already. #speaker_1
     Please understand. I’m only the agent. #speaker_1
@@ -725,7 +729,7 @@ Ok. Let me know. #speaker_1
 #knot:ravi_1_5_narration
 #ui:narrator
 #background:ui_emailinbox.png
-Can’t hurt to try my luck with uni. Maybe I can get a room if I’m lucky enough. I’ve always wanted to try and stay on campus, anyway. Seems fun.
+Maybe I should try emailing the uni. Maybe I can get a room if I’m lucky enough. I’ve always wanted to try and stay on campus, anyway. Seems fun.
 Let’s just hope the school admin is better than the agent…
 -> ravi_1_5
 
@@ -776,7 +780,7 @@ Ravi #speaker_self
 #emailsubject: Query about dorm room
 #replyemaildate:On Wed 6 Oct 2021, Ravi <ravi@email.com> wrote:  
 #replyemailtext: To whom it may concern /n I’m writing to inquire about the possibility of housing in the university dorm. My student number is A0155007R. /n I understand that I might be a little late, but I need to move out immediately due to family matters. It would be great if I could stay on campus, if possible. /n Do let me know if there are any options available. Any room is fine. Please let me know if you need more details.  /n Thank you, /n Ravi 
-Hello Ravi, /n Thanks for your email. I’m afraid you are a little late. Housing occupancy has been settled before the beginning of the semester. You would need to wait for the next semester to get a room. /n You mentioned that you had to move due to family matters. While we may not be currently able to offer you a room, the school is concerned for the wellbeing of its students. Is there anything else we could do to help? /n  Regards, /n  Rebecca #speaker_1
+Hello Ravi, /n /n Thanks for your email. I’m afraid you are a little late. Housing occupancy has been settled before the beginning of the semester. You would need to wait for the next semester to get a room. /n /n You mentioned that you had to move due to family matters. While we may not be currently able to offer you a room, the school is concerned for the wellbeing of its students. Is there anything else we could do to help? /n /n  Regards, /n  Rebecca #speaker_1
 
 #ui:narrator
 #background:ui_emailinbox.png
@@ -793,7 +797,7 @@ Hello Ravi, /n Thanks for your email. I’m afraid you are a little late. Housin
 #emailfromicon: ico_ravi_ravi.png
 #emailsubject: Query about dorm room
 #replyemaildate:On Wed 6 Oct 2021, Univ Housing <admin@univ.edu.sg> wrote:  
-#replyemailtext: Hello Ravi, /n I’m afraid you are a little late. Housing occupancy has been settled before the beginning of the semester. You would need to wait for the next semester to get a room. /n You mentioned that you had to move due to family matters. While we may not be currently able to offer you a room, the school is concerned for the wellbeing of its students. Is there anything else we could do to help? /n Regards, /n Rebecca
+#replyemailtext: Hello Ravi, /n I’m afraid you are a little late. Housing occupancy has been settled before the beginning of the semester. You would need to wait for the next semester to get a room. /n You mentioned that you had to move due to family matters. While we may not be currently able to offer you a room, the school is concerned for the wellbeing of its students. Is there anything else we could do to help? /n Regards, /n /n Rebecca
 
 Hello Rebecca,  #speaker_self
 Thank you for your reply.  #speaker_self
@@ -835,12 +839,12 @@ Wait, a reply just came in. Wah this Rebecca is super on the ball.
 #emailsubject: Query about dorm room
 #replyemaildate:On Wed 6 Oct 2021, Ravi <ravi@email.com> wrote:  
 #replyemailtext: Hello Rebecca, /n Thank you for your reply. /n I am a little out of options. I don’t have space at home to study or sleep, and I would really love if I could somehow stay on campus. /n I hope you could check for me whether there was any space left in the dorm at all. Like I said, I’m ok to take any room.  /n Thank you, /n Ravi 
-Hello Ravi, /n /n We have one room available now but I'm actually supposed to release it later. One of the foreign exchange students is moving back home for an emergency next week. Given your difficult situation, I think I can offer it to you first. /n It’s a single room in the Farquhar Hall with an aircon. There is a shared bathroom on the same floor. The room’s $700 per month, without food. If you want food, you’ll have to choose a meal plan. /n Would you like to take the room? If so, please let me know as soon as possible so that the school can make the necessary arrangements. /n /n Regards, /n Rebecca #speaker_1
+Hello Ravi, /n /n We have one room available now but I'm actually supposed to release it later. One of the foreign exchange students is moving back home for an emergency next week. Given your difficult situation, I think I can offer it to you first. /n  /n It’s a single room in the Farquhar Hall with an aircon. There is a shared bathroom on the same floor. The room’s $700 per month, without food. If you want food, you’ll have to choose a meal plan. /n  /n Would you like to take the room? If so, please let me know as soon as possible so that the school can make the necessary arrangements. /n /n Regards, /n Rebecca #speaker_1
 
 #ui:narrator
 #background:ui_emailinbox.png
-At least it’s an option. But ... it’s a little over budget. My savings would be enough for $450 a month, at least for this semester, but $700 is just a bit too much.
-On the other hand, this is the closest I could possibly be to campus. I’ll never be late for class again! I might save money on transport too. And at least I know I won’t have to deal with any racist landlords.
+At least it’s an option. But ... it’s a little over budget. My savings are enough for $450 a month, but $700 is a stretch for now.
+On the other hand, I’ll never be late for class again! I might save money on transport too. And I won’t have to deal with any racist landlords.
 
 + [Take the room] -> ravi_1_5e_take
 + [Decline the room] -> ravi_1_5e_decline
@@ -883,7 +887,7 @@ Ravi #speaker_self
 #emailsubject: Query about dorm room
 #replyemaildate:On Wed 6 Oct 2021, Ravi <ravi@email.com> wrote:  
 #replyemailtext: Hello Rebecca, /n Thank you so much! I would like to take the room. It would be amazing to stay on campus, and this solves a few of my problems! /n I’m ok without the meal plan. Please let me know what else I need to do to move in!  /n Thank you, /n Ravi 
-Hello Ravi,  /n /n Great! Please let me know your earliest possible move-in date, so we can arrange for the access card and keys. /n There are forms to fill up which I will follow up with in a separate email. /n There will most likely be an orientation session at the dorm as well, with the Residential Assistant. Each floor has a Residential Assistant, who is a student volunteer assigned to deal with any issues faced by the students living in the dorm.  /n Hope you will enjoy the rest of your semester staying on campus! /n /n Regards,  /n Rebecca #speaker_1
+Hello Ravi,  /n /n Great! Please let me know your earliest possible move-in date, so we can arrange for the access card and keys. There are forms to fill up which I will follow up with in a separate email. /n /n There will most likely be an orientation session at the dorm as well, with the Residential Assistant. Each floor has a Residential Assistant, who is a student volunteer assigned to deal with any issues faced by the students living in the dorm.  /n Hope you will enjoy the rest of your semester staying on campus! /n /n Regards,  /n Rebecca #speaker_1
 -> chapter_1_ending_1
 
 === chapter_1_ending_1 ===
@@ -894,7 +898,7 @@ Hello Ravi,  /n /n Great! Please let me know your earliest possible move-in date
 VAR chapter_1_ending = 1
 ~ chapter_1_ending = 1
  It sounds like I’ll be able to make some friends too. Orientation? This feels like year one all over again. Not that I mind, it does sound fun.
-Maybe I’ll finally find a girlfriend? Then I can tell the agent off lol. Why did he have to ask whether I have a girlfriend or not? I’m still thinking about it…
+Maybe I’ll finally find a girlfriend? Then I can tell the agent off. Man, why did he have to ask whether I have a girlfriend or not? 
 Anyhow, cheers to independence! I’ve taken a further step in adulting, and I guess that’s something to be proud of…
 Better let Amma know the news.
 
@@ -919,6 +923,7 @@ Apologies for any inconvenience caused. I hope you find somebody to take that ro
 Thank you, #speaker_self
 Ravi #speaker_self
 
+#ui:narrator
 #background:ui_emailsending.png
 .
 #background:ui_emailsent.png
@@ -935,7 +940,7 @@ Ravi #speaker_self
 #emailsubject: Query about dorm room
 #replyemaildate:On Wed 6 Oct 2021, Ravi <ravi@email.com> wrote:  
 #replyemailtext: Hello Rebecca, /n Thank you so much. Unfortunately, the room is a little too expensive for me at the moment. As such, I am unable to take the room. /n Apologies for any inconvenience caused. I hope you find somebody to take that room soon.  /n Thank you, /n Ravi 
-Hello Ravi, /n /n We understand. In that case, unfortunately, you will have to make other arrangements. /n I can keep an eye out for a room opening up, but nothing else is available at the moment. I can’t guarantee that any rooms will be cheaper though. /n All the best. Please feel free to contact the school if you require any financial assistance. /n /n Regards, /n Rebecca #speaker_1
+Hello Ravi, /n /n We understand. In that case, unfortunately, you will have to make other arrangements. /n I can keep an eye out for a room opening up, but nothing else is available at the moment. I can’t guarantee that any rooms will be cheaper though. /n /n  All the best. Please feel free to contact the school if you require any financial assistance. /n /n Regards, /n Rebecca #speaker_1
 
 -> chapter_1_ending_2
 
@@ -944,7 +949,7 @@ Hello Ravi, /n /n We understand. In that case, unfortunately, you will have to m
 #ui:narrator
 #background:bg_ravi_pushpa_home.jpg
 Sigh. This is way over my budget. But I’m not going to apply for financial assistance. I don’t want to be THAT guy. I'll find a way to make the cash.
-It’s still better than sleeping on that couch though. 
+It’s still better than sleeping on that sofa though. 
 ~ chapter_1_ending = 2
 Looks like I have to deal with finding my own room and agents again.  I should try to get back at that racist landlord and agent...Maybe I post the convo online? 
 Hmm... actually I don’t want to end up on Mothership and read through all the comments. Just makes my own life harder later if people think of me as that troublesome tenant.
@@ -1003,15 +1008,7 @@ Coffee Shop Kannasamy #title
 #knot:ravi_2_1_narration
 #ui:narrator
 #background:bg_ravi_intro.jpg
-Just outside the gurdwara (Sikh temple) my family has attended since I was born, after weekly prayers.
-Where are Sel and her parents? I should say hi before we leave.
-I wonder if Sel is still mad at me. We argued again last night.
-It seems like we quarrel about the smallest things, lately.
-How did it get to this point? 
-We’ve been together seven years already.
-Through school, NS, and the past four years of university...
-Maybe she’s tired of me.
-Oh - there they are! Sel’s parents, Uncle Pritam and Aunty Suvinder.
+Holding
  
 -> ravi_2_1
 

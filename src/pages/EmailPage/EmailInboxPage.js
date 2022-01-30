@@ -134,11 +134,11 @@ const EmailInbox = (props) => {
         
         <Box>
           {/* New Email Message */}
-              <InboxItem storyline from={specialTags.newemailfrom} profileIcon={specialTags.newemailprofileicon} subject={specialTags.newemailsubject} emailPreview={specialTags.newemailpreview}/>
-              <InboxItem from={"John Tan"} subject={"Static Email Subject 1"} emailPreview={"Static Preview Line 1"}/>
-              <InboxItem from={"Lisa Lim"} subject={"Static Email Subject 1"} emailPreview={"Static Preview Line 1"}/>
-              <InboxItem from={"John Tan"} subject={"Static Email Subject 1"} emailPreview={"Static Preview Line 1"}/>
-              <InboxItem from={"Lisa Lim"} subject={"Static Email Subject 1"} emailPreview={"Static Preview Line 1"}/>
+          <InboxItem storyline from={specialTags.newemailfrom} profileIcon={specialTags.newemailprofileicon} subject={specialTags.newemailsubject} emailPreview={specialTags.newemailpreview}/>
+              <InboxItem from={"ToBeYou@better.sg"} subject={"Are you ready to play our game?"} emailPreview={"Free online game"}/>
+              <InboxItem from={"Marie"} subject={"Hey!"} emailPreview={"How are you?"}/>
+              <InboxItem from={"Marketing"} subject={"No payment needed! Join now!"} emailPreview={"This is the offer of a..."}/>
+              <InboxItem from={"Bills"} subject={"Your phone bill is due."} emailPreview={"Please pay online"}/>
           
         </Box>
         <NextButton getStory={getStory} />
