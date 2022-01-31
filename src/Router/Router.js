@@ -23,7 +23,8 @@ import Help from '../pages/HelpPage/HelpPage'
 import Music1 from '../music/tobeyou_intro.mp3'
 // import Music2 from '../music/tobeyou_outrolong.mp3'
 import ChapterEnd from '../pages/ChapterEndPage/ChapterEnd'
-
+import ParticipantStartPage from '../pages/RoomPage/ParticipantStartPage'
+import RoomInfoPage from '../pages/RoomPage/RoomInfoPage'
 
 class Router extends Component {
   render() {
@@ -53,7 +54,6 @@ class Router extends Component {
     return (
       <BrowserRouter basename={process.env.REACT_APP_BASENAME}>
 
-        {/* {bar} // TODO: implement "bar" as a menubar above the game components below */}
         <ThemeProvider theme={theme}>
           <Switch>
             <Route path={["/", "/intro", "/profilebuilder", "/signup", "/login", "/help", "/characterchoice", "/chapters/:name", "/chapterend/:name/:chapter"]} exact>              
@@ -69,6 +69,11 @@ class Router extends Component {
             <Route path="/intro" exact>
               <IntroMaster />
             </Route>
+
+            {/* participants will enter through game.tobeyou.sg/room/A1b2C3  */}
+            <Route path="/room/:roomUrl" exact>                
+              {user ? <RoomInfoPage /> : <ParticipantStartPage /> }
+            </Route>            
 
             <PrivateRoute path="/characterchoice" exact>
               <CharacterChoicePage />
