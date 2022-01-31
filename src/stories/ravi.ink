@@ -476,9 +476,9 @@ It’s been two weeks since we’ve made the move.
  His parents must be really annoyed with me too. They don’t say it, but I can feel their eyes in the back of my skull whenever I go over. I can’t keep being a burden to Lukman either.
  I need to find some other place to stay. Maybe stay on my own if I can. That might be nice, for a change. I’ve always shared a room with Revati, anyway.
 #background:bg_ravi_rentals1.jpg
- I’ve been scouring so many websites, trying to find a good place to rent. PropertyMagic, 999co, Room4Rent – you name it, I’ve tried it. But not too many options for my budget, sigh.
-
--> ravi_1_4_narration 
+ I’ve been scouring so many websites, trying to find a good place to rent. PropertyMagic, 999co, Room4Rent – you name it, I’ve tried it. 
+ Hmm... rental properties might be hard to find with my tight budget. 
+ -> ravi_1_4_narration 
 
 
 === ravi_1_4_narration ===
@@ -720,16 +720,23 @@ But damn, a room for myself for $450 sounds good. Maybe I should check with the 
 #chat_group_title:Property Agent James
 #chat_group_image:ico_ravi_james.png
 #speaker_1_name:James
-Hmm, sounds good. Let me think about it for a while. #speaker_self
-Ok. Let me know. #speaker_1
+Hmm, sounds good.  #speaker_self
+Ok. So how? Can? #speaker_1
 
--> ravi_1_5_narration
++ [Try looking for university housing] Let me get back to you later? #speaker_self
+    -> ravi_1_5_narration
++ [Yup, sounds good! I'll take it.]  Yup, I'll take it.  #speaker_self
+    -> chapter_1_ending_2b
+
+
 
 === ravi_1_5_narration ===
 #knot:ravi_1_5_narration
 #ui:narrator
 #background:ui_emailinbox.png
 Maybe I should try emailing the uni. Maybe I can get a room if I’m lucky enough. I’ve always wanted to try and stay on campus, anyway. Seems fun.
+VAR ravi_1_emailuniversity = true
+~ ravi_1_emailuniversity = true
 Let’s just hope the school admin is better than the agent…
 -> ravi_1_5
 
@@ -763,7 +770,7 @@ Ravi #speaker_self
 
 #newemailfrom: Rebecca
 #newemailprofileicon:ico_ravi_rebecca.png
-#newemailsubject:Enquiry on Dorm Housing
+#newemailsubject:Query about dorm room
 #newemailpreview: Hello Ravi, Thanks for your email. I'm ...
 .
 
@@ -820,7 +827,7 @@ Wait, a reply just came in. Wah this Rebecca is super on the ball.
 
 #newemailfrom: Rebecca
 #newemailprofileicon:ico_ravi_rebecca.png
-#newemailsubject:Enquiry on Dorm Housing
+#newemailsubject: Query about dorm room
 #newemailpreview: Hello Ravi, We have one room available ...
 .
 
@@ -846,8 +853,8 @@ Hello Ravi, /n /n We have one room available now but I'm actually supposed to re
 At least it’s an option. But ... it’s a little over budget. My savings are enough for $450 a month, but $700 is a stretch for now.
 On the other hand, I’ll never be late for class again! I might save money on transport too. And I won’t have to deal with any racist landlords.
 
-+ [Take the room] -> ravi_1_5e_take
-+ [Decline the room] -> ravi_1_5e_decline
++ [Take the dorm room] -> ravi_1_5e_take
++ [Decline the room, take the rental] -> ravi_1_5e_decline
 
 
 === ravi_1_5e_take ===
@@ -894,7 +901,7 @@ Hello Ravi,  /n /n Great! Please let me know your earliest possible move-in date
 #knot: chapter_1_ending_1
 #ui:narrator
 #background:bg_ravi_pushpa_home.jpg
- Yes! I don’t know how this will go, but at least I don’t have to deal with stupid questions from the agent. And I’ll def save on transport. 
+ Yes! I don’t know how this will go, but at least I don’t have to deal with stupid questions from the agent. And I’ll definitely save on transport. 
 VAR chapter_1_ending = 1
 ~ chapter_1_ending = 1
  It sounds like I’ll be able to make some friends too. Orientation? This feels like year one all over again. Not that I mind, it does sound fun.
@@ -950,17 +957,27 @@ Hello Ravi, /n /n We understand. In that case, unfortunately, you will have to m
 #background:bg_ravi_pushpa_home.jpg
 Sigh. This is way over my budget. But I’m not going to apply for financial assistance. I don’t want to be THAT guy. I'll find a way to make the cash.
 It’s still better than sleeping on that sofa though. 
-~ chapter_1_ending = 2
 Looks like I have to deal with finding my own room and agents again.  I should try to get back at that racist landlord and agent...Maybe I post the convo online? 
 Hmm... actually I don’t want to end up on Mothership and read through all the comments. Just makes my own life harder later if people think of me as that troublesome tenant.
-I’ll just take the room in Jurong and be done with it. Save some money. Don’t think I can get a better deal. I should message him.
-Hope the landlord is better this time.
-Better let Amma know the news
-Anyhow, cheers to independence! I’ve taken a further step in adulting, and I guess that’s something to be proud of…
+I’ll just take the room in Jurong and be done with it. Save some money. Don’t think I can get a better deal. 
+~ ravi_1_dormhousing = false
+~ chapter_1_ending = 2
+Hope this landlord is better.
+Better let Amma know the news. Anyhow, cheers to independence! I’ve taken a further step in adulting, and I guess that’s something to be proud of…
 
 -> ravi_1_reflection
 
+=== chapter_1_ending_2b ===
+#knot: chapter_1_ending_2b
+#ui:narrator
+#background:bg_ravi_pushpa_home.jpg
+I’ll just take the room in Jurong and be done with it. Save some money. Don’t think I can get a better deal. 
+~ ravi_1_dormhousing = false
+~ chapter_1_ending = 2
+Hope this landlord is better.
+Better let Amma know the news. Anyhow, cheers to independence! I’ve taken a further step in adulting, and I guess that’s something to be proud of…
 
+-> ravi_1_reflection
 
 === ravi_1_reflection ===
 #knot:ravi_1_reflection
