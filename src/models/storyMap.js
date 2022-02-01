@@ -1,6 +1,5 @@
 import NadiaInk from '../stories/nadia.ink.json'
 import AmanInk from '../stories/aman.ink.json'
-import RaviInk from '../stories/ravi.ink.json'
 
 // TODO: Update with other properties such as character image, character bio, chapter summary, etc
 /* 
@@ -470,183 +469,26 @@ export const CHARACTER_MAP = [
   },
   {
     characterId: 3,
-    name: "Ravi Kannasamy",
-    linkName: "ravi",
+    name: "Ravi Kannaswamy",
+    linkName: "",
     profileImage: "/images/profile_ravi.png",
     characterIntroImage: "/character_choice_page/ravi.png", 
     description: "Ravi dreams of being an aviation engineer - but can he push past the stereotypes and self-doubts?",
-    jsonLink: '../stories/ravi.ink.json',
-    jsonFile: RaviInk,
-    playable: true,
-    primaryColour: '#8DC000',
-    secondaryColour: '#FF8944',
-    newestChapter: 1,
-    chapters: [
-      {
-        chapterId: 1,
-        number: 1,
-        reflectionId:7,
-        title: "Home Truths",
-        knotTag: "ravi_1_intro",
-        summary: "Ravi's world is turned upside down, and he faces difficult choices in moving on.",
-        playable: true,
-        images: [           
-          "/images/bg_launch.jpg",
-          "/images/bg_reflections.jpg",
-          "/images/bg_ravi_pushpa_home.jpg",
-          "/images/bg_ravi_rentals1.jpg",
-          "/images/bg_ravi_rentals2.jpg",
-          "/images/bg_ravi_rentals3.jpg",
-          "/images/bg_ravi_fishcurry.jpg",
-          "/images/bg_ravi_home.jpg",
-          "/images/cha_ravi_mum_normal.jpg",
-          "/images/cha_ravi_mum_worried.jpg",
-          "/images/cha_ravi_revati_normal.jpg",
-          "/images/cha_ravi_revati_concerned.jpg",
-          "/images/ui_emailsent.png",
-          "/images/ui_emailsent.png",
-          "/images/ui_emailinbox.png",
-          "/images/ui_emailsending.png",
-          "/images/ico_ravi_james.png",
-          "/images/ico_ravi_rebecca.png",
-        ],
-        endings: [
-          {
-            endingId: 1,
-            title: "Ravi moves into the university dorm",
-            inkVar: "chapter_1_ending_1",
-          },
-          {
-            endingId: 2,
-            title: "Ravi is still looking for a place to stay",
-            inkVar: "chapter_1_ending_2",
-          },
-        ]
-      },
-      // {
-      //   chapterId: 2,
-      //   number: 2,
-      //   reflectionId:8,
-      //   title: "(merged with Chapter 1) ",
-      //   knotTag: "ravi_2_2",
-      //   summary: "Ravi decides to move out. But his choices are not that straightforward.",
-      //   playable: true,
-      //   images: [           
-      //     "/images/bg_launch.jpg",
-      //     "/images/bg_reflections.jpg",
-      //   ],
-      //   endings: [
-      //     {
-      //       endingId: 1,
-      //       title: "Azlin gets upset with you",
-      //       inkVar: "chapter2_ending_1",
-      //     },
-      //     {
-      //       endingId: 2,
-      //       title: "Azlin tells you to give him up",
-      //       inkVar: "chapter2_ending_2",
-      //     },
-      //   ]
-      // },
-      {
-        chapterId: 2,
-        number: 2,
-        reflectionId:8,
-        title: "Coffee Shop Kannasamy ",
-        knotTag: "ravi_2_intro",
-        summary: "Ravi finds a new gig at a cafe. And possibly something more.",
-        playable: false,
-        images: [           
-          "/images/bg_launch.jpg",
-          "/images/bg_reflections.jpg",
-        ],
-        endings: [
-          {
-            endingId: 1,
-            title: "Ravi shows concern for mum",
-            inkVar: "chapter2_ending_1",
-          },
-          {
-            endingId: 2,
-            title: "Ravi is confused by the news",
-            inkVar: "chapter2_ending_2",
-          },
-        ]
-      },
-      {
-        chapterId: 3,
-        number: 3,
-        reflectionId:9,
-        title: "The Internship",
-        knotTag: "ravi_3_intro",
-        summary: "Ravi lands an internship to fulfill his university credits. And finds himself in a situation that tests him.",
-        playable: false,
-        images: [           
-          "/images/bg_launch.jpg",
-          "/images/bg_reflections.jpg",
-        ],
-        endings: [
-          {
-            endingId: 1,
-            title: "Azlin gets upset with you",
-            inkVar: "chapter2_ending_1",
-          },
-          {
-            endingId: 2,
-            title: "Azlin tells you to give him up",
-            inkVar: "chapter2_ending_2",
-          },
-        ]
-      },
-      {
-        chapterId: 4,
-        number: 4,
-        reflectionId:10,
-        title: "Cleared for Take Off",
-        knotTag: "ravi_4_intro",
-        summary: "Ravi breaks down and reveals his fears to both Valerie and Revati. They give him a new perspective, and much-needed reminders. ",
-        playable: false,
-        images: [           
-          "/images/bg_launch.jpg",
-          "/images/bg_reflections.jpg",
-        ],
-        endings: [
-          {
-            endingId: 1,
-            title: "Azlin gets upset with you",
-            inkVar: "chapter2_ending_1",
-          },
-          {
-            endingId: 2,
-            title: "Azlin tells you to give him up",
-            inkVar: "chapter2_ending_2",
-          },
-        ]
-      },
-    ],
+    jsonLink: '../stories/nadia.ink.json',
+    playable: false,
   }, 
   {
     characterId: 4,
     name: "Zhihao Lim",
     linkName: "",
-    profileImage: "/images/profile_zhihao.png",
-    characterIntroImage:  "/character_choice_page/zhihao.png",
+    profileImage: "/images/profile_blank.png",
+    characterIntroImage:  "/images/instagram_blank.png",
     description: "Zhihao might have a future in e-sports, but will it disappear before his eyes? Life is about to get complicated, as a fateful Tweet gains a life of its own...",
     jsonLink: '../stories/nadia.ink.json',
     playable: false,
   }, 
   {
     characterId: 5,
-    name: "Unaisah Begum",
-    linkName: "",
-    profileImage: "/images/profile_unaisah.png",
-    characterIntroImage:  "/character_choice_page/unaisah.png",
-    description: "Unaisah wants to excel as a new teacher - but can she break the glass ceiling while dealing with things at home?",
-    jsonLink: '../stories/nadia.ink.json',
-    playable: false,
-  }, 
-  {
-    characterId: 6,
     name: "Marie da Costa",
     linkName: "",
     profileImage: "/images/profile_blank.png",
@@ -655,6 +497,16 @@ export const CHARACTER_MAP = [
     jsonLink: '../stories/nadia.ink.json',
     playable: false,
   },
+  {
+    characterId: 6,
+    name: "Unaisah Begum",
+    linkName: "",
+    profileImage: "/images/profile_blank.png",
+    characterIntroImage:  "/images/instagram_blank.png",
+    description: "Unaisah wants to excel as a new teacher - but can she break the glass ceiling while dealing with things at home?",
+    jsonLink: '../stories/nadia.ink.json',
+    playable: false,
+  }, 
 ];
 
 // export const STORY_MAP = [
