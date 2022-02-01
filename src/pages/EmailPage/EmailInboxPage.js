@@ -7,18 +7,16 @@ import './style.scss'
 import { useInkContext } from '../../contexts/InkContext'
 import { CHARACTER_MAP } from '../../models/storyMap';
 import { useParams } from 'react-router-dom'
-import ClearRoundedIcon from '@material-ui/icons/ClearRounded';
-import AttachmentRoundedIcon from '@material-ui/icons/AttachmentRounded';
-import SendIcon from '@material-ui/icons/Send';
-import ExpandMoreRoundedIcon from '@material-ui/icons/ExpandMoreRounded';
+import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
+import { InboxItem } from './InboxItem'
+
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 
-
-const Email = (props) => {
+const EmailInbox = (props) => {
   const { currentParagraphs } = props
   const { getStory, choices, setChoice, specialTags } = useInkContext()
 
@@ -26,7 +24,6 @@ const Email = (props) => {
   // Help to scroll to bottom of the paragraphs render screen
   // ========================================================
   const elementRef = useRef()
-
 
   // Eveytime currentParagraphs gets updated or choices appear, scroll to the elementRef
   useEffect(() => {
@@ -51,6 +48,7 @@ const Email = (props) => {
   const useStyles = makeStyles((theme) => ({
     EmailWrapper: {
       backgroundImage: `url('/images/bg_ui_email.png')`,
+      background: "white", 
       backgroundSize: "cover", 
       height: '660px',
       [theme.breakpoints.only('xs')]: {
@@ -90,21 +88,14 @@ const Email = (props) => {
     audio.play();
   }
 
-
-//  console.log(currentParagraphs)
-  const mergedEmail = () =>
-    currentParagraphs
-      // .filter(paragraph => paragraph.tags[0].includes('email'))
-      .map((paragraph, idx) => {
-        return (
-         paragraph.tags[0].includes('speaker_1') ?
-           <p className="typed-out text-blue">{paragraph.text.split('/n').map((line, i) => <span key={i}>{line}<br /></span>)}</p> :
-           (<p className="typed-out">{paragraph.text}</p>)
-           )
-      });
+//   // console.log(currentParagraphs)
+//   const mergedEmail = currentParagraphs =>
+//     currentParagraphs
+//       // .filter(paragraph => paragraph.tags[0].includes('email'))
+//       .map(paragraph => paragraph.text);
     
-//  console.log('mergedEmail', mergedEmail(currentParagraphs))    
-//  console.log('specialTags', specialTags)
+//   // console.log('mergedEmail', mergedEmail(currentParagraphs))
+//   console.log('specialTags', specialTags)
 
   // const mergedEmail = currentParagraphs =>
   //   currentParagraphs.map((step, i) => {
@@ -130,59 +121,30 @@ const Email = (props) => {
   //   })
   //   console.log(mergedEmail)
   // }
+
   
   return (
     <Fade in={true} timeout={500}>
       <Box className={classes.EmailWrapper}>
         {/* Email Header */}
-        <div className="Email__header">
-
-          <Typography style={{color: "white"}}>{specialTags.emailheader}</Typography>
-          {/* <div className='Email__header--right'>
-            <AttachmentRoundedIcon style={{marginRight: "10px", color: "white"}} />
-            <SendIcon style={{color: "white"}}  />
-          </div> */}
-        </div>  
-
-          {/* <div className="Email__header__description"> */}
-            <div className="Email__details"> <div className='Email__details--name'>To</div>  {specialTags.emailto}</div>            
-            <div className="Email__details" > <div className='Email__details--name'>From</div> {specialTags.emailfrom}</div>            
-            <div className="Email__details" > <div className='Email__details--name'>Subject</div> {specialTags.emailsubject}</div>            
-          {/* </div> */}
-        
-        
-        
-        <Box id='EmailText' className='Email__messages'>
-          {/* Email Messages */}
-
-          <div className="typing">
-            <div className="text-cover"></div>
-              {mergedEmail()}
-            
+          
+          <div className="Email__inbox__header">
+            <Typography style={{color:"white", fontWeight: 600}}>Inbox</Typography>
           </div>
-          <div>
-              {/* Reply Email Message */}
-              {specialTags.replyemaildate &&
-                <Box className="Email__replySection">
-                  {specialTags.replyemaildate} <br />
-                  <Box className="Email__replySection--content">
-                    {specialTags.replyemailtext.split('/n').map((line, i) => <span key={i}>{line}<br /><br /></span>)}
-                  </Box>
-                </Box>
-              
-              }
-          </div>
-
+        
+        <Box>
+          {/* New Email Message */}
+          <InboxItem storyline from={specialTags.newemailfrom} profileIcon={specialTags.newemailprofileicon} subject={specialTags.newemailsubject} emailPreview={specialTags.newemailpreview}/>
+              <InboxItem from={"ToBeYou@better.sg"} subject={"Are you ready to play our game?"} emailPreview={"Free online game"}/>
+              <InboxItem from={"Marie"} subject={"Hey!"} emailPreview={"How are you?"}/>
+              <InboxItem from={"Marketing"} subject={"No payment needed! Join now!"} emailPreview={"This is the offer of a..."}/>
+              <InboxItem from={"Bills"} subject={"Your phone bill is due."} emailPreview={"Please pay online"}/>
+          
         </Box>
-        <div className="Email__sendWrapper">
-          <div className='Email__sendWrapper__sendButton'>Tap to draft email</div>
-          <div className='Email__sendWrapper__sendButton--right '><ExpandMoreRoundedIcon/></div>
-        </div>
-
         <NextButton getStory={getStory} />
       </Box>
     </Fade>
   )
 }
 
-export default Email
+export default EmailInbox

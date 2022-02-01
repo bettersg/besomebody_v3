@@ -16,6 +16,7 @@ import { useInkContext } from '../../contexts/InkContext'
 import { Link } from 'react-router-dom'
 import CharacterAvatar from "./CharacterAvatar";
 import SideMenu from '../SimpleSideMenu/SideMenu'
+import { RoomContext } from '../../contexts/RoomContext'
 
 // Constants
 import "./styles.scss"
@@ -58,6 +59,12 @@ const useStyles = makeStyles(theme => ({
         textAlign: 'center',        
         fontSize: '0.8rem',
         padding: 20,
+    },
+    instructions: {
+        padding: 10,
+        fontSize: '0.8rem',
+        backgroundColor: '#664EFC',
+        color: '#FFFFFF',
     }
 }))
 
@@ -82,6 +89,10 @@ export const CharacterChoicePage = () => {
 	// TODO : fix the userInfo. firebase currentUser does not pass the profile fields properly.
 	const [userFromDb, setUserFromDb] = useState(null)
   
+    const { roomValue, roomCodeValue } = React.useContext(RoomContext);
+    const [room, setRoom] = roomValue;
+    console.log(room)
+
 	useEffect(() => {
 	  const getUser = async () => {
 		const user = await getDbUser(currentUser.id)
@@ -138,7 +149,12 @@ export const CharacterChoicePage = () => {
                 
             </div>
             <img src="/character_choice_page/start_playing_banner.png" className="CharacterChoices__banner" />
-
+            {room &&
+                <Box className={classes.instructions} >
+                <Typography variant="body2" >You are playing in a facilitated room. Your instructions are: <br /></Typography>
+                <Typography variant="body1" >{room.instructions}</Typography>
+                </Box>
+            }
             {/* <!-- Continue Playing Banner --> */}
             {/* 
             {isStoryStarted && hasSavedState && (

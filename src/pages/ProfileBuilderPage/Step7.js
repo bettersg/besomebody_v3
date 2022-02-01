@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import {
   Box,
   Button,
@@ -16,7 +16,10 @@ import { updateDbUser } from '../../models/userModel'
 import { Link , useHistory } from 'react-router-dom'
 import { useSnackbar } from '../../contexts/SnackbarContext'
 import './style.scss'
-import Step0 from './Step0'
+
+import { RoomContext } from '../../contexts/RoomContext'
+// import { updateRoomParticipantsDb } from '../../models/roomModel'
+import { getRoomDb } from '../../models/roomModel'
 
 
 
@@ -27,6 +30,36 @@ function Step7(props) {
   const { currentUser } = useAuth()  
   const [isLoading, setIsLoading] = useState(false)
 
+  const { roomValue, roomCodeValue } = React.useContext(RoomContext);
+  const [room, setRoom] = roomValue;
+  const [roomCode, setroomCode] = roomCodeValue;
+
+  
+  // setroomCode('abc123')
+  // let roomCode = room
+  // console.log('roomCode' , roomCode)
+  // console.log('room' , room)
+  
+  const asyncRoom = async () => {
+    const room = await getRoomDb(roomCode)
+    return room
+  }
+  
+  useEffect(() => {
+    const loadRoom = async () => {
+      try {
+        const room = await asyncRoom()
+        setRoom(room)        
+      }
+      catch (err) { console.log(err) }
+    }
+    loadRoom()
+  }, [])
+  
+
+  // console.log(room)
+  // console.log(roomCode)
+
   const formData = {
     age: props.state.age?props.state.age:null,
     gender: props.state.gender? props.state.gender.toUpperCase():null,
@@ -35,7 +68,9 @@ function Step7(props) {
     housing: props.state.housing?props.state.housing.toUpperCase():null,
     username: props.state.username ? props.state.username : null,
     timestamp: Date.now(),
+//     room: [room],
     }
+    // console.log(room.id)
 
   const handleSubmit = async (e) => {
       e.preventDefault()
@@ -45,7 +80,12 @@ function Step7(props) {
       try {
         setIsLoading(true)          
         await updateDbUser(formData, currentUser.id)
-        history.push('/')  // redirect to root which will be the characterchoice page now.
+        if (room) {         
+          history.push('/room/'+room.roomCode) 
+        }
+        else {
+          history.push('/')  // redirect to root which will be the characterchoice page now.
+        }
        
       } catch (err) {
         setSnackbar({
@@ -77,7 +117,11 @@ function Step7(props) {
                   <div>Religion: {props.state.religion?props.state.religion.toUpperCase():"You left this blank"}</div>
                   <div>Housing Type: {props.state.housing?props.state.housing.toUpperCase():"You left this blank"}</div>
                   <div>Username: {props.state.username?props.state.username:"You left this blank"}</div>   
-                        
+                {room &&
+                  <Box>
+                      <div>You are a participant in room.</div>
+                    </Box>
+                  }
                   
                 <br />
                 <Button
