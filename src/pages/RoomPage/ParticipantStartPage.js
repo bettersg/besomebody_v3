@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {
   Box,
   Button,
   Typography,
   Container,
 } from '@material-ui/core'
-// import { Alert } from '@material-ui/lab'
-// import { useAuth } from '../../contexts/AuthContext'
-import { Link , useHistory, useParams } from 'react-router-dom'
+
+import { useAuth } from '../../contexts/AuthContext'
+import { RoomContext, useRoomContext } from '../../contexts/RoomContext'
+import { Link, useParams, useHistory } from 'react-router-dom'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -30,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   },
   bottom: {
     bottom: 0,
-    height: '20vh',
+    height: '15vh',
     position: 'absolute',
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -60,6 +61,12 @@ const useStyles = makeStyles((theme) => ({
       
     },
   },
+  overline: {
+    backgroundColor: '#664EFC',
+    color: '#ffffff',
+    width: '100%',
+    padding: '15px',
+  },
   link: {
     color: '#000A11',
     fontSize: '0.9rem',
@@ -71,65 +78,46 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-const LandingPage = ( props ) => {
+const ParticipantStartPage = () => {
   // const [isLoading, setIsLoading] = useState(false)
-  // const [isDialogOpen, setIsDialogOpen] = useState(false)
-  // const [snackbar, setSnackbar] = useState({
-  //   message: '',
-  //   open: false,
-  //   type: 'error',
-  // })
   const classes = useStyles()  
   const history = useHistory()
-  // const { roomCode } = useParams()
 
-  // console.log(roomCode)
+  const { roomValue, roomCodeValue } = React.useContext(RoomContext);
+  const [room, setRoom] = roomValue;
+  const [roomCode, setroomCode] = roomCodeValue;
 
-  // const { currentUser } = useAuth()  
+  // const { currentUser } = useAuth()
+  // const [roomCode, setroomCode]  = useRoomContext()
+  
+  const { roomUrl } = useParams()
+  setroomCode(roomUrl)
+  
+  // console.log('roomURL',roomUrl)  
+  console.log('roomCode',roomCode)  
+  console.log('room',room)  
+  
 
   return (
     <Box className={classes.background}>
+      <Box py={1} textAlign="center"  className={classes.overline}>
+        <Typography variant="overline" > You are joining a facilitated game. </Typography>
+      </Box>
       
-
-      
-      
-        <Container maxWidth="md" className={classes.container}>
-          <Box py={4} textAlign="center">
-          {/* {roomCode && <Typography variant="body2">Your game results will be saved to room code: {roomCode} </Typography>} */}
+      <Container maxWidth="md" className={classes.container}>
+        <Box py={1} textAlign="center">
           <Typography className='LandingPage__text'>Experience life in Singapore as someone else.</Typography>  
-          </Box>
-          
-          
-          <Box className={classes.bottom}>
-          <Button variant="contained" className={classes.btn} onClick={() => history.push('/intro')}>Start New Game</Button>
+        </Box>
+        
+        <Box className={classes.bottom}>
+          <Button variant="contained" className={classes.btn} onClick={() => history.push('/intro')}>Create a new account</Button>
           <br />
-          <Link to="/login" className={classes.link}> Login to Resume</Link>
-          </Box>
-          
-        </Container>
-       
-      
-      
- 
- 
-
+          <Link to="/login" className={classes.link}> Login to existing account</Link>
+        </Box>        
+      </Container>
       
     </Box>
   )
 }
 
-export default LandingPage;
-
-/*  
-
-        
-
-        <Box mx="auto" width="75%" my={2}>
-            <Link to="/intro"><Button variant="contained" fullWidth={true} color="primary"  >Start New Game</Button></Link>
-          </Box>
-          <Box mx="auto" width="75%" my={2}>
-            <Link to="/login"><Button variant="contained" fullWidth={true} color="secondary" >Login to Resume Game</Button></Link>
-            
-          </Box>
-        
-*/
+export default ParticipantStartPage;
