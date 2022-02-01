@@ -1,188 +1,97 @@
-import React, { useEffect, useState, useRef } from 'react'
-import { Box, Fade, Grid, Typography } from '@material-ui/core'
-import makeStyles from '@material-ui/core/styles/makeStyles'
-import NextButton from '../../components/NextButton'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
-import './style.scss'
-import { useInkContext } from '../../contexts/InkContext'
-import { CHARACTER_MAP } from '../../models/storyMap';
-import { useParams } from 'react-router-dom'
-import ClearRoundedIcon from '@material-ui/icons/ClearRounded';
-import AttachmentRoundedIcon from '@material-ui/icons/AttachmentRounded';
-import SendIcon from '@material-ui/icons/Send';
-import ExpandMoreRoundedIcon from '@material-ui/icons/ExpandMoreRounded';
-// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-let vh = window.innerHeight * 0.01;
-// Then we set the value in the --vh custom property to the root of the document
-document.documentElement.style.setProperty('--vh', `${vh}px`);
+import React  from 'react'
+import {
+  Box,
+  Grid,
+  Button,
+} from '@material-ui/core'
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import CloseIcon from '@material-ui/icons/Close';
+import AttachmentIcon from '@material-ui/icons/Attachment';
+import DeleteIcon from '@material-ui/icons/Delete';
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import Divider from '@material-ui/core/Divider';
+import WifiIcon from '@material-ui/icons/Wifi';
+import SignalCellularAltIcon from '@material-ui/icons/SignalCellularAlt';
+import Battery90Icon from '@material-ui/icons/Battery90';
 
+import "./style.scss"; 
+import AudioPlayer from "../../music/Music"
 
-
-const Email = (props) => {
-  const { currentParagraphs } = props
-  const { getStory, choices, setChoice, specialTags } = useInkContext()
-
-  // ========================================================
-  // Help to scroll to bottom of the paragraphs render screen
-  // ========================================================
-  const elementRef = useRef()
-
-
-  // Eveytime currentParagraphs gets updated or choices appear, scroll to the elementRef
-  useEffect(() => {
-    if (elementRef.current) {
-      elementRef.current.scrollIntoView({
-        behavior: 'smooth',
-      })
-    }
-  }, [elementRef, currentParagraphs, choices])
-
-  // const [choicesHeight, setChoicesHeight] = useState("10px")
-  // const [maxHeight, setMaxHeight] = useState("10px")
-  // const choicesRef = useRef();
-  // useEffect(() => {
-  //   if (choicesRef.current) {
-  //     setChoicesHeight(choicesRef.current.offsetHeight);
-  //     setMaxHeight(594 - choicesHeight);
-  //     console.log(choicesRef.current.offsetHeight)
-  //     console.log(maxHeight)
-  //   }
-  // }, []);
-  const useStyles = makeStyles((theme) => ({
-    EmailWrapper: {
-      backgroundImage: `url('/images/bg_ui_email.png')`,
-      backgroundSize: "cover", 
-      height: '660px',
-      [theme.breakpoints.only('xs')]: {
-        height: 'calc(var(--vh, 1vh) * 100)',
-      },
-      width: "100%", 
-      // overflow: "hidden", 
-    },
-    EmailImage: {
-      maxWidth: 150,
-      maxHeight: 150,
-    }
-    // EmailMsgs: {
-    //   maxHeight: maxHeight,
-    // }
-  }))
-
-  const classes = useStyles()  
-  const { name } = useParams()
-
-  // var prevSpeaker = ""
-  // function isNotPrevSpeaker (currentSpeaker) {
-  //   if (currentSpeaker == prevSpeaker) {
-  //     return false
-  //   }
-  //   return true 
-  // }
-  // function setCurrentSpeaker (currentSpeaker) {
-  //   prevSpeaker = currentSpeaker
-  // }
-  // const persona = CHARACTER_MAP.find((character) => character.linkName === name); 
-
-  // sound component to do the *ding*
-// import ding from "../music/ding.wav"  
-  function playSound(file) {
-    var audio = new Audio(file);
-    audio.play();
-  }
-
-
-//  console.log(currentParagraphs)
-  const mergedEmail = () =>
-    currentParagraphs
-      // .filter(paragraph => paragraph.tags[0].includes('email'))
-      .map((paragraph, idx) => {
-        return (
-         paragraph.tags[0].includes('speaker_1') ?
-           <p className="typed-out text-blue">{paragraph.text.split('/n').map((line, i) => <span key={i}>{line}<br /></span>)}</p> :
-           (<p className="typed-out">{paragraph.text}</p>)
-           )
-      });
-    
-//  console.log('mergedEmail', mergedEmail(currentParagraphs))    
-//  console.log('specialTags', specialTags)
-
-  // const mergedEmail = currentParagraphs =>
-  //   currentParagraphs.map((step, i) => {
-  //     if (step?.tags[0].includes('emailstart')) {
-  //       while (step?.tags[0] !== "emailend") {
-  //         const nextStep = step[i + 1]
-  //         const mergedParagraphs = [...mergedParagraphs[i], ...nextStep]
-  //         return mergedParagraphs
-  //       }        
-  //     }
-  //   })
-
-  // function mergedEmail(currentParagraphs) {
-  //   currentParagraphs.map((step, i) => { 
-  //     if (step.email === "start") {
-  //       while (step.email !== "end") {
-  //         // merge existing paragraph array with new step paragraph array until you hit the end marker
-  //         const nextStep = step[i + 1]
-  //         const mergedParas = [...mergedParas[i], ...nextStep]                
-  //       }
-  //   }
-  //   // return mergedParas;
-  //   })
-  //   console.log(mergedEmail)
-  // }
-  
+const EmailPage = () => {
   return (
-    <Fade in={true} timeout={500}>
-      <Box className={classes.EmailWrapper}>
-        {/* Email Header */}
-        <div className="Email__header">
-
-          <Typography style={{color: "white"}}>{specialTags.emailheader}</Typography>
-          {/* <div className='Email__header--right'>
-            <AttachmentRoundedIcon style={{marginRight: "10px", color: "white"}} />
-            <SendIcon style={{color: "white"}}  />
-          </div> */}
-        </div>  
-
-          {/* <div className="Email__header__description"> */}
-            <div className="Email__details"> <div className='Email__details--name'>To</div>  {specialTags.emailto}</div>            
-            <div className="Email__details" > <div className='Email__details--name'>From</div> {specialTags.emailfrom}</div>            
-            <div className="Email__details" > <div className='Email__details--name'>Subject</div> {specialTags.emailsubject}</div>            
-          {/* </div> */}
-        
-        
-        
-        <Box id='EmailText' className='Email__messages'>
-          {/* Email Messages */}
-
-          <div className="typing">
-            <div className="text-cover"></div>
-              {mergedEmail()}
-            
+    <div>
+      <div className="top-border">
+        <Grid container>
+          <div className="time">
+            9:41
           </div>
-          <div>
-              {/* Reply Email Message */}
-              {specialTags.replyemaildate &&
-                <Box className="Email__replySection">
-                  {specialTags.replyemaildate} <br />
-                  <Box className="Email__replySection--content">
-                    {specialTags.replyemailtext.split('/n').map((line, i) => <span key={i}>{line}<br /><br /></span>)}
-                  </Box>
-                </Box>
-              
-              }
+          <div className="misc-icons">
+            <SignalCellularAltIcon size="small"/>
+            <WifiIcon size="small"/>
+            <Battery90Icon size="small"/>
           </div>
-
-        </Box>
-        <div className="Email__sendWrapper">
-          <div className='Email__sendWrapper__sendButton'>Tap to draft email</div>
-          <div className='Email__sendWrapper__sendButton--right '><ExpandMoreRoundedIcon/></div>
+         
+        </Grid>
+        </div>
+      <AudioPlayer />  
+      
+      <Box border={1}>
+      <div className="email-wrapper">
+        <div className="email-header">
+          <Grid container>
+            <div className="arrow-back">
+            <ArrowBackIosIcon/>
+            </div>
+            <div className="email-compose">
+            Compose
+            </div> 
+            <div className="close-icon">
+            <CloseIcon/>
+            </div>
+          </Grid>
         </div>
 
-        <NextButton getStory={getStory} />
+        <div className="email-content">
+            <div className="email-from">
+              <Grid container>
+              From: email@mail.com
+              <div className="arrow-drop">
+                <ArrowDropDownIcon/>
+              </div>
+              </Grid>
+            </div>
+            <Divider/>
+            <div className="email-to">
+            To: email@mail.com
+            </div>
+            <Divider/>
+            <div className="email-subject">
+            Subject: Subject
+            </div>
+            <Divider/>
+            <div className="email-body">
+            Compose email
+            </div>
+        </div>
+
+        <div className="email-actions">
+          <Grid container>
+          <div className="send-button"> 
+            <Button variant="contained" color="primary" size="large">
+              Send
+            </Button>
+          </div>
+          <div className="attachment-delete">
+          <AttachmentIcon fontSize="large" />
+          <DeleteIcon fontSize="large"/>
+          </div>
+          </Grid>
+        </div>
+        
+      </div>
       </Box>
-    </Fade>
+    </div>
   )
 }
 
-export default Email
+export default EmailPage; 

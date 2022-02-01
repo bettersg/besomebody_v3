@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
   nextButton: {
     bottom: 0,
     right: 0,
-    height: '50px', 
+    height: '70px', 
     width: '100%' ,
     position: 'absolute',
     textAlign: 'center',

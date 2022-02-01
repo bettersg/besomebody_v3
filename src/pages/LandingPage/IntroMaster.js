@@ -7,7 +7,7 @@ import {
 } from '@material-ui/core'
 // import { Alert } from '@material-ui/lab'
 import { useAuth } from '../../contexts/AuthContext'
-import { Link , useHistory, useParams} from 'react-router-dom'
+import { Link , useHistory} from 'react-router-dom'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import OpeningSequence from './OpeningSequence'
 
@@ -33,20 +33,24 @@ const useStyles = makeStyles((theme) => ({
   
 const IntroMaster = (props) => {
     // const { introParagraphs } = props;
-    // const { roomCode } = props;
     const [isLoading, setIsLoading] = useState(false)
     
     const classes = useStyles()  
     const history = useHistory()
-    // const { roomCode } = useParams()
    
-    // console.log(roomCode)
+   
     
     return (
       <Box className={classes.background}>
-      
+        
         <OpeningSequence />
-         
+           
+          
+        
+   
+   
+  
+        
       </Box>
     )
   }
