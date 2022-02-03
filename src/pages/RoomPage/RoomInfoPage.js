@@ -13,7 +13,7 @@ import { getRoomDb } from '../../models/roomModel'
 // import { firestore} from '../../firebase'
 import { updateRoomParticipantsDb } from '../../models/roomModel'
 import { useSnackbar } from '../../contexts/SnackbarContext'
-
+import { updateUserRoomDb } from '../../models/userModel'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -135,6 +135,7 @@ const RoomInfoPage = () => {
     try {
       setIsLoading(true)          
       await updateRoomParticipantsDb(room.id, currentUser.id)  
+      await updateUserRoomDb(currentUser.id, room.id)  
       console.log('Room Updated', room.id)
       history.push('/')  // redirect to root which will be the characterchoice page now.     
     } catch (err) {

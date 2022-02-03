@@ -31,7 +31,7 @@ export const updateRoomParticipantsDb = async (id, userId) => {
             participantIds: [userId]
           },{merge: true})
         }
-        if (doc.data().participants.includes(userId)) {
+        if (doc.data().participantIds.includes(userId)) {
           console.log("User already exists in room");
           return null
         }
