@@ -94,6 +94,11 @@ const ShareStep = ({ reflection, characterId, setState, getState, next }) => {
 
   const persona = CHARACTER_MAP.find((character) => character.characterId === characterId);  // I modified the last part slightly because  in this component, we know the characterId so we can reference that instead of the useParams option.
   const personaName = persona.name.split(" ")[0]
+
+  
+  const discordLink = CHARACTER_MAP.flatMap(character => character.chapters).find( ({reflectionId}) => reflectionId === reflection.id).discordLink
+
+  console.log('discord',discordLink)
     
   const data2 = getState('answerDocs') ? getState('answerDocs') : null;  
   const empathyCharacter = getState('answerDocs') ?
@@ -123,9 +128,13 @@ const ShareStep = ({ reflection, characterId, setState, getState, next }) => {
 
   return (
     <Box className={classes.background}>
-      <Typography className={classes.headerText}>Share your story on social media!</Typography>
-      <ShareableImageContainer data={data}></ShareableImageContainer>
+      <Typography className={classes.headerText}>Join our ToBeYou community</Typography>
+      <Typography className={classes.headerText}>Discuss reflections, share stories.</Typography>
+      {/* <ShareableImageContainer data={data}></ShareableImageContainer> */}
+      <a href={discordLink}  target="_blank" ><img src="/reflection/discord_icon.png" /></a>
+      <a href="https://www.facebook.com/groups/4539124799548644" target="_blank"><img src="/reflection/facebook_icon.png" /></a>
       <Box className={classes.bottom}>  
+        
         <Typography className={classes.mainMenu} onClick={() => history.push('/characterchoice')}>
             Return to main menu
         </Typography>
