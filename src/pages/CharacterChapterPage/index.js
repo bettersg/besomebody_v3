@@ -14,6 +14,7 @@ import { useParams, Link, useHistory } from 'react-router-dom'
 import SideMenu from '../SimpleSideMenu/SideMenu'
 import NadiaInk from '../../stories/nadia.ink.json'
 import AmanInk from '../../stories/aman.ink.json'
+import RaviInk from '../../stories/ravi.ink.json'
 
 import './styles.scss'
 import '../styles.css'
@@ -45,23 +46,29 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const getInkJson = (nameParam) => {
-  switch (nameParam) {
-    case 'nadia': {
-      return {
-        inkJson: NadiaInk,
-        characterId: 1,
-      }
-    }
-    case 'aman': {
-      return {
-        inkJson: AmanInk,
-        characterId: 2,
-      }
-    }
-    default: {
-      return null
-    }
+  const persona = CHARACTER_MAP.find((character) => character.linkName === nameParam)
+  return {
+    inkJson: persona.jsonFile,
+    characterId:persona.characterId,
   }
+
+  // switch (nameParam) {
+  //   case 'nadia': {
+  //     return {
+  //       inkJson: NadiaInk,
+  //       characterId: 1,
+  //     }
+  //   }
+  //   case 'aman': {
+  //     return {
+  //       inkJson: AmanInk,
+  //       characterId: 2,
+  //     }
+  //   }
+  //   default: {
+  //     return null
+  //   }
+  // }
 }
 
 const CharacterChapterPage = (props) => {
