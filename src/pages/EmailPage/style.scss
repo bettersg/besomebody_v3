@@ -93,7 +93,7 @@
 }
 .typed-out {
     // margin-top: 12px !important; 
-
+    font-family: "Inter";
     &:last-child {
         &:after{
             content: "|";
@@ -101,46 +101,39 @@
         }
     }
 }
-// .typing {
-//     width: 100%;
-//     overflow: hidden;
-//     top: 0px;
-//     position: relative;
-//     animation: typeIt 320s steps(10) infinite;
+.type {
+    font-family: "Inter";
+    margin-bottom: 16px; 
+    
 
-//     p {
-//         line-height: 2em;
-//         margin: 0; // Turn off margin bottom to make typing animation easier
-//         // text-indent: 2em; // give it indents for first line
-//     }
-// }
-// .text-cover {
-//     position: absolute;
-//     left: 0;
-//     bottom: 0;
-//     height: 2.5em;
-//     background: #fff;
-//     width: 100%;
-//     animation: revealLine 2s steps(1) infinite;
-// }
+    &:last-child {
+        color:#0000;
+        background:
+        linear-gradient(-90deg,#000000 2px,#0000 0) 10px 0,
+        linear-gradient(#000000 0 0) 0 0;
+        background-size:calc(var(--n)*1ch) 200%;
+        -webkit-background-clip:padding-box,text;
+        background-clip:padding-box,text;
+        background-repeat:no-repeat;
+        animation: 
+        b .5s infinite steps(1),   
+        t calc(var(--n)*.03s) steps(var(--n)) forwards;
+    }
+    br {
+        display: block;
+        margin-bottom: 10px;
+        line-height:12px;
+        content: " ";
+    }
+  }
+  
+  @keyframes t{
+    from {background-size:0 200%}
+  }
+  @keyframes b{
+    50% {background-position:0 -100%,0 0}
+  }
 
-// @keyframes typeIt {
-//     0% {
-//         // top: 0;
-//         height: 2em;}
-//     100% {
-//         // top: -60em;
-//         height: 100%;
-//     }
-// }
-// @keyframes revealLine {
-//     0% { left: 0%; }
-//     100% { left: 100%; }
-// }
-// @keyframes typing {
-//     from { width: 0 }
-//     to { width: 100% }
-// }
 @-webkit-keyframes blink{
 	0%{opacity: 0;}
 	100%{opacity: 1;}
@@ -165,6 +158,11 @@
             padding: 14px 20px; 
             align-items: center;
             display: flex;
+        }
+        &__nextbutton {
+            position: absolute; 
+            top: 75px; 
+            height: 100px !important; 
         }
     }
     &__header {
@@ -307,7 +305,12 @@
     background: white;
     display: flex;
     align-items: center;
-    
+    &__nonStory { 
+        height: 12px; 
+        background-color: $lapis20;
+        border-radius: 10px;
+        margin: 4.5px 0; 
+    }
     &--image {
         border-radius: 50px;
         height: 48px; 
@@ -324,9 +327,6 @@
     &--subject {
         font-weight: 700 !important;
         color: $midnight100;
-        &--nonStoryline {
-            color: rgb(171, 171, 171);
-        }
     }
     &--preview {
         color: $midnight60; 

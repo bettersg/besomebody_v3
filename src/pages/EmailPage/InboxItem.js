@@ -6,11 +6,19 @@ export const InboxItem = ({from, profileIcon, subject, emailPreview, storyline})
         <Box className={`InboxItem`}>
             {profileIcon?<img src={profileIcon} className="InboxItem--image" />:<img src="/email_page/noprofileImg.png" className="InboxItem--image" />}
             
-            <Box>
-                <Typography className={`InboxItem--from${storyline?"": "--nonStoryline"}`}>{from}</Typography>
-                <Typography variant="subtitle" className={`InboxItem--subject${storyline?"": "--nonStoryline"}`}>{subject}</Typography><br/>
-                <Typography variant="subtitle" className={`InboxItem--preview${storyline?"": "--nonStoryline"}`}>{emailPreview}</Typography>
-            </Box>
+            {storyline?
+                <Box>
+                    <Typography className={`InboxItem--from`}>{from}</Typography>
+                    <Typography variant="subtitle" className={`InboxItem--subject`}>{subject}</Typography><br/>
+                    <Typography variant="subtitle" className={`InboxItem--preview`}>{emailPreview}</Typography>
+                </Box>
+            :
+                <Box>
+                    <Box className={`InboxItem__nonStory`} style={{width: "123px"}}></Box>
+                    <Box className={`InboxItem__nonStory`} style={{width: "170px"}}></Box>
+                    <Box className={`InboxItem__nonStory`} style={{width: "246px"}}></Box>
+                </Box>
+            }
         </Box>
     )
 }
