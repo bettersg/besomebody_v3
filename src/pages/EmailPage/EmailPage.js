@@ -103,7 +103,7 @@ const Email = (props) => {
            )
       });
     
-//  console.log('mergedEmail', mergedEmail(currentParagraphs))    
+ console.log('mergedEmail', choices)    
 //  console.log('specialTags', specialTags)
 
   // const mergedEmail = currentParagraphs =>
@@ -152,7 +152,7 @@ const Email = (props) => {
         
         
         
-        <Box id='EmailText' className='Email__messages'>
+        <Box id='EmailText' className={`Email__messages ${choices.length > 0 ? 'choices' : ''}`}>
           {/* Email Messages */}
 
           <div className="typing">
@@ -175,11 +175,33 @@ const Email = (props) => {
 
         </Box>
         <div className="Email__sendWrapper">
-          <div className='Email__sendWrapper__sendButton'>Tap to draft email</div>
+          <div className={`Email__sendWrapper__sendButton${choices.length !== 0 ?" have-choice":""}`}>{choices.length !== 0 ? "Choose your reply" :"Tap to draft email"}</div>
           <div className='Email__sendWrapper__sendButton--right '><ExpandMoreRoundedIcon/></div>
         </div>
-
-        <NextButton getStory={getStory} />
+        
+        {choices.length > 0 ? (
+              <Box
+                className={`Email__choicesWrapper ${
+                  choices.length === 0 ? 'no-choices' : 'w3-animate-fading'
+                }`}
+                // ref={choicesRef}
+              >
+                {choices.map((choice, i) => {
+                  return (
+                    <Box
+                      className="choices"
+                      onClick={() => setChoice(choice.index)}
+                      key={i}
+                    >
+                      {choice.text}
+                    </Box>
+                  )
+                })}
+              </Box>
+            ) : (
+              <NextButton getStory={getStory} />
+            )}
+        {/* <NextButton getStory={getStory} /> */}
       </Box>
     </Fade>
   )

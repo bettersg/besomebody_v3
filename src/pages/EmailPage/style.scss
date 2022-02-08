@@ -215,10 +215,10 @@
 
         &.choices {
             transition: height 0.4s; 
-            height: calc(calc(var(--vh, 1vh) * 100) - 313px); 
+            height: calc(calc(var(--vh, 1vh) * 100) - 442px); 
         // height: 55.3vh; 
             @media screen and (min-device-width:600px) {
-                height: 350px; 
+                height: 221px; 
             }
         }
         &--sender, &--receiver {
@@ -257,6 +257,9 @@
             font-size: 14px;
             // opacity: 80%;
             background-color: $midnight10;
+            &.have-choice {
+                font-weight: 600;
+            }
             &.choice {
                 border: $aqua100 solid 2px;
                 background-color: transparent;
@@ -281,7 +284,7 @@
         height: 170px; 
         overflow-y: scroll;
         transition: height 0.4s; 
-        background-color: $dark1;
+        background-color: $white;
 
         animation:opac 0.9s;
         @keyframes opac{
@@ -294,11 +297,12 @@
             user-select: none;
             padding: 13px 20px;
             text-align: center;
-            background-color: $aqua1;
-            color: white;
+            background-color: $tangerine10;
+            color: $tangerineBase;
             cursor: pointer;
             &:hover {
-                background-color: rgba(29, 191, 123, 0.4);
+                background-color: $tangerineBase;
+                color: $white;
             }
     
         }
