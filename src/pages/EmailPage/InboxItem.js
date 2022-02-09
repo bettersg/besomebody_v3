@@ -4,7 +4,7 @@ import './style.scss'
 export const InboxItem = ({from, profileIcon, subject, emailPreview, storyline}) => {
     return (
         <Box className={`InboxItem`}>
-            {profileIcon?<img src={profileIcon} className="InboxItem--image" />:<img src="/email_page/noprofileImg.png" className="InboxItem--image" />}
+            {profileIcon?<img src={"/images/"+profileIcon} className="InboxItem--image" />:<img src="/email_page/noprofileImg.png" className="InboxItem--image" />}
             
             {storyline?
                 <Box>

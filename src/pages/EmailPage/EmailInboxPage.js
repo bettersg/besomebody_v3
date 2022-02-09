@@ -140,8 +140,7 @@ const EmailInbox = (props) => {
               <InboxItem />
               <InboxItem />
               <InboxItem />
-              <InboxItem />
-          
+              <InboxItem />          
         </Box>
         <NextButton getStory={getStory} />
       </Box>

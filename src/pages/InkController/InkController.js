@@ -120,7 +120,8 @@ const InkController = () => {
   const history = useHistory()
   const { name } = useParams()
   // console.log('inkController globalVar: ' , globalVariables)
-  console.log('inkController specialTags: ' , specialTags)
+  // console.log('inkController specialTags: ' , specialTags)
+  // console.log('inkController paragraphs: ' , paragraphs)
   // console.log('inkController knot: ' + currentKnot)
   // ==============================================================
   // Filter paragraphs based on current knot
@@ -129,7 +130,7 @@ const InkController = () => {
   const [whatsAppParagraphs, setWhatsAppParagraphs] = useState([])
   const [emailParagraphs, setEmailParagraphs] = useState([])
 
-  console.log('paragraphs', paragraphs)
+  // console.log('paragraphs', paragraphs)
   useEffect(() => {
     if (currentKnot || paragraphs[paragraphs.length - 1]?.currentKnot) {
       const nextParagraphs = paragraphs.filter((paragraph) => {

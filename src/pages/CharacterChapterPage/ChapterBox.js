@@ -94,7 +94,7 @@ export default function ChapterBox(props) {
       .catch(function (err) {
         console.error('One or more images have failed to load :(')
         console.error(err.errored)
-        console.info('But these loaded fine:')
+        console.info('These images pre-loaded fine:')
         console.info(err.loaded)
       })    
     loadSavedVariables(chaptDetails.knotTag)      // doing this creates a problem - the story starts at the knotTag with all the previous globalVariables ... but getStory then jumps ahead to the last player position in the autosave game.
