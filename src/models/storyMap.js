@@ -270,6 +270,7 @@ export const CHARACTER_MAP = [
         knotTag: "aman_1_intro",
         summary: "Aman enlists in National Service. It’s a proud moment for his family, but Aman is uneasy...",
         playable: true,
+        discordLink: 'https://discord.com/channels/934082509061357598/937966433130913883',
         images: [
           "/images/pixel.png",          
           "/images/ui_aman_message.jpg",
@@ -341,6 +342,7 @@ export const CHARACTER_MAP = [
         knotTag: "aman_2_intro",
         summary: "Aman discovers talent is not enough to crack the silver screen. Where will he draw the line?",
         playable: true,
+        discordLink: 'https://discord.com/channels/934082509061357598/937966433130913883',
         images: [
           '/images/bg_aman_beach.jpg',
           '/images/bg_aman_bedroom.jpg',
@@ -384,6 +386,7 @@ export const CHARACTER_MAP = [
         knotTag: "aman_3_intro",
         summary: "After a shocking argument, Aman must decide how his life’s script will unfold.",
         playable: true,
+        discordLink: 'https://discord.com/channels/934082509061357598/937966433130913883',
         images: [
           '/images/bg_aman_intro.jpg',
           '/images/bg_aman_gurdwara.jpg',
@@ -490,6 +493,7 @@ export const CHARACTER_MAP = [
         knotTag: "ravi_1_intro",
         summary: "Ravi's world is turned upside down, and he faces difficult choices in moving on.",
         playable: true,
+        discordLink: 'https://discord.com/channels/934082509061357598/938335768521363456',
         images: [           
           "/images/bg_launch.jpg",
           "/images/bg_reflections.jpg",
@@ -556,6 +560,7 @@ export const CHARACTER_MAP = [
         knotTag: "ravi_2_intro",
         summary: "Ravi finds a new gig at a cafe. And possibly something more.",
         playable: false,
+        discordLink: 'https://discord.com/channels/934082509061357598/938335768521363456',
         images: [           
           "/images/bg_launch.jpg",
           "/images/bg_reflections.jpg",
@@ -581,6 +586,7 @@ export const CHARACTER_MAP = [
         knotTag: "ravi_3_intro",
         summary: "Ravi lands an internship to fulfill his university credits. And finds himself in a situation that tests him.",
         playable: false,
+        discordLink: 'https://discord.com/channels/934082509061357598/938335768521363456',
         images: [           
           "/images/bg_launch.jpg",
           "/images/bg_reflections.jpg",
@@ -606,6 +612,7 @@ export const CHARACTER_MAP = [
         knotTag: "ravi_4_intro",
         summary: "Ravi breaks down and reveals his fears to both Valerie and Revati. They give him a new perspective, and much-needed reminders. ",
         playable: false,
+        discordLink: 'https://discord.com/channels/934082509061357598/938335768521363456',
         images: [           
           "/images/bg_launch.jpg",
           "/images/bg_reflections.jpg",
