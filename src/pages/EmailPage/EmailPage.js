@@ -103,7 +103,7 @@ const Email = (props) => {
            )
       });
     
- console.log('mergedEmail', choices)    
+// console.log('mergedEmail', choices)    
 //  console.log('specialTags', specialTags)
 
   // const mergedEmail = currentParagraphs =>
