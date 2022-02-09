@@ -1010,7 +1010,12 @@ Reflection 7
 #knot:ravi_2_intro
 #ui:narrator
 #background:bg_ravi_bedroom.jpg
-One month after the move. Ravi, lying in bed in his new room.
+One month after the move. #title
+Moving out on my own was rough. 
+Amma didn’t take the news well, as expected. She preferred me to save money and stay home.
+But I need to focus on studies so that I can do well and get us out of this rut.
+Saving rental money versus failing out of university ... the choice was clear to me.
+But she was right, the monthly rent was a big bite out of my small savings.
 
 ~ chapter_id = 2
 
@@ -1024,14 +1029,160 @@ Coffee Shop Kannasamy #title
 === ravi_2_1_narration ===
 #knot:ravi_2_1_narration
 #ui:narrator
-#background:bg_ravi_intro.jpg
-Holding
+#background:bg_ravi_bedroom.jpg
+{ravi_1_dormhousing == true: 
+At least in the dorm I’ve got more time to study. 
+And make a few friends, which is a luxury I could not afford before. I’m so glad I don’t have to deal with bad landlords.
+- else: 
+At least in this rental room I’ve got peace and quiet to study, and nobody to distract or bother me.
+And this landlord seems pretty chill. I guess not all of them are bad la.
+}
+I miss my family though, being here alone.
  
 -> ravi_2_1
 
 === ravi_2_1 ===
 #knot:ravi_2_1
+#ui:whatsapp 
+#background:whatsapp.png
+#chat_group_title:Revati
+#chat_group_image:ico_ravi_revati.jpg
+#speaker_1_name:Revati
+#timestamp:21.34
+Hey Thangachi (little sister) #speaker_self
+How have you guys been doing #speaker_self
+Just wanted to check in #speaker_self
+Aww #speaker_1
+Do you miss us? #speaker_1
 
+I’d be lying if I say I didn’t #speaker_self
+Living on my own is kind of new for me #speaker_self
+
+
+Yeah.  It’s weird to not see you around #speaker_1
+But I mean all is good. Amma is looking for a job #speaker_1
+And I’m getting rekt by my exam ten year series. Thanks for buying that for me btw. But I’ll manage #speaker_1
+How about you? Room good? Have you put up all your ugly posters already? There's still a box of them left here.  #speaker_1
+Well... it’s as good as it’ll get #speaker_self
+Living on my own is surprisingly expensive #speaker_self
+I didn’t realise how much money I had to spend...Like on food alone #speaker_self
+Don’t know is it because I eat too much or my taste buds spoiled by Amma's cooking #speaker_self
+But yeah like my savings are running out at this rate #speaker_self
+I need to see how I can cut costs #speaker_self
+Have you considered looking for a part time job? #speaker_1
++ [I know I should] I know I should… I haven’t #speaker_self
+    But I don’t have the time right now to look for one #speaker_self
+    Classes are busy and I’m looking for an internship too #speaker_self
+    Can’t do both at once #speaker_self
+    Anyway I don’t think anybody will hire at short notice #speaker_self
+
++ [I want to focus on studies] I just want to focus on my school for now. #speaker_self
+    Classes are busy and I’m looking for an internship too #speaker_self
+    Can’t do both at once #speaker_self
+    Anyway I have a better way to save money. Just eat maggi mee every day for almost every meal! #speaker_self
+- Btw can you tell Pushpa Aunty I won’t be coming over for dinner today? #speaker_self
+I have something on. Tyty #speaker_self
+Huh #speaker_1
+Why not? You going on a date?!? #speaker_1
++ [Why would that be so shocking?] Eh no need to sound so shocked ok. #speaker_self
+    Just because I don't report my daily movements to you doesn't mean I don't have a social life ok. #speaker_self
+    wait for real? you're going on a date Anna (brother)? #speaker_1
+    uh.. no. but uh, one day I will.  #speaker_self
+    haha. Let me know when you meet someone so I can warn the poor girl about your lame jokes #speaker_1
++ [Lol I wish] Lol I wish #speaker_self
+    Sadly no. Not a priority right now anyway #speaker_self
+- I’m planning to visit a new café #speaker_self
+You remember Marie? #speaker_self
+The food girl? #speaker_1
+Yeah lol #speaker_self
+The food girl. I’ll tell her you called her that #speaker_self
+Don’t HAHA later she will be mad at me #speaker_1
+But yes what about her #speaker_1
+Well she left her job at an MNC and opened up a new café #speaker_self
+It’s called Resipi Alegria #speaker_self
+I plan to visit her later #speaker_self
+My other friends visited already haha #speaker_self
+I didn’t have time thanks to classes #speaker_self
+But post-midterm week has been quite chill #speaker_self
+Ohhh #speaker_1
+So you’re going to be eating there? #speaker_1
+Sadly no also haha #speaker_self
+I’m broke remember #speaker_self
+LOL I’ll just grab a drink #speaker_self
+And go home cook instant noodles I guess #speaker_self
+Peak cuisine #speaker_self
+oh ok sure #speaker_1
+last call, are you sure you can’t make it tonight? #speaker_1
+Aunty is cooking fish curry #speaker_1
+ 🥲  I can’t, I only have this slot to visit her new cafe and she's really excited about it.  #speaker_self
+
+-> ravi_2_2_narration
+
+=== ravi_2_2_narration ===
+#knot:ravi_2_2_narration
+#ui:narrator
+#background:bg_ravi_cafe.jpg
+Finally here. Took a while to find Marie's new cafe. 
+Whoa. Sure looks fancy.
+The place isn’t too packed right now. I guess 4pm on a Thursday is a weird time to have coffee.
+There’re not too many customers either. There’s a couple in the corner, and this reallllllly pretty girl sitting at the counter. I should definitely visit more often if this is the crowd hehe.
+Wait, no time to get distracted. Where is she… ah, there’s Marie! 
+
+-> ravi_2_2
+
+=== ravi_2_2 ===
+#knot:ravi_2_2
+#ui:scene
+#background:bg_ravi_cafe.jpg
+#speaker_right_image:cha_ravi_marie_normal.png
+#speaker_right_name:Marie
+Hey! #speaker_self
+Hey Ravi! What are you doing here? #speaker_right
+Playing scrabble lah what you think? #speaker_self
+Getting a caffeinated beverage from your fine establishment. #speaker_self
+Wah, big words from the man who hasn’t turned up once since I opened! #speaker_right
+Sorry lah Marie! Wish I could have come sooner. I’ve been busy. #speaker_self
+With what? Chasing girls? #speaker_right
+No time for girls, man. #speaker_self
+You always had time for girls leh. #speaker_right
+Aiyoh. I dated ONE girl for like a month when I was a teenager, and you think I’m a Romeo.  #speaker_self
+Well you were always the charmer la #speaker_right
+Yeah.. well.. A lot has changed since then. #speaker_self
+I changed after Appa left. #inner_monologue
+I wish I was still the charmer she thinks I am. #inner_monologue
+I wish .... I wasn’t afraid of what a girl would see if she looked too deeply into my eyes.#inner_monologue
+Haha indeed, you suddenly look more like a real adult. And you’re wearing real clothes, not baggy t-shirts everywhere  #speaker_right
+Anyway, would you like a coffee? #speaker_right
+Yes please! #speaker_self
+Ok check out the menu, tell me what you like. It's on the house!  #speaker_right
+
++ [Iced Latte] Oh, I’ll take an Iced latte. #speaker_self
+    Want to try our green tea latte instead? I just added it to the menu. Trust me, they are amazing. #speaker_right
+    Nah, not really a fan of green tea. #
+    First time I’ve ever heard that. Who isn’t a fan of green tea? #speaker_right
+    Hmm, how about our hazelnut latte? #speaker_right
+    Sorry, I’m allergic to hazelnuts. #speaker_self
+    ...Seriously? #speaker_right
+    Yeah... #speaker_self
+    Ok. A small, boring iced latte for a small, boring Ravi. #speaker_right
+    Eh, don’t like that leh... #speaker_self
+    Fine... one iced latte coming up, for a not-small, not-boring, Ravi. #speaker_right
+    Haha.... thank you! #speaker_self
+
++ [Chilli Coconut Agave Cafe Latte]  Wow. I’d like to try the ... “Chilli Coconut Agave Café Latte"? I think… #speaker_self
+    Waaah. Man after my own heart. That’s my favourite. #speaker_right
+    Haha...really? Are you kidding me? #speaker_self
+    No, I’m not. I mean come on man, I made the menu. #speaker_right
+    Oh…it’s just that chilli coconut agave coffee doesn’t sound...that dope… #
+    It is! Trust me on this. #speaker_right
+
+- So, have time to catch up? Since we hardly hang out nowadays, after all. #speaker_right
+I mean, I don’t mind. But is it ok? Will your customers mind their barista just chatting at the counter? #speaker_self
+Sure they won’t mind! I mean, there’s not that many people around right now. #speaker_right
+The couple just want to be left alone. And that girl there is Valerie, one of my regulars. #speaker_right
+Comes in nearly every afternoon. She’s probably heard a hundred of my conversations at least. I talk to her a lot too. I’m sure she won’t mind. #speaker_right
+Did Marie say that her name was “Valkryie”? Weird name. But I guess I don’t know her after all. Better not look at her too much. She might catch me staring. #inner_monologue
+Anyway, how is everything? How is Revati? I remember meeting her for your birthday. Oh, and that biryani your mum cooked. Getting hungry just thinking about it. #speaker_right
 
 
 
