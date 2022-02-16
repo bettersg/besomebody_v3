@@ -1184,6 +1184,150 @@ Comes in nearly every afternoon. She’s probably heard a hundred of my conversa
 Did Marie say that her name was “Valkryie”? Weird name. But I guess I don’t know her after all. Better not look at her too much. She might catch me staring. #inner_monologue
 Anyway, how is everything? How is Revati? I remember meeting her for your birthday. Oh, and that biryani your mum cooked. Getting hungry just thinking about it. #speaker_right
 
++ We are ok lah... [] Well, I mean there’s been some bumps in the road. #speaker_self  
++ Not so great [] to be honest #speaker_self
+
+- What happened? #speaker_right
+Mum lost her job. #speaker_self
+Oh dear. #speaker_right
+And we have moved out to our aunt’s place. #speaker_self
+All of you? #speaker_right
+Yeah. Well, I got my own place now. Just a small room. #speaker_self
+That sounds...stressful. #speaker_right
+It is. #speaker_self
+Is your mum ok? #speaker_right
+Well… she puts up a brave front for everything. #speaker_self
+
+I feel like she doesn’t want to share her fear with us. But I can see it in her eyes. I caught her sobbing the other day. While boiling milk. #speaker_self
+Asked her what’s wrong. And she was like, cutting onions for dinner. Come on! #speaker_self
+Of course she doesn’t want to appear weak to her kids.  She’s been your rock. #speaker_right
+Yeah. And I’m stuck between that and a hard place. #speaker_self
+Hey. You got to try and think from her perspective. #speaker_right
+Have you thought about how you can help out? She’s your mother, you know, with A LOT of weight on her shoulders. #speaker_right
+She doesn’t want to put any of it on you. #speaker_right
+I want to help out. But what can I do? Except finish my course, get my internship, get a job. #speaker_self
+That will take you, like a couple of years right? #speaker_right
+Yeah. #speaker_self
+How about helping her out now? Go on a walk with her. Watch a movie. Speak to her more often. Show her you’re not just mopey lil’ boring Ravi. She needs you, man.  #speaker_right
+Yeah, all that is fine. But still we hardly have money to cover our meals. #inner_monologue
+... #speaker_self
+Hey man, what are you thinking about? #speaker_right
+Earth to Ravi...? #speaker_right
+... #speaker_self
+Dude, don’t just live in your head. Talk to me! #speaker_right
++ [I should talk to Marie. Maybe she can help.] Well...it’s just that I can do all that, but it won’t change our financial situation.  You know what I mean? #speaker_self
+    Well, I’m not saying it will. I don’t think your mum is expecting that either. But you can at least be a good son to her. #speaker_right
+    Sometimes just reaching out is what it takes to make the other person feel better. #speaker_right
+    It’d still be putting a band-aid on a fracture. #speaker_self
+
++ [I can’t talk to Marie about this right now. ] It’s nothing. Yeah, you’re right. #speaker_self
+    Come on man. What’s wrong? Tell me. #speaker_right
+    Hey... I can’t, not right now. #speaker_self
+    Why not? Aren’t we friends? We’ve known each other for so long. #speaker_right
+    Even if I can’t help you, I can at least be a listening ear. #
+    Ok… It’s just that...I am just very aware of how limited my “help” is. #speaker_self
+    Of course, I can talk to her. Spend time with her. #speaker_self
+    But that won’t help our financial situation.  It’d be like putting a band-aid on a fracture. #speaker_self
+- Hmm...how about getting a proper cast? #speaker_right
+What do you mean? #speaker_self
+Get a job. With us. We’re looking for part-time help. I can only serve that many customers at once. #speaker_right
+Seriously? #speaker_self
+Seriously. Plus, I wouldn’t mind having more people to talk to. I’m sure Valerie’s getting tired of my rants. I could always use a new victim. Both for my rants and my coffee experiments. What do you say? #speaker_right
+Oh my goodness! Yes! I would love to work here. It’ll be like the good old days. #speaker_self
+Great! Can you make coffee? #speaker_right
+Oh...no... #speaker_self
+Honestly, I can’t even boil water right. #speaker_self
+Perfect. I’ll be your teacher. Your guide into the wonderful world of baristas and brewing. You better pay attention if you want to work here! #speaker_right 
++ [Are you taking pity on me? ] Eh you’re not just doing this to take pity on me right? #speaker_self
+    I run a business. I can’t afford to just be kind. I need someone I can trust behind the cash register, which is hard to find. Trust me, you’re helping me. #speaker_right 
++ Thank you so much for this opportunity! [] #speaker_self
+    I’ll be the best bistara ever! #speaker_self
+    Barista. And don’t thank me yet, because I might be a terrible boss.
+
+- Thank you! #speaker_self
+
+// quiz goes Here
+
+-> ravi_2_3_narration
+
+=== ravi_2_3_narration ===
+#knot:ravi_2_3_narration
+#ui:narrator
+#background:bg_ravi_cafe.jpg
+It was hard work, and Marie had an even tougher job teaching me. 
+But after what felt like forever, I finally learnt how to make a decent cuppa.
+When I got my first month’s pay, a huge weight lifted off my shoulders. It was the best feeling I had in a long while. 
+{ravi_1_dormhousing == true: 
+I could just cover my dorm room rent... and skipped enough meals to pay for Revati’s books and school supplies too. 
+ - else :
+ I could easily cover my rental costs... and even had enough left over to pay for Revati’s books and school supplies too!
+ }
+When you have money issues always hanging over your head, not having to worry about how to pay things off is the best kind of luxury. The kind you only feel once you’ve lived both scenarios.
+The last 6 weeks working here have been pretty good. I get in to help with the lunch crowd and work till closing. It's pretty chill, I can get some homework done during the lull time.
+At about 4pm, our regular patron shows up at sits at the counter right in front of me. Hmm.. she's a bit late. Maybe she isn't coming..
+Oh wait. Speak of the devil.
+
+
+-> ravi_2_3
+
+=== ravi_2_3 ===
+#knot:ravi_2_3
+#ui:scene
+#background:bg_ravi_cafe.jpg
+#speaker_right_image:cha_ravi_valerie_normal.png
+#speaker_right_name:Val
+Ah, it’s you again. Running a bit late today? #speaker_self
+And it’s you again. Yeah, I was. Had to finish up a painting for class. I wanted to make sure the paint was dry before I left. #speaker_left
+I didn’t know you had to watch paint dry in art school. #speaker_self
+And I didn’t know you had to make fun of customers as a barista. #speaker_left
+Okay, okay, I’ll lay off the jokes. Would you like your usual today? #speaker_self
+Yes, Only if it’s as good as the last time. #speaker_left
+mmmm.... If you told me you just learnt how to make coffee a few weeks ago, I’d find it hard to believe you. #speaker_left
+Well, I had a good teacher. #speaker_self
+Or maybe, I was just a really good student. #inner_monologue
+It’s almost like you put a secret ingredient in there or something. #speaker_left
+Well... the secret ingredient is... #speaker_self
+
++ ...love[] #speaker_self
+    I wish I dared to say that out loud. #inner_monologue
+    Imagine if I did though!#inner_monologue
+    Not like it’ll work out. She’s just the regular here, and I’m just the barista. #inner_monologue
+    {ravi_1_dormhousing == true: 
+    And if I took her out on a date, Resipi Alegria is pretty much the only place I can afford because of the staff discount.  #inner_monologue
+     - else :
+    And if I took her out on a date, I doubt I can afford a nice restaurant even with the savings I have on my crappy rental. Oh god what if she finds out about my crappy rental. #inner_monologue
+     }
+    What the hell am I doing thinking about taking this girl on a date. #inner_monologue
+    Anyway, she’s out of my league. Art classes? Regular fancy lattes? Pilates and crossfit?   #inner_monologue
+    This girl is smart and sophisticated, and she’s confident– the kind of confidence built from money and stability. Oh, and she’s gorgeous as hell. #inner_monologue
+    Seriously, I should just forget it. #inner_monologue
+    Nothing. I don’t add anything.   #speaker_self
+    Maybe I’m that good.  #speaker_self
+    Oh, thank goodness... haha... You paused so long I thought you were going to say “the secret ingredient is love” or something. #speaker_left
+    Wait, what?  #inner_monologue
+
+
++ ...honey[] #speaker_self
+    To be honest, Marie told me to put some honey in your coffee if you came in. She said you’d get it. I don’t know what she meant by that though but I added our best manuka honey. #speaker_self
+    Oh no. Now that’s a bad move. She’s gonna see that it’s Marie who understands her tastes well, and I’m just the bonehead following instructions. #inner_monologue
+    Argh! Why Ravi why… #inner_monologue
+    Ah...Marie. I really tell her too much. But it’s ok, it does taste good.  #speaker_left
+    Especially because you made it. #speaker_left
+    What did they talk about? Does Val have layered conversations like that all the time? Honey and code and insights…  #inner_monologue
+    Oh man, this girl so interesting, but she’s way out of my league. #inner_monologue
+- Anyway. Mr. Barista, care for a conversation? #speaker_left
+By conversation, do you mean “complain about your day to Mr. Ravi Kannasamy”? #speaker_self
+Yes. Last time I checked, that’s part of the services here at the great Resipi Alegria, no? #speaker_left
+
+This always happens. She comes in, orders her usual, or – if she’s in an extra good mood – orders that crazy Chilli Coconut Agave Latte. #inner_monologue
+We mostly talk about her day. She’s always asking me about mine, but nothing’s really new in Mr. Barista’s life. (I can’t keep telling her she’s the highlight.)  #inner_monologue
+She’s tried getting me to open up about my background by sharing hers. #inner_monologue
+But when I get those glimpses of her interests, her family, her goals… I’d clam up on mine.  #inner_monologue
+She and I are ... different. She’s at the top of the hierarchy, free to pursue her passions, all her resources and provisions taken care of. I’m just trying to make it to the middle and provide for Amma and Revati. #inner_monologue
+When she talks about her pursuits, I feel so impressed by her achievements. And yet, I feel her incomprehension to how lucky she is, being able to feed all her focus to just passion.  #inner_monologue
+What if I were born well-off? Would I be as accomplished as Val?  #inner_monologue
+Okay, maybe not. She has way more brains and talent. #inner_monologue
+
 
 
 -> END
