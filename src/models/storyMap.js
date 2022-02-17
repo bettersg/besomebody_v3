@@ -555,7 +555,7 @@ export const CHARACTER_MAP = [
         title: "Coffee Shop Kannasamy ",
         knotTag: "ravi_2_intro",
         summary: "Ravi finds a new gig at a cafe. And possibly something more.",
-        playable: false,
+        playable: true,
         images: [           
           "/images/bg_launch.jpg",
           "/images/bg_reflections.jpg",
