@@ -1281,7 +1281,7 @@ And it’s you again. Yeah, I was. Had to finish up a painting for class. I want
 I didn’t know you had to watch paint dry in art school. #speaker_self
 And I didn’t know you had to make fun of customers as a barista. #speaker_left
 Okay, okay, I’ll lay off the jokes. Would you like your usual today? #speaker_self
-Yes, Only if it’s as good as the last time. #speaker_left
+Yes, only if it’s as good as the last time. #speaker_left
 mmmm.... If you told me you just learnt how to make coffee a few weeks ago, I’d find it hard to believe you. #speaker_left
 Well, I had a good teacher. #speaker_self
 Or maybe, I was just a really good student. #inner_monologue
