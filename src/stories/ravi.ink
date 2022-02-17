@@ -1274,8 +1274,8 @@ Oh wait. Speak of the devil.
 #knot:ravi_2_3
 #ui:scene
 #background:bg_ravi_cafe.jpg
-#speaker_right_image:cha_ravi_valerie_normal.png
-#speaker_right_name:Val
+#speaker_left_image:cha_ravi_valerie_normal.png
+#speaker_left_name:Val
 Ah, it’s you again. Running a bit late today? #speaker_self
 And it’s you again. Yeah, I was. Had to finish up a painting for class. I wanted to make sure the paint was dry before I left. #speaker_left
 I didn’t know you had to watch paint dry in art school. #speaker_self
