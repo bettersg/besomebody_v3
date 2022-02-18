@@ -1280,22 +1280,22 @@ Ah, it’s you again. Running a bit late today? #speaker_self
 And it’s you again. Yeah, I was. Had to finish up a painting for class. I wanted to make sure the paint was dry before I left. #speaker_left
 I didn’t know you had to watch paint dry in art school. #speaker_self
 And I didn’t know you had to make fun of customers as a barista. #speaker_left
-Okay, okay, I’ll lay off the jokes. Would you like your usual today? #speaker_self
-Yes, only if it’s as good as the last time. #speaker_left
-mmmm.... If you told me you just learnt how to make coffee a few weeks ago, I’d find it hard to believe you. #speaker_left
+OK OK. Would you like your usual today? #speaker_self
+Only if it’s as good as the last time. #speaker_left
+Mmmm.... If you told me you just learnt how to make coffee a few weeks ago, I’d find it hard to believe you. #speaker_left
 Well, I had a good teacher. #speaker_self
 Or maybe, I was just a really good student. #inner_monologue
 It’s almost like you put a secret ingredient in there or something. #speaker_left
 Well... the secret ingredient is... #speaker_self
 
-+ ...love[] #speaker_self
++ ...love.[] 
     I wish I dared to say that out loud. #inner_monologue
     Imagine if I did though!#inner_monologue
     Not like it’ll work out. She’s just the regular here, and I’m just the barista. #inner_monologue
     {ravi_1_dormhousing == true: 
-    And if I took her out on a date, Resipi Alegria is pretty much the only place I can afford because of the staff discount.  #inner_monologue
+    And if I were to taker her out on a date, Resipi Alegria is pretty much the only place I can afford because of the staff discount.  #inner_monologue
      - else :
-    And if I took her out on a date, I doubt I can afford a nice restaurant even with the savings I have on my crappy rental. Oh god what if she finds out about my crappy rental. #inner_monologue
+    And if I were to taker her out on a date, no way I can afford a nice restaurant - even with the savings I have on my crappy rental. Oh god, what if she finds out about my crappy rental! #inner_monologue
      }
     What the hell am I doing thinking about taking this girl on a date. #inner_monologue
     Anyway, she’s out of my league. Art classes? Regular fancy lattes? Pilates and crossfit?   #inner_monologue
@@ -1303,22 +1303,20 @@ Well... the secret ingredient is... #speaker_self
     Seriously, I should just forget it. #inner_monologue
     Nothing. I don’t add anything.   #speaker_self
     Maybe I’m that good.  #speaker_self
-    Oh, thank goodness... haha... You paused so long I thought you were going to say “the secret ingredient is love” or something. #speaker_left
+    Oh, thank goodness! Haha... You paused so long I thought you were going to say “the secret ingredient is love” or something. #speaker_left
     Wait, what?  #inner_monologue
 
 
-+ ...honey[] #speaker_self
-    To be honest, Marie told me to put some honey in your coffee if you came in. She said you’d get it. I don’t know what she meant by that though but I added our best manuka honey. #speaker_self
++ [...honey] To be honest, Marie told me to put some honey in your coffee if you came in. She said you’d get it. I don’t know what she meant by that though but I added our best manuka honey. #speaker_self
     Oh no. Now that’s a bad move. She’s gonna see that it’s Marie who understands her tastes well, and I’m just the bonehead following instructions. #inner_monologue
     Argh! Why Ravi why… #inner_monologue
     Ah...Marie. I really tell her too much. But it’s ok, it does taste good.  #speaker_left
     Especially because you made it. #speaker_left
     What did they talk about? Does Val have layered conversations like that all the time? Honey and code and insights…  #inner_monologue
     Oh man, this girl so interesting, but she’s way out of my league. #inner_monologue
-- Anyway. Mr. Barista, care for a conversation? #speaker_left
+- Anyway. Mr. Barista. Care for a conversation? #speaker_left
 By conversation, do you mean “complain about your day to Mr. Ravi Kannasamy”? #speaker_self
 Yes. Last time I checked, that’s part of the services here at the great Resipi Alegria, no? #speaker_left
-
 This always happens. She comes in, orders her usual, or – if she’s in an extra good mood – orders that crazy Chilli Coconut Agave Latte. #inner_monologue
 We mostly talk about her day. She’s always asking me about mine, but nothing’s really new in my life... and I can’t tell her she’s the highlight.  #inner_monologue
 She’s tried getting me to open up about my background. #inner_monologue
@@ -1327,11 +1325,10 @@ She and I are at different rungs of the social hierarchy. She’s at the top, fr
 When she talks about her pursuits, I feel so impressed by her achievements. And yet, the fact that she doesn't recognise how lucky she is, being able to feed all her focus to just passion...  #inner_monologue
 What if I were born well-off? Would I be as accomplished as Val?  #inner_monologue
 Okay, maybe not. She probably has way more brains and talent. And looks, too. #inner_monologue
-SO, I’ve been sooo busy nowadays. I’m juggling all these extra modules I’m taking, and I’m preparing a painting for that National Youth Fine Arts Competition this year. You know the one I’ve been talking about a lot? #speaker_left
-
+SO, I’ve been sooo busy nowadays. I’m juggling all these extra modules I’m taking, and I’m preparing a painting for that National Youth Fine Arts Competition this year. You know the one I’ve yakking about? #speaker_left
 Yeah, what about it? #speaker_self
-The first prize winner this year gets an all-expenses paid semester abroad at the University of the Arts, London! That’s one of the best arts schools in the world! #speaker_left
-Oh my goodness! Do you think you stand a chance? #speaker_self
+The first prize winner this year gets an all-expenses paid semester abroad at the University of the Arts, London! That’s one of the best art schools in the world! #speaker_left
+Oh wow! Do you think you stand a chance? #speaker_self
 I sure hope so. And I still have those CIP projects to handle too. I just really need sleep. And coffee. That’s why I’m here, I guess. #speaker_left
 Come in more often! I’ll tell my colleagues to save your favourite seat for you. #speaker_self
 That’s sweet of you, Ravi. But don’t worry. I’ll make sure to come in during your shifts. I always do. #speaker_left
@@ -1344,10 +1341,10 @@ Sure. What do you want? #speaker_self
 I can really do with some cheering up. #speaker_left
 I’m not quite sure what would work #inner_monologue
 
-+ [Play an online art quiz with her] So... since you love art, I wanted to challenge you to a duel!  #speaker_self
-    Oh really? Bring it on. You don't know who you're up against. #speaker_left
++ [Play an online art quiz with her] Alright. Since you love art, I wanted to challenge you to a duel!  #speaker_self
+    Hah! Bring it on. You don't know who you're up against. #speaker_left
     It's called "Modern Art or Toddler?" - I'll guess first then you, ok?  #speaker_self
-    Oh really? Bring it on. You don't know who you're up against. #speaker_left
+    You don't know who you're up against. #speaker_left
     #speaker_left_image:pixel.png
     #background:bg_ravi_art1.jpg
     Ok, here we go with the first question. I'll guess first. #speaker_self
@@ -1364,7 +1361,7 @@ I’m not quite sure what would work #inner_monologue
         ~ ravi_2_modernart += 1
     ++ [Toddler]
     -- It’s a Joan Mitchell.  #speaker_left
-    Whoa right again. Someone's been studying eh? #speaker_self
+    Woah! Right again. Someone's been studying eh? #speaker_self
      #background:bg_ravi_art3.jpg
     Ok, last question.  #speaker_self
     ++ [Modern Art]
@@ -1375,7 +1372,7 @@ I’m not quite sure what would work #inner_monologue
     {ravi_2_modernart == 3: 
         I managed to get them all right too - including that last lucky guess! The last one is modern art... but with a twist! #speaker_self
         - else:
-        Looks like your knowledge of art is - as expected - better than mine! The last one is modern art... but with a twist! #speaker_self
+        Looks like your knowledge of art is better than mine! Ok that should go without saying. The last one is modern art... but with a twist! #speaker_self
     }
     Who’s it by? #speaker_left
     Believe it or not, it’s by a chimp. Congo the chimpanzee. Circa 1957. #speaker_self
@@ -1389,7 +1386,7 @@ I’m not quite sure what would work #inner_monologue
     Well, I’m not much of a comedian. But maybe I can tell you a joke? #speaker_self
     Sure, humour me. #speaker_left
     So...Why did the coffee file a police report? #speaker_self
-    Because it was mugged!” #speaker_self
+    Because it was mugged! #speaker_self
     Ah, if I’m going to be honest, that joke feels a bit lukewarm. #speaker_left
     Not good enough? Hmm, how about this one. #speaker_self
     “A girl walks into Resipi Alegria, and orders a coffee to go. #speaker_self
@@ -1407,14 +1404,14 @@ Uh, I’m sorry about that. #speaker_self
 Valkyrie is a weird name, but I’m quite certain I spelt it correctly... #inner_monologue
 Just so we’re clear, the name’s Valerie, not Valkyrie. #speaker_left
 OH MY GOD. This whole time I thought you were named Valkyrie. #speaker_self
-(Laughs) Because of my tattoo? Call me judgy but I’ll never ink my own name on my arm. Too basic. #speaker_left
-Aren’t Valkyries like great warriors or angels or something? It fits you. Okay Valerie does, too. #speaker_self
-Just to make sure you don’t mess it up again, I’ll spell it out for you this time so you'll never forget. #speaker_left
+(laughs) Because of my tattoo? Call me judgy but I’ll never ink my own name on my arm. Too basic. #speaker_left
+Aren’t Valkyries like great warriors or angels or something? It fits you. OK Valerie does, too. #speaker_self
+Just to make sure you don’t mess it up again, I’ll spell it out for you this time so you'll never forget it. #speaker_left
 Is that your phone over there? #speaker_left
 Yeah, why- #speaker_self
 (GRABS RAVI’S PHONE) #speaker_left
 Hey! What are you doing? #speaker_self
-(Typing) It’s V. A. L. E. R. I. E. #speaker_left
+(typing) It’s V A L E R I E #speaker_left
 Right, right. Got it. Could I please have my phone back? #speaker_self
 #background:bg_ravi_valnumber.jpg
 And my number is 8161427. Saved. #speaker_left
@@ -1453,7 +1450,6 @@ But what if she doesn't actually like me?  I don’t want to risk losing her as 
 If I don't call her, I wouldn’t need to bring her over to Pushpa Aunty’s place to meet my family. And I wouldn’t need to meet hers. 
 That way, I won’t risk disappointing both of us. 
 But not knowing if we will work out – I’ll regret it for the rest of my life.
-I must do this. Now.
 -> chapter_2_ending_1
 
 === ravi_2_4_nocall ===

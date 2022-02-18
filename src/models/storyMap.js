@@ -477,7 +477,7 @@ export const CHARACTER_MAP = [
     linkName: "ravi",
     profileImage: "/images/profile_ravi.png",
     characterIntroImage: "/character_choice_page/ravi.png", 
-    description: "Ravi dreams of being an aviation engineer - but can he push past the stereotypes and self-doubts?",
+    description: "Ravi dreams of being an aviation engineer - but can he push past the stereotypes and doubts?",
     jsonLink: '../stories/ravi.ink.json',
     jsonFile: RaviInk,
     playable: true,
