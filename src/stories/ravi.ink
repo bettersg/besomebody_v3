@@ -1357,14 +1357,13 @@ I’m not quite sure what would work #inner_monologue
     ++ [Toddler]
         ~ ravi_2_modernart = 0
     -- Oh - that’s Kandinsky. ‘Black Lines.’  #speaker_left
-    // #background: bg_ravi_art1_answer.jpg
-    You got it correct! I guess that was easy for you. My turn again: #speaker_self
+    You got it correct! #speaker_self
     #background:bg_ravi_art2.jpg
+    I guess that was easy for you. My turn again: #speaker_self
     ++ [Modern Art]
         ~ ravi_2_modernart += 1
     ++ [Toddler]
     -- It’s a Joan Mitchell.  #speaker_left
-    // #background: bg_ravi_art2_answer.jpg
     Whoa right again. Someone's been studying eh? #speaker_self
      #background:bg_ravi_art3.jpg
     Ok, last question.  #speaker_self
@@ -1372,7 +1371,6 @@ I’m not quite sure what would work #inner_monologue
         ~ ravi_2_modernart += 1
     ++ [Toddler]
     -- Hmm. Looks like a de Kooning, but then I don’t think it is…  Well, it’s not done by a kid, for sure. I'll go with Modern Art. #speaker_left
-    // #background: bg_ravi_art3_answer.jpg
     Full marks, wooh!  #speaker_self
     {ravi_2_modernart == 3: 
         I managed to get them all right too - including that last lucky guess! The last one is modern art... but with a twist! #speaker_self
