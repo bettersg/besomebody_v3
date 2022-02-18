@@ -568,12 +568,12 @@ export const CHARACTER_MAP = [
         endings: [
           {
             endingId: 1,
-            title: "Ravi shows concern for mum",
+            title: "Ravi calls up Val",
             inkVar: "chapter2_ending_1",
           },
           {
             endingId: 2,
-            title: "Ravi is confused by the news",
+            title: "Ravi does not call Val",
             inkVar: "chapter2_ending_2",
           },
         ]

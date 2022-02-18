@@ -1356,28 +1356,33 @@ I’m not quite sure what would work #inner_monologue
     ++ [Toddler]
         ~ ravi_2_modernart = 0
     - Oh - that’s Kandinsky. ‘Black Lines.’  #speaker_left
-    #background: bg_ravi_art1_answer.jpg
-    Ok, I guess that was easy for you. My turn again: #speaker_self
+    // #background: bg_ravi_art1_answer.jpg
+    You got it correct! I guess that was easy for you. My turn again: #speaker_self
     #background: bg_ravi_art2.jpg
     ++ [Modern Art]
         ~ ravi_2_modernart += 1
     ++ [Toddler]
     - It’s a Joan Mitchell.  #speaker_left
-    #background: bg_ravi_art2_answer.jpg
-    Whoa. Someone's been studying eh? #speaker_self
+    // #background: bg_ravi_art2_answer.jpg
+    Whoa right again. Someone's been studying eh? #speaker_self
      #background: bg_ravi_art3.jpg
     Ok, last question.  #speaker_self
     ++ [Modern Art]
         ~ ravi_2_modernart += 1
     ++ [Toddler]
-    - Hmm. Looks like a de Kooning, but then I don’t think it is…  Well, it’s not done by a kid, for sure. #speaker_left
-    #background: bg_ravi_art3_answer.jpg
-    Full marks, wooh! It is modern art... but with a twist! #speaker_self
+    - Hmm. Looks like a de Kooning, but then I don’t think it is…  Well, it’s not done by a kid, for sure. I'll go with Modern Art. #speaker_left
+    // #background: bg_ravi_art3_answer.jpg
+    Full marks, wooh!  #speaker_self
+    {ravi_2_modernart == 3: 
+        I managed to get them all right too - including that last lucky guess! The last one is modern art... but with a twist! #speaker_self
+        - else:
+        Looks like your knowledge of art is - as expected - better than mine! The last one is modern art... but with a twist! #speaker_self
+    }
     Who’s it by? #speaker_left
     Believe it or not, it’s by a chimp. Congo the chimpanzee. Circa 1957. #speaker_self
-    HAHAHAHAHA! No shit! #speaker_left
+    HAHAHAHAHA! No shit! An actual monkey? #speaker_left
     #background:bg_ravi_cafe.jpg
-    So ridiculous!  Apparently this sold for like a zillion dollars. Now I need to re-evaluate my life choices. Maybe I should quit being a barista and train some monkeys to do art. #speaker_self
+    Yeah. So ridiculous!  Apparently this sold for like a zillion dollars. Now I need to re-evaluate my life choices. Maybe I should quit being a barista and train some monkeys to do art. #speaker_self
     Well please don't quit, because otherwise I wouldn't get to hang out with my favourite Mr Barista every day. Plus if you were a zillionaire you might not have time for me. #speaker_left
 
 + [Tell her a lame joke]
