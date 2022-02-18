@@ -1357,7 +1357,7 @@ I’m not quite sure what would work #inner_monologue
     ++ [Toddler]
         ~ ravi_2_modernart = 0
     -- Oh - that’s Kandinsky. ‘Black Lines.’  #speaker_left
-    You got it correct! #speaker_self
+    You got it correct {ravi_2_modernart == 1: and so did I}! #speaker_self
     #background:bg_ravi_art2.jpg
     I guess that was easy for you. My turn again: #speaker_self
     ++ [Modern Art]
