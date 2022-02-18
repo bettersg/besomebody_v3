@@ -1348,29 +1348,30 @@ I’m not quite sure what would work #inner_monologue
     Oh really? Bring it on. You don't know who you're up against. #speaker_left
     It's called "Modern Art or Toddler?" - I'll guess first then you, ok?  #speaker_self
     Oh really? Bring it on. You don't know who you're up against. #speaker_left
-    #background: bg_ravi_art1.jpg
+    #speaker_left_image:pixel.png
+    #background:bg_ravi_art1.jpg
     Ok, here we go with the first question. I'll guess first. #speaker_self
     ++ [Modern Art]
         VAR ravi_2_modernart = 1
         ~ ravi_2_modernart = 1
     ++ [Toddler]
         ~ ravi_2_modernart = 0
-    - Oh - that’s Kandinsky. ‘Black Lines.’  #speaker_left
+    -- Oh - that’s Kandinsky. ‘Black Lines.’  #speaker_left
     // #background: bg_ravi_art1_answer.jpg
     You got it correct! I guess that was easy for you. My turn again: #speaker_self
-    #background: bg_ravi_art2.jpg
+    #background:bg_ravi_art2.jpg
     ++ [Modern Art]
         ~ ravi_2_modernart += 1
     ++ [Toddler]
-    - It’s a Joan Mitchell.  #speaker_left
+    -- It’s a Joan Mitchell.  #speaker_left
     // #background: bg_ravi_art2_answer.jpg
     Whoa right again. Someone's been studying eh? #speaker_self
-     #background: bg_ravi_art3.jpg
+     #background:bg_ravi_art3.jpg
     Ok, last question.  #speaker_self
     ++ [Modern Art]
         ~ ravi_2_modernart += 1
     ++ [Toddler]
-    - Hmm. Looks like a de Kooning, but then I don’t think it is…  Well, it’s not done by a kid, for sure. I'll go with Modern Art. #speaker_left
+    -- Hmm. Looks like a de Kooning, but then I don’t think it is…  Well, it’s not done by a kid, for sure. I'll go with Modern Art. #speaker_left
     // #background: bg_ravi_art3_answer.jpg
     Full marks, wooh!  #speaker_self
     {ravi_2_modernart == 3: 
@@ -1381,6 +1382,7 @@ I’m not quite sure what would work #inner_monologue
     Who’s it by? #speaker_left
     Believe it or not, it’s by a chimp. Congo the chimpanzee. Circa 1957. #speaker_self
     HAHAHAHAHA! No shit! An actual monkey? #speaker_left
+    #speaker_left_image:cha_ravi_valerie_normal.png
     #background:bg_ravi_cafe.jpg
     Yeah. So ridiculous!  Apparently this sold for like a zillion dollars. Now I need to re-evaluate my life choices. Maybe I should quit being a barista and train some monkeys to do art. #speaker_self
     Well please don't quit, because otherwise I wouldn't get to hang out with my favourite Mr Barista every day. Plus if you were a zillionaire you might not have time for me. #speaker_left
@@ -1417,7 +1419,7 @@ Hey! What are you doing? #speaker_self
 (Typing) It’s V. A. L. E. R. I. E. #speaker_left
 Right, right. Got it. Could I please have my phone back? #speaker_self
 #background:bg_ravi_valnumber.jpg
-And my number is 81614272. Saved. #speaker_left
+And my number is 8161427. Saved. #speaker_left
 Got it. Wait..what? #speaker_self
 #background:bg_ravi_cafe.jpg
 I really have to go right now. But make sure you call me tonight, okay, Ravi? I have something I really want to say to you. See you around. #speaker_left
