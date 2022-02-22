@@ -56,7 +56,10 @@ const LongFeedbackStep = ({ reflection, questions, characterId, setState, getSta
     })
   };
 
-  return <ReflectionForm context={reflection.context} questions={reflection.longQuestions} onSubmit={handleSubmit} onSuccess={handleSuccess} onError={handleError} />;
+  return <ReflectionForm 
+  subtitle="OVER TO YOU"
+  title="Share your story" 
+  context={reflection.context} questions={reflection.longQuestions} onSubmit={handleSubmit} onSuccess={handleSuccess} onError={handleError} />;
 };
 
 export default LongFeedbackStep;
