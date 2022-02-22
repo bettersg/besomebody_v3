@@ -223,6 +223,7 @@ export const CHARACTER_MAP = [
           {
             characterName: 'Nadia',
             characterImage: '/shareable_avatars/nadia.png',
+            shareImage:'/shareable_avatars/nadia_share.svg',
           },
           {
             characterName: 'Azlin',

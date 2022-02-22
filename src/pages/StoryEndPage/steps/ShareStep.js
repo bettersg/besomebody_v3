@@ -19,7 +19,8 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 const useStyles = makeStyles((theme) => ({
   background: {
-    backgroundImage: ({ image }) => `url('/reflection/avatar_bg_purple.png')`,
+    // backgroundImage: ({ image }) => `url('/reflection/avatar_bg_purple.png')`,
+    backgroundColor: '#26248F',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '660px',
@@ -96,20 +97,27 @@ const ShareStep = ({ reflection, characterId, setState, getState, next }) => {
   const personaName = persona.name.split(" ")[0]
     
   const data2 = getState('answerDocs') ? getState('answerDocs') : null;  
-  const empathyCharacter = getState('answerDocs') ?
-    data2[2].answer ? persona.reflectionBrowser[0].empathyCharacters.find((character) => character.characterName.toUpperCase() === data2[2].answer.toUpperCase()) : persona.reflectionBrowser[0].empathyCharacters[0]
-    : persona.reflectionBrowser[0].empathyCharacters.find((character) => character.characterName.toUpperCase() === personaName.toUpperCase());
+  // const empathyCharacter = getState('answerDocs') ?
+  //   data2[2].answer ? persona.reflectionBrowser[0].empathyCharacters.find((character) => character.characterName.toUpperCase() === data2[2].answer.toUpperCase()) : persona.reflectionBrowser[0].empathyCharacters[0]
+  //   : persona.reflectionBrowser[0].empathyCharacters.find((character) => character.characterName.toUpperCase() === personaName.toUpperCase());
+  const empathyCharacter = persona.reflectionBrowser[0].empathyCharacters.find((character) => character.characterName.toUpperCase() === personaName.toUpperCase());
   
-  const data = getState('answerDocs') ? {
-    storyName: personaName+"'s Story",
-    text: data2[5].answer,
-    avatar: data2[2].answer, 
-    avatarImage: empathyCharacter.characterImage 
-  } : {
+  // const data = getState('answerDocs') ? {
+  //   storyName: personaName+"'s Story",
+  //   text: data2[5].answer,
+  //   avatar: data2[2].answer, 
+  //   avatarImage: empathyCharacter.characterImage 
+  // } : {
+  //   storyName: personaName + "'s Story",
+  //   text: "I pledge to be curious about what it's like to be you, and let you be curious about what it's like to be me. #ToBeYou.sg",
+  //   avatar: personaName.toLowerCase(), 
+  //   avatarImage: empathyCharacter.characterImage
+  // }
+  const data = {
     storyName: personaName + "'s Story",
     text: "I pledge to be curious about what it's like to be you, and let you be curious about what it's like to be me. #ToBeYou.sg",
     avatar: personaName.toLowerCase(), 
-    avatarImage: empathyCharacter.characterImage
+    avatarImage: empathyCharacter.shareImage
   }
 
    // -- remove this section when receiving state variables,
@@ -123,8 +131,9 @@ const ShareStep = ({ reflection, characterId, setState, getState, next }) => {
 
   return (
     <Box className={classes.background}>
-      <Typography className={classes.headerText}>Share your story on social media!</Typography>
+      <Typography className={classes.headerText}></Typography>
       <ShareableImageContainer data={data}></ShareableImageContainer>
+      <Typography className={classes.headerText}>Share your story.</Typography>
       <Box className={classes.bottom}>  
         <Typography className={classes.mainMenu} onClick={() => history.push('/characterchoice')}>
             Return to main menu
