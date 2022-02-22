@@ -1013,12 +1013,12 @@ Reflection 7
 One month after the move. #title
 Moving out on my own was rough. 
 Amma didn’t take the news well, as expected. She preferred me to save money and stay home.
-But I need to focus on studies so that I can do well and get us out of this rut.
+But I need to focus on my studies so that I can do well and get us out of this rut.
 Saving rental money versus failing out of university ... the choice was clear to me.
 But she was right, the monthly rent was a big bite out of my small savings.
 
 ~ chapter_id = 2
-
+#background:black.jpg
 CHAPTER {chapter_id} #title
 Coffee Shop Kannasamy #title
 
@@ -1054,18 +1054,16 @@ How have you guys been doing #speaker_self
 Just wanted to check in #speaker_self
 Aww #speaker_1
 Do you miss us? #speaker_1
-
 I’d be lying if I say I didn’t #speaker_self
 Living on my own is kind of new for me #speaker_self
-
 
 Yeah.  It’s weird to not see you around #speaker_1
 But I mean all is good. Amma is looking for a job #speaker_1
 And I’m getting rekt by my exam ten year series. Thanks for buying that for me btw. But I’ll manage #speaker_1
-How about you? Room good? Have you put up all your ugly posters already? There's still a box of them left here.  #speaker_1
+How about you? Room good? Have you put up all your ugly posters already? There's still a box of them left here  #speaker_1
 Well... it’s as good as it’ll get #speaker_self
 Living on my own is surprisingly expensive #speaker_self
-I didn’t realise how much money I had to spend...Like on food alone #speaker_self
+I didn’t realise how much money I had to spend... like on food alone #speaker_self
 Don’t know is it because I eat too much or my taste buds spoiled by Amma's cooking #speaker_self
 But yeah like my savings are running out at this rate #speaker_self
 I need to see how I can cut costs #speaker_self
@@ -1076,7 +1074,7 @@ Have you considered looking for a part time job? #speaker_1
     Can’t do both at once #speaker_self
     Anyway I don’t think anybody will hire at short notice #speaker_self
 
-+ [I want to focus on studies] I just want to focus on my school for now. #speaker_self
++ [I want to focus on studies] I just want to focus on school for now. #speaker_self
     Classes are busy and I’m looking for an internship too #speaker_self
     Can’t do both at once #speaker_self
     Anyway I have a better way to save money. Just eat maggi mee every day for almost every meal! #speaker_self
@@ -1084,14 +1082,14 @@ Have you considered looking for a part time job? #speaker_1
 I have something on. Tyty #speaker_self
 Huh #speaker_1
 Why not? You going on a date?!? #speaker_1
-+ [Why would that be so shocking?] Eh no need to sound so shocked ok. #speaker_self
++ [Why would that be so shocking?] Eh no need to sound so shocked ok #speaker_self
     Just because I don't report my daily movements to you doesn't mean I don't have a social life ok. #speaker_self
-    wait for real? you're going on a date Anna (brother)? #speaker_1
-    uh.. no. but uh, one day I will.  #speaker_self
-    haha. Let me know when you meet someone so I can warn the poor girl about your lame jokes #speaker_1
+    Wait for real? You're going on a date Anna (brother)? #speaker_1
+    Uh.. no. But uh, one day I will.  #speaker_self
+    Haha. Lemme know when you meet someone so I can warn the poor girl abt your lame jokes #speaker_1
 + [Lol I wish] Lol I wish #speaker_self
     Sadly no. Not a priority right now anyway #speaker_self
-- I’m planning to visit a new café #speaker_self
+- I’m planning to visit a new cafe #speaker_self
 You remember Marie? #speaker_self
 The food girl? #speaker_1
 Yeah lol #speaker_self
@@ -1101,20 +1099,21 @@ But yes what about her #speaker_1
 Well she left her job at an MNC and opened up a new café #speaker_self
 It’s called Resipi Alegria #speaker_self
 I plan to visit her later #speaker_self
-My other friends visited already haha #speaker_self
+My other friends visited alr haha #speaker_self
 I didn’t have time thanks to classes #speaker_self
 But post-midterm week has been quite chill #speaker_self
 Ohhh #speaker_1
 So you’re going to be eating there? #speaker_1
 Sadly no also haha #speaker_self
-I’m broke remember #speaker_self
+I’m broke rmb #speaker_self
 LOL I’ll just grab a drink #speaker_self
 And go home cook instant noodles I guess #speaker_self
 Peak cuisine #speaker_self
-oh ok sure #speaker_1
-last call, are you sure you can’t make it tonight? #speaker_1
-Aunty is cooking fish curry #speaker_1
- 🥲  I can’t, I only have this slot to visit her new cafe and she's really excited about it.  #speaker_self
+Oh ok sure #speaker_1
+Last call,  you sure you can’t make it tonight? #speaker_1
+Pushpa Aunty is cooking fish curry #speaker_1
+ 🥲  #speaker_self
+ I can’t, I only have this slot to visit her new cafe.  #speaker_self
 
 -> ravi_2_2_narration
 
@@ -1122,11 +1121,11 @@ Aunty is cooking fish curry #speaker_1
 #knot:ravi_2_2_narration
 #ui:narrator
 #background:bg_ravi_cafe.jpg
-Finally here. Took a while to find Marie's new cafe. 
-Whoa. Sure looks fancy.
-The place isn’t too packed right now. I guess 4pm on a Thursday is a weird time to have coffee.
-There’re not too many customers either. There’s a couple in the corner, and this reallllllly pretty girl sitting at the counter. I should definitely visit more often if this is the crowd hehe.
-Wait, no time to get distracted. Where is she… ah, there’s Marie! 
+Finally here. Took a while to find Marie's new café. 
+Whoa! Sure looks fancy.
+The place isn’t too packed right now. I guess 4 p.m. on a Thursday is a weird time to have coffee.
+There’re not too many customers either. There’s a couple in the corner, and this reallllllly pretty girl sitting at the counter. I should definitely visit more often if this is the crowd, hehe.
+Wait, no time to get distracted. Where is she... ah, there’s Marie! 
 
 -> ravi_2_2
 
@@ -1141,7 +1140,7 @@ Hey Ravi! What are you doing here? #speaker_right
 Playing scrabble lah what you think? #speaker_self
 Getting a caffeinated beverage from your fine establishment. #speaker_self
 Wah, big words from the man who hasn’t turned up once since I opened! #speaker_right
-Sorry lah Marie! Wish I could have come sooner. I’ve been busy. #speaker_self
+Sorry la, Marie! Wish I could have come sooner. I’ve been busy. #speaker_self
 With what? Chasing girls? #speaker_right
 No time for girls, man. #speaker_self
 You always had time for girls leh. #speaker_right
@@ -1150,14 +1149,14 @@ Well you were always the charmer la #speaker_right
 Yeah.. well.. A lot has changed since then. #speaker_self
 I changed after Appa left. #inner_monologue
 I wish I was still the charmer she thinks I am. #inner_monologue
-I wish .... I wasn’t afraid of what a girl would see if she looked too deeply into my eyes.#inner_monologue
-Haha indeed, you suddenly look more like a real adult. And you’re wearing real clothes, not baggy t-shirts everywhere  #speaker_right
+I wish .... I wasn’t afraid of what a girl would see if she read too deeply into my eyes.#inner_monologue
+Haha indeed, you suddenly look more like a real adult. And you’re wearing real clothes, not baggy T-shirts everywhere  #speaker_right
 Anyway, would you like a coffee? #speaker_right
 Yes please! #speaker_self
 Ok check out the menu, tell me what you like. It's on the house!  #speaker_right
 
-+ [Iced Latte] Oh, I’ll take an Iced latte. #speaker_self
-    Want to try our green tea latte instead? I just added it to the menu. Trust me, they are amazing. #speaker_right
++ [Iced Latte] Oh, I’ll take an iced latte. #speaker_self
+    Want to try our green tea latte instead? I just added it to the menu. Trust me, it's amazing. #speaker_right
     Nah, not really a fan of green tea. #
     First time I’ve ever heard that. Who isn’t a fan of green tea? #speaker_right
     Hmm, how about our hazelnut latte? #speaker_right
@@ -1166,8 +1165,8 @@ Ok check out the menu, tell me what you like. It's on the house!  #speaker_right
     Yeah... #speaker_self
     Ok. A small, boring iced latte for a small, boring Ravi. #speaker_right
     Eh, don’t like that leh... #speaker_self
-    Fine... one iced latte coming up, for a not-small, not-boring, Ravi. #speaker_right
-    Haha.... thank you! #speaker_self
+    Fine... one iced latte coming up. #speaker_right
+    Thank you! #speaker_self
 
 + [Chilli Coconut Agave Cafe Latte]  Wow. I’d like to try the ... “Chilli Coconut Agave Café Latte"? I think… #speaker_self
     Waaah. Man after my own heart. That’s my favourite. #speaker_right
@@ -1181,11 +1180,11 @@ I mean, I don’t mind. But is it ok? Will your customers mind their barista jus
 Sure they won’t mind! I mean, there’s not that many people around right now. #speaker_right
 The couple just want to be left alone. And that girl there is Valerie, one of my regulars. #speaker_right
 Comes in nearly every afternoon. She’s probably heard a hundred of my conversations at least. I talk to her a lot too. I’m sure she won’t mind. #speaker_right
-Did Marie say that her name was “Valkryie”? Weird name. But I guess I don’t know her after all. Better not look at her too much. She might catch me staring. #inner_monologue
-Anyway, how is everything? How is Revati? I remember meeting her for your birthday. Oh, and that biryani your mum cooked. Getting hungry just thinking about it. #speaker_right
+Did Marie say that her name was “Valkryie”? Weird name. Better not look at her too much. She might catch me staring. #inner_monologue
+Anyway, how's everything? How's Revati? I remember meeting her for your birthday. Oh, and that biryani your mum cooked. Getting hungry just thinking about it. #speaker_right
 
 + We are ok lah... [] Well, I mean there’s been some bumps in the road. #speaker_self  
-+ Not so great [] to be honest #speaker_self
++ Not so great [] to be honest. #speaker_self
 
 - What happened? #speaker_right
 Mum lost her job. #speaker_self
@@ -1206,9 +1205,9 @@ Hey. You got to try and think from her perspective. #speaker_right
 Have you thought about how you can help out? She’s your mother, you know, with A LOT of weight on her shoulders. #speaker_right
 She doesn’t want to put any of it on you. #speaker_right
 I want to help out. But what can I do? Except finish my course, get my internship, get a job. #speaker_self
-That will take you, like a couple of years right? #speaker_right
+That will take you, like, a couple of years right? #speaker_right
 Yeah. #speaker_self
-How about helping her out now? Go on a walk with her. Watch a movie. Speak to her more often. Show her you’re not just mopey lil’ boring Ravi. She needs you, man.  #speaker_right
+How about helping her out now? Go for a walk with her. Watch a movie. Speak to her more often. Show her you’re not just mopey lil’ boring Ravi. She needs you, man.  #speaker_right
 Yeah, all that is fine. But still we hardly have money to cover our meals. #inner_monologue
 ... #speaker_self
 Hey man, what are you thinking about? #speaker_right
@@ -1237,7 +1236,7 @@ Oh my goodness! Yes! I would love to work here. It’ll be like the good old day
 Great! Can you make coffee? #speaker_right
 Oh...no... #speaker_self
 Honestly, I can’t even boil water right. #speaker_self
-Perfect. I’ll be your teacher. Your guide into the wonderful world of baristas and brewing. You better pay attention if you want to work here! #speaker_right 
+Perfect. I’ll be your teacher. Your guide to the wonderful world of baristas and brewing. You better pay attention if you want to work here! #speaker_right 
 + [Are you taking pity on me? ] Eh you’re not just doing this to take pity on me right? #speaker_self
     I run a business. I can’t afford to just be kind. I need someone I can trust behind the cash register, which is hard to find. Trust me, you’re helping me. #speaker_right 
 + Thank you so much for this opportunity! [] #speaker_self
@@ -1246,7 +1245,10 @@ Perfect. I’ll be your teacher. Your guide into the wonderful world of baristas
 
 - Thank you! #speaker_self
 
-// quiz goes Here
+#knot:ravi_2_minigame
+#ui:mcq
+#game_id:8
+Minigame 8 // must add some text
 
 -> ravi_2_3_narration
 
@@ -1264,7 +1266,7 @@ I could just cover my dorm room rent... and skipped enough meals to pay for Reva
  }
 When you have money issues always hanging over your head, not having to worry about how to pay things off is the best kind of luxury. The kind you only feel once you’ve lived both scenarios.
 The last 6 weeks working here have been pretty good. I get in to help with the lunch crowd and work till closing. It's pretty chill, I can get some homework done during the lull time.
-At about 4pm, our regular patron shows up at sits at the counter right in front of me. Hmm.. she's a bit late. Maybe she isn't coming..
+At about 4 p.m., our regular patron shows up at sits at the counter right in front of me. Hmm.. she's a bit late. Maybe she isn't coming..
 Oh wait. Speak of the devil.
 
 
@@ -1280,7 +1282,7 @@ Ah, it’s you again. Running a bit late today? #speaker_self
 And it’s you again. Yeah, I was. Had to finish up a painting for class. I wanted to make sure the paint was dry before I left. #speaker_left
 I didn’t know you had to watch paint dry in art school. #speaker_self
 And I didn’t know you had to make fun of customers as a barista. #speaker_left
-OK OK. Would you like your usual today? #speaker_self
+Ok ok. Would you like your usual today? #speaker_self
 Only if it’s as good as the last time. #speaker_left
 Mmmm.... If you told me you just learnt how to make coffee a few weeks ago, I’d find it hard to believe you. #speaker_left
 Well, I had a good teacher. #speaker_self

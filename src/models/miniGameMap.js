@@ -532,6 +532,88 @@ export const MINI_GAME_MAP = [
   ],
   },
 
+
+// ravi 2
+  {
+    game_id: 8,
+    ui: "mcq",
+    introduction: "Ravi took up a part time job to pay the bills. What is it like for Singaporeans in this situation?.",
+    questions: [
+      {
+        question_id: 1,
+        question:
+          "What is the minimum wage in Singapore for migrant workers?",
+        type: "text",
+        correct_answer_id: 4,
+        explanation:
+          "From the Ministry of Manpower: As a matter of national policy, MOM does not prescribe minimum wages for all workers in Singapore, whether local or foreign. Whether wages should increase or decrease is best determined by market demand and supply for labour.",
+        answers: [
+          {
+            answer_id: 1,
+            title: "$1.50 per hour",
+          },
+          {
+            answer_id: 2,
+            title: "$10 per day",
+          },
+          {
+            answer_id: 3,
+            title: "$700 per month.",
+          },
+          {
+            answer_id: 4,
+            title: "There is no minimum wage.",
+          },
+        ],
+      },
+      {
+        question_id: 2,
+        question:
+          "What is the median household monthly wage in Singapore",
+        correct_answer_id: 1,
+        explanation: "xxxxxx",
+        type: "text",
+        answers: [
+          {
+            answer_id: 1,
+            title: "Chinese",
+          },
+          {
+            answer_id: 2,
+            title: "Malay",
+          },
+          {
+            answer_id: 3,
+            title: "Indian",
+          },
+          {
+            answer_id: 2,
+            title: "None (all are equal)",
+          },
+        ],
+      },
+      {
+        question_id: 3,
+        question:
+          "What is the unemployment rate in Singapore?",
+        type: "text",
+        correct_answer_id: 2,
+        explanation:
+          "False. A 2017 CNBC article highlighted that even in a weak rental market, some landlords explicitly deny rental opportunities to some races. Singaporean Malays, Singaporean Indians & PRCs are amongst those who face the issue of rental discrimination.",
+          answers: [
+            {
+              answer_id: 1,
+              title: "True",
+            },
+            {
+              answer_id: 2,
+              title: "False",
+            },
+          ],
+      },  
+    ],
+    },
+
 ];
   
 
