@@ -105,6 +105,17 @@ export default function SideMenu ({src="/side_menu/menu-icon.svg", ...rest}) {
             <Link to="/help" className="SideMenu__menuitems__label"><SVG src="/side_menu/help.svg" className="SideMenu__menuitems__icons"/>
               <span>Help</span></Link>
             </div>
+            
+            <div className="SideMenu__menuitems__item">
+              {userFromDb?.activeRoom &&
+                <Link to={"/room_exit/" } className="SideMenu__menuitems__label"><SVG src="/side_menu/profile.svg" className="SideMenu__menuitems__icons" />
+                  <span>Your Room</span></Link>
+              }
+              {!userFromDb?.activeRoom &&
+                <Link to={"/room_join/"} className="SideMenu__menuitems__label"><SVG src="/side_menu/profile.svg" className="SideMenu__menuitems__icons" />
+                  <span>Join Facilitated Room</span></Link>
+              }
+            </div>    
 
           </div>
         <hr />
