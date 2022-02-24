@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
-import {  updateDbUser } from '../../models/userModel'
+import React, { useState, useEffect } from 'react'
+import {  updateDbUser , getDbUser } from '../../models/userModel'
 import { useAuth } from '../../contexts/AuthContext'
+import { getRoomDb } from '../../models/roomModel'
+
 import {  useHistory } from 'react-router-dom'
 import { useSnackbar } from '../../contexts/SnackbarContext'
 import {
@@ -8,14 +10,33 @@ import {
     Button,
     Typography,
     Container,
-  } from '@material-ui/core'
+} from '@material-ui/core'
+  
+
 
 const RoomExitPage = () => {
     const [isLoading, setIsLoading] = useState(false)
+    const [userFromDb, setUserFromDb] = useState(null)
+    const [room, setRoom] =  useState(null)
     const { currentUser } = useAuth()
     const history = useHistory()
     const { setSnackbar } = useSnackbar()
 
+    useEffect(() => {
+        const getUser = async () => {
+          const user = await getDbUser(currentUser.id)
+          return setUserFromDb(user)
+          }         
+      getUser()
+    }, [currentUser.id])
+    
+    useEffect(() => {
+        const getRoom = async () => {
+          const room = await getRoomDb(userFromDb?.activeRoom)
+          return setRoom(room)
+          }         
+      getRoom()
+      }, [userFromDb?.activeRoom])
 
     const exitActiveRoom = async () => {        
         try {
@@ -42,7 +63,7 @@ const RoomExitPage = () => {
             <Typography variant="overline" > ROOM INFO AND EXIT PAGE </Typography>
           </Box>
         
-              
+          <Typography paragraph={true}>Instructions: {room?.instructions}</Typography>
             <Box >
               <Button variant="contained" type="submit"  disabled={isLoading} onClick={() => exitActiveRoom()}>Leave Room</Button>         
             </Box>        
