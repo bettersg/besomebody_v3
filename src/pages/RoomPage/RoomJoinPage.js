@@ -34,18 +34,31 @@ const RoomJoinPage = () => {
     //     const getRoom = async () => {
     //       const room = await getRoomDb(userFromDb?.activeRoom)
     //       return setRoom(room)
-    //       }         
+    //       }
     //   getRoom()
     //   }, [userFromDb?.activeRoom])
+     
 
     const setActiveRoom = async () => {        
         try {
           setIsLoading(true)          
         //   await updateRoomParticipantsDb(room.id, currentUser.id)  
         //   await updateUserRoomDb(currentUser.id, room.id)  
-          await updateDbUser({ activeRoom: room }, currentUser.id)   
-          console.log('Room Joined', room)
-          history.push('/')  // redirect to root which will be the characterchoice page now.     
+               
+            if (await getRoomDb(room) != null) {
+                await updateDbUser({ activeRoom: room }, currentUser.id)               
+                console.log('Room Joined', room)
+                history.push('/room/'+room)  // redirect to root which will be the characterchoice page now.     
+            }
+            else {
+                console.log('No such room')
+                setSnackbar({
+                    message: `There is no such room: ${room}. Please check the code again.`,
+                    open: true,
+                    type: 'error',
+                  })
+            }            
+            
         } catch (err) {
           setSnackbar({
             message: `There was an error: ${err.message}`,
@@ -79,7 +92,7 @@ const RoomJoinPage = () => {
                       id="roomCode"
                       onBlur={handleOnChange}    
                 />
-              <Button variant="contained" type="submit"  disabled={isLoading} onClick={() => setActiveRoom()}>Join Room</Button>         
+                  <Button variant="contained" type="submit" disabled={isLoading} onClick={() => setActiveRoom()}>Join Room</Button>         
             </Box>        
         </Box>
     
