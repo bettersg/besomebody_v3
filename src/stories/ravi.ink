@@ -291,7 +291,7 @@ We packed our lives into bags and started moving in to Pushpa Aunty's house.
 #knot:ravi_1_2
 #ui:scene
 #background:bg_ravi_pushpa_home.jpg
-#speaker_left_image:cha_ravi_mum_normal.png
+#speaker_left_image:cha_ravi_mum_dress_normal.png
 #speaker_left_name:Amma
 #speaker_right_image:cha_ravi_revati_normal.png 
 #speaker_right_name:Revati
@@ -360,7 +360,7 @@ We all know you’re not agreeing out loud because I’m your bro, but you love 
 Ah, that smirk. Now she’s looking more herself. #inner_monologue
 Shuddup anna (big brother). So annoying… #speaker_right
 My pleasure. Eh don’t drop the sofa! #speaker_self
-#speaker_left_image:cha_ravi_mum_normal.png
+#speaker_left_image:cha_ravi_mum_dress_happy.png
 That took a while! #speaker_left
 Yah… as a long as a sofa should take. #speaker_self
 Don’t be rude, kanna! Maybe we just had more things that we thought we did. Now’s a good time to sell some extra clothes, jewellery… #speaker_left
@@ -370,6 +370,7 @@ For washing up, we can use the small toilet, the one behind, near the kitchen...
 Wait a minute, what about me? Where should I sleep? #speaker_self
 For tonight, you can sleep on the sofa. #speaker_left
 Wait, on the sofa? #speaker_self
+#speaker_left_image:cha_ravi_mum_dress_normal.png
 There just isn’t enough space in the extra room. I told you, there’s just Kamala’s bed. Revati and I will need to share it.  #speaker_left
 There’s some room on the floor, but not enough to lay down a mattress. The sofa is better for your back. Better than the floor, anyway. #speaker_left
 I still have an entire list of stuff you need to do, starting with clearing out the storage room.  #speaker_left
@@ -390,6 +391,7 @@ Maybe I need to take a stand. #inner_monologue
     I’ll pass you a blanket you can use when you sleep, after you’re done. Next, we have to- #speaker_left
     Amma, I have an early class tomorrow... #speaker_self
     You know the prof, the strict one I told you about?  #speaker_self
+    #speaker_left_image:cha_ravi_mum_dress_worried.png
     He’ll kill me if I go to his class late, or worse, fall asleep... #speaker_self
     And my class is at 9. It’s so far away, I’ll need to leave at 7. At least Revati is near to her school. #speaker_self
     #speaker_right_image:cha_ravi_revati_concerned.png 
@@ -401,6 +403,7 @@ Maybe I need to take a stand. #inner_monologue
     Why ma! #speaker_self
     Why what? #speaker_left
     I’m so tired. I just want to crash! #speaker_self
+    #speaker_left_image:cha_ravi_mum_dress_worried.png
     Yeah you can. After you help clear up everything. We can’t leave it lying around like this. #speaker_left
     Amma, I have an early class tomorrow! #speaker_self
     So you want your sister and I to move everything? On our own? #speaker_left
@@ -1046,7 +1049,7 @@ I miss my family though, being here alone.
 #ui:whatsapp 
 #background:whatsapp.png
 #chat_group_title:Revati
-#chat_group_image:ico_ravi_revati.jpg
+#chat_group_image:ico_ravi_revati.png
 #speaker_1_name:Revati
 #timestamp:21.34
 Hey Thangachi (little sister) #speaker_self
@@ -1275,7 +1278,7 @@ Oh wait. Speak of the devil.
 === ravi_2_3 ===
 #knot:ravi_2_3
 #ui:scene
-#background:bg_ravi_cafe.jpg
+#background:bg_ravi_cafe2.jpg
 #speaker_left_image:cha_ravi_valerie_normal.png
 #speaker_left_name:Val
 Ah, it’s you again. Running a bit late today? #speaker_self
@@ -1380,7 +1383,7 @@ I’m not quite sure what would work #inner_monologue
     Believe it or not, it’s by a chimp. Congo the chimpanzee. Circa 1957. #speaker_self
     HAHAHAHAHA! No shit! An actual monkey? #speaker_left
     #speaker_left_image:cha_ravi_valerie_normal.png
-    #background:bg_ravi_cafe.jpg
+    #background:bg_ravi_cafe2.jpg
     Yeah. So ridiculous!  Apparently this sold for like a zillion dollars. Now I need to re-evaluate my life choices. Maybe I should quit being a barista and train some monkeys to do art. #speaker_self
     Well please don't quit, because otherwise I wouldn't get to hang out with my favourite Mr Barista every day. Plus if you were a zillionaire you might not have time for me. #speaker_left
 
@@ -1418,7 +1421,7 @@ Right, right. Got it. Could I please have my phone back? #speaker_self
 #background:bg_ravi_valnumber.jpg
 And my number is 8161427. Saved. #speaker_left
 Got it. Wait..what? #speaker_self
-#background:bg_ravi_cafe.jpg
+#background:bg_ravi_cafe2.jpg
 I really have to go right now. But make sure you call me tonight, okay, Ravi? I have something I really want to say to you. See you around. #speaker_left
 Wow. Uh...I’ll call you, Valkyrie. I mean, Valerie. See you. #speaker_self
 Great, I came off like a total idiot. I must be the only person who got her name wrong. #inner_monologue
@@ -1470,14 +1473,19 @@ Ah, my dear boss lady. Looks like I’m gonna have more shifts.
 #ui:notification
 #background:ui_ravi_message.jpg
 Marie: No new shifts yet but got you sth better. Val dmed me for your no. And I gave it to her;) #message
+#ui:notification
+#background:ui_ravi_phonecall.jpg
+VALERIE # message
+// #background:bg_ravi_valcalling.jpg
 #ui:narrator
-#background:bg_ravi_valcalling.jpg
+#background:bg_ravi_bedroom.jpg
 Wow. Wowww. She’s a Valkyrie alright. She takes what she wants.
 But... Our friendship is too much to lose. Better to keep what we have now than risk us not working out. 
 Even if Val still accepts me after knowing about my family and our situation, her parents won’t. I’m broke, I’m neighbourhood-schooled, and – oh! Cherry on the cake – I’m Indian. 
 I should know how it is with the Chinese majority. I can't even rent a flat from them - how would they feel if I were to date their daughter?
-And ...I like Val too much to rock her boat. What’s that French phrase she taught me? 
-I think it’s best not to pick up this call.
+And ...I like Val too much to rock her boat. 
+I think it’s best NOT to pick up this call.
+What’s that French phrase she taught me? 
 -> chapter_2_ending_2
 
 
@@ -1485,7 +1493,7 @@ I think it’s best not to pick up this call.
 === chapter_2_ending_1 ===
 #knot: chapter_2_ending_1
 #ui:narrator
-#background:bg_ravi_valcalling.jpg
+#background:bg_ravi_valnumber.jpg
 There’s that term Val taught me. Carpe diem - seize the day. 
 VAR chapter_2_ending = 1
 ~ chapter_2_ending = 1
