@@ -901,7 +901,7 @@ Hello Ravi,  /n /n Great! Please let me know your earliest possible move-in date
 -> chapter_1_ending_1
 
 === chapter_1_ending_1 ===
-#knot: chapter_1_ending_1
+#knot:chapter_1_ending_1
 #ui:narrator
 #background:bg_ravi_pushpa_home.jpg
  Yes! I don’t know how this will go, but at least I don’t have to deal with stupid questions from the agent. And I’ll definitely save on transport. 
@@ -955,7 +955,7 @@ Hello Ravi, /n /n We understand. In that case, unfortunately, you will have to m
 -> chapter_1_ending_2
 
 === chapter_1_ending_2 ===
-#knot: chapter_1_ending_2
+#knot:chapter_1_ending_2
 #ui:narrator
 #background:bg_ravi_pushpa_home.jpg
 Sigh. This is way over my budget. But I’m not going to apply for financial assistance. I don’t want to be THAT guy. I'll find a way to make the cash.
@@ -971,7 +971,7 @@ Better let Amma know the news. Anyhow, cheers to independence! I’ve taken a fu
 -> ravi_1_reflection
 
 === chapter_1_ending_2b ===
-#knot: chapter_1_ending_2b
+#knot:chapter_1_ending_2b
 #ui:narrator
 #background:bg_ravi_pushpa_home.jpg
 I’ll just take the room in Jurong and be done with it. Save some money. Don’t think I can get a better deal. 
@@ -1514,7 +1514,7 @@ What’s that French phrase she taught me?
 
 
 === chapter_2_ending_1 ===
-#knot: chapter_2_ending_1
+#knot:chapter_2_ending_1
 #ui:narrator
 #background:bg_ravi_valnumber.jpg
 There’s that term Val taught me. Carpe diem - seize the day. 
@@ -1525,7 +1525,7 @@ If there’s a time for it, it’s now. Right. Here it goes, no regrets...
 -> ravi_2_reflection
 
 === chapter_2_ending_2 ===
-#knot: chapter_2_ending_1
+#knot:chapter_2_ending_1
 #ui:narrator
 #background:bg_ravi_bedroom.jpg
  C’est la vie. That’s life. It’s painful, it’s unfair. 
