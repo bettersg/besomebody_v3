@@ -537,77 +537,85 @@ export const MINI_GAME_MAP = [
   {
     game_id: 8,
     ui: "mcq",
-    introduction: "Ravi took up a part time job to pay the bills. What is it like for Singaporeans in this situation?.",
+    introduction: "Ravi took up a part time job to pay the bills. What is it like for Singaporeans in this situation?",
     questions: [
       {
         question_id: 1,
         question:
-          "What is the minimum wage in Singapore for migrant workers?",
+          "What is the average monthly household income for Singaporeans who live in 1 or 2-bedroom HDBs? [2020 data]",
         type: "text",
-        correct_answer_id: 4,
+        correct_answer_id: 2,
         explanation:
-          "From the Ministry of Manpower: As a matter of national policy, MOM does not prescribe minimum wages for all workers in Singapore, whether local or foreign. Whether wages should increase or decrease is best determined by market demand and supply for labour.",
+          "The average monthly household income (i.e. the combined salary of all the people who live there) for Singaporeans who live in 1 or 2-bedroom HDBs is $2,997. [Department of Statistics Key Household Income Trends, 2020]",
         answers: [
           {
             answer_id: 1,
-            title: "$1.50 per hour",
+            title: "$1,504",
           },
           {
             answer_id: 2,
-            title: "$10 per day",
+            title: "$2,997",
           },
           {
             answer_id: 3,
-            title: "$700 per month.",
+            title: "$10,127",
           },
           {
             answer_id: 4,
-            title: "There is no minimum wage.",
+            title: "$14,254",
           },
         ],
       },
       {
         question_id: 2,
         question:
-          "What is the median household monthly wage in Singapore",
-        correct_answer_id: 1,
-        explanation: "xxxxxx",
+          "What is the average monthly household income for Singaporeans who live in landed properties? [2020 data]",
+        correct_answer_id: 4,
+        explanation: "The average monthly household income (i.e. the combined salary of all the people who live there) for Singaporeans who live in landed properties is $27,838. [Department of Statistics Key Household Income Trends, 2020]",
         type: "text",
         answers: [
           {
             answer_id: 1,
-            title: "Chinese",
+            title: "$10,127",
           },
           {
             answer_id: 2,
-            title: "Malay",
+            title: "$15,023",
           },
           {
             answer_id: 3,
-            title: "Indian",
+            title: "$21,732",
           },
           {
-            answer_id: 2,
-            title: "None (all are equal)",
+            answer_id: 4,
+            title: "$27,838",
           },
         ],
       },
       {
         question_id: 3,
         question:
-          "What is the unemployment rate in Singapore?",
+          "What is the unemployment rate for Singaporean citizens? [2021 data]",
         type: "text",
         correct_answer_id: 2,
         explanation:
-          "False. A 2017 CNBC article highlighted that even in a weak rental market, some landlords explicitly deny rental opportunities to some races. Singaporean Malays, Singaporean Indians & PRCs are amongst those who face the issue of rental discrimination.",
+          "The unemployment rate for citizens in 2021 was 3.7% [Ministry of Manpower]. The unemployment rate for United States was 8.1% [World Bank], for comparison.",
           answers: [
             {
               answer_id: 1,
-              title: "True",
+              title: "1.7%",
             },
             {
               answer_id: 2,
-              title: "False",
+              title: "3.7%",
+            },
+            {
+              answer_id: 3,
+              title: "5.7%",
+            },
+            {
+              answer_id: 4,
+              title: "7.7%",
             },
           ],
       },  
