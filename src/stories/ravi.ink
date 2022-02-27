@@ -1142,6 +1142,7 @@ Hey! #speaker_self
 Hey Ravi! What are you doing here? #speaker_right
 Playing scrabble lah what you think? #speaker_self
 Getting a caffeinated beverage from your fine establishment. #speaker_self
+#speaker_right_image:cha_ravi_marie_cheeky.png
 Wah, big words from the man who hasn’t turned up once since I opened! #speaker_right
 Sorry la, Marie! Wish I could have come sooner. I’ve been busy. #speaker_self
 With what? Chasing girls? #speaker_right
@@ -1153,6 +1154,7 @@ Yeah.. well.. A lot has changed since then. #speaker_self
 I changed after Appa left. #inner_monologue
 I wish I was still the charmer she thinks I am. #inner_monologue
 I wish .... I wasn’t afraid of what a girl would see if she read too deeply into my eyes.#inner_monologue
+#speaker_right_image:cha_ravi_marie_normal.png
 Haha indeed, you suddenly look more like a real adult. And you’re wearing real clothes, not baggy T-shirts everywhere  #speaker_right
 Anyway, would you like a coffee? #speaker_right
 Yes please! #speaker_self
@@ -1166,12 +1168,14 @@ Ok check out the menu, tell me what you like. It's on the house!  #speaker_right
     Sorry, I’m allergic to hazelnuts. #speaker_self
     ...Seriously? #speaker_right
     Yeah... #speaker_self
+    #speaker_right_image:cha_ravi_marie_laughing.png
     Ok. A small, boring iced latte for a small, boring Ravi. #speaker_right
     Eh, don’t like that leh... #speaker_self
     Fine... one iced latte coming up. #speaker_right
     Thank you! #speaker_self
 
 + [Chilli Coconut Agave Cafe Latte]  Wow. I’d like to try the ... “Chilli Coconut Agave Café Latte"? I think… #speaker_self
+    #speaker_right_image:cha_ravi_marie_cheeky.png
     Waaah. Man after my own heart. That’s my favourite. #speaker_right
     Haha...really? Are you kidding me? #speaker_self
     No, I’m not. I mean come on man, I made the menu. #speaker_right
@@ -1179,6 +1183,7 @@ Ok check out the menu, tell me what you like. It's on the house!  #speaker_right
     It is! Trust me on this. #speaker_right
 
 - So, have time to catch up? Since we hardly hang out nowadays, after all. #speaker_right
+#speaker_right_image:cha_ravi_marie_normal.png
 I mean, I don’t mind. But is it ok? Will your customers mind their barista just chatting at the counter? #speaker_self
 Sure they won’t mind! I mean, there’s not that many people around right now. #speaker_right
 The couple just want to be left alone. And that girl there is Valerie, one of my regulars. #speaker_right
@@ -1190,6 +1195,7 @@ Anyway, how's everything? How's Revati? I remember meeting her for your birthday
 + Not so great [] to be honest. #speaker_self
 
 - What happened? #speaker_right
+#speaker_right_image:cha_ravi_marie_concerned.png
 Mum lost her job. #speaker_self
 Oh dear. #speaker_right
 And we have moved out to our aunt’s place. #speaker_self
@@ -1199,7 +1205,6 @@ That sounds...stressful. #speaker_right
 It is. #speaker_self
 Is your mum ok? #speaker_right
 Well… she puts up a brave front for everything. #speaker_self
-
 I feel like she doesn’t want to share her fear with us. But I can see it in her eyes. I caught her sobbing the other day. While boiling milk. #speaker_self
 Asked her what’s wrong. And she was like, cutting onions for dinner. Come on! #speaker_self
 Of course she doesn’t want to appear weak to her kids.  She’s been your rock. #speaker_right
@@ -1233,6 +1238,7 @@ Dude, don’t just live in your head. Talk to me! #speaker_right
 - Hmm...how about getting a proper cast? #speaker_right
 What do you mean? #speaker_self
 Get a job. With us. We’re looking for part-time help. I can only serve that many customers at once. #speaker_right
+#speaker_right_image:cha_ravi_marie_normal.png
 Seriously? #speaker_self
 Seriously. Plus, I wouldn’t mind having more people to talk to. I’m sure Valerie’s getting tired of my rants. I could always use a new victim. Both for my rants and my coffee experiments. What do you say? #speaker_right
 Oh my goodness! Yes! I would love to work here. It’ll be like the good old days. #speaker_self
@@ -1283,8 +1289,10 @@ Oh wait. Speak of the devil.
 #speaker_left_name:Val
 Ah, it’s you again. Running a bit late today? #speaker_self
 And it’s you again. Yeah, I was. Had to finish up a painting for class. I wanted to make sure the paint was dry before I left. #speaker_left
+#speaker_left_image:cha_ravi_valerie_angry.png
 I didn’t know you had to watch paint dry in art school. #speaker_self
 And I didn’t know you had to make fun of customers as a barista. #speaker_left
+#speaker_left_image:cha_ravi_valerie_normal.png
 Ok ok. Would you like your usual today? #speaker_self
 Only if it’s as good as the last time. #speaker_left
 Mmmm.... If you told me you just learnt how to make coffee a few weeks ago, I’d find it hard to believe you. #speaker_left
@@ -1308,6 +1316,7 @@ Well... the secret ingredient is... #speaker_self
     Seriously, I should just forget it. #inner_monologue
     Nothing. I don’t add anything.   #speaker_self
     Maybe I’m that good.  #speaker_self
+    #speaker_left_image:cha_ravi_valerie_flirt.png
     Oh, thank goodness! Haha... You paused so long I thought you were going to say “the secret ingredient is love” or something. #speaker_left
     Wait, what?  #inner_monologue
 
@@ -1320,6 +1329,7 @@ Well... the secret ingredient is... #speaker_self
     What did they talk about? Does Val have layered conversations like that all the time? Honey and code and insights…  #inner_monologue
     Oh man, this girl so interesting, but she’s way out of my league. #inner_monologue
 - Anyway. Mr. Barista. Care for a conversation? #speaker_left
+#speaker_left_image:cha_ravi_valerie_happy.png
 By conversation, do you mean “complain about your day to Mr. Ravi Kannasamy”? #speaker_self
 Yes. Last time I checked, that’s part of the services here at the great Resipi Alegria, no? #speaker_left
 This always happens. She comes in, orders her usual, or – if she’s in an extra good mood – orders that crazy Chilli Coconut Agave Latte. #inner_monologue
@@ -1332,16 +1342,20 @@ What if I were born well-off? Would I be as accomplished as Val?  #inner_monolog
 Okay, maybe not. She probably has way more brains and talent. And looks, too. #inner_monologue
 SO, I’ve been sooo busy nowadays. I’m juggling all these extra modules I’m taking, and I’m preparing a painting for that National Youth Fine Arts Competition this year. You know the one I’ve yakking about? #speaker_left
 Yeah, what about it? #speaker_self
+#speaker_left_image:cha_ravi_valerie_normal.png
 The first prize winner this year gets an all-expenses paid semester abroad at the University of the Arts, London! That’s one of the best art schools in the world! #speaker_left
 Oh wow! Do you think you stand a chance? #speaker_self
 I sure hope so. And I still have those CIP projects to handle too. I just really need sleep. And coffee. That’s why I’m here, I guess. #speaker_left
 Come in more often! I’ll tell my colleagues to save your favourite seat for you. #speaker_self
 That’s sweet of you, Ravi. But don’t worry. I’ll make sure to come in during your shifts. I always do. #speaker_left
+#speaker_left_image:cha_ravi_valerie_flirt.png
 So you can have yet another rant session? #speaker_self
-(laughs) No, so I can see you again, obviously. #speaker_left
-(laughs) Good one. #speaker_self
+No, so I can see you again, obviously. #speaker_left
+#speaker_left_image:cha_ravi_valerie_happy.png
+Haha.... Good one. #speaker_self
 Oh man. I can’t tell if she’s just being sarcastic. #inner_monologue
 So, now that you’ve heard all that I’m dealing with at the moment, can you do me a favour? #speaker_left
+#speaker_left_image:cha_ravi_valerie_normal.png
 Sure. What do you want? #speaker_self
 I can really do with some cheering up. #speaker_left
 I’m not quite sure what would work #inner_monologue
@@ -1382,7 +1396,7 @@ I’m not quite sure what would work #inner_monologue
     Who’s it by? #speaker_left
     Believe it or not, it’s by a chimp. Congo the chimpanzee. Circa 1957. #speaker_self
     HAHAHAHAHA! No shit! An actual monkey? #speaker_left
-    #speaker_left_image:cha_ravi_valerie_normal.png
+    #speaker_left_image:cha_ravi_valerie_incredulous.png
     #background:bg_ravi_cafe2.jpg
     Yeah. So ridiculous!  Apparently this sold for like a zillion dollars. Now I need to re-evaluate my life choices. Maybe I should quit being a barista and train some monkeys to do art. #speaker_self
     Well please don't quit, because otherwise I wouldn't get to hang out with my favourite Mr Barista every day. Plus if you were a zillionaire you might not have time for me. #speaker_left
@@ -1390,28 +1404,36 @@ I’m not quite sure what would work #inner_monologue
 + [Tell her a lame joke]
     Well, I’m not much of a comedian. But maybe I can tell you a joke? #speaker_self
     Sure, humour me. #speaker_left
+    #speaker_left_image:cha_ravi_valerie_incredulous.png
     So...Why did the coffee file a police report? #speaker_self
     Because it was mugged! #speaker_self
+    #speaker_left_image:cha_ravi_valerie_normal.png
     Ah, if I’m going to be honest, that joke feels a bit lukewarm. #speaker_left
     Not good enough? Hmm, how about this one. #speaker_self
     “A girl walks into Resipi Alegria, and orders a coffee to go. #speaker_self
     The coffee gets up and leaves”. #speaker_self
-    (laughs) Is the girl supposed to be me? Who’s the coffee? You? #speaker_left
-    (laughs) I don’t know! I just added you in for the joke. #speaker_self
+    #speaker_left_image:cha_ravi_valerie_happy.png
+    Haha... Is the girl supposed to be me? Who’s the coffee? You? #speaker_left
+    Haha... I don’t know! I just added you in for the joke. #speaker_self
     Don’t worry. I’ll always come in, but I’ll never ask you to leave. #speaker_left
+    #speaker_left_image:cha_ravi_valerie_flirt.png
 
 - Wow. From the way she smooth-talks, you’d think she actually likes me. #inner_monologue
 I guess a guy can dream. #inner_monologue
 Well, anyway, it’s late. I need to go soon. Thanks for today, Ravi. I really needed it. #speaker_left
+#speaker_left_image:cha_ravi_valerie_normal.png
 Could I have a Chilli Coconut Agave Café Latte to go please? #speaker_left
 Make sure you spell my full name right this time, not just Val or The Regular. #speaker_left
 Uh, I’m sorry about that. #speaker_self
 Valkyrie is a weird name, but I’m quite certain I spelt it correctly... #inner_monologue
 Just so we’re clear, the name’s Valerie, not Valkyrie. #speaker_left
+#speaker_left_image:cha_ravi_valerie_flirt.png
 OH MY GOD. This whole time I thought you were named Valkyrie. #speaker_self
 (laughs) Because of my tattoo? Call me judgy but I’ll never ink my own name on my arm. Too basic. #speaker_left
+#speaker_left_image:cha_ravi_valerie_happy.png
 Aren’t Valkyries like great warriors or angels or something? It fits you. OK Valerie does, too. #speaker_self
 Just to make sure you don’t mess it up again, I’ll spell it out for you this time so you'll never forget it. #speaker_left
+#speaker_left_image:cha_ravi_valerie_flirt.png
 Is that your phone over there? #speaker_left
 Yeah, why- #speaker_self
 (GRABS RAVI’S PHONE) #speaker_left
@@ -1424,6 +1446,7 @@ Got it. Wait..what? #speaker_self
 #background:bg_ravi_cafe2.jpg
 I really have to go right now. But make sure you call me tonight, okay, Ravi? I have something I really want to say to you. See you around. #speaker_left
 Wow. Uh...I’ll call you, Valkyrie. I mean, Valerie. See you. #speaker_self
+#speaker_left_image:pixel.png
 Great, I came off like a total idiot. I must be the only person who got her name wrong. #inner_monologue
 What does she see in someone like me? Does she see Mr. Barista, or plain old Ravi? #inner_monologue
 Oh wait, she doesn’t know plain old Ravi, and that’s my own fault. #inner_monologue
