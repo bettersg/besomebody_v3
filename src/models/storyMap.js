@@ -483,7 +483,7 @@ export const CHARACTER_MAP = [
     playable: true,
     primaryColour: '#8DC000',
     secondaryColour: '#FF8944',
-    newestChapter: 1,
+    newestChapter: 2,
     chapters: [
       {
         chapterId: 1,
