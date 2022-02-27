@@ -126,7 +126,9 @@ const RoomInfoPage = () => {
   // console.log('roomCode params: ',roomCode)
   // console.log('UserId: ',currentUser.id)
 
-  
+  // TODO: is this page suitable to be the room details page with the teacher instructions and homework? Check that the saves make sense.
+
+
   const saveRoomStartGame = async () => {
     // e.preventDefault()
       
@@ -138,6 +140,26 @@ const RoomInfoPage = () => {
       await updateUserRoomDb(currentUser.id, room.id)  
       await updateDbUser({ activeRoom: roomUrl }, currentUser.id)   
       console.log('Room Updated', room.id)
+      history.push('/')  // redirect to root which will be the characterchoice page now.     
+    } catch (err) {
+      setSnackbar({
+        message: `There was an error: ${err.message}`,
+        open: true,
+        type: 'error',
+      })
+    }
+    setIsLoading(false)      
+
+  };
+
+
+  const exitActiveRoom = async () => {        
+    try {
+      setIsLoading(true)          
+    //   await updateRoomParticipantsDb(room.id, currentUser.id)  
+    //   await updateUserRoomDb(currentUser.id, room.id)  
+      await updateDbUser({ activeRoom: null }, currentUser.id)   
+      console.log('Room Exited')
       history.push('/')  // redirect to root which will be the characterchoice page now.     
     } catch (err) {
       setSnackbar({
@@ -183,7 +205,8 @@ const RoomInfoPage = () => {
 
       </Container>          
         <Box className={classes.bottom}>
-          <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} onClick={() => saveRoomStartGame()}>Start Game</Button>         
+          <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} onClick={() => saveRoomStartGame()}>Confirm & Start Game</Button>         
+          <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} onClick={() => exitActiveRoom()}>Leave Room</Button>         
         </Box>        
     </Box>
 

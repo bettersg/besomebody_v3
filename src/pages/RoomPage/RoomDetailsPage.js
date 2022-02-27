@@ -14,7 +14,7 @@ import {
   
 
 
-const RoomExitPage = () => {
+const RoomDetailsPage = () => {
     const [isLoading, setIsLoading] = useState(false)
     const [userFromDb, setUserFromDb] = useState(null)
     const [room, setRoom] =  useState(null)
@@ -75,4 +75,4 @@ const RoomExitPage = () => {
     
 }
 
-export default RoomExitPage;
+export default RoomDetailsPage;

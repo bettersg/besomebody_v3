@@ -108,7 +108,7 @@ export default function SideMenu ({src="/side_menu/menu-icon.svg", ...rest}) {
             
             <div className="SideMenu__menuitems__item">
               {userFromDb?.activeRoom &&
-                <Link to={"/room_exit/" } className="SideMenu__menuitems__label"><SVG src="/side_menu/profile.svg" className="SideMenu__menuitems__icons" />
+                <Link to={"/room/" + userFromDb?.activeRoom } className="SideMenu__menuitems__label"><SVG src="/side_menu/profile.svg" className="SideMenu__menuitems__icons" />
                   <span>Your Room</span></Link>
               }
               {!userFromDb?.activeRoom &&
