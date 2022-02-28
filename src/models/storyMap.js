@@ -641,7 +641,7 @@ export const CHARACTER_MAP = [
     characterIntroImage:  "/character_choice_page/zhihao.png",
     description: "Zhihao might have a future in e-sports, but will it disappear before his eyes? Life is about to get complicated, as a fateful Tweet gains a life of its own...",
     jsonLink: '../stories/zhihao.ink.json',
-    playable: false,
+    playable: true,
     jsonFile: ZhihaoInk,
     primaryColour: '#7F89BC',
     secondaryColour: '#B1EAEE',
@@ -652,7 +652,7 @@ export const CHARACTER_MAP = [
         reflectionId:11,
         number: 1,
         title: "A Chinese New Year",
-        knotTag: "nadia_1_intro",
+        knotTag: "zhihao_1_intro",
         summary: "Zhihao meets his family during Chinese New Year, where drama bubbles to the surface. How will he respond to his uncles?",
         playable: true,
         images: [
@@ -688,7 +688,7 @@ export const CHARACTER_MAP = [
         title: "The Date Crasher",
         knotTag: "nadia_2_intro",
         summary: "Nadia runs into some hard realities. Sometimes, having dreams isn't as straightforward as it should be.",
-        playable: true,
+        playable: false,
         images: [
           "/images/bg_nadia_intro.jpg",
         ],
