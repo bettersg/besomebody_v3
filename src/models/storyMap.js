@@ -58,6 +58,7 @@ export const CHARACTER_MAP = [
         knotTag: "nadia_1_intro",
         summary: "Nadia's wardrobe choice gets questioned, and she is asked a surprising question by Gavin.",
         playable: true,
+        discordLink: 'https://discord.gg/QyR2fvqSgN',
         images: [
           "/images/bg_nadia_intro.jpg",
           "/images/bg_nadia_schooldrivewayatnight.jpg",
@@ -116,6 +117,7 @@ export const CHARACTER_MAP = [
         knotTag: "nadia_2_intro",
         summary: "Nadia runs into some hard realities. Sometimes, having dreams isn't as straightforward as it should be.",
         playable: true,
+        discordLink: 'https://discord.gg/Az4tr5XXJM',
         images: [
           "/images/bg_nadia_intro.jpg",
           "/images/bg_nadia_bedroom.jpg",
@@ -165,6 +167,7 @@ export const CHARACTER_MAP = [
         knotTag: "nadia_3_intro",
         summary: "As one door closes, another opens. But which girl will step through that door? As JC life comes to an end, only Nadia can choose.",
         playable: true,
+        discordLink: 'https://discord.gg/9ttyzdsANY',
         images: [
           "/images/bg_nadia_intro.jpg",
           "/images/bg_nadia_bedroom.jpg",
@@ -214,6 +217,7 @@ export const CHARACTER_MAP = [
         knotTag: "story_end_browser",
         summary: "Nadia's story in the game has ended, but the stories of all our players are waiting to be explored.",
         playable: true,
+        discordLink: 'https://discord.gg/9ttyzdsANY',
         images: [
           "/images/bg_nadia_intro.jpg",         
           "/images/bg_launch.jpg",
@@ -270,7 +274,7 @@ export const CHARACTER_MAP = [
         knotTag: "aman_1_intro",
         summary: "Aman enlists in National Service. It’s a proud moment for his family, but Aman is uneasy...",
         playable: true,
-        discordLink: 'https://discord.com/channels/934082509061357598/937966433130913883',
+        discordLink: 'https://discord.gg/QYPAyHPVhx',
         images: [
           "/images/pixel.png",          
           "/images/ui_aman_message.jpg",
@@ -342,7 +346,7 @@ export const CHARACTER_MAP = [
         knotTag: "aman_2_intro",
         summary: "Aman discovers talent is not enough to crack the silver screen. Where will he draw the line?",
         playable: true,
-        discordLink: 'https://discord.com/channels/934082509061357598/937966433130913883',
+        discordLink: 'https://discord.gg/hgC6jvtuyv',
         images: [
           '/images/bg_aman_beach.jpg',
           '/images/bg_aman_bedroom.jpg',
@@ -386,7 +390,7 @@ export const CHARACTER_MAP = [
         knotTag: "aman_3_intro",
         summary: "After a shocking argument, Aman must decide how his life’s script will unfold.",
         playable: true,
-        discordLink: 'https://discord.com/channels/934082509061357598/937966433130913883',
+        discordLink: 'https://discord.gg/UbpMcU8WY8',
         images: [
           '/images/bg_aman_intro.jpg',
           '/images/bg_aman_gurdwara.jpg',
@@ -445,6 +449,7 @@ export const CHARACTER_MAP = [
         knotTag: "story_end_browser",
         summary: "Aman's story in the game has ended, but the stories of all our players are waiting to be explored.",
         playable: true,
+        discordLink: 'https://discord.gg/UbpMcU8WY8',
         images: [
           "/images/bg_aman_intro.jpg",         
           "/images/bg_launch.jpg",
