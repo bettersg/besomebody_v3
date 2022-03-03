@@ -147,8 +147,8 @@ const ShareableImageContainer = ({data }) =>{
   
     var displayText = '';
 
-    if (text.length > 200) {
-        displayText = text.slice(0,198)+"..."
+    if (text.length > 120) {
+        displayText = text.slice(0,118)+"..."
     }
     else if (text.length == 0) {
       displayText = "I pledge to be curious about what it's like to be you, and let you be curious about what it's like to be me. "
