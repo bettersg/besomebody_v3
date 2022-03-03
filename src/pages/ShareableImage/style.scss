@@ -41,12 +41,12 @@
         position: absolute;
         width: 252px;
         left: 24px;
-        bottom: 32.5px;
+        top: 24px;
     }
 
     &__overline {
         position: static;
-        width: 150%;
+        // width: 150%;
         height: 15.5px;
         left: 0px;
         bottom: 162.5px;
@@ -65,7 +65,7 @@
 
         letter-spacing: 0.05em;
         text-transform: uppercase;
-        color: #C5E83A;
+        color: #6C70DD;
     }
 
     &__body {
@@ -77,15 +77,37 @@
 
         font-family: Inter;
         font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 130%;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 110%;
+        text-align: left;
 
         flex: none;
         order: 1;
         flex-grow: 0;
 
-        color: #FFFFFF;
+        color: #000000;
+    }
+
+    &__bodyBig {
+        position: static;
+        height: 100%;
+        left: 0%;
+        right: 0%;
+        bottom: 0px;
+
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 110%;
+        text-align: left;
+
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+
+        color: #000000;
     }
 
     &__logo {
