@@ -4,7 +4,7 @@ import React, { useEffect, useCallback } from 'react'
 import "./style.scss"
 
 const NextButton = (props) => {
-    const { getStory } = props
+    const { getStory, className } = props
 
     // Trigger next on right arrow key
     const handleUserKeyPress = useCallback((event) => {
@@ -18,7 +18,7 @@ const NextButton = (props) => {
       };
     }, [handleUserKeyPress]);
 
-    return <div className="next-button" onClick={getStory} />
+    return <div className={`next-button ${className}`} onClick={getStory} />
 }
 
 export default NextButton

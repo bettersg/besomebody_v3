@@ -35,23 +35,23 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 200,
   },
   bottom: {
-    bottom: "78px",
-    height: '20vh',
+    bottom: 0,
+    height: '150px',
     position: 'absolute',
     marginLeft: 'auto',
     marginRight: 'auto',
     left: 0,
     right:0,
     textAlign: 'center',
-    display: 'flex',    
-    flexDirection: 'column',
-    alignItems: 'center',
+    // display: 'flex',    
+    // flexDirection: 'column',
+    // alignItems: 'center',
   },
   container: {
     margin: 'auto',
     textAlign: 'center',    
     alignItems: "center",
-    paddingTop:'25%',
+    paddingTop:'15%',
   },
   btnFindout: {
     width: "252px", 
@@ -94,10 +94,10 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 30,
   },
   mainText: {
-    color: '#072435',
-    fontSize: '1.1rem',
+    fontSize: '1.0rem',
     fontWeight: '400',    
-    marginBottom: 30,
+    margin: "20px",
+
   },
   link: {
     color: '#ffffff',
@@ -107,6 +107,9 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "uppercase",
     textDecoration: 'none',
   },
+  videoImage: {
+    width: '100%'
+  }
 }))
 
 const ChapterLearning = ({ setPage , reflection }) => {
@@ -120,17 +123,15 @@ const ChapterLearning = ({ setPage , reflection }) => {
         <Box className={classes.container}>
           <Typography className={classes.topText}>DID YOU KNOW?</Typography>
           <Typography className={classes.mainText}>{reflection.didyouknow}</Typography>
+          {reflection.media ?
+            reflection.mediatype === "video" ?
+              <a href={reflection.media} target="_blank" className={classes.link}><img src={reflection.mediaimage} className={classes.videoImage}/></a> :
+              <a href={reflection.media} target="_blank" className={classes.link}><Button variant="contained" className={classes.findOutBtn} >Find Out More</Button></a>
+            : null
+          }
       </Box>
         <Box className={classes.bottom}>   
-        {reflection.media ?
-        <Button variant="contained" className={classes.btnFindout} onClick={() => window.open(
-          reflection.media,
-          '_blank' 
-        ) }>
-          Find out more
-        </Button>  
-        : null
-      }   
+       
           <Button variant="contained" className={classes.btn} onClick={() => setPage(REFLECTION_PAGE_CHAPTER_REFLECTION_RESPONSES)}>
           Continue
         </Button>
