@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     color: '#ffffff',
     fontWeight: '700',
     // position: "absolute", 
-    top: 210, 
+    top: 320, 
     // margin: "55px", 
     textTransform: "unset", 
     '&:hover': {
@@ -104,9 +104,9 @@ const ShareableImageContainer = ({data }) =>{
           }
           else {
           navigator.share({
-              title: `${storyName}`, 
-              text: "I completed playing the interactive fiction game ToBeYou.sg, and I want you to join me!",  
-              url: document.location.href,
+              title: `${storyName} on ToBeYou.sg`, 
+              text: "I completed playing the interactive fiction game ToBeYou.sg. Join us!",  
+              url: 'https://tobeyou.sg',
               files: filesArray
             })
             .then(() => {
@@ -147,8 +147,8 @@ const ShareableImageContainer = ({data }) =>{
   
     var displayText = '';
 
-    if (text.length > 120) {
-        displayText = text.slice(0,118)+"..."
+    if (text.length > 100) {
+        displayText = text.slice(0,98)+"..."
     }
     else if (text.length == 0) {
       displayText = "I pledge to be curious about what it's like to be you, and let you be curious about what it's like to be me. "
@@ -173,7 +173,7 @@ const ShareableImageContainer = ({data }) =>{
             top: "22px", filter: "drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.04))", transform: "rotate(-2deg)"}}/> */}
             <div className="ShareableImage__reflectionContainer">
                 <div className="ShareableImage__overline">{storyName}</div>
-                <div className="ShareableImage__body">{displayText}</div>                
+          <div className={displayText.length < 50 ? "ShareableImage__bodyBig" : "ShareableImage__body"}>{displayText}</div>                
             </div>
         
         

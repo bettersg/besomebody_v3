@@ -46,7 +46,7 @@
 
     &__overline {
         position: static;
-        width: 150%;
+        // width: 150%;
         height: 15.5px;
         left: 0px;
         bottom: 162.5px;
@@ -69,6 +69,27 @@
     }
 
     &__body {
+        position: static;
+        height: 100%;
+        left: 0%;
+        right: 0%;
+        bottom: 0px;
+
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 110%;
+        text-align: left;
+
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+
+        color: #000000;
+    }
+
+    &__bodyBig {
         position: static;
         height: 100%;
         left: 0%;

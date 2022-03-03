@@ -5,8 +5,8 @@ const ShareableImage = ({imageData, className }) => {
     const {storyName, text, avatar, avatarImage} = imageData
     var displayText = '';
 
-    if (text.length > 200) {
-        displayText = text.slice(0,198)+"..."
+    if (text.length > 100) {
+        displayText = text.slice(0,98)+"..."
     }
     else {
         displayText = text

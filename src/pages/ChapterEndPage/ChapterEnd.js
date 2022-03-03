@@ -54,9 +54,9 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 800,
     color: '#ffffff',
     textAlign: 'center',
-    paddingTop: 69,
-    marginBottom:15,
-    margin: "0 48px"
+    paddingTop: 50,
+    marginBottom:5,
+    // margin: "0 48px"
   },
   bottom: {
     bottom: 0,
@@ -79,13 +79,13 @@ const useStyles = makeStyles((theme) => ({
   imageContainer: {
     margin: 'auto',
     textAlign: 'center',
-    paddingTop: '70px',
+    paddingTop: '50px',
   },
   shareContainer: {
     margin: 'auto',
     textAlign: 'center',    
     height: '200px',
-    marginTop: '220px !important',
+    marginTop: '300px !important',
   },
   btn: {
     padding: '10px 50px',
@@ -116,7 +116,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 30,
   },
   socialLink: {
-    padding: '20px 10px 0px 10px',
+    padding: '00px 10px 0px 10px',
   }
 }))
 
