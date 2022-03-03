@@ -15,7 +15,7 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 const useStyles = makeStyles((theme) => ({
   background: {
-    backgroundImage: ({ image }) => `url('/images/bg_reflections.jpg')`,
+    backgroundImage: ({ image }) => `url('/shareable_avatars/bg_presharestep.jpg')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '660px',
@@ -48,6 +48,7 @@ const useStyles = makeStyles((theme) => ({
   container: {
     margin: 'auto',
     textAlign: 'center',
+    paddingTop:200,
   },
   btn: {
     padding: '10px 50px',
@@ -66,8 +67,8 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     color: '#ffffff',
-    fontSize: '0.9rem',
-    fontWeight: '400',
+    fontSize: '1rem',
+    fontWeight: '700',
     textDecoration: 'none',
     marginBottom: 30,
   }
@@ -82,7 +83,7 @@ const PreShareStep = ({ next }) => {
   <Box className={classes.background}>
     <Container maxWidth="md" className={classes.container}>
         <Box py={4} display="flex" flexDirection="column" justifyContent="center" alignItems="center">          
-          <Typography className={classes.text}>This character's chapter might be over... but the conversation doesn't have to end here, if you want to join our private communith to discuss the reflections and share your own views.</Typography>
+          <Typography className={classes.text}>This character's chapter might be over... but the conversation should not end here. Share your reflections with your friends, and join our private community to discuss the issues and reflections. <p> Empathy works best when we all embrace it together!</p> </Typography>
       </Box>
         <Box className={classes.bottom}>        
           {/* <Button variant="contained" className={classes.btn} onClick={() => setPage(REFLECTION_PAGE_CHAPTER_REFLECTION_RESPONSES)}> */}
