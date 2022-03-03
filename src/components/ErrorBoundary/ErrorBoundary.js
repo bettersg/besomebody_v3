@@ -46,6 +46,7 @@ class ErrorBoundary extends Component {
           image={<ErrorIllustration />}
           title="Something went wrong"
           description="The game failed to load. Please return to the home page."
+          button = "Home"
         />
       );
     }

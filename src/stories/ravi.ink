@@ -291,7 +291,7 @@ We packed our lives into bags and started moving in to Pushpa Aunty's house.
 #knot:ravi_1_2
 #ui:scene
 #background:bg_ravi_pushpa_home.jpg
-#speaker_left_image:cha_ravi_mum_normal.png
+#speaker_left_image:cha_ravi_mum_dress_normal.png
 #speaker_left_name:Amma
 #speaker_right_image:cha_ravi_revati_normal.png 
 #speaker_right_name:Revati
@@ -360,7 +360,7 @@ We all know you’re not agreeing out loud because I’m your bro, but you love 
 Ah, that smirk. Now she’s looking more herself. #inner_monologue
 Shuddup anna (big brother). So annoying… #speaker_right
 My pleasure. Eh don’t drop the sofa! #speaker_self
-#speaker_left_image:cha_ravi_mum_normal.png
+#speaker_left_image:cha_ravi_mum_dress_happy.png
 That took a while! #speaker_left
 Yah… as a long as a sofa should take. #speaker_self
 Don’t be rude, kanna! Maybe we just had more things that we thought we did. Now’s a good time to sell some extra clothes, jewellery… #speaker_left
@@ -370,6 +370,7 @@ For washing up, we can use the small toilet, the one behind, near the kitchen...
 Wait a minute, what about me? Where should I sleep? #speaker_self
 For tonight, you can sleep on the sofa. #speaker_left
 Wait, on the sofa? #speaker_self
+#speaker_left_image:cha_ravi_mum_dress_normal.png
 There just isn’t enough space in the extra room. I told you, there’s just Kamala’s bed. Revati and I will need to share it.  #speaker_left
 There’s some room on the floor, but not enough to lay down a mattress. The sofa is better for your back. Better than the floor, anyway. #speaker_left
 I still have an entire list of stuff you need to do, starting with clearing out the storage room.  #speaker_left
@@ -390,6 +391,7 @@ Maybe I need to take a stand. #inner_monologue
     I’ll pass you a blanket you can use when you sleep, after you’re done. Next, we have to- #speaker_left
     Amma, I have an early class tomorrow... #speaker_self
     You know the prof, the strict one I told you about?  #speaker_self
+    #speaker_left_image:cha_ravi_mum_dress_worried.png
     He’ll kill me if I go to his class late, or worse, fall asleep... #speaker_self
     And my class is at 9. It’s so far away, I’ll need to leave at 7. At least Revati is near to her school. #speaker_self
     #speaker_right_image:cha_ravi_revati_concerned.png 
@@ -401,6 +403,7 @@ Maybe I need to take a stand. #inner_monologue
     Why ma! #speaker_self
     Why what? #speaker_left
     I’m so tired. I just want to crash! #speaker_self
+    #speaker_left_image:cha_ravi_mum_dress_worried.png
     Yeah you can. After you help clear up everything. We can’t leave it lying around like this. #speaker_left
     Amma, I have an early class tomorrow! #speaker_self
     So you want your sister and I to move everything? On our own? #speaker_left
@@ -898,7 +901,7 @@ Hello Ravi,  /n /n Great! Please let me know your earliest possible move-in date
 -> chapter_1_ending_1
 
 === chapter_1_ending_1 ===
-#knot: chapter_1_ending_1
+#knot:chapter_1_ending_1
 #ui:narrator
 #background:bg_ravi_pushpa_home.jpg
  Yes! I don’t know how this will go, but at least I don’t have to deal with stupid questions from the agent. And I’ll definitely save on transport. 
@@ -952,7 +955,7 @@ Hello Ravi, /n /n We understand. In that case, unfortunately, you will have to m
 -> chapter_1_ending_2
 
 === chapter_1_ending_2 ===
-#knot: chapter_1_ending_2
+#knot:chapter_1_ending_2
 #ui:narrator
 #background:bg_ravi_pushpa_home.jpg
 Sigh. This is way over my budget. But I’m not going to apply for financial assistance. I don’t want to be THAT guy. I'll find a way to make the cash.
@@ -968,7 +971,7 @@ Better let Amma know the news. Anyhow, cheers to independence! I’ve taken a fu
 -> ravi_1_reflection
 
 === chapter_1_ending_2b ===
-#knot: chapter_1_ending_2b
+#knot:chapter_1_ending_2b
 #ui:narrator
 #background:bg_ravi_pushpa_home.jpg
 I’ll just take the room in Jurong and be done with it. Save some money. Don’t think I can get a better deal. 
@@ -1010,10 +1013,15 @@ Reflection 7
 #knot:ravi_2_intro
 #ui:narrator
 #background:bg_ravi_bedroom.jpg
-One month after the move. Ravi, lying in bed in his new room.
+One month after the move. #title
+Moving out on my own was rough. 
+Amma didn’t take the news well, as expected. She preferred me to save money and stay home.
+But I need to focus on my studies so that I can do well and get us out of this rut.
+Saving rental money versus failing out of university ... the choice was clear to me.
+But she was right, the monthly rent was a big bite out of my small savings.
 
 ~ chapter_id = 2
-
+#background:black.jpg
 CHAPTER {chapter_id} #title
 Coffee Shop Kannasamy #title
 
@@ -1024,14 +1032,518 @@ Coffee Shop Kannasamy #title
 === ravi_2_1_narration ===
 #knot:ravi_2_1_narration
 #ui:narrator
-#background:bg_ravi_intro.jpg
-Holding
+#background:bg_ravi_bedroom.jpg
+{ravi_1_dormhousing == true: 
+At least in the dorm I’ve got more time to study. 
+And make a few friends, which is a luxury I could not afford before. I’m so glad I don’t have to deal with bad landlords.
+- else: 
+At least in this rental room I’ve got peace and quiet to study, and nobody to distract or bother me.
+And this landlord seems pretty chill. I guess not all of them are bad la.
+}
+I miss my family though, being here alone.
  
 -> ravi_2_1
 
 === ravi_2_1 ===
 #knot:ravi_2_1
+#ui:whatsapp 
+#background:whatsapp.png
+#chat_group_title:Revati
+#chat_group_image:ico_ravi_revati.png
+#speaker_1_name:Revati
+#timestamp:21.34
+Hey Thangachi (little sister) #speaker_self
+How have you guys been doing #speaker_self
+Just wanted to check in #speaker_self
+Aww #speaker_1
+Do you miss us? #speaker_1
+I’d be lying if I say I didn’t #speaker_self
+Living on my own is kind of new for me #speaker_self
 
+Yeah.  It’s weird to not see you around #speaker_1
+But I mean all is good. Amma is looking for a job #speaker_1
+And I’m getting rekt by my exam ten year series. Thanks for buying that for me btw. But I’ll manage #speaker_1
+How about you? Room good? Have you put up all your ugly posters already? There's still a box of them left here  #speaker_1
+Well... it’s as good as it’ll get #speaker_self
+Living on my own is surprisingly expensive #speaker_self
+I didn’t realise how much money I had to spend... like on food alone #speaker_self
+Don’t know is it because I eat too much or my taste buds spoiled by Amma's cooking #speaker_self
+But yeah like my savings are running out at this rate #speaker_self
+I need to see how I can cut costs #speaker_self
+Have you considered looking for a part time job? #speaker_1
++ [I know I should] I know I should… I haven’t #speaker_self
+    But I don’t have the time right now to look for one #speaker_self
+    Classes are busy and I’m looking for an internship too #speaker_self
+    Can’t do both at once #speaker_self
+    Anyway I don’t think anybody will hire at short notice #speaker_self
+
++ [I want to focus on studies] I just want to focus on school for now. #speaker_self
+    Classes are busy and I’m looking for an internship too #speaker_self
+    Can’t do both at once #speaker_self
+    Anyway I have a better way to save money. Just eat maggi mee every day for almost every meal! #speaker_self
+- Btw can you tell Pushpa Aunty I won’t be coming over for dinner today? #speaker_self
+I have something on. Tyty #speaker_self
+Huh #speaker_1
+Why not? You going on a date?!? #speaker_1
++ [Why would that be so shocking?] Eh no need to sound so shocked ok #speaker_self
+    Just because I don't report my daily movements to you doesn't mean I don't have a social life ok. #speaker_self
+    Wait for real? You're going on a date Anna (brother)? #speaker_1
+    Uh.. no. But uh, one day I will.  #speaker_self
+    Haha. Lemme know when you meet someone so I can warn the poor girl abt your lame jokes #speaker_1
++ [Lol I wish] Lol I wish #speaker_self
+    Sadly no. Not a priority right now anyway #speaker_self
+- I’m planning to visit a new cafe #speaker_self
+You remember Marie? #speaker_self
+The food girl? #speaker_1
+Yeah lol #speaker_self
+The food girl. I’ll tell her you called her that #speaker_self
+Don’t HAHA later she will be mad at me #speaker_1
+But yes what about her #speaker_1
+Well she left her job at an MNC and opened up a new café #speaker_self
+It’s called Resipi Alegria #speaker_self
+I plan to visit her later #speaker_self
+My other friends visited alr haha #speaker_self
+I didn’t have time thanks to classes #speaker_self
+But post-midterm week has been quite chill #speaker_self
+Ohhh #speaker_1
+So you’re going to be eating there? #speaker_1
+Sadly no also haha #speaker_self
+I’m broke rmb #speaker_self
+LOL I’ll just grab a drink #speaker_self
+And go home cook instant noodles I guess #speaker_self
+Peak cuisine #speaker_self
+Oh ok sure #speaker_1
+Last call,  you sure you can’t make it tonight? #speaker_1
+Pushpa Aunty is cooking fish curry #speaker_1
+ 🥲  #speaker_self
+ I can’t, I only have this slot to visit her new cafe.  #speaker_self
+
+-> ravi_2_2_narration
+
+=== ravi_2_2_narration ===
+#knot:ravi_2_2_narration
+#ui:narrator
+#background:bg_ravi_cafe.jpg
+Finally here. Took a while to find Marie's new café. 
+Whoa! Sure looks fancy.
+The place isn’t too packed right now. I guess 4 p.m. on a Thursday is a weird time to have coffee.
+There’re not too many customers either. There’s a couple in the corner, and this reallllllly pretty girl sitting at the counter. I should definitely visit more often if this is the crowd, hehe.
+Wait, no time to get distracted. Where is she... ah, there’s Marie! 
+
+-> ravi_2_2
+
+=== ravi_2_2 ===
+#knot:ravi_2_2
+#ui:scene
+#background:bg_ravi_cafe.jpg
+#speaker_right_image:cha_ravi_marie_normal.png
+#speaker_right_name:Marie
+Hey! #speaker_self
+Hey Ravi! What are you doing here? #speaker_right
+Playing scrabble lah what you think? #speaker_self
+Getting a caffeinated beverage from your fine establishment. #speaker_self
+#speaker_right_image:cha_ravi_marie_cheeky.png
+Wah, big words from the man who hasn’t turned up once since I opened! #speaker_right
+Sorry la, Marie! Wish I could have come sooner. I’ve been busy. #speaker_self
+With what? Chasing girls? #speaker_right
+No time for girls, man. #speaker_self
+You always had time for girls leh. #speaker_right
+Aiyoh. I dated ONE girl for like a month when I was a teenager, and you think I’m a Romeo.  #speaker_self
+Well you were always the charmer la #speaker_right
+Yeah.. well.. A lot has changed since then. #speaker_self
+I changed after Appa left. #inner_monologue
+I wish I was still the charmer she thinks I am. #inner_monologue
+I wish .... I wasn’t afraid of what a girl would see if she read too deeply into my eyes.#inner_monologue
+#speaker_right_image:cha_ravi_marie_normal.png
+Haha indeed, you suddenly look more like a real adult. And you’re wearing real clothes, not baggy T-shirts everywhere  #speaker_right
+Anyway, would you like a coffee? #speaker_right
+Yes please! #speaker_self
+Ok check out the menu, tell me what you like. It's on the house!  #speaker_right
+
++ [Iced Latte] Oh, I’ll take an iced latte. #speaker_self
+    Want to try our green tea latte instead? I just added it to the menu. Trust me, it's amazing. #speaker_right
+    Nah, not really a fan of green tea. #
+    First time I’ve ever heard that. Who isn’t a fan of green tea? #speaker_right
+    Hmm, how about our hazelnut latte? #speaker_right
+    Sorry, I’m allergic to hazelnuts. #speaker_self
+    ...Seriously? #speaker_right
+    Yeah... #speaker_self
+    #speaker_right_image:cha_ravi_marie_laughing.png
+    Ok. A small, boring iced latte for a small, boring Ravi. #speaker_right
+    Eh, don’t like that leh... #speaker_self
+    Fine... one iced latte coming up. #speaker_right
+    Thank you! #speaker_self
+
++ [Chilli Coconut Agave Cafe Latte]  Wow. I’d like to try the ... “Chilli Coconut Agave Café Latte"? I think… #speaker_self
+    #speaker_right_image:cha_ravi_marie_cheeky.png
+    Waaah. Man after my own heart. That’s my favourite. #speaker_right
+    Haha...really? Are you kidding me? #speaker_self
+    No, I’m not. I mean come on man, I made the menu. #speaker_right
+    Oh…it’s just that chilli coconut agave coffee doesn’t sound...that dope… #
+    It is! Trust me on this. #speaker_right
+
+- So, have time to catch up? Since we hardly hang out nowadays, after all. #speaker_right
+#speaker_right_image:cha_ravi_marie_normal.png
+I mean, I don’t mind. But is it ok? Will your customers mind their barista just chatting at the counter? #speaker_self
+Sure they won’t mind! I mean, there’s not that many people around right now. #speaker_right
+The couple just want to be left alone. And that girl there is Valerie, one of my regulars. #speaker_right
+Comes in nearly every afternoon. She’s probably heard a hundred of my conversations at least. I talk to her a lot too. I’m sure she won’t mind. #speaker_right
+Did Marie say that her name was “Valkryie”? Weird name. Better not look at her too much. She might catch me staring. #inner_monologue
+Anyway, how's everything? How's Revati? I remember meeting her for your birthday. Oh, and that biryani your mum cooked. Getting hungry just thinking about it. #speaker_right
+
++ We are ok lah... [] Well, I mean there’s been some bumps in the road. #speaker_self  
++ Not so great [] to be honest. #speaker_self
+
+- What happened? #speaker_right
+#speaker_right_image:cha_ravi_marie_concerned.png
+Mum lost her job. #speaker_self
+Oh dear. #speaker_right
+And we have moved out to our aunt’s place. #speaker_self
+All of you? #speaker_right
+Yeah. Well, I got my own place now. Just a small room. #speaker_self
+That sounds...stressful. #speaker_right
+It is. #speaker_self
+Is your mum ok? #speaker_right
+Well… she puts up a brave front for everything. #speaker_self
+I feel like she doesn’t want to share her fear with us. But I can see it in her eyes. I caught her sobbing the other day. While boiling milk. #speaker_self
+Asked her what’s wrong. And she was like, cutting onions for dinner. Come on! #speaker_self
+Of course she doesn’t want to appear weak to her kids.  She’s been your rock. #speaker_right
+Yeah. And I’m stuck between that and a hard place. #speaker_self
+Hey. You got to try and think from her perspective. #speaker_right
+Have you thought about how you can help out? She’s your mother, you know, with A LOT of weight on her shoulders. #speaker_right
+She doesn’t want to put any of it on you. #speaker_right
+I want to help out. But what can I do? Except finish my course, get my internship, get a job. #speaker_self
+That will take you, like, a couple of years right? #speaker_right
+Yeah. #speaker_self
+How about helping her out now? Go for a walk with her. Watch a movie. Speak to her more often. Show her you’re not just mopey lil’ boring Ravi. She needs you, man.  #speaker_right
+Yeah, all that is fine. But still we hardly have money to cover our meals. #inner_monologue
+... #speaker_self
+Hey man, what are you thinking about? #speaker_right
+Earth to Ravi...? #speaker_right
+... #speaker_self
+Dude, don’t just live in your head. Talk to me! #speaker_right
++ [I should talk to Marie. Maybe she can help.] Well...it’s just that I can do all that, but it won’t change our financial situation.  You know what I mean? #speaker_self
+    Well, I’m not saying it will. I don’t think your mum is expecting that either. But you can at least be a good son to her. #speaker_right
+    Sometimes just reaching out is what it takes to make the other person feel better. #speaker_right
+    It’d still be putting a band-aid on a fracture. #speaker_self
+
++ [I can’t talk to Marie about this right now. ] It’s nothing. Yeah, you’re right. #speaker_self
+    Come on man. What’s wrong? Tell me. #speaker_right
+    Hey... I can’t, not right now. #speaker_self
+    Why not? Aren’t we friends? We’ve known each other for so long. #speaker_right
+    Even if I can’t help you, I can at least be a listening ear. #
+    Ok… It’s just that...I am just very aware of how limited my “help” is. #speaker_self
+    Of course, I can talk to her. Spend time with her. #speaker_self
+    But that won’t help our financial situation.  It’d be like putting a band-aid on a fracture. #speaker_self
+- Hmm...how about getting a proper cast? #speaker_right
+What do you mean? #speaker_self
+Get a job. With us. We’re looking for part-time help. I can only serve that many customers at once. #speaker_right
+#speaker_right_image:cha_ravi_marie_normal.png
+Seriously? #speaker_self
+Seriously. Plus, I wouldn’t mind having more people to talk to. I’m sure Valerie’s getting tired of my rants. I could always use a new victim. Both for my rants and my coffee experiments. What do you say? #speaker_right
+Oh my goodness! Yes! I would love to work here. It’ll be like the good old days. #speaker_self
+Great! Can you make coffee? #speaker_right
+Oh...no... #speaker_self
+Honestly, I can’t even boil water right. #speaker_self
+Perfect. I’ll be your teacher. Your guide to the wonderful world of baristas and brewing. You better pay attention if you want to work here! #speaker_right 
++ [Are you taking pity on me? ] Eh you’re not just doing this to take pity on me right? #speaker_self
+    I run a business. I can’t afford to just be kind. I need someone I can trust behind the cash register, which is hard to find. Trust me, you’re helping me. #speaker_right 
++ Thank you so much for this opportunity! [] #speaker_self
+    I’ll be the best bistara ever! #speaker_self
+    Barista. And don’t thank me yet, because I might be a terrible boss.
+
+- Thank you! #speaker_self
+
+#knot:ravi_2_minigame
+#ui:mcq
+#game_id:8
+Minigame 8 // must add some text
+
+-> ravi_2_3_narration
+
+=== ravi_2_3_narration ===
+#knot:ravi_2_3_narration
+#ui:narrator
+#background:bg_ravi_cafe.jpg
+It was hard work, and Marie had an even tougher job teaching me. 
+But after what felt like forever, I finally learnt how to make a decent cuppa.
+When I got my first month’s pay, a huge weight lifted off my shoulders. It was the best feeling I had in a long while. 
+{ravi_1_dormhousing == true: 
+I could just cover my dorm room rent... and skipped enough meals to pay for Revati’s books and school supplies too. 
+ - else :
+ I could easily cover my rental costs... and even had enough left over to pay for Revati’s books and school supplies too!
+ }
+When you have money issues always hanging over your head, not having to worry about how to pay things off is the best kind of luxury. The kind you only feel once you’ve lived both scenarios.
+The last 6 weeks working here have been pretty good. I get in to help with the lunch crowd and work till closing. It's pretty chill, I can get some homework done during the lull time.
+At about 4 p.m., our regular patron shows up at sits at the counter right in front of me. Hmm.. she's a bit late. Maybe she isn't coming..
+Oh wait. Speak of the devil.
+
+
+-> ravi_2_3
+
+=== ravi_2_3 ===
+#knot:ravi_2_3
+#ui:scene
+#background:bg_ravi_cafe2.jpg
+#speaker_left_image:cha_ravi_valerie_normal.png
+#speaker_left_name:Val
+Ah, it’s you again. Running a bit late today? #speaker_self
+And it’s you again. Yeah, I was. Had to finish up a painting for class. I wanted to make sure the paint was dry before I left. #speaker_left
+#speaker_left_image:cha_ravi_valerie_angry.png
+I didn’t know you had to watch paint dry in art school. #speaker_self
+And I didn’t know you had to make fun of customers as a barista. #speaker_left
+#speaker_left_image:cha_ravi_valerie_normal.png
+Ok ok. Would you like your usual today? #speaker_self
+Only if it’s as good as the last time. #speaker_left
+Mmmm.... If you told me you just learnt how to make coffee a few weeks ago, I’d find it hard to believe you. #speaker_left
+Well, I had a good teacher. #speaker_self
+Or maybe, I was just a really good student. #inner_monologue
+It’s almost like you put a secret ingredient in there or something. #speaker_left
+Well... the secret ingredient is... #speaker_self
+
++ ...love.[] 
+    I wish I dared to say that out loud. #inner_monologue
+    Imagine if I did though!#inner_monologue
+    Not like it’ll work out. She’s just the regular here, and I’m just the barista. #inner_monologue
+    {ravi_1_dormhousing == true: 
+    And if I were to taker her out on a date, Resipi Alegria is pretty much the only place I can afford because of the staff discount.  #inner_monologue
+     - else :
+    And if I were to taker her out on a date, no way I can afford a nice restaurant - even with the savings I have on my crappy rental. Oh god, what if she finds out about my crappy rental! #inner_monologue
+     }
+    What the hell am I doing thinking about taking this girl on a date. #inner_monologue
+    Anyway, she’s out of my league. Art classes? Regular fancy lattes? Pilates and crossfit?   #inner_monologue
+    This girl is smart and sophisticated, and she’s confident– the kind of confidence built from money and stability. Oh, and she’s gorgeous as hell. #inner_monologue
+    Seriously, I should just forget it. #inner_monologue
+    Nothing. I don’t add anything.   #speaker_self
+    Maybe I’m that good.  #speaker_self
+    #speaker_left_image:cha_ravi_valerie_flirt.png
+    Oh, thank goodness! Haha... You paused so long I thought you were going to say “the secret ingredient is love” or something. #speaker_left
+    Wait, what?  #inner_monologue
+
+
++ [...honey] To be honest, Marie told me to put some honey in your coffee if you came in. She said you’d get it. I don’t know what she meant by that though but I added our best manuka honey. #speaker_self
+    Oh no. Now that’s a bad move. She’s gonna see that it’s Marie who understands her tastes well, and I’m just the bonehead following instructions. #inner_monologue
+    Argh! Why Ravi why… #inner_monologue
+    Ah...Marie. I really tell her too much. But it’s ok, it does taste good.  #speaker_left
+    Especially because you made it. #speaker_left
+    What did they talk about? Does Val have layered conversations like that all the time? Honey and code and insights…  #inner_monologue
+    Oh man, this girl so interesting, but she’s way out of my league. #inner_monologue
+- Anyway. Mr. Barista. Care for a conversation? #speaker_left
+#speaker_left_image:cha_ravi_valerie_happy.png
+By conversation, do you mean “complain about your day to Mr. Ravi Kannasamy”? #speaker_self
+Yes. Last time I checked, that’s part of the services here at the great Resipi Alegria, no? #speaker_left
+This always happens. She comes in, orders her usual, or – if she’s in an extra good mood – orders that crazy Chilli Coconut Agave Latte. #inner_monologue
+We mostly talk about her day. She’s always asking me about mine, but nothing’s really new in my life... and I can’t tell her she’s the highlight.  #inner_monologue
+She’s tried getting me to open up about my background. #inner_monologue
+But when I get those glimpses of her interests, her family, her goals… I’d clam up on mine.  #inner_monologue
+She and I are at different rungs of the social hierarchy. She’s at the top, free to pursue her passions, all her resources and provisions taken care of. I’m just trying to make it to the next day and provide for Amma and Revati. #inner_monologue
+When she talks about her pursuits, I feel so impressed by her achievements. And yet, the fact that she doesn't recognise how lucky she is, being able to feed all her focus to just passion...  #inner_monologue
+What if I were born well-off? Would I be as accomplished as Val?  #inner_monologue
+Okay, maybe not. She probably has way more brains and talent. And looks, too. #inner_monologue
+SO, I’ve been sooo busy nowadays. I’m juggling all these extra modules I’m taking, and I’m preparing a painting for that National Youth Fine Arts Competition this year. You know the one I’ve yakking about? #speaker_left
+Yeah, what about it? #speaker_self
+#speaker_left_image:cha_ravi_valerie_normal.png
+The first prize winner this year gets an all-expenses paid semester abroad at the University of the Arts, London! That’s one of the best art schools in the world! #speaker_left
+Oh wow! Do you think you stand a chance? #speaker_self
+I sure hope so. And I still have those CIP projects to handle too. I just really need sleep. And coffee. That’s why I’m here, I guess. #speaker_left
+Come in more often! I’ll tell my colleagues to save your favourite seat for you. #speaker_self
+That’s sweet of you, Ravi. But don’t worry. I’ll make sure to come in during your shifts. I always do. #speaker_left
+#speaker_left_image:cha_ravi_valerie_flirt.png
+So you can have yet another rant session? #speaker_self
+No, so I can see you again, obviously. #speaker_left
+#speaker_left_image:cha_ravi_valerie_happy.png
+Haha.... Good one. #speaker_self
+Oh man. I can’t tell if she’s just being sarcastic. #inner_monologue
+So, now that you’ve heard all that I’m dealing with at the moment, can you do me a favour? #speaker_left
+#speaker_left_image:cha_ravi_valerie_normal.png
+Sure. What do you want? #speaker_self
+I can really do with some cheering up. #speaker_left
+I’m not quite sure what would work #inner_monologue
+
++ [Play an online art quiz with her] Alright. Since you love art, I wanted to challenge you to a duel!  #speaker_self
+    Hah! Bring it on. You don't know who you're up against. #speaker_left
+    It's called "Modern Art or Toddler?" - I'll guess first then you, ok?  #speaker_self
+    You don't know who you're up against. #speaker_left
+    #speaker_left_image:pixel.png
+    #background:bg_ravi_art1.jpg
+    Ok, here we go with the first question. I'll guess first. #speaker_self
+    ++ [Modern Art]
+        VAR ravi_2_modernart = 1
+        ~ ravi_2_modernart = 1
+    ++ [Toddler]
+        ~ ravi_2_modernart = 0
+    -- Oh - that’s Kandinsky. ‘Black Lines.’  #speaker_left
+    You got it correct {ravi_2_modernart == 1: and so did I}! #speaker_self
+    #background:bg_ravi_art2.jpg
+    I guess that was easy for you. My turn again: #speaker_self
+    ++ [Modern Art]
+        ~ ravi_2_modernart += 1
+    ++ [Toddler]
+    -- It’s a Joan Mitchell.  #speaker_left
+    Woah! Right again. Someone's been studying eh? #speaker_self
+     #background:bg_ravi_art3.jpg
+    Ok, last question.  #speaker_self
+    ++ [Modern Art]
+        ~ ravi_2_modernart += 1
+    ++ [Toddler]
+    -- Hmm. Looks like a de Kooning, but then I don’t think it is…  Well, it’s not done by a kid, for sure. I'll go with Modern Art. #speaker_left
+    Full marks, wooh!  #speaker_self
+    {ravi_2_modernart == 3: 
+        I managed to get them all right too - including that last lucky guess! The last one is modern art... but with a twist! #speaker_self
+        - else:
+        Looks like your knowledge of art is better than mine! Ok that should go without saying. The last one is modern art... but with a twist! #speaker_self
+    }
+    Who’s it by? #speaker_left
+    Believe it or not, it’s by a chimp. Congo the chimpanzee. Circa 1957. #speaker_self
+    HAHAHAHAHA! No shit! An actual monkey? #speaker_left
+    #speaker_left_image:cha_ravi_valerie_incredulous.png
+    #background:bg_ravi_cafe2.jpg
+    Yeah. So ridiculous!  Apparently this sold for like a zillion dollars. Now I need to re-evaluate my life choices. Maybe I should quit being a barista and train some monkeys to do art. #speaker_self
+    Well please don't quit, because otherwise I wouldn't get to hang out with my favourite Mr Barista every day. Plus if you were a zillionaire you might not have time for me. #speaker_left
+
++ [Tell her a lame joke]
+    Well, I’m not much of a comedian. But maybe I can tell you a joke? #speaker_self
+    Sure, humour me. #speaker_left
+    #speaker_left_image:cha_ravi_valerie_incredulous.png
+    So...Why did the coffee file a police report? #speaker_self
+    Because it was mugged! #speaker_self
+    #speaker_left_image:cha_ravi_valerie_normal.png
+    Ah, if I’m going to be honest, that joke feels a bit lukewarm. #speaker_left
+    Not good enough? Hmm, how about this one. #speaker_self
+    “A girl walks into Resipi Alegria, and orders a coffee to go. #speaker_self
+    The coffee gets up and leaves”. #speaker_self
+    #speaker_left_image:cha_ravi_valerie_happy.png
+    Haha... Is the girl supposed to be me? Who’s the coffee? You? #speaker_left
+    Haha... I don’t know! I just added you in for the joke. #speaker_self
+    Don’t worry. I’ll always come in, but I’ll never ask you to leave. #speaker_left
+    #speaker_left_image:cha_ravi_valerie_flirt.png
+
+- Wow. From the way she smooth-talks, you’d think she actually likes me. #inner_monologue
+I guess a guy can dream. #inner_monologue
+Well, anyway, it’s late. I need to go soon. Thanks for today, Ravi. I really needed it. #speaker_left
+#speaker_left_image:cha_ravi_valerie_normal.png
+Could I have a Chilli Coconut Agave Café Latte to go please? #speaker_left
+Make sure you spell my full name right this time, not just Val or The Regular. #speaker_left
+Uh, I’m sorry about that. #speaker_self
+Valkyrie is a weird name, but I’m quite certain I spelt it correctly... #inner_monologue
+Just so we’re clear, the name’s Valerie, not Valkyrie. #speaker_left
+#speaker_left_image:cha_ravi_valerie_flirt.png
+OH MY GOD. This whole time I thought you were named Valkyrie. #speaker_self
+(laughs) Because of my tattoo? Call me judgy but I’ll never ink my own name on my arm. Too basic. #speaker_left
+#speaker_left_image:cha_ravi_valerie_happy.png
+Aren’t Valkyries like great warriors or angels or something? It fits you. OK Valerie does, too. #speaker_self
+Just to make sure you don’t mess it up again, I’ll spell it out for you this time so you'll never forget it. #speaker_left
+#speaker_left_image:cha_ravi_valerie_flirt.png
+Is that your phone over there? #speaker_left
+Yeah, why- #speaker_self
+(GRABS RAVI’S PHONE) #speaker_left
+Hey! What are you doing? #speaker_self
+(typing) It’s V A L E R I E #speaker_left
+Right, right. Got it. Could I please have my phone back? #speaker_self
+#background:bg_ravi_valnumber.jpg
+And my number is 8161427. Saved. #speaker_left
+Got it. Wait..what? #speaker_self
+#background:bg_ravi_cafe2.jpg
+I really have to go right now. But make sure you call me tonight, okay, Ravi? I have something I really want to say to you. See you around. #speaker_left
+Wow. Uh...I’ll call you, Valkyrie. I mean, Valerie. See you. #speaker_self
+#speaker_left_image:pixel.png
+Great, I came off like a total idiot. I must be the only person who got her name wrong. #inner_monologue
+What does she see in someone like me? Does she see Mr. Barista, or plain old Ravi? #inner_monologue
+Oh wait, she doesn’t know plain old Ravi, and that’s my own fault. #inner_monologue
+{ravi_1_dormhousing == true: 
+    Once she finds out I live in a tiny dorm room, or that I can’t afford to buy her a coffee let alone a nice meal, or that my family situation is so messed up… sigh. #inner_monologue
+     - else :
+    Once she finds out I live in a rented bedroom that looks like a dungeon, or that I can’t afford to buy her a nice meal, or that my family situation is so messed up… sigh. #inner_monologue
+     }
+
+-> ravi_2_4_narration
+
+=== ravi_2_4_narration ===
+#knot:ravi_2_4_narration
+#ui:narrator
+#background:bg_ravi_bedroom.jpg
+I’ve been thinking about it the whole day, and I still don’t get why Val was flirting with me.
+#background:bg_ravi_valnumber.jpg
+She’s made it so easy, giving me just one job to do. I just have to call her. And yet I'm so nervous. 
+
++ [Call Val] -> ravi_2_4_call
++ [Don't call Val] -> ravi_2_4_nocall
+
+=== ravi_2_4_call ===
+#knot:ravi_2_4_call
+#ui:narrator
+#background:bg_ravi_valnumber.jpg
+Should I call her? Maybe I should! 
+But what if she doesn't actually like me?  I don’t want to risk losing her as a friend. 
+If I don't call her, I wouldn’t need to bring her over to Pushpa Aunty’s place to meet my family. And I wouldn’t need to meet hers. 
+That way, I won’t risk disappointing both of us. 
+But not knowing if we will work out – I’ll regret it for the rest of my life.
+-> chapter_2_ending_1
+
+=== ravi_2_4_nocall ===
+#knot:ravi_2_4_mpcall
+#ui:narrator
+#background:bg_ravi_valnumber.jpg
+Should I call her? Sigh. So many questions in my head.
+That was a bold, smooth move she made. Maybe because she was just bored. Or because I was just an easy target to practice her flirting game.
+Or because flirting with the barista is fun when you’ve yet to work out why he’s even a barista.
+#ui:notification
+#background:ui_ravi_message.jpg
+Marie: Heyo! #message
+#ui:narrator
+#background:bg_ravi_bedroom.jpg
+Ah, my dear boss lady. Looks like I’m gonna have more shifts.
+#ui:notification
+#background:ui_ravi_message.jpg
+Marie: No new shifts yet but got you sth better. Val dmed me for your no. And I gave it to her;) #message
+#ui:notification
+#background:ui_ravi_phonecall.jpg
+VALERIE # message
+// #background:bg_ravi_valcalling.jpg
+#ui:narrator
+#background:bg_ravi_bedroom.jpg
+Wow. Wowww. She’s a Valkyrie alright. She takes what she wants.
+But... Our friendship is too much to lose. Better to keep what we have now than risk us not working out. 
+Even if Val still accepts me after knowing about my family and our situation, her parents won’t. I’m broke, I’m neighbourhood-schooled, and – oh! Cherry on the cake – I’m Indian. 
+I should know how it is with the Chinese majority. I can't even rent a flat from them - how would they feel if I were to date their daughter?
+And ...I like Val too much to rock her boat. 
+I think it’s best NOT to pick up this call.
+What’s that French phrase she taught me? 
+-> chapter_2_ending_2
+
+
+
+=== chapter_2_ending_1 ===
+#knot:chapter_2_ending_1
+#ui:narrator
+#background:bg_ravi_valnumber.jpg
+There’s that term Val taught me. Carpe diem - seize the day. 
+VAR chapter_2_ending = 1
+~ chapter_2_ending = 1
+If there’s a time for it, it’s now. Right. Here it goes, no regrets...
+
+-> ravi_2_reflection
+
+=== chapter_2_ending_2 ===
+#knot:chapter_2_ending_1
+#ui:narrator
+#background:bg_ravi_bedroom.jpg
+ C’est la vie. That’s life. It’s painful, it’s unfair. 
+~ chapter_2_ending = 2
+It’s what it is. 
+
+-> ravi_2_reflection
+
+
+=== ravi_2_reflection ===
+#knot:ravi_2_reflection
+#ui:chapter_reflection
+#reflection_id:8
+Reflection 8
+
+
+
+// -> ravi_3_intro
 
 
 
