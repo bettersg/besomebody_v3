@@ -498,7 +498,7 @@ export const CHARACTER_MAP = [
         knotTag: "ravi_1_intro",
         summary: "Ravi's world is turned upside down, and he faces difficult choices in moving on.",
         playable: true,
-        discordLink: 'https://discord.com/channels/934082509061357598/938335768521363456',
+        discordLink: 'https://discord.gg/gk9Xw95xhk',
         images: [           
           "/images/bg_launch.jpg",
           "/images/bg_reflections.jpg",
@@ -566,7 +566,7 @@ export const CHARACTER_MAP = [
         // knotTag: "ravi_2_3",
         summary: "Ravi finds a new gig at a cafe. And possibly something more.",
         playable: true,
-        discordLink: 'https://discord.com/channels/934082509061357598/938335768521363456',
+        discordLink: 'https://discord.gg/j8pTQWKbCp',
         images: [           
           "/images/bg_launch.jpg",
           "/images/bg_reflections.jpg",
