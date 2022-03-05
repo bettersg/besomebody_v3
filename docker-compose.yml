@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: tobeyou-dev
+    image: tobeyou-dev
+    build:
+      context: .
+      target: development
+    volumes:
+      - ./src:/src
+    ports:
+      - 5000:3000
+    env_file:
+      - .env
