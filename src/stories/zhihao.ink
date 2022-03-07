@@ -267,34 +267,42 @@ All your friends, they study so much go uni but then come out all dunno how to m
 My son, ah, he play computer can earn money, you know! Last month he pay off the shui dian fei (utility bills). I want to pay also cannot ah! #speaker_left
 Ah Hao, you tell your GuGus about your computer. Ma dunno how to explain this kind of thing. #speaker_left
 + [Smart Ma, smart. Earlier what you say about about my gaming?] #inner_monologue
-    I show people how I play the games and I teach them how to win. Got a lot of players want to be my students, so business is good. #speaker_self
+    I show people how I play the games and I teach them how to win. #speaker_self
+    VAR zhihao_1_explaingaming = 0
+    ~ zhihao_1_explaingaming = 1
+    Got a lot of players want to be my students or followers, so business is good. #speaker_self
    -> zhihao_1_2a
-+ [This kind of virtual thing how to make them understand?] #inner_monologue
-    Nothing much lah. I just teach people how to win games and they pay me lor. #speaker_self
++ This kind of virtual thing how to make them understand?[] #inner_monologue
+    Nothing much lah. #speaker_self
+    ~ zhihao_1_explaingaming = 2
+    I just teach people how to win games and they pay me lor. #speaker_self
    -> zhihao_1_2a 
-+ [Dunno what Ji Gu will say if I explain. Aiyah forget it lah.] #inner_monologue
-    No lah not say I really make money. I play for fun only. #speaker_self
++ Dunno what Ji Gu will say if I explain. Aiyah forget it lah.[] #inner_monologue
+    No lah not say I really make money. #speaker_self
+    ~ zhihao_1_explaingaming = 3
+    I play for fun only. #speaker_self
     -> zhihao_1_2b
 
 
 = zhihao_1_2a
 #speaker_right_image:cha_zhihao_jigu_normal.png
 #speaker_right_name:Ji Gu 
-Wah issit? One day how much you make? #speaker_right
-+ [You lower the actual figure.]
-    Around $1000. #speaker_self
+Wah issit? One month how much you make? #speaker_right
++ [You lower the actual figure.] Around $1000. #speaker_self
     $1000! #speaker_right
+    VAR zhihao_1_earning = ""
+    ~ zhihao_1_earning = "lower"
     He thinking high or low? FML why I go shoot my mouth. #inner_monologue
     One day you work how long? #speaker_right
     Maybe four or five hours at night. Cos in the day I got school. #speaker_self
     Wah school and work very difficult! #speaker_right
     Mei shi lah, Ji Gu. (It’s not an issue lah, Ji Gu.) #speaker_self
     I like to work. #speaker_self
-+ [You inflate the actual figure.]
-    Around $2000. Sometimes can go up to $3000. #speaker_self
++ [You inflate the actual figure.] Around $2000. Sometimes can go up to $3000. #speaker_self
     $3000! #speaker_right
+    ~ zhihao_1_earning = "inflate"
     He’d better say it’s good money. Cos it’s good money... I think. #inner_monologue
-    If one day $2000 then another day $3000 means your income very unstable! So sometimes one month you can only make $2000. #speaker_right
+    If one month $0 then another month $3000 means your income very unstable!  #speaker_right
     Like that very hard to plan your life. And you got school also. #speaker_right
     You say until like that ah, doesn’t sound like a stable job leh. #speaker_right
     No lah is quite stable one. #speaker_self
@@ -308,9 +316,9 @@ Wah issit? One day how much you make? #speaker_right
     Mei shi lah, Ji Gu. (It’s not an issue lah, Ji Gu.) #speaker_self
     I like to work. #speaker_self
 
-+ [You state the actual figure.]
-    Average about $2000. #speaker_self
++ [You state the actual figure.] Average about $2000. #speaker_self
     $2000! #speaker_right
+    ~ zhihao_1_earning = "actual"
     He happy or not? #inner_monologue
     One day you work how long? #speaker_right
     Maybe four or five hours at night. Cos in the day I got school. #speaker_self
@@ -325,7 +333,6 @@ Wah issit? One day how much you make? #speaker_right
 #speaker_left_name:Dua Gu
 #speaker_right_image:cha_zhihao_jigu_normal.png
 #speaker_right_name:Ji Gu
-
 Aiyah, if like that ah, better rent out your place. Rent to two or three tenant lah. Like that money and time both also have. #speaker_right
 Our other room cannot put two people. #speaker_self
 Then take the biggest room lah! Ah Mei, master bedroom ho boh? (Ah Mei, is the master bedroom okay?) #speaker_right
@@ -404,8 +411,8 @@ I go toilet. #speaker_self
 #ui:narrator
 #background:bg_zhihao_jigu_home.jpg
 I walked to the toilet, but halfway there I stopped and turned back to hear my ma and Ji Gu arguing. 
-I don't think they saw me, but I overheard everything. 
-Whenever they speak only Hokkien, it’s always something bad. Bad and complicated.
+I don't think they see me, but I can overhear everything. 
+Whenever they speak only Hokkien, it’s always something bad. Bad and complicated. They assume I don't understand, but obv I can.
 
 #ui:scene
 #background:bg_zhihao_jigu_home.jpg
@@ -434,21 +441,61 @@ Siao ah! How is a maid trained to treat his bedsores, give him his insulin shots
 Remember what I said about trust. Don’t ever trust maids to be left alone with  Ah Gong. #speaker_right
 I’m so busy already juggling a job and a kid. You know it. #speaker_left
 Kid? Wah lao eh, Ma. #inner_monologue
+{ zhihao_1_earning: 
+    - 1:  Then what? You want your son to chip in too? He’s still in school! #speaker_right
+        Don’t forget, you have to declare your son’s income if you want him to help. #speaker_right
+        If it goes over the income cap, we lose our subsidy.#speaker_right
+    - 2: Your son just said he isn’t earning a stable income. And he’s still a student. How is it fair on him to shoulder the fees? #speaker_right
+        Stupid. Why did I go bluff him about my income.  #inner_monologue
+    - else: Your son said he isn’t even earning yet. You want him to stop focusing on his studies to look for a job? That’s selfish to the boy right?  #speaker_right
+        Stupid. Why did I go bluff him about my income. #inner_monologue
+}
+I’ll think of something. Don’t bring my son into this.   #speaker_left
+$450 per month. Doable lah. #inner_monologue
+It’s doable for me if I go pro. I'm almost good enough already. #inner_monologue
+I just need to push myself harder. #inner_monologue
+Pa would have done the same. #inner_monologue
+-> zhihao_1_4_narration
 
 
-
-=== zhihao_1_4 ===
+=== zhihao_1_4_narration ===
 #knot:zhihao_1_minigame
 #ui:mcq
 #game_id:11
 Minigame 11 // must add some text
 
 
-#knot:zhihao_1_3
+#knot:zhihao_1_4_narration
 #ui:narrator
-#background:bg_zhihao_pushpa_home.jpg
+#background:bg_zhihao_bedroom.jpg
+When I’m not streaming, I'm playing every night. I play this first-person shooter game called Alphas.
+It's a multiplayer game so I team up with other players. Also got high-skill ceiling so I don’t have limits on improving.
+Last time I always play with Gavin and Aman. Gavin I met on Discord first, then we found out we’re from the same JC. After that right, we always eat bak chor mee (minced pork noodles) together when we share tutorial break. He eat so much until his IGN (in-game name) also become ‘bakchormee’, lol.
+Now I can’t remember how long ago all of us played together.
+They're busy lah.
+But if you don't ask then you also don’t know right?
 
-xxxx
+-> zhihao_1_4 
+
+=== zhihao_1_4 ===
+#knot:zhihao_1_4
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Aman Singh
+#chat_group_image:ico_aman.png
+#speaker_1_name:Aman
+#timestamp:22.12
+
+
+
+
+
+
+
+
+
+
+
 -> chapter_1_ending_1
 
 -> chapter_1_ending_2
