@@ -377,39 +377,24 @@ Diam lah, idiot. #inner_monologue
 Orh. #speaker_self
 Ah Hao, you still young, so must be careful what type of friend you help. Cannot suka suka trust anybody hor – don’t anyhow listen to Dua Gu. #speaker_right
 
-<<<<<<< Updated upstream
-+ [Remain polite and subtly refute Ji Gu.]
-    It’s okay lah, Ji Gu. I trust Aman with my life. #speaker_self
-=======
 + [Remain polite and subtly refute Ji Gu.] It’s okay lah, Ji Gu. I trust Aman with my life. #speaker_self
     VAR zhihao_1_jigu = 0
     ~ zhihao_1_jigu = 0
->>>>>>> Stashed changes
     Mmm. Aman is a good boy. #speaker_left
     I know you trust your friend. #speaker_right
     But listen to me. Ji Gu is sixty years old liao, everything I also see already. #speaker_right
     What I tell you is the truth. And sometimes the truth is ugly. #speaker_right
 
-<<<<<<< Updated upstream
-+ [Be a smart alec.]
-    Ji Gu, I trust Aman. But Pa said sometimes cannot trust family to take care of us even when we are in need.  #speaker_self
-=======
 + [Be a smart alec.]  Ji Gu, I trust Aman. But Pa said sometimes cannot trust family to take care of us even when we are in need.  #speaker_self
     ~ zhihao_1_jigu = 1
->>>>>>> Stashed changes
     OI! Ni bi zui ah, ni!  (You shut your mouth, ah, you!) #speaker_left
     Hahaha. Ah Hao kuai zhang da le (Ah Hao is growing up fast.)  #speaker_right
     Ah Mei, don’t have to scold him. Boys are boys.  #speaker_right
     He winked at me. Ugh. Suan le ba. (Forget it.) #inner_monologue
 
 
-<<<<<<< Updated upstream
-+ [Remain passive to kill the conversation.]
-    Orh. #speaker_self
-=======
 + [Remain passive to kill the conversation.] Orh. #speaker_self
     ~ zhihao_1_jigu = 2
->>>>>>> Stashed changes
     Maybe you don’t agree. But one day you’ll understand why I say this. #speaker_right
     Orh. #speaker_self
     Trust no one. Only look out for yourself. #speaker_right
@@ -501,15 +486,6 @@ But if you don't ask then you also don’t know right?
 #chat_group_image:ico_aman.png
 #speaker_1_name:Aman
 #timestamp:22.12
-<<<<<<< Updated upstream
-
-
-
-
-
-
-
-=======
 Yo! #speaker_self
 Eh bro #speaker_self
 Sup! #speaker_1
@@ -627,7 +603,6 @@ Am out with Nadia #speaker_1
     You don’t pangseh ah #speaker_self
     
 - Yessir! #speaker_1
->>>>>>> Stashed changes
 
 
 
