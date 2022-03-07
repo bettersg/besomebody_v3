@@ -377,23 +377,39 @@ Diam lah, idiot. #inner_monologue
 Orh. #speaker_self
 Ah Hao, you still young, so must be careful what type of friend you help. Cannot suka suka trust anybody hor – don’t anyhow listen to Dua Gu. #speaker_right
 
+<<<<<<< Updated upstream
 + [Remain polite and subtly refute Ji Gu.]
     It’s okay lah, Ji Gu. I trust Aman with my life. #speaker_self
+=======
++ [Remain polite and subtly refute Ji Gu.] It’s okay lah, Ji Gu. I trust Aman with my life. #speaker_self
+    VAR zhihao_1_jigu = 0
+    ~ zhihao_1_jigu = 0
+>>>>>>> Stashed changes
     Mmm. Aman is a good boy. #speaker_left
     I know you trust your friend. #speaker_right
     But listen to me. Ji Gu is sixty years old liao, everything I also see already. #speaker_right
     What I tell you is the truth. And sometimes the truth is ugly. #speaker_right
 
+<<<<<<< Updated upstream
 + [Be a smart alec.]
     Ji Gu, I trust Aman. But Pa said sometimes cannot trust family to take care of us even when we are in need.  #speaker_self
+=======
++ [Be a smart alec.]  Ji Gu, I trust Aman. But Pa said sometimes cannot trust family to take care of us even when we are in need.  #speaker_self
+    ~ zhihao_1_jigu = 1
+>>>>>>> Stashed changes
     OI! Ni bi zui ah, ni!  (You shut your mouth, ah, you!) #speaker_left
     Hahaha. Ah Hao kuai zhang da le (Ah Hao is growing up fast.)  #speaker_right
     Ah Mei, don’t have to scold him. Boys are boys.  #speaker_right
     He winked at me. Ugh. Suan le ba. (Forget it.) #inner_monologue
 
 
+<<<<<<< Updated upstream
 + [Remain passive to kill the conversation.]
     Orh. #speaker_self
+=======
++ [Remain passive to kill the conversation.] Orh. #speaker_self
+    ~ zhihao_1_jigu = 2
+>>>>>>> Stashed changes
     Maybe you don’t agree. But one day you’ll understand why I say this. #speaker_right
     Orh. #speaker_self
     Trust no one. Only look out for yourself. #speaker_right
@@ -485,6 +501,7 @@ But if you don't ask then you also don’t know right?
 #chat_group_image:ico_aman.png
 #speaker_1_name:Aman
 #timestamp:22.12
+<<<<<<< Updated upstream
 
 
 
@@ -492,6 +509,125 @@ But if you don't ask then you also don’t know right?
 
 
 
+=======
+Yo! #speaker_self
+Eh bro #speaker_self
+Sup! #speaker_1
+You free to play Alphas later? #speaker_self
+Bro I want to but I can’t :( #speaker_1
+Got play rehearsals the whole month #speaker_1
+Lol play what? #speaker_self
+As in drama prac #speaker_1
+I’m playing Vladimir in Waiting for Godot #speaker_1
+Ohhhh #speaker_self
+Cool #speaker_self
+Ikr, I thought I screwed up the audition but they liked it #speaker_1
+Congrats bro! #speaker_self
+Got any chiobus in the play? #speaker_self
+HAHAHA it’s just two characters who are both dudes and I’m a co-lead. So no, sorry. #speaker_1
++ [Sigh, next time maybe I shouldn't try to act smart!] 
+    #ui:scene
+    #background:bg_zhihao_bedroom.jpg
+    Wah lao next time I should shuddup. #inner_monologue
+    Everytime Aman talk about his drama club I dunno what he talking sia.) #inner_monologue
+    #ui:whatsapp
+    #background:whatsapp.png
+    #chat_group_title:Aman Singh
+    #chat_group_image:ico_aman.png
+    #speaker_1_name:Aman
+    VAR zhihao_1_aman = 0
+    ~ zhihao_1_aman = 0
+    //Shift back to phone screen #
+    LOL better still #speaker_self
+    No competition #speaker_self
+    The performance is on the 12th next mth. You free to watch? #speaker_1
+    Ofc. Wanna laugh at you forget your lines lol #speaker_self
+    LOOOOL #speaker_1
+    Settle! Will save you tix #speaker_1
+    Have fun bro! Say hi to Gavin for me #speaker_1
+
++ [Why didn't he just explain this instead of acting smart?]
+    #ui:scene
+    #background:bg_zhihao_bedroom.jpg
+    Wah lao malu sia (Sigh, I'm so embarassed).  #inner_monologue
+    Why Aman always talk about this kind of atas-atas (high-class) drama and expect the whole world to straightaway know?  #inner_monologue
+    And he never explains first until I screw up. I always feel damn kok.  #inner_monologue
+    ~ zhihao_1_aman = 1
+    //Shift back to phone screen #
+    #ui:whatsapp
+    #background:whatsapp.png
+    #chat_group_title:Aman Singh
+    #chat_group_image:ico_aman.png
+    #speaker_1_name:Aman
+    Next time just say you lead lah #speaker_self
+    How I know from the title #speaker_self
+    Haha I thought you read it before for sch? #speaker_1
+    Not everyone memorise what they read in class la #speaker_self
+    Haha it’s okay bro, chill #speaker_1
+    A lot of ppl also have never heard of Waiting for Godot either  #speaker_1
+    Anw you free on the 12th next mth? #speaker_1
+    That’s our first show #speaker_1
+    I see how #speaker_self
+    Don’t just see lah, come watch and enjoy #speaker_1
+    Will let you know #speaker_self
+    Okay, update me yeah. Will save you tix #speaker_1
+    And say hi to Gavin for me #speaker_1
+// back to main screen
+#ui:scene
+#background:bg_zhihao_bedroom.jpg
+- Aman’s practice is damn hardcore. And people take him seriously. #inner_monologue
+Sometimes, next to him, I feel damn suaku (low-class). #inner_monologue
+
+-> zhihao_1_4a 
+
+=== zhihao_1_4a ===
+#knot:zhihao_1_4a
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Gavin Tan
+#chat_group_image:ico_nadia_gavin.png
+#speaker_1_name:Gavin
+#timestamp:22.12
+Eh bakchormee #speaker_self
+you free to play Alphas? #speaker_self
+Hey bro #speaker_1
+Sorry I'm not free today #speaker_1
+Am out with Nadia #speaker_1
++ Next time then [] #speaker_self
+    Enjoy your paktor #speaker_self
+    Thanks! Enjoy your sesh with Aman:) #speaker_1
+    #ui:scene
+    #background:bg_zhihao_bedroom.jpg
+    Sucks that both my bros don’t care about gaming anymore. Seriously I feel damn loser sia. #inner_monologue
+    But to show it and kenna pity is worse. #inner_monologue
+    #ui:whatsapp
+    #background:whatsapp.png
+    #chat_group_title:Gavin Tan 
+    #chat_group_image:ico_nadia_gavin.png
+    #speaker_1_name:Gavin
+    You free to catch up next Thu? #speaker_self
+    I’m free after sch but not in the evening #speaker_1
+    Lunch at the usual? #speaker_self
+    Bak Chor Mee stall? Cannnn #speaker_1
+    Don’t pangseh ah #speaker_self
+   
++ Wahlao you pangseh me 3x alr[] #speaker_self
+    #ui:scene
+    #background:bg_zhihao_bedroom.jpg
+    He spend so much time with Nadia I don't think there'll be a next time, for a long time. #inner_monologue
+    #ui:whatsapp
+    #background:whatsapp.png
+    #chat_group_title:Gavin Tan 
+    #chat_group_image:ico_nadia_gavin.png
+    #speaker_1_name:Gavin
+    Haha really sorry bro #speaker_1
+    How abt lunch next Thu? My treat #speaker_1
+    Better not be halal #speaker_self
+    Eh dun angry lah. Usual bakchormee stall? #speaker_1
+    You don’t pangseh ah #speaker_self
+    
+- Yessir! #speaker_1
+>>>>>>> Stashed changes
 
 
 
