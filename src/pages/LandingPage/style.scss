@@ -10,8 +10,8 @@
     &--left {
       position: absolute !important;
       left: 0;
-      bottom: 70px;
-      filter: brightness(100%);
+      bottom: 100px;
+      filter: brightness(100%) drop-shadow(0px 0px 10px rgba(0,0,0,0.3));
       -webkit-transition: all 0.5s ease;
       transition: all 0.5s ease;
       &.nonSpeaker {
@@ -23,8 +23,8 @@
     &--right {
       position: absolute !important;
       right: 0;
-      bottom: 70px;
-      filter: brightness(100%);
+      bottom: 100px;
+      filter: brightness(100%) drop-shadow(0px 0px 10px rgba(0,0,0,0.3));
       -webkit-transition: all 0.5s ease;
       transition: all 0.5s ease;
       &.nonSpeaker {
