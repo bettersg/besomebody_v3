@@ -452,6 +452,7 @@ export const CHARACTER_MAP = [
           {
             characterName: 'Aman',
             characterImage: '/shareable_avatars/aman.png',
+            shareImage:'/shareable_avatars/aman_share.svg',
           },
           {
             characterName: 'Jothi',
