@@ -103,7 +103,7 @@ export default function ReflectionChapter(props) {
     loadSavedVariables(chaptDetails.knotTag)     
     startStoryFrom(chaptDetails.knotTag)
     setIsLoading(false)
-    history.push('/story/' + name)
+    history.push('/story/' + name + '?chapters=all')  // Set chapters to all when entering from reflection browser
   }
 
   return (
