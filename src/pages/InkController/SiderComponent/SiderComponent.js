@@ -50,7 +50,7 @@ export default function SwipeableTemporaryDrawer(props) {
 	  getUser()
   }, [currentUser.id])
   
-  console.log('slider', userFromDb)
+  // console.log('slider', userFromDb)
 
   // for the Logout
   const { logout } = useAuth()

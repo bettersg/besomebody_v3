@@ -96,33 +96,31 @@ const RoomInfoPage = () => {
   const { setSnackbar } = useSnackbar()
 
  
-  const { roomValue, roomCodeValue } = React.useContext(RoomContext);
+  const { roomValue } = React.useContext(RoomContext);
   const [room, setRoom] = roomValue;
-  const [roomCode, setroomCode] = roomCodeValue;
+  // const [roomCode, setroomCode] = roomCodeValue;
+  
   
   const { roomUrl } = useParams()
-  if (roomCode == null) {
-    setroomCode(roomUrl)          
-  }
+  // if (roomCode == null) {    
+  //   setroomCode(roomUrl)            
+  // }
+  
+  // console.log(roomUrl)
 
-
-  const asyncRoom = async () => {
-    const room = await getRoomDb(roomCode)
-    return room
-  }
   
   useEffect(() => {
     const loadRoom = async () => {
       try {
-        const room = await asyncRoom()
-        setRoom(room)        
+        const room = setRoom(await getRoomDb(roomUrl))
+        return room     
       }
       catch (err) { console.log(err) }
     }
     loadRoom()
-  }, [roomCode])
+  }, [roomUrl])
   
-  // console.log('Room.id ',room.id)
+  // console.log('Room.id ',room)
   // console.log('roomCode params: ',roomCode)
   // console.log('UserId: ',currentUser.id)
 
@@ -192,12 +190,13 @@ const RoomInfoPage = () => {
         </Box>
         
         {currentUser && room &&
-        <Box py={3} textAlign="center" className={classes.whiteBox}>
+        <Box py={3} textAlign="left" className={classes.whiteBox}>
           <Typography>Your game reflections will be visible to the facilitator</Typography>
           <Box py={3} px={5}>
-            <Typography paragraph={true}>Room Code: {room.roomCode}</Typography>
+            <Typography paragraph={true}>Room Code: {room.code}</Typography>
             <Typography paragraph={true}>Organisation Name: {room.organisation}</Typography>
-            <Typography paragraph={true}>Class Name: {room.name}</Typography>
+              <Typography paragraph={true}>Class Name: {room.name}</Typography>
+              <hr />
             <Typography paragraph={true}>Instructions: {room.instructions}</Typography>
           </Box>
         </Box>

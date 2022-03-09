@@ -3,7 +3,7 @@ import { firestore} from '../firebase'
   
   export const getRoomDb = async (roomCode) => {
     try {
-      const roomRef = firestore.collection('rooms').where('roomCode','==',roomCode)
+      const roomRef = firestore.collection('rooms').where('code','==',roomCode)
       const snapshot = await roomRef.get()
       if (snapshot.docs.length === 0) {
         return console.error(`No such room exists: ${roomCode}`)
