@@ -7,7 +7,7 @@ import {
 } from '@material-ui/core'
 // import { Alert } from '@material-ui/lab'
 // import { useAuth } from '../../contexts/AuthContext'
-import { Link , useHistory} from 'react-router-dom'
+import { Link , useHistory, useParams } from 'react-router-dom'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -71,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-const LandingPage = () => {
+const LandingPage = ( props ) => {
   // const [isLoading, setIsLoading] = useState(false)
   // const [isDialogOpen, setIsDialogOpen] = useState(false)
   // const [snackbar, setSnackbar] = useState({
@@ -81,6 +81,9 @@ const LandingPage = () => {
   // })
   const classes = useStyles()  
   const history = useHistory()
+  // const { roomCode } = useParams()
+
+  // console.log(roomCode)
 
   // const { currentUser } = useAuth()  
 
@@ -92,14 +95,15 @@ const LandingPage = () => {
       
         <Container maxWidth="md" className={classes.container}>
           <Box py={4} textAlign="center">
-          <Typography className='LandingPage__text'>Experience life in Singapore as someone else.</Typography>            
+          {/* {roomCode && <Typography variant="body2">Your game results will be saved to room code: {roomCode} </Typography>} */}
+          <Typography className='LandingPage__text'>Experience life in Singapore as someone else.</Typography>  
           </Box>
           
           
           <Box className={classes.bottom}>
-            <Button variant="contained" className={classes.btn}  onClick={() => history.push('/intro')}>Start New Game</Button>          
+          <Button variant="contained" className={classes.btn} onClick={() => history.push('/intro')}>Start New Game</Button>
           <br />
-           <Link to="/login" className={classes.link}> Login to Resume</Link>
+          <Link to="/login" className={classes.link}> Login to Resume</Link>
           </Box>
           
         </Container>

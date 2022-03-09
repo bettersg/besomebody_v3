@@ -45,7 +45,8 @@ class ErrorBoundary extends Component {
         <EmptyState
           image={<ErrorIllustration />}
           title="Something went wrong"
-          description="The app failed to load"
+          description="The game failed to load. Please return to the home page."
+          button = "Home"
         />
       );
     }

@@ -1,17 +1,20 @@
 @import "../../scss/global/global";
 
 .CharacterChoices {
+  font-family: 'Inter', Roboto;
   &__header {
     height: 66px; 
-    width: 100%;
+    // width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    margin-left: 20px;
+    // justify-content: space-between;
     // background-color: darkgrey;
     .MenuWrapper__menuButton {
-      position: unset;
-      width: 35px; 
-      margin-right: 20px;
+      position: absolute;
+      // width: 24px; 
+      top: 11px;
+      right: 20px;
     }
     &--placeholder {
       width: 44px; 

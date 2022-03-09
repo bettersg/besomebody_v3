@@ -1,6 +1,7 @@
 @import "../../scss/global/global"; 
 
 .CharacterChapterPage {
+    font-family: 'Inter', Roboto;
     &__top {
         // height: 266px;
         width: 100%;  
@@ -14,8 +15,10 @@
             justify-content: space-between;
             margin-bottom: 31px;
             .MenuWrapper__menuButton {
-                position: unset;
-                width: 35px; 
+                position: absolute;
+                // width: 24px; 
+                top: 11px;
+                right: 20px;
             }
             &--name {
                 margin-left: 18px; 

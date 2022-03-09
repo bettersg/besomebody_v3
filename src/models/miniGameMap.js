@@ -451,6 +451,177 @@ export const MINI_GAME_MAP = [
     ],
   },
 
+// ravi 1
+  {
+  game_id: 7,
+  ui: "mcq",
+  introduction: "Ravi is struggling with housing issues. Many Singaporeans face similiar struggles daily.",
+  questions: [
+    {
+      question_id: 1,
+      question:
+        "Approximately how many homeless people are there in Singapore?",
+      type: "text",
+      correct_answer_id: 2,
+      explanation:
+        "According to a 2019 study by Dr Ng Kok Hoe of the Lee Kuan Yew School of Public Policy, around 1,000 people sleep on the streets every night. If you find a homeless person who needs help, please call the ComCare hotline at 1800-222-0000.",
+      answers: [
+        {
+          answer_id: 1,
+          title: "100",
+        },
+        {
+          answer_id: 2,
+          title: "1,000",
+        },
+        {
+          answer_id: 3,
+          title: "10,000",
+        },
+        {
+          answer_id: 4,
+          title: "100,000",
+        },
+      ],
+    },
+    {
+      question_id: 2,
+      question:
+        "A Chinese, Malay, and Indian buy a nearly identical HDB flat. Statistically, who is able to resell their HDB at the highest price and make more profit?",
+      correct_answer_id: 1,
+      explanation: "The Ethnic Integration Policy limits the total percentage of a block or neighbourhood that may be occupied by a certain ethnicity, which means minority owners can only resell their property to minority buyers. In a 2013 study by Maisy Wong, she found that Chinese-constrained HDB resale units (only Chinese buyers eligible) were 5-8% more expensive than almost identical Indian or Malay-constrained properties.",
+      type: "text",
+      answers: [
+        {
+          answer_id: 1,
+          title: "Chinese",
+        },
+        {
+          answer_id: 2,
+          title: "Malay",
+        },
+        {
+          answer_id: 3,
+          title: "Indian",
+        },
+        {
+          answer_id: 2,
+          title: "None (all are equal)",
+        },
+      ],
+    },
+    {
+      question_id: 3,
+      question:
+        "Individuals of different races all have an equal and fair chance of renting out a house in Singapore's open market.",
+      type: "text",
+      correct_answer_id: 2,
+      explanation:
+        "False. A 2017 CNBC article highlighted that even in a weak rental market, some landlords explicitly deny rental opportunities to some races. Singaporean Malays, Singaporean Indians & PRCs are amongst those who face the issue of rental discrimination.",
+        answers: [
+          {
+            answer_id: 1,
+            title: "True",
+          },
+          {
+            answer_id: 2,
+            title: "False",
+          },
+        ],
+    },  
+  ],
+  },
+
+
+// ravi 2
+  {
+    game_id: 8,
+    ui: "mcq",
+    introduction: "Ravi took up a part time job to pay the bills. What is it like for Singaporeans in this situation?",
+    questions: [
+      {
+        question_id: 1,
+        question:
+          "What is the average monthly household income for Singaporeans who live in 1 or 2-bedroom HDBs? [2020 data]",
+        type: "text",
+        correct_answer_id: 2,
+        explanation:
+          "The average monthly household income (i.e. the combined salary of all the people who live there) for Singaporeans who live in 1 or 2-bedroom HDBs is $2,997. [Department of Statistics Key Household Income Trends, 2020]",
+        answers: [
+          {
+            answer_id: 1,
+            title: "$1,504",
+          },
+          {
+            answer_id: 2,
+            title: "$2,997",
+          },
+          {
+            answer_id: 3,
+            title: "$10,127",
+          },
+          {
+            answer_id: 4,
+            title: "$14,254",
+          },
+        ],
+      },
+      {
+        question_id: 2,
+        question:
+          "What is the average monthly household income for Singaporeans who live in landed properties? [2020 data]",
+        correct_answer_id: 4,
+        explanation: "The average monthly household income (i.e. the combined salary of all the people who live there) for Singaporeans who live in landed properties is $27,838. [Department of Statistics Key Household Income Trends, 2020]",
+        type: "text",
+        answers: [
+          {
+            answer_id: 1,
+            title: "$10,127",
+          },
+          {
+            answer_id: 2,
+            title: "$15,023",
+          },
+          {
+            answer_id: 3,
+            title: "$21,732",
+          },
+          {
+            answer_id: 4,
+            title: "$27,838",
+          },
+        ],
+      },
+      {
+        question_id: 3,
+        question:
+          "What is the unemployment rate for Singaporean citizens? [2021 data]",
+        type: "text",
+        correct_answer_id: 2,
+        explanation:
+          "The unemployment rate for citizens in 2021 was 3.7% [Ministry of Manpower]. The unemployment rate for United States was 8.1% [World Bank], for comparison.",
+          answers: [
+            {
+              answer_id: 1,
+              title: "1.7%",
+            },
+            {
+              answer_id: 2,
+              title: "3.7%",
+            },
+            {
+              answer_id: 3,
+              title: "5.7%",
+            },
+            {
+              answer_id: 4,
+              title: "7.7%",
+            },
+          ],
+      },  
+    ],
+    },
+
 ];
   
 

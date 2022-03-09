@@ -17,6 +17,7 @@ import Bar from '../components/Bar'
 import Router from '../Router'
 import SnackbarProvider from '../contexts/SnackbarContext'
 import { InkProvider } from '../contexts/InkContext'
+import { RoomProvider } from '../contexts/RoomContext'
 
 const initialState = {
   ready: false,
@@ -257,6 +258,7 @@ class App extends Component {
           {ready && (
             <AuthProvider>
               <SnackbarProvider>
+                <RoomProvider>
                 <InkProvider>
                   <Router
                     user={user}
@@ -280,6 +282,7 @@ class App extends Component {
                     openSnackbar={this.openSnackbar}
                   />
                 </InkProvider>
+                </RoomProvider>
               </SnackbarProvider>
             </AuthProvider>
           )}

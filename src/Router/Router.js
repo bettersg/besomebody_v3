@@ -23,10 +23,8 @@ import Help from '../pages/HelpPage/HelpPage'
 import Music1 from '../music/tobeyou_intro.mp3'
 // import Music2 from '../music/tobeyou_outrolong.mp3'
 import ChapterEnd from '../pages/ChapterEndPage/ChapterEnd'
-import WhatsappPage from '../pages/WhatsappPage/Whatsapp'
-import TwitchPage from '../pages/TwitchPage/TestTwitch'
-import TwitchPageData from '../pages/TwitchPage/Twitch'
-
+import ParticipantStartPage from '../pages/RoomPage/ParticipantStartPage'
+import RoomInfoPage from '../pages/RoomPage/RoomInfoPage'
 
 class Router extends Component {
   render() {
@@ -56,7 +54,6 @@ class Router extends Component {
     return (
       <BrowserRouter basename={process.env.REACT_APP_BASENAME}>
 
-        {/* {bar} // TODO: implement "bar" as a menubar above the game components below */}
         <ThemeProvider theme={theme}>
           <Switch>
             <Route path={["/", "/intro", "/profilebuilder", "/signup", "/login", "/help", "/characterchoice", "/chapters/:name", "/chapterend/:name/:chapter"]} exact>              
@@ -72,6 +69,11 @@ class Router extends Component {
             <Route path="/intro" exact>
               <IntroMaster />
             </Route>
+
+            {/* participants will enter through game.tobeyou.sg/room/A1b2C3  */}
+            <Route path="/room/:roomUrl" exact>                
+              {user ? <RoomInfoPage /> : <ParticipantStartPage /> }
+            </Route>            
 
             <PrivateRoute path="/characterchoice" exact>
               <CharacterChoicePage />
@@ -123,18 +125,6 @@ class Router extends Component {
               {user ? <UserPage /> : <Redirect to="/" />}
             </PrivateRoute>
 
-            {/* to remove after ink controller added */}
-            <PrivateRoute path="/twitchtest" exact>
-              <TwitchPage />
-            </PrivateRoute>
-
-            <PrivateRoute path="/twitch" exact>
-              <TwitchPageData />
-            </PrivateRoute>
-
-            <PrivateRoute path="/whatsapp" exact>
-              <WhatsappPage />
-            </PrivateRoute>
 
             <Route>
               <NotFoundPage />

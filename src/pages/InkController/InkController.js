@@ -3,6 +3,7 @@ import { useParams , useHistory } from 'react-router-dom'
 import { Box, Container } from '@material-ui/core'
 import WhatsApp from '../WhatsappPage/Whatsapp'
 import Twitch from '../TwitchPage/Twitch'
+import Twitter from '../TwitterPage/Twitter'
 import Scene from '../ScenePage/Scene'
 import InkControls from './InkControls'
 import DefaultInk from '../DefaultInk'
@@ -15,12 +16,16 @@ import Notification from '../NotificationPage/Notification'
 import Reflection from '../ReflectionsPage/Reflection'
 import StoryEnd from '../StoryEndPage/StoryEnd'
 import StoryEndBrowser from '../StoryEndPage/StoryEndBrowser'
+import Email from '../EmailPage/EmailPage'
+import EmailInbox from '../EmailPage/EmailInboxPage'
+
 
 const getUi = ({
   currentParagraphs,
   specialTags,
   globalVariables,
   whatsAppParagraphs,
+  emailParagraphs,
 }) => {
   switch (specialTags.ui) {
     case 'scene': {
@@ -31,12 +36,20 @@ const getUi = ({
     }
     case 'twitch': {
       return <Twitch currentParagraphs={whatsAppParagraphs} />
+    case 'twitter': {
+      return <WhatsApp currentParagraphs={whatsAppParagraphs} />
     }
     case 'narrator': {
       return <Narrator currentParagraphs={currentParagraphs} />
     }
     case 'notification': {
       return <Notification currentParagraphs={currentParagraphs} />
+    }  
+    case 'email': {
+      return <Email currentParagraphs={emailParagraphs} />
+    }  
+    case 'emailinbox': {
+      return <EmailInbox currentParagraphs={emailParagraphs} />
     }  
     // case 'survey': {
     //   // TODO: update this component
@@ -106,7 +119,7 @@ const InkController = () => {
     currentKnot,
     globalVariables,
     isStoryStarted,
-
+    
     // Methods
     saveStory,
   } = useInkContext()
@@ -122,7 +135,9 @@ const InkController = () => {
   // ==============================================================
   const [currentParagraphs, setCurrentParagraphs] = useState([])
   const [whatsAppParagraphs, setWhatsAppParagraphs] = useState([])
+  const [emailParagraphs, setEmailParagraphs] = useState([])
 
+  // console.log('paragraphs', paragraphs)
   useEffect(() => {
     if (currentKnot || paragraphs[paragraphs.length - 1]?.currentKnot) {
       const nextParagraphs = paragraphs.filter((paragraph) => {
@@ -131,6 +146,11 @@ const InkController = () => {
       if (specialTags.ui === 'whatsapp') {
         setWhatsAppParagraphs([...nextParagraphs])
         return setCurrentParagraphs([...whatsAppParagraphs, ...nextParagraphs])
+      }
+      if (specialTags.ui === 'email') {        
+        
+        setEmailParagraphs([...nextParagraphs])        
+        return setCurrentParagraphs([...emailParagraphs, ...nextParagraphs])
       }
       return setCurrentParagraphs([...nextParagraphs])
     }
@@ -166,6 +186,7 @@ const InkController = () => {
         specialTags,
         globalVariables,
         whatsAppParagraphs,
+        emailParagraphs,
       })}
 
       {/* Render event triggers */}

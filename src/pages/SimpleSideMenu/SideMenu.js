@@ -93,12 +93,12 @@ export default function SideMenu ({src="/side_menu/menu-icon.svg", ...rest}) {
           
             <div className="SideMenu__menuitems__item">
             <Link to="/" className="SideMenu__menuitems__label"><SVG src="/side_menu/icon.svg" className="SideMenu__menuitems__icons"/>
-              <span>Character Menu</span></Link>
+              <span>Characters</span></Link>
             </div>
   
             <div className="SideMenu__menuitems__item">
             <Link to={"/user/" + currentUser.id} className="SideMenu__menuitems__label"><SVG src="/side_menu/profile.svg" className="SideMenu__menuitems__icons"/>
-              <span>Account Menu</span></Link>
+              <span>Account </span></Link>
             </div>
 
             <div className="SideMenu__menuitems__item">
