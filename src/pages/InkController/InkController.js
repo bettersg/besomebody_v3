@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams , useHistory } from 'react-router-dom'
 import { Box, Container } from '@material-ui/core'
 import WhatsApp from '../WhatsappPage/Whatsapp'
+import Twitch from '../TwitchPage/Twitch'
 import Scene from '../ScenePage/Scene'
 import InkControls from './InkControls'
 import DefaultInk from '../DefaultInk'
@@ -27,6 +28,9 @@ const getUi = ({
     }
     case 'whatsapp': {
       return <WhatsApp currentParagraphs={whatsAppParagraphs} />
+    }
+    case 'twitch': {
+      return <Twitch currentParagraphs={whatsAppParagraphs} />
     }
     case 'narrator': {
       return <Narrator currentParagraphs={currentParagraphs} />
