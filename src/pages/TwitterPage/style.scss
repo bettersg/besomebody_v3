@@ -3,10 +3,10 @@
 // html, body {
 //     height: 100%; 
 // }
-.Whatsapp {
+.Twitter {
     &__header {
         height: 64px;
-        background-color: $midnight100;
+        background-color: $white;
         display: flex;
         padding: 14px 20px; 
         &--profile {
@@ -97,11 +97,11 @@
             color: $white;
             font-size: 14px;
             opacity: 80%;
-            background-color: $midnight80;
+            background-color: $white;
             &.choice {
                 border: $aqua100 solid 2px;
                 background-color: transparent;
-                color: white; 
+                color: black; 
             }
             &--right {
                 background-color: $aqua100;
@@ -112,7 +112,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                color: white;
+                color: black;
             }
         }
 
@@ -121,7 +121,7 @@
         height: 170px; 
         overflow-y: scroll;
         transition: height 0.4s; 
-        background-color: $dark1;
+        background-color: $white;
 
         animation:opac 0.9s;
         @keyframes opac{
@@ -135,7 +135,7 @@
             padding: 13px 20px;
             text-align: center;
             background-color: $aqua1;
-            color: white;
+            color: blue;
             cursor: pointer;
             &:hover {
                 background-color: rgba(29, 191, 123, 0.4);

@@ -36,6 +36,7 @@ const getUi = ({
     }
     case 'twitch': {
       return <Twitch currentParagraphs={whatsAppParagraphs} />
+    }
     case 'twitter': {
       return <WhatsApp currentParagraphs={whatsAppParagraphs} />
     }
