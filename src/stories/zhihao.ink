@@ -51,6 +51,16 @@ Text
 #ui:notification
 #background:ui_zhihao_message.jpg
 Gavin: help # message
+
+#ui:twitch
+#chat_group_image:xxx.jpg 
+#chat_group_title:xxxx
+#timestamp:xxxx (exclude the hr)
+#speaker_1_name:Gavin
+#speaker_2_name:Eric
+#speaker_3_name:Eric
+#speaker_4_name:Eric
+
  
 FOR MINIGAMES DO NOT START A NEW KNOT
 #knot:zhihao_2_minigame
@@ -58,6 +68,8 @@ FOR MINIGAMES DO NOT START A NEW KNOT
 #game_id:2
 Minigame // must add some text
 -> zhihao_2_3 // point to next section of story
+
+
 
 
 */
@@ -604,7 +616,19 @@ Am out with Nadia #speaker_1
     
 - Yessir! #speaker_1
 
+-> zhihao_1_5
 
+=== zhihao_1_5 ===
+#knot:zhihao_1_5
+#ui:twitter
+#background:whatsapp.png
+#chat_group_title:Gavin Wong
+#chat_group_image:cha_zhihao_gavinprofileicon.jpg
+#speaker_1_name:Gavin
+#speaker_2_name:Eric
+#speaker_3_name:Eric
+#speaker_4_name:Eric
+#timestamp:21.34
 
 
 -> chapter_1_ending_1
