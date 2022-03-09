@@ -137,7 +137,7 @@ const RoomInfoPage = () => {
       await updateRoomParticipantsDb(room.id, currentUser.id)  
       await updateUserRoomDb(currentUser.id, room.id)  
       await updateDbUser({ activeRoom: roomUrl }, currentUser.id)   
-      console.log('Room Updated', room.id)
+      console.log('Room Updated', roomUrl)
       history.push('/')  // redirect to root which will be the characterchoice page now.     
     } catch (err) {
       setSnackbar({

@@ -35,7 +35,7 @@ function Step7(props) {
   const [roomCode, setroomCode] = roomCodeValue;
 
   
-  console.log(roomCode)
+  // console.log(roomCode)
   
   // setroomCode('abc123')
   // let roomCode = room
