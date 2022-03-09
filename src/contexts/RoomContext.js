@@ -9,7 +9,7 @@ export const useRoomContext = () => {
 export const RoomProvider =  ({ children })  => {  
   // const { roomCode } = useParams()
   const [room, setRoom] = useState(null)
-  // const [roomCode, setroomCode] = useState(null)
+  const [roomCode, setroomCode] = useState(null)
   
   
   // const [room, setRoom] = useState(
@@ -27,7 +27,7 @@ export const RoomProvider =  ({ children })  => {
   
 
   // console.log(room)
-  return <RoomContext.Provider value={{ roomValue: [room, setRoom] }}>{children}</RoomContext.Provider>
+  return <RoomContext.Provider value={{ roomValue: [room, setRoom], roomCodeValue: [roomCode, setroomCode] }}>{children}</RoomContext.Provider>
 }
 
 export const RoomConsumer = RoomContext.Consumer
