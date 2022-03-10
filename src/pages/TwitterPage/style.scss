@@ -5,25 +5,70 @@
 // }
 .Twitter {
     &__header {
+        align-items: center;        
+        padding: 8px 16px;        
         height: 64px;
         background-color: $white;
         display: flex;
-        padding: 14px 20px; 
+        
         &--profile {
-            height: 36px; 
-            width: 36px; 
+            align-self: flex-end;
+            height: 48px;
+            width: 48px;
+            // height: 36px; 
+            // width: 36px; 
             border-radius: 50%;
-            margin-right: 12px;
+            // margin-right: 12px;
         }
         &__description {
             color: $white;
             &--name {
                 @include inter-whatsappName; 
+                letter-spacing: 0;
+                line-height: 18px;
+                min-height: 18px;
+                white-space: nowrap;
+                color: $midnight100;
+                font-family: var(--font-family-inter);
+                font-size: 14px;
+                font-weight: 600;
+                font-style: normal;
             }
-            &--status {
+            &--tag {
+                letter-spacing: 0;
+                line-height: 18px;
+                margin-top: 3px;
+                min-height: 18px;
+                white-space: nowrap;
                 @include p2-normal-body; 
-                font-size: 12px !important;
+                color: $midnight60;
+                font-family: var(--font-family-inter);
+                font-weight: 500;
+                font-style: normal;
+                font-size: 14px !important;
             }
+        }
+    }
+    &__mainpost { 
+        align-items: flex-start;
+        background-color: $white;
+        box-shadow: 0px 1px 0px #0000001a;
+        display: flex;
+        height: 100px;        
+        padding: 8px 16px;
+        &--tweet { 
+            color: $midnight100;
+            font-family: var(--font-family-inter);
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 0;
+            line-height: 25px;
+            min-height: 75px;            
+        }
+        &--likes {
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 0;
         }
     }
     &__messages {
@@ -37,6 +82,80 @@
         }
         > div {
             scroll-snap-align: end;
+        }
+        &--threadpost {
+            align-items: flex-start;
+            background-color: var(--white);
+            box-shadow: 0px 0px 0px #0000001a;
+            display: flex;
+            height: 100px;
+            padding: 0 16px;
+        }
+        &--profileImage {
+            height: 48px;
+            margin-top: 12px;
+            width: 48px;
+        }
+        &--tweetContent {
+            align-items: flex-start;
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            margin-left: 8px;
+            min-height: 80px;
+            width: 283px;
+        }
+        &--handle {
+            align-items: flex-start;
+            display: flex;
+            height: 18px;
+            min-width: 131px;
+        }
+        &--name {
+            font-size: 14px;
+            font-weight: 600;
+            color: $midnight100;  
+            letter-spacing: 0;
+            line-height: 18px;
+            min-height: 18px;
+            min-width: 39px;
+            white-space: nowrap;
+        }
+        &--tag {
+            letter-spacing: 0;
+            font-size: 14px;
+            font-weight: 400;
+            color: $midnight60;  
+            line-height: 18.2px;
+            margin-left: 4px;
+            min-height: 18px;
+            white-space: nowrap;
+        }
+        &--replyingTo {
+            align-items: flex-start;
+            display: flex;
+            height: 18px;
+            margin-top: 4px;
+            min-width: 156px;
+            letter-spacing: 0;
+            line-height: 18px;
+            // min-height: 18px;
+            // min-width: 75px;
+            white-space: nowrap;
+            font-size: 14px;
+            font-weight: 400;
+            color: $midnight60;  
+        }
+        &--tweet {
+            letter-spacing: 0;
+            line-height: 18px;
+            margin-top: 4px;
+            min-height: 40px;
+            width: 283px;
+            color: $midnight100;            
+            font-size: 14px;
+            font-weight: 400;
+            font-style: normal;
         }
         &--sender {
             background: #C9F3F9;
