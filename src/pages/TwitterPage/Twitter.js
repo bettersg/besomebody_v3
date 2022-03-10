@@ -43,8 +43,8 @@ const Twitter = (props) => {
   //   }
   // }, []);
   const useStyles = makeStyles((theme) => ({
-    WhatsappWrapper: {
-      backgroundImage: `url('/images/bg_ui_whatsapp.png')`,
+    TwitterWrapper: {
+      backgroundImage: `url('/images/bg_ui_twitter.png')`,
       backgroundSize: "cover", 
       height: '660px',
       [theme.breakpoints.only('xs')]: {
@@ -53,11 +53,11 @@ const Twitter = (props) => {
       width: "100%", 
       // overflow: "hidden", 
     },
-    whatsappImage: {
+    twitterImage: {
       maxWidth: 150,
       maxHeight: 150,
     }
-    // WhatsappMsgs: {
+    // TwitterMsgs: {
     //   maxHeight: maxHeight,
     // }
   }))
@@ -82,29 +82,41 @@ const Twitter = (props) => {
   // import sound from "react-sound"
 // inside render will put <sound> object
 
-  // TO DO: make whatsapp screen fit the screen and customise controls
+  // TO DO: make Twitter screen fit the screen and customise controls
   return (
     <Fade in={true} timeout={500}>
-      <Box className={classes.WhatsappWrapper}>
-        {/* Whatsapp Header */}
-        <div className="Whatsapp__header">
-          <img 
-            src={`/images/${specialTags.chat_group_image}`}
-            alt="Chat Profile"
-            className="Whatsapp__header--profile"
-          />
-          <div className="Whatsapp__header__description">
-            <div className="Whatsapp__header__description--name">{specialTags.chat_group_title}</div>
-            <div className="Whatsapp__header__description--status">Online</div>
-          </div>
-        </div>
-        
+      <Box className={classes.TwitterWrapper}>
+        {/* Twitter Header */}
+        {specialTags.thread_header ?
+          <>
+            <div className="Twitter__header">
+              <img 
+                src={`/images/${specialTags.chat_group_image}`}
+                alt="Chat Profile"
+                className="Twitter__header--profile"
+              />
+              <div className="Twitter__header__description">
+                <div className="Twitter__header__description--name" style={{color:persona.primaryColour}}>{name}</div>
+                <div className="Twitter__header__description--tag">{specialTags.speaker_self_tag? specialTags.speaker_self_tag : '@'+name}</div>            
+              </div>
+            </div>
+            <div class="Twitter__mainpost">
+              <div class="tweet">
+                {specialTags.thread_header}
+                {(specialTags.likes ?   <Typography key={specialTags.likes } className="Twitter__mainpost--likes">{specialTags.likes }</Typography> : null)}
+              </div>
+            </div>
+          </>
+          
+        : null}
         
         <Box>
             <Box
-              className={`Whatsapp__messages ${choices.length > 0 ? 'choices' : ''}`}
+              className={`Twitter__messages ${choices.length > 0 ? 'choices' : ''}`}
               dir="ltr">
-              {specialTags.timestamp ? <Box style={{textAlign:'center', paddingTop:5, fontSize:12}}> {specialTags.timestamp}hr </Box>: null}
+              
+              {/* Twitter Messages */}
+              
               {currentParagraphs.map((step, i) => {
                 if (step.tags[0]?.includes('speaker_self')) {
                   return (
@@ -116,11 +128,11 @@ const Twitter = (props) => {
                     >
                       <Fade in={step.text} key={step.text} timeout={300}>
                         <Box
-                          className={`Whatsapp__messages--sender ${isNotPrevSpeaker(step.tags[0])?"newSpeaker":""}`}
-                          borderRadius={5}
+                          className={`Twitter__messages--sender ${isNotPrevSpeaker(step.tags[0])?"newSpeaker":""}`}
+                          // borderRadius={5}
                           key={step.text}
                         >
-                          {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.whatsappImage} /> :  <Typography key={step.text}>{step.text}</Typography> )}
+                          {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.twitterImage} /> :  <Typography key={step.text}>{step.text}</Typography> )}
                           {setCurrentSpeaker(step.tags[0])}
                         </Box>
                       </Fade>
@@ -129,52 +141,72 @@ const Twitter = (props) => {
                 } else if (step.tags[0]?.includes('speaker')) {     // this is needed to avoid rendering inner_monologue
                   return (
                     <Fade in={step.text} timeout={300}>
-                      <div key={step.text} className={`Whatsapp__messages--receiver ${isNotPrevSpeaker(step.tags[0])?"newSpeaker":""}`} 
+                      <div key={step.text} className={`Twitter__messages--threadpost`} 
                         style={{}}
                       >
-                        <div className="Whatsapp__messages--receiver--name"
-                            style={{color:persona.primaryColour,textTransform:"capitalize", display:isNotPrevSpeaker(step.tags[0])?"block":"none"}}>
-                          {(step.tags[0]?.includes('speaker_1') ? specialTags.speaker_1_name : "")}
-                          {(step.tags[0]?.includes('speaker_2') ? specialTags.speaker_2_name : "")}
-                          {(step.tags[0]?.includes('speaker_3') ? specialTags.speaker_3_name : "")}
-                          {(step.tags[0]?.includes('speaker_4') ? specialTags.speaker_4_name : "")}
-                          {(step.tags[0]?.includes('speaker_5') ? specialTags.speaker_5_name : "")}
-                          {(step.tags[0]?.includes('speaker_6') ? specialTags.speaker_6_name : "")}
+                        <img src={'/images/'+ step.text} alt={step.text} className="Twitter__messages--profileImage"  />
+                        <div className="Twitter__messages--tweetContent">
+                          <div className="Twitter__messages--handle">
+                            <div className="Twitter__messages--name">
+                              {(step.tags[0]?.includes('speaker_1') ? specialTags.speaker_1_name : null)}
+                              {(step.tags[0]?.includes('speaker_2') ? specialTags.speaker_2_name : null)}
+                              {(step.tags[0]?.includes('speaker_3') ? specialTags.speaker_3_name : null)}
+                              {(step.tags[0]?.includes('speaker_4') ? specialTags.speaker_4_name : null)}
+                              {(step.tags[0]?.includes('speaker_5') ? specialTags.speaker_5_name : null)}
+                              {(step.tags[0]?.includes('speaker_6') ? specialTags.speaker_6_name : null)}                          
+                            </div>
+                            <div className="Twitter__messages--tag">
+                              {(step.tags[0]?.includes('speaker_1') ? specialTags.speaker_1_tag : null)}
+                              {(step.tags[0]?.includes('speaker_2') ? specialTags.speaker_2_tag : null)}
+                              {(step.tags[0]?.includes('speaker_3') ? specialTags.speaker_3_tag : null)}
+                              {(step.tags[0]?.includes('speaker_4') ? specialTags.speaker_4_tag : null)}
+                              {(step.tags[0]?.includes('speaker_5') ? specialTags.speaker_5_tag : null)}
+                              {(step.tags[0]?.includes('speaker_6') ? specialTags.speaker_6_tag : null)}                          
+                            </div>
+                          </div>
+                          <div className="Twitter__messages--replyingTo">Replying to <span style={{color:persona.primaryColour}}>{specialTags.speaker_self_tag? specialTags.speaker_self_tag : '@'+name}</span></div>
+
                         </div>
                         {setCurrentSpeaker(step.tags[0])}
                         {/* <div>{step.text}</div> */}
                        
-                        {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.whatsappImage} /> :  <Typography key={step.text}>{step.text}</Typography> )}
+                        {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.twitterImage} /> :  <Typography key={step.text} className="Twitter__messages--tweet">{step.text}</Typography> )}
 
                       </div>
                     </Fade>
                   )
                 }
-                else if (step.tags[0]?.includes('timestamp')) {
-                  return (
-                    <Box style={{ textAlign: 'center', paddingTop: 5 }}> <Typography key={step.text} variant="overline"> {step.text}hr</Typography> </Box>
-                    )
-                }
+                // else if (step.tags[0]?.includes('inner_monologue')) {                
+                //   return (
+                //     <Box style={{ textAlign: 'center', paddingTop: 5 }}> <Typography key={step.text} variant="overline"> {step.text}</Typography> </Box>
+                //     )
+                // }
               
               })}
+            
+  
+            
+
+
+
               <div ref={elementRef} />
             </Box>
-            <Box className="Whatsapp__sendWrapper">
+            <Box className="Twitter__sendWrapper">
               <Box
-                className={`Whatsapp__sendWrapper__sendButton ${
+                className={`Twitter__sendWrapper__sendButton ${
                   choices.length === 0 ? '' : 'choice'
                 }`}
               >
                 Continue...
               </Box>
-              <Box className="Whatsapp__sendWrapper__sendButton--right">
+              <Box className="Twitter__sendWrapper__sendButton--right">
                 <ExpandMoreIcon />
               </Box>
             </Box>
             {/* this if else is needed to toggle between "Next Button" and choices (if any) */}
             {choices.length > 0 ? (
               <Box
-                className={`Whatsapp__choicesWrapper ${
+                className={`Twitter__choicesWrapper ${
                   choices.length === 0 ? 'no-choices' : 'w3-animate-fading'
                 }`}
                 // ref={choicesRef}
