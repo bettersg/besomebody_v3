@@ -125,6 +125,7 @@ class Router extends Component {
               {user ? <UserPage /> : <Redirect to="/" />}
             </PrivateRoute>
 
+
             <Route>
               <NotFoundPage />
             </Route>

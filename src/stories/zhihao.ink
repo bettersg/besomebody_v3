@@ -621,14 +621,24 @@ Am out with Nadia #speaker_1
 === zhihao_1_5 ===
 #knot:zhihao_1_5
 #ui:twitter
-#background:whatsapp.png
-#chat_group_title:Gavin Wong
-#chat_group_image:cha_zhihao_gavinprofileicon.jpg
+#chat_group_title:Twitter
+#chat_group_image:ico_ravi_rebecca.png
+#speaker_self_tag:ZHtag
+#speaker_self_image:ico_aman_jothi.png
 #speaker_1_name:Gavin
+#speaker_1_tag:GavinTag
+#speaker_1_image:ico_aman_lukman.png
 #speaker_2_name:Eric
-#speaker_3_name:Eric
-#speaker_4_name:Eric
+#speaker_2_tag:EricTag
+#speaker_2_image:ico_aman_family.png
+#speaker_3_name:John
+#speaker_3_tag:JohnTag
+#speaker_3_image:ico_aman_selinder.png
 #timestamp:21.34
+twitch.tv/ahao_gamer surprise stream in 15 min #speaker_self #thread_header
+drops enabled! get a free skin in game every 3 hours for watching #speaker_self
+    
+
 
 
 -> chapter_1_ending_1

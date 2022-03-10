@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import {
   Box,
   Button,
@@ -284,11 +285,21 @@ function getChapterReflectionIds(characterId) {
 }
 
 const ReflectionResponsesStep = ({ reflectionId, next }) => {
+  const characterId = getCharacterId(reflectionId);
+  const allChapterReflectionIds = getChapterReflectionIds(characterId);
+  const allReflectionIds = allChapterReflectionIds.map(([chaptId, reflId]) => reflId);
+
+  const { search } = useLocation();
+  const query = new URLSearchParams(search);
+  const initialReflectionIds = (query.get('chapters') === 'all')
+    ? allReflectionIds
+    : [reflectionId];
+
   const [responses, setResponses] = useState(null);
   const [hasMore, setHasMore] = useState(true);
   const [lastDocSnapshot, setLastDocSnapshot] = useState(null);
-  const [reflectionIds, setReflectionIds] = useState([reflectionId]);
-  const [filterReflectionIds, setFilterReflectionIds] = useState([reflectionId]);
+  const [reflectionIds, setReflectionIds] = useState(initialReflectionIds);
+  const [filterReflectionIds, setFilterReflectionIds] = useState(initialReflectionIds);
   const [count, setCount] = useState(null);
   const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false);
   const classes = useStyles();
@@ -299,9 +310,9 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
     setFilterReflectionIds(newFilterReflectionIds);
   }
 
-  function filterReset() {
-    setFilterReflectionIds([reflectionId]);
-  }
+  // function filterReset() {
+  //   setFilterReflectionIds(initialReflectionIds);
+  // }
 
   function filterApply() {
     setResponses(null);
@@ -312,8 +323,6 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
   }
 
   const FilterDrawer = () => {
-    const characterId = getCharacterId(reflectionId);
-    const allChapterReflectionIds = getChapterReflectionIds(characterId);
     return (
       <div role='presentation' onKeyDown={toggleFilterDrawer(false)} className={classes.filterDrawer}>
         <h1>Filter stories</h1> <CloseIcon className={classes.closeIcon} onClick={toggleFilterDrawer(false)}/>
@@ -384,8 +393,8 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
   useEffect(() => fetchCount(), [reflectionIds]);
   useEffect(() => fetchMoreResponsesIfNotOverflow(), [hasMore, lastDocSnapshot, reflectionIds]);
 
-  console.log(responses)
-  console.log(reflectionId)
+  // console.log(responses)
+  // console.log(reflectionId)
 
   return (
     <div>

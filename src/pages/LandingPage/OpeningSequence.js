@@ -108,7 +108,7 @@ const OpeningSequence = () => {
     <Fade  in={true} timeout={500}>
       <div className="ScenePage">        
         <div className="ScenePage__speaker">
-          <img src="/images/cha_nadia_intro.png"  className="ScenePage__speaker--left"/>            
+          <img src="/images/cha_nadia_intro.png"  className="ScenePage__speaker--left" style={{ bottom: '160px' }} />            
         </div>
       <Box className={classes.paragraphWrapper}  height="100%">
           <div>
