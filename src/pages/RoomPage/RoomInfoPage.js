@@ -13,7 +13,7 @@ import { getRoomDb } from '../../models/roomModel'
 // import { firestore} from '../../firebase'
 import { updateRoomParticipantsDb } from '../../models/roomModel'
 import { useSnackbar } from '../../contexts/SnackbarContext'
-
+import { updateUserRoomDb , updateDbUser } from '../../models/userModel'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -96,37 +96,37 @@ const RoomInfoPage = () => {
   const { setSnackbar } = useSnackbar()
 
  
-  const { roomValue, roomCodeValue } = React.useContext(RoomContext);
+  const { roomValue } = React.useContext(RoomContext);
   const [room, setRoom] = roomValue;
-  const [roomCode, setroomCode] = roomCodeValue;
+  // const [roomCode, setroomCode] = roomCodeValue;
+  
   
   const { roomUrl } = useParams()
-  if (roomCode == null) {
-    setroomCode(roomUrl)
-  }
+  // if (roomCode == null) {    
+  //   setroomCode(roomUrl)            
+  // }
+  
+  // console.log(roomUrl)
 
-
-  const asyncRoom = async () => {
-    const room = await getRoomDb(roomCode)
-    return room
-  }
   
   useEffect(() => {
     const loadRoom = async () => {
       try {
-        const room = await asyncRoom()
-        setRoom(room)        
+        const room = setRoom(await getRoomDb(roomUrl))
+        return room     
       }
       catch (err) { console.log(err) }
     }
     loadRoom()
-  }, [roomCode])
+  }, [roomUrl])
   
-  // console.log('Room.id ',room.id)
+  // console.log('Room.id ',room)
   // console.log('roomCode params: ',roomCode)
   // console.log('UserId: ',currentUser.id)
 
-  
+  // TODO: is this page suitable to be the room details page with the teacher instructions and homework? Check that the saves make sense.
+
+
   const saveRoomStartGame = async () => {
     // e.preventDefault()
       
@@ -135,7 +135,29 @@ const RoomInfoPage = () => {
     try {
       setIsLoading(true)          
       await updateRoomParticipantsDb(room.id, currentUser.id)  
-      console.log('Room Updated', room.id)
+      await updateUserRoomDb(currentUser.id, room.id)  
+      await updateDbUser({ activeRoom: roomUrl }, currentUser.id)   
+      console.log('Room Updated', roomUrl)
+      history.push('/')  // redirect to root which will be the characterchoice page now.     
+    } catch (err) {
+      setSnackbar({
+        message: `There was an error: ${err.message}`,
+        open: true,
+        type: 'error',
+      })
+    }
+    setIsLoading(false)      
+
+  };
+
+
+  const exitActiveRoom = async () => {        
+    try {
+      setIsLoading(true)          
+    //   await updateRoomParticipantsDb(room.id, currentUser.id)  
+    //   await updateUserRoomDb(currentUser.id, room.id)  
+      await updateDbUser({ activeRoom: null }, currentUser.id)   
+      console.log('Room Exited')
       history.push('/')  // redirect to root which will be the characterchoice page now.     
     } catch (err) {
       setSnackbar({
@@ -168,12 +190,13 @@ const RoomInfoPage = () => {
         </Box>
         
         {currentUser && room &&
-        <Box py={3} textAlign="center" className={classes.whiteBox}>
+        <Box py={3} textAlign="left" className={classes.whiteBox}>
           <Typography>Your game reflections will be visible to the facilitator</Typography>
           <Box py={3} px={5}>
-            <Typography paragraph={true}>Room Code: {room.roomCode}</Typography>
+            <Typography paragraph={true}>Room Code: {room.code}</Typography>
             <Typography paragraph={true}>Organisation Name: {room.organisation}</Typography>
-            <Typography paragraph={true}>Class Name: {room.name}</Typography>
+              <Typography paragraph={true}>Class Name: {room.name}</Typography>
+              <hr />
             <Typography paragraph={true}>Instructions: {room.instructions}</Typography>
           </Box>
         </Box>
@@ -181,7 +204,8 @@ const RoomInfoPage = () => {
 
       </Container>          
         <Box className={classes.bottom}>
-          <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} onClick={() => saveRoomStartGame()}>Start Game</Button>         
+          <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} onClick={() => saveRoomStartGame()}>Confirm & Start Game</Button>         
+          <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} onClick={() => exitActiveRoom()}>Leave Room</Button>         
         </Box>        
     </Box>
 

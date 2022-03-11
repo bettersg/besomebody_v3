@@ -11,12 +11,14 @@ import { useAuth } from '../../contexts/AuthContext';
 import { useSnackbar } from '../../contexts/SnackbarContext'
 import { CHARACTER_MAP } from '../../models/storyMap'
 import { getDbUser }  from '../../models/userModel.js';
+import { getRoomDb }  from '../../models/roomModel.js';
 import { IntroBanner } from "../../components/IntroBanner"
 import { useInkContext } from '../../contexts/InkContext'
 import { Link } from 'react-router-dom'
 import CharacterAvatar from "./CharacterAvatar";
 import SideMenu from '../SimpleSideMenu/SideMenu'
 import { RoomContext } from '../../contexts/RoomContext'
+
 
 // Constants
 import "./styles.scss"
@@ -85,28 +87,38 @@ export const CharacterChoicePage = () => {
     } = useInkContext()
     
     // Auth Context
-	const { currentUser } = useAuth()
-	// TODO : fix the userInfo. firebase currentUser does not pass the profile fields properly.
+	const { currentUser } = useAuth()	
 	const [userFromDb, setUserFromDb] = useState(null)
   
-    const { roomValue, roomCodeValue } = React.useContext(RoomContext);
-    const [room, setRoom] = roomValue;
-    console.log(room)
+    // this code below to pull the room from the state is NO LONGER NEEDED as the activeRoom is now stored in the user database. 
+    // const { roomValue, roomCodeValue } = React.useContext(RoomContext);
+    const [room, setRoom] =  useState(null)
+    
 
 	useEffect(() => {
 	  const getUser = async () => {
 		const user = await getDbUser(currentUser.id)
 		return setUserFromDb(user)
-	  }
-  
-	  getUser()
+        }         
+    getUser()
 	}, [currentUser.id])
+
+    // console.log('activeRoom', userFromDb?.activeRoom)    
+
+    // once the user is loaded, if there is a change in the active room, get the room info.
+    useEffect(() => {
+        const getRoom = async () => {
+          const room = await getRoomDb(userFromDb?.activeRoom)
+          return setRoom(room)
+          }         
+      getRoom()
+      }, [userFromDb?.activeRoom])
 
 	const characters = CHARACTER_MAP;
 
-    const randNum = () => {
-        return Math.round((Math.random() + 1) * 200)
-    }
+    // const randNum = () => {
+    //     return Math.round((Math.random() + 1) * 200)
+    // }
 
 
     return (

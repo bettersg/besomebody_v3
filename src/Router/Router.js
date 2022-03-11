@@ -25,6 +25,8 @@ import Music1 from '../music/tobeyou_intro.mp3'
 import ChapterEnd from '../pages/ChapterEndPage/ChapterEnd'
 import ParticipantStartPage from '../pages/RoomPage/ParticipantStartPage'
 import RoomInfoPage from '../pages/RoomPage/RoomInfoPage'
+// import RoomDetailsPage from '../pages/RoomPage/RoomDetailsPage'
+import RoomJoinPage from '../pages/RoomPage/RoomJoinPage'
 
 class Router extends Component {
   render() {
@@ -74,6 +76,14 @@ class Router extends Component {
             <Route path="/room/:roomUrl" exact>                
               {user ? <RoomInfoPage /> : <ParticipantStartPage /> }
             </Route>            
+
+            {/* <PrivateRoute path="/room_details/:roomUrl" exact>
+              <RoomDetailsPage />
+            </PrivateRoute> */}
+
+            <PrivateRoute path="/room_join" exact>
+              <RoomJoinPage />
+            </PrivateRoute>
 
             <PrivateRoute path="/characterchoice" exact>
               <CharacterChoicePage />
