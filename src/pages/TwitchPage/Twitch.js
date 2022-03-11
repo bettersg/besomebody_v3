@@ -120,7 +120,7 @@ const Twitch = (props) => {
                           borderRadius={5}
                           key={step.text}
                         >
-                          {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.TwitchImage} /> :  <Typography key={step.text}>{step.text}</Typography> )}
+                          {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.TwitchImage} /> :  <Typography key={step.text}>{'@'+specialTags.speaker_self_name+' : '+step.text}</Typography> )}
                           {setCurrentSpeaker(step.tags[0])}
                         </Box>
                       </Fade>
@@ -134,10 +134,10 @@ const Twitch = (props) => {
                       >
                         <div className="Twitch__messages--receiver--name"
                             style={{color:persona.primaryColour,textTransform:"capitalize", display:isNotPrevSpeaker(step.tags[0])?"block":"none"}}>
-                          {(step.tags[0]?.includes('speaker_1') ? specialTags.speaker_1_name : "")}
-                          {(step.tags[0]?.includes('speaker_2') ? specialTags.speaker_2_name : "")}
-                          {(step.tags[0]?.includes('speaker_3') ? specialTags.speaker_3_name : "")}
-                          {(step.tags[0]?.includes('speaker_4') ? specialTags.speaker_4_name : "")}
+                          {(step.tags[0]?.includes('speaker_1') ? '@'+specialTags.speaker_1_name : null)}
+                          {(step.tags[0]?.includes('speaker_2') ? '@'+specialTags.speaker_2_name : null)}
+                          {(step.tags[0]?.includes('speaker_3') ? '@'+specialTags.speaker_3_name : null)}
+                          {(step.tags[0]?.includes('speaker_4') ? '@'+specialTags.speaker_4_name : null)}
                         </div>
                         {setCurrentSpeaker(step.tags[0])}
                         {/* <div>{step.text}</div> */}
@@ -148,9 +148,9 @@ const Twitch = (props) => {
                     </Fade>
                   )
                 }
-                else if (step.tags[0]?.includes('timestamp')) {
+                else if (step.tags[0]?.includes('inner_monologue')) {                
                   return (
-                    <Box style={{ textAlign: 'center', paddingTop: 5 }}> <Typography key={step.text} variant="overline"> {step.text}hr</Typography> </Box>
+                    <div className="Twitch__innerMono"> <Typography key={step.text}  className="Twitch__innerMono--text"> {step.text}</Typography> </div>
                     )
                 }
               

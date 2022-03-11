@@ -276,6 +276,18 @@
     
         }
     }
+    &__innerMono {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        min-height: 200px;
+        background: linear-gradient(180deg, #4f4dbe 44.7%, #664efc 100%);
+        &--text {
+         
+            color: white;
+            font-style: italic;
+        }
+    }
 }
 
 // .whatsapp-box {

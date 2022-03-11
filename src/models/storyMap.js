@@ -1,6 +1,7 @@
 import NadiaInk from '../stories/nadia.ink.json'
 import AmanInk from '../stories/aman.ink.json'
 import RaviInk from '../stories/ravi.ink.json'
+import ZhihaoInk from '../stories/zhihao.ink.json'
 
 // TODO: Update with other properties such as character image, character bio, chapter summary, etc
 /* 
@@ -663,12 +664,139 @@ export const CHARACTER_MAP = [
   {
     characterId: 4,
     name: "Zhihao Lim",
-    linkName: "",
+    linkName: "zhihao",
     profileImage: "/images/profile_zhihao.png",
     characterIntroImage:  "/character_choice_page/zhihao.png",
     description: "Zhihao might have a future in e-sports, but will it disappear before his eyes? Life is about to get complicated, as a fateful Tweet gains a life of its own...",
-    jsonLink: '../stories/nadia.ink.json',
-    playable: false,
+    jsonLink: '../stories/zhihao.ink.json',
+    playable: true,
+    jsonFile: ZhihaoInk,
+    primaryColour: '#7F89BC',
+    secondaryColour: '#B1EAEE',
+    newestChapter: 1,
+    chapters: [
+      {
+        chapterId: 1,
+        reflectionId:11,
+        number: 1,
+        title: "A Chinese New Year",
+        knotTag: "zhihao_1_intro",
+        summary: "Zhihao meets his family during Chinese New Year, where drama bubbles to the surface. How will he respond to his uncles?",
+        playable: true,
+        images: [
+          "/images/bg_nadia_intro.jpg",
+        ],
+        endings: [
+          {
+            endingId: 1,
+            title: "Nadia likes a type of guy",
+            inkVar: "chapter_1_ending_1",
+          },
+          {
+            endingId: 2,
+            title: "Nadia doesn't have a type",
+            inkVar: "chapter_1_ending_2",
+          },
+          {
+            endingId: 3,
+            title: "Nadia says Gavin is just a friend",
+            inkVar: "chapter_1_ending_3",
+          },
+          {
+            endingId: 4,
+            title: "Nadia defends Gavin",
+            inkVar: "chapter_1_ending_4",
+          },
+        ]
+      },
+      {
+        chapterId: 2,
+        number: 2,
+        reflectionId:12,
+        title: "The Date Crasher",
+        knotTag: "nadia_2_intro",
+        summary: "Nadia runs into some hard realities. Sometimes, having dreams isn't as straightforward as it should be.",
+        playable: false,
+        images: [
+          "/images/bg_nadia_intro.jpg",
+        ],
+        endings: [
+          {
+            endingId: 1,
+            title: "Azlin gets upset with you",
+            inkVar: "chapter2_ending_1",
+          },
+          {
+            endingId: 2,
+            title: "Azlin tells you to give him up",
+            inkVar: "chapter2_ending_2",
+          },
+        ]
+      },
+      {
+        chapterId: 3,
+        number: 3,
+        reflectionId:13,
+        title: "Fork in the Road",
+        knotTag: "nadia_3_intro",
+        summary: "As one door closes, another opens. But which girl will step through that door? As JC life comes to an end, only Nadia can choose.",
+        playable: true,
+        images: [
+          "/images/bg_nadia_intro.jpg",     
+        ],
+        endings: [
+          {
+            endingId: 1,
+            title: "Nadia and Gavin, together",
+            inkVar: "chapter3_ending_1",
+          },
+          {
+            endingId: 2,
+            title: "Nadia keeps her options open",
+            inkVar: "chapter3_ending_2",
+          },          
+          {
+            endingId: 3,
+            title: "Nadia moves forward alone",
+            inkVar: "chapter3_ending_3",
+          }, 
+        ]
+      },
+    ],
+    reflectionBrowser: [
+      {         
+        title: "Reflection Browser",
+        knotTag: "story_end_browser",
+        summary: "Nadia's story in the game has ended, but the stories of all our players are waiting to be explored.",
+        playable: true,
+        images: [
+          "/images/bg_nadia_intro.jpg",         
+        ],
+        empathyCharacters: [
+          {
+            characterName: 'Nadia',
+            characterImage: '/shareable_avatars/nadia.png',
+          },
+          {
+            characterName: 'Azlin',
+            characterImage: '/shareable_avatars/azlin.png',
+          },
+          {
+            characterName: 'Gavin',
+            characterImage: '/shareable_avatars/gavin.png',
+          },
+          {
+            characterName: 'Chloe',
+            characterImage: '/shareable_avatars/chloe.png',
+          },
+          {
+            characterName: 'Rahman',
+            characterImage: '/shareable_avatars/rahman.png',
+          },
+    
+        ]
+      },
+    ]
   }, 
   {
     characterId: 5,

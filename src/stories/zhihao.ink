@@ -621,7 +621,7 @@ Am out with Nadia #speaker_1
 === zhihao_1_5 ===
 #knot:zhihao_1_5
 #ui:twitter
-#chat_group_title:Twitter
+#chat_group_title:Twitter for @ahao_gamer
 #chat_group_image:ico_ravi_rebecca.png
 #speaker_self_tag:ZHtag
 #speaker_self_image:ico_aman_jothi.png
@@ -635,9 +635,102 @@ Am out with Nadia #speaker_1
 #speaker_3_tag:JohnTag
 #speaker_3_image:ico_aman_selinder.png
 #timestamp:21.34
-twitch.tv/ahao_gamer surprise stream in 15 min #speaker_self #thread_header
-drops enabled! get a free skin in game every 3 hours for watching #speaker_self
-    
+twitch.tv/ahao_gamer surprise stream in 15 min. drops enabled! get a free skin in game every 3 hours for watching #thread_header
+test #speaker_1
+testing test #speaker_2
+test #speaker_3
+// delete for live
+
+-> zhihao_1_5a
+
+=== zhihao_1_5a ===
+#knot:zhihao_1_5
+#ui:twitch
+#chat_group_title:Twitch Stream for @ahao_gamer
+#chat_group_image:bg_zhihao_twitchgame.gif
+#speaker_self_name:ahao_gamer
+#speaker_1_name:silentsword
+#speaker_2_name:pang
+#speaker_3_name:fuzzboar_gaming
+#speaker_4_name:ineedhealing
+!drops #speaker_1
+!drops #speaker_1
+!drops #speaker_1
+no squad mode? #speaker_2
+stop spamming drops #speaker_3
+losing streak :sweat #speaker_2
+noob teammates #speaker_4
+#speaker_4_name:anselm_main
+soft throwing #speaker_4
+#speaker_4_name:rabakplayer
+wth is up with @ahao_gamer’s positioning #speaker_4
+#speaker_4_name:graphene
+ahao_gamer please carry the game #speaker_4
+spam 🐑 sheep 🐑 for 🐑 @ahao_gamer’s 🐑 sweep #speaker_2
+eh where is @bakchormee #speaker_3
+// (Bakchormee. Short-form BCM. Aka Gavin. Aka the traitor.)				
++ @bakchormee went paktor with his gf so cmi today [] #speaker_self
++ Dunno la, anyway can focus on the game or not [] #speaker_self
+- at the hawker centre #speaker_4
+#speaker_4_name:anselm_main
+still cooking #speaker_4
+@bakchormee paktor with his gf so cmi today #speaker_self
+oof #speaker_2
+#speaker_4_name:d1amond
+poor thing #speaker_4
+#speaker_4_name:graphene
+is @bakchormee eating bakchormee with her  #speaker_4
+She malay so cannot eat BCM  #speaker_self
+LMAOOOOO. bakchormee not halal!!!  #speaker_2
+#speaker_4_name:d1amond
+@ahao_gamer which bakchormee you talking abt lollll #speaker_4
+the food lah then what  #speaker_self
+lolol @ahao_gamer innocent to the max #speaker_2
+BOTH NOT HALAL LAH  #speaker_2
+#speaker_4_name:graphene
+HAHAHAHAHAHA nice one @pang #speaker_4
+@bakchormee is haram now  #speaker_4
+Unless he becomes Ahmad hahaha  #speaker_4
+#speaker_4_name:d1amond
+Maybe she malay but not muslim? @zxyahao pretty anot? Got pic? #speaker_4
+Shuddup everyone let’s focus  #speaker_self
+#speaker_4_name:zapper1
+why bakchormee go for minah?? #speaker_4
+#speaker_1_name:silentsword
+#speaker_3_name:anselm_main
+!drops #speaker_1
++ oi guys FOCUS []   #speaker_self
++ eh dun be idiots. OI FOCUS on your game or we sure lose la []   #speaker_self
+- A min of silence for our bro in the halal zone… #speaker_3
+#speaker_4_name:graphene
+RIP @bakchormee #speaker_4
+So fast they already stop paying attention to me. #inner_monologue
+They only listen to my gaming tips, but they don’t when it’s other things. #inner_monologue
+I really dunno whether they follow me for my game play, or for me. #inner_monologue
+lolol someone better tell BCM he cannot eat pork anymore #speaker_3
+let’s vote on a new name for him  #speaker_4
+Mustafa!!! #speaker_2
+#speaker_1_name:d1amond
+from Lion King?? #speaker_1
+MUFASA LAH BODOH  #speaker_4
+BODOH! I VOTE BODOH! #speaker_3
+If Gavin were here right, confirm he will control the group from the start. Like damn easy like that. #inner_monologue
+But I’m the best player. Their coach. Where’s the respect for me? #inner_monologue
+
+-> zhihao_1_5b
+
+=== zhihao_1_5b ===
+#knot:zhihao_1_5b
+#ui:notification
+#background:ui_zhihao_message.jpg
+Gavin: Hey bro, really sorry #message
+Gavin: Turns out Thu is Nadia's bday #message
+Gavin: I'll let you know a good day asap #message
+// (See, see? He’ll say another time, then another time, then another time.)
+
+
+
+
 
 
 -> chapter_1_ending_1
