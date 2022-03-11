@@ -636,6 +636,10 @@ Am out with Nadia #speaker_1
 #speaker_3_image:ico_aman_selinder.png
 #timestamp:21.34
 twitch.tv/ahao_gamer surprise stream in 15 min. drops enabled! get a free skin in game every 3 hours for watching #thread_header
+test #speaker_1
+testing test #speaker_2
+test #speaker_3
+// delete for live
 
 -> zhihao_1_5a
 
@@ -664,10 +668,10 @@ wth is up with @ahao_gamer’s positioning #speaker_4
 ahao_gamer please carry the game #speaker_4
 spam 🐑 sheep 🐑 for 🐑 @ahao_gamer’s 🐑 sweep #speaker_2
 eh where is @bakchormee #speaker_3
-// (Bakchormee. Short-form BCM. Aka Gavin.) 
-// (Aka the traitor.)				
-#speaker_4_name:graphene
-at the hawker centre #speaker_4
+// (Bakchormee. Short-form BCM. Aka Gavin. Aka the traitor.)				
++ @bakchormee went paktor with his gf so cmi today [] #speaker_self
++ Dunno la, anyway can focus on the game or not [] #speaker_self
+- at the hawker centre #speaker_4
 #speaker_4_name:anselm_main
 still cooking #speaker_4
 @bakchormee paktor with his gf so cmi today #speaker_self
@@ -687,13 +691,22 @@ BOTH NOT HALAL LAH  #speaker_2
 HAHAHAHAHAHA nice one @pang #speaker_4
 @bakchormee is haram now  #speaker_4
 Unless he becomes Ahmad hahaha  #speaker_4
+#speaker_4_name:d1amond
+Maybe she malay but not muslim? @zxyahao pretty anot? Got pic? #speaker_4
+Shuddup everyone let’s focus  #speaker_self
+#speaker_4_name:zapper1
+why bakchormee go for minah?? #speaker_4
+#speaker_1_name:silentsword
 #speaker_3_name:anselm_main
-A min of silence for our bro in the halal zone… #speaker_3
+!drops #speaker_1
++ oi guys FOCUS []   #speaker_self
++ eh dun be idiots. OI FOCUS on your game or we sure lose la []   #speaker_self
+- A min of silence for our bro in the halal zone… #speaker_3
 #speaker_4_name:graphene
 RIP @bakchormee #speaker_4
-// (So fast they already stop paying attention to me.)
-// (They only listen to my gaming tips, but they don’t when it’s other things.)
-// (I really dunno whether they follow me for my game play, or for me.) 
+So fast they already stop paying attention to me. #inner_monologue
+They only listen to my gaming tips, but they don’t when it’s other things. #inner_monologue
+I really dunno whether they follow me for my game play, or for me. #inner_monologue
 lolol someone better tell BCM he cannot eat pork anymore #speaker_3
 let’s vote on a new name for him  #speaker_4
 Mustafa!!! #speaker_2
@@ -701,6 +714,22 @@ Mustafa!!! #speaker_2
 from Lion King?? #speaker_1
 MUFASA LAH BODOH  #speaker_4
 BODOH! I VOTE BODOH! #speaker_3
+If Gavin were here right, confirm he will control the group from the start. Like damn easy like that. #inner_monologue
+But I’m the best player. Their coach. Where’s the respect for me? #inner_monologue
+
+-> zhihao_1_5b
+
+=== zhihao_1_5b ===
+#knot:zhihao_1_5b
+#ui:notification
+#background:ui_zhihao_message.jpg
+Gavin: Hey bro, really sorry #message
+Gavin: Turns out Thu is Nadia's bday #message
+Gavin: I'll let you know a good day asap #message
+// (See, see? He’ll say another time, then another time, then another time.)
+
+
+
 
 
 

@@ -132,7 +132,20 @@ const Twitter = (props) => {
                           // borderRadius={5}
                           key={step.text}
                         >
-                          {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.twitterImage} /> :  <Typography key={step.text}>{step.text}</Typography> )}
+                          {(step.tags[1]?.includes('image') ?
+                            <img src={'/images/' + step.text} alt={step.text} className={classes.twitterImage} /> :
+                            <div className="Twitter__messages--tweetContent">
+                            <div className="Twitter__messages--handle">
+                              <div className="Twitter__messages--name">
+                                { specialTags.speaker_self_name}                                
+                              </div>
+                              <div className="Twitter__messages--tag">
+                                {'@'+specialTags.speaker_self_tag}                                                      
+                              </div>
+                            </div>
+                              <Typography key={step.text} className="Twitter__messages--tweet">{step.text}</Typography>
+                          </div>
+                          )}
                           {setCurrentSpeaker(step.tags[0])}
                         </Box>
                       </Fade>
@@ -156,15 +169,15 @@ const Twitter = (props) => {
                               {(step.tags[0]?.includes('speaker_6') ? specialTags.speaker_6_name : null)}                          
                             </div>
                             <div className="Twitter__messages--tag">
-                              {(step.tags[0]?.includes('speaker_1') ? specialTags.speaker_1_tag : null)}
-                              {(step.tags[0]?.includes('speaker_2') ? specialTags.speaker_2_tag : null)}
-                              {(step.tags[0]?.includes('speaker_3') ? specialTags.speaker_3_tag : null)}
-                              {(step.tags[0]?.includes('speaker_4') ? specialTags.speaker_4_tag : null)}
-                              {(step.tags[0]?.includes('speaker_5') ? specialTags.speaker_5_tag : null)}
-                              {(step.tags[0]?.includes('speaker_6') ? specialTags.speaker_6_tag : null)}                          
+                              {(step.tags[0]?.includes('speaker_1') ? '@'+specialTags.speaker_1_tag : null)}
+                              {(step.tags[0]?.includes('speaker_2') ? '@'+specialTags.speaker_2_tag : null)}
+                              {(step.tags[0]?.includes('speaker_3') ? '@'+specialTags.speaker_3_tag : null)}
+                              {(step.tags[0]?.includes('speaker_4') ? '@'+specialTags.speaker_4_tag : null)}
+                              {(step.tags[0]?.includes('speaker_5') ? '@'+specialTags.speaker_5_tag : null)}
+                              {(step.tags[0]?.includes('speaker_6') ? '@'+specialTags.speaker_6_tag : null)}                          
                             </div>
                           </div>
-                          <div className="Twitter__messages--replyingTo">Replying to <span style={{color:persona.primaryColour}}>{specialTags.speaker_self_tag? specialTags.speaker_self_tag : '@'+name}</span></div>
+                          <div className="Twitter__messages--replyingTo">Replying to <span style={{color:persona.primaryColour}}>{specialTags.speaker_self_tag? '@'+specialTags.speaker_self_tag : '@'+name}</span></div>
 
                         </div>
                         {setCurrentSpeaker(step.tags[0])}
@@ -176,11 +189,11 @@ const Twitter = (props) => {
                     </Fade>
                   )
                 }
-                // else if (step.tags[0]?.includes('inner_monologue')) {                
-                //   return (
-                //     <Box style={{ textAlign: 'center', paddingTop: 5 }}> <Typography key={step.text} variant="overline"> {step.text}</Typography> </Box>
-                //     )
-                // }
+                else if (step.tags[0]?.includes('inner_monologue')) {                
+                  return (
+                    <div className="Twitter__innerMono"> <Typography key={step.text}  className="Twitter__innerMono--text"> {step.text}</Typography> </div>
+                    )
+                }
               
               })}
             
