@@ -726,6 +726,7 @@ But I’m the best player. Their coach. Where’s the respect for me? #inner_mon
 Gavin: Hey bro, really sorry #message
 Gavin: Turns out Thu is Nadia's bday #message
 Gavin: I'll let you know a good day asap #message
+
 // (See, see? He’ll say another time, then another time, then another time.)
 
 

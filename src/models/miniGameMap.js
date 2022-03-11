@@ -620,8 +620,96 @@ export const MINI_GAME_MAP = [
           ],
       },  
     ],
+  },
+  
+// zhihao 1
+  {
+  game_id: 11,
+  ui: "mcq",
+  introduction: "First Question",
+  questions: [
+    {
+      question_id: 1,
+      question:
+        "What is the average monthly household income for Singaporeans who live in 1 or 2-bedroom HDBs? [2020 data]",
+      type: "text",
+      correct_answer_id: 2,
+      explanation:
+        "The average monthly household income (i.e. the combined salary of all the people who live there) for Singaporeans who live in 1 or 2-bedroom HDBs is $2,997. [Department of Statistics Key Household Income Trends, 2020]",
+      answers: [
+        {
+          answer_id: 1,
+          title: "$1,504",
+        },
+        {
+          answer_id: 2,
+          title: "$2,997",
+        },
+        {
+          answer_id: 3,
+          title: "$10,127",
+        },
+        {
+          answer_id: 4,
+          title: "$14,254",
+        },
+      ],
     },
-
+    {
+      question_id: 2,
+      question:
+        "2nd Question",
+      correct_answer_id: 4,
+      explanation: "The average monthly household income (i.e. the combined salary of all the people who live there) for Singaporeans who live in landed properties is $27,838. [Department of Statistics Key Household Income Trends, 2020]",
+      type: "text",
+      answers: [
+        {
+          answer_id: 1,
+          title: "$10,127",
+        },
+        {
+          answer_id: 2,
+          title: "$15,023",
+        },
+        {
+          answer_id: 3,
+          title: "$21,732",
+        },
+        {
+          answer_id: 4,
+          title: "$27,838",
+        },
+      ],
+    },
+    {
+      question_id: 3,
+      question:
+        "3rd Qn",
+      type: "text",
+      correct_answer_id: 2,
+      explanation:
+        "The unemployment rate for citizens in 2021 was 3.7% [Ministry of Manpower]. The unemployment rate for United States was 8.1% [World Bank], for comparison.",
+        answers: [
+          {
+            answer_id: 1,
+            title: "1.7%",
+          },
+          {
+            answer_id: 2,
+            title: "3.7%",
+          },
+          {
+            answer_id: 3,
+            title: "5.7%",
+          },
+          {
+            answer_id: 4,
+            title: "7.7%",
+          },
+        ],
+    },  
+  ],
+  },
 ];
   
 

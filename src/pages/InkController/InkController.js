@@ -38,7 +38,7 @@ const getUi = ({
       return <Twitch currentParagraphs={whatsAppParagraphs} />
     }
     case 'twitter': {
-      return <WhatsApp currentParagraphs={whatsAppParagraphs} />
+      return <Twitter currentParagraphs={whatsAppParagraphs} />
     }
     case 'narrator': {
       return <Narrator currentParagraphs={currentParagraphs} />
@@ -144,7 +144,7 @@ const InkController = () => {
       const nextParagraphs = paragraphs.filter((paragraph) => {
         return paragraph.currentKnot === currentKnot
       })
-      if (specialTags.ui === 'whatsapp') {
+      if (specialTags.ui === 'whatsapp' || specialTags.ui === 'twitch' || specialTags.ui === 'twitter') {
         setWhatsAppParagraphs([...nextParagraphs])
         return setCurrentParagraphs([...whatsAppParagraphs, ...nextParagraphs])
       }

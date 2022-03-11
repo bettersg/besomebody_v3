@@ -82,43 +82,53 @@ const Twitter = (props) => {
   // import sound from "react-sound"
 // inside render will put <sound> object
 
+  console.log(currentParagraphs)
   // TO DO: make Twitter screen fit the screen and customise controls
   return (
     <Fade in={true} timeout={500}>
       <Box className={classes.TwitterWrapper}>
         {/* Twitter Header */}
-        {specialTags.thread_header ?
+        {/* if (step.tags[0]?.includes('speaker_self')) {
+        
           <>
-            <div className="Twitter__header">
-              <img 
-                src={`/images/${specialTags.chat_group_image}`}
-                alt="Chat Profile"
-                className="Twitter__header--profile"
-              />
-              <div className="Twitter__header__description">
-                <div className="Twitter__header__description--name" style={{color:persona.primaryColour}}>{name}</div>
-                <div className="Twitter__header__description--tag">{specialTags.speaker_self_tag? specialTags.speaker_self_tag : '@'+name}</div>            
-              </div>
-            </div>
-            <div class="Twitter__mainpost">
-              <div class="tweet">
-                {specialTags.thread_header}
-                {(specialTags.likes ?   <Typography key={specialTags.likes } className="Twitter__mainpost--likes">{specialTags.likes }</Typography> : null)}
-              </div>
-            </div>
+            
           </>
           
-        : null}
+        : null} */}
         
-        <Box>
+        
             <Box
               className={`Twitter__messages ${choices.length > 0 ? 'choices' : ''}`}
               dir="ltr">
               
               {/* Twitter Messages */}
               
-              {currentParagraphs.map((step, i) => {
-                if (step.tags[0]?.includes('speaker_self')) {
+            {currentParagraphs.map((step, i) => {
+              if (step.tags[0]?.includes('thread_header')) { 
+                return (
+                  <>
+                    <div className="Twitter__header">
+                      <img 
+                        src={`/images/${specialTags.chat_group_image}`}
+                        alt="Chat Profile"
+                        className="Twitter__header--profile"
+                      />
+                      <div className="Twitter__header__description">
+                        <div className="Twitter__header__description--name" style={{color:persona.primaryColour}}>{name}</div>
+                        <div className="Twitter__header__description--tag">{specialTags.speaker_self_tag? specialTags.speaker_self_tag : '@'+name}</div>            
+                      </div>
+                    </div>
+                    <div class="Twitter__mainpost">
+                      <div class="tweet">
+                        {step.text}
+                        {(specialTags.likes ?   <Typography key={specialTags.likes } className="Twitter__mainpost--likes">{specialTags.likes }</Typography> : null)}
+                      </div>
+                    </div>
+                  </>
+                )
+              }
+              
+                else if (step.tags[0]?.includes('speaker_self')) {
                   return (
                     <Box
                       key={step.text}
@@ -128,7 +138,7 @@ const Twitter = (props) => {
                     >
                       <Fade in={step.text} key={step.text} timeout={300}>
                         <Box
-                          className={`Twitter__messages--sender ${isNotPrevSpeaker(step.tags[0])?"newSpeaker":""}`}
+                          className={`Twitter__messages--sender`}
                           // borderRadius={5}
                           key={step.text}
                         >
@@ -241,7 +251,7 @@ const Twitter = (props) => {
             )}
         </Box> 
 
-      </Box>
+      {/* </Box> */}
     </Fade>
   )
 }
