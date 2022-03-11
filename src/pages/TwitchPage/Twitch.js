@@ -84,21 +84,26 @@ const Twitch = (props) => {
 
   // TO DO: make Twitch screen fit the screen and customise controls
   return (
-    <Fade in={true} timeout={500}>
-      <Box className={classes.TwitchWrapper}>
-        {/* Twitch Header */}
-        <div className="Twitch__header">
-          <img 
-            src={`/images/${specialTags.chat_group_image}`}
-            alt="Chat Profile"
-            className="Twitch__header--profile"
-          />
-          <div className="Twitch__header__description">
-            <div className="Twitch__header__description--name">{specialTags.chat_group_title}</div>
-            <div className="Twitch__header__description--status">Online</div>
+    <Fade in={true} timeout={500}>        
+        <Box className={classes.TwitchWrapper}>
+          {/* Twitch Header */}
+          {/* <div className="Twitch__toolbar"/> */}
+          <div className="Twitch__video">
+            <img className="Twitch__video--image" src={`/images/${specialTags.chat_group_image}`}/>
           </div>
-        </div>
-        
+          <div className="Twitch__gradient"/>
+          <div className="Twitch__header">
+            {/* <img 
+              src='/images/profile_nadia.png'
+              alt="Chat Profile"
+              className="Twitch__header--profile"
+            /> */}
+            <div className="Twitch__header__description">
+              <div className="Twitch__header__description--name">Chat</div>
+              {/* <div className="Twitch__header__description--status">Online</div> */}
+            </div>
+          </div>
+
         
         <Box>
             <Box
@@ -112,24 +117,78 @@ const Twitch = (props) => {
                       key={step.text}
                       mx={1}
                       display="flex"
-                      justifyContent="flex-end"
+                      // justifyContent="flex-end"
                     >
-                      <Fade in={step.text} key={step.text} timeout={300}>
+                      <Fade in='test' key='test' timeout={300}>
                         <Box
-                          className={`Twitch__messages--sender ${isNotPrevSpeaker(step.tags[0])?"newSpeaker":""}`}
-                          borderRadius={5}
+                          className={`Twitch__messages--receiver`}
+                        //   borderRadius={5}
                           key={step.text}
                         >
-                          {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.TwitchImage} /> :  <Typography key={step.text}>{'@'+specialTags.speaker_self_name+' : '+step.text}</Typography> )}
-                          {setCurrentSpeaker(step.tags[0])}
+                            <div class="Twitch__messages--receiver--message">
+                            <span>
+                                <img class="Twitch__messages--receiver--profile" src="/images/profile_aman.png"></img></span>
+                            <span className="Twitch__messages--receiver--name" style={{color:'#19A3AD'}}>{'@'+specialTags.speaker_self_name} </span>
+                            {step.text}
+                            </div>
+                          {/* {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.TwitchImage} /> :  <Typography key={step.text}>{step.text}</Typography> )} */}
+                          {/* {setCurrentSpeaker(step.tags[0])} */}
                         </Box>
                       </Fade>
+                      
                     </Box>
+                    
+                    
+                    // <Box
+                    //   key={step.text}
+                    //   mx={1}
+                    //   display="flex"
+                    //   justifyContent="flex-end"
+                    // >
+                    //   <Fade in={step.text} key={step.text} timeout={300}>
+                    //     <Box
+                    //       className={`Twitch__messages--sender ${isNotPrevSpeaker(step.tags[0])?"newSpeaker":""}`}
+                    //       borderRadius={5}
+                    //       key={step.text}
+                    //     >
+                    //       {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.TwitchImage} /> :  <Typography key={step.text}>{'@'+specialTags.speaker_self_name+' : '+step.text}</Typography> )}
+                    //       {setCurrentSpeaker(step.tags[0])}
+                    //     </Box>
+                    //   </Fade>
+                    // </Box>
                   ) 
                 } else if (step.tags[0]?.includes('speaker')) {     // this is needed to avoid rendering inner_monologue
                   return (
                     <Fade in={step.text} timeout={300}>
-                      <div key={step.text} className={`Twitch__messages--receiver ${isNotPrevSpeaker(step.tags[0])?"newSpeaker":""}`} 
+                        <Box
+                          key={step.text}
+                          mx={1}
+                          display="flex"
+                          // justifyContent="flex-end"
+                        >
+                          
+                            <Box
+                              className={`Twitch__messages--receiver`}
+                            //   borderRadius={5}
+                              key={step.text}
+                            >
+                                <div class="Twitch__messages--receiver--message">
+                                <span>
+                                    <img class="Twitch__messages--receiver--profile" src="/images/profile_nadia.png"></img></span>
+                                <span className="Twitch__messages--receiver--name">
+                                {(step.tags[0]?.includes('speaker_1') ? '@'+specialTags.speaker_1_name : null)}
+                                {(step.tags[0]?.includes('speaker_2') ? '@'+specialTags.speaker_2_name : null)}
+                                {(step.tags[0]?.includes('speaker_3') ? '@'+specialTags.speaker_3_name : null)}
+                                {(step.tags[0]?.includes('speaker_4') ? '@'+specialTags.speaker_4_name : null)}: </span>
+                                {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.TwitchImage} /> :  <span>{step.text}</span> )}
+                                </div>
+                              {/* {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.TwitchImage} /> :  <Typography key={step.text}>{step.text}</Typography> )} */}
+                              {/* {setCurrentSpeaker(step.tags[0])} */}
+                            </Box>
+                         
+                        </Box>
+                      
+                      {/* <div key={step.text} className={`Twitch__messages--receiver ${isNotPrevSpeaker(step.tags[0])?"newSpeaker":""}`} 
                         style={{}}
                       >
                         <div className="Twitch__messages--receiver--name"
@@ -140,11 +199,11 @@ const Twitch = (props) => {
                           {(step.tags[0]?.includes('speaker_4') ? '@'+specialTags.speaker_4_name : null)}
                         </div>
                         {setCurrentSpeaker(step.tags[0])}
-                        {/* <div>{step.text}</div> */}
+                        {/* <div>{step.text}</div> 
                        
-                        {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.TwitchImage} /> :  <Typography key={step.text}>{step.text}</Typography> )}
+                       
 
-                      </div>
+                      </div> */}
                     </Fade>
                   )
                 }

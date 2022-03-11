@@ -70,6 +70,7 @@
         scroll-snap-type: y mandatory;
         overflow-y: scroll;
         user-select: none;
+        background: $white;
         // height: 100vh; 
         height: calc(calc(var(--vh, 1vh) * 100) - 382px); // edited from 148px to 382px
         @media screen and (min-device-width:600px) {
