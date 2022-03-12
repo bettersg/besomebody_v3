@@ -483,7 +483,9 @@ Minigame 11 // must add some text
 #background:bg_zhihao_bedroom.jpg
 When I’m not streaming, I'm playing every night. I play this first-person shooter game called Alphas.
 It's a multiplayer game so I team up with other players. Also got high-skill ceiling so I don’t have limits on improving.
-Last time I always play with Gavin and Aman. Gavin I met on Discord first, then we found out we’re from the same JC. After that right, we always eat bak chor mee (minced pork noodles) together when we share tutorial break. He eat so much until his IGN (in-game name) also become ‘bakchormee’, lol.
+Last time I always play with Gavin and Aman. Gavin I met on Discord first, then we found out we’re from the same JC. 
+After that right, we always eat bak chor mee (minced pork noodles) together when we share tutorial break. 
+He eat so much until his IGN (in-game name) also become ‘bakchormee’, lol.
 Now I can’t remember how long ago all of us played together.
 They're busy lah.
 But if you don't ask then you also don’t know right?
@@ -668,6 +670,7 @@ ahao_gamer please carry the game #speaker_6
 spam 🐑 sheep 🐑 for 🐑 @ahao_gamer’s 🐑 sweep #speaker_2
 eh where is @bakchormee #speaker_3
 Bakchormee. Short-form BCM. Aka Gavin. Aka the traitor.	#inner_monologue	
+yeah @bakchormee joining? #speaker_2
 + @bakchormee went paktor with his gf so cmi today [] #speaker_self
 + Dunno la, anyway can focus on the game or not [] #speaker_self
 - at the hawker centre? #speaker_4
@@ -805,6 +808,7 @@ Eh wth. They can joke around but insulting Aman's type and this new girl is too 
 eh who is that behind @ahao_gamer?  #speaker_5
 omg ma is staring right into the webcam behind me #inner_monologue
 wth how long has she been there #inner_monologue
+is that ahao_gamer's ma??! LOL uhoh you're in trouble bro #speaker_1
 + [Turn off the webcam and say goodbye]
     #chat_group_image:black.jpg
     THE BEST STREAMER has to log off! SEE YOU IDIOTS TMR! #speaker_self

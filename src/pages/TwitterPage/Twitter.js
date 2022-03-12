@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState, useRef } from 'react'
-import { Box, Fade, Grid, Typography } from '@material-ui/core'
+import { Box, Fade, Avatar, Typography } from '@material-ui/core'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import NextButton from '../../components/NextButton'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
@@ -146,7 +146,7 @@ const Twitter = (props) => {
                           key={step.text}
                         >
                           {(step.tags[1]?.includes('image') ?
-                            <img src={'/images/' + step.text} alt={step.text} className={classes.twitterImage} /> :
+                            <img src={'/images/' + specialTags.speaker_self_image} alt={step.text} className={classes.twitterImage} /> :
                             <div className="Twitter__messages--tweetContent">
                             <div className="Twitter__messages--handle">
                               <div className="Twitter__messages--name">
@@ -171,7 +171,15 @@ const Twitter = (props) => {
                       <div key={step.text} className={`Twitter__messages--threadpost`} 
                         style={{}}
                       >
-                        <img src={'/images/'+ step.text} alt={step.text} className="Twitter__messages--profileImage"  />
+                        {/* <img src={'/images/'+ specialTags.text} alt="0" className="Twitter__messages--profileImage"  /> */}
+                        <Avatar>
+                              {(step.tags[0]?.includes('speaker_1') ? (specialTags.speaker_1_name).charAt(0) : null)}
+                              {(step.tags[0]?.includes('speaker_2') ? (specialTags.speaker_2_name).charAt(0) : null)}
+                              {(step.tags[0]?.includes('speaker_3') ? (specialTags.speaker_3_name).charAt(0) : null)}
+                              {(step.tags[0]?.includes('speaker_4') ? (specialTags.speaker_4_name).charAt(0) : null)}
+                              {(step.tags[0]?.includes('speaker_5') ? (specialTags.speaker_5_name).charAt(0) : null)}
+                              {(step.tags[0]?.includes('speaker_6') ? (specialTags.speaker_6_name).charAt(0) : null)}
+                        </Avatar> 
                         <div className="Twitter__messages--tweetContent">
                           <div className="Twitter__messages--handle">
                             <div className="Twitter__messages--name">
