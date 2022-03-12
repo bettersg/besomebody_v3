@@ -188,14 +188,14 @@ const Twitch = (props) => {
                                   
                                   </span>
                                 <span className="Twitch__messages--receiver--name">
-                                {(step.tags[0]?.includes('speaker_1') ? '@' + specialTags.speaker_1_name : null)}
-                                {(step.tags[0]?.includes('speaker_2') ? '@' + specialTags.speaker_2_name : null)}
-                                {(step.tags[0]?.includes('speaker_3') ? '@' + specialTags.speaker_3_name : null)}
-                                {(step.tags[0]?.includes('speaker_4') ? '@' + specialTags.speaker_4_name : null)}
-                                {(step.tags[0]?.includes('speaker_5') ? '@' + specialTags.speaker_5_name : null)}
-                                {(step.tags[0]?.includes('speaker_6') ? '@' + specialTags.speaker_6_name : null)}
-                                {(step.tags[0]?.includes('speaker_7') ? '@' + specialTags.speaker_7_name : null)}
-                                {(step.tags[0]?.includes('speaker_8') ? '@' + specialTags.speaker_8_name : null)}: </span>
+                                {(step.tags[0]?.includes('speaker_1') ? '@' + specialTags.speaker_1_name + ' : ': null)}
+                                {(step.tags[0]?.includes('speaker_2') ? '@' + specialTags.speaker_2_name + ' : ': null)}
+                                {(step.tags[0]?.includes('speaker_3') ? '@' + specialTags.speaker_3_name + ' : ': null)}
+                                {(step.tags[0]?.includes('speaker_4') ? '@' + specialTags.speaker_4_name + ' : ': null)}
+                                {(step.tags[0]?.includes('speaker_5') ? '@' + specialTags.speaker_5_name + ' : ': null)}
+                                {(step.tags[0]?.includes('speaker_6') ? '@' + specialTags.speaker_6_name + ' : ': null)}
+                                {(step.tags[0]?.includes('speaker_7') ? '@' + specialTags.speaker_7_name + ' : ': null)}
+                                {(step.tags[0]?.includes('speaker_8') ? '@' + specialTags.speaker_8_name + ' : ': null)} </span>
                                 {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.TwitchImage} /> :  <span>{step.text}</span> )}
                                 </div>
                               {/* {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.TwitchImage} /> :  <Typography key={step.text}>{step.text}</Typography> )} */}
@@ -252,7 +252,8 @@ const Twitch = (props) => {
                 }`}
                 // ref={choicesRef}
               >
-                {choices.map((choice, i) => {
+              {choices.map((choice, i) => {
+                  if (innerMonoRef.current) { innerMonoRef.current.hidden = 'true' }
                   return (
                     <Box
                       className="choices"

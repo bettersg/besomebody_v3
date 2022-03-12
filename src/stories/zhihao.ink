@@ -635,11 +635,8 @@ Am out with Nadia #speaker_1
 #speaker_3_tag:JohnTag
 #speaker_3_image:ico_aman_selinder.png
 #timestamp:21.34
+#likes:5 ❤️
 twitch.tv/ahao_gamer surprise stream in 15 min. drops enabled! get a free skin in game every 3 hours for watching #thread_header
-test #speaker_1
-testing test #speaker_2
-test #speaker_3
-// delete for live
 
 -> zhihao_1_5a
 
@@ -729,9 +726,9 @@ Sigh. He will def choose her over me la. Who wouldn't?
 #knot:zhihao_1_5c
 #ui:twitter
 #chat_group_title:Twitter:  @ahao_gamer
-#chat_group_image:ico_ravi_rebecca.png
+#chat_group_image:ico_zhihao.png
 #speaker_self_tag:ahao_gamer
-#speaker_self_image:ico_aman_jothi.png
+#speaker_self_image:ico_zhihao.png
 #speaker_1_name:Ervyn
 #speaker_1_tag:d1amond
 #speaker_1_image:ico_aman_lukman.png
@@ -742,7 +739,8 @@ Sigh. He will def choose her over me la. Who wouldn't?
 #speaker_3_tag:JohnTag
 #speaker_3_image:ico_aman_selinder.png
 #timestamp:23.41
-Bakchormee has a minah gf. RIP to all our bakchormee outings. RIP to my best bro’s nickname. His new name must be malayu. WDYT of Bodoh? #thread_header
+#likes:0 ❤️
+Bakchormee has a minah gf, so isn't playing with us. RIP to all our bakchormee outings. RIP to my best bro’s nickname. His new name must be malayu. WDYT of Bodoh? #thread_header
 @ahao_gamer, could you switch? We're doing a deathball comp. #speaker_1
 
 -> zhihao_1_5d
@@ -757,27 +755,21 @@ Bakchormee has a minah gf. RIP to all our bakchormee outings. RIP to my best bro
 #speaker_2_name:ineedhealing
 #speaker_3_name:mechmaster
 #speaker_4_name:anselm_main
+#speaker_5_name:d1amond
 
-
-ANOTHER GIRL #speaker_1
-
+ANOTHER GIRL. hullo @nur_ayesa #speaker_1
 gurl gamer #speaker_2
-
-maybe it's bakchormee's gf #speaker_3
-
+eh her name sound malay... maybe it's bakchormee's gf #speaker_3
 ask if she's chio #speaker_3
-
 maybe not if she's chao ta (overcooked / dark skinned) lol #speaker_1
-
 lololololol 	#speaker_2			   
-
 at least not indian #speaker_1
-Eh wth. They can joke about other people but insulting Aman's type is too far. I need to stop the convo #inner_monologue
-
-+ [Tell @graphene off for that comment] If anyone else wanna talk s*** about amanonfire they can leave too #speaker_self
+Eh wth. They can joke around but insulting Aman's type and this new girl is too far. I need to stop the convo #inner_monologue
+😂😂 	#speaker_2	
++ [Tell @graphene off for that comment] If anyone else wanna talk s*** about @amanonfire they can leave too #speaker_self
     VAR zhihao_1_racistgamer = ""
-    ~ zhihao_1_racistgamer = "scold"
-    wth i’m just saying in general not abt amanonfire #speaker_1
+    ~ zhihao_1_racistgamer = "scold racists"
+    wth i’m just saying in general not abt @amanonfire #speaker_1
     idiot #speaker_1
     [graphene has left the chat] #speaker_twitch
     bye then #speaker_2
@@ -789,40 +781,141 @@ Eh wth. They can joke about other people but insulting Aman's type is too far. I
     they got no spine #speaker_2
     lol #speaker_4
 
-+ [Switch topics abruptly]
-
++ [Switch topics abruptly] Hey new girl @nur_ayesa, you wanna share your insta? #speaker_self
+    ~ zhihao_1_racistgamer = "switch topic"
+    Wah she go mute my voice chat and exit the stream. #inner_monologue
+    Okay lah, bad move on my part sigh. #inner_monologue
+    ??? low blow man #speaker_5
+    no one cares about your opinion @d1amond #speaker_2
+    if you don't like it then don't watch lol #speaker_4
+    (I keep quiet better.) #inner_monologue
+    @ahao_gamer so quiet  #speaker_5
+    hes concentrating lol #speaker_3
 
 + [Scold them for not playing well]
+    ~ zhihao_1_racistgamer = "focus on game"
+    All of you THROWING (losing) SIA! #speaker_self
+    You all boosted or what? Go back play tutorial sua #speaker_self
+    yeah show them #speaker_1
+    Huh? How come I kena warning for toxic behaviour? who complain about me? #inner_monologue
+    lol @ahao_gamer you'll be banned soon #speaker_5
+    shuddup #speaker_2
+- eh do you all want to train or not la wth. talk less shoot more. #speaker_self
+#chat_group_image:bg_zhihao_twitchmother.jpg
+eh who is that behind @ahao_gamer?  #speaker_5
+omg ma is staring right into the webcam behind me #inner_monologue
+wth how long has she been there #inner_monologue
++ [Turn off the webcam and say goodbye]
+    #chat_group_image:black.jpg
+    THE BEST STREAMER has to log off! SEE YOU IDIOTS TMR! #speaker_self
+    lol confirm kena scolded by mother lololol #speaker_2
++ [Quickly exit] 
+    #chat_group_image:black.jpg
+    uh guys sorry need to go #speaker_self
+    play again tmr #speaker_self
+    lol confirm kena scolded by mother lololol #speaker_2
+- -> zhihao_1_6
 
-- 
+=== zhihao_1_6 ===
+#knot:zhihao_1_6
+#ui:narrator
+Sigh training last night wasn't great. 
+Oh well. Let's see if anybody liked my tweet.
 
+#knot:zhihao_1_6a
+#ui:twitter
+#chat_group_title:Twitter for @ahao_gamer
+#chat_group_image:ico_zhihao.png
+#speaker_self_tag:ahao_gamer
+#speaker_self_image:ico_zhihao.png
+#speaker_1_name:Ervyn
+#speaker_1_tag:d1amond
+#speaker_1_image:ico_aman_lukman.png
+#speaker_2_name:Gerald
+#speaker_2_tag:graphene
+#speaker_2_image:ico_aman_family.png
+#speaker_3_name:Anselm Is The Best
+#speaker_3_tag:anselm_main
+#speaker_3_image:ico_aman_selinder.png
+#timestamp:08.18
+#likes:1132 ❤️ | +108 new followers
+@bakchormee has a minah gf, so isn't playing with us. RIP to all our bakchormee outings. RIP to my best bro’s nickname. His new name must be malayu. WDYT of Bodoh? #thread_header
+LOL #speaker_1
+haha BODOH BODOH BODOH #speaker_3
+holy cow this is my most liked tweet ever! 108 new followers in one day?! #inner_monologue
+RIP to our bro lol.  #speaker_2
 
++ [Delete the tweet]
+    -> chapter_1_ending_1
++ [Keep the tweet up for publicity]
+    -> chapter_1_ending_2
++ [Keep the tweet up because it will blow over eventually]
+    -> chapter_1_ending_3
 
-
--> chapter_1_ending_1
-
--> chapter_1_ending_2
 
 
 === chapter_1_ending_1 ===
 #knot: chapter_1_ending_1
-#ui:narrator
-#background:bg_zhihao_pushpa_home.jpg
- xxxx
+#ui:twitter
+#chat_group_title:Twitter for @ahao_gamer
+#chat_group_image:ico_zhihao.png
+#speaker_self_tag:ahao_gamer
+#speaker_self_image:ico_zhihao.png
+#speaker_1_name:Ervyn
+#speaker_1_tag:d1amond
+#speaker_1_image:ico_aman_lukman.png
+#speaker_2_name:Gerald
+#speaker_2_tag:graphene
+#speaker_2_image:ico_aman_family.png
+#speaker_3_name:Anselm Is The Best
+#speaker_3_tag:anselm_main
+#speaker_3_image:ico_aman_selinder.png
+#speaker_4_name:Drew
+#speaker_4_tag:zinger2003
+#speaker_4_image:ico_aman_selinder.png
+#timestamp:08.18
+#likes:1132 ❤️ | +108 new followers
+@bakchormee has a minah gf, so isn't playing with us. RIP to all our bakchormee outings. RIP to my best bro’s nickname. His new name must be malayu. WDYT of Bodoh? #thread_header 
 VAR chapter_1_ending = 1
 ~ chapter_1_ending = 1
- xxxx
- 
--> zhihao_1_reflection
+FML. Why I go write that? How come got so many likes? #inner_monologue
+I better delete now.  #inner_monologue
+[post deleted] #thread_header    
+Gone already.Leng jing. (Calm down) #inner_monologue
+Crap. Should I say sorry?  #inner_monologue
++ [Apologise] got caught up in the moment, sorry for that #speaker_self
+    sorry for what? #speaker_4
++ [Don't Apologise] I'll just let the internet forget. #inner_monologue
+- -> zhihao_1_reflection
 
 
 === chapter_1_ending_2 ===
 #knot: chapter_1_ending_2
 #ui:narrator
 #background:bg_zhihao_pushpa_home.jpg
-xxxx
+FML that tweet went big. #inner_monologue
 ~ chapter_1_ending = 2
+But got a lot of people support. Ji Gu was right lah -- the truth sometimes can be ugly, but people know the truth when they see it.  #inner_monologue
+Cos true that Gavin cannot do a lot of things now. I just saying the truth.  #inner_monologue
+Aiyah I should leave it up and let it get me greater reach.  #inner_monologue
+Maybe more people will see my stuff and follow me.  #inner_monologue
+Most of the commenters like my joke. They know it’s harmless.  #inner_monologue
+Means I'm not doing anything wrong. #inner_monologue
 
+-> zhihao_1_reflection
+
+
+=== chapter_1_ending_3 ===
+#knot: chapter_1_ending_3
+#ui:narrator
+#background:bg_zhihao_pushpa_home.jpg
+Why I go write that? #inner_monologue
+~ chapter_1_ending = 3
+Aiyah. If it’s up then it’s seen already. #inner_monologue
+If no one say anything means no one cares lah. Not like I bigshot influencer like that. #inner_monologue
+Got so many other tweets people can read. #inner_monologue
+The people who care will get angry over someone else. #inner_monologue
+They'll all forget about this. #inner_monologue
 
 -> zhihao_1_reflection
 

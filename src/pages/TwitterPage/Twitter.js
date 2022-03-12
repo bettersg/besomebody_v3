@@ -123,7 +123,7 @@ const Twitter = (props) => {
                     <div class="Twitter__mainpost">
                       <div class="tweet">
                         {step.text}
-                        {(specialTags.likes ?   <Typography key={specialTags.likes } className="Twitter__mainpost--likes">{specialTags.likes }</Typography> : null)}
+                        {(specialTags.likes ?   <Typography key={specialTags.likes } className="Twitter__mainpost--likes">{specialTags.likes } </Typography> : null)}
                       </div>
                     </div>
                   </>
@@ -238,7 +238,8 @@ const Twitter = (props) => {
                 }`}
                 // ref={choicesRef}
               >
-                {choices.map((choice, i) => {
+            {choices.map((choice, i) => {
+                  if (innerMonoRef.current) { innerMonoRef.current.hidden = 'true' }
                   return (
                     <Box
                       className="choices"
