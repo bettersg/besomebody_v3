@@ -21,6 +21,7 @@ const Twitch = (props) => {
   // Help to scroll to bottom of the paragraphs render screen
   // ========================================================
   const elementRef = useRef()
+  const innerMonoRef = useRef()
 
   // Eveytime currentParagraphs gets updated or choices appear, scroll to the elementRef
   useEffect(() => {
@@ -99,7 +100,7 @@ const Twitch = (props) => {
               className="Twitch__header--profile"
             /> */}
             <div className="Twitch__header__description">
-              <div className="Twitch__header__description--name">Chat</div>
+              <div className="Twitch__header__description--name">{specialTags.chat_group_title}</div>
               {/* <div className="Twitch__header__description--status">Online</div> */}
             </div>
           </div>
@@ -112,6 +113,7 @@ const Twitch = (props) => {
               {specialTags.timestamp ? <Box style={{textAlign:'center', paddingTop:5, fontSize:12}}> {specialTags.timestamp}hr </Box>: null}
               {currentParagraphs.map((step, i) => {
                 if (step.tags[0]?.includes('speaker_self')) {
+                  if (innerMonoRef.current) { innerMonoRef.current.hidden = 'true' }
                   return (
                     <Box
                       key={step.text}
@@ -127,7 +129,7 @@ const Twitch = (props) => {
                         >
                             <div class="Twitch__messages--receiver--message">
                             <span>
-                                <img class="Twitch__messages--receiver--profile" src="/images/profile_aman.png"></img></span>
+                                <img class="Twitch__messages--receiver--profile" src="/images/profile_zhihao.png"></img></span>
                             <span className="Twitch__messages--receiver--name" style={{color:'#19A3AD'}}>{'@'+specialTags.speaker_self_name} </span>
                             {step.text}
                             </div>
@@ -157,7 +159,8 @@ const Twitch = (props) => {
                     //   </Fade>
                     // </Box>
                   ) 
-                } else if (step.tags[0]?.includes('speaker')) {     // this is needed to avoid rendering inner_monologue
+                } else if (step.tags[0]?.includes('speaker')) {     // this is needed to avoid rendering inner_monologue                  
+                  if (innerMonoRef.current) { innerMonoRef.current.hidden = 'true' }
                   return (
                     <Fade in={step.text} timeout={300}>
                         <Box
@@ -173,13 +176,26 @@ const Twitch = (props) => {
                               key={step.text}
                             >
                                 <div class="Twitch__messages--receiver--message">
-                                <span>
-                                    <img class="Twitch__messages--receiver--profile" src="/images/profile_nadia.png"></img></span>
+                                  <span>                                  
+                                    {(step.tags[0]?.includes('speaker_1') ? <img class="Twitch__messages--receiver--profile" alt="O" src={"/images/" + specialTags.speaker_1_name} ></img> : null)}
+                                    {(step.tags[0]?.includes('speaker_2') ? <img class="Twitch__messages--receiver--profile" alt="O" src={"/images/" + specialTags.speaker_2_name} ></img> : null)}
+                                    {(step.tags[0]?.includes('speaker_3') ? <img class="Twitch__messages--receiver--profile" alt="O" src={"/images/" + specialTags.speaker_3_name} ></img> : null)}
+                                    {(step.tags[0]?.includes('speaker_4') ? <img class="Twitch__messages--receiver--profile" alt="O" src={"/images/" + specialTags.speaker_4_name} ></img> : null)}
+                                    {(step.tags[0]?.includes('speaker_5') ? <img class="Twitch__messages--receiver--profile" alt="O" src={"/images/" + specialTags.speaker_5_name} ></img> : null)}
+                                    {(step.tags[0]?.includes('speaker_6') ? <img class="Twitch__messages--receiver--profile" alt="O" src={"/images/" + specialTags.speaker_6_name} ></img> : null)}
+                                    {(step.tags[0]?.includes('speaker_7') ? <img class="Twitch__messages--receiver--profile" alt="O" src={"/images/" + specialTags.speaker_7_name} ></img> : null)}
+                                    {(step.tags[0]?.includes('speaker_8') ? <img class="Twitch__messages--receiver--profile" alt="O" src={"/images/" + specialTags.speaker_8_name} ></img> : null)}
+                                  
+                                  </span>
                                 <span className="Twitch__messages--receiver--name">
-                                {(step.tags[0]?.includes('speaker_1') ? '@'+specialTags.speaker_1_name : null)}
-                                {(step.tags[0]?.includes('speaker_2') ? '@'+specialTags.speaker_2_name : null)}
-                                {(step.tags[0]?.includes('speaker_3') ? '@'+specialTags.speaker_3_name : null)}
-                                {(step.tags[0]?.includes('speaker_4') ? '@'+specialTags.speaker_4_name : null)}: </span>
+                                {(step.tags[0]?.includes('speaker_1') ? '@' + specialTags.speaker_1_name : null)}
+                                {(step.tags[0]?.includes('speaker_2') ? '@' + specialTags.speaker_2_name : null)}
+                                {(step.tags[0]?.includes('speaker_3') ? '@' + specialTags.speaker_3_name : null)}
+                                {(step.tags[0]?.includes('speaker_4') ? '@' + specialTags.speaker_4_name : null)}
+                                {(step.tags[0]?.includes('speaker_5') ? '@' + specialTags.speaker_5_name : null)}
+                                {(step.tags[0]?.includes('speaker_6') ? '@' + specialTags.speaker_6_name : null)}
+                                {(step.tags[0]?.includes('speaker_7') ? '@' + specialTags.speaker_7_name : null)}
+                                {(step.tags[0]?.includes('speaker_8') ? '@' + specialTags.speaker_8_name : null)}: </span>
                                 {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.TwitchImage} /> :  <span>{step.text}</span> )}
                                 </div>
                               {/* {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.TwitchImage} /> :  <Typography key={step.text}>{step.text}</Typography> )} */}
@@ -209,7 +225,7 @@ const Twitch = (props) => {
                 }
                 else if (step.tags[0]?.includes('inner_monologue')) {                
                   return (
-                    <div className="Twitch__innerMono"> <Typography key={step.text}  className="Twitch__innerMono--text"> {step.text}</Typography> </div>
+                    <div className="Twitch__innerMono" ref={innerMonoRef}> <Typography key={step.text}  className="Twitch__innerMono--text"> {step.text}</Typography> </div>
                     )
                 }
               

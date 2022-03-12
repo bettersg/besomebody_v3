@@ -21,6 +21,7 @@ const Twitter = (props) => {
   // Help to scroll to bottom of the paragraphs render screen
   // ========================================================
   const elementRef = useRef()
+  const innerMonoRef = useRef()
 
   // Eveytime currentParagraphs gets updated or choices appear, scroll to the elementRef
   useEffect(() => {
@@ -82,7 +83,7 @@ const Twitter = (props) => {
   // import sound from "react-sound"
 // inside render will put <sound> object
 
-  console.log(currentParagraphs)
+  // console.log(currentParagraphs)
   // TO DO: make Twitter screen fit the screen and customise controls
   return (
     <Fade in={true} timeout={500}>
@@ -103,8 +104,9 @@ const Twitter = (props) => {
               
               {/* Twitter Messages */}
               
-            {currentParagraphs.map((step, i) => {
-              if (step.tags[0]?.includes('thread_header')) { 
+          {currentParagraphs.map((step, i) => {              
+            if (step.tags[0]?.includes('thread_header')) { 
+              if (innerMonoRef.current) { innerMonoRef.current.hidden = 'true' }
                 return (
                   <>
                     <div className="Twitter__header">
@@ -128,7 +130,8 @@ const Twitter = (props) => {
                 )
               }
               
-                else if (step.tags[0]?.includes('speaker_self')) {
+            else if (step.tags[0]?.includes('speaker_self')) {
+              if (innerMonoRef.current) { innerMonoRef.current.hidden = 'true' }
                   return (
                     <Box
                       key={step.text}
@@ -161,7 +164,8 @@ const Twitter = (props) => {
                       </Fade>
                     </Box>
                   ) 
-                } else if (step.tags[0]?.includes('speaker')) {     // this is needed to avoid rendering inner_monologue
+            } else if (step.tags[0]?.includes('speaker')) {     // this is needed to avoid rendering inner_monologue
+              if (innerMonoRef.current) { innerMonoRef.current.hidden = 'true' }
                   return (
                     <Fade in={step.text} timeout={300}>
                       <div key={step.text} className={`Twitter__messages--threadpost`} 
@@ -199,9 +203,9 @@ const Twitter = (props) => {
                     </Fade>
                   )
                 }
-                else if (step.tags[0]?.includes('inner_monologue')) {                
+              else if (step.tags[0]?.includes('inner_monologue')) {                   
                   return (
-                    <div className="Twitter__innerMono"> <Typography key={step.text}  className="Twitter__innerMono--text"> {step.text}</Typography> </div>
+                    <div className="Twitter__innerMono" ref={innerMonoRef}><Typography key={step.text}  className="Twitter__innerMono--text"> {step.text}</Typography> </div>
                     )
                 }
               

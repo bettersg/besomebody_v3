@@ -646,13 +646,17 @@ test #speaker_3
 === zhihao_1_5a ===
 #knot:zhihao_1_5
 #ui:twitch
-#chat_group_title:Twitch Stream for @ahao_gamer
+#chat_group_title:Twitch Stream - @ahao_gamer
 #chat_group_image:bg_zhihao_twitchgame.gif
 #speaker_self_name:ahao_gamer
 #speaker_1_name:silentsword
 #speaker_2_name:pang
 #speaker_3_name:fuzzboar_gaming
 #speaker_4_name:ineedhealing
+#speaker_5_name:anselm_main
+#speaker_6_name:graphene
+#speaker_7_name:d1amond
+#speaker_8_name:zapper1
 !drops #speaker_1
 !drops #speaker_1
 !drops #speaker_1
@@ -662,60 +666,46 @@ losing streak :sweat #speaker_2
 noob teammates #speaker_4
 #speaker_4_name:anselm_main
 soft throwing #speaker_4
-#speaker_4_name:rabakplayer
-wth is up with @ahao_gamer’s positioning #speaker_4
-#speaker_4_name:graphene
-ahao_gamer please carry the game #speaker_4
+wth is up with @ahao_gamer’s positioning #speaker_5
+ahao_gamer please carry the game #speaker_6
 spam 🐑 sheep 🐑 for 🐑 @ahao_gamer’s 🐑 sweep #speaker_2
 eh where is @bakchormee #speaker_3
-// (Bakchormee. Short-form BCM. Aka Gavin. Aka the traitor.)				
+Bakchormee. Short-form BCM. Aka Gavin. Aka the traitor.	#inner_monologue	
 + @bakchormee went paktor with his gf so cmi today [] #speaker_self
 + Dunno la, anyway can focus on the game or not [] #speaker_self
-- at the hawker centre #speaker_4
-#speaker_4_name:anselm_main
-still cooking #speaker_4
-@bakchormee paktor with his gf so cmi today #speaker_self
+- at the hawker centre? #speaker_4
+food still cooking #speaker_5
 oof #speaker_2
-#speaker_4_name:d1amond
-poor thing #speaker_4
-#speaker_4_name:graphene
-is @bakchormee eating bakchormee with her  #speaker_4
+poor thing #speaker_7
+is @bakchormee eating bakchormee with her  #speaker_6
 She malay so cannot eat BCM  #speaker_self
 LMAOOOOO. bakchormee not halal!!!  #speaker_2
-#speaker_4_name:d1amond
-@ahao_gamer which bakchormee you talking abt lollll #speaker_4
+@ahao_gamer which bakchormee you talking abt lollll #speaker_7
 the food lah then what  #speaker_self
 lolol @ahao_gamer innocent to the max #speaker_2
 BOTH NOT HALAL LAH  #speaker_2
-#speaker_4_name:graphene
-HAHAHAHAHAHA nice one @pang #speaker_4
-@bakchormee is haram now  #speaker_4
-Unless he becomes Ahmad hahaha  #speaker_4
-#speaker_4_name:d1amond
-Maybe she malay but not muslim? @zxyahao pretty anot? Got pic? #speaker_4
+HAHAHAHAHAHA nice one @pang #speaker_6
+@bakchormee is haram now  #speaker_6
+Unless he becomes Ahmad hahaha  #speaker_6
+Maybe she malay but not muslim? @ahao_gamer pretty anot? Got pic? #speaker_7
 Shuddup everyone let’s focus  #speaker_self
-#speaker_4_name:zapper1
-why bakchormee go for minah?? #speaker_4
-#speaker_1_name:silentsword
-#speaker_3_name:anselm_main
+why @bakchormee go for minah?? #speaker_8
 !drops #speaker_1
 + oi guys FOCUS []   #speaker_self
-+ eh dun be idiots. OI FOCUS on your game or we sure lose la []   #speaker_self
-- A min of silence for our bro in the halal zone… #speaker_3
-#speaker_4_name:graphene
-RIP @bakchormee #speaker_4
++ eh dun be idiots. he's not here no point talking about his life when you guys are sucking so hard at the game []   #speaker_self
+- A min of silence for our bro in the halal zone… #speaker_5
+RIP @bakchormee #speaker_6
 So fast they already stop paying attention to me. #inner_monologue
 They only listen to my gaming tips, but they don’t when it’s other things. #inner_monologue
 I really dunno whether they follow me for my game play, or for me. #inner_monologue
-lolol someone better tell BCM he cannot eat pork anymore #speaker_3
-let’s vote on a new name for him  #speaker_4
+lolol someone better tell BCM he cannot eat pork anymore #speaker_5
+let’s vote on a new name for him  #speaker_6
 Mustafa!!! #speaker_2
-#speaker_1_name:d1amond
-from Lion King?? #speaker_1
-MUFASA LAH BODOH  #speaker_4
-BODOH! I VOTE BODOH! #speaker_3
-If Gavin were here right, confirm he will control the group from the start. Like damn easy like that. #inner_monologue
-But I’m the best player. Their coach. Where’s the respect for me? #inner_monologue
+from Lion King?? #speaker_7
+MUFASA LAH BODOH  #speaker_6
+BODOH! I VOTE BODOH! #speaker_5
+If Gavin were here right, confirm he will control the group from the start. Like damn easy like that. Everybody listens to him. #inner_monologue
+But I’m the best player. Their coach! Where’s the respect for me? #inner_monologue
 
 -> zhihao_1_5b
 
@@ -726,10 +716,85 @@ But I’m the best player. Their coach. Where’s the respect for me? #inner_mon
 Gavin: Hey bro, really sorry #message
 Gavin: Turns out Thu is Nadia's bday #message
 Gavin: I'll let you know a good day asap #message
+#ui:narrator
+#background:ui_zhihao_message.jpg
+See, see? He’ll say another time, then another time, then another time.
+They’re correct. The more Gavin and that girl become serious, the more he will change. 
+And then one day he won’t be Gavin anymore.
+Sigh. He will def choose her over me la. Who wouldn't?
 
-// (See, see? He’ll say another time, then another time, then another time.)
+-> zhihao_1_5c
+
+=== zhihao_1_5c ===
+#knot:zhihao_1_5c
+#ui:twitter
+#chat_group_title:Twitter:  @ahao_gamer
+#chat_group_image:ico_ravi_rebecca.png
+#speaker_self_tag:ahao_gamer
+#speaker_self_image:ico_aman_jothi.png
+#speaker_1_name:Ervyn
+#speaker_1_tag:d1amond
+#speaker_1_image:ico_aman_lukman.png
+#speaker_2_name:Eric
+#speaker_2_tag:EricTag
+#speaker_2_image:ico_aman_family.png
+#speaker_3_name:John
+#speaker_3_tag:JohnTag
+#speaker_3_image:ico_aman_selinder.png
+#timestamp:23.41
+Bakchormee has a minah gf. RIP to all our bakchormee outings. RIP to my best bro’s nickname. His new name must be malayu. WDYT of Bodoh? #thread_header
+@ahao_gamer, could you switch? We're doing a deathball comp. #speaker_1
+
+-> zhihao_1_5d
+
+=== zhihao_1_5d ===
+#knot:zhihao_1_5
+#ui:twitch
+#chat_group_title:Twitch Stream - @ahao_gamer
+#chat_group_image:bg_zhihao_twitchgame.gif
+#speaker_self_name:ahao_gamer
+#speaker_1_name:graphene
+#speaker_2_name:ineedhealing
+#speaker_3_name:mechmaster
+#speaker_4_name:anselm_main
 
 
+ANOTHER GIRL #speaker_1
+
+gurl gamer #speaker_2
+
+maybe it's bakchormee's gf #speaker_3
+
+ask if she's chio #speaker_3
+
+maybe not if she's chao ta (overcooked / dark skinned) lol #speaker_1
+
+lololololol 	#speaker_2			   
+
+at least not indian #speaker_1
+Eh wth. They can joke about other people but insulting Aman's type is too far. I need to stop the convo #inner_monologue
+
++ [Tell @graphene off for that comment] If anyone else wanna talk s*** about amanonfire they can leave too #speaker_self
+    VAR zhihao_1_racistgamer = ""
+    ~ zhihao_1_racistgamer = "scold"
+    wth i’m just saying in general not abt amanonfire #speaker_1
+    idiot #speaker_1
+    [graphene has left the chat] #speaker_twitch
+    bye then #speaker_2
+    [ineedhealing has left the chat] #speaker_twitch
+    was nice knowing you all #speaker_3
+    [mechmaster has left the chat] #speaker_twitch
+    Whatever, they suck anyway. #inner_monologue
+    Soz about that #speaker_Self
+    they got no spine #speaker_2
+    lol #speaker_4
+
++ [Switch topics abruptly]
+
+
++ [Scold them for not playing well]
+
+- 
 
 
 
