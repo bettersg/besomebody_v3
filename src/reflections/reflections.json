@@ -127,6 +127,19 @@
     "questions": [
       9,2,11,1,3
     ]
+  },
+  {
+    "id": 11,  
+    "story":"Zhihao", 
+    "chapter":1,
+    "didyouknow": "Peer pressure and insecurity can sometimes makes it hard for us to do the right thing. ",
+    "media": "https://www.webmd.com/balance/features/what-say-someone-says-something-racist",
+    "context": {
+      "character_name": "Zhihao"
+    },
+    "questions": [
+      9,2,11,1,3
+    ]
   }
 ]
 

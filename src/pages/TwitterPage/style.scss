@@ -76,7 +76,7 @@
         overflow-y: scroll;
         user-select: none;
         // height: 100vh; 
-        height: calc(calc(var(--vh, 1vh) * 100) - 148px); 
+        height: calc(calc(var(--vh, 1vh) * 100) - 296px); 
         @media screen and (min-device-width:600px) {
             height: 515px; 
         }

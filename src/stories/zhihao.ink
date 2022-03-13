@@ -91,7 +91,7 @@ VAR character_id = 3
 #ui:narrator
 #background:bg_zhihao_intro.jpg
 #music:zhihao_intro.mp3
-Zhihao Lim #title
+Lim Zhihao #title
 VAR chapter_id = 1
 ~ chapter_id = 1
 Eh, hi. I'm Zhihao.
@@ -692,7 +692,7 @@ Shuddup everyone let’s focus  #speaker_self
 why @bakchormee go for minah?? #speaker_8
 !drops #speaker_1
 + oi guys FOCUS []   #speaker_self
-+ eh dun be idiots. he's not here no point talking about his life when you guys are sucking so hard at the game []   #speaker_self
++ eh dun be idiots. []  he's not here no point talking about his life when you guys are sucking so hard at the game  #speaker_self
 - A min of silence for our bro in the halal zone… #speaker_5
 RIP @bakchormee #speaker_6
 So fast they already stop paying attention to me. #inner_monologue
@@ -884,6 +884,25 @@ VAR chapter_1_ending = 1
 ~ chapter_1_ending = 1
 FML. Why I go write that? How come got so many likes? #inner_monologue
 I better delete now.  #inner_monologue
+#knot: chapter_1_ending_1
+#ui:twitter
+#chat_group_title:Twitter for @ahao_gamer
+#chat_group_image:ico_zhihao.png
+#speaker_self_tag:ahao_gamer
+#speaker_self_image:ico_zhihao.png
+#speaker_1_name:Ervyn
+#speaker_1_tag:d1amond
+#speaker_1_image:ico_aman_lukman.png
+#speaker_2_name:Gerald
+#speaker_2_tag:graphene
+#speaker_2_image:ico_aman_family.png
+#speaker_3_name:Anselm Is The Best
+#speaker_3_tag:anselm_main
+#speaker_3_image:ico_aman_selinder.png
+#speaker_4_name:Drew
+#speaker_4_tag:zinger2003
+#speaker_4_image:ico_aman_selinder.png
+#timestamp:08.21
 [post deleted] #thread_header    
 Gone already.Leng jing. (Calm down) #inner_monologue
 Crap. Should I say sorry?  #inner_monologue
@@ -896,7 +915,7 @@ Crap. Should I say sorry?  #inner_monologue
 === chapter_1_ending_2 ===
 #knot: chapter_1_ending_2
 #ui:narrator
-#background:bg_zhihao_pushpa_home.jpg
+#background:bg_zhihao_bedroom.jpg
 FML that tweet went big. #inner_monologue
 ~ chapter_1_ending = 2
 But got a lot of people support. Ji Gu was right lah -- the truth sometimes can be ugly, but people know the truth when they see it.  #inner_monologue
@@ -912,7 +931,7 @@ Means I'm not doing anything wrong. #inner_monologue
 === chapter_1_ending_3 ===
 #knot: chapter_1_ending_3
 #ui:narrator
-#background:bg_zhihao_pushpa_home.jpg
+#background:bg_zhihao_bedroom.jpg
 Why I go write that? #inner_monologue
 ~ chapter_1_ending = 3
 Aiyah. If it’s up then it’s seen already. #inner_monologue
@@ -960,7 +979,7 @@ xxxx
 ~ chapter_id = 2
 
 CHAPTER {chapter_id} #title
- #title
+xxx #title
 
 
 

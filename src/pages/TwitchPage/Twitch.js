@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState, useRef } from 'react'
-import { Box, Fade, Grid, Typography } from '@material-ui/core'
+import { Box, Fade, Avatar, Typography } from '@material-ui/core'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import NextButton from '../../components/NextButton'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
@@ -176,7 +176,7 @@ const Twitch = (props) => {
                               key={step.text}
                             >
                                 <div class="Twitch__messages--receiver--message">
-                                  <span>                                  
+                                  {/* <span>                                  
                                     {(step.tags[0]?.includes('speaker_1') ? <img class="Twitch__messages--receiver--profile" alt="O" src={"/images/" + specialTags.speaker_1_name} ></img> : null)}
                                     {(step.tags[0]?.includes('speaker_2') ? <img class="Twitch__messages--receiver--profile" alt="O" src={"/images/" + specialTags.speaker_2_name} ></img> : null)}
                                     {(step.tags[0]?.includes('speaker_3') ? <img class="Twitch__messages--receiver--profile" alt="O" src={"/images/" + specialTags.speaker_3_name} ></img> : null)}
@@ -186,7 +186,17 @@ const Twitch = (props) => {
                                     {(step.tags[0]?.includes('speaker_7') ? <img class="Twitch__messages--receiver--profile" alt="O" src={"/images/" + specialTags.speaker_7_name} ></img> : null)}
                                     {(step.tags[0]?.includes('speaker_8') ? <img class="Twitch__messages--receiver--profile" alt="O" src={"/images/" + specialTags.speaker_8_name} ></img> : null)}
                                   
-                                  </span>
+                                  </span> */}
+                                  {/* <Avatar>
+                                    {(step.tags[0]?.includes('speaker_1') ? (specialTags.speaker_1_name).charAt(0) : null)}
+                                    {(step.tags[0]?.includes('speaker_2') ? (specialTags.speaker_2_name).charAt(0) : null)}
+                                    {(step.tags[0]?.includes('speaker_3') ? (specialTags.speaker_3_name).charAt(0) : null)}
+                                    {(step.tags[0]?.includes('speaker_4') ? (specialTags.speaker_4_name).charAt(0) : null)}
+                                    {(step.tags[0]?.includes('speaker_5') ? (specialTags.speaker_5_name).charAt(0) : null)}
+                                    {(step.tags[0]?.includes('speaker_6') ? (specialTags.speaker_6_name).charAt(0) : null)}
+                                    {(step.tags[0]?.includes('speaker_7') ? (specialTags.speaker_7_name).charAt(0) : null)}
+                                    {(step.tags[0]?.includes('speaker_8') ? (specialTags.speaker_8_name).charAt(0) : null)}
+                                  </Avatar>  */}
                                 <span className="Twitch__messages--receiver--name">
                                 {(step.tags[0]?.includes('speaker_1') ? '@' + specialTags.speaker_1_name + ' : ': null)}
                                 {(step.tags[0]?.includes('speaker_2') ? '@' + specialTags.speaker_2_name + ' : ': null)}

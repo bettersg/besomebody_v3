@@ -626,12 +626,12 @@ export const MINI_GAME_MAP = [
   {
   game_id: 11,
   ui: "mcq",
-  introduction: "First Question",
+  introduction: "Zhihao Quiz Chapter 1",
   questions: [
     {
       question_id: 1,
       question:
-        "What is the average monthly household income for Singaporeans who live in 1 or 2-bedroom HDBs? [2020 data]",
+        "Q1 goes here",
       type: "text",
       correct_answer_id: 2,
       explanation:
