@@ -141,12 +141,12 @@ const Twitter = (props) => {
                     >
                       <Fade in={step.text} key={step.text} timeout={300}>
                         <Box
-                          className={`Twitter__messages--sender`}
+                          className={`Twitter__messages--threadpost`}
                           // borderRadius={5}
                           key={step.text}
                         >
                           {(step.tags[1]?.includes('image') ?
-                            <img src={'/images/' + specialTags.speaker_self_image} alt={step.text} className={classes.twitterImage} /> :
+                            <img src={'/images/ico_' + name +'.png'} alt={step.text} className={classes.twitterImage} /> :
                             <div className="Twitter__messages--tweetContent">
                             <div className="Twitter__messages--handle">
                               <div className="Twitter__messages--name">
@@ -210,8 +210,10 @@ const Twitter = (props) => {
                       </div>
                     </Fade>
                   )
-                }
-              else if (step.tags[0]?.includes('inner_monologue')) {                   
+                } else if (step.tags[0]?.includes('clear')) {     // this is needed to avoid rendering inner_monologue
+                if (innerMonoRef.current) { innerMonoRef.current.hidden = 'true' }
+                    return (null)
+                } else if (step.tags[0]?.includes('inner_monologue')) {                   
                   return (
                     <div className="Twitter__innerMono" ref={innerMonoRef}><Typography key={step.text}  className="Twitter__innerMono--text"> {step.text}</Typography> </div>
                     )

@@ -129,7 +129,7 @@ const Twitch = (props) => {
                         >
                             <div class="Twitch__messages--receiver--message">
                             <span>
-                                <img class="Twitch__messages--receiver--profile" src="/images/profile_zhihao.png"></img></span>
+                                <img class="Twitch__messages--receiver--profile" src={'/images/ico_' + name +'.png'}></img></span>
                             <span className="Twitch__messages--receiver--name" style={{color:'#19A3AD'}}>{'@'+specialTags.speaker_self_name} </span>
                             {step.text}
                             </div>
@@ -232,8 +232,10 @@ const Twitch = (props) => {
                       </div> */}
                     </Fade>
                   )
-                }
-                else if (step.tags[0]?.includes('inner_monologue')) {                
+                } else if (step.tags[0]?.includes('clear')) {     // this is needed to avoid rendering inner_monologue
+                  if (innerMonoRef.current) { innerMonoRef.current.hidden = 'true' }
+                      return (null)
+                } else if (step.tags[0]?.includes('inner_monologue')) {                
                   return (
                     <div className="Twitch__innerMono" ref={innerMonoRef}> <Typography key={step.text}  className="Twitch__innerMono--text"> {step.text}</Typography> </div>
                     )

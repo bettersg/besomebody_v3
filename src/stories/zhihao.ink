@@ -624,7 +624,7 @@ Am out with Nadia #speaker_1
 #knot:zhihao_1_5
 #ui:twitter
 #chat_group_title:Twitter for @ahao_gamer
-#chat_group_image:ico_ravi_rebecca.png
+#chat_group_image:ico_zhihao.png
 #speaker_self_tag:ZHtag
 #speaker_self_image:ico_aman_jothi.png
 #speaker_1_name:Gavin
@@ -717,7 +717,7 @@ Gavin: Hey bro, really sorry #message
 Gavin: Turns out Thu is Nadia's bday #message
 Gavin: I'll let you know a good day asap #message
 #ui:narrator
-#background:ui_zhihao_message.jpg
+#background:bg_zhihao_bedroom.jpg
 See, see? He’ll say another time, then another time, then another time.
 They’re correct. The more Gavin and that girl become serious, the more he will change. 
 And then one day he won’t be Gavin anymore.
@@ -823,6 +823,7 @@ is that ahao_gamer's ma??! LOL uhoh you're in trouble bro #speaker_1
 === zhihao_1_6 ===
 #knot:zhihao_1_6
 #ui:narrator
+#background:bg_zhihao_bedroom.jpg
 Sigh training last night wasn't great. 
 Oh well. Let's see if anybody liked my tweet.
 
@@ -882,8 +883,10 @@ RIP to our bro lol.  #speaker_2
 @bakchormee has a minah gf, so isn't playing with us. RIP to all our bakchormee outings. RIP to my best bro’s nickname. His new name must be malayu. WDYT of Bodoh? #thread_header 
 VAR chapter_1_ending = 1
 ~ chapter_1_ending = 1
-FML. Why I go write that? How come got so many likes? #inner_monologue
-I better delete now.  #inner_monologue
+FML. Why I go write that? How come got so many likes? I better delete now.  #inner_monologue
+-> chapter_1_ending_1a
+
+=== chapter_1_ending_1a ===
 #knot: chapter_1_ending_1
 #ui:twitter
 #chat_group_title:Twitter for @ahao_gamer
@@ -904,11 +907,15 @@ I better delete now.  #inner_monologue
 #speaker_4_image:ico_aman_selinder.png
 #timestamp:08.21
 [post deleted] #thread_header    
-Gone already.Leng jing. (Calm down) #inner_monologue
-Crap. Should I say sorry?  #inner_monologue
+Gone already.Leng jing. (Calm down). Crap. Should I say sorry?  #inner_monologue
+. #clear
 + [Apologise] got caught up in the moment, sorry for that #speaker_self
+    VAR zhihao_1_tweet_apologise = true
+    ~ zhihao_1_tweet_apologise = true
     sorry for what? #speaker_4
 + [Don't Apologise] I'll just let the internet forget. #inner_monologue
+    ~ zhihao_1_tweet_apologise = false
+    No big deal right?  #inner_monologue
 - -> zhihao_1_reflection
 
 
