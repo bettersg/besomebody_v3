@@ -680,7 +680,7 @@ export const CHARACTER_MAP = [
         reflectionId:11,
         number: 1,
         title: "A Chinese New Year",
-        knotTag: "zhihao_1_intro",
+        knotTag: "zhihao_1_5",
         summary: "Zhihao meets his family during Chinese New Year, where drama bubbles to the surface. How will he respond to his uncles?",
         playable: true,
         images: [
