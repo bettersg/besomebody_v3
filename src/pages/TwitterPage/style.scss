@@ -52,18 +52,16 @@
     &__mainpost { 
         align-items: flex-start;
         background-color: $white;
-        box-shadow: 0px 1px 0px #0000001a;
+        border-bottom: 1px solid #E6E6E6;
         display: flex;
-        height: 100px;        
+        min-height: 100px;        
         padding: 8px 16px;
         &--tweet { 
             color: $midnight100;
-            font-family: var(--font-family-inter);
             font-size: 18px;
             font-weight: 400;
-            letter-spacing: 0;
             line-height: 25px;
-            min-height: 75px;            
+            min-height: 75px;    
         }
         &--likes {
             font-size: 12px;
@@ -76,9 +74,9 @@
         overflow-y: scroll;
         user-select: none;
         // height: 100vh; 
-        height: calc(calc(var(--vh, 1vh) * 100) - 296px); 
+        height: calc(calc(var(--vh, 1vh) * 100) - 156px); 
         @media screen and (min-device-width:600px) {
-            height: 515px; 
+            height: 504px; 
         }
         > div {
             scroll-snap-align: end;
@@ -86,23 +84,20 @@
         &--threadpost {
             align-items: flex-start;
             background-color: var(--white);
-            box-shadow: 0px 0px 0px #0000001a;
-            display: flex;
-            height: 100px;
-            padding: 0 16px;
+            // height: 100px;
+            padding: 12px 16px;
+            border-bottom: 1px solid #E6E6E6;
+            background: white; 
         }
         &--profileImage {
             height: 48px;
-            margin-top: 12px;
             width: 48px;
         }
         &--tweetContent {
             align-items: flex-start;
             align-self: center;
-            display: flex;
             flex-direction: column;
             margin-left: 8px;
-            min-height: 80px;
             width: 283px;
         }
         &--handle {
@@ -150,7 +145,7 @@
             letter-spacing: 0;
             line-height: 18px;
             margin-top: 4px;
-            min-height: 40px;
+            margin-left: 53px !important;
             width: 283px;
             color: $midnight100;            
             font-size: 14px;
@@ -199,10 +194,11 @@
         }
     }
     &__sendWrapper {
-        background-color: $dark1;
+        background-color: $white;
         padding: 10px 16px; 
         display: flex;
         justify-content: space-between;
+        border-top: 1px solid #E6E6E6;
         align-items: center;
         height: 64px; 
         margin-top: 20px;
@@ -213,17 +209,17 @@
             display: flex;
             align-items: center;
             height: 44px; 
-            color: $white;
+            color: $midnight100;
             font-size: 14px;
             opacity: 80%;
-            background-color: $white;
+            background-color: $midnight10;
             &.choice {
                 border: $aqua100 solid 2px;
                 background-color: transparent;
                 color: black; 
             }
             &--right {
-                background-color: $aqua100;
+                background-color: #499EF1;
                 border-radius: 30px;
                 height: 40px;
                 width: 40px;

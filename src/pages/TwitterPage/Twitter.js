@@ -8,6 +8,8 @@ import './style.scss'
 import { useInkContext } from '../../contexts/InkContext'
 import { CHARACTER_MAP } from '../../models/storyMap';
 import { useParams } from 'react-router-dom'
+import { ReactComponent as Arrow } from './Assets/arrow.svg';
+
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
@@ -96,7 +98,7 @@ const Twitter = (props) => {
           </>
           
         : null} */}
-        
+          <Box sx={{height: "72px", background: "white", borderBottom:"1px solid #E6E6E6"}}></Box>
         
             <Box
               className={`Twitter__messages ${choices.length > 0 ? 'choices' : ''}`}
@@ -115,16 +117,16 @@ const Twitter = (props) => {
                         alt="Chat Profile"
                         className="Twitter__header--profile"
                       />
-                      <div className="Twitter__header__description">
-                        <div className="Twitter__header__description--name" style={{color:persona.primaryColour}}>{name}</div>
-                        <div className="Twitter__header__description--tag">{specialTags.speaker_self_tag? specialTags.speaker_self_tag : '@'+name}</div>            
+                      <div className="Twitter__header__description" style={{marginLeft: "12px"}}>
+                        <Typography className="Twitter__header__description--name" style={{color:persona.primaryColour}}>{name}</Typography>
+                        <Typography className="Twitter__header__description--tag">{"@" + specialTags.speaker_self_tag? "@" + specialTags.speaker_self_tag : '@'+name}</Typography>            
                       </div>
                     </div>
                     <div class="Twitter__mainpost">
-                      <div class="tweet">
+                      <Typography class={"Twitter__mainpost--tweet"}>
                         {step.text}
-                        {(specialTags.likes ?   <Typography key={specialTags.likes } className="Twitter__mainpost--likes">{specialTags.likes } </Typography> : null)}
-                      </div>
+                        {(specialTags.likes ?   <Typography key={specialTags.likes } className="Twitter__mainpost--likes">{specialTags.likes }</Typography> : null)}
+                      </Typography>
                     </div>
                   </>
                 )
@@ -148,16 +150,16 @@ const Twitter = (props) => {
                           {(step.tags[1]?.includes('image') ?
                             <img src={'/images/ico_' + name +'.png'} alt={step.text} className={classes.twitterImage} /> :
                             <div className="Twitter__messages--tweetContent">
-                            <div className="Twitter__messages--handle">
-                              <div className="Twitter__messages--name">
-                                { specialTags.speaker_self_name}                                
+                              <div className="Twitter__messages--handle">
+                                <div className="Twitter__messages--name">
+                                  { specialTags.speaker_self_name}                                 
+                                </div>
+                                <div className="Twitter__messages--tag">
+                                  {'@'+specialTags.speaker_self_tag}                                                      
+                                </div>
                               </div>
-                              <div className="Twitter__messages--tag">
-                                {'@'+specialTags.speaker_self_tag}                                                      
-                              </div>
-                            </div>
                               <Typography key={step.text} className="Twitter__messages--tweet">{step.text}</Typography>
-                          </div>
+                            </div>
                           )}
                           {setCurrentSpeaker(step.tags[0])}
                         </Box>
@@ -169,10 +171,9 @@ const Twitter = (props) => {
                   return (
                     <Fade in={step.text} timeout={300}>
                       <div key={step.text} className={`Twitter__messages--threadpost`} 
-                        style={{}}
                       >
-                        {/* <img src={'/images/'+ specialTags.text} alt="0" className="Twitter__messages--profileImage"  /> */}
-                        <Avatar>
+                        <div style={{display: "flex", alignItems:"center"}}>
+                          <Avatar>
                               {(step.tags[0]?.includes('speaker_1') ? (specialTags.speaker_1_name).charAt(0) : null)}
                               {(step.tags[0]?.includes('speaker_2') ? (specialTags.speaker_2_name).charAt(0) : null)}
                               {(step.tags[0]?.includes('speaker_3') ? (specialTags.speaker_3_name).charAt(0) : null)}
@@ -180,30 +181,33 @@ const Twitter = (props) => {
                               {(step.tags[0]?.includes('speaker_5') ? (specialTags.speaker_5_name).charAt(0) : null)}
                               {(step.tags[0]?.includes('speaker_6') ? (specialTags.speaker_6_name).charAt(0) : null)}
                         </Avatar> 
-                        <div className="Twitter__messages--tweetContent">
-                          <div className="Twitter__messages--handle">
-                            <div className="Twitter__messages--name">
-                              {(step.tags[0]?.includes('speaker_1') ? specialTags.speaker_1_name : null)}
-                              {(step.tags[0]?.includes('speaker_2') ? specialTags.speaker_2_name : null)}
-                              {(step.tags[0]?.includes('speaker_3') ? specialTags.speaker_3_name : null)}
-                              {(step.tags[0]?.includes('speaker_4') ? specialTags.speaker_4_name : null)}
-                              {(step.tags[0]?.includes('speaker_5') ? specialTags.speaker_5_name : null)}
-                              {(step.tags[0]?.includes('speaker_6') ? specialTags.speaker_6_name : null)}                          
+                          <div className="Twitter__messages--tweetContent">
+                            <div className="Twitter__messages--handle">
+                              <div className="Twitter__messages--name">
+                                {(step.tags[0]?.includes('speaker_1') ? specialTags.speaker_1_name : null)}
+                                {(step.tags[0]?.includes('speaker_2') ? specialTags.speaker_2_name : null)}
+                                {(step.tags[0]?.includes('speaker_3') ? specialTags.speaker_3_name : null)}
+                                {(step.tags[0]?.includes('speaker_4') ? specialTags.speaker_4_name : null)}
+                                {(step.tags[0]?.includes('speaker_5') ? specialTags.speaker_5_name : null)}
+                                {(step.tags[0]?.includes('speaker_6') ? specialTags.speaker_6_name : null)}                          
+                              </div>
+                              <div className="Twitter__messages--tag">
+                                {(step.tags[0]?.includes('speaker_1') ? '@'+specialTags.speaker_1_tag : null)}
+                                {(step.tags[0]?.includes('speaker_2') ? '@'+specialTags.speaker_2_tag : null)}
+                                {(step.tags[0]?.includes('speaker_3') ? '@'+specialTags.speaker_3_tag : null)}
+                                {(step.tags[0]?.includes('speaker_4') ? '@'+specialTags.speaker_4_tag : null)}
+                                {(step.tags[0]?.includes('speaker_5') ? '@'+specialTags.speaker_5_tag : null)}
+                                {(step.tags[0]?.includes('speaker_6') ? '@'+specialTags.speaker_6_tag : null)}                          
+                              </div>
+
                             </div>
-                            <div className="Twitter__messages--tag">
-                              {(step.tags[0]?.includes('speaker_1') ? '@'+specialTags.speaker_1_tag : null)}
-                              {(step.tags[0]?.includes('speaker_2') ? '@'+specialTags.speaker_2_tag : null)}
-                              {(step.tags[0]?.includes('speaker_3') ? '@'+specialTags.speaker_3_tag : null)}
-                              {(step.tags[0]?.includes('speaker_4') ? '@'+specialTags.speaker_4_tag : null)}
-                              {(step.tags[0]?.includes('speaker_5') ? '@'+specialTags.speaker_5_tag : null)}
-                              {(step.tags[0]?.includes('speaker_6') ? '@'+specialTags.speaker_6_tag : null)}                          
-                            </div>
+                            <div className="Twitter__messages--replyingTo">Replying to&nbsp;<span style={{color:"#19A3AD"}}>{specialTags.speaker_self_tag? '@'+specialTags.speaker_self_tag : '@'+name}</span></div>
+
                           </div>
-                          <div className="Twitter__messages--replyingTo">Replying to <span style={{color:persona.primaryColour}}>{specialTags.speaker_self_tag? '@'+specialTags.speaker_self_tag : '@'+name}</span></div>
+                          {setCurrentSpeaker(step.tags[0])}
+                          {/* <div>{step.text}</div> */}
 
                         </div>
-                        {setCurrentSpeaker(step.tags[0])}
-                        {/* <div>{step.text}</div> */}
                        
                         {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.twitterImage} /> :  <Typography key={step.text} className="Twitter__messages--tweet">{step.text}</Typography> )}
 
@@ -237,7 +241,7 @@ const Twitter = (props) => {
                 Continue...
               </Box>
               <Box className="Twitter__sendWrapper__sendButton--right">
-                <ExpandMoreIcon />
+                <Arrow />
               </Box>
             </Box>
             {/* this if else is needed to toggle between "Next Button" and choices (if any) */}
