@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState, useRef } from 'react'
-import { Box, Fade, Grid, Typography } from '@material-ui/core'
+import { Box, Fade, Avatar, Typography } from '@material-ui/core'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import NextButton from '../../components/NextButton'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
@@ -23,6 +23,7 @@ const Twitter = (props) => {
   // Help to scroll to bottom of the paragraphs render screen
   // ========================================================
   const elementRef = useRef()
+  const innerMonoRef = useRef()
 
   // Eveytime currentParagraphs gets updated or choices appear, scroll to the elementRef
   useEffect(() => {
@@ -84,7 +85,7 @@ const Twitter = (props) => {
   // import sound from "react-sound"
 // inside render will put <sound> object
 
-  console.log(currentParagraphs)
+  // console.log(currentParagraphs)
   // TO DO: make Twitter screen fit the screen and customise controls
   return (
     <Fade in={true} timeout={500}>
@@ -105,8 +106,9 @@ const Twitter = (props) => {
               
               {/* Twitter Messages */}
               
-            {currentParagraphs.map((step, i) => {
-              if (step.tags[0]?.includes('thread_header')) { 
+          {currentParagraphs.map((step, i) => {              
+            if (step.tags[0]?.includes('thread_header')) { 
+              if (innerMonoRef.current) { innerMonoRef.current.hidden = 'true' }
                 return (
                   <>
                     <div className="Twitter__header">
@@ -130,7 +132,8 @@ const Twitter = (props) => {
                 )
               }
               
-                else if (step.tags[0]?.includes('speaker_self')) {
+            else if (step.tags[0]?.includes('speaker_self')) {
+              if (innerMonoRef.current) { innerMonoRef.current.hidden = 'true' }
                   return (
                     <Box
                       key={step.text}
@@ -140,12 +143,12 @@ const Twitter = (props) => {
                     >
                       <Fade in={step.text} key={step.text} timeout={300}>
                         <Box
-                          className={`Twitter__messages--sender`}
+                          className={`Twitter__messages--threadpost`}
                           // borderRadius={5}
                           key={step.text}
                         >
                           {(step.tags[1]?.includes('image') ?
-                            <img src={'/images/' + step.text} alt={step.text} className={classes.twitterImage} /> :
+                            <img src={'/images/ico_' + name +'.png'} alt={step.text} className={classes.twitterImage} /> :
                             <div className="Twitter__messages--tweetContent">
                               <div className="Twitter__messages--handle">
                                 <div className="Twitter__messages--name">
@@ -163,13 +166,21 @@ const Twitter = (props) => {
                       </Fade>
                     </Box>
                   ) 
-                } else if (step.tags[0]?.includes('speaker')) {     // this is needed to avoid rendering inner_monologue
+            } else if (step.tags[0]?.includes('speaker')) {     // this is needed to avoid rendering inner_monologue
+              if (innerMonoRef.current) { innerMonoRef.current.hidden = 'true' }
                   return (
                     <Fade in={step.text} timeout={300}>
                       <div key={step.text} className={`Twitter__messages--threadpost`} 
                       >
                         <div style={{display: "flex", alignItems:"center"}}>
-                          <img src={'/images/'+ step.text} alt={step.text} className="Twitter__messages--profileImage"  />
+                          <Avatar>
+                              {(step.tags[0]?.includes('speaker_1') ? (specialTags.speaker_1_name).charAt(0) : null)}
+                              {(step.tags[0]?.includes('speaker_2') ? (specialTags.speaker_2_name).charAt(0) : null)}
+                              {(step.tags[0]?.includes('speaker_3') ? (specialTags.speaker_3_name).charAt(0) : null)}
+                              {(step.tags[0]?.includes('speaker_4') ? (specialTags.speaker_4_name).charAt(0) : null)}
+                              {(step.tags[0]?.includes('speaker_5') ? (specialTags.speaker_5_name).charAt(0) : null)}
+                              {(step.tags[0]?.includes('speaker_6') ? (specialTags.speaker_6_name).charAt(0) : null)}
+                        </Avatar> 
                           <div className="Twitter__messages--tweetContent">
                             <div className="Twitter__messages--handle">
                               <div className="Twitter__messages--name">
@@ -188,6 +199,7 @@ const Twitter = (props) => {
                                 {(step.tags[0]?.includes('speaker_5') ? '@'+specialTags.speaker_5_tag : null)}
                                 {(step.tags[0]?.includes('speaker_6') ? '@'+specialTags.speaker_6_tag : null)}                          
                               </div>
+
                             </div>
                             <div className="Twitter__messages--replyingTo">Replying to&nbsp;<span style={{color:"#19A3AD"}}>{specialTags.speaker_self_tag? '@'+specialTags.speaker_self_tag : '@'+name}</span></div>
 
@@ -202,10 +214,12 @@ const Twitter = (props) => {
                       </div>
                     </Fade>
                   )
-                }
-                else if (step.tags[0]?.includes('inner_monologue')) {                
+                } else if (step.tags[0]?.includes('clear')) {     // this is needed to avoid rendering inner_monologue
+                if (innerMonoRef.current) { innerMonoRef.current.hidden = 'true' }
+                    return (null)
+                } else if (step.tags[0]?.includes('inner_monologue')) {                   
                   return (
-                    <div className="Twitter__innerMono"> <Typography key={step.text}  className="Twitter__innerMono--text"> {step.text}</Typography> </div>
+                    <div className="Twitter__innerMono" ref={innerMonoRef}><Typography key={step.text}  className="Twitter__innerMono--text"> {step.text}</Typography> </div>
                     )
                 }
               
@@ -238,7 +252,8 @@ const Twitter = (props) => {
                 }`}
                 // ref={choicesRef}
               >
-                {choices.map((choice, i) => {
+            {choices.map((choice, i) => {
+                  if (innerMonoRef.current) { innerMonoRef.current.hidden = 'true' }
                   return (
                     <Box
                       className="choices"
