@@ -222,6 +222,7 @@ const useStyles = makeStyles((theme) => ({
 const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
   const [responses, setResponses] = useState(null);
   const [highlightedResponse, setHighlightedResponse] = useState(null);
+  const [firstLoad, setFirstLoad] = useState(0);
   const [hasMore, setHasMore] = useState(true);
   const [lastDocSnapshot, setLastDocSnapshot] = useState(null);
   const [count, setCount] = useState(null);
@@ -229,18 +230,20 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
   const classes = useStyles()
 
   function getHighlightedResponse(responses) {
-    console.log("responses: "+responses)
+    // console.log("responses: "+responses)
     for (let i = 0; i < responses.length; i++) {
-      console.log("check response answer: "+responses[i].answer)
+      // console.log("check response answer: "+responses[i].answer)
       if (responses[i].answer != ""){
-        setHighlightedResponse(responses[i])
-        break
+        // console.log("response is non-empty!")
+        setFirstLoad(1)
+        return responses[i]
       }
     }
   }
   
   async function fetchMoreResponses() {
     const LIMIT = 300;
+    var nonEmptyResponse = null;
     const { newResponses, newLastDocSnapshot } = await getDbReflectionResponsesPaginated({
       lastDocSnapshot,
       limit: LIMIT,
@@ -252,9 +255,11 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
       setHasMore(false);
     }
     setResponses((prevResponses) => prevResponses === null ? newResponses : prevResponses.concat(newResponses));
-    if (firstload === 0) {
-      getHighlightedResponse(newResponses);
-      firstload = 1;
+    // console.log("firstload value:"+firstLoad)
+    if (firstLoad === 0) {
+      // console.log("running firstload!")
+      nonEmptyResponse = getHighlightedResponse(newResponses);
+      setHighlightedResponse(nonEmptyResponse);
     }
     setLastDocSnapshot(newLastDocSnapshot);
   }

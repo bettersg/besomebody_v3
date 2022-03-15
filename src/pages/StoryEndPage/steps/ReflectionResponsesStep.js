@@ -297,6 +297,7 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
 
   const [responses, setResponses] = useState(null);
   const [highlightedResponse, setHighlightedResponse] = useState(null);
+  const [firstLoad, setFirstLoad] = useState(0);
   const [hasMore, setHasMore] = useState(true);
   const [lastDocSnapshot, setLastDocSnapshot] = useState(null);
   const [reflectionIds, setReflectionIds] = useState(initialReflectionIds);
@@ -359,32 +360,35 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
   }
 
   function getHighlightedResponse(responses) {
-    console.log("responses: "+responses)
+    // console.log("responses: "+responses)
     for (let i = 0; i < responses.length; i++) {
-      console.log("check response answer: "+responses[i].answer)
+      // console.log("check response answer: "+responses[i].answer)
       if (responses[i].answer != ""){
-        setHighlightedResponse(responses[i])
-        break
+        // console.log("response is non-empty!")
+        setFirstLoad(1)
+        return responses[i]
       }
     }
   }
 
   async function fetchMoreResponses() {
     const LIMIT = 300;
+    var nonEmptyResponse = null;
     const { newResponses, newLastDocSnapshot } = await getDbReflectionResponsesPaginated({
       lastDocSnapshot,
       limit: LIMIT,
       reflectionIds: reflectionIds,
       questionId: 3,  // this is hardcoded to the "share your story textarea question"
     });
-    var firstload = 0;
     if (newResponses.length < LIMIT) {
       setHasMore(false);
     }
     setResponses((prevResponses) => prevResponses === null ? newResponses : prevResponses.concat(newResponses));
-    if (firstload === 0) {
-      getHighlightedResponse(newResponses);
-      firstload = 1;
+    // console.log("firstload value:"+firstLoad)
+    if (firstLoad === 0) {
+      // console.log("running firstload!")
+      nonEmptyResponse = getHighlightedResponse(newResponses);
+      setHighlightedResponse(nonEmptyResponse);
     }
     setLastDocSnapshot(newLastDocSnapshot);
   }
