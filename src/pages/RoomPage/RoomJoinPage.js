@@ -35,7 +35,8 @@ const useStyles = makeStyles((theme) => ({
   card: {
     position: 'absolute',
     top: 100,
-    left: 20,
+    // left: 20,
+    left: 'calc(50% - 160px)',
     padding: '20px 20px',
     boxSizing: 'border-box',
     borderRadius: 15,
