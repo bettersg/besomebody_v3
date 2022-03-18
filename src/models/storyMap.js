@@ -28,9 +28,59 @@ chapters []
  
  -> to add the primary colour and secondary colour info for each character based on the UI design.
  
-// reflectionIDs: aman 1,5,6 | nadia 2,3,4 |  ravi 7,8,9,10,11 |  zhihao 12,13,14 
+// reflectionIDs: aman 1,5,6 | nadia 2,3,4 |  ravi 7,8,9,10 |  zhihao 11,12,13
 
 */
+
+export const REFLECTION_ID_MAP = {
+  1: {  // Aman 1
+    characterId: 2,
+    chapterId: 1,
+  },
+  2: {  // Nadia 1
+    characterId: 1,
+    chapterId: 1,
+  },
+  3: {  // Nadia 2
+    characterId: 1,
+    chapterId: 2,
+  },
+  4: {  // Nadia 3
+    characterId: 1,
+    chapterId: 3,
+  },
+  5: {  // Aman 2
+    characterId: 2,
+    chapterId: 2,
+  },
+  6: {  // Aman 3
+    characterId: 2,
+    chapterId: 3,
+  },
+  7: {  // Ravi 1
+    characterId: 3,
+    chapterId: 1,
+  },
+  8: {  // Ravi 2
+    characterId: 3,
+    chapterId: 2,
+  },
+  9: {  // Ravi 3
+    characterId: 3,
+    chapterId: 3,
+  },
+  10: {  // Ravi 4
+    characterId: 3,
+    chapterId: 4,
+  },
+  11: {  // Zhihao 1
+    characterId: 4,
+    chapterId: 1,
+  },
+}
+
+
+
 
 export const CHARACTER_MAP = [
   {

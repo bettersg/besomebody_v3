@@ -127,19 +127,6 @@ function Step7(props) {
                   
                 <br />
                 <Button
-                    onClick={() => props.jump(1)}
-                    variant="outlined"                                        
-                  // className="submitBtn"
-                  style={{
-                    padding: '10px 10px',
-                    borderRadius: '40px',
-                    marginBottom: '20px',
-                    marginLeft: 'auto',
-                    marginRight: 'auto',
-                    textDecoration: 'none',                   
-                  }}>Rebuild your profile</Button>
-
-                <Button
                     type="submit"
                     variant="contained"
                     color="primary"
@@ -165,6 +152,21 @@ function Step7(props) {
                   >
                     Submit - then start the game!
                 </Button>
+                
+                <Button
+                    onClick={() => props.jump(1)}
+                    variant="outlined"                                        
+                  // className="submitBtn"
+                  style={{
+                    padding: '10px 10px',
+                    borderRadius: '40px',
+                    marginBottom: '20px',
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                    textDecoration: 'none',                   
+                  }}>Rebuild your profile</Button>
+
+               
                   </form>
                 </Box>
               </Box>
