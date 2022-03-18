@@ -24,7 +24,7 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 const useStyles = makeStyles((theme) => ({
   background: {
-    backgroundImage: ({ image }) => `url('/images/bg_launch.png')`,
+    backgroundImage: ({ image }) => `url('/commons/bg_pattern.png')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '660px',
@@ -34,10 +34,30 @@ const useStyles = makeStyles((theme) => ({
     bottom: 0, 
 
   },
-  bottom: {
-    bottom: 20,
-    // height: '20vh',
+  card: {
     position: 'absolute',
+    top: 100,
+    // left: 20,
+    left: 'calc(50% - 160px)',
+    padding: '20px 20px',
+    boxSizing: 'border-box',
+    borderRadius: 15,
+    backgroundColor: '#ffffff',
+    width: 320,
+    height: 520,
+    boxShadow: '0px 4px 14px rgba(0, 91, 105, 0.2)',
+  },
+  centered: {
+    alignItems: 'center',
+    textAlign: 'center',
+  },
+  bottom: {
+    bottom: 0,
+    height: '140px',
+    position: 'absolute',
+    background: '#CBF1F4',
+    borderRadius: '0px 0px 15px 15px',
+    padding: 20,
     marginLeft: 'auto',
     marginRight: 'auto',
     left: 0,
@@ -54,27 +74,56 @@ const useStyles = makeStyles((theme) => ({
   btn: {
     padding: '10px 50px',
     borderRadius: '40px',
-    marginBottom: '20px',
+    // marginTop: '20px',
     background: '#664EFC',
-    backgroundColor: '#664EFC',
+    // backgroundColor: '#664EFC',
     textDecoration: 'none',
     color: '#ffffff',
     fontWeight: '700',
     '&:hover': {
       backgroundColor: '#6C70DD',      
-      boxShadow: 'none',
-      
+      boxShadow: 'none',      
     },
   },
+  btn2: {
+    padding: '5px 30px',
+    marginTop: 10,
+    borderRadius: '40px',
+    // marginTop: '20px',
+    // background: '#664EFC',
+    // backgroundColor: '#664EFC',
+    textDecoration: 'none',
+    // color: '#ffffff',
+    fontWeight: '700',
+    '&:hover': {
+      // backgroundColor: '#6C70DD',      
+      boxShadow: 'none',      
+    },
+  },
+  headline: {    
+    color: '#ffffff',
+    width: '100%',
+    // padding: '15px',
+    fontSize: '24px',
+    fontWeight: '700',
+    textAlign: 'center',
+    // marginTop: 20,
+    textShadow: '0px 4px 14px rgba(0, 91, 105, 0.2)',
+  }, 
+  line: {
+    width: '80px',
+    border: '2px solid rgba(25,163,173,0.3)' ,
+    display: 'inline-block',    
+  },  
   overline: {
     backgroundColor: '#664EFC',
     color: '#ffffff',
     width: '100%',  
   },
-  whiteBox: {
-    backgroundColor: '#ffffff',
-    color: '#000000',
-    width: '100%',  
+  details: {
+    fontWeight: '400',
+    fontSize: '0.8rem',
+    lineHeight: '1.1rem',
   },
   link: {
     color: '#000A11',
@@ -138,7 +187,7 @@ const RoomInfoPage = () => {
       await updateUserRoomDb(currentUser.id, room.id)  
       await updateDbUser({ activeRoom: roomUrl }, currentUser.id)   
       console.log('Room Updated', roomUrl)
-      history.push('/')  // redirect to root which will be the characterchoice page now.     
+      history.push('/room_explainer')  // redirect to root which will be the characterchoice page now.     
     } catch (err) {
       setSnackbar({
         message: `There was an error: ${err.message}`,
@@ -171,7 +220,7 @@ const RoomInfoPage = () => {
   };
   
 
-
+// console.log(room)
 // 0. get roomCode from URL params X unable to call useParams from inside Provider
 // 1. check if the roomCode exists 
 // 2. Get the other info about the room (teacher, school, chapter etc)
@@ -180,37 +229,53 @@ const RoomInfoPage = () => {
 
   return (
     <Box className={classes.background}>
+      
       <Box py={1} textAlign="center"  className={classes.overline}>
         <Typography variant="overline" > You are a participant in a facilitated room. </Typography>
       </Box>
       
-      <Container maxWidth="md" className={classes.container}>
-        <Box py={1} textAlign="center">
-          <Typography variant="h4" gutterBottom={true}>Room Information Page</Typography>  
-        </Box>
+      
+         <Box py={1} textAlign="center"  >
+            <Typography className={classes.headline} > Your Room Information</Typography>
+          </Box>
+        
+      <Box className={classes.card}>
         
         {currentUser && room &&
-        <Box py={3} textAlign="left" className={classes.whiteBox}>
+        <Box py={3} textAlign="left"  >
           <Typography>Your game reflections will be visible to the facilitator</Typography>
-          <Box py={3} px={5}>
-            <Typography paragraph={true}>Room Code: {room.code}</Typography>
-            <Typography paragraph={true}>Organisation Name: {room.organisation}</Typography>
-              <Typography paragraph={true}>Class Name: {room.name}</Typography>
+          <Box py={2} >
+            <Typography className={classes.details} paragraph={true}>Room Code: {room.code}</Typography>
+            <Typography  className={classes.details} paragraph={true}>Organisation Name: {room.organisation}</Typography>
+              <Typography  className={classes.details} paragraph={true}>Class Name: {room.name}</Typography>
+              <Typography  className={classes.details} paragraph={true}>Reflections: {room.reflectionIds}</Typography>
               <hr />
-            <Typography paragraph={true}>Instructions: {room.instructions}</Typography>
+            <Typography  className={classes.details} paragraph={true}>Instructions: {room.instructions}</Typography>
           </Box>
         </Box>
         }
 
-      </Container>          
-        <Box className={classes.bottom}>
-          <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} onClick={() => saveRoomStartGame()}>Confirm & Start Game</Button>         
-          <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} onClick={() => exitActiveRoom()}>Leave Room</Button>         
-        </Box>        
+        {currentUser && !room &&
+            <Box py={3} textAlign="left"  >
+            <Typography >You have entered an invalid room code. Please check the URL again or scan the QR code that was sent to you.</Typography>
+            <Button variant="contained" type="submit" className={classes.btn2} fullWidth style={{marginTop: 200}} disabled={isLoading} href="/room_join">Enter new room code</Button>
+          </Box>
+        }
+
+        {currentUser && room &&
+          <Box className={classes.bottom}>
+            <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} onClick={() => saveRoomStartGame()}>Confirm & Play Game</Button>
+            {/* <Button variant="outlined" type="submit"   disabled={isLoading} onClick={() => saveRoomStartGame()}>Player Guide</Button>    */}
+            <Button variant="outlined" type="submit" className={classes.btn2} disabled={isLoading} onClick={() => exitActiveRoom()}>Leave Room</Button>
+          </Box>
+        
+        }
+        
+        </Box>
     </Box>
 
   
-  )
+  ) 
 }
 
 export default RoomInfoPage;
