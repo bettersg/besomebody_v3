@@ -255,12 +255,21 @@ const RoomInfoPage = () => {
         </Box>
         }
 
+        {currentUser && !room &&
+            <Box py={3} textAlign="left"  >
+            <Typography >You have entered an invalid room code. Please check the URL again or scan the QR code that was sent to you.</Typography>
+            <Button variant="contained" type="submit" className={classes.btn2} fullWidth style={{marginTop: 200}} disabled={isLoading} href="/room_join">Enter new room code</Button>
+          </Box>
+        }
+
+        {currentUser && room &&
+          <Box className={classes.bottom}>
+            <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} onClick={() => saveRoomStartGame()}>Confirm & Play Game</Button>
+            {/* <Button variant="outlined" type="submit"   disabled={isLoading} onClick={() => saveRoomStartGame()}>Player Guide</Button>    */}
+            <Button variant="outlined" type="submit" className={classes.btn2} disabled={isLoading} onClick={() => exitActiveRoom()}>Leave Room</Button>
+          </Box>
         
-        <Box className={classes.bottom}>
-          <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} onClick={() => saveRoomStartGame()}>Confirm & Play Game</Button>   
-          {/* <Button variant="outlined" type="submit"   disabled={isLoading} onClick={() => saveRoomStartGame()}>Player Guide</Button>    */}
-          <Button variant="outlined" type="submit"   className={classes.btn2} disabled={isLoading} onClick={() => exitActiveRoom()}>Leave Room</Button>         
-        </Box>     
+        }
         
         </Box>
     </Box>
