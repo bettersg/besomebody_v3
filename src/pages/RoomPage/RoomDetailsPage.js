@@ -13,7 +13,8 @@ import {
 } from '@material-ui/core'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import HomeworkAvatar from './HomeworkAvatar'
-import {  REFLECTION_ID_MAP} from '../../models/storyMap'
+import {CHARACTER_MAP,REFLECTION_ID_MAP} from '../../models/storyMap'
+import { LocalDrinkSharp } from '@material-ui/icons'
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
@@ -99,7 +100,7 @@ const useStyles = makeStyles((theme) => ({
 const RoomDetailsPage = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [userFromDb, setUserFromDb] = useState(null)
-  const [room, setRoom] =  useState(null)
+  const [room, setRoom] = useState(null)
   const { currentUser } = useAuth()
   const history = useHistory()
   const { setSnackbar } = useSnackbar()
@@ -118,11 +119,24 @@ const RoomDetailsPage = () => {
         const room = await getRoomDb(userFromDb?.activeRoom)
         return setRoom(room)
         }         
-    getRoom()
+    getRoom()    
     }, [userFromDb?.activeRoom])
+  
+  const reflectionIdsCharacter = room?.reflectionIds.map((reflectionId) => { 
+  const { characterId, chapterId } = REFLECTION_ID_MAP[reflectionId]
 
-    // const reflectionId = parseInt(reflection);
-    // const { characterId, chapterId } = REFLECTION_ID_MAP[reflectionId];
+    return { characterId, chapterId }
+  })
+
+  // 
+  //   function groupBy(xs, f) {
+  //     if(xs !== undefined) {
+  //       return xs.reduce((r, v, i, a, k = f(v)) => ((r[k] || (r[k] = [])).push(v), r), {});        
+  //     }
+  // }     
+  
+  // const results = groupBy(reflectionIdsCharacter, (c) => c.characterId);
+  // console.log ('results',results)
 
     return (
       <Box className={classes.background}>
@@ -139,11 +153,11 @@ const RoomDetailsPage = () => {
           <Box m={3}>
             <Typography className={classes.title}>Assigned characters:</Typography>
             <Typography paragraph={true} className={classes.body}>
-            {room?.reflectionIds.map((reflection) => {
-              {/* insert condition to check if characterId is changed */}
-              return (
-                <Box key={reflection}>
-                  
+            { 
+             room?.reflectionIds.map((reflection) => {
+               {/* insert condition to check if characterId is changed */ }
+               return (
+                <Box key={reflection}>                  
                   <HomeworkAvatar reflection={reflection} />
                 </Box>
               )
