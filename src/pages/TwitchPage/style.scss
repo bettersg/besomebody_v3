@@ -171,7 +171,7 @@
                 line-height: 150%;
                 padding-left: 4px;
 
-                color: #664EFC;
+                // color: #664EFC;
             }
 
             &--profile {
@@ -229,6 +229,17 @@
             font-size: 14px;
             opacity: 80%;
             background-color: $midnight10;
+            &--right {
+                background-color: $lapisBase;
+                border-radius: 30px;
+                height: 40px;
+                width: 40px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+            }
             &.choice {
                 // border: $aqua100 solid 2px;
                 // background-color: transparent;
@@ -251,7 +262,7 @@
 
     }
     &__choicesWrapper {
-        height: 132px; 
+        height: 142px; 
         overflow-y: scroll;
         transition: height 0.4s; 
         background-color: white;
@@ -288,6 +299,7 @@
         width: 100%;
         min-height: 200px;
         padding: 16px;
+        z-index: 1;
         background: linear-gradient(180deg, #4f4dbe 44.7%, #664efc 100%);
         &--text {
          

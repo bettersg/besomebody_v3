@@ -32,6 +32,26 @@ const Twitch = (props) => {
     }
   }, [elementRef, currentParagraphs, choices])
 
+  function stringToColor(string) {
+    let hash = 0;
+    let i;
+  
+    /* eslint-disable no-bitwise */
+    for (i = 0; i < string.length; i += 1) {
+      hash = string.charCodeAt(i) + ((hash << 5) - hash);
+    }
+  
+    let color = '#';
+  
+    for (i = 0; i < 3; i += 1) {
+      const value = (hash >> (i * 8)) & 0xff;
+      color += `00${value.toString(16)}`.substr(-2);
+    }
+    /* eslint-enable no-bitwise */
+  
+    return color;
+  }
+
   // const [choicesHeight, setChoicesHeight] = useState("10px")
   // const [maxHeight, setMaxHeight] = useState("10px")
   // const choicesRef = useRef();
@@ -130,7 +150,7 @@ const Twitch = (props) => {
                             <div class="Twitch__messages--receiver--message">
                             <span>
                                 <img class="Twitch__messages--receiver--profile" src={'/images/ico_' + name +'.png'}></img></span>
-                            <span className="Twitch__messages--receiver--name" style={{color:'#19A3AD'}}>{'@'+specialTags.speaker_self_name} </span>
+                            <span className="Twitch__messages--receiver--name" style={{color:stringToColor(specialTags.speaker_self_name)}}>{'@'+specialTags.speaker_self_name} </span>
                             {step.text}
                             </div>
                           {/* {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.TwitchImage} /> :  <Typography key={step.text}>{step.text}</Typography> )} */}
@@ -197,7 +217,7 @@ const Twitch = (props) => {
                                     {(step.tags[0]?.includes('speaker_7') ? (specialTags.speaker_7_name).charAt(0) : null)}
                                     {(step.tags[0]?.includes('speaker_8') ? (specialTags.speaker_8_name).charAt(0) : null)}
                                   </Avatar>  */}
-                                <span className="Twitch__messages--receiver--name">
+                                <span className="Twitch__messages--receiver--name" style={{color:stringToColor(specialTags[step.tags[0] + "_name"])}}>
                                 {(step.tags[0]?.includes('speaker_1') ? '@' + specialTags.speaker_1_name + ' : ': null)}
                                 {(step.tags[0]?.includes('speaker_2') ? '@' + specialTags.speaker_2_name + ' : ': null)}
                                 {(step.tags[0]?.includes('speaker_3') ? '@' + specialTags.speaker_3_name + ' : ': null)}
