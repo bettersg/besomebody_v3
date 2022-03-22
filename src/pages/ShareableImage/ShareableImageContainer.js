@@ -165,17 +165,16 @@ const ShareableImageContainer = ({data }) =>{
       <div ref={ref} className="ShareableImage" style={{width: "300px", height: "300px"}}>
         
         
-
-            <img className="test_avatar" crossOrigin = "anonymous" src={avatarImage} style={{position: "absolute", width: "300px", height: "300px",
-            left: "0px", top: "0px", opacity: "1.0"}} />
             {/* <div className="ShareableImage__gradient"></div> */}
-            {/* <div className="ShareableImage__bottomGradient"></div> */}
-            {/* <img className="test_logo" crossOrigin = "anonymous" src="/shareable_avatars/tobeyou-logo-white.svg" style={{position: "absolute", width: "80px", height: "60px", left: "16px", 
-            top: "22px", filter: "drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.04))", transform: "rotate(-2deg)"}}/> */}
+            <img className="test_avatar" crossOrigin = "anonymous" src={avatarImage} style={{position: "absolute", width: "300px", height: "300px",
+            left: "0px", top: "0px",}} />
+            {/* <div className="ShareableImage__bottomGradient"></div>
+            <img className="test_logo" crossOrigin = "anonymous" src="/shareable_avatars/tobeyou-logo-white.svg" style={{position: "absolute", width: "80px", height: "60px", left: "16px", 
+            top: "22px", filter: "drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.04))", transform: "rotate(-2deg)"}}/>
             <div className="ShareableImage__reflectionContainer">
                 <div className="ShareableImage__overline">{storyName}</div>
-          <div className={displayText.length < 50 ? "ShareableImage__bodyBig" : "ShareableImage__body"}>{displayText}</div>                
-            </div>
+                <div className="ShareableImage__body">{displayText}</div>
+            </div> */}
         
         
       </div>
@@ -183,7 +182,7 @@ const ShareableImageContainer = ({data }) =>{
       
       {/* <button onClick={loadImage}>Pre-load image</button> */}
       <img width={width} src={image} alt={"ScreenShot"} className="ShareableImage" />
-      <Button variant="contained"  className={classes.btn} onClick={getImage} >{isMobile ? 'Share' : 'Download'} </Button>
+      <Button variant="contained"  className={classes.btn} onClick={getImage} >{isMobile ? 'Share reflection' : 'Download Image'} </Button>
       {/* <button onClick={getImage} className="btn">{isMobile ? 'Share via Mobile' : 'Download Image'}</button> */}
   </div>
   )};
