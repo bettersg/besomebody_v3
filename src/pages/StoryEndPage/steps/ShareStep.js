@@ -121,18 +121,19 @@ const ShareStep = ({ reflection, characterId, setState, getState, next }) => {
   //   data2[2].answer ? persona.reflectionBrowser[0].empathyCharacters.find((character) => character.characterName.toUpperCase() === data2[2].answer.toUpperCase()) : persona.reflectionBrowser[0].empathyCharacters[0]
   //   : persona.reflectionBrowser[0].empathyCharacters.find((character) => character.characterName.toUpperCase() === personaName.toUpperCase());
 
+  const empathyCharacter = persona.reflectionBrowser[0].empathyCharacters.find((character) => character.characterName.toUpperCase() === personaName.toUpperCase());
   
   const data = getState('answerDocs') ? {
     storyName: personaFullName+"'s Story",
     text: data2[5].answer,
     avatar: data2[2].answer, 
-    avatarImage: '/shareable_avatars/sharebubble.png'
+    avatarImage: empathyCharacter.shareImage,
     // avatarImage: persona.profileImage 
   } : {
     storyName: personaFullName + "'s Story",
     text: "I now know what it's like to be you, " + personaName + ".",
     avatar: personaName.toLowerCase(), 
-    avatarImage: '/shareable_avatars/sharebubble.png'
+    avatarImage: empathyCharacter.shareImage,
     // avatarImage: persona.profileImage
   }
 

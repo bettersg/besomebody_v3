@@ -18,7 +18,7 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 const useStyles = makeStyles((theme) => ({
   background: {
     // backgroundImage: ({ image }) => `url('/images/bg_reflections.jpg')`,
-    backgroundColor: "#3DCAD3", 
+    backgroundColor: "#26248F", 
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '660px',
@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   headerText: {
     fontSize: '2rem',
     fontWeight: 800,
-    color: '#ffffff',
+    color: '#D8F4F6',
     marginTop: 200,
   },
   bottom: {
@@ -84,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   topText: {
-    color: 'white',
+    color: '#D8F4F6',
     fontSize: '0.9rem',
     fontWeight: '600',    
     marginBottom: 30,
@@ -93,6 +93,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '1.0rem',
     fontWeight: '400',    
     margin: "20px",
+    color: '#D8F4F6',
 
   },
   link: {
