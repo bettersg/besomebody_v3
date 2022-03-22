@@ -12,7 +12,7 @@ import {
     Container,
 } from '@material-ui/core'
 import makeStyles from '@material-ui/core/styles/makeStyles'
-import HomeworkAvatar from './HomeworkAvatar'
+import HomeworkAvatarBox from './HomeworkAvatarBox'
 import {CHARACTER_MAP,REFLECTION_ID_MAP} from '../../models/storyMap'
 import { LocalDrinkSharp } from '@material-ui/icons'
 
@@ -101,10 +101,13 @@ const RoomDetailsPage = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [userFromDb, setUserFromDb] = useState(null)
   const [room, setRoom] = useState(null)
+  // const [characterChapters, setCharacterChapters] = useState(null)
   const { currentUser } = useAuth()
   const history = useHistory()
   const { setSnackbar } = useSnackbar()
   const classes = useStyles()  
+
+  
 
   useEffect(() => {
       const getUser = async () => {
@@ -123,20 +126,33 @@ const RoomDetailsPage = () => {
     }, [userFromDb?.activeRoom])
   
   const reflectionIdsCharacter = room?.reflectionIds.map((reflectionId) => { 
-  const { characterId, chapterId } = REFLECTION_ID_MAP[reflectionId]
-
+    const { characterId, chapterId } = REFLECTION_ID_MAP[reflectionId]
     return { characterId, chapterId }
   })
 
-  // 
-  //   function groupBy(xs, f) {
-  //     if(xs !== undefined) {
-  //       return xs.reduce((r, v, i, a, k = f(v)) => ((r[k] || (r[k] = [])).push(v), r), {});        
-  //     }
-  // }     
+
+  function groupBy(xs, f) {
+    if(xs !== undefined) {
+      return xs.reduce((r, v, i, a, k = f(v)) => ((r[k] || (r[k] = [])).push(v), r), {});        
+    }
+}     
   
-  // const results = groupBy(reflectionIdsCharacter, (c) => c.characterId);
-  // console.log ('results',results)
+  
+  if (reflectionIdsCharacter !== undefined ) {
+    var results = groupBy(reflectionIdsCharacter, (c) => c.characterId);    
+    // console.log('results', results)
+    
+    var result2 = Object.entries(results).map(([key, value]) => ({
+      characterId: key,
+      chapterIds: value.map((v) => v.chapterId)
+    }))
+    // setCharacterChapters(result2)  // error only happens if this line is added. if i comment this line out, the error disappears but CharacterChapters is null
+       
+  }
+  // console.log('cc', characterChapters)      
+
+  
+
 
     return (
       <Box className={classes.background}>
@@ -153,16 +169,9 @@ const RoomDetailsPage = () => {
           <Box m={3}>
             <Typography className={classes.title}>Assigned characters:</Typography>
             <Typography paragraph={true} className={classes.body}>
-            { 
-             room?.reflectionIds.map((reflection) => {
-               {/* insert condition to check if characterId is changed */ }
-               return (
-                <Box key={reflection}>                  
-                  <HomeworkAvatar reflection={reflection} />
-                </Box>
-              )
+            { result2 &&
+              <HomeworkAvatarBox result2={result2} />
             }
-              )}
             </Typography>           
         </Box>  
       </Box>
