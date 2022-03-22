@@ -127,15 +127,18 @@ const ShareStep = ({ reflection, characterId, setState, getState, next }) => {
     storyName: personaFullName+"'s Story",
     text: data2[5].answer,
     avatar: data2[2].answer, 
-    avatarImage: empathyCharacter.shareImage,
+    avatarImage: persona.shareImage
     // avatarImage: persona.profileImage 
   } : {
     storyName: personaFullName + "'s Story",
     text: "I now know what it's like to be you, " + personaName + ".",
     avatar: personaName.toLowerCase(), 
-    avatarImage: empathyCharacter.shareImage,
+    avatarImage: persona.shareImage
     // avatarImage: persona.profileImage
   }
+
+  // ^ actually the conditional is redundant because the image is pre-set and does not use 
+  // the 'storyName', 'text' and 'avatar' inputs
 
   // console.log (persona.profileImage)
    // -- remove this section when receiving state variables,
