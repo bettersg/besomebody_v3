@@ -23,8 +23,8 @@ export default function HomeworkAvatar(props) {
 //   const { characterId, reflectionId } = REFLECTION_ID_MAP[reflectionId];
     const persona = CHARACTER_MAP.find((character) => character.characterId === parseInt(reflection.characterId)); 
     // console.log('characterId',characterId)
-    console.log('char',reflection.characterId)
-    console.log('persona', persona)
+    // console.log('char',reflection.characterId)
+    // console.log('persona', persona)
     
     
 

@@ -190,14 +190,14 @@ const RoomInfoPage = () => {
         </Box>
         
         {currentUser && room &&
-        <Box py={3} textAlign="left" className={classes.whiteBox}>
+          <Box py={3} px={1} textAlign="left" className={classes.whiteBox}>
           <Typography>Your game reflections will be visible to the facilitator</Typography>
           <Box py={3} px={5}>
             <Typography paragraph={true}>Room Code: {room.code}</Typography>
             <Typography paragraph={true}>Organisation Name: {room.organisation}</Typography>
               <Typography paragraph={true}>Class Name: {room.name}</Typography>
-              <hr />
-            <Typography paragraph={true}>Instructions: {room.instructions}</Typography>
+              
+            {/* <hr /><Typography paragraph={true}>Instructions: {room.instructions}</Typography> */}
           </Box>
         </Box>
         }

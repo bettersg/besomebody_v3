@@ -132,7 +132,7 @@ export const CharacterChoicePage = () => {
 
     return (
         <Box className={classes.CharChoiceWrapper} >
-            <hr className={classes.topLine}/>
+            {/* <hr className={classes.topLine}/> */}
             <div className="CharacterChoices__header">
                 {/* <div className="CharacterChoices__header--placeholder"></div> */}
                 <img src="/commons/tobeyou-logo.svg" />

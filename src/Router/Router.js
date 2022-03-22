@@ -77,7 +77,7 @@ class Router extends Component {
               {user ? <RoomInfoPage /> : <ParticipantStartPage /> }
             </Route>            
 
-            <PrivateRoute path="/room_details/:roomUrl" exact>
+            <PrivateRoute path="/room_details" exact>
               <RoomDetailsPage />
             </PrivateRoute>
 

@@ -93,6 +93,22 @@ const useStyles = makeStyles((theme) => ({
   body: {
     fontSize: '0.9rem',
     fontWeight: '400',
+  },
+
+  btn: {
+    padding: '10px 50px',
+    borderRadius: '40px',
+    marginBottom: '20px',
+    background: '#664EFC',
+    backgroundColor: '#664EFC',
+    textDecoration: 'none',
+    color: '#ffffff',
+    fontWeight: '700',
+    '&:hover': {
+      backgroundColor: '#6C70DD',      
+      boxShadow: 'none',
+      
+    },
   }
 }))  
 
@@ -174,6 +190,11 @@ const RoomDetailsPage = () => {
             }
             </Typography>           
         </Box>  
+
+        <Box className={classes.bottom}>
+          <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} href="/">Play Game</Button>         
+                 
+        </Box>        
       </Box>
   
     
