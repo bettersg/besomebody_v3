@@ -80,6 +80,7 @@ class Router extends Component {
 
             <PrivateRoute path="/room_details/:roomUrl" exact>
               <RoomDetailsPage />
+            </PrivateRoute>
 
             <PrivateRoute path="/room_explainer" exact>
               <FacilitationExplainer />
