@@ -122,7 +122,7 @@ const useStyles = makeStyles((theme) => ({
   },
   details: {
     fontWeight: '400',
-    fontSize: '0.8rem',
+    fontSize: '0.9rem',
     lineHeight: '1.1rem',
   },
   link: {
@@ -242,15 +242,15 @@ const RoomInfoPage = () => {
       <Box className={classes.card}>
         
         {currentUser && room &&
-        <Box py={3} textAlign="left"  >
+           <Box py={3} textAlign="left"  >
           <Typography>Your game reflections will be visible to the facilitator</Typography>
           <Box py={2} >
             <Typography className={classes.details} paragraph={true}>Room Code: {room.code}</Typography>
             <Typography  className={classes.details} paragraph={true}>Organisation Name: {room.organisation}</Typography>
               <Typography  className={classes.details} paragraph={true}>Class Name: {room.name}</Typography>
-              <Typography  className={classes.details} paragraph={true}>Reflections: {room.reflectionIds}</Typography>
+              {/* <Typography  className={classes.details} paragraph={true}>Reflections: {room.reflectionIds}</Typography>
               <hr />
-            <Typography  className={classes.details} paragraph={true}>Instructions: {room.instructions}</Typography>
+            <Typography  className={classes.details} paragraph={true}>Instructions: {room.instructions}</Typography> */}
           </Box>
         </Box>
         }

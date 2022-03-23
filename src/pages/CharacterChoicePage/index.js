@@ -67,6 +67,24 @@ const useStyles = makeStyles(theme => ({
         fontSize: '0.8rem',
         backgroundColor: '#664EFC',
         color: '#FFFFFF',
+        textAlign: 'center',
+        
+    },
+    topLine: {
+        width: '100%',
+        height: 5,
+        position: 'absolute',
+        backgroundColor: '#664EFC',
+        margin: 0,
+        border: 0,
+        top:0
+    },
+    btn: {
+        border: '2px solid #ffffff',
+        borderRadius: '50px',
+        padding: '4px 20px',
+        color: '#FFFFFF',
+        margin: 10,
     }
 }))
 
@@ -123,6 +141,7 @@ export const CharacterChoicePage = () => {
 
     return (
         <Box className={classes.CharChoiceWrapper} >
+            {/* <hr className={classes.topLine}/> */}
             <div className="CharacterChoices__header">
                 {/* <div className="CharacterChoices__header--placeholder"></div> */}
                 <img src="/commons/tobeyou-logo.svg" />
@@ -160,11 +179,11 @@ export const CharacterChoicePage = () => {
                 })}
                 
             </div>
-            <img src="/character_choice_page/start_playing_banner.png" className="CharacterChoices__banner" />
+            {!room && <img src="/character_choice_page/start_playing_banner.png" className="CharacterChoices__banner" />}
             {room &&
                 <Box className={classes.instructions} >
-                <Typography variant="body2" >You are playing in a facilitated room. Your instructions are: <br /></Typography>
-                <Typography variant="body1" >{room.instructions}</Typography>
+                    <Typography variant="body1" >You are playing in facilitated room <b>{room.code}</b></Typography>
+                    <Button className={classes.btn} href={"/room_details/" + room.code}>Room Instructions</Button>                
                 </Box>
             }
             {/* <!-- Continue Playing Banner --> */}
