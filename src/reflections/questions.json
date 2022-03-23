@@ -146,22 +146,22 @@
       {
         "id":1,
         "body": "Nadia",
-        "image_url": "/shareable_avatars/nadia.png"
+        "image_url": "/reflection/avatars/nadia.png"
       },
       {
         "id":2,
         "body": "Gavin",
-        "image_url": "/shareable_avatars/gavin.png"
+        "image_url": "/reflection/avatars/gavin.png"
       },
       {
         "id":3,
         "body": "Chloe",
-        "image_url": "/shareable_avatars/chloe.png"
+        "image_url": "/reflection/avatars/chloe.png"
       },
       {
         "id":4,
         "body": "Azlin",
-        "image_url": "/shareable_avatars/azlin.png"
+        "image_url": "/reflection/avatars/azlin.png"
       }  
     ]
   },
@@ -206,7 +206,7 @@
   },
   {
     "id": 10,
-    "type": "OPEN",
+    "type": "OPEN_CHAR",
     "body": "Why did you resonate with that character?"
   },
   {
@@ -222,22 +222,22 @@
       {
         "id":1,
         "body": "Aman",
-        "image_url": "/shareable_avatars/aman.png"
+        "image_url": "/reflection/avatars/aman.png"
       },
       {
         "id":2,
         "body": "Jothi",
-        "image_url": "/shareable_avatars/jothi.png"
+        "image_url": "/reflection/avatars/jothi.png"
       },
       {
         "id":3,
         "body": "Selinder",
-        "image_url": "/shareable_avatars/selinder.png"
+        "image_url": "/reflection/avatars/selinder.png"
       },
       {
         "id":4,
         "body": "Lukman",
-        "image_url": "/shareable_avatars/lukman.png"
+        "image_url": "/reflection/avatars/lukman.png"
       }  
     ]
   }
