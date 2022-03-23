@@ -67,11 +67,32 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     color: '#ffffff',
-    fontSize: '1rem',
-    fontWeight: '700',
+    fontSize: '18px',
     textDecoration: 'none',
+    // marginTop: 279,
     marginBottom: 30,
-  }
+    width: '318px',
+    textAlign: 'center',
+  },
+  nextButton: {
+    position: "absolute", 
+    bottom: 20, 
+    opacity: 0.6,  
+    left: "47%", 
+    height: "8px", 
+    '&:hover': {
+      cursor: 'pointer',
+    },
+  },
+  fullPage: {
+    height: '660px',
+    [theme.breakpoints.only('xs')]: {
+      height: 'calc(var(--vh, 1vh) * 100)',
+    },
+    display: "flex", 
+    justifyContent: "center", 
+    alignItems: "center",
+  },
 }))
 
 const PreShareStep = ({ next }) => {
@@ -80,19 +101,11 @@ const PreShareStep = ({ next }) => {
   const [isLoading, setIsLoading] = useState(false)
 
   return (
-  <Box className={classes.background}>
-    <Container maxWidth="md" className={classes.container}>
-        <Box py={4} display="flex" flexDirection="column" justifyContent="center" alignItems="center">          
-          <Typography className={classes.text}>This character's chapter might be over... but the conversation should not end here. Share your reflections with your friends, and join our private community to discuss the issues and reflections. <p> Empathy works best when we all embrace it together!</p> </Typography>
-      </Box>
-        <Box className={classes.bottom}>        
-          {/* <Button variant="contained" className={classes.btn} onClick={() => setPage(REFLECTION_PAGE_CHAPTER_REFLECTION_RESPONSES)}> */}
-          <Button variant="contained" className={classes.btn} onClick={() => next()}>
-
-          Next
-        </Button>
-      </Box>
-    </Container>
+  <Box className={classes.background} onClick={() => next()} >
+    <div className={classes.fullPage}>
+      <Typography className={classes.text}>The story for Nadia might be over, but the conversation does not - only if you share your experience with others. Be part of our community.</Typography>
+        <img src="/reflection/next_icon.png" className={`${classes.nextButton}`}/>
+    </div>
   </Box>
   )
 }

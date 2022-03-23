@@ -242,7 +242,7 @@ const RoomInfoPage = () => {
       <Box className={classes.card}>
         
         {currentUser && room &&
-        <Box py={3} textAlign="left"  >
+           <Box py={3} textAlign="left"  >
           <Typography>Your game reflections will be visible to the facilitator</Typography>
           <Box py={2} >
             <Typography className={classes.details} paragraph={true}>Room Code: {room.code}</Typography>

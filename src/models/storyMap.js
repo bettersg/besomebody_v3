@@ -90,6 +90,7 @@ export const CHARACTER_MAP = [
     profileImage: "/images/profile_nadia.png",
     description: "Nadia wants to survive JC and become a doctor - but will self-doubt and young love get in the way?",
     characterIntroImage: "/character_choice_page/nadia.png", 
+    shareImage:'/shareable_avatars/nadia_share.svg',
     jsonLink: '../stories/nadia.ink.json',
     jsonFile: NadiaInk,
     primaryColour: '#FB5A3F',
@@ -278,6 +279,7 @@ export const CHARACTER_MAP = [
           {
             characterName: 'Nadia',
             characterImage: '/shareable_avatars/nadia.png',
+            shareImage:'/shareable_avatars/nadia_share.svg',
           },
           {
             characterName: 'Azlin',
@@ -307,6 +309,7 @@ export const CHARACTER_MAP = [
     profileImage: "/images/profile_aman.png",
     description: "National Service, family expectations, personal dreams, and faith - must Aman give up something he values in order to succeed?",
     characterIntroImage: "/character_choice_page/aman.png", 
+    shareImage:'/shareable_avatars/aman_share.svg',
     jsonLink: '../stories/aman.ink.json',
     jsonFile: AmanInk,
     primaryColour: '#172153',
@@ -510,6 +513,7 @@ export const CHARACTER_MAP = [
           {
             characterName: 'Aman',
             characterImage: '/shareable_avatars/aman.png',
+            shareImage:'/shareable_avatars/aman_share.svg',
           },
           {
             characterName: 'Jothi',

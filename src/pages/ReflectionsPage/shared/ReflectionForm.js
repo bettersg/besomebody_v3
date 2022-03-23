@@ -28,23 +28,70 @@ const useStyles = makeStyles((theme) => ({
     bottom: 0,
     overflow:'scroll',
   },
-  container: {
-    backgroundColor: 'rgba(255,255,255,0.7)',
+  chaptFeedbackContainer: {
+    height: "151px",
+    backgroundColor: "#3835C1",  
+    marginTop:"0", 
+    paddingTop: "32px", 
+  },
+  chaptWrapperContainer: {
+    height: '660px',
+    [theme.breakpoints.only('xs')]: {
+      height: 'calc(var(--vh, 1vh) * 100)',
+    },
+    paddingTop: 0, 
+        
+    backgroundColor: '#8ADFE5',
+    overflow: "auto", 
   },
   formGroup: {
     backgroundColor: 'white',
   },
   subtitle: {
-    fontSize: '16px',
-    color: 'rgba(0, 0, 0, 0.5)',
+    fontSize: '13px',
+    color: 'white',
+    fontWeight: 700, 
+    fontSize: "13px", 
+    marginTop: "17px",
+    letterSpacing: "0.12em",
+    marginBottom: "12px", 
   },
   title: {
     fontSize: '24px',
     fontWeight: 'bold',
+    color: 'white',
+    fontWeight: 900, 
   },
   textField: {
     // backgroundColor: '#e5e5e5',
   },
+  skipButton: {
+    color: "#C4C6F1", 
+    marginLeft: "20px", 
+    fontWeight: 700, 
+    fontSize: "13px", 
+    letterSpacing: "0.12em",
+  }, 
+  chaptBtn: {
+    padding: '10px 50px',
+    borderRadius: '40px',
+    marginBottom: '20px',
+    background: '#172153',
+    textDecoration: 'none',
+    color: '#ffffff',
+    fontWeight: '700',
+    width: "252px", 
+    '&:hover': {
+      backgroundColor: '#6C70DD',      
+      boxShadow: 'none',
+      
+    },
+  },
+  btnWrapper: {
+    display: "flex", 
+    justifyContent: "center", 
+    alignItems: "center", 
+  }
 }))
 
 const ReflectionForm = ({ reflection }) => {
@@ -94,23 +141,28 @@ const ReflectionForm = ({ reflection }) => {
   }
 
   return (
-    <Box className={classes.background}>
-      <Box pt={6} pb={2} className={classes.container}>
+    <Box pt={6} pb={2} className={classes.chaptWrapperContainer}>
+      <Box className= {classes.chaptFeedbackContainer}>
+        <Box>
+            <Typography className={classes.skipButton}> 
+            {/* TODO: need onclick function to skip the page */}
+              SKIP
+            </Typography>
+        </Box>
         <Box>
           <Typography className={classes.subtitle} variant="subtitle1" align="center">
-            SHARE YOUR THOUGHTS WITH US
+            OVER TO YOU
           </Typography>
         </Box>
         <Box>
           <Typography className={classes.title} variant="h1" align="center">
-            REFLECTIONS FORM
+            Chapter Feedback
           </Typography>
         </Box>
       </Box>
       {questions.map((question, index) => (
         <Box key={question.id} mt={2}  className={classes.container}>
           <Question
-            reflectionId={reflection.id}
             key={question.id}
             question={question}
             context={reflection.context}
@@ -123,11 +175,11 @@ const ReflectionForm = ({ reflection }) => {
           />
         </Box>
       ))}
-      <Box mt={2} p={2}>
+      <Box mt={2} p={2} className={classes.btnWrapper}>
         {
           isLoading
             ? <CircularProgress />
-            : <Button variant="contained" color="primary" fullWidth onClick={handleSubmitClick}>Submit</Button>
+            : <Button variant="contained" color="primary" fullWidth onClick={handleSubmitClick} className = {classes.chaptBtn}>Submit</Button>
         }
       </Box>
     </Box>

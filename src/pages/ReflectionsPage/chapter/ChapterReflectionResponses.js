@@ -221,24 +221,46 @@ const useStyles = makeStyles((theme) => ({
 
 const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
   const [responses, setResponses] = useState(null);
+  const [highlightedResponse, setHighlightedResponse] = useState(null);
+  const [firstLoad, setFirstLoad] = useState(0);
   const [hasMore, setHasMore] = useState(true);
   const [lastDocSnapshot, setLastDocSnapshot] = useState(null);
   const [count, setCount] = useState(null);
   const [currentPage, setCurrentPage] = useState(1)
   const classes = useStyles()
 
+  function getHighlightedResponse(responses) {
+    // console.log("responses: "+responses)
+    for (let i = 0; i < responses.length; i++) {
+      // console.log("check response answer: "+responses[i].answer)
+      if (responses[i].answer != ""){
+        // console.log("response is non-empty!")
+        setFirstLoad(1)
+        return responses[i]
+      }
+    }
+  }
+  
   async function fetchMoreResponses() {
     const LIMIT = 300;
+    var nonEmptyResponse = null;
     const { newResponses, newLastDocSnapshot } = await getDbReflectionResponsesPaginated({
       lastDocSnapshot,
       limit: LIMIT,
       reflectionIds: [reflectionId],
       questionId: 3,  // this is hardcoded to the "share your story textarea question"
     });
+    var firstload = 0;
     if (newResponses.length < LIMIT) {
       setHasMore(false);
     }
     setResponses((prevResponses) => prevResponses === null ? newResponses : prevResponses.concat(newResponses));
+    // console.log("firstload value:"+firstLoad)
+    if (firstLoad === 0) {
+      // console.log("running firstload!")
+      nonEmptyResponse = getHighlightedResponse(newResponses);
+      setHighlightedResponse(nonEmptyResponse);
+    }
     setLastDocSnapshot(newLastDocSnapshot);
   }
 
@@ -253,6 +275,7 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
   }
 
   useEffect(() => fetchCount(), []);
+  useEffect(() => fetchMoreResponses(), []);
   useEffect(() => fetchMoreResponsesIfNotOverflow(), [hasMore, lastDocSnapshot]);
 
   const defaultResponse = [{
@@ -280,12 +303,19 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
       <div>
 
         <div className={`${classes.background} reflectionsContainer`}>   
-        {currentPage === 1 ? 
+        {currentPage === 1 ?
+          <div className={classes.yourStoriesBkgrd}  onClick={() => setCurrentPage(currentPage + 1)}>
+              <Typography className={classes.reflectionBubblesHeaderText}>{count} players have finished this chapter</Typography>
+              <img src="/reflection/reflection_bubbles.png" className={`${classes.reflectionBubbles} reflectionsContainer__reflectionBubbles`}/>
+              <img src="/reflection/next_icon.png" className={`${classes.nextButton}`}/>
+          </div>  
+        :
+        currentPage === 2 ? 
           <div className={classes.yourStoriesBkgrd}  onClick={() => setCurrentPage(currentPage + 1)}>
               <div className={classes.gradientBkgrd}>
                 {responses.length === 0 ? 
                   <ChapterResponse response={defaultResponse[0]} />
-                  : <ChapterResponse key={responses[0].id} response={responses[0]} />
+                  : <ChapterResponse key={highlightedResponse.id} response={highlightedResponse} />
                 }
               {/* <ChapterResponse key={responses[0].id} response={responses[0]} /> */}
               <div className={classes.bottomLikeSection}>
@@ -294,14 +324,7 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
 
               </div>
             </div>
-          </div>
-        :
-        currentPage === 2 ?
-          <div className={classes.yourStoriesBkgrd}  onClick={() => setCurrentPage(currentPage + 1)}>
-              <Typography className={classes.reflectionBubblesHeaderText}>{count} players have finished this chapter</Typography>
-              <img src="/reflection/reflection_bubbles.png" className={`${classes.reflectionBubbles} reflectionsContainer__reflectionBubbles`}/>
-              <img src="/reflection/next_icon.png" className={`${classes.nextButton}`}/>
-          </div>       
+          </div>     
         :     
           <div className={classes.reflectionScrollArea}>
             

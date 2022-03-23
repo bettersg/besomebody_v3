@@ -10,7 +10,7 @@ import Question from './Question';
 import "./style.scss";
 
 const useStyles = makeStyles((theme) => ({
-  wrapperContainer: {
+  chaptWrapperContainer: {
     height: '660px',
     [theme.breakpoints.only('xs')]: {
       height: 'calc(var(--vh, 1vh) * 100)',
@@ -20,7 +20,17 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#8ADFE5',
     overflow: "auto", 
   }, 
-  btn: {
+  wrapperContainer: {
+    height: '660px',
+    [theme.breakpoints.only('xs')]: {
+      height: 'calc(var(--vh, 1vh) * 100)',
+    },
+    paddingTop: 0, 
+        
+    backgroundColor: '#AB0601',
+    overflow: "auto", 
+  }, 
+  chaptBtn: {
     padding: '10px 50px',
     borderRadius: '40px',
     marginBottom: '20px',
@@ -35,14 +45,39 @@ const useStyles = makeStyles((theme) => ({
       
     },
   },
+  btn: {
+    padding: '10px 50px',
+    borderRadius: '40px',
+    marginBottom: '20px',
+    background: '#FF8944',
+    textDecoration: 'none',
+    color: '#ffffff',
+    fontWeight: '700',
+    width: "252px", 
+    '&:hover': {
+      backgroundColor: '#6C70DD',      
+      boxShadow: 'none',
+      
+    },
+  },
   formGroup: {
     backgroundColor: 'white',
+  },
+  chaptSubtitle: {
+    fontSize: '13px',
+    color: 'white',
+    fontWeight: 700, 
+    fontSize: "13px", 
+    marginTop: "13px",
+    letterSpacing: "0.12em",
+    marginBottom: "12px", 
   },
   subtitle: {
     fontSize: '13px',
     color: 'white',
     fontWeight: 700, 
     fontSize: "13px", 
+    marginTop: "33px",
     letterSpacing: "0.12em",
     marginBottom: "12px", 
   },
@@ -62,7 +97,11 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "32px", 
   },
   reflectionFormContainer: {
-    marginTop: "48px", 
+    // marginTop: "48px", 
+    height: "151px",
+    backgroundColor: "#D12419",  
+    marginTop:"0", 
+    paddingTop: "32px", 
   }, 
   skipButton: {
     color: "#C4C6F1", 
@@ -93,6 +132,8 @@ const EndStoryReflectionForm = ({ context, subtitle, title, questions: propsQues
         return 50;
       case "OPEN":
         return "";
+      case "OPEN_CHAR":
+        return "";
       default:
         return "";
     }
@@ -112,7 +153,7 @@ const EndStoryReflectionForm = ({ context, subtitle, title, questions: propsQues
   };
 
   return (
-    <Box pt={6} pb={2} className={`${classes.wrapperContainer} chaptFeedbackContainer`}>
+    <Box pt={6} pb={2} className={`${chaptFeedback ? classes.chaptWrapperContainer : classes.wrapperContainer}`}>
       <Box className={`${chaptFeedback ? classes.chaptFeedbackContainer : classes.reflectionFormContainer} `  }>
         {chaptFeedback ? 
           <Box>
@@ -124,7 +165,7 @@ const EndStoryReflectionForm = ({ context, subtitle, title, questions: propsQues
          : null
         }
         <Box>
-          <Typography className={classes.subtitle} variant="subtitle1" align="center">
+          <Typography className={`${chaptFeedback ? classes.chaptSubtitle : classes.subtitle} `} variant="subtitle1" align="center">
             {subtitle ?? 'SHARE YOUR THOUGHTS WITH US'}
           </Typography>
         </Box>
@@ -135,7 +176,7 @@ const EndStoryReflectionForm = ({ context, subtitle, title, questions: propsQues
         </Box>
       </Box>
       {questions.map((question, index) => (
-        <Box key={question.id} mt={2}  className={classes.container}>
+        <Box key={question.id} mt={question.type == "OPEN_CHAR" ? '0.5pt' : 2} bgcolor="#E2E2F8" className={classes.container}>
           <Question
             key={question.id}
             question={question}
@@ -153,7 +194,7 @@ const EndStoryReflectionForm = ({ context, subtitle, title, questions: propsQues
         {
           isLoading
             ? <CircularProgress />
-            : <Button variant="contained" color="primary" fullWidth onClick={handleSubmit} className={classes.btn}>Submit</Button>
+            : <Button variant="contained" color="primary" fullWidth onClick={handleSubmit} className={chaptFeedback ? classes.chaptBtn : classes.btn}>Submit</Button>
         }
       </Box>
     </Box>

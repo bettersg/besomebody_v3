@@ -296,6 +296,8 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
     : [reflectionId];
 
   const [responses, setResponses] = useState(null);
+  const [highlightedResponse, setHighlightedResponse] = useState(null);
+  const [firstLoad, setFirstLoad] = useState(0);
   const [hasMore, setHasMore] = useState(true);
   const [lastDocSnapshot, setLastDocSnapshot] = useState(null);
   const [reflectionIds, setReflectionIds] = useState(initialReflectionIds);
@@ -357,8 +359,21 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
     );
   }
 
+  function getHighlightedResponse(responses) {
+    // console.log("responses: "+responses)
+    for (let i = 0; i < responses.length; i++) {
+      // console.log("check response answer: "+responses[i].answer)
+      if (responses[i].answer != ""){
+        // console.log("response is non-empty!")
+        setFirstLoad(1)
+        return responses[i]
+      }
+    }
+  }
+
   async function fetchMoreResponses() {
     const LIMIT = 300;
+    var nonEmptyResponse = null;
     const { newResponses, newLastDocSnapshot } = await getDbReflectionResponsesPaginated({
       lastDocSnapshot,
       limit: LIMIT,
@@ -369,6 +384,12 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
       setHasMore(false);
     }
     setResponses((prevResponses) => prevResponses === null ? newResponses : prevResponses.concat(newResponses));
+    // console.log("firstload value:"+firstLoad)
+    if (firstLoad === 0) {
+      // console.log("running firstload!")
+      nonEmptyResponse = getHighlightedResponse(newResponses);
+      setHighlightedResponse(nonEmptyResponse);
+    }
     setLastDocSnapshot(newLastDocSnapshot);
   }
 
@@ -439,7 +460,7 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
           currentPage === 4 ?
           <div className={classes.yourStoriesBkgrd}  onClick={() => setCurrentPage(currentPage + 1)}>
             <div className={classes.gradientBkgrd}>
-              <ChapterResponse key={responses[0].id} response={responses[0]} />
+              <ChapterResponse key={highlightedResponse.id} response={highlightedResponse} />
               <div className={classes.bottomLikeSection}>
                 <img src="/reflection/reflection_heart_white.png" className={classes.heart}/>
                 <Typography className={classes.whiteTextReflection}>Tap on this icon to say that you connected with a reflection.</Typography>

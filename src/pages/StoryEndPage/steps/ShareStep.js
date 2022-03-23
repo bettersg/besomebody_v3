@@ -19,7 +19,8 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 const useStyles = makeStyles((theme) => ({
   background: {
-    backgroundImage: ({ image }) => `url('/reflection/avatar_bg_purple.png')`,
+    // backgroundImage: ({ image }) => `url('/reflection/avatar_bg_purple.png')`,
+    backgroundColor: '#26248F',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '660px',
@@ -119,20 +120,25 @@ const ShareStep = ({ reflection, characterId, setState, getState, next }) => {
   // const empathyCharacter = getState('answerDocs') ?
   //   data2[2].answer ? persona.reflectionBrowser[0].empathyCharacters.find((character) => character.characterName.toUpperCase() === data2[2].answer.toUpperCase()) : persona.reflectionBrowser[0].empathyCharacters[0]
   //   : persona.reflectionBrowser[0].empathyCharacters.find((character) => character.characterName.toUpperCase() === personaName.toUpperCase());
+
+  const empathyCharacter = persona.reflectionBrowser[0].empathyCharacters.find((character) => character.characterName.toUpperCase() === personaName.toUpperCase());
   
   const data = getState('answerDocs') ? {
     storyName: personaFullName+"'s Story",
     text: data2[5].answer,
     avatar: data2[2].answer, 
-    avatarImage: '/shareable_avatars/sharebubble.png'
+    avatarImage: persona.shareImage
     // avatarImage: persona.profileImage 
   } : {
     storyName: personaFullName + "'s Story",
     text: "I now know what it's like to be you, " + personaName + ".",
     avatar: personaName.toLowerCase(), 
-    avatarImage: '/shareable_avatars/sharebubble.png'
+    avatarImage: persona.shareImage
     // avatarImage: persona.profileImage
   }
+
+  // ^ actually the conditional is redundant because the image is pre-set and does not use 
+  // the 'storyName', 'text' and 'avatar' inputs
 
   // console.log (persona.profileImage)
    // -- remove this section when receiving state variables,
