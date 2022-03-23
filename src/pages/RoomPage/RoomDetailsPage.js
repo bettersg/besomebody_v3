@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import {  updateDbUser , getDbUser } from '../../models/userModel'
+import {  updateDbUser , getDbUser , updateUserRoomDb } from '../../models/userModel'
 import { useAuth } from '../../contexts/AuthContext'
-import { getRoomDb } from '../../models/roomModel'
+import { updateRoomParticipantsDb , getRoomDb } from '../../models/roomModel'
+import {CHARACTER_MAP,REFLECTION_ID_MAP} from '../../models/storyMap'
 
 import {  useHistory } from 'react-router-dom'
 import { useSnackbar } from '../../contexts/SnackbarContext'
@@ -13,8 +14,7 @@ import {
 } from '@material-ui/core'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import HomeworkAvatarBox from './HomeworkAvatarBox'
-import {CHARACTER_MAP,REFLECTION_ID_MAP} from '../../models/storyMap'
-import { LocalDrinkSharp } from '@material-ui/icons'
+
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
     // backgroundPosition: 'center',
     backgroundColor: 'white',
     height: '660px',
+    overflow: 'scroll',
     [theme.breakpoints.only('xs')]: {
         height: 'calc(var(--vh, 1vh) * 100)',
     },
@@ -36,9 +37,9 @@ const useStyles = makeStyles((theme) => ({
 
   },
   bottom: {
-    bottom: 20,
+    // bottom: 20,
     // height: '20vh',
-    position: 'absolute',
+    // position: 'absolute',
     marginLeft: 'auto',
     marginRight: 'auto',
     left: 0,
@@ -109,7 +110,22 @@ const useStyles = makeStyles((theme) => ({
       boxShadow: 'none',
       
     },
+  },
+  btn2: {
+    padding: '10px 50px',
+    borderRadius: '40px',
+    marginBottom: '20px',
+    border: '2px solid',
+    borderColor:'#664EFC',
+    textDecoration: 'none',
+    color: '#664EFC',
+    fontWeight: '700',
+    '&:hover': {      
+      boxShadow: 'none',
+      
+    },
   }
+
 }))  
 
 
@@ -168,6 +184,46 @@ const RoomDetailsPage = () => {
   // console.log('cc', characterChapters)      
 
   
+  const saveRoomStartGame = async () => {
+    
+    try {
+      setIsLoading(true)          
+      await updateRoomParticipantsDb(room.id, currentUser.id)  
+      await updateUserRoomDb(currentUser.id, room.id)  
+      await updateDbUser({ activeRoom: room.code }, currentUser.id)   
+      console.log('Room Updated', room.code)
+      history.push('/')  // redirect to root which will be the characterchoice page now.     
+    } catch (err) {
+      setSnackbar({
+        message: `There was an error: ${err.message}`,
+        open: true,
+        type: 'error',
+      })
+    }
+    setIsLoading(false)      
+
+  };
+
+
+  const exitActiveRoom = async () => {        
+    try {
+      setIsLoading(true)          
+    //   await updateRoomParticipantsDb(room.id, currentUser.id)  
+    //   await updateUserRoomDb(currentUser.id, room.id)  
+      await updateDbUser({ activeRoom: null }, currentUser.id)   
+      console.log('Room Exited')
+      history.push('/')  // redirect to root which will be the characterchoice page now.     
+    } catch (err) {
+      setSnackbar({
+        message: `There was an error: ${err.message}`,
+        open: true,
+        type: 'error',
+      })
+    }
+    setIsLoading(false)      
+
+  };
+  
 
 
     return (
@@ -192,8 +248,9 @@ const RoomDetailsPage = () => {
         </Box>  
 
         <Box className={classes.bottom}>
-          <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} href="/">Play Game</Button>         
-                 
+          {/* <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} href="/">Play Game</Button>          */}
+          <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} onClick={() => saveRoomStartGame()}>Start Game</Button>         
+          <Button variant="outlined" type="submit" className={classes.btn2} disabled={isLoading} onClick={() => exitActiveRoom()}>Leave Room</Button>         
         </Box>        
       </Box>
   

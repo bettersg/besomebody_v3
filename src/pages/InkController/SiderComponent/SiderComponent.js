@@ -123,7 +123,7 @@ export default function SwipeableTemporaryDrawer(props) {
           
           <div className="SideMenu__menuitems__item">
             {userFromDb?.activeRoom &&
-              <Link to={"/room/" + userFromDb?.activeRoom} className="SideMenu__menuitems__label"><SVG src="/side_menu/profile.svg" className="SideMenu__menuitems__icons" />
+              <Link to={"/room_details/" + userFromDb?.activeRoom} className="SideMenu__menuitems__label"><SVG src="/side_menu/profile.svg" className="SideMenu__menuitems__icons" />
                 <span>Your Room</span></Link>
             }
             {!userFromDb?.activeRoom &&

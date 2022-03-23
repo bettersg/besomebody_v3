@@ -67,6 +67,8 @@ const useStyles = makeStyles(theme => ({
         fontSize: '0.8rem',
         backgroundColor: '#664EFC',
         color: '#FFFFFF',
+        textAlign: 'center',
+        
     },
     topLine: {
         width: '100%',
@@ -76,6 +78,13 @@ const useStyles = makeStyles(theme => ({
         margin: 0,
         border: 0,
         top:0
+    },
+    btn: {
+        border: '2px solid #ffffff',
+        borderRadius: '50px',
+        padding: '4px 20px',
+        color: '#FFFFFF',
+        margin: 10,
     }
 }))
 
@@ -174,7 +183,7 @@ export const CharacterChoicePage = () => {
             {room &&
                 <Box className={classes.instructions} >
                     <Typography variant="body1" >You are playing in facilitated room <b>{room.code}</b></Typography>
-                <Typography variant="body2" >{room.instructions}</Typography>
+                    <Button className={classes.btn} href={"/room_details/" + room.code}>Room Instructions</Button>                
                 </Box>
             }
             {/* <!-- Continue Playing Banner --> */}

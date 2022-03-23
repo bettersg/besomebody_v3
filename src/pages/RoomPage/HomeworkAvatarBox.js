@@ -31,7 +31,9 @@ export default function HomeworkAvatarBox(props) {
     result2.map((reflection,i) => {
       
       return (
-        <HomeworkAvatar key={i} reflection={reflection} />
+        <><HomeworkAvatar key={i} reflection={reflection} />
+          <hr />
+        </>
         //  <Box key={reflection}>                  
             
         //     Character: {reflection.characterId}        
