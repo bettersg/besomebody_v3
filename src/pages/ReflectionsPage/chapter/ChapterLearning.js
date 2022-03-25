@@ -126,7 +126,7 @@ const ChapterLearning = ({ setPage , reflection }) => {
           {reflection.media ?
             reflection.mediatype === "video" ?
               <a href={reflection.media} target="_blank" className={classes.link}><img src={reflection.mediaimage} className={classes.videoImage}/></a> :
-              <a href={reflection.media} target="_blank" className={classes.link}><Button variant="contained" className={classes.findOutBtn} >Find Out More</Button></a>
+              <a href={reflection.media} target="_blank" className={classes.link}><Button variant="contained" className={classes.btnFindout} >Find Out More</Button></a>
             : null
           }
       </Box>
