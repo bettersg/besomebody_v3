@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useParams  , useHistory } from 'react-router-dom'
 
 import { Box, Typography, Button, CircularProgress } from '@material-ui/core'
@@ -10,6 +10,7 @@ import { createDbReflectionResponses } from "../../../models/reflectionResponseM
 
 import QUESTIONS from "../../../reflections/questions.json";
 import { useAuth } from '../../../contexts/AuthContext';
+import { getDbUser } from '../../../models/userModel.js'
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
@@ -100,7 +101,17 @@ const ReflectionForm = ({ reflection }) => {
   const { setSnackbar } = useSnackbar();
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory()
-  const { name  } = useParams()
+  const { name } = useParams()
+  const [userFromDb, setUserFromDb] = useState(null)
+
+    useEffect(() => {
+        const getUser = async () => {
+        const user = await getDbUser(currentUser.id)
+        return setUserFromDb(user)
+        }
+
+        getUser()
+    }, [currentUser.id])
 
   const questions = useMemo(
     () => reflection
@@ -123,6 +134,7 @@ const ReflectionForm = ({ reflection }) => {
         answer,
         submittedAt: new Date(),
         timestamp: Date.now(),
+        ...userFromDb?.activeRoom  ? { room: userFromDb?.activeRoom } : {},
       }
     });
     try {
@@ -139,6 +151,7 @@ const ReflectionForm = ({ reflection }) => {
       history.push("/chapterend/" + name + '/' + reflection.chapter)
     }
   }
+  console.log(userFromDb?.activeRoom)
 
   return (
     <Box pt={6} pb={2} className={classes.chaptWrapperContainer}>

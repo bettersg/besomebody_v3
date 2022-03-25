@@ -28,6 +28,7 @@ const LongFeedbackStep = ({ reflection, questions, characterId, setState, getSta
         answer,
         submittedAt: new Date(),
         timestamp: Date.now(),
+        ...currentUserDb?.activeRoom  ? { room: currentUserDb?.activeRoom } : {},
       };
     });
 
@@ -38,6 +39,7 @@ const LongFeedbackStep = ({ reflection, questions, characterId, setState, getSta
     // Update the user achievements.
 
     const currentUserDb = await getDbUser(currentUser.id);
+    console.log(currentUserDb)
 
     await updateDbUser({
       [`character_${characterId}_completed`]: true,

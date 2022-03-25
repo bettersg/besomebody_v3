@@ -75,7 +75,7 @@ const introParagraphs = {
     "text": "If you haven't played the game yet, it's pretty simple. You'll 'be' a character and make choices in an interactive story experience. You'll also do quiz games and share reflections.",
   },
   { step:3,
-    "text": "This is a game about experiencing empathy, so you'll need to keep an open mind and heart. If a scene make you uncomfortable, consider why that might be the case before you respond. ",
+    "text": "The facilitator will lead a discussion after you play, so reflect on your experience. If a scene make you uncomfortable, consider why that might be the case. ",
   },
   { step:4,
     "text": "As this is a facilitated room, the facilitator will see all the reflections and choices made, but we will hide your actual identity from the other players. ",
