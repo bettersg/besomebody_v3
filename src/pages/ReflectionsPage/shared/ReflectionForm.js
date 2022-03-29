@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
   chaptFeedbackContainer: {
     height: "151px",
-    backgroundColor: "#3835C1",  
+    backgroundColor: "#D12419",  
     marginTop:"0", 
     paddingTop: "32px", 
   },
@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     },
     paddingTop: 0, 
         
-    backgroundColor: '#8ADFE5',
+    backgroundColor: '#AB0601',
     overflow: "auto", 
   },
   formGroup: {
@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '10px 50px',
     borderRadius: '40px',
     marginBottom: '20px',
-    background: '#172153',
+    background: '#FF3715',
     textDecoration: 'none',
     color: '#ffffff',
     fontWeight: '700',
