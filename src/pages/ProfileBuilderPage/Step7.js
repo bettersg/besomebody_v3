@@ -35,26 +35,28 @@ function Step7(props) {
   const [roomCode, setroomCode] = roomCodeValue;
 
   
+  // console.log(roomCode)
+  
   // setroomCode('abc123')
   // let roomCode = room
   // console.log('roomCode' , roomCode)
   // console.log('room' , room)
   
-  const asyncRoom = async () => {
-    const room = await getRoomDb(roomCode)
-    return room
-  }
+  // const asyncRoom = async () => {
+  //   const room = await getRoomDb(roomCode)
+  //   return room
+  // }
   
-  useEffect(() => {
-    const loadRoom = async () => {
-      try {
-        const room = await asyncRoom()
-        setRoom(room)        
-      }
-      catch (err) { console.log(err) }
-    }
-    loadRoom()
-  }, [])
+  // useEffect(() => {
+  //   const loadRoom = async () => {
+  //     try {
+  //       const room = await asyncRoom()
+  //       setRoom(room)        
+  //     }
+  //     catch (err) { console.log(err) }
+  //   }
+  //   loadRoom()
+  // }, [])
   
 
   // console.log(room)
@@ -68,7 +70,7 @@ function Step7(props) {
     housing: props.state.housing?props.state.housing.toUpperCase():null,
     username: props.state.username ? props.state.username : null,
     timestamp: Date.now(),
-    // room: [room],
+    activeRoom: room? [room]: null,
     }
     // console.log(room.id)
 
@@ -80,8 +82,8 @@ function Step7(props) {
       try {
         setIsLoading(true)          
         await updateDbUser(formData, currentUser.id)
-        if (room) {         
-          history.push('/room/'+room.roomCode) 
+        if (roomCode) {         
+          history.push('/room/'+roomCode) 
         }
         else {
           history.push('/')  // redirect to root which will be the characterchoice page now.
@@ -117,26 +119,13 @@ function Step7(props) {
                   <div>Religion: {props.state.religion?props.state.religion.toUpperCase():"You left this blank"}</div>
                   <div>Housing Type: {props.state.housing?props.state.housing.toUpperCase():"You left this blank"}</div>
                   <div>Username: {props.state.username?props.state.username:"You left this blank"}</div>   
-                {room &&
+                {roomCode &&
                   <Box>
-                      <div>You are a participant in room.</div>
+                    <div>You are a participant in room: {roomCode}</div>
                     </Box>
                   }
                   
                 <br />
-                <Button
-                    onClick={() => props.jump(1)}
-                    variant="outlined"                                        
-                  // className="submitBtn"
-                  style={{
-                    padding: '10px 10px',
-                    borderRadius: '40px',
-                    marginBottom: '20px',
-                    marginLeft: 'auto',
-                    marginRight: 'auto',
-                    textDecoration: 'none',                   
-                  }}>Rebuild your profile</Button>
-
                 <Button
                     type="submit"
                     variant="contained"
@@ -163,6 +152,21 @@ function Step7(props) {
                   >
                     Submit - then start the game!
                 </Button>
+                
+                <Button
+                    onClick={() => props.jump(1)}
+                    variant="outlined"                                        
+                  // className="submitBtn"
+                  style={{
+                    padding: '10px 10px',
+                    borderRadius: '40px',
+                    marginBottom: '20px',
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                    textDecoration: 'none',                   
+                  }}>Rebuild your profile</Button>
+
+               
                   </form>
                 </Box>
               </Box>

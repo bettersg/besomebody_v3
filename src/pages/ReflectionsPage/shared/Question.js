@@ -17,8 +17,8 @@ const Question = ({ question, value, onChange, reflectionId, context }) => {
     }));
     setCounts(results);
   }
-  console.log('1 qb',question.body)
-  console.log('1 context', context)
+  // console.log('1 qb',question.body)
+  // console.log('1 context', context)
   const body = formatString(question.body, context);
 
   const handleChange = (event) => {

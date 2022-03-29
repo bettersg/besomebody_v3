@@ -55,3 +55,31 @@ export const deleteDbUser = async (userId) => {
     throw new Error(`Error at deleteDbUser: ${err}`)
   }
 }
+
+export const updateUserRoomDb = async (userId, roomId) => {
+  
+    const userRef = firestore.collection('users').doc(userId)
+    userRef.get().then((doc) => {
+      if (doc.exists) {        
+        if (doc.data().room == null) {
+          userRef.set({
+            room: [roomId]
+          }, { merge: true })
+        }        
+        if (doc.data().room.includes(roomId)) {
+          console.log("Room already exists for user");
+          return null
+        }
+        else {
+          userRef.update(
+            {            
+              room: [...doc.data().room, roomId]
+            }
+          )
+        }
+      }
+   
+    }).catch((error) => {
+      console.log("Error getting document:", error);
+    });  
+}

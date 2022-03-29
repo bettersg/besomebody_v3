@@ -1,6 +1,7 @@
 import NadiaInk from '../stories/nadia.ink.json'
 import AmanInk from '../stories/aman.ink.json'
 import RaviInk from '../stories/ravi.ink.json'
+import ZhihaoInk from '../stories/zhihao.ink.json'
 
 // TODO: Update with other properties such as character image, character bio, chapter summary, etc
 /* 
@@ -27,9 +28,59 @@ chapters []
  
  -> to add the primary colour and secondary colour info for each character based on the UI design.
  
-// reflectionIDs: aman 1,5,6 | nadia 2,3,4 |  ravi 7,8,9,10,11 |  zhihao 12,13,14 
+// reflectionIDs: aman 1,5,6 | nadia 2,3,4 |  ravi 7,8,9,10 |  zhihao 11,12,13
 
 */
+
+export const REFLECTION_ID_MAP = {
+  1: {  // Aman 1
+    characterId: 2,
+    chapterId: 1,
+  },
+  2: {  // Nadia 1
+    characterId: 1,
+    chapterId: 1,
+  },
+  3: {  // Nadia 2
+    characterId: 1,
+    chapterId: 2,
+  },
+  4: {  // Nadia 3
+    characterId: 1,
+    chapterId: 3,
+  },
+  5: {  // Aman 2
+    characterId: 2,
+    chapterId: 2,
+  },
+  6: {  // Aman 3
+    characterId: 2,
+    chapterId: 3,
+  },
+  7: {  // Ravi 1
+    characterId: 3,
+    chapterId: 1,
+  },
+  8: {  // Ravi 2
+    characterId: 3,
+    chapterId: 2,
+  },
+  9: {  // Ravi 3
+    characterId: 3,
+    chapterId: 3,
+  },
+  10: {  // Ravi 4
+    characterId: 3,
+    chapterId: 4,
+  },
+  11: {  // Zhihao 1
+    characterId: 4,
+    chapterId: 1,
+  },
+}
+
+
+
 
 export const CHARACTER_MAP = [
   {
@@ -667,12 +718,154 @@ export const CHARACTER_MAP = [
   {
     characterId: 4,
     name: "Zhihao Lim",
-    linkName: "",
+    linkName: "zhihao",
     profileImage: "/images/profile_zhihao.png",
     characterIntroImage:  "/character_choice_page/zhihao.png",
     description: "Zhihao might have a future in e-sports, but will it disappear before his eyes? Life is about to get complicated, as a fateful Tweet gains a life of its own...",
-    jsonLink: '../stories/nadia.ink.json',
-    playable: false,
+    jsonLink: '../stories/zhihao.ink.json',
+    playable: true,
+    jsonFile: ZhihaoInk,
+    primaryColour: '#7F89BC',
+    secondaryColour: '#B1EAEE',
+    newestChapter: 1,
+    chapters: [
+      {
+        chapterId: 1,
+        reflectionId:11,
+        number: 1,
+        title: "A Chinese New Year",
+        knotTag: "zhihao_1_intro",
+        summary: "Zhihao meets his uncles, and unwinds by playing games later. Both situations put him in a tough spot.",
+        playable: true,
+        images: [
+          "/images/bg_zhihao_intro.jpg",          
+          "/images/bg_zhihao_bedroom.jpg",
+          "/images/bg_zhihao_car.jpg",
+          "/images/bg_zhihao_cnyfood.jpg",
+          "/images/bg_zhihao_hdb_carpark.jpg",
+          "/images/bg_zhihao_intro.jpg",
+          "/images/bg_zhihao_jigu_home.jpg",
+          "/images/bg_zhihao_lohei.jpg",
+          "/images/bg_zhihao_twitchgame.gif",
+          "/images/bg_zhihao_twitchmother.jpg",
+          "/images/ui_zhihao_message.jpg",
+          "/images/cha_zhihao_mother_smiling.png",
+          "/images/cha_zhihao_duagu_laugh.png",
+          "/images/cha_zhihao_duagu_normal.png",
+          "/images/cha_zhihao_duagu_smile.png",
+          "/images/cha_zhihao_jigu_jokingmean.png",
+          "/images/cha_zhihao_jigu_jokingsmirky.png",
+          "/images/cha_zhihao_jigu_normal.png",
+          "/images/cha_zhihao_mother_frustrated.png",
+          "/images/cha_zhihao_mother_mean.png",
+          "/images/cha_zhihao_mother_normal.png",
+        ],
+        endings: [
+          {
+            endingId: 1,
+            title: "Zhihao deletes the tweet",
+            inkVar: "chapter_1_ending_1",
+          },
+          {
+            endingId: 2,
+            title: "Zhihao keeps the tweet for publicity",
+            inkVar: "chapter_1_ending_2",
+          },
+          {
+            endingId: 3,
+            title: "Zhihao leaves the tweet as it will blow over",
+            inkVar: "chapter_1_ending_3",
+          },
+        ]
+      },
+      {
+        chapterId: 2,
+        number: 2,
+        reflectionId:12,
+        title: "Team Work",
+        knotTag: "zhihao_2_intro",
+        summary: "Zhihao is tested in multiple ways. Even with his skills, he may let a friend down.",
+        playable: false,
+        images: [
+          "/images/bg_nadia_intro.jpg",
+        ],
+        endings: [
+          {
+            endingId: 1,
+            title: "Azlin gets upset with you",
+            inkVar: "chapter2_ending_1",
+          },
+          {
+            endingId: 2,
+            title: "Azlin tells you to give him up",
+            inkVar: "chapter2_ending_2",
+          },
+        ]
+      },
+      {
+        chapterId: 3,
+        number: 3,
+        reflectionId:13,
+        title: "Playing to the Crowd",
+        knotTag: "zhihao_3_intro",
+        summary: "Zhihao witnesses the power of social media. Will he master it, or will it conquer him?",
+        playable: true,
+        images: [
+          "/images/bg_nadia_intro.jpg",     
+        ],
+        endings: [
+          {
+            endingId: 1,
+            title: "Nadia and Gavin, together",
+            inkVar: "chapter3_ending_1",
+          },
+          {
+            endingId: 2,
+            title: "Nadia keeps her options open",
+            inkVar: "chapter3_ending_2",
+          },          
+          {
+            endingId: 3,
+            title: "Nadia moves forward alone",
+            inkVar: "chapter3_ending_3",
+          }, 
+        ]
+      },
+    ],
+    reflectionBrowser: [
+      {         
+        title: "Reflection Browser",
+        knotTag: "story_end_browser",
+        summary: "Nadia's story in the game has ended, but the stories of all our players are waiting to be explored.",
+        playable: true,
+        images: [
+          "/images/bg_nadia_intro.jpg",         
+        ],
+        empathyCharacters: [
+          {
+            characterName: 'Nadia',
+            characterImage: '/shareable_avatars/nadia.png',
+          },
+          {
+            characterName: 'Azlin',
+            characterImage: '/shareable_avatars/azlin.png',
+          },
+          {
+            characterName: 'Gavin',
+            characterImage: '/shareable_avatars/gavin.png',
+          },
+          {
+            characterName: 'Chloe',
+            characterImage: '/shareable_avatars/chloe.png',
+          },
+          {
+            characterName: 'Rahman',
+            characterImage: '/shareable_avatars/rahman.png',
+          },
+    
+        ]
+      },
+    ]
   }, 
   {
     characterId: 5,
