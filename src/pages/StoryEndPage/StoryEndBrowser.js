@@ -12,6 +12,7 @@ import ReflectionIntroStep from './steps/ReflectionIntroStep';
 import ReflectionResponsesStep from './steps/ReflectionResponsesStep';
 // import LongFeedbackStep from './steps/LongFeedbackStep';
 // import DataBrowserStep from './steps/DataBrowserStep';
+import PreShareStep from './steps/PreShareStep';
 import ShareStep from './steps/ShareStep';
 // import StoryBrowserShare from './steps/StoryBrowserShare';
 import AudioPlayer from "../../music/Music"
@@ -60,6 +61,7 @@ const StoryEndBrowser = ({ reflectionId: propsReflectionId, globalVariables }) =
         <Step title="Reflections from Others"  component={(props) => <ReflectionResponsesStep reflectionId={reflectionId}  {...props} />} />
         {/* <Step title="Long Feedback" component={(props) => <LongFeedbackStep reflection={reflection} user={user} {...props} />} /> */}
         {/* <Step title="Data Browser" component={DataBrowserStep} /> */}
+        <Step title="Pre-Share Step" component={PreShareStep} />
         <Step title="Share" component={(props) => <ShareStep reflection={reflection} characterId={globalVariables.character_id} user={user} {...props} />} />
         
 
