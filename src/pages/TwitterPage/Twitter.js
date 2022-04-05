@@ -174,12 +174,13 @@ const Twitter = (props) => {
                       >
                         <div style={{display: "flex", alignItems:"center"}}>
                           <Avatar>
-                              {(step.tags[0]?.includes('speaker_1') ? (specialTags.speaker_1_name).charAt(0) : null)}
+                              {/* {(step.tags[0]?.includes('speaker_1') ? (specialTags.speaker_1_name).charAt(0) : null)}
                               {(step.tags[0]?.includes('speaker_2') ? (specialTags.speaker_2_name).charAt(0) : null)}
                               {(step.tags[0]?.includes('speaker_3') ? (specialTags.speaker_3_name).charAt(0) : null)}
                               {(step.tags[0]?.includes('speaker_4') ? (specialTags.speaker_4_name).charAt(0) : null)}
                               {(step.tags[0]?.includes('speaker_5') ? (specialTags.speaker_5_name).charAt(0) : null)}
-                              {(step.tags[0]?.includes('speaker_6') ? (specialTags.speaker_6_name).charAt(0) : null)}
+                              {(step.tags[0]?.includes('speaker_6') ? (specialTags.speaker_6_name).charAt(0) : null)} */}
+                             
                         </Avatar> 
                           <div className="Twitter__messages--tweetContent">
                             <div className="Twitter__messages--handle">
