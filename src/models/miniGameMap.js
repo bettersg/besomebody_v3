@@ -658,9 +658,9 @@ export const MINI_GAME_MAP = [
     {
       question_id: 2,
       question:
-        "After Zhihao's father passed, the family observed a period of mouring and did not attend events. Which of these customs is not associated with Chinese funerals?",
+        "After Zhihao's father passed, the family observed a period of mouring and did not attend events. Which of these customs is not associated with Chinese (non-Christian) funerals?",
       correct_answer_id: 4,
-      explanation: "Immediate cremation is not normally associated with Chinese funerals, but with Indian ones.",
+      explanation: "Immediate cremation is normally associated with Hindu funerals, as Hindus believe the physical body has no sacred purpose and cremation helps reincarnation. For Chinese funerals, the deceased may be buried or cremated, usually after a multi-day wake is held.",
       type: "text",
       answers: [
         {
@@ -684,11 +684,11 @@ export const MINI_GAME_MAP = [
     {
       question_id: 3,
       question:
-        "Older Chinese Singaporeans protested heavily against the removal of Chinese-medium schools (like the original Chinese High and Nantah University). To many of them, despite being a largely ethnic-Chinese country in the 60s, these decisions reflected their 'lack of Chinese privilege'. ",
+        "Older Chinese Singaporeans protested heavily against the removal of Chinese-medium schools (like the original Chinese High and Nantah University), and felt such actions reflected a lack of their 'Chinese Privilege' ",
       type: "text",
       correct_answer_id: 1,
       explanation:
-        "Many local Chinese from that era feel like the term 'Chinese Privilege' is not appropriate for them because during the 60s, the Nantah episode and the emphasis on English over Chinese language reflected a distinct 'lack of privilege' for them.",
+        "In a 2021 speech by Min Lawrence Wong, he explained that older local Chinese feel like the modern term 'Chinese Privilege' does not reflect their lived experience, because of the 'Nantah episode' and the emphasis on English over Chinese language (and the removal of dialects) put them at a distinct disadvantage, despite being an ethnic majority.",
         answers: [
           {
             answer_id: 1,
