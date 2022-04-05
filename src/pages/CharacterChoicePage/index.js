@@ -132,7 +132,22 @@ export const CharacterChoicePage = () => {
       getRoom()
       }, [userFromDb?.activeRoom])
 
-	const characters = CHARACTER_MAP;
+    const characters = CHARACTER_MAP;
+    
+    // shuffle the characters
+    const shuffle = (array) => {
+        let currentIndex = array.length, temporaryValue, randomIndex;
+        while (0 !== currentIndex) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+        return array;
+    }
+
+    shuffle(characters);
 
     // const randNum = () => {
     //     return Math.round((Math.random() + 1) * 200)
