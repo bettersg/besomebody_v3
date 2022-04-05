@@ -235,7 +235,6 @@ Aiyah I better eat this first. Eat no need to talk. #inner_monologue
 Swee. Can take all the crackers for myself. #inner_monologue
 Not like got cousin want to fight me for this. #inner_monologue
 Hope nobody asks me anything if I keep eating. #inner_monologue
-#background:bg_zhihao_lohei.jpg
 Wah lao eh, Dua Gu looking at me liao. #inner_monologue
 // Back to // Background: A circular table in the dining room, with a plate of yusheng in the middle. There are other dishes on the side. #
 Must study hard hor, Ah Hao. Make your Pa proud. #speaker_left
@@ -1086,23 +1085,147 @@ I really never learn leh. If Ma wants to fetch me and I say okay, then no matter
 Ah Boy, ten minutes away only! #speaker_left
 If she say ten means twenty. Total opposite of Pa. #inner_monologue
 Eh Ma, nevermind lah. I take Grab. #speaker_self
-Tsk, 不要浪费钱! <bu yao lang fei qian!> (Don’t waste money!) #speaker_left
+Tsk, don’t waste money! #speaker_left
 I driving now. Fifteen minutes only. You wait hor! #speaker_left
 Wah lao eh, Ma! Ten or fifteen? Don’t need to come lah, I booking Grab now. Bye. #speaker_self
 Boy-- #speaker_left
 #speaker_left_image:pixel.png
 //ZHIHAO ends the call. Switch to the Grab screen with the map showing 10 minutes ETA. #
-#background:bg_zhihao_hdb_carpark.jpg
 Wah lau, even the Grab only here in 10 minutes. Like that how to reach on time sia?  #inner_monologue
+#ui:narrator
+#background:bg_zhihao_hdb_carpark.jpg
+10 minutes later, both my ma and the taxi arrived at the same time. 
+Even though I told ma not to come!
+#ui:scene
+#background:bg_zhihao_hdb_carpark.jpg
+#speaker_left_image:cha_zhihao_mother_frustrated.png
+#speaker_left_name:Ma
+Ah Boy! Faster get in! #speaker_left
+Ah, Mister! Mister! I can fetch my son-- nevermind! Like that you can fetch other people. Thank you ah, thank you! #speaker_left
+You want to go to your mother’s car? It’s okay. You pay already so cannot cancel. #speaker_right
+Malu, sia. #inner_monologue
+And Ma drive sibeh slow. Aiyoh why she do this... #inner_monologue
+#speaker_right_image:cha_zhihao_driver_normal.png
+#speaker_right_name:Driver
++ [Take the taxi] -> zhihao_2_2a
++ [Take your ma's offer] -> zhihao_2_2b
 
-//The car passes MOTHER’s car while pulling out into the main road. She spots ZHIHAO. A view of her face through a wound-down window from ZHIHAO’s vantage point. Any shot of the Grab driver can simply show him in silhouette/without defining facial detail. #
+= zhihao_2_2a
+#knot:zhihao_2_2a
+#ui:scene
+#speaker_left_image:cha_zhihao_mother_frustrated.png
+#speaker_left_name:Ma
+#speaker_right_image:cha_zhihao_driver_normal.png
+#speaker_right_name:Driver
+#background:bg_zhihao_taxi.jpg
+Uncle, let's go please. #speaker_self
+You sure? #speaker_right
+Faster lah, Ah Boy! Wait late already. #speaker_left
+How come the window cannot go down? #inner_monologue
+Uncle, can help wind down the window? #speaker_self
+//Window is wound down. 
+Ma! No need, I pay already… No lah I need to go now. #speaker_self
+Uncle, can drive on please? You can wind up the window now. Thanks. #speaker_self
+#speaker_left_image:pixel.png
+Haiz. I look at Ma’s face I feel bad already. #inner_monologue
+#speaker_right_image:pixel.png
+// View from the car’s rear window of MOTHER’S car left behind. 
+#ui:narrator
+#background:bg_zhihao_esports.jpg
+20 minutes later, I arrived just in time at the Alphas try-outs venue.
+// Background: An esports training facility. It is darkly lit, with RGB keyboards, desktops and even headphones. Depending on who you ask, it is either cool or garish. It’s also nearly empty.
+#ui:scene
+#background:bg_zhihao_esports.jpg
+#speaker_left_image:cha_zhihao_ian_normal.png
+#speaker_left_name:Ma
+Woah. The place looks cool. Where’s the registration?  #inner_monologue
+// IAN stands in front of ZHIHAO. 
+Hey there! I’m Ian. You’re here for the tryouts, right? #speaker_left
+Yeah. I’m Zhihao. #speaker_self
+Ohh Zhihao! Great to see you. #speaker_left
+//Shot of a handshake between ZHIHAO and IAN. #
+You're a bit early but that’s alright. Just find a seat around and relax. We'll begin the matches once more candidates arrive. #speaker_left
+-> zhihao_2_3
+
+= zhihao_2_2b
+#knot:zhihao_2_2b
+#ui:scene
+#speaker_left_image:cha_zhihao_mother_frustrated.png
+#speaker_left_name:Ma
+#speaker_right_image:cha_zhihao_driver_normal.png
+#speaker_right_name:Driver
+#background:bg_zhihao_taxi.jpg
+Uh… #speaker_self
+//MOTHER has opened the door of the shotgun seat, facing ZHIHAO’s vantage point. #
+Quick lah! Come in to the car. #speaker_left
+Lai liao lah. #speaker_self
+Sorry, Uncle. I take my mother's car. #speaker_self
+It's ok boy. You paid already anyway. #speaker_right
+//Ambient sound of car door closing, then opening. Shift to vantage point in MOTHER’s car, in the shotgun seat. #
+Eh Ma, must drive faster. #speaker_self
+I drive very fast already! Wait accident then you know. #speaker_left
+Confirm late liao. Confirm plus chop. #inner_monologue
+
+#speaker_right_image:pixel.png
+#ui:narrator
+#background:bg_zhihao_esports.jpg
+35 minutes later, I arrived late at the Alphas try-outs venue.
+// Background: An esports training facility. It is darkly lit, with RGB keyboards, desktops and even headphones. Depending on who you ask, it is either cool or garish. It’s also nearly empty.
+#ui:scene
+#background:bg_zhihao_esports.jpg
+#speaker_left_image:cha_zhihao_ian_normal.png
+#speaker_left_name:Ian
+Shit. The whole place so rojak. I cannot even find where to register.  #inner_monologue
+// IAN stands in front of ZHIHAO. #
+Hey there! Tryouts are this way. Are you Zhihao? #speaker_left
+Yeah, sorry I’m late. #speaker_self
+No, no. It’s alright! We’ve only just started. #speaker_left
+//Shot of handshake between ZHIHAO and IAN. #
+I’m Ian. Glad you could make it. #speaker_left
+Let’s get you to your assigned team and find you a seat. #speaker_left
+-> zhihao_2_3
 
 
-Ah Boy! 快进来! <kuai jing lai> (Ah Boy, faster get in!) #speaker_left
-
--- Ah, Mister! Mister! I can fetch my son-- nevermind! Like that you can fetch other people. Thank you ah, thank you! #
-
-
-(Malu, sia.) #speaker_self
+=== zhihao_2_3 ===
+#ui:narrator
+#background:bg_zhihao_esports.jpg
+The Alphas tryout is about to start. 
+#ui:scene
+#background:bg_zhihao_esports.jpg
+#speaker_left_image:cha_zhihao_ian_normal.png
+#speaker_left_name:Ian
+#speaker_right_image:cha_zhihao_alex_normal.png
+#speaker_right_name:Alex
+// Background: A desktop setup, with a gaming monitor that looks like the ASUS ROG SWIFT PG258Q (i.e. an angular-looking expensive gaming monitor). There is an RGB keyboard, mouse and desk mat. #
+Wah. The set-up here power. Not like my one. #inner_monologue
+// Switch to ZHIHAO’s expression. #
+But I prep until close eyes can win. Why I feel so kan cheong? #inner_monologue
+No time to kan cheong liao, must stay in comms all the way. #inner_monologue
+// Flashback to ZHIHAO’s webcam covered up/falling off (depending on player’s choice) in previous chapter. Montage of chat stream close-ups of teammates’ criticisms. #
+I cannot lose control of my team, like that day that time. #inner_monologue
+// Close-up of a hand drawing out the chair next to ZHIHAO. #
+You're Ah-hao right? Your gamertag, at least. #speaker_right
+//A tall Chinese boy is now sitting beside ZHIHAO. He leans back easily in his chair with an air of confidence. #
++ Uh, yes that's me. [] #speaker_self
+    Wah piang. This one jiak kantang sia. #inner_monologue
+    Funny fella. He wanna wait for me to say what?  #inner_monologue
+    Uh, my real name is Zhihao. #speaker_self
++ Yah, I'm the one and only ahao_gamer! [] #speaker_self
+    Yah, I’m the one and only Ahao. Haha. #speaker_self
+    Wtf. This guy sibeh ang moh. #inner_monologue
+    I see. And how may I address you? Just Ah-hao? #speaker_right
+    Oh. Uh, my real name is Zhihao. #speaker_self
+- Cool. It’s good to meet you. #speaker_right
+Alexander here. But my gamertag is Crash. #speaker_right
+Heh. Nice to meet you, Alexandra. #speaker_self
+Alexan-der. Alexandra’s a girl’s name. #speaker_right
+Oh sorry sorry. Haha. Alexander. Okay. #speaker_self
+If it’s a tongue-twister for you, just call me Alex, yeah? #speaker_right
+Orh. Yah. Alex. Okay. #speaker_self
+//Two other players have now entered the room. Shot of the four of them in chairs in a small circle. #
+Heng ah everybody lai liao. #inner_monologue
+//Ian enters. #
+Alright people! You're going to be scrimming against another group of players in the other room. So get ready as a team, steady those nerves and, most importantly, have fun! All the best! #speaker_left
+All right players. We're gonna own them. Use your wits, go all out, be brutal! #speaker_right
 
 -> END
