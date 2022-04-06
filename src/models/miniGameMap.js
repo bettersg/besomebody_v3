@@ -626,86 +626,79 @@ export const MINI_GAME_MAP = [
   {
   game_id: 11,
   ui: "mcq",
-  introduction: "Zhihao Quiz Chapter 1",
+  introduction: "Zhihao's family conversations touched on some important cultural issues. Let's explore them further.",
   questions: [
     {
       question_id: 1,
       question:
-        "Q1 goes here",
+        "Zhihao's family speaks Chinese dialect. What percentage of all local households speak a Chinese dialect at home?",
       type: "text",
-      correct_answer_id: 2,
+      correct_answer_id: 1,
       explanation:
-        "The average monthly household income (i.e. the combined salary of all the people who live there) for Singaporeans who live in 1 or 2-bedroom HDBs is $2,997. [Department of Statistics Key Household Income Trends, 2020]",
+        "In 2020, only 8.7% of all households speak dialects at home (reduction from 2010, which was 14.3%). 48.3% speak English, 29.9% speak Mandarin, 9.2% speak Malay, and 2.5% speak Tamil at home.  [2020 Census]",
       answers: [
         {
           answer_id: 1,
-          title: "$1,504",
+          title: "8.7%",
         },
         {
           answer_id: 2,
-          title: "$2,997",
+          title: "12.5%",
         },
         {
           answer_id: 3,
-          title: "$10,127",
+          title: "14.3%",
         },
         {
           answer_id: 4,
-          title: "$14,254",
+          title: "20.1%",
         },
       ],
     },
     {
       question_id: 2,
       question:
-        "2nd Question",
+        "After Zhihao's father passed, the family observed a period of mouring and did not attend events. Which of these customs is not associated with Chinese (non-Christian) funerals?",
       correct_answer_id: 4,
-      explanation: "The average monthly household income (i.e. the combined salary of all the people who live there) for Singaporeans who live in landed properties is $27,838. [Department of Statistics Key Household Income Trends, 2020]",
+      explanation: "Immediate cremation is normally associated with Hindu funerals, as Hindus believe the physical body has no sacred purpose and cremation helps reincarnation. For Chinese funerals, the deceased may be buried or cremated, usually after a multi-day wake is held.",
       type: "text",
       answers: [
         {
           answer_id: 1,
-          title: "$10,127",
+          title: "Wearing a small cloth patch on your shoulder",
         },
         {
           answer_id: 2,
-          title: "$15,023",
+          title: "Disposing of a red string after attending the wake",
         },
         {
           answer_id: 3,
-          title: "$21,732",
+          title: "Burning paper models of possessions for the loved one",
         },
         {
           answer_id: 4,
-          title: "$27,838",
+          title: "Immediate cremation of the body",
         },
       ],
     },
     {
       question_id: 3,
       question:
-        "3rd Qn",
+        "Older Chinese Singaporeans protested heavily against the removal of Chinese-medium schools (like the original Chinese High and Nantah University), and felt such actions reflected a lack of their 'Chinese Privilege' ",
       type: "text",
-      correct_answer_id: 2,
+      correct_answer_id: 1,
       explanation:
-        "The unemployment rate for citizens in 2021 was 3.7% [Ministry of Manpower]. The unemployment rate for United States was 8.1% [World Bank], for comparison.",
+        "In a 2021 speech by Min Lawrence Wong, he explained that older local Chinese feel like the modern term 'Chinese Privilege' does not reflect their lived experience, because of the 'Nantah episode' and the emphasis on English over Chinese language (and the removal of dialects) put them at a distinct disadvantage, despite being an ethnic majority.",
         answers: [
           {
             answer_id: 1,
-            title: "1.7%",
+            title: "True",
           },
           {
             answer_id: 2,
-            title: "3.7%",
+            title: "False",
           },
-          {
-            answer_id: 3,
-            title: "5.7%",
-          },
-          {
-            answer_id: 4,
-            title: "7.7%",
-          },
+        
         ],
     },  
   ],
