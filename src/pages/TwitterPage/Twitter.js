@@ -135,24 +135,19 @@ const Twitter = (props) => {
             else if (step.tags[0]?.includes('speaker_self')) {
               if (innerMonoRef.current) { innerMonoRef.current.hidden = 'true' }
                   return (
-                    <Box
-                      key={step.text}
-                      mx={1}
-                      display="flex"
-                      justifyContent="flex-end"
-                    >
+                     
                       <Fade in={step.text} key={step.text} timeout={300}>
                         <Box
                           className={`Twitter__messages--threadpost`}
                           // borderRadius={5}
                           key={step.text}
                         >
-                          {(step.tags[1]?.includes('image') ?
+                          {/* {(step.tags[1]?.includes('image') ?
                             <img src={'/images/ico_' + name +'.png'} alt={step.text} className={classes.twitterImage} /> :
                             <div className="Twitter__messages--tweetContent">
                               <div className="Twitter__messages--handle">
                                 <div className="Twitter__messages--name">
-                                  { specialTags.speaker_self_name}                                 
+                                  { name}                                 
                                 </div>
                                 <div className="Twitter__messages--tag">
                                   {'@'+specialTags.speaker_self_tag}                                                      
@@ -160,11 +155,27 @@ const Twitter = (props) => {
                               </div>
                               <Typography key={step.text} className="Twitter__messages--tweet">{step.text}</Typography>
                             </div>
-                          )}
+                          )} */}
+                        <div style={{ display: "flex", alignItems: "center" }}>
+                        <Avatar   src={`/images/${specialTags.chat_group_image}`} />
+                            <div className="Twitter__messages--tweetContent">
+                              <div className="Twitter__messages--handle">
+                                <div className="Twitter__messages--name">
+                                  { name}                                 
+                                </div>
+                                <div className="Twitter__messages--tag">
+                                  {'@'+specialTags.speaker_self_tag}                                                      
+                                </div>
+                              </div>
+                              <div className="Twitter__messages--replyingTo">
+                                <Typography key={step.text} className="Twitter__messages--tweet_self">{step.text}</Typography>
+                              </div>
+                            </div>
+                          </div>
                           {setCurrentSpeaker(step.tags[0])}
                         </Box>
                       </Fade>
-                    </Box>
+                    
                   ) 
             } else if (step.tags[0]?.includes('speaker')) {     // this is needed to avoid rendering inner_monologue
               if (innerMonoRef.current) { innerMonoRef.current.hidden = 'true' }

@@ -151,7 +151,7 @@ const ReflectionForm = ({ reflection }) => {
       history.push("/chapterend/" + name + '/' + reflection.chapter)
     }
   }
-  console.log(userFromDb?.activeRoom)
+  // console.log(userFromDb?.activeRoom)
 
   return (
     <Box pt={6} pb={2} className={classes.chaptWrapperContainer}>

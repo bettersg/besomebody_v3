@@ -152,6 +152,17 @@
             font-weight: 400;
             font-style: normal;
         }
+        &--tweet_self {
+            letter-spacing: 0;
+            line-height: 18px;
+            margin-top: 4px;
+            // margin-left: 53px !important;
+            width: 283px;
+            color: $midnight100;            
+            font-size: 14px;
+            font-weight: 500;
+            font-style: normal;
+        }
         &--sender {
             background: #C9F3F9;
             width: 304px; 

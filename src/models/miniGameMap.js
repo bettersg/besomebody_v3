@@ -633,7 +633,7 @@ export const MINI_GAME_MAP = [
       question:
         "Zhihao's family speaks Chinese dialect. What percentage of all local households speak a Chinese dialect at home?",
       type: "text",
-      correct_answer_id: 2,
+      correct_answer_id: 1,
       explanation:
         "In 2020, only 8.7% of all households speak dialects at home (reduction from 2010, which was 14.3%). 48.3% speak English, 29.9% speak Mandarin, 9.2% speak Malay, and 2.5% speak Tamil at home.  [2020 Census]",
       answers: [

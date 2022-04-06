@@ -75,7 +75,7 @@ Minigame // must add some text
 */
 
 // DECLARE GLOBAL VARIABLES
-VAR character_id = 3
+VAR character_id = 4
 // VAR chapter_1_ending = 0 
 // VAR chapter_2_ending = 0 
 // VAR chapter_3_ending = 0 
@@ -296,6 +296,7 @@ Ah Hao, you tell your GuGus about your computer. Ma dunno how to explain this ki
 
 
 = zhihao_1_2a
+#ui:scene
 #speaker_right_image:cha_zhihao_jigu_normal.png
 #speaker_right_name:Ji Gu 
 Wah issit? One month how much you make? #speaker_right
@@ -340,6 +341,7 @@ Wah issit? One month how much you make? #speaker_right
 - -> zhihao_1_2b
 
 = zhihao_1_2b
+#ui:scene
 #speaker_left_image:cha_zhihao_duagu_normal.png 
 #speaker_left_name:Dua Gu
 #speaker_right_image:cha_zhihao_jigu_normal.png
@@ -856,7 +858,7 @@ RIP to our bro lol.  #speaker_2
 
 
 === chapter_1_ending_1 ===
-#knot: chapter_1_ending_1
+#knot:chapter_1_ending_1
 #ui:twitter
 #chat_group_title:Twitter for @ahao_gamer
 #chat_group_image:ico_zhihao.png
@@ -883,7 +885,7 @@ FML. Why I go write that? How come got so many likes? I better delete now.  #inn
 -> chapter_1_ending_1a
 
 === chapter_1_ending_1a ===
-#knot: chapter_1_ending_1
+#knot:chapter_1_ending_1a
 #ui:twitter
 #chat_group_title:Twitter for @ahao_gamer
 #chat_group_image:ico_zhihao.png
@@ -916,7 +918,7 @@ Gone already.Leng jing. (Calm down). Crap. Should I say sorry?  #inner_monologue
 
 
 === chapter_1_ending_2 ===
-#knot: chapter_1_ending_2
+#knot:chapter_1_ending_2
 #ui:narrator
 #background:bg_zhihao_bedroom.jpg
 FML that tweet went big. #inner_monologue
@@ -932,7 +934,7 @@ Means I'm not doing anything wrong. #inner_monologue
 
 
 === chapter_1_ending_3 ===
-#knot: chapter_1_ending_3
+#knot:chapter_1_ending_3
 #ui:narrator
 #background:bg_zhihao_bedroom.jpg
 Why I go write that? #inner_monologue
