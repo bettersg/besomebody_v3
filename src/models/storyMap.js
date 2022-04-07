@@ -539,7 +539,7 @@ export const CHARACTER_MAP = [
     characterIntroImage: "/character_choice_page/ravi.png", 
     description: "Ravi dreams of being an aviation engineer - but can he push past the stereotypes and doubts?",
     jsonLink: '../stories/ravi.ink.json',
-    shareImage:'/shareable_avatars/ravi_share.svg',
+    shareImage:'/shareable_avatars/ravi_share.png',
     jsonFile: RaviInk,
     playable: true,
     primaryColour: '#8DC000',
