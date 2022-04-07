@@ -75,7 +75,6 @@ Minigame // must add some text
 */
 
 // DECLARE GLOBAL VARIABLES
-VAR character_id = 4
 // VAR chapter_1_ending = 0 
 // VAR chapter_2_ending = 0 
 // VAR chapter_3_ending = 0 
@@ -92,6 +91,8 @@ VAR character_id = 4
 #background:bg_zhihao_intro.jpg
 #music:zhihao_intro.mp3
 Lim Zhihao #title
+VAR character_id = 4
+~ character_id = 4
 VAR chapter_id = 1
 ~ chapter_id = 1
 Eh, hi. I'm Zhihao.
