@@ -133,13 +133,13 @@ Ma and I are on the way to Chinese New Year lunch with my uncles. We are late, a
 #background:bg_zhihao_car.jpg
 #speaker_left_image:cha_zhihao_mother_normal.png
 #speaker_left_name:Ma
-Bai nian (greet them happy new year) to them for what. Bai nian also got nothing to say. #speaker_self
+Bai nian (greet them 'Happy New Year') to them for what. Bai nian also got nothing to say. #speaker_self
 Cannot say like that. Pa won't be happy. #speaker_left
 Now what time already? #speaker_left
 Late liao lah. #speaker_self
 What time is it?! #speaker_left
 // Zhihao’s phone. The lock screen shows 12:44 PM, 25 January. 
-12.45 #speaker_self
+12.45. #speaker_self
 ... #speaker_left
 People want to louhei (a celebration activity for Chinese New Year) you think they wait for you ah. #speaker_self
 Aiyah, Ma cannot anyhow leave early. If office need to OT then I bo pian (no choice) have to OT mah. Later other people see me leave, confirm not happy will make noise one. #speaker_left
@@ -147,7 +147,7 @@ A bit late nevermind lah. #speaker_left
 A bit. Fang pi (pffft) lah, ‘a bit’. #inner_monologue
 We not just late, we kan pua (damn) late - got difference hor. #speaker_self
 We not kan pua late, lah! #speaker_left
-Oi. First hor, you say don’t want to see your GuGus (uncles). Now you scared we late. You flipping prata ah, Boy? #speaker_left
+Oi. First hor, you say don’t want to see your uncles. Now you scared we late. You flipping prata ah, Boy? #speaker_left
 // Background: A traffic jam. 
 Wah lao eh, now traffic jam. #inner_monologue
 + Why you always like to be late? [] #speaker_self
@@ -220,14 +220,14 @@ Haha. No lah. #speaker_self
 Ah Hao! Everyone missed you! Every year hide at home thinkthinkthink not good for your mind, you know? #speaker_left
 Lol, I wanna hide also nowhere to hide. #inner_monologue
 We okay lah, Dua Gu. #speaker_self
-Lai, lai.  Come, come, go eat the food. No need shy. #speaker_left
+Come, come, go eat the food. No need shy. #speaker_left
 Last year, me and Ma had to skip CNY. When Pa passed away, we didn’t celebrate anything with anyone. #inner_monologue 
 Supposed to be three years cannot celebrate, but I think if we three years don’t go, end up forever won’t go.  So this year – second year – we just go lor. #inner_monologue
 Yah, everybody know nobody want to say, but every extended family got one ji shi (cornerstone) to hold everything together. Pa was that ji shi. #inner_monologue
 No ji shi, no house. Without Pa, we cannot connect. #inner_monologue
 // Background: A circular table in the dining room, with a plate of yusheng in the middle. There are other dishes on the side. #
 #background:bg_zhihao_cnyfood.jpg
-But I do miss the food lah... #inner_monologue
+But I  miss the food lah... #inner_monologue
 // Close-up of a bowl of soup (lotus root, perhaps) with ZH’s spoon. #
 Wah. Looks shiok (tasty). #inner_monologue
 But the rice they put where? #inner_monologue
@@ -247,8 +247,8 @@ You hear Dua Gu anot? Don't play so much computer. Everytime hide in your room p
 Nowadays got this thing called Internet, people can log on and talk to each other. #speaker_self
 Not good you know! Must go out more. #speaker_left
 I got go out, what. #speaker_self
-You only go to that temple. #speaker_right
-Wah, Ah Hao so guai ah! Nowadays young people don’t follow their mother go temple one. #speaker_left
+You only go to that temple. #speaker_left
+Wah, Ah Hao so guai ah! Nowadays young people don’t follow their mother go temple one. #speaker_right
 No, no. He help his friend at the Indian temple. Good boy, that Aman. #speaker_left
 It’s called a gurdwara. #speaker_self
 Hah? Call what? #speaker_left
@@ -267,7 +267,7 @@ Wtf is he trying to say? That I dunno how to use my brain? #inner_monologue
 Not say I follow. Friends must help each other lah. #speaker_self
 Help each other is good!  Ah Hao hen guai. (Ah Hao is a very good boy.) #speaker_left
 To Dua Gu everything also good. Jiak sai (eat shit) also good. Dua Gu, you good this, good that, end up all your words also sai ah! #speaker_left
-Ah Hao, you work at the temple, the pay okay anot? I worry about you, you know. If not enough Ji Gu can help you find better job. Easy one. #speaker_left
+Ah Hao, you work at the temple, the pay okay anot? I worry about you, you know. If not enough Ji Gu can help you find better job. Easy one. #speaker_right
 It’s not work, I just help my friend pack donations for charity. #speaker_self
 Why you waste time!  Ji Gu teach you. #speaker_left
 Lai liao his nonsense lai liao. (Here he comes with his nonsense.) #speaker_self
@@ -277,7 +277,7 @@ All your friends, they study so much go uni but then come out all dunno how to m
 #speaker_left_image:cha_zhihao_mother_normal.png
 #speaker_left_name:Ma
 My son, ah, he play computer can earn money, you know! Last month he pay off the utility bills. I want to pay also cannot ah! #speaker_left
-Ah Hao, you tell your GuGus about your computer. Ma dunno how to explain this kind of thing. #speaker_left
+Ah Hao, you tell your uncles about your computer. Ma dunno how to explain this kind of thing. #speaker_left
 + [Smart Ma, smart. Earlier what you say about about my gaming?] #inner_monologue
     I show people how I play the games and I teach them how to win. #speaker_self
     VAR zhihao_1_explaingaming = 0
@@ -367,7 +367,7 @@ You ask Ji Gu what happened, that time he rent his place to the foreigner. What 
 Country ah? India or Pakistan-- haiyah I can’t remember. Wah, that time I rent to him cos he promised to pay 20 percent more. #speaker_right
 Uncle that time kum gong (stupid)-- all my friends got warn me, never rent to foreigners cos they give a lot of headache. But I kum gong lor, only listen to the money. #speaker_right
 I tell him, okay, you can go everywhere, you can use everything, just cannot do cooking, cannot bring your friend stay overnight. He say to me, “Okay boss”, shake my hand. #speaker_right
-Then ah, not even one week-- lucky Ji Gu come back from work early-- I see the house so messy and the smell like spoiled food like that. #speaker_right
+Then ah, not even one week-- lucky Ji Gu come back from work early--  wah, he go and hold party ah! I see the house so messy and the smell like spoiled food like that. #speaker_right
 That’s why we cannot trust foreigners. Not say Uncle want to criticise them, but is the truth. #speaker_right
 // ma + ji gu
 #speaker_left_image:cha_zhihao_mother_normal.png
@@ -412,8 +412,8 @@ Ah Hao, you still young, so must be careful what type of friend you help. Cannot
     Maybe you don’t agree. But one day you’ll understand why I say this. #speaker_right
     Orh. #speaker_self
     Trust no one. Only look out for yourself. #speaker_right
-    Wah lao he zim lor sor (very long-winded)  #inner_monologue
-    Ok ok, Ji Gu. #speaker_self
+    Wah lao he zim lor sor (very long-winded).  #inner_monologue
+    OK OK, Ji Gu. #speaker_self
 
 - I need to leave. #inner_monologue
 I go toilet. #speaker_self
@@ -425,8 +425,8 @@ I go toilet. #speaker_self
 #knot:zhihao_1_3
 #ui:narrator
 #background:bg_zhihao_jigu_entryway.jpg
-I walked to the toilet, but halfway there I stopped and turned back to hear my ma and Ji Gu arguing. 
-I don't think they see me, but I can overhear everything. 
+Halfway back from the toilet, I heard my ma and Ji Gu arguing. So I stopped and listened
+I make sure they never see me, and I heard everything. 
 Whenever they speak only Hokkien, it’s always something bad. Bad and complicated. They assume I don't understand, but obv I can.
 
 #ui:scene
@@ -458,7 +458,7 @@ I’m so busy already juggling a job and a kid. You know it. #speaker_left
 Kid? Wah lao eh, Ma. #inner_monologue
 { zhihao_1_earning: 
     - 1:  Then what? You want your son to chip in too? He’s still in school! #speaker_right
-        Don’t forget, you have to declare your son’s income if you want him to help. #speaker_right
+        Don’t forget, you have to declare your son’s income if you want him to help. If it  goes over the income cap, we lose our subsidy. #speaker_right
         If it goes over the income cap, we lose our subsidy.#speaker_right
     - 2: Your son just said he isn’t earning a stable income. And he’s still a student. How is it fair on him to shoulder the fees? #speaker_right
         Stupid. Why did I go bluff him about my income.  #inner_monologue
@@ -486,7 +486,7 @@ Minigame 11 // must add some text
 When I’m not streaming, I'm playing every night. I play this first-person shooter game called Alphas.
 It's a multiplayer game so I team up with other players. Also got high-skill ceiling so I don’t have limits on improving.
 Last time I always play with Gavin and Aman. Gavin I met on Discord first, then we found out we’re from the same JC. 
-After that right, we always eat bak chor mee (minced pork noodles) together when we share tutorial break. 
+After that right, we always eat bak chor mee (minced pork noodles) together when we got same tutorial break. 
 He eat so much until his IGN (in-game name) also become ‘bakchormee’, lol.
 Now I can’t remember how long ago all of us played together.
 They're busy lah.
@@ -516,12 +516,15 @@ Cool #speaker_self
 Ikr, I thought I screwed up the audition but they liked it #speaker_1
 Congrats bro! #speaker_self
 Got any chiobus in the play? #speaker_self
-HAHAHA zero chiobus. It’s just two characters who are both dudes and I’m a co-lead. 😂😂😂 Sorry. #speaker_1
-+ [Sigh, next time maybe I shouldn't try to act smart!] 
+HAHAHA #speaker_1
+Zero chiobus. #speaker_1
+It’s just two characters who are both dudes and I’m a co-lead. 😂😂😂 Sorry. #speaker_1
+
++ [Wah lao next time I should shuddup.] 
     #ui:scene
     #background:bg_zhihao_bedroom.jpg
     Wah lao next time I should shuddup. #inner_monologue
-    Everytime Aman talk about his drama club I dunno what he talking sia.) #inner_monologue
+    Everytime Aman talk about his drama club I dunno what he talking sia. #inner_monologue
     #ui:whatsapp
     #background:whatsapp.png
     #chat_group_title:Aman Singh
@@ -535,13 +538,13 @@ HAHAHA zero chiobus. It’s just two characters who are both dudes and I’m a c
     The performance is on the 12th next mth. You free to watch? #speaker_1
     Ofc. Wanna laugh at you forget your lines lol #speaker_self
     LOOOOL #speaker_1
-    Settle! Will save you tix #speaker_1
+    Settled! Will save you tix #speaker_1
     Have fun bro! Say hi to Gavin for me #speaker_1
 
-+ [Why didn't he just explain this instead of acting smart?]
++ [Why can’t he just explain this? Act smart for what sia.]
     #ui:scene
     #background:bg_zhihao_bedroom.jpg
-    Wah lao malu sia (Sigh, I'm so embarassed).  #inner_monologue
+    Wah lao malu sia (Sigh, I'm so embarrassed).  #inner_monologue
     Why Aman always talk about this kind of atas-atas (high-class) drama and expect the whole world to straightaway know?  #inner_monologue
     And he never explains first until I screw up. I always feel damn kok.  #inner_monologue
     ~ zhihao_1_aman = 1
@@ -551,7 +554,7 @@ HAHAHA zero chiobus. It’s just two characters who are both dudes and I’m a c
     #chat_group_title:Aman Singh
     #chat_group_image:ico_aman.png
     #speaker_1_name:Aman
-    Next time just say you lead lah #speaker_self
+    Next time just say you lead la #speaker_self
     How I know from the title #speaker_self
     Haha I thought you read it before for sch? #speaker_1
     Not everyone memorise what they read in class la #speaker_self
@@ -567,8 +570,9 @@ HAHAHA zero chiobus. It’s just two characters who are both dudes and I’m a c
 // back to main screen
 #ui:scene
 #background:bg_zhihao_bedroom.jpg
-- Aman’s practice is damn hardcore. And people take him seriously. #inner_monologue
-Sometimes, next to him, I feel damn suaku (uninformed). #inner_monologue
+-  Sigh. #inner_monologue
+Aman’s practice is damn hardcore. And people take him seriously. #inner_monologue
+Sometimes, next to him, I feel damn suaku (uninformed/backward). #inner_monologue
 
 -> zhihao_1_4a 
 
@@ -600,13 +604,13 @@ Am out with Nadia #speaker_1
     You free to catch up next Thu? #speaker_self
     I’m free after sch but not in the evening #speaker_1
     Lunch at the usual? #speaker_self
-    Bak Chor Mee stall? Cannnn #speaker_1
+    Bakchormee stall? Cannnn #speaker_1
     Don’t pangseh ah #speaker_self
    
 + Wahlao you pangseh me 3x alr[] #speaker_self
     #ui:scene
     #background:bg_zhihao_bedroom.jpg
-    He spend so much time with Nadia I don't think there'll be a next time, for a long time. #inner_monologue
+    He spend so much time with Nadia, I don’t think there’ll be a next time — for a long time #inner_monologue
     #ui:whatsapp
     #background:whatsapp.png
     #chat_group_title:Gavin Tan 
@@ -627,7 +631,7 @@ Am out with Nadia #speaker_1
 #ui:twitter
 #chat_group_title:Twitter for @ahao_gamer
 #chat_group_image:ico_zhihao.png
-#speaker_self_tag:ZHtag
+#speaker_self_tag:ahao_gamer
 #speaker_self_image:ico_zhihao.png
 #timestamp:21.34
 #likes:5 ❤️
@@ -650,12 +654,11 @@ twitch.tv/ahao_gamer surprise stream in 15 min. drops enabled! get a free skin i
 #speaker_7_name:d1amond
 #speaker_8_name:zapper1
 !drops #speaker_1
-stop asking for drops as soon as he starts la idiot. #speaker_3
+stop asking for drops as soon as he starts la idiot #speaker_3
 no squad mode? #speaker_2
 Dunno why I'm not feeling the game...	#inner_monologue	
 losing streak :sweat #speaker_2
 noob teammates #speaker_4
-#speaker_4_name:anselm_main
 wth is up with @ahao_gamer’s positioning #speaker_5
 eh @ahao_gamer please carry the game #speaker_6
 wah @ahao_gamer clean sweep - sick moves man #speaker_2
@@ -663,7 +666,7 @@ eh where is @bakchormee #speaker_3
 Bakchormee. Short-form BCM. Aka Gavin. Aka the traitor.	#inner_monologue	
 yeah @bakchormee joining? #speaker_2
 + @bakchormee went paktor with his gf so cmi today [] #speaker_self
-+ Dunno la, anyway can focus on the game or not [] #speaker_self
++ Dunno la, anw can focus on the game anot [] #speaker_self
 - oof #speaker_2
 poor thing #speaker_7
 is @bakchormee eating bakchormee with her  #speaker_6
@@ -680,8 +683,8 @@ Maybe she malay but not muslim? @ahao_gamer pretty anot? Got pic? #speaker_7
 These idiots always thinking of chiobus. Like that how to complete the game? Annoying sia. #inner_monologue
 Shuddup everyone let’s focus  #speaker_self
 why @bakchormee go for minah?? #speaker_8
-+ oi guys FOCUS [] can we talk about game tactics only pls  #speaker_self
-+ eh dun be idiots. []  he's not here no point talking about his life when you guys are sucking so hard at the game  #speaker_self
++ oi guys FOCUS[] can we talk about game tactics only pls  #speaker_self
++ eh dun be idiots[] he's not here no point talking about his life when you guys are sucking so hard at the game  #speaker_self
 - A min of silence for our bro in the halal zone… #speaker_5
 RIP @bakchormee #speaker_6
 So fast they already stop paying attention to me. #inner_monologue
@@ -695,7 +698,7 @@ MUFASA LAH BODOH  #speaker_6
 BODOH! I VOTE BODOH! #speaker_5
 If Gavin were here right, confirm he will control the group from the start. Like damn easy like that. Everybody listens to him. #inner_monologue
 But I’m the best player. Their coach! Where’s the respect for me? #inner_monologue
-This I cannot understand. People like Gavin don’t have to do anything and can make the whole world listen to them, and people like me try and try and still cannot. #inner_monologue
+This I cannot understand. People like Gavin can just sit back shake leg and the whole world will listen to them, and people like me try like siao still cannot win. #inner_monologue
 
 -> zhihao_1_5b
 
@@ -710,7 +713,7 @@ Gavin: I'll let you know a good day asap #message
 #background:bg_zhihao_bedroom.jpg
 See, see? He’ll say another time, then another time, then another time.
 They’re correct. The more Gavin and that girl become serious, the more he will change. 
-And then one day he won’t be Gavin anymore.
+And then one day I won’t know him anymore.
 Haiz. He confirm will choose her over me lah. Always the gf, never the bro.
 
 -> zhihao_1_5c
@@ -763,10 +766,10 @@ ask if she's chio #speaker_3
 maybe not... if she's chao ta (burnt / too dark) lol #speaker_1
 lololololol 	#speaker_2			   
 at least not indian #speaker_1
-Eh wth. They can joke around about other ppl but now they are insulting Aman. I need to stop the convo #inner_monologue
+Eh wth. They can joke around about other ppl but now they are insulting Aman. I need to stop the convo. #inner_monologue
 😂😂 	#speaker_2	
-+ [Tell @graphene off for that comment] @graphene get out of the stream #speaker_self
-    If anyone else wanna talk s*** about @amanonfire they can leave too #speaker_self
++ [Tell @graphene off for that comment.] @graphene get out of the stream #speaker_self
+    If anyone else wanna talk shit about @amanonfire they can leave too #speaker_self
     VAR zhihao_1_racistgamer = ""
     ~ zhihao_1_racistgamer = "scold racists"
     wth i’m just saying in general not abt @amanonfire #speaker_1
@@ -781,11 +784,11 @@ Eh wth. They can joke around about other ppl but now they are insulting Aman. I 
     they got no spine #speaker_2
     lol #speaker_4
 
-+ [Switch topics abruptly] Hey new girl @nur_ayesa, you wanna share your insta? #speaker_self
++ [Switch topics abruptly.] Hey new girl @nur_ayesa, you wanna share your insta? #speaker_self
     Maybe if I chat with the new girl they will back off. Maybe even can score some respect from these idiots. #inner_monologue
     ~ zhihao_1_racistgamer = "switch topic"
     Wah she go mute my voice chat and exit the stream. #inner_monologue
-    Okay lah, bad move on my part sigh. #inner_monologue
+    Okay lah, bad move on my part. Haiz. #inner_monologue
     ??? low blow man #speaker_5
     no one cares about your opinion @d1amond #speaker_2
     I keep quiet better. #inner_monologue
@@ -793,21 +796,21 @@ Eh wth. They can joke around about other ppl but now they are insulting Aman. I 
     @ahao_gamer so quiet  #speaker_5
     hes concentrating lol #speaker_3
 
-+ [Scold them for not playing well]  All of you THROWING (losing) SIA! #speaker_self
++ [Scold them for not playing well.]  All of you THROWING (losing) SIA! #speaker_self
     ~ zhihao_1_racistgamer = "focus on game"
     You all boosted or what? Go back play tutorial sua #speaker_self
-    Eh you all idiots cannot play properly still want to play with me. #speaker_self
+    Eh yall idiots cannot play properly still wanna play with me #speaker_self
     yeah show them #speaker_1
-    Huh? How come I kena warning for toxic behaviour? who complain about me? #inner_monologue
+    WTF sia? How come I kena warning for toxic behaviour? who complain about me? #inner_monologue
     lol @ahao_gamer you'll be banned soon #speaker_5
     This game is going to shit. No Gavin, no Aman, and no respect for me.  #inner_monologue
     shuddup la #speaker_2
-- eh do you all want to train or not la wth. talk less shoot more. #speaker_self
+- EH do yall want to train or not la wth. talk less shoot more #speaker_self
 #chat_group_image:bg_zhihao_twitchmother.jpg
 eh who is that behind @ahao_gamer?  #speaker_5
-omg ma is staring right into the webcam behind me #inner_monologue
-wth how long has she been there #inner_monologue
-is that ahao_gamer's ma??! LOL uhoh you're in trouble bro #speaker_1
+Omg Ma is staring right into the webcam behind me #inner_monologue
+Wth how long has she been there #inner_monologue
+LOL @ahao_gamer your mother angry at you liao #speaker_1
 + [Turn off the webcam and say goodbye]
     #chat_group_image:black.jpg
     THE BEST STREAMER has to log off! SEE YOU IDIOTS TMR! #speaker_self
@@ -823,8 +826,8 @@ is that ahao_gamer's ma??! LOL uhoh you're in trouble bro #speaker_1
 #knot:zhihao_1_6
 #ui:narrator
 #background:bg_zhihao_bedroom.jpg
-Sigh training last night wasn't great. 
-Oh well. Let's see if anybody liked my tweet.
+Haiz. Yesterday’s training damn cham (bad).
+Suan le (forget it) lah. I go see whether got anyone like my tweet.
 
 #knot:zhihao_1_6a
 #ui:twitter
@@ -846,7 +849,7 @@ Oh well. Let's see if anybody liked my tweet.
 @bakchormee has a minah gf, so isn't playing with us. RIP to all our bakchormee outings. RIP to my best bro’s nickname. His new name must be malayu. WDYT of Bodoh? #thread_header
 LOL #speaker_1
 haha BODOH BODOH BODOH #speaker_3
-holy cow this is my most liked tweet ever! 108 new followers in one day?! #inner_monologue
+Wah sehhhh! 108 new followers, no joke sia! None of my other tweets got this level of likes. #inner_monologue
 RIP to our bro lol.  #speaker_2
 
 + [Delete the tweet]
@@ -906,7 +909,7 @@ FML. Why I go write that? How come got so many likes? I better delete now.  #inn
 #speaker_4_image:ico_aman_selinder.png
 #timestamp:08.21
 [post deleted] #thread_header    
-Gone already.Leng jing. (Calm down). Crap. Should I say sorry?  #inner_monologue
+Gone liao. Leng jing. Leng Jing (Calm down). Should I say sorry?  #inner_monologue
 . #clear
 + [Apologise] got caught up in the moment, sorry for that #speaker_self
     VAR zhihao_1_tweet_apologise = true

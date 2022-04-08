@@ -658,7 +658,7 @@ export const MINI_GAME_MAP = [
     {
       question_id: 2,
       question:
-        "After Zhihao's father passed, the family observed a period of mouring and did not attend events. Which of these customs is not associated with Chinese (non-Christian) funerals?",
+        "After Zhihao's father passed, the family observed a period of mourning and did not attend events. Which of these customs is not associated with Chinese (non-Christian) funerals?",
       correct_answer_id: 4,
       explanation: "Immediate cremation is normally associated with Hindu funerals, as Hindus believe the physical body has no sacred purpose and cremation helps reincarnation. For Chinese funerals, the deceased may be buried or cremated, usually after a multi-day wake is held.",
       type: "text",
@@ -684,7 +684,7 @@ export const MINI_GAME_MAP = [
     {
       question_id: 3,
       question:
-        "Older Chinese Singaporeans protested heavily against the removal of Chinese-medium schools (like the original Chinese High and Nantah University), and felt such actions reflected a lack of their 'Chinese Privilege' ",
+        "Older Chinese Singaporeans protested heavily against the removal of Chinese-medium schools (like the original Chinese High and Nantah University), and felt such actions reflected a lack of their 'Chinese Privilege'.",
       type: "text",
       correct_answer_id: 1,
       explanation:
