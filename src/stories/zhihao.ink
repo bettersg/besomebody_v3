@@ -748,7 +748,7 @@ And I cannot handle sia. I crack my head from this also still dunno why. But it 
 -> zhihao_1_5d
 
 === zhihao_1_5d ===
-#knot:zhihao_1_5
+#knot:zhihao_1_5d
 #ui:twitch
 #chat_group_title:Twitch Stream - @ahao_gamer
 #chat_group_image:bg_zhihao_twitchgame.gif
@@ -758,6 +758,7 @@ And I cannot handle sia. I crack my head from this also still dunno why. But it 
 #speaker_3_name:mechmaster
 #speaker_4_name:anselm_main
 #speaker_5_name:d1amond
+[nur_ayesa has entered the chat] #speaker_twitch
 A GIRL GAMER. hullo @nur_ayesa #speaker_1
 Wahlao. Now got girl confirm distract everyone. #inner_monologue
 gurl gamer #speaker_2
@@ -780,7 +781,7 @@ Eh wth. They can joke around about other ppl but now they are insulting Aman. I 
     was nice knowing you all #speaker_3
     [mechmaster has left the chat] #speaker_twitch
     Whatever, they suck anyway. #inner_monologue
-    Soz about that #speaker_Self
+    Soz about that #speaker_self
     they got no spine #speaker_2
     lol #speaker_4
 
