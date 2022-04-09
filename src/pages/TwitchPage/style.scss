@@ -74,7 +74,7 @@
         user-select: none;
         background: $white;
         // height: 100vh; 
-        height: calc(calc(var(--vh, 1vh) * 100) - 382px); // edited from 148px to 382px
+        height: calc(100vh - 292px);
         @media screen and (min-device-width:600px) {
             height: 371px; 
         }
@@ -189,7 +189,7 @@
         }
         &.choices {
             transition: height 0.4s; 
-            height: calc(calc(var(--vh, 1vh) * 100) - 587px); // edited from 313px to 547px
+            height: calc(100vh - 470px); // edited from 313px to 547px
         // height: 55.3vh; 
             @media screen and (min-device-width:600px) {
                 height: 190px;  // change from 350 to 175px
@@ -227,7 +227,6 @@
             // font-weight: normal;
             // line-height: 140%;
             font-size: 14px;
-            opacity: 80%;
             background-color: $midnight10;
             &--right {
                 background-color: $lapisBase;
@@ -268,7 +267,7 @@
         background-color: white;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        // justify-content: flex-end;
 
 
         animation:opac 0.9s;
