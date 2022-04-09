@@ -278,7 +278,7 @@ All your friends, they study so much go uni but then come out all dunno how to m
 #speaker_left_name:Ma
 My son, ah, he play computer can earn money, you know! Last month he pay off the utility bills. I want to pay also cannot ah! #speaker_left
 Ah Hao, you tell your uncles about your computer. Ma dunno how to explain this kind of thing. #speaker_left
-+ [Smart Ma, smart. Earlier what you say about about my gaming?] #inner_monologue
++ Smart Ma, smart. Earlier what you say about about my gaming?[] #inner_monologue
     I show people how I play the games and I teach them how to win. #speaker_self
     VAR zhihao_1_explaingaming = 0
     ~ zhihao_1_explaingaming = 1
@@ -393,14 +393,14 @@ Ah Hao, you still young, so must be careful what type of friend you help. Cannot
 
 + [Remain polite and subtly refute Ji Gu.] It’s okay lah, Ji Gu. I trust Aman with my life. #speaker_self
     VAR zhihao_1_jigu = 0
-    ~ zhihao_1_jigu = 0
+    ~ zhihao_1_jigu = 1
     Mmm. Aman is a good boy. #speaker_left
     I know you trust your friend. #speaker_right
     But listen to me. Ji Gu is sixty years old liao, everything I also see already. #speaker_right
     What I tell you is the truth. And sometimes the truth is ugly. #speaker_right
 
 + [Be a smart alec.]  Ji Gu, I trust Aman. But Pa said sometimes cannot trust family to take care of us even when we are in need.  #speaker_self
-    ~ zhihao_1_jigu = 1
+    ~ zhihao_1_jigu = 2
     OI! Ni bi zui ah, ni!  (You shut your mouth, ah, you!) #speaker_left
     Hahaha. Ah Hao is growing up fast.  #speaker_right
     Ah Mei, don’t have to scold him. Boys are boys.  #speaker_right
@@ -408,7 +408,7 @@ Ah Hao, you still young, so must be careful what type of friend you help. Cannot
 
 
 + [Remain passive to kill the conversation.] Orh. #speaker_self
-    ~ zhihao_1_jigu = 2
+    ~ zhihao_1_jigu = 3
     Maybe you don’t agree. But one day you’ll understand why I say this. #speaker_right
     Orh. #speaker_self
     Trust no one. Only look out for yourself. #speaker_right
@@ -457,12 +457,15 @@ Remember what I said about trust. Don’t ever trust maids to be left alone with
 I’m so busy already juggling a job and a kid. You know it. #speaker_left
 Kid? Wah lao eh, Ma. #inner_monologue
 { zhihao_1_earning: 
-    - 1:  Then what? You want your son to chip in too? He’s still in school! #speaker_right
-        Don’t forget, you have to declare your son’s income if you want him to help. If it  goes over the income cap, we lose our subsidy. #speaker_right
+    - "lower":  Then what? You want your son to chip in too? He’s still in school! #speaker_right
+        Don’t forget, you have to declare your son’s income if you want him to help. #speaker_right
         If it goes over the income cap, we lose our subsidy.#speaker_right
-    - 2: Your son just said he isn’t earning a stable income. And he’s still a student. How is it fair on him to shoulder the fees? #speaker_right
+    - "actual":  Then what? You want your son to chip in too? He’s still in school! #speaker_right
+        Don’t forget, you have to declare your son’s income if you want him to help.  #speaker_right
+        If it goes over the income cap, we lose our subsidy.#speaker_right
+    - "inflate": Your son just said he isn’t earning a stable income. And he’s still a student. How is it fair on him to shoulder the fees? #speaker_right
         Stupid. Why did I go bluff him about my income.  #inner_monologue
-    - else: Your son said he isn’t even earning yet. You want him to stop focusing on his studies to look for a job? That’s selfish to the boy right?  #speaker_right
+    - else : Your son said he isn’t even earning yet. You want him to stop focusing on his studies to look for a job? That’s selfish to the boy right?  #speaker_right
         Stupid. Why did I go bluff him about my income. #inner_monologue
 }
 I’ll think of something. Don’t bring my son into this.   #speaker_left
@@ -518,7 +521,8 @@ Congrats bro! #speaker_self
 Got any chiobus in the play? #speaker_self
 HAHAHA #speaker_1
 Zero chiobus. #speaker_1
-It’s just two characters who are both dudes and I’m a co-lead. 😂😂😂 Sorry. #speaker_1
+It’s just two characters who are both dudes and I’m a co-lead  #speaker_1
+😂😂😂 Sorr. #speaker_1
 
 + [Wah lao next time I should shuddup.] 
     #ui:scene
@@ -736,7 +740,7 @@ Haiz. He confirm will choose her over me lah. Always the gf, never the bro.
 #speaker_3_image:ico_aman_selinder.png
 #timestamp:23.41
 #likes:0 ❤️
-Bakchormee has a minah gf, so he pangseh (ditched) us. RIP to all our bakchormee outings. RIP to my best bro’s gamer tag. His new name must be malayu. WDYT of Bodoh? #thread_header
+Bakchormee has a minah gf, so he pangseh (ditched) us. RIP to all our bakchormee outings. RIP to my best bro’s IGN (in-game name). His new name must be malayu. WDYT of Bodoh? #thread_header
 I know quite bad lah, but I really buay tahan (cannot take it) liao. So many games now I’m the only one playing – everytime last minute Gavin will give the same story. Everytime I finally get to game with him, he will disappoint. #inner_monologue
 Then the team’s rubbish all I have to handle myself. #inner_monologue
 And I cannot handle sia. I crack my head from this also still dunno why. But it sucks lah. #inner_monologue
@@ -760,7 +764,7 @@ And I cannot handle sia. I crack my head from this also still dunno why. But it 
 #speaker_5_name:d1amond
 [nur_ayesa has entered the chat] #speaker_twitch
 A GIRL GAMER. hullo @nur_ayesa #speaker_1
-Wahlao. Now got girl confirm distract everyone. #inner_monologue
+Wah lao. Now got girl confirm distract everyone. #inner_monologue
 gurl gamer #speaker_2
 eh her name sound malay... maybe it's bakchormee's gf #speaker_3
 ask if she's chio #speaker_3
@@ -1098,7 +1102,7 @@ Wah lao eh, Ma! Ten or fifteen? Don’t need to come lah, I booking Grab now. By
 Boy-- #speaker_left
 #speaker_left_image:pixel.png
 //ZHIHAO ends the call. Switch to the Grab screen with the map showing 10 minutes ETA. #
-Wah lau, even the Grab only here in 10 minutes. Like that how to reach on time sia?  #inner_monologue
+Haiz, even the Grab only here in 10 minutes. Like that how to reach on time sia?  #inner_monologue
 #ui:narrator
 #background:bg_zhihao_hdb_carpark.jpg
 10 minutes later, both my ma and the taxi arrived at the same time. 
