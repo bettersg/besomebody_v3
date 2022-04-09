@@ -74,7 +74,7 @@
         overflow-y: scroll;
         user-select: none;
         // height: 100vh; 
-        height: calc(calc(var(--vh, 1vh) * 100) - 156px); 
+        height: calc(100vh - 162px);
         @media screen and (min-device-width:600px) {
             height: 504px; 
         }
@@ -195,7 +195,7 @@
             height: calc(calc(var(--vh, 1vh) * 100) - 313px); 
         // height: 55.3vh; 
             @media screen and (min-device-width:600px) {
-                height: 350px; 
+                height: 335px; 
             }
         }
         &--sender, &--receiver {
@@ -222,11 +222,10 @@
             height: 44px; 
             color: $midnight100;
             font-size: 14px;
-            opacity: 80%;
             background-color: $midnight10;
             &.choice {
-                border: $aqua100 solid 2px;
-                background-color: transparent;
+                border: #E8E9EE solid 2px;
+                background-color: #E8E9EE;
                 color: black; 
             }
             &--right {
@@ -260,11 +259,12 @@
             user-select: none;
             padding: 13px 20px;
             text-align: center;
-            background-color: $aqua1;
-            color: blue;
+            background-color: #F0F8FF;
+            color: #499EF1;
             cursor: pointer;
             &:hover {
-                background-color: rgba(29, 191, 123, 0.4);
+                background-color: #499EF1;
+                color: white; 
             }
     
         }
