@@ -522,7 +522,7 @@ Got any chiobus in the play? #speaker_self
 HAHAHA #speaker_1
 Zero chiobus. #speaker_1
 It’s just two characters who are both dudes and I’m a co-lead  #speaker_1
-😂😂😂 Sorr. #speaker_1
+😂😂😂 Sorry #speaker_1
 
 + [Wah lao next time I should shuddup.] 
     #ui:scene
