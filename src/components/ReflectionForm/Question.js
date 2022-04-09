@@ -38,6 +38,7 @@ const useStyles = makeStyles(() => ({
 const Question = ({ question, value, onChange, context }) => {
   const classes = useStyles();
   const [answerLength, setAnswerLength] = useState(0);
+  const CHARACTER_LIMIT = 1000;
 
   const body = formatString(question.body, context);
 
@@ -61,7 +62,7 @@ const Question = ({ question, value, onChange, context }) => {
       );
     case "MULTI_CHOICE_IMAGE":
       return (
-        <Box p={2} bgcolor="rgba(255,255,255,0.6)">
+        <Box p={2} bgcolor="rgba(255,255,255)">
           <Typography variant="body1">
             <b>{body}</b>
           </Typography>
@@ -86,7 +87,7 @@ const Question = ({ question, value, onChange, context }) => {
       );
     case "LIKERT_SCALE":
       return (
-        <Box p={2} bgcolor="rgba(255,255,255,0.6)">
+        <Box p={2} bgcolor="rgba(255,255,255)">
           <Typography variant="body1">
             <b>{body}</b>
           </Typography>
@@ -108,9 +109,30 @@ const Question = ({ question, value, onChange, context }) => {
         </Box>
       );
     case "OPEN":
-      const CHARACTER_LIMIT = 1000;
       return (
-        <Box p={2} bgcolor="rgba(255,255,255,0.6)">
+        <Box p={2} bgcolor="rgba(255,255,255)">
+          <Typography variant="body1">
+            <b>{body}</b>
+          </Typography>
+          <Box mt={2}>
+            <TextField
+              value={value}
+              onChange={(event) => { handleChange(event); setAnswerLength(event.target.value.length) }}
+              variant="filled"
+              placeholder="Please type here. If you do not wish to share, leave this blank."              
+              helperText={`${answerLength}/${CHARACTER_LIMIT}`}
+              fullWidth
+              multiline
+              rows={4}
+              inputProps={{ maxLength: CHARACTER_LIMIT }}
+              InputProps={{ disableUnderline: true }}
+            />
+          </Box>
+        </Box>
+      );
+    case "OPEN_CHAR":
+      return (
+        <Box p={2} bgcolor="rgba(255,255,255)">
           <Typography variant="body1">
             <b>{body}</b>
           </Typography>
@@ -132,7 +154,7 @@ const Question = ({ question, value, onChange, context }) => {
       );
     default:
       return (
-        <Box p={2} bgcolor="rgba(255,255,255,0.6)">
+        <Box p={2} bgcolor="rgba(255,255,255)">
           <Typography variant="body1">
             Invalid question type provided.
           </Typography>

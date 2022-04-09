@@ -141,7 +141,7 @@ const ChapterEnd = () => {
     storyName: personaFullName + "'s Story",
     text: "I now know what it's like to be you, " + personaName + ".",
     avatar: personaName.toLowerCase(), 
-    avatarImage: '/shareable_avatars/sharebubble.png'
+    avatarImage: persona.shareImage
     // avatarImage: persona.profileImage
   }
 

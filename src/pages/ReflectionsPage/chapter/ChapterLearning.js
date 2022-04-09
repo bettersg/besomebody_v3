@@ -18,7 +18,7 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 const useStyles = makeStyles((theme) => ({
   background: {
     // backgroundImage: ({ image }) => `url('/images/bg_reflections.jpg')`,
-    backgroundColor: "#3DCAD3",
+    backgroundColor: "#26248F",
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '660px',
@@ -88,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   topText: {
-    color: 'white',
+    color: '#D8F4F6',
     fontSize: '0.9rem',
     fontWeight: '600',    
     marginBottom: 30,
@@ -97,6 +97,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '1.0rem',
     fontWeight: '400',    
     margin: "20px",
+    color: '#D8F4F6',
 
   },
   link: {
@@ -126,7 +127,7 @@ const ChapterLearning = ({ setPage , reflection }) => {
           {reflection.media ?
             reflection.mediatype === "video" ?
               <a href={reflection.media} target="_blank" className={classes.link}><img src={reflection.mediaimage} className={classes.videoImage}/></a> :
-              <a href={reflection.media} target="_blank" className={classes.link}><Button variant="contained" className={classes.findOutBtn} >Find Out More</Button></a>
+              <a href={reflection.media} target="_blank" className={classes.link}><Button variant="contained" className={classes.btnFindout} >Find Out More</Button></a>
             : null
           }
       </Box>

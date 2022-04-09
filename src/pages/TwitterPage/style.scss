@@ -1,0 +1,407 @@
+@import "../../scss/global/global"; 
+
+// html, body {
+//     height: 100%; 
+// }
+.Twitter {
+    &__header {
+        align-items: center;        
+        padding: 8px 16px;        
+        height: 64px;
+        background-color: $white;
+        display: flex;
+        
+        &--profile {
+            align-self: flex-end;
+            height: 48px;
+            width: 48px;
+            // height: 36px; 
+            // width: 36px; 
+            border-radius: 50%;
+            // margin-right: 12px;
+        }
+        &__description {
+            color: $white;
+            &--name {
+                @include inter-whatsappName; 
+                letter-spacing: 0;
+                line-height: 18px;
+                min-height: 18px;
+                white-space: nowrap;
+                color: $midnight100;
+                font-family: var(--font-family-inter);
+                font-size: 14px;
+                font-weight: 600;
+                font-style: normal;
+            }
+            &--tag {
+                letter-spacing: 0;
+                line-height: 18px;
+                margin-top: 3px;
+                min-height: 18px;
+                white-space: nowrap;
+                @include p2-normal-body; 
+                color: $midnight60;
+                font-family: var(--font-family-inter);
+                font-weight: 500;
+                font-style: normal;
+                font-size: 14px !important;
+            }
+        }
+    }
+    &__mainpost { 
+        align-items: flex-start;
+        background-color: $white;
+        border-bottom: 1px solid #E6E6E6;
+        display: flex;
+        min-height: 100px;        
+        padding: 8px 16px;
+        &--tweet { 
+            color: $midnight100;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 25px;
+            min-height: 75px;    
+        }
+        &--likes {
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 0;
+        }
+    }
+    &__messages {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        user-select: none;
+        // height: 100vh; 
+        height: calc(calc(var(--vh, 1vh) * 100) - 156px); 
+        @media screen and (min-device-width:600px) {
+            height: 504px; 
+        }
+        > div {
+            scroll-snap-align: end;
+        }
+        &--threadpost {
+            align-items: flex-start;
+            background-color: var(--white);
+            // height: 100px;
+            padding: 12px 16px;
+            border-bottom: 1px solid #E6E6E6;
+            background: white; 
+        }
+        &--profileImage {
+            height: 48px;
+            width: 48px;
+        }
+        &--tweetContent {
+            align-items: flex-start;
+            align-self: center;
+            flex-direction: column;
+            margin-left: 8px;
+            width: 283px;
+        }
+        &--handle {
+            align-items: flex-start;
+            display: flex;
+            height: 18px;
+            min-width: 131px;
+        }
+        &--name {
+            font-size: 14px;
+            font-weight: 600;
+            color: $midnight100;  
+            letter-spacing: 0;
+            line-height: 18px;
+            min-height: 18px;
+            min-width: 39px;
+            white-space: nowrap;
+        }
+        &--tag {
+            letter-spacing: 0;
+            font-size: 14px;
+            font-weight: 400;
+            color: $midnight60;  
+            line-height: 18.2px;
+            margin-left: 4px;
+            min-height: 18px;
+            white-space: nowrap;
+        }
+        &--replyingTo {
+            align-items: flex-start;
+            display: flex;
+            height: 18px;
+            margin-top: 4px;
+            min-width: 156px;
+            letter-spacing: 0;
+            line-height: 18px;
+            // min-height: 18px;
+            // min-width: 75px;
+            white-space: nowrap;
+            font-size: 14px;
+            font-weight: 400;
+            color: $midnight60;  
+        }
+        &--tweet {
+            letter-spacing: 0;
+            line-height: 18px;
+            margin-top: 4px;
+            margin-left: 53px !important;
+            width: 283px;
+            color: $midnight100;            
+            font-size: 14px;
+            font-weight: 400;
+            font-style: normal;
+        }
+        &--tweet_self {
+            letter-spacing: 0;
+            line-height: 18px;
+            margin-top: 4px;
+            // margin-left: 53px !important;
+            width: 283px;
+            color: $midnight100;            
+            font-size: 14px;
+            font-weight: 500;
+            font-style: normal;
+        }
+        &--sender {
+            background: #C9F3F9;
+            width: 304px; 
+            padding: 12px;
+            border-radius: 12px 3px 3px 12px;
+            margin-bottom: 4px;
+            &.newSpeaker { 
+                border-radius: 12px 12px 3px 12px;
+            }
+        }
+        &--receiver {
+            background: $white;
+            width: 304px; 
+            padding: 12px; 
+            margin-bottom: 4px;
+            margin-left: 16px;
+            border-radius: 3px 12px 12px 3px;
+            &.newSpeaker { 
+                border-radius: 12px 12px 12px 3px;
+            }
+            
+            &--name {
+                @include inter-whatsapp; 
+                text-transform: capitalize;
+                margin-bottom: 4px;
+            }
+        }
+        &.choices {
+            transition: height 0.4s; 
+            height: calc(calc(var(--vh, 1vh) * 100) - 313px); 
+        // height: 55.3vh; 
+            @media screen and (min-device-width:600px) {
+                height: 350px; 
+            }
+        }
+        &--sender, &--receiver {
+            &.newSpeaker {
+                margin-top: 20px; 
+            }
+        }
+    }
+    &__sendWrapper {
+        background-color: $white;
+        padding: 10px 16px; 
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid #E6E6E6;
+        align-items: center;
+        height: 64px; 
+        margin-top: 20px;
+        &__sendButton {
+            border-radius: 48px;
+            padding: 12px 16px; 
+            width: 85%; 
+            display: flex;
+            align-items: center;
+            height: 44px; 
+            color: $midnight100;
+            font-size: 14px;
+            opacity: 80%;
+            background-color: $midnight10;
+            &.choice {
+                border: $aqua100 solid 2px;
+                background-color: transparent;
+                color: black; 
+            }
+            &--right {
+                background-color: #499EF1;
+                border-radius: 30px;
+                height: 40px;
+                width: 40px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: black;
+            }
+        }
+
+    }
+    &__choicesWrapper {
+        height: 170px; 
+        overflow-y: scroll;
+        transition: height 0.4s; 
+        background-color: $white;
+
+        animation:opac 0.9s;
+        @keyframes opac{
+            from{opacity:0} 
+            to{opacity:1}
+        }
+        .choices {
+            border-radius: 12px;
+            margin: 10px; 
+            user-select: none;
+            padding: 13px 20px;
+            text-align: center;
+            background-color: $aqua1;
+            color: blue;
+            cursor: pointer;
+            &:hover {
+                background-color: rgba(29, 191, 123, 0.4);
+            }
+    
+        }
+    }
+    &__innerMono {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 16px;
+        min-height: 200px;
+        z-index: 1;
+        background: linear-gradient(180deg, #4f4dbe 44.7%, #664efc 100%);
+        &--text {
+         
+            color: white;
+            font-style: italic;
+        }
+    }
+}
+
+// .whatsapp-box {
+//     width: 100%; 
+//     overflow: hidden;
+//     padding-right: 20px;
+//     img {
+//         border-radius: 50%; 
+//         width: 54px; 
+//         height: 54px; 
+//     }
+// }
+
+// .text-area > div {
+//     scroll-snap-align: end;
+    
+// }
+
+// .text-area {
+//     // background-color: #808080;
+//     overflow-y: scroll;
+//     transition: height 0.4s; 
+//     height: 66.1vh; 
+//     scroll-snap-type: y mandatory;
+
+
+//     @media screen and (min-device-width:481px) {
+//         height: 360px; 
+//     }
+
+//     &.full {
+//         transition: height 0.4s; 
+//         height: 66.1vh; 
+//         @media screen and (min-device-width:481px) {
+//             height: 360px; 
+//         }
+//     }
+// }
+// .choices-wrapper {
+//     height: 170px; 
+//     overflow-y: scroll;
+//     transition: height 0.4s; 
+//     background-color: #414141;
+
+//     animation:opac 0.9s;
+    
+
+//     // display: none;
+//     // z-index: -1;
+//     &.no-choices {
+//         // display: none;
+//         height: 0;
+//         transition: height 0.5s; 
+//     }
+    
+//     // .choices-title {
+//     //     text-align: center;
+//     //     font-weight: 800;
+//     // }
+//     .choices {
+//         border-radius: 12px;
+//         margin: 10px; 
+//         padding: 10px;
+//         text-align: center;
+//         background-color: rgba(29, 191, 123, 0.4);
+//         color: white;
+//         cursor: pointer;
+//         &:hover {
+//             background-color: rgb(91, 158, 102);
+//         }
+
+//     }
+// }
+// @keyframes opac{
+//     from{opacity:0} 
+//     to{opacity:1}
+// }
+// .send-wrapper {
+//     padding: 10px 10px; 
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     color: grey; 
+//     border-top: solid grey 0.1px;
+//     height: 60px; 
+//     background-color: #333333;
+
+//     // position: absolute;
+//     // bottom: 20px; 
+//     right: 0; 
+//     left: 0;
+//     &__send-button {
+//         border-radius: 20px;
+//         width: 280px; 
+//         color: rgb(184, 184, 184);
+//         display: flex;
+//         align-items: center;
+//         padding-left: 10px; 
+//         height: 40px; 
+//         background-color: #666666;
+//         &.choice {
+//             border: #1DBF7B solid 2px;
+//             background-color: transparent;
+//             color: white; 
+//         }
+//     }
+//     .send-button-right {
+//         background-color: #1DBF7B;
+//         border-radius: 30px;
+//         height: 40px;
+//         width: 40px;
+//         text-align: center;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         color: white;
+//     }
+//     .wa-sticker {
+//         width: 6%;
+//         height: 6%;
+//     }
+// }

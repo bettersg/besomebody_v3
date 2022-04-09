@@ -11,12 +11,14 @@ import { useAuth } from '../../contexts/AuthContext';
 import { useSnackbar } from '../../contexts/SnackbarContext'
 import { CHARACTER_MAP } from '../../models/storyMap'
 import { getDbUser }  from '../../models/userModel.js';
+import { getRoomDb }  from '../../models/roomModel.js';
 import { IntroBanner } from "../../components/IntroBanner"
 import { useInkContext } from '../../contexts/InkContext'
 import { Link } from 'react-router-dom'
 import CharacterAvatar from "./CharacterAvatar";
 import SideMenu from '../SimpleSideMenu/SideMenu'
 import { RoomContext } from '../../contexts/RoomContext'
+
 
 // Constants
 import "./styles.scss"
@@ -65,6 +67,24 @@ const useStyles = makeStyles(theme => ({
         fontSize: '0.8rem',
         backgroundColor: '#664EFC',
         color: '#FFFFFF',
+        textAlign: 'center',
+        
+    },
+    topLine: {
+        width: '100%',
+        height: 5,
+        position: 'absolute',
+        backgroundColor: '#664EFC',
+        margin: 0,
+        border: 0,
+        top:0
+    },
+    btn: {
+        border: '2px solid #ffffff',
+        borderRadius: '50px',
+        padding: '4px 20px',
+        color: '#FFFFFF',
+        margin: 10,
     }
 }))
 
@@ -85,32 +105,58 @@ export const CharacterChoicePage = () => {
     } = useInkContext()
     
     // Auth Context
-	const { currentUser } = useAuth()
-	// TODO : fix the userInfo. firebase currentUser does not pass the profile fields properly.
+	const { currentUser } = useAuth()	
 	const [userFromDb, setUserFromDb] = useState(null)
   
-    const { roomValue, roomCodeValue } = React.useContext(RoomContext);
-    const [room, setRoom] = roomValue;
-    console.log(room)
+    // this code below to pull the room from the state is NO LONGER NEEDED as the activeRoom is now stored in the user database. 
+    // const { roomValue, roomCodeValue } = React.useContext(RoomContext);
+    const [room, setRoom] =  useState(null)
+    
 
 	useEffect(() => {
 	  const getUser = async () => {
 		const user = await getDbUser(currentUser.id)
 		return setUserFromDb(user)
-	  }
-  
-	  getUser()
+        }         
+    getUser()
 	}, [currentUser.id])
 
-	const characters = CHARACTER_MAP;
+    // console.log('activeRoom', userFromDb?.activeRoom)    
 
-    const randNum = () => {
-        return Math.round((Math.random() + 1) * 200)
+    // once the user is loaded, if there is a change in the active room, get the room info.
+    useEffect(() => {
+        const getRoom = async () => {
+          const room = await getRoomDb(userFromDb?.activeRoom)
+          return setRoom(room)
+          }         
+      getRoom()
+      }, [userFromDb?.activeRoom])
+
+    const characters = CHARACTER_MAP;
+    
+    // shuffle the characters
+    const shuffle = (array) => {
+        let currentIndex = array.length, temporaryValue, randomIndex;
+        while (0 !== currentIndex) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+        return array;
     }
+
+    shuffle(characters);
+
+    // const randNum = () => {
+    //     return Math.round((Math.random() + 1) * 200)
+    // }
 
 
     return (
         <Box className={classes.CharChoiceWrapper} >
+            {/* <hr className={classes.topLine}/> */}
             <div className="CharacterChoices__header">
                 {/* <div className="CharacterChoices__header--placeholder"></div> */}
                 <img src="/commons/tobeyou-logo.svg" />
@@ -148,11 +194,11 @@ export const CharacterChoicePage = () => {
                 })}
                 
             </div>
-            <img src="/character_choice_page/start_playing_banner.png" className="CharacterChoices__banner" />
+            {!room && <img src="/character_choice_page/start_playing_banner.png" className="CharacterChoices__banner" />}
             {room &&
                 <Box className={classes.instructions} >
-                <Typography variant="body2" >You are playing in a facilitated room. Your instructions are: <br /></Typography>
-                <Typography variant="body1" >{room.instructions}</Typography>
+                    <Typography variant="body1" >You are playing in facilitated room <b>{room.code}</b></Typography>
+                    <Button className={classes.btn} href={"/room_details/" + room.code}>Room Instructions</Button>                
                 </Box>
             }
             {/* <!-- Continue Playing Banner --> */}

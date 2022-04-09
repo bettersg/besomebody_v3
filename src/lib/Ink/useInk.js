@@ -185,8 +185,9 @@ const useInk = (json, characterId) => {
       userId: currentUser.id,
       character: characterId,
       id: saveDataId,
-      email: currentUser.email,
+      email: currentUser.email,      
       timestamp: new Date(),
+      ...currentUser.activeRoom  ? { room: currentUser.activeRoom } : {},
     }
 
     await createDbSavedStates(saveData, saveDataId)

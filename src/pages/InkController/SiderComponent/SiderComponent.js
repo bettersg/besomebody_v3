@@ -48,7 +48,9 @@ export default function SwipeableTemporaryDrawer(props) {
 		return setUserFromDb(user)
 	  }
 	  getUser()
-	}, [currentUser.id])
+  }, [currentUser.id])
+  
+  // console.log('slider', userFromDb)
 
   // for the Logout
   const { logout } = useAuth()
@@ -117,6 +119,22 @@ export default function SwipeableTemporaryDrawer(props) {
           <Link to={"/user/" + currentUser.id} className="SideMenu__menuitems__label"><SVG src="/side_menu/profile.svg" className="SideMenu__menuitems__icons"/>
             <span>Account</span></Link>
           </div>
+
+          
+          <div className="SideMenu__menuitems__item">
+            {userFromDb?.activeRoom &&
+              <Link to={"/room_details/" + userFromDb?.activeRoom} className="SideMenu__menuitems__label"><SVG src="/side_menu/profile.svg" className="SideMenu__menuitems__icons" />
+                <span>Your Room</span></Link>
+            }
+            {!userFromDb?.activeRoom &&
+              <Link to={"/room_join/"} className="SideMenu__menuitems__label"><SVG src="/side_menu/profile.svg" className="SideMenu__menuitems__icons" />
+                <span>Join Facilitated Room</span></Link>
+            }
+          </div>            
+          
+
+
+
 
           <div className="SideMenu__menuitems__item">
           <Link to="/help" target="_blank" className="SideMenu__menuitems__label"><SVG src="/side_menu/help.svg" className="SideMenu__menuitems__icons"/>

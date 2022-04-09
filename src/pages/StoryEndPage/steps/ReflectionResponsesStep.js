@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import {
   Box,
   Button,
@@ -284,11 +285,23 @@ function getChapterReflectionIds(characterId) {
 }
 
 const ReflectionResponsesStep = ({ reflectionId, next }) => {
+  const characterId = getCharacterId(reflectionId);
+  const allChapterReflectionIds = getChapterReflectionIds(characterId);
+  const allReflectionIds = allChapterReflectionIds.map(([chaptId, reflId]) => reflId);
+
+  const { search } = useLocation();
+  const query = new URLSearchParams(search);
+  const initialReflectionIds = (query.get('chapters') === 'all')
+    ? allReflectionIds
+    : [reflectionId];
+
   const [responses, setResponses] = useState(null);
+  const [highlightedResponse, setHighlightedResponse] = useState(null);
+  const [firstLoad, setFirstLoad] = useState(0);
   const [hasMore, setHasMore] = useState(true);
   const [lastDocSnapshot, setLastDocSnapshot] = useState(null);
-  const [reflectionIds, setReflectionIds] = useState([reflectionId]);
-  const [filterReflectionIds, setFilterReflectionIds] = useState([reflectionId]);
+  const [reflectionIds, setReflectionIds] = useState(initialReflectionIds);
+  const [filterReflectionIds, setFilterReflectionIds] = useState(initialReflectionIds);
   const [count, setCount] = useState(null);
   const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false);
   const classes = useStyles();
@@ -299,9 +312,9 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
     setFilterReflectionIds(newFilterReflectionIds);
   }
 
-  function filterReset() {
-    setFilterReflectionIds([reflectionId]);
-  }
+  // function filterReset() {
+  //   setFilterReflectionIds(initialReflectionIds);
+  // }
 
   function filterApply() {
     setResponses(null);
@@ -312,8 +325,6 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
   }
 
   const FilterDrawer = () => {
-    const characterId = getCharacterId(reflectionId);
-    const allChapterReflectionIds = getChapterReflectionIds(characterId);
     return (
       <div role='presentation' onKeyDown={toggleFilterDrawer(false)} className={classes.filterDrawer}>
         <h1>Filter stories</h1> <CloseIcon className={classes.closeIcon} onClick={toggleFilterDrawer(false)}/>
@@ -348,8 +359,21 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
     );
   }
 
+  function getHighlightedResponse(responses) {
+    // console.log("responses: "+responses)
+    for (let i = 0; i < responses.length; i++) {
+      // console.log("check response answer: "+responses[i].answer)
+      if (responses[i].answer != ""){
+        // console.log("response is non-empty!")
+        setFirstLoad(1)
+        return responses[i]
+      }
+    }
+  }
+
   async function fetchMoreResponses() {
     const LIMIT = 300;
+    var nonEmptyResponse = null;
     const { newResponses, newLastDocSnapshot } = await getDbReflectionResponsesPaginated({
       lastDocSnapshot,
       limit: LIMIT,
@@ -360,6 +384,12 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
       setHasMore(false);
     }
     setResponses((prevResponses) => prevResponses === null ? newResponses : prevResponses.concat(newResponses));
+    // console.log("firstload value:"+firstLoad)
+    if (firstLoad === 0) {
+      // console.log("running firstload!")
+      nonEmptyResponse = getHighlightedResponse(newResponses);
+      setHighlightedResponse(nonEmptyResponse);
+    }
     setLastDocSnapshot(newLastDocSnapshot);
   }
 
@@ -430,7 +460,7 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
           currentPage === 4 ?
           <div className={classes.yourStoriesBkgrd}  onClick={() => setCurrentPage(currentPage + 1)}>
             <div className={classes.gradientBkgrd}>
-              <ChapterResponse key={responses[0].id} response={responses[0]} />
+              <ChapterResponse key={highlightedResponse.id} response={highlightedResponse} />
               <div className={classes.bottomLikeSection}>
                 <img src="/reflection/reflection_heart_white.png" className={classes.heart}/>
                 <Typography className={classes.whiteTextReflection}>Tap on this icon to say that you connected with a reflection.</Typography>

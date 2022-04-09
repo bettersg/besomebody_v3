@@ -3,7 +3,7 @@ import { firestore} from '../firebase'
   
   export const getRoomDb = async (roomCode) => {
     try {
-      const roomRef = firestore.collection('rooms').where('roomCode','==',roomCode)
+      const roomRef = firestore.collection('rooms').where('code','==',roomCode)
       const snapshot = await roomRef.get()
       if (snapshot.docs.length === 0) {
         return console.error(`No such room exists: ${roomCode}`)
@@ -31,7 +31,7 @@ export const updateRoomParticipantsDb = async (id, userId) => {
             participantIds: [userId]
           },{merge: true})
         }
-        if (doc.data().participants.includes(userId)) {
+        if (doc.data().participantIds.includes(userId)) {
           console.log("User already exists in room");
           return null
         }

@@ -18,13 +18,26 @@ const useStyles = makeStyles(() => ({
   formGroup: {
     backgroundColor: 'white',
   },
+  chaptFeedbackContainer: {
+    height: "151px",
+    backgroundColor: "#3835C1",  
+    marginTop:"0", 
+    paddingTop: "32px", 
+  },
   subtitle: {
-    fontSize: '16px',
-    color: 'rgba(0, 0, 0, 0.5)',
+    fontSize: '13px',
+    color: 'white',
+    fontWeight: 700, 
+    fontSize: "13px", 
+    marginTop: "13px",
+    letterSpacing: "0.12em",
+    marginBottom: "12px", 
   },
   title: {
     fontSize: '24px',
     fontWeight: 'bold',
+    color: 'white',
+    fontWeight: 900, 
   },
   textField: {
     // backgroundColor: '#e5e5e5',
@@ -58,6 +71,7 @@ const ReflectionForm = ({ reflection }) => {
         answer,
         submittedAt: new Date(),
         timestamp: Date.now(),
+        ...currentUser.activeRoom  ? { room: currentUser.activeRoom } : {},
       }
     });
     try {
@@ -76,16 +90,22 @@ const ReflectionForm = ({ reflection }) => {
   }
 
   return (
-    <>
-      <Box pt={6} pb={2} className={classes.container}>
+    <Box pt={6} pb={2} className={classes.container}>
+      <Box className= {classes.chaptFeedbackContainer}>
+        <Box>
+            <Typography className={classes.skipButton}> 
+            {/* TODO: need onclick function to skip the page */}
+              SKIP
+            </Typography>
+        </Box>
         <Box>
           <Typography className={classes.subtitle} variant="subtitle1" align="center">
-            SHARE YOUR THOUGHTS WITH US
+            OVER TO YOU
           </Typography>
         </Box>
         <Box>
           <Typography className={classes.title} variant="h1" align="center">
-            REFLECTIONS FORM
+            Chapter Feedback
           </Typography>
         </Box>
       </Box>
@@ -111,7 +131,7 @@ const ReflectionForm = ({ reflection }) => {
             : <Button variant="contained" color="primary" fullWidth onClick={handleSubmitClick}>Submit</Button>
         }
       </Box>
-    </>
+    </Box>
   );
 };
 

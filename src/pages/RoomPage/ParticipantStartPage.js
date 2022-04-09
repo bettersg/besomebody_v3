@@ -94,8 +94,8 @@ const ParticipantStartPage = () => {
   setroomCode(roomUrl)
   
   // console.log('roomURL',roomUrl)  
-  console.log('roomCode',roomCode)  
-  console.log('room',room)  
+  // console.log('roomCode',roomCode)  
+  // console.log('room',room)  
   
 
   return (

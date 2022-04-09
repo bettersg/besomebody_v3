@@ -17,8 +17,8 @@ const Question = ({ question, value, onChange, reflectionId, context }) => {
     }));
     setCounts(results);
   }
-  console.log('1 qb',question.body)
-  console.log('1 context', context)
+  // console.log('1 qb',question.body)
+  // console.log('1 context', context)
   const body = formatString(question.body, context);
 
   const handleChange = (event) => {
@@ -28,7 +28,7 @@ const Question = ({ question, value, onChange, reflectionId, context }) => {
   switch (question.type) {
     case "MULTI_CHOICE":
       return (
-        <Box p={2} bgcolor="rgba(255,255,255,0.6)">
+        <Box p={2} bgcolor="rgba(255,255,255)">
           <Typography variant="body1">
             <b>{body}</b>
           </Typography>
@@ -41,7 +41,7 @@ const Question = ({ question, value, onChange, reflectionId, context }) => {
       );
     case "LIKERT_SCALE":
       return (
-        <Box p={2} bgcolor="rgba(255,255,255,0.6)">
+        <Box p={2} bgcolor="rgba(255,255,255)">
           <Typography variant="body1">
             <b>{body}</b>
           </Typography>
@@ -65,7 +65,7 @@ const Question = ({ question, value, onChange, reflectionId, context }) => {
     case "OPEN":
       const CHARACTER_LIMIT = 1000;
       return (
-        <Box p={2} bgcolor="rgba(255,255,255,0.6)">
+        <Box p={2} bgcolor="rgba(255,255,255)">
           <Typography variant="body1">
             <b>{body}</b>
           </Typography>
@@ -87,13 +87,13 @@ const Question = ({ question, value, onChange, reflectionId, context }) => {
       );
       case "GAP":
         return (
-          <Box p={2} bgcolor="rgba(255,255,255,0.6)">
+          <Box p={2} bgcolor="rgba(255,255,255)">
             <hr />
           </Box>
         );
     default:
       return (
-        <Box p={2} bgcolor="rgba(255,255,255,0.6)">
+        <Box p={2} bgcolor="rgba(255,255,255)">
           <Typography variant="body1">
             Invalid question type provided.
           </Typography>

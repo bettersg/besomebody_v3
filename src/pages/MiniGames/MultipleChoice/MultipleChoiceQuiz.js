@@ -14,6 +14,7 @@ import { MINI_GAME_MAP } from '../../../models/miniGameMap';
 import AudioPlayer from "../../../music/Music"
 import Music from '../../../music/tobeyou_minigame.mp3'
 import './MultipleChoiceQuiz.scss';
+import { getDbUser } from '../../../models/userModel.js'
 
 const useStyles = makeStyles((theme) => ({
     paragraphWrapper: {
@@ -83,9 +84,19 @@ export default function MultipleChoiceQuiz(props) {
     const [isCorrectAnswer,setIsCorrectAnswer] = useState(false);
     const [isDrawerOpen,setIsDrawerOpen]=useState(false);
     const classes = useStyles();  
+    const [userFromDb, setUserFromDb] = useState(null)
 
     useEffect(() => {
+        const getUser = async () => {
+        const user = await getDbUser(currentUser.id)
+        return setUserFromDb(user)
+        }
 
+        getUser()
+    }, [currentUser.id])
+
+    useEffect(() => {
+        
     },[])
 
     const saveUserAnswer = (userAns) => {
@@ -101,9 +112,11 @@ export default function MultipleChoiceQuiz(props) {
             gameId: quiz.game_id,
             answers: userAnswers,
             createdAt: new Date(),
+            ...userFromDb?.activeRoom  ? { room: userFromDb?.activeRoom } : {},
         }
         // console.log(answerDocs);
         try {
+            console.log(answerDocs)
             await createDbAnswers(answerDocs);
         } catch (err) {
             throw new Error(`${err}`)
@@ -140,7 +153,7 @@ export default function MultipleChoiceQuiz(props) {
     const handleStartGame = () => {
         setHasGameStarted(true);
      }
-
+     
     return (
 
         <>
