@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation ,useParams} from 'react-router-dom';
 import {
   Box,
   Button,
@@ -275,8 +275,10 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-function getCharacterId(reflectionId) {
-  return CHARACTER_MAP.find(char => char.chapters.some(chapt => chapt.reflectionId === reflectionId)).characterId;
+function getCharacterId(name) {
+  // return CHARACTER_MAP.find(char => char.chapters.some(chapt => chapt.reflectionId === reflectionId)).characterId;
+  // return characterId from name in CHARACTER_MAP
+  return CHARACTER_MAP.find((character) => character.linkName === name).characterId; 
 }
 
 function getChapterReflectionIds(characterId) {
@@ -285,7 +287,10 @@ function getChapterReflectionIds(characterId) {
 }
 
 const ReflectionResponsesStep = ({ reflectionId, next }) => {
-  const characterId = getCharacterId(reflectionId);
+  // const characterId = getCharacterId(reflectionId);
+  // get characterId from params name 
+  const { name } = useParams()  
+  const characterId = getCharacterId(name);
   const allChapterReflectionIds = getChapterReflectionIds(characterId);
   const allReflectionIds = allChapterReflectionIds.map(([chaptId, reflId]) => reflId);
 

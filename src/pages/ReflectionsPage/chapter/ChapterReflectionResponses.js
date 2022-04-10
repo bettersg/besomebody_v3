@@ -214,6 +214,9 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       cursor: 'pointer',
     },
+  },
+  infiniteScroll: {
+    marginBottom: 50,
   }
 }))
 
@@ -253,13 +256,16 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
     var firstload = 0;
     if (newResponses.length < LIMIT) {
       setHasMore(false);
+      setResponses(newResponses)
     }
-    setResponses((prevResponses) => prevResponses === null ? newResponses : prevResponses.concat(newResponses));
-    // console.log("firstload value:"+firstLoad)
+    else {
+      setResponses((prevResponses) => prevResponses === null ? newResponses : prevResponses.concat(newResponses));        
+    }
     if (firstLoad === 0) {
-      // console.log("running firstload!")
+      // console.log("running firstload!", newResponses)
       nonEmptyResponse = getHighlightedResponse(newResponses);
       setHighlightedResponse(nonEmptyResponse);
+      // console.log("new responses ",newResponses)
     }
     setLastDocSnapshot(newLastDocSnapshot);
   }
@@ -338,6 +344,8 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
                   hasMore={hasMore}
                   loader={<ClipLoader color="#898DE4" size={106} css={{display:'flex', left:'-15px', margin:'auto', height:'30px'}} />}
                   scrollableTarget={'reflectionsContainerId'}
+                      className={classes.infiniteScroll}
+                      style={{marginBottom:'80px'}}
                 >
                   {responses.map(response => ( 
                     response.answer.length > 10 && <ChapterResponse key={response.id} response={response} />
