@@ -215,7 +215,7 @@ At Ji Gu’s (1st Uncle’s) house for Chinese New Year. Dua Gu (2nd Uncle) is h
 // dua gu + ji gu
 Wah. Skip CNY one year, now dunno who is called what. #inner_monologue
 Ji Gu! Dua Gu! Xin nian kuai le! (1st Uncle! 2nd Uncle ! Happy New Year!) #speaker_self
-Wah! Ah Hah ah! Xin nian kuai le! Now you become so tall and handsome! #speaker_left
+Wah! Ah Hah ah! Xin nian kuai le! Now you become so tall and handsome! #speaker_right
 Haha. No lah. #speaker_self
 Ah Hao! Everyone missed you! Every year hide at home thinkthinkthink not good for your mind, you know? #speaker_left
 Lol, I wanna hide also nowhere to hide. #inner_monologue
@@ -425,7 +425,7 @@ I go toilet. #speaker_self
 #knot:zhihao_1_3
 #ui:narrator
 #background:bg_zhihao_jigu_entryway.jpg
-Halfway back from the toilet, I heard my ma and Ji Gu arguing. So I stopped and listened
+Halfway back from the toilet, I heard my Ma and Ji Gu arguing. So I stopped and listened
 I make sure they never see me, and I heard everything. 
 Whenever they speak only Hokkien, it’s always something bad. Bad and complicated. They assume I don't understand, but obv I can.
 
