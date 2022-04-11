@@ -722,7 +722,7 @@ export const CHARACTER_MAP = [
     linkName: "zhihao",
     profileImage: "/images/profile_zhihao.png",
     characterIntroImage:  "/character_choice_page/zhihao.png",
-    description: "Zhihao might have a future in e-sports, but will it disappear before his eyes? Life is about to get complicated, as a fateful Tweet gains a life of its own...",
+    description: "Zhihao might have a future in e-sports, but will it disappear before his eyes? Life is about to get complicated, as a fateful tweet gains a life of its own...",
     jsonLink: '../stories/zhihao.ink.json',
     shareImage:'/shareable_avatars/zhihao_share.svg',
     playable: true,

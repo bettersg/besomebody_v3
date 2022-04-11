@@ -740,7 +740,7 @@ Haiz. He confirm will choose her over me lah. Always the gf, never the bro.
 #speaker_3_image:ico_aman_selinder.png
 #timestamp:23.41
 #likes:0 ❤️
-Bakchormee has a minah gf, so he pangseh (ditched) us. RIP to all our bakchormee outings. RIP to my best bro’s IGN (in-game name). His new name must be malayu. WDYT of Bodoh? #thread_header
+@bakchormee has a minah gf, so isn't playing with us. RIP to all our bakchormee outings. RIP to my best bro’s  IGN (in-game name). His new name must be malayu. WDYT of Bodoh? #thread_header
 I know quite bad lah, but I really buay tahan (cannot take it) liao. So many games now I’m the only one playing – everytime last minute Gavin will give the same story. Everytime I finally get to game with him, he will disappoint. #inner_monologue
 Then the team’s rubbish all I have to handle myself. #inner_monologue
 And I cannot handle sia. I crack my head from this also still dunno why. But it sucks lah. #inner_monologue
@@ -851,7 +851,7 @@ Suan le (forget it) lah. I go see whether got anyone like my tweet.
 #speaker_3_image:ico_aman_selinder.png
 #timestamp:08.18
 #likes:1132 ❤️ | +108 new followers
-@bakchormee has a minah gf, so isn't playing with us. RIP to all our bakchormee outings. RIP to my best bro’s nickname. His new name must be malayu. WDYT of Bodoh? #thread_header
+@bakchormee has a minah gf, so isn't playing with us. RIP to all our bakchormee outings. RIP to my best bro’s  IGN (in-game name). His new name must be malayu. WDYT of Bodoh? #thread_header
 LOL #speaker_1
 haha BODOH BODOH BODOH #speaker_3
 Wah sehhhh! 108 new followers, no joke sia! None of my other tweets got this level of likes. #inner_monologue
@@ -861,7 +861,7 @@ RIP to our bro lol.  #speaker_2
     -> chapter_1_ending_1
 + [Keep the tweet up for publicity]
     -> chapter_1_ending_2
-+ [Keep the tweet up because it will blow over eventually]
++ [Keep the tweet up, it will blow over soon]
     -> chapter_1_ending_3
 
 
@@ -887,7 +887,7 @@ RIP to our bro lol.  #speaker_2
 #speaker_4_image:ico_aman_selinder.png
 #timestamp:08.18
 #likes:1132 ❤️ | +108 new followers
-@bakchormee has a minah gf, so isn't playing with us. RIP to all our bakchormee outings. RIP to my best bro’s nickname. His new name must be malayu. WDYT of Bodoh? #thread_header 
+@bakchormee has a minah gf, so isn't playing with us. RIP to all our bakchormee outings. RIP to my best bro’s IGN (in-game name). His new name must be malayu. WDYT of Bodoh? #thread_header 
 VAR chapter_1_ending = 1
 ~ chapter_1_ending = 1
 FML. Why I go write that? How come got so many likes? I better delete now.  #inner_monologue
