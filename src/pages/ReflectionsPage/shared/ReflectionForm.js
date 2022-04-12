@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '700',
     width: "252px", 
     '&:hover': {
-      backgroundColor: '#6C70DD',      
+      backgroundColor: '#FB5A3F',      
       boxShadow: 'none',
       
     },
