@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     // backgroundPosition: 'center',
     backgroundColor: 'white',
     height: '660px',
-    overflow: 'scroll',
+    overflow: 'auto',
     [theme.breakpoints.only('xs')]: {
         height: 'calc(var(--vh, 1vh) * 100)',
     },
@@ -233,6 +233,17 @@ const RoomDetailsPage = () => {
          </Box>
       
           <Box m={3}>
+          <div>
+            <div>
+              <Typography className={classes.title}>School / Organisation:</Typography>
+              <Typography paragraph={true} className={classes.body}> {room?.organisation}</Typography>
+            </div>
+            <div>
+              <Typography className={classes.title}>Class / Team:</Typography>
+              <Typography paragraph={true} className={classes.body}> {room?.name}</Typography>    
+            </div>
+          </div>
+          
             <Typography className={classes.title}>Facilitator's Message:</Typography>
             <Typography paragraph={true} className={classes.body}> {room?.instructions}</Typography>           
         </Box>        
