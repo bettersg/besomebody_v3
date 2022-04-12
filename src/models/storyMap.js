@@ -539,6 +539,7 @@ export const CHARACTER_MAP = [
     characterIntroImage: "/character_choice_page/ravi.png", 
     description: "Ravi dreams of being an aviation engineer - but can he push past the stereotypes and doubts?",
     jsonLink: '../stories/ravi.ink.json',
+    shareImage:'/shareable_avatars/ravi_share.png',
     jsonFile: RaviInk,
     playable: true,
     primaryColour: '#8DC000',
@@ -721,8 +722,9 @@ export const CHARACTER_MAP = [
     linkName: "zhihao",
     profileImage: "/images/profile_zhihao.png",
     characterIntroImage:  "/character_choice_page/zhihao.png",
-    description: "Zhihao might have a future in e-sports, but will it disappear before his eyes? Life is about to get complicated, as a fateful Tweet gains a life of its own...",
+    description: "Zhihao might have a future in e-sports, but will it disappear before his eyes? Life is about to get complicated, as a fateful tweet gains a life of its own...",
     jsonLink: '../stories/zhihao.ink.json',
+    shareImage:'/shareable_avatars/zhihao_share.svg',
     playable: true,
     jsonFile: ZhihaoInk,
     primaryColour: '#7F89BC',
@@ -836,7 +838,7 @@ export const CHARACTER_MAP = [
       {         
         title: "Reflection Browser",
         knotTag: "story_end_browser",
-        summary: "Nadia's story in the game has ended, but the stories of all our players are waiting to be explored.",
+        summary: "Zhihao's story in the game has ended, but the stories of all our players are waiting to be explored.",
         playable: true,
         images: [
           "/images/bg_nadia_intro.jpg",         

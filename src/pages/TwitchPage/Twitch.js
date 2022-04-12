@@ -35,6 +35,9 @@ const Twitch = (props) => {
   function stringToColor(string) {
     let hash = 0;
     let i;
+    if (string.length === 0 || string.length === null || string.length === undefined || string === null || string === undefined) {
+      return '#cccccc'
+    }
   
     /* eslint-disable no-bitwise */
     for (i = 0; i < string.length; i += 1) {
@@ -139,20 +142,20 @@ const Twitch = (props) => {
                       key={step.text}
                       mx={1}
                       display="flex"
-                      // justifyContent="flex-end"
+                    // justifyContent="flex-end"
                     >
-                      <Fade in='test' key='test' timeout={300}>
+                      <Fade in={true} key={i} timeout={300}>
                         <Box
                           className={`Twitch__messages--receiver`}
-                        //   borderRadius={5}
+                          //   borderRadius={5}
                           key={step.text}
                         >
-                            <div class="Twitch__messages--receiver--message">
+                          <div class="Twitch__messages--receiver--message">
                             <span>
-                                <img class="Twitch__messages--receiver--profile" src={'/images/ico_' + name +'.png'}></img></span>
-                            <span className="Twitch__messages--receiver--name" style={{color:stringToColor(specialTags.speaker_self_name)}}>{'@'+specialTags.speaker_self_name} </span>
+                              <img class="Twitch__messages--receiver--profile" src={'/images/ico_' + name + '.png'}></img></span>
+                            <span className="Twitch__messages--receiver--name" style={{ color: stringToColor(specialTags.speaker_self_name) }}>{'@' + specialTags.speaker_self_name} </span>
                             {step.text}
-                            </div>
+                          </div>
                           {/* {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.TwitchImage} /> :  <Typography key={step.text}>{step.text}</Typography> )} */}
                           {/* {setCurrentSpeaker(step.tags[0])} */}
                         </Box>
@@ -178,7 +181,37 @@ const Twitch = (props) => {
                     //     </Box>
                     //   </Fade>
                     // </Box>
-                  ) 
+                  )
+                }
+                 else if (step.tags[0]?.includes('speaker_twitch')) {
+                    if (innerMonoRef.current) { innerMonoRef.current.hidden = 'true' }
+                    return (
+                      <Box
+                        key={step.text}
+                        mx={1}
+                        display="flex"
+                        // justifyContent="flex-end"
+                      >
+                        <Fade in={true} key={i} timeout={300}>
+                          <Box
+                            className={`Twitch__messages--receiver`}
+                          //   borderRadius={5}
+                            key={step.text}
+                          >
+                              <div class="Twitch__messages--receiver--message">                              
+                                  <span className="Twitch__messages--receiver--name" >ADMIN:  </span>
+                              {step.text}
+                              </div>
+                            {/* {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.TwitchImage} /> :  <Typography key={step.text}>{step.text}</Typography> )} */}
+                            {/* {setCurrentSpeaker(step.tags[0])} */}
+                          </Box>
+                        </Fade>
+                        
+                      </Box>
+                      
+                      
+                     
+                    ) 
                 } else if (step.tags[0]?.includes('speaker')) {     // this is needed to avoid rendering inner_monologue                  
                   if (innerMonoRef.current) { innerMonoRef.current.hidden = 'true' }
                   return (
@@ -206,18 +239,11 @@ const Twitch = (props) => {
                                     {(step.tags[0]?.includes('speaker_7') ? <img class="Twitch__messages--receiver--profile" alt="O" src={"/images/" + specialTags.speaker_7_name} ></img> : null)}
                                     {(step.tags[0]?.includes('speaker_8') ? <img class="Twitch__messages--receiver--profile" alt="O" src={"/images/" + specialTags.speaker_8_name} ></img> : null)}
                                   
-                                  </span> */}
-                                  {/* <Avatar>
-                                    {(step.tags[0]?.includes('speaker_1') ? (specialTags.speaker_1_name).charAt(0) : null)}
-                                    {(step.tags[0]?.includes('speaker_2') ? (specialTags.speaker_2_name).charAt(0) : null)}
-                                    {(step.tags[0]?.includes('speaker_3') ? (specialTags.speaker_3_name).charAt(0) : null)}
-                                    {(step.tags[0]?.includes('speaker_4') ? (specialTags.speaker_4_name).charAt(0) : null)}
-                                    {(step.tags[0]?.includes('speaker_5') ? (specialTags.speaker_5_name).charAt(0) : null)}
-                                    {(step.tags[0]?.includes('speaker_6') ? (specialTags.speaker_6_name).charAt(0) : null)}
-                                    {(step.tags[0]?.includes('speaker_7') ? (specialTags.speaker_7_name).charAt(0) : null)}
-                                    {(step.tags[0]?.includes('speaker_8') ? (specialTags.speaker_8_name).charAt(0) : null)}
-                                  </Avatar>  */}
-                                <span className="Twitch__messages--receiver--name" style={{color:stringToColor(specialTags[step.tags[0] + "_name"])}}>
+                                  </span> */}                            
+                                    
+                            <span className="Twitch__messages--receiver--name" style={{ color: stringToColor(specialTags[step.tags[0] + "_name"]) , display: 'inline'}}>
+                            {/* <Avatar style={{ width: 16, height: 16 }} /> */}
+                                {/* <span className="Twitch__messages--receiver--name" style={{color:'blue'}}> */}
                                 {(step.tags[0]?.includes('speaker_1') ? '@' + specialTags.speaker_1_name + ' : ': null)}
                                 {(step.tags[0]?.includes('speaker_2') ? '@' + specialTags.speaker_2_name + ' : ': null)}
                                 {(step.tags[0]?.includes('speaker_3') ? '@' + specialTags.speaker_3_name + ' : ': null)}
@@ -225,7 +251,8 @@ const Twitch = (props) => {
                                 {(step.tags[0]?.includes('speaker_5') ? '@' + specialTags.speaker_5_name + ' : ': null)}
                                 {(step.tags[0]?.includes('speaker_6') ? '@' + specialTags.speaker_6_name + ' : ': null)}
                                 {(step.tags[0]?.includes('speaker_7') ? '@' + specialTags.speaker_7_name + ' : ': null)}
-                                {(step.tags[0]?.includes('speaker_8') ? '@' + specialTags.speaker_8_name + ' : ': null)} </span>
+                                {(step.tags[0]?.includes('speaker_8') ? '@' + specialTags.speaker_8_name + ' : ' : null)}                                
+                            </span>
                                 {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.TwitchImage} /> :  <span>{step.text}</span> )}
                                 </div>
                               {/* {(step.tags[1]?.includes('image') ?  <img src={'/images/'+ step.text} alt={step.text} className={classes.TwitchImage} /> :  <Typography key={step.text}>{step.text}</Typography> )} */}

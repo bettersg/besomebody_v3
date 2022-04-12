@@ -74,7 +74,7 @@
         overflow-y: scroll;
         user-select: none;
         // height: 100vh; 
-        height: calc(calc(var(--vh, 1vh) * 100) - 156px); 
+        height: calc(100vh - 162px);
         @media screen and (min-device-width:600px) {
             height: 504px; 
         }
@@ -129,14 +129,14 @@
         &--replyingTo {
             align-items: flex-start;
             display: flex;
-            height: 18px;
+            // height: 18px;
             margin-top: 4px;
             min-width: 156px;
             letter-spacing: 0;
             line-height: 18px;
             // min-height: 18px;
             // min-width: 75px;
-            white-space: nowrap;
+            // white-space: nowrap;
             font-size: 14px;
             font-weight: 400;
             color: $midnight60;  
@@ -150,6 +150,17 @@
             color: $midnight100;            
             font-size: 14px;
             font-weight: 400;
+            font-style: normal;
+        }
+        &--tweet_self {
+            letter-spacing: 0;
+            line-height: 18px;
+            margin-top: 4px;
+            // margin-left: 53px !important;
+            width: 283px;
+            color: $midnight100;            
+            font-size: 14px;
+            font-weight: 500;
             font-style: normal;
         }
         &--sender {
@@ -184,7 +195,7 @@
             height: calc(calc(var(--vh, 1vh) * 100) - 313px); 
         // height: 55.3vh; 
             @media screen and (min-device-width:600px) {
-                height: 350px; 
+                height: 335px; 
             }
         }
         &--sender, &--receiver {
@@ -211,11 +222,10 @@
             height: 44px; 
             color: $midnight100;
             font-size: 14px;
-            opacity: 80%;
             background-color: $midnight10;
             &.choice {
-                border: $aqua100 solid 2px;
-                background-color: transparent;
+                border: #E8E9EE solid 2px;
+                background-color: #E8E9EE;
                 color: black; 
             }
             &--right {
@@ -249,11 +259,12 @@
             user-select: none;
             padding: 13px 20px;
             text-align: center;
-            background-color: $aqua1;
-            color: blue;
+            background-color: #F0F8FF;
+            color: #499EF1;
             cursor: pointer;
             &:hover {
-                background-color: rgba(29, 191, 123, 0.4);
+                background-color: #499EF1;
+                color: white; 
             }
     
         }
