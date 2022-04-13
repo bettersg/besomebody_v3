@@ -3,8 +3,9 @@ import {  updateDbUser , getDbUser , updateUserRoomDb } from '../../models/userM
 import { useAuth } from '../../contexts/AuthContext'
 import { updateRoomParticipantsDb , getRoomDb } from '../../models/roomModel'
 import {CHARACTER_MAP,REFLECTION_ID_MAP} from '../../models/storyMap'
+import SVG from 'react-inlinesvg'
 
-import {  useHistory } from 'react-router-dom'
+import {  useHistory, Link } from 'react-router-dom'
 import { useSnackbar } from '../../contexts/SnackbarContext'
 import {
     Box,
@@ -71,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
   overline: {
     backgroundColor: '#664EFC',
     color: '#ffffff',
-    width: '100%',  
+    width: '100%',      
   },
   whiteBox: {
     backgroundColor: '#ffffff',
@@ -228,19 +229,22 @@ const RoomDetailsPage = () => {
 
     return (
       <Box className={classes.background}>
-        <Box py={1} textAlign="center"  className={classes.overline}>
-          <Typography variant="body2" > You are in a facilitated room: {room?.code} </Typography>
+        <Box py={1} className={classes.overline}>
+          
+          <Link to="/" style={{ textDecoration: 'none' }}><span align="left" style={{display:'inline-block', marginLeft: 10, color:'white'}}><SVG src="/chapter_choices_page/arrow.svg" />                </span></Link>
+            <span   style={{display:'inline-block',marginLeft:50}}><Typography variant="body1" style={{ fontWeight: '700'}} > Room Details: {room?.code} </Typography></span>
+          
          </Box>
       
           <Box m={3}>
           <div>
             <div>
-              <Typography className={classes.title}>School / Organisation:</Typography>
-              <Typography paragraph={true} className={classes.body}> {room?.organisation}</Typography>
+              <Typography className={classes.title}  style={{display:'inline-block'}}>School / Organisation:</Typography>
+              <Typography paragraph={true} className={classes.body}  style={{display:'inline-block',marginLeft:10}}> {room?.organisation}</Typography>
             </div>
-            <div>
-              <Typography className={classes.title}>Class / Team:</Typography>
-              <Typography paragraph={true} className={classes.body}> {room?.name}</Typography>    
+            <div >
+              <Typography className={classes.title} style={{display:'inline-block'}}>Class / Team:</Typography>
+              <Typography paragraph={true} className={classes.body} style={{display:'inline-block',marginLeft:10}}> {room?.name}</Typography>    
             </div>
           </div>
           
