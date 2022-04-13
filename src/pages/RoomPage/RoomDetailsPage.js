@@ -11,8 +11,10 @@ import {
     Box,
     Button,
     Typography,
-    Container,
+    Container, Accordion, AccordionSummary, AccordionDetails 
 } from '@material-ui/core'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import HomeworkAvatarBox from './HomeworkAvatarBox'
 
@@ -232,12 +234,20 @@ const RoomDetailsPage = () => {
         <Box py={1} className={classes.overline}>
           
           <Link to="/" style={{ textDecoration: 'none' }}><span align="left" style={{display:'inline-block', marginLeft: 10, color:'white'}}><SVG src="/chapter_choices_page/arrow.svg" />                </span></Link>
-            <span   style={{display:'inline-block',marginLeft:50}}><Typography variant="body1" style={{ fontWeight: '700'}} > Room Details: {room?.code} </Typography></span>
+            <span   style={{display:'inline-block',marginLeft:70}}><Typography variant="body1" style={{ fontWeight: '700'}} > Room: {room?.code} </Typography></span>
           
          </Box>
       
-          <Box m={3}>
-          <div>
+         <Accordion defaultExpanded>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography className={classes.title} >Room Details</Typography>
+          </AccordionSummary>
+          <AccordionDetails style={{display:'block'}}>
+            
             <div>
               <Typography className={classes.title}  style={{display:'inline-block'}}>School / Organisation:</Typography>
               <Typography paragraph={true} className={classes.body}  style={{display:'inline-block',marginLeft:10}}> {room?.organisation}</Typography>
@@ -245,13 +255,26 @@ const RoomDetailsPage = () => {
             <div >
               <Typography className={classes.title} style={{display:'inline-block'}}>Class / Team:</Typography>
               <Typography paragraph={true} className={classes.body} style={{display:'inline-block',marginLeft:10}}> {room?.name}</Typography>    
-            </div>
-          </div>
-          
-            <Typography className={classes.title}>Facilitator's Message:</Typography>
-            <Typography paragraph={true} className={classes.body}> {room?.instructions}</Typography>           
-        </Box>        
-          <hr style={{ border: 0, height: 2, width:'100%', marginTop:24, marginBottom: 24, backgroundColor: 'rgba(102,78,252,0.34)'}}/>
+              </div>
+            
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion defaultExpanded>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2a-content"
+          id="panel2a-header"
+        >
+          <Typography  className={classes.title}>Facilitator's Message</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+         <Typography paragraph={true} className={classes.body}> {room?.instructions}</Typography>           
+        </AccordionDetails>
+      </Accordion>
+        
+        
+          {/* <hr style={{ border: 0, height: 2, width:'100%', marginTop:24, marginBottom: 24, backgroundColor: 'rgba(102,78,252,0.34)'}}/> */}
         
           <Box m={3}>
             <Typography className={classes.title}>Assigned characters:</Typography>
