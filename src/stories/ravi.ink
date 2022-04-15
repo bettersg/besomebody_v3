@@ -1517,7 +1517,7 @@ What’s that French phrase she taught me?
 #knot:chapter_2_ending_1
 #ui:narrator
 #background:bg_ravi_valnumber.jpg
-There’s that term Val taught me. Carpe diem - seize the day. 
+There’s that phrase Val taught me. Carpe diem - seize the day. 
 VAR chapter_2_ending = 1
 ~ chapter_2_ending = 1
 If there’s a time for it, it’s now. Right. Here it goes, no regrets...
@@ -1530,7 +1530,7 @@ If there’s a time for it, it’s now. Right. Here it goes, no regrets...
 #background:bg_ravi_bedroom.jpg
  C’est la vie. That’s life. It’s painful, it’s unfair. 
 ~ chapter_2_ending = 2
-It’s what it is. 
+It’s what it is. Sorry, Val.
 
 -> ravi_2_reflection
 
@@ -1543,7 +1543,202 @@ Reflection 8
 
 
 
-// -> ravi_3_intro
+-> ravi_3_intro
+
+
+
+
+
+// CHAPTER 3
+
+
+
+
+
+=== ravi_3_intro ===
+#knot:ravi_3_intro
+#ui:narrator
+#background:bg_ravi_bedroom.jpg
+{chapter_2_ending == 1: 
+    So, the impossible happened: Val and I got together. I am still in shock - how can a girl like that be with a guy like me?! 
+    That’s the first great change in my life.
+    The second change is - I’ve landed an engineering internship! Not only will I fulfil my semester credits, I’m gonna get a taste of office life! 
+    It feels like I’ve won the lottery twice. I’m excited, but now I’m also feeling anxious for my first day tomorrow.
+- else :
+    So, what happened for Val and me? The impossible.
+    After I decided not to answer her call, she strode into the cafe the next day and told me if I wasn’t going to take the next step, I’d need to give her an honest reason why. 
+    Before I could answer, she asked me if I liked her. Point-blank. 
+    Of course I said yes. Then she looked me square in the eye and said I’d better prove it with a date.
+    So, uh, we’re together now. I still can't believe it. That’s the first great change in my life.
+    The second change is - I’ve landed an engineering internship! Not only will I fulfil my semester credits, I’m gonna get a taste of office life! 
+    It feels like I’ve won the lottery twice. I’m excited, but now I’m also feeling anxious for my first day tomorrow.
+     }
+
+~ chapter_id = 2
+#background:black.jpg
+CHAPTER {chapter_id} #title
+The Internship #title
+
+
+-> ravi_3_1
+
+
+=== ravi_3_1 ===
+#knot:ravi_2_1_narration
+#ui:whatsapp
+#background:bg_ravi_bedroom.jpg
+#background:whatsapp.png
+#chat_group_title:Family
+#chat_group_image:ico_ravi_family.png
+#speaker_1_name:Revati
+#speaker_2_name:Amma
+#timestamp:21.31
+Earlier before you left you said you had something on today? #speaker_2
+What was it? #speaker_2
+Didn’t hear you properly. Next time don’t speak when you eat. #speaker_2
+Anna said he was going to start his internship tomorrow #speaker_1
+The one his uni needed #speaker_1
+Yes haha #speaker_self
+I needed an internship to fulfil my university credits #speaker_self
+And I’ve been applying for a while #speaker_self
+Wow! Good that you managed to find one. #speaker_2
+Did your boss at the café give you any trouble? #speaker_2
++ [She's very understanding] Marie? No, she’s very understanding #speaker_self
+    We’re friends after all #speaker_self
+    She gave me time to prepare for interviews and make my internship applications #speaker_self
+    I don’t think I would have got the internship if not for her actually #speaker_self
+    Can you do anything on your own? #speaker_1
+    Shush #speaker_self
++ [I just manage my time well] I squeezed out time for interviews and applications somehow  #speaker_self
+    I suspect Marie let you have lots of flexibility Anna #speaker_1
+    Well, to tell the truth, she was quite nice la. We're friends after all. #speaker_self
+- Anyway the internship starts tomorrow #speaker_self
+It’s going to be for the next few months #speaker_self
+Kind of nervous actually #speaker_self
+I haven’t actually interned in such a place #speaker_self
+I don’t know if I’ll mess it up #speaker_self
+Don’t worry kanna. #speaker_2
+I know you can do it. #speaker_2
+You’ve been very responsible recently. #speaker_2
+You are a man now! #speaker_2
+But in my eyes you’re still just a boy #speaker_1
+HAHAHA #speaker_self
+Thank you Amma and thangachi (sister) #speaker_self
+Wish me luck! #speaker_self
+
+-> ravi_3_2
+
+=== ravi_3_2 ===
+#knot:ravi_3_2
+#ui:narrator
+#background:bg_ravi_officemeetingroom.jpg
+8.20 a.m. Turbine Engineering Pte Ltd Aerospace Meeting Room 3. 
+It’s Day One of the internship. 
+#ui:scene
+#background:bg_ravi_officemeetingroom.jpg
+#speaker_left_image:cha_ravi_roger_normal.png 
+#speaker_left_name:Roger
+#speaker_right_image:cha_ravi_qian_normal.png 
+#speaker_right_name:Qi An
+// speaker_right_image:cha_ravi_marcus.png 
+// speaker_right_name:Marcus
+This is it. This is it. This is it. You can do this. Breathe. Breathe. Slowly… not so fast. Ok. Ok. You got this. #inner_monologue
+This is gonna be good. Engineering Intern. Finally. Sounds neat. Right? Oh God, I’m so nervous. This is what adulting feels like huh.  #inner_monologue
+I am wearing my lucky socks. That’s silly. Socks aren’t lucky.  #inner_monologue
+You are good at what you do. Remember that. And remember, who you’re doing everything for. For Revu. For mom. My hands are shaking.  #inner_monologue
+The email said to report at 830. Maybe I shouldn’t have come so early. #inner_monologue
+// Qi An appears – looks relaxed* #
+// Marcus appears – looks very serious* #
+Oh my god, there are people who came earlier than me! I don’t recognise anybody else here. Hopefully I can make some friends. #inner_monologue
+I’m like the only Indian here. They’re talking to somebody. #inner_monologue
+// *Roger appears* #
+I don’t know who they’re talking to, but he looks important. Oh boy, here we go. I’m really feeling it now. #inner_monologue
+Hello everyone. Good Morning. Welcome to Turbine Engineering Pte Ltd for your internship programme. You will be able to learn much more about aviation engineering in the next few weeks. #speaker_left
+...Quite sunny today ah? Sorry ah, I’m not very good at this kind of corporate introduction lah. #speaker_left
+Qi An, right? Could you hand me the coffee please? #speaker_left
+Here you go. #speaker_right
+Thanks. So how’s everyone doing? #speaker_left
+... #speaker_right
+Nobody wants to speak...I guess they’re as nervous as I am, too. #speaker_self
+#speaker_right_image:cha_ravi_marcus_normal.png 
+#speaker_right_name:Marcus
+...Good, sir. How are you sir? #speaker_right
+Wow, this Marcus fella. So formal. Makes me feel like I’m back in NS again. #inner_monologue
+Good. Good. What’s your name again? #speaker_left
+Marcus Mak sir. M.A.R.C.U.S space M.A.K. You can just call me Marcus. #speaker_right
+Wow maybe he’s not just formal, he’s a complete robot! #inner_monologue
+Ok, and what about you? #speaker_left
+- oh, me?? Hello! #speaker_self
+Yes, hello. Oh, what’s your name? #speaker_left
+Ravi. #speaker_self
+Oh good, easy name ah. #speaker_left
+Haha, yes. #speaker_self
+Ravi what ah? #speaker_left
+Kannasamy. Ravi Kannasamy. #speaker_self
+Kandaswamy ah? #speaker_left
++ [Correct him] Kannasamy. With two Ns. #speaker_self
+    Oh ok. Ravi KandasaNNy right? Better I just call you just Ravi haha! Anyway, I’m Roger. #speaker_left
+    Uh #speaker_self
+    It’s Kannasamy... but I think I better not push this otherwise I might upset him on my first day. Anyway it’s not a big deal. #inner_monologue
++ [Ignore it] Sigh. It’s Kannasamy... It's not even that hard. #inner_monologue
+    But I think I better not push this otherwise I might upset him on my first day. Anyway it’s not a big deal. #inner_monologue
+- I’ll be supervising you all throughout the internship. You will be rotated around different teams, but you’ll start with the Systems Team first, focusing on integration of new Artificial Intelligence with regard to machine learning.  #speaker_left
+That’s my team. I’ll brief you all about this team and the other teams when we get the chance. #speaker_left
+HR has already set up your emails. One of my colleagues will give you an office tour later. All of you will be seated in the intern’s room, and a computer has been assigned to you all already.  #speaker_left
+You will have an Orientation Booklet placed at your desks. Read it ah, it should give you all the info you’ll need. #speaker_left
+Thank you, sir. #speaker_right
+#speaker_right_image:cha_ravi_qian_normal.png 
+#speaker_right_name:Qi An
+Thank you.#speaker_right
+Ok, pack your bags. I’ll bring you to my colleague who’s giving the tour. She’ll also give you guys your passes. You’ll need those to enter the office. #speaker_left
+[In Chinese] lkvki wthzc yalao snidl jdyos mljhq pwvpc zgcgi wfyku vufui lkvki wthzc yalao snidl jdyos mljhq pwvpc zgcgi wfyku vufuilkvki wthzc yalao snidl jdyos mljhq pwvpc zgcgi wfyku vufui #speaker_left
+Oh sorry Ravi, there’s a welcome lunch. Dim sum. You eat right? #speaker_left
+Yes I do! #speaker_self
+[In Chinese] lwnbq ysnmu dwaec uytaj bvixn qlhcg wbhxz lnbtp rfbbr  12:30 ok? #speaker_left
+Sure! #speaker_right
+#speaker_right_image:cha_ravi_marcus_normal.png 
+#speaker_right_name:Marcus
+Yes, sir.#speaker_right
+Wait what? What did he say? Is it OK to ask? Crap. #inner_monologue
++ [Ask Roger directly] Excuse me, Roger? Sorry, I didn’t quite get that. #speaker_self
+    Ah, sorry. Lunch is at 1230. Meet me downstairs later if you’re coming. #speaker_left
+    Ok, thank you! #speaker_self
++ [Don't ask him] Hmm… hope it isn’t anything important. I'll figure it out later. #inner_monologue
+Yes!  #speaker_self
+#speaker_left_image:cha_ravi_qian_normal.png 
+#speaker_left_name:Qi An
+Eh sorry ah guys, what did he say at the end?  #speaker_self
+Weren’t you listening? You should always pay respect to your seniors and superiors.  #speaker_right
+I mean, I WAS listening...he said something in Chinese, didn’t he？ #speaker_self
+Oh! Yeah, he said lunch was at 12.30. We can meet him downstairs later. #speaker_left
+Ok, thank you! #speaker_self
+
+I know Roger didn’t mean any harm, but couldn’t he have just told all of us the same thing at the same time? He probably just didn’t think it through. Not the best start to my internship. #inner_monologue
+Anyway. Let me go get my pass! Can’t wait to get started. I want to see how the rest of the office looks like. #
+
+So, Qi An and...Marcus, right? #speaker_self
+Yes, affirmative. #speaker_right
+Yup! #speaker_left
+Crazy huh, first day? #speaker_self
+Yeah. Let’s talk at lunch later. I’m going to meet my uncle first. #speaker_left
+He works here? #speaker_self
+Yeah. He’s the CEO. #speaker_left
+Oh wow. That’s cool! #speaker_self
+Yeah, Marcus, let’s go. I’ll introduce you to him. See you later Ravi. #speaker_left
+Let us move. #speaker_right
+Ok! uh ... #speaker_self
+Wait, why wasn’t I invited? Did they know each other before this internship? They did seem quite chummy earlier when they were talking to Roger jus- #inner_monologue
+(turns and bangs into glass door) OWWW! #speaker_self
+Wah. Are you alright? #speaker_left
+Owww... Yeah I’m ok. Just a small bruise on my forehead. #speaker_self
+Wow. Crazy first day, huh? Keep your eyes open, bro. #speaker_left
+Affirmative. It’s best to see where you are going. It’s more efficient that way. #speaker_right
+Haha, yeah... so embarrassing. #speaker_self
+Marcus, let’s go. #speaker_left
+#speaker_left_image:pixel.png 
+#speaker_right_image:pixel.png 
+Why am I so unlucky today? Must be the nerves.  #inner_monologue
+Just put your head down and work, Ravi. Keep your head up and walk. And keep your eyes open. #inner_monologue
 
 
 
