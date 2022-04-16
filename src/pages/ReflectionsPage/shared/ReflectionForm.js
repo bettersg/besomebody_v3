@@ -134,7 +134,7 @@ const ReflectionForm = ({ reflection }) => {
         answer,
         submittedAt: new Date(),
         timestamp: Date.now(),
-        ...userFromDb?.activeRoom  ? { room: userFromDb?.activeRoom } : {},
+        ...userFromDb?.activeRoom  ? { roomCode: userFromDb?.activeRoom } : {},
       }
     });
     try {
