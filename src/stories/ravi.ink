@@ -2017,8 +2017,10 @@ Enjoy your family dinner, I’m heading home too. See you tomorrow! =) #speaker_
 This is getting out of hand. I can’t go on like this. I am asking to be transferred to another department starting tomorrow. Or better still, quit this internship. #inner_monologue
 
 // chapter 3 ending 2
++ [End of Chapter 3] -> END
++ [Flow on to Chapter 4]  -> ravi_3_5
+// this is only for debug
 
--> ravi_3_5
 
 === ravi_3_5 ===
 #knot:ravi_3_minigame
@@ -2142,7 +2144,25 @@ What are you up to? #speaker_left
 Made no plans. Might sleep in. #speaker_self
 Maybe go see your family. I think it’ll be nice. #speaker_left
 
+-> ravi_3_6
 
+
+=== ravi_3_6 ===
+#knot:ravi_3_6
+#ui:narrator
+#background:bg_ravi_bedroom.jpg
+Sunday, 4.15 pm. 
+I wonder how Amma is doing. And I miss Revu. I've been so busy, I haven't seen them in a while. I should probbaly go over to Aunty Pushpa's place to see them.
+And maybe I should tell them about Val. 
+Or maybe now is not the right time. Hmm, maybe wait a bit, eh? But I want to tell them! 
+...But now is not the right time. 
+
+#ui:scene
+#background:bg_ravi_pushpa_home.jpg
+#speaker_left_image:cha_ravi_mum_dress_normal.png
+#speaker_left_name:Amma
+#speaker_right_image:cha_ravi_revati_normal.png 
+#speaker_right_name:Revati
 
 
 
