@@ -21,6 +21,7 @@ const Whatsapp = (props) => {
   // Help to scroll to bottom of the paragraphs render screen
   // ========================================================
   const elementRef = useRef()
+  const innerMonoRef = useRef()
 
   // Eveytime currentParagraphs gets updated or choices appear, scroll to the elementRef
   useEffect(() => {
@@ -104,9 +105,10 @@ const Whatsapp = (props) => {
             <Box
               className={`Whatsapp__messages ${choices.length > 0 ? 'choices' : ''}`}
               dir="ltr">
-              {specialTags.timestamp ? <Box style={{textAlign:'center', paddingTop:5, fontSize:12}}> {specialTags.timestamp}hr </Box>: null}
+              {specialTags.timestamp ? <Box style={{textAlign:'center', paddingTop:5, fontSize:12}}> {specialTags.timestamp} </Box>: null}
               {currentParagraphs.map((step, i) => {
                 if (step.tags[0]?.includes('speaker_self')) {
+                  if (innerMonoRef.current) { innerMonoRef.current.hidden = 'true' }
                   return (
                     <Box
                       key={step.text}
@@ -128,6 +130,7 @@ const Whatsapp = (props) => {
                     </Box>
                   ) 
                 } else if (step.tags[0]?.includes('speaker')) {     // this is needed to avoid rendering inner_monologue
+                  if (innerMonoRef.current) { innerMonoRef.current.hidden = 'true' }
                   return (
                     <Fade in={step.text} timeout={300}>
                       <div key={step.text} className={`Whatsapp__messages--receiver ${isNotPrevSpeaker(step.tags[0])?"newSpeaker":""}`} 
@@ -152,8 +155,17 @@ const Whatsapp = (props) => {
                   )
                 }
                 else if (step.tags[0]?.includes('timestamp')) {
+                  if (innerMonoRef.current) { innerMonoRef.current.hidden = 'true' }
                   return (
                     <Box style={{ textAlign: 'center', paddingTop: 5 }}> <Typography key={step.text} variant="overline"> {step.text}hr</Typography> </Box>
+                    )
+                }
+                else if (step.tags[0]?.includes('clear')) {     // this is needed to avoid rendering inner_monologue
+                  if (innerMonoRef.current) { innerMonoRef.current.hidden = 'true' }
+                      return (null)
+                } else if (step.tags[0]?.includes('inner_monologue')) {                
+                  return (
+                    <div className="Whatsapp__innerMono" ref={innerMonoRef}> <Typography key={step.text}  className="Whatsapp__innerMono--text"> {step.text}</Typography> </div>
                     )
                 }
               

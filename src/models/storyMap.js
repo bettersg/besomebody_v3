@@ -669,7 +669,7 @@ export const CHARACTER_MAP = [
         title: "The Internship",
         knotTag: "ravi_3_intro",
         summary: "Ravi lands an internship to fulfill his university credits. And finds himself in a situation that tests him.",
-        playable: false,
+        playable: true,
         discordLink: 'https://discord.com/channels/934082509061357598/938335768521363456',
         images: [           
           "/images/bg_launch.jpg",
