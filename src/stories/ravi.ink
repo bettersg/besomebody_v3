@@ -1812,12 +1812,14 @@ I don’t know what they’d say if they found out we were dating. They’d prob
 #ui:scene
 #speaker_left_image:cha_ravi_valerie_normal.png
 #speaker_left_name:Val
-#speaker_right_image:cha_ravi_marcus_qian.png
-#speaker_right_name:Marcus & Qi An
+#speaker_right_image:cha_ravi_marcus_gossipy.png
+#speaker_right_name:Marcus
 Ok, you know what. It’s ok. Let’s just wait for a while. I’m sure we can find seats here. #speaker_self
 You sure? I don’t know what’s wrong with your colleagues, but I can just go too if today isn’t a good time for lunch. We can always eat another day. #speaker_left
 It’s ok. I’m sure someone will leave soon. Let’s just wait here. #speaker_self
 [Marcus whispers something to Qi An] #speaker_right
+#speaker_right_image:cha_ravi_qian_gossipy.png
+#speaker_right_name:Qi An
 [Qi An whispers back]  #speaker_right
 #speaker_right_image:pixel.png
 Hey Ravi, are you feeling alright? You’re sweating like crazy all of a sudden. Here, take a tissue. #speaker_left
