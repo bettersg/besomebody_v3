@@ -122,7 +122,8 @@ A Chinese New Year #title
 #knot:zhihao_1_1_narration
 #ui:narrator
 #background:bg_zhihao_car.jpg
-Ma and I are on the way to Chinese New Year lunch with my uncles. We are late, and I don't like them.
+Ma and I are on the way to my uncles' place for Chinese New Year lunch. I really buay tahan (cannot stand) them. 
+Also, we are late.
 
 -> zhihao_1_1
 
@@ -266,13 +267,13 @@ Wah. First time I hear. You always follow your friends issit? #speaker_right
 Wtf is he trying to say? That I dunno how to use my brain? #inner_monologue
 Not say I follow. Friends must help each other lah. #speaker_self
 Help each other is good!  Ah Hao hen guai. (Ah Hao is a very good boy.) #speaker_left
-To Dua Gu everything also good. Jiak sai (eat shit) also good. Dua Gu, you good this, good that, end up all your words also sai ah! #speaker_left
+To Dua Gu everything also good. Jiak sai (eat shit) also good. Dua Gu, you good this, good that, end up all your words also sai ah! #speaker_right
 Ah Hao, you work at the temple, the pay okay anot? I worry about you, you know. If not enough Ji Gu can help you find better job. Easy one. #speaker_right
 It’s not work, I just help my friend pack donations for charity. #speaker_self
-Why you waste time!  Ji Gu teach you. #speaker_left
-Lai liao his nonsense lai liao. (Here he comes with his nonsense.) #speaker_self
-When you young that time must learn to make money! #speaker_left
-All your friends, they study so much go uni but then come out all dunno how to make money. #speaker_left
+Why you waste time!  Ji Gu teach you. #speaker_right
+Lai liao his nonsense lai liao. (Here he comes with his nonsense.) #inner_monologue
+When you young that time must learn to make money! #speaker_right
+All your friends, they study so much go uni but then come out all dunno how to make money. #speaker_right
 // ma + ji gu
 #speaker_left_image:cha_zhihao_mother_normal.png
 #speaker_left_name:Ma
@@ -425,9 +426,9 @@ I go toilet. #speaker_self
 #knot:zhihao_1_3
 #ui:narrator
 #background:bg_zhihao_jigu_entryway.jpg
-Halfway back from the toilet, I heard my Ma and Ji Gu arguing. So I stopped and listened
+Halfway back from the toilet, I heard Ma and Ji Gu arguing. So I stopped and listened.
 I make sure they never see me, and I heard everything. 
-Whenever they speak only Hokkien, it’s always something bad. Bad and complicated. They assume I don't understand, but obv I can.
+Whenever they speak only Hokkien, it’s always something bad. Bad and complicated. They think I don't understand, but obv I can.
 
 #ui:scene
 #background:bg_zhihao_jigu_entryway.jpg
@@ -675,7 +676,7 @@ yeah @bakchormee joining? #speaker_2
 poor thing #speaker_7
 is @bakchormee eating bakchormee with her  #speaker_6
 She malay so cannot eat BCM  #speaker_self
-LMAOOOOO. bakchormee not halal!!!  #speaker_2
+LMAOOOOO. @bakchormee not halal!!!  #speaker_2
 @ahao_gamer which bakchormee you talking abt lollll #speaker_7
 the food lah then what  #speaker_self
 lolol @ahao_gamer innocent to the max #speaker_2
@@ -1105,7 +1106,7 @@ Boy-- #speaker_left
 Haiz, even the Grab only here in 10 minutes. Like that how to reach on time sia?  #inner_monologue
 #ui:narrator
 #background:bg_zhihao_hdb_carpark.jpg
-10 minutes later, both my ma and the taxi arrived at the same time. 
+10 minutes later, both Ma and the taxi arrived at the same time. 
 Even though I told ma not to come!
 #ui:scene
 #background:bg_zhihao_hdb_carpark.jpg
