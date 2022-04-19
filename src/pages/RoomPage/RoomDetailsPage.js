@@ -280,7 +280,7 @@ const RoomDetailsPage = () => {
             <Typography className={classes.title}>Assigned characters:</Typography>
             <Typography paragraph={true} className={classes.body}>
             { result2 &&
-              <HomeworkAvatarBox result2={result2} />
+              <HomeworkAvatarBox result2={result2} user={userFromDb}/>
             }
             </Typography>           
         </Box>  
