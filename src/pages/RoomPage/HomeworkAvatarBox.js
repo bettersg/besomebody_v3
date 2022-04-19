@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function HomeworkAvatarBox(props) {
-    const { result2 } = props
+    const { result2,user } = props
     const classes = useStyles();  
 
 //   const reflectionId = parseInt(reflection);
@@ -31,7 +31,7 @@ export default function HomeworkAvatarBox(props) {
     result2.map((reflection,i) => {
       
       return (
-        <><HomeworkAvatar key={i} reflection={reflection} />
+        <><HomeworkAvatar key={i} reflection={reflection} user={user}/>
           <hr />
         </>
         //  <Box key={reflection}>                  

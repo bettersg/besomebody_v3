@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function HomeworkAvatar(props) {
-    const { reflection} = props
+    const { reflection , user} = props
     const classes = useStyles();  
     // console.log(characterId)
 //   const reflectionId = parseInt(reflection);
@@ -46,9 +46,28 @@ export default function HomeworkAvatar(props) {
     const persona = CHARACTER_MAP.find((character) => character.characterId === parseInt(reflection.characterId)); 
     // console.log('characterId',characterId)
     // console.log('char',reflection.characterId)
-    // console.log('persona', persona)
+    // console.log('props', props)
     
-    
+  // function to check if the assigned chapter has been completed already (is the chapterId in the user achievements)
+  // const checkIfCompleted = (chapterId) => {
+  //   const completed = userFromDb?.achievements?.find((achievement) => achievement.chapterId === chapterId)
+  //   return completed
+  // }
+  
+  
+  // // first check the chapter id and character id using the reflection id
+  const checkIfCompleted = (characterId, chapterNum) => {
+    console.log(characterId, chapterNum)         
+    // console.log(user.achievements.find())
+    // console.log(user.achievements.find((achievement) => achievement.chapter === chapterNum && achievement.character === parseInt(characterId)) )
+    const currentChapterInUserDb = user.achievements.find(
+      (achievement) =>
+        achievement.character === parseInt(characterId) &&
+        achievement.chapter === chapterNum
+    )
+    // console.log(currentChapterInUserDb)
+    return currentChapterInUserDb ? true : false 
+    }
 
     
     
@@ -62,15 +81,17 @@ export default function HomeworkAvatar(props) {
             <Box style={{width:'80px', padding: 4}}>
             <Typography style={{fontWeight: '700'}}> {persona.name}  </Typography>
             </Box>
-            <Box className={classes.homeworkText}>
-              {reflection.chapterIds.map((reflectionId,i) => {
-                
+            <Box className={classes.homeworkText}>              
+              {reflection.chapterIds.map((chapter,i) => {
+               
                 return (
                   <Box>                        
-                        Chapter  {reflectionId}  <span style={{paddingLeft:18, fontWeight: '700', color:'#664EFC'}}>To do</span>
+                    Chapter  {chapter}
+                    {checkIfCompleted(reflection.characterId, chapter) ? <span style={{ float:'right', fontWeight: '700', color: '#00cc00' }}>Done</span> :  <span style={{float:'right', fontWeight: '700', color: '#664EFC' }}>To do</span>}
+                    {/* {user.achievements.find((achievement) => achievement.chapter === parseInt(chapter) && achievement.character === parseInt(reflection.characterId)) ? <span style={{ paddingLeft: 18, fontWeight: '700', color: '#00cc00' }}>Done</span> :  <span style={{ paddingLeft: 18, fontWeight: '700', color: '#664EFC' }}>To do</span>} */}
                     </Box>
                 )
-              })
+              })              
                 }
               </Box>
       
