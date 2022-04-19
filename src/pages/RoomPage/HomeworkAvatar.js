@@ -87,7 +87,7 @@ export default function HomeworkAvatar(props) {
                 return (
                   <Box>                        
                     Chapter  {chapter}
-                    {checkIfCompleted(reflection.characterId, chapter) ? <span style={{ float:'right', fontWeight: '700', color: '#00cc00' }}>Done</span> :  <span style={{float:'right', fontWeight: '700', color: '#664EFC' }}>To do</span>}
+                    {checkIfCompleted(reflection.characterId, chapter) ? <span style={{ float:'right', fontWeight: '700', color: '#8dc000' }}>Done</span> :  <span style={{float:'right', fontWeight: '400', color: '#664EFC' }}>To do</span>}
                     {/* {user.achievements.find((achievement) => achievement.chapter === parseInt(chapter) && achievement.character === parseInt(reflection.characterId)) ? <span style={{ paddingLeft: 18, fontWeight: '700', color: '#00cc00' }}>Done</span> :  <span style={{ paddingLeft: 18, fontWeight: '700', color: '#664EFC' }}>To do</span>} */}
                     </Box>
                 )
