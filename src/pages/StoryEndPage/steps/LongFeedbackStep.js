@@ -28,7 +28,7 @@ const LongFeedbackStep = ({ reflection, questions, characterId, setState, getSta
         answer,
         submittedAt: new Date(),
         timestamp: Date.now(),
-        ...currentUserDb?.activeRoom  ? { room: currentUserDb?.activeRoom } : {},
+        ...currentUserDb?.activeRoom  ? { roomCode: currentUserDb?.activeRoom } : {},
       };
     });
 

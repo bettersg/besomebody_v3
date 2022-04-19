@@ -71,7 +71,7 @@ const ReflectionForm = ({ reflection }) => {
         answer,
         submittedAt: new Date(),
         timestamp: Date.now(),
-        ...currentUser.activeRoom  ? { room: currentUser.activeRoom } : {},
+        ...currentUser.activeRoom  ? { roomCode: currentUser.activeRoom } : {},
       }
     });
     try {
