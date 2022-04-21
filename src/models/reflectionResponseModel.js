@@ -81,3 +81,35 @@ export const getDbReflectionResponse = async(id) => {
     throw new Error(`Error at getDbReflectionResponse: ${err}`);
   }
 }
+
+
+/**
+ * Gets reflection responses for a given room code.
+ * `reflectionId`: optional number for filtering for reflectionId
+ * `getOnlyReflections`: optional boolean for getting only verbatim (long-form) reflections
+ */ 
+export const getDbReflectionResponseByRoomCode = async (
+  roomCode,
+  reflectionId,
+  
+) => {
+  try {
+    reflectionId = parseInt(reflectionId);
+    let query = firestore
+      .collection('reflectionResponses')
+      .where('roomCode', '==', roomCode)
+      .where('reflectionId', '==', reflectionId)
+      .where('questionId' , '==', 3) // hardcoded to the longform responses
+      ;
+    
+    
+    const snapshot = await query.get();
+    const savedStates = snapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+    return savedStates;
+  } catch (err) {
+    throw new Error(`Error at getDbReflectionResponses: ${err}`);
+  }
+};

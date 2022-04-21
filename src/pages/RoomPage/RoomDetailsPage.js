@@ -162,7 +162,7 @@ const RoomDetailsPage = () => {
   
   const reflectionIdsCharacter = room?.reflectionIds.map((reflectionId) => { 
     const { characterId, chapterId } = REFLECTION_ID_MAP[reflectionId]
-    return { characterId, chapterId }
+    return { characterId, chapterId , reflectionId }
   })
 
 
@@ -175,14 +175,15 @@ const RoomDetailsPage = () => {
   
   if (reflectionIdsCharacter !== undefined ) {
     var results = groupBy(reflectionIdsCharacter, (c) => c.characterId);    
-    // console.log('results', results)
+    // console.log('results',results)
     
     var result2 = Object.entries(results).map(([key, value]) => ({
-      characterId: key,
-      chapterIds: value.map((v) => v.chapterId)
+      characterId: parseInt(key),      
+      chapterIds: value.map((v) => v.chapterId),
+      reflectionIds: value.map((v) => v.reflectionId)
     }))
     // setCharacterChapters(result2)  // error only happens if this line is added. if i comment this line out, the error disappears but CharacterChapters is null
-       
+      //  console.log('result2', result2)
   }
   // console.log('cc', characterChapters)      
 
@@ -282,7 +283,7 @@ const RoomDetailsPage = () => {
             <Typography className={classes.title}>Assigned characters:</Typography>
             <Typography paragraph={true} className={classes.body}>
             { result2 &&
-              <HomeworkAvatarBox result2={result2} user={userFromDb}/>
+              <HomeworkAvatarBox chaptersByCharacter={result2} reflectionIdsByCharacter={results} user={userFromDb}/>
             }
             </Typography>           
         </Box>  
