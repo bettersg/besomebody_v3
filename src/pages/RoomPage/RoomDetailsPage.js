@@ -269,7 +269,9 @@ const RoomDetailsPage = () => {
           <Typography  className={classes.title}>Facilitator's Message</Typography>
         </AccordionSummary>
         <AccordionDetails>
-         <Typography paragraph={true} className={classes.body}> {room?.instructions}</Typography>           
+          <Typography className={classes.body}>
+            <pre style={{ fontFamily: 'inherit', margin: 0 }}>{room?.instructions}</pre>
+          </Typography>           
         </AccordionDetails>
       </Accordion>
         
