@@ -134,6 +134,13 @@ const useStyles = makeStyles((theme) => ({
     margin: '8px !important',
     height: '30px !important',
     minHeight: '30px !important'
+  },
+  preWrap: {
+    whiteSpace: 'pre-wrap',
+//  whiteSpace: '-moz-pre-wrap',  /* Mozilla, since 1999 */
+//  whiteSpace: '-pre-wrap',      /* Opera 4-6 */
+//  whiteSpace: '-o-pre-wrap',    /* Opera 7 */
+    wordWrap: 'break-word', 
   }
 
 }))  
@@ -293,7 +300,7 @@ const RoomDetailsPage = () => {
         </AccordionSummary>
         <AccordionDetails>
           <Typography className={classes.body}>
-            <pre style={{ fontFamily: 'inherit', margin: 0 }}>{room?.instructions}</pre>
+            <pre style={{ fontFamily: 'inherit', margin: 0 , width:320}} className={classes.preWrap}>{room?.instructions}</pre>
           </Typography>           
         </AccordionDetails>
       </Accordion>
