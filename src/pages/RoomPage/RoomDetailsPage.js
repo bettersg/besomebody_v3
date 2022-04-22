@@ -97,6 +97,8 @@ const useStyles = makeStyles((theme) => ({
   body: {
     fontSize: '0.9rem',
     fontWeight: '400',
+    lineHeight: 1.2,
+    marginBottom: 8
   },
 
   btn: {
@@ -127,6 +129,18 @@ const useStyles = makeStyles((theme) => ({
       boxShadow: 'none',
       
     },
+  },
+  thinner: {
+    margin: '8px !important',
+    height: '30px !important',
+    minHeight: '30px !important'
+  },
+  preWrap: {
+    whiteSpace: 'pre-wrap',
+//  whiteSpace: '-moz-pre-wrap',  /* Mozilla, since 1999 */
+//  whiteSpace: '-pre-wrap',      /* Opera 4-6 */
+//  whiteSpace: '-o-pre-wrap',    /* Opera 7 */
+    wordWrap: 'break-word', 
   }
 
 }))  
@@ -162,7 +176,7 @@ const RoomDetailsPage = () => {
   
   const reflectionIdsCharacter = room?.reflectionIds.map((reflectionId) => { 
     const { characterId, chapterId } = REFLECTION_ID_MAP[reflectionId]
-    return { characterId, chapterId }
+    return { characterId, chapterId , reflectionId }
   })
 
 
@@ -177,12 +191,26 @@ const RoomDetailsPage = () => {
     var results = groupBy(reflectionIdsCharacter, (c) => c.characterId);    
     // console.log('results', results)
     
-    var result2 = Object.entries(results).map(([key, value]) => ({
-      characterId: key,
-      chapterIds: value.map((v) => v.chapterId)
-    }))
-    // setCharacterChapters(result2)  // error only happens if this line is added. if i comment this line out, the error disappears but CharacterChapters is null
-       
+    var groupedResults = Object.keys(results).map(function (key) {
+      return {
+        characterId: key,
+        chapters: results[key]
+      };
+    });
+    
+
+
+    
+  
+    // var result2 = Object.entries(results).map(([key, value]) => ({
+    //   characterId: parseInt(key),      
+    //   // create object with characterIds and reflectionIds for each characterId
+      
+    //   chapterIds: value.map((v) => v.chapterId),
+    //   reflectionIds: value.map((v) => v.reflectionId)
+    // }))
+    
+      //  console.log('result2', result2)
   }
   // console.log('cc', characterChapters)      
 
@@ -243,10 +271,11 @@ const RoomDetailsPage = () => {
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
             id="panel1a-header"
+            className={classes.thinner}
           >
             <Typography className={classes.title} >Room Details</Typography>
           </AccordionSummary>
-          <AccordionDetails style={{display:'block'}}>
+          <AccordionDetails style={{display:'block'}} >
             
             <div>
               <Typography className={classes.title}  style={{display:'inline-block'}}>School / Organisation:</Typography>
@@ -260,17 +289,18 @@ const RoomDetailsPage = () => {
           </AccordionDetails>
         </Accordion>
 
-        <Accordion defaultExpanded>
+        <Accordion defaultExpanded >
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
-          id="panel2a-header"
+            id="panel2a-header"
+            className={classes.thinner}
         >
           <Typography  className={classes.title}>Facilitator's Message</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography className={classes.body}>
-            <pre style={{ fontFamily: 'inherit', margin: 0 }}>{room?.instructions}</pre>
+            <pre style={{ fontFamily: 'inherit', margin: 0 , width:320}} className={classes.preWrap}>{room?.instructions}</pre>
           </Typography>           
         </AccordionDetails>
       </Accordion>
@@ -281,15 +311,15 @@ const RoomDetailsPage = () => {
           <Box m={3}>
             <Typography className={classes.title}>Assigned characters:</Typography>
             <Typography paragraph={true} className={classes.body}>
-            { result2 &&
-              <HomeworkAvatarBox result2={result2} user={userFromDb}/>
+            { groupedResults &&
+              <HomeworkAvatarBox chaptersByCharacter={groupedResults} user={userFromDb}/>
             }
             </Typography>           
         </Box>  
 
         <Box className={classes.bottom}>
           {/* <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} href="/">Play Game</Button>          */}
-          <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} onClick={() => saveRoomStartGame()}>Start Game</Button>         
+          <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} onClick={() => saveRoomStartGame()}>Play Game</Button>         
           <Button variant="outlined" type="submit" className={classes.btn2} disabled={isLoading} onClick={() => exitActiveRoom()}>Leave Room</Button>         
         </Box>        
       </Box>
