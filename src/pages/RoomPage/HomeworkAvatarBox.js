@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function HomeworkAvatarBox(props) {
-    const { chaptersByCharacter,user,reflectionIdsByCharacter } = props
+    const { chaptersByCharacter,user } = props
     const classes = useStyles();  
 
     //   const reflectionId = parseInt(reflection);
@@ -28,9 +28,10 @@ export default function HomeworkAvatarBox(props) {
     // console.log('persona',persona)
 
     return (
-      chaptersByCharacter.map((character,i) => {      
+      chaptersByCharacter.map((character, i) => {      
+
       return (
-        <><HomeworkAvatar key={i} characters={character} reflectionIdsByCharacter={reflectionIdsByCharacter} user={user}/>
+        <><HomeworkAvatar key={i} characters={character} user={user}/>
           <hr />
         </>
         )

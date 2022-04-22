@@ -39,45 +39,22 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function HomeworkAvatar(props) {
-    const { characters , user , reflectionIdsByCharacter} = props
+  const { characters , user } = props
   const classes = useStyles();  
   const [completed, setCompleted ] = useState(false)
-  const [reflectionState, setReflectionState ] = useState(false)
-    const persona = CHARACTER_MAP.find((character) => character.characterId === parseInt(characters.characterId)); 
- 
-  
-  
-  // // first check the chapter id and character id using the reflection id
-  // const checkIfCompleted = (characterId, chapterNum) => {
-  //   const currentChapterInUserDb = user.achievements.find(
-  //     (achievement) =>
-  //       achievement.character === parseInt(characterId) &&
-  //       achievement.chapter === chapterNum
-  //   )
-  //   // console.log(currentChapterInUserDb)
-  //   return currentChapterInUserDb ? true : false
-  //   }
-  
+  const [reflectionState, setReflectionState] = useState(false)
+  const persona = CHARACTER_MAP.find((character) => character.characterId === parseInt(characters.characterId))
+
+  // const persona = CHARACTER_MAP.find((characterId) => characterId === parseInt(characters.characterId)); 
+ const roomCode = user.activeRoom
+   
 
 // parameters for getDbReflectionResponseByRoomCode :  roomCode, reflectionId, getOnlyReflections   
-  const checkIfCompleted =  async (roomCode, reflectionId) => {
-    const getReflectionsbyRoom =  getDbReflectionResponseByRoomCode(roomCode, reflectionId, true).then(
-      (response) => {
-        // console.log(response.length >=1)  // this evaluates correctly
-        return (response.length >= 1)        
-      }        
-    )          
-    const completed = await getReflectionsbyRoom
-    console.log(completed)
-    return completed
-    // setCompleted(getReflectionsbyRoom);
-  }
-
-  // const checkIfCompleted = async (roomCode, reflectionId) => {
-  //   const response = await getDbReflectionResponseByRoomCode(roomCode, reflectionId, true);
-  //   // console.log(response.length >=1)  // this evaluates correctly
-  //   return (response.length >=1);
-  // };
+  const checkIfCompleted2 = async (roomCode, reflectionId) => {
+    const response = await getDbReflectionResponseByRoomCode(roomCode, reflectionId, true);
+    // console.log(response.length >=1)  // this evaluates correctly
+    return (response.length >=1);
+  };
     
 
                                   
@@ -91,44 +68,46 @@ export default function HomeworkAvatar(props) {
         <Typography style={{fontWeight: '700'}}> {persona.name}  </Typography>
         </Box>
         <Box className={classes.homeworkText}>              
-          {characters.chapterIds.map((chapter,i) => {
-            
+          {characters.chapters.map((chapter, i) => {    
+
             return (
-              <Box>                        
-                Chapter  {chapter}                    
-                
-                </Box>
+
+                <HomeworkDone chapterNum={chapter.chapterId} reflectionId={chapter.reflectionId} roomCode={user.activeRoom}/>
+
             )
           })              
           }
-                      
-          {characters.reflectionIds.map((reflection, i) => {
-            return (
-              <>     
-                {checkIfCompleted(user.activeRoom, reflection)}  
-               {/* {checkIfCompleted(user.activeRoom, reflection) ? <span style={{ float: 'right', fontWeight: '700', color: '#8dc000' }}>Done</span> : <span style={{ float: 'right', fontWeight: '400', color: '#664EFC' }}>To do</span>} */}
-              </>
-            )
-            
-          })}
 
           </Box>
   
       </Box>
     )
     
-    
-    // return (      
-    //   <div>          
-    //       {/* {persona.name}
-    //         <Avatar alt={persona.name} src={persona.profileImage} className={classes.large} />
-    //       Chapter {reflectionId} */} 
-    //         {characterId} -  {reflectionId}
-
-            
-    //   </div>
-   
-    //   );
 }
 
 
+export  function HomeworkDone(props) {
+  const { chapterNum, reflectionId , roomCode} = props
+  const [completed, setCompleted] = useState(false)
+  
+  const checkIfCompleted = async (roomCode, reflectionId) => {
+    const response = await getDbReflectionResponseByRoomCode(roomCode, reflectionId, true);
+    // console.log(response.length >=1)  // this evaluates correctly
+    return (response.length >=1);
+  };
+
+  useEffect(() => {
+    checkIfCompleted(roomCode, reflectionId).then(result => {
+      // console.log(result)
+      setCompleted(result)
+    })
+  },[reflectionId])
+
+  return (
+    <>
+      Chapter {chapterNum} 
+      {completed?  <span style={{ float:'right', fontWeight: '700', color: '#8dc000' }}>Done</span> :  <span style={{float:'right', fontWeight: '400', color: '#664EFC' }}>To do</span>}
+    </>
+  )
+
+}
