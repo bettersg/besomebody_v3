@@ -3,15 +3,18 @@ import {  updateDbUser , getDbUser , updateUserRoomDb } from '../../models/userM
 import { useAuth } from '../../contexts/AuthContext'
 import { updateRoomParticipantsDb , getRoomDb } from '../../models/roomModel'
 import {CHARACTER_MAP,REFLECTION_ID_MAP} from '../../models/storyMap'
+import SVG from 'react-inlinesvg'
 
-import {  useHistory } from 'react-router-dom'
+import {  useHistory, Link } from 'react-router-dom'
 import { useSnackbar } from '../../contexts/SnackbarContext'
 import {
     Box,
     Button,
     Typography,
-    Container,
+    Container, Accordion, AccordionSummary, AccordionDetails 
 } from '@material-ui/core'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import HomeworkAvatarBox from './HomeworkAvatarBox'
 
@@ -29,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     // backgroundPosition: 'center',
     backgroundColor: 'white',
     height: '660px',
-    overflow: 'scroll',
+    overflow: 'auto',
     [theme.breakpoints.only('xs')]: {
         height: 'calc(var(--vh, 1vh) * 100)',
     },
@@ -71,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
   overline: {
     backgroundColor: '#664EFC',
     color: '#ffffff',
-    width: '100%',  
+    width: '100%',      
   },
   whiteBox: {
     backgroundColor: '#ffffff',
@@ -94,6 +97,8 @@ const useStyles = makeStyles((theme) => ({
   body: {
     fontSize: '0.9rem',
     fontWeight: '400',
+    lineHeight: 1.2,
+    marginBottom: 8
   },
 
   btn: {
@@ -124,6 +129,18 @@ const useStyles = makeStyles((theme) => ({
       boxShadow: 'none',
       
     },
+  },
+  thinner: {
+    margin: '8px !important',
+    height: '30px !important',
+    minHeight: '30px !important'
+  },
+  preWrap: {
+    whiteSpace: 'pre-wrap',
+//  whiteSpace: '-moz-pre-wrap',  /* Mozilla, since 1999 */
+//  whiteSpace: '-pre-wrap',      /* Opera 4-6 */
+//  whiteSpace: '-o-pre-wrap',    /* Opera 7 */
+    wordWrap: 'break-word', 
   }
 
 }))  
@@ -159,7 +176,7 @@ const RoomDetailsPage = () => {
   
   const reflectionIdsCharacter = room?.reflectionIds.map((reflectionId) => { 
     const { characterId, chapterId } = REFLECTION_ID_MAP[reflectionId]
-    return { characterId, chapterId }
+    return { characterId, chapterId , reflectionId }
   })
 
 
@@ -174,12 +191,26 @@ const RoomDetailsPage = () => {
     var results = groupBy(reflectionIdsCharacter, (c) => c.characterId);    
     // console.log('results', results)
     
-    var result2 = Object.entries(results).map(([key, value]) => ({
-      characterId: key,
-      chapterIds: value.map((v) => v.chapterId)
-    }))
-    // setCharacterChapters(result2)  // error only happens if this line is added. if i comment this line out, the error disappears but CharacterChapters is null
-       
+    var groupedResults = Object.keys(results).map(function (key) {
+      return {
+        characterId: key,
+        chapters: results[key]
+      };
+    });
+    
+
+
+    
+  
+    // var result2 = Object.entries(results).map(([key, value]) => ({
+    //   characterId: parseInt(key),      
+    //   // create object with characterIds and reflectionIds for each characterId
+      
+    //   chapterIds: value.map((v) => v.chapterId),
+    //   reflectionIds: value.map((v) => v.reflectionId)
+    // }))
+    
+      //  console.log('result2', result2)
   }
   // console.log('cc', characterChapters)      
 
@@ -228,28 +259,67 @@ const RoomDetailsPage = () => {
 
     return (
       <Box className={classes.background}>
-        <Box py={1} textAlign="center"  className={classes.overline}>
-          <Typography variant="body2" > You are in a facilitated room: {room?.code} </Typography>
+        <Box py={1} className={classes.overline}>
+          
+          <Link to="/" style={{ textDecoration: 'none' }}><span align="left" style={{display:'inline-block', marginLeft: 10, color:'white'}}><SVG src="/chapter_choices_page/arrow.svg" />                </span></Link>
+            <span   style={{display:'inline-block',marginLeft:70}}><Typography variant="body1" style={{ fontWeight: '700'}} > Room: {room?.code} </Typography></span>
+          
          </Box>
       
-          <Box m={3}>
-            <Typography className={classes.title}>Facilitator's Message:</Typography>
-            <Typography paragraph={true} className={classes.body}> {room?.instructions}</Typography>           
-        </Box>        
-          <hr style={{ border: 0, height: 2, width:'100%', marginTop:24, marginBottom: 24, backgroundColor: 'rgba(102,78,252,0.34)'}}/>
+         <Accordion defaultExpanded>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+            className={classes.thinner}
+          >
+            <Typography className={classes.title} >Room Details</Typography>
+          </AccordionSummary>
+          <AccordionDetails style={{display:'block'}} >
+            
+            <div>
+              <Typography className={classes.title}  style={{display:'inline-block'}}>School / Organisation:</Typography>
+              <Typography paragraph={true} className={classes.body}  style={{display:'inline-block',marginLeft:10}}> {room?.organisation}</Typography>
+            </div>
+            <div >
+              <Typography className={classes.title} style={{display:'inline-block'}}>Class / Team:</Typography>
+              <Typography paragraph={true} className={classes.body} style={{display:'inline-block',marginLeft:10}}> {room?.name}</Typography>    
+              </div>
+            
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion defaultExpanded >
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2a-content"
+            id="panel2a-header"
+            className={classes.thinner}
+        >
+          <Typography  className={classes.title}>Facilitator's Message</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography className={classes.body}>
+            <pre style={{ fontFamily: 'inherit', margin: 0 , width:320}} className={classes.preWrap}>{room?.instructions}</pre>
+          </Typography>           
+        </AccordionDetails>
+      </Accordion>
+        
+        
+          {/* <hr style={{ border: 0, height: 2, width:'100%', marginTop:24, marginBottom: 24, backgroundColor: 'rgba(102,78,252,0.34)'}}/> */}
         
           <Box m={3}>
             <Typography className={classes.title}>Assigned characters:</Typography>
             <Typography paragraph={true} className={classes.body}>
-            { result2 &&
-              <HomeworkAvatarBox result2={result2} />
+            { groupedResults &&
+              <HomeworkAvatarBox chaptersByCharacter={groupedResults} user={userFromDb}/>
             }
             </Typography>           
         </Box>  
 
         <Box className={classes.bottom}>
           {/* <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} href="/">Play Game</Button>          */}
-          <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} onClick={() => saveRoomStartGame()}>Start Game</Button>         
+          <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} onClick={() => saveRoomStartGame()}>Play Game</Button>         
           <Button variant="outlined" type="submit" className={classes.btn2} disabled={isLoading} onClick={() => exitActiveRoom()}>Leave Room</Button>         
         </Box>        
       </Box>

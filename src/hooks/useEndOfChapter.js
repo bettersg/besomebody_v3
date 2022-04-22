@@ -68,7 +68,7 @@ export default function useEndOfChapter({ globalVariables = {} }) {
                 completedAt: new Date().toISOString(),
               },
             ],
-            ...currentUserDb?.activeRoom  ? { room: currentUserDb?.activeRoom } : {},
+            ...currentUserDb?.activeRoom  ? { roomCode: currentUserDb?.activeRoom } : {},
           }
 
           const nextAchievements = currentUserDb?.achievements || []

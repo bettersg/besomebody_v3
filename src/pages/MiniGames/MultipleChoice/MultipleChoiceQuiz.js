@@ -112,7 +112,7 @@ export default function MultipleChoiceQuiz(props) {
             gameId: quiz.game_id,
             answers: userAnswers,
             createdAt: new Date(),
-            ...userFromDb?.activeRoom  ? { room: userFromDb?.activeRoom } : {},
+            ...userFromDb?.activeRoom  ? { roomCode: userFromDb?.activeRoom } : {},
         }
         // console.log(answerDocs);
         try {

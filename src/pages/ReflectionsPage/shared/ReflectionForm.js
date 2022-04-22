@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '700',
     width: "252px", 
     '&:hover': {
-      backgroundColor: '#6C70DD',      
+      backgroundColor: '#FB5A3F',      
       boxShadow: 'none',
       
     },
@@ -134,7 +134,7 @@ const ReflectionForm = ({ reflection }) => {
         answer,
         submittedAt: new Date(),
         timestamp: Date.now(),
-        ...userFromDb?.activeRoom  ? { room: userFromDb?.activeRoom } : {},
+        ...userFromDb?.activeRoom  ? { roomCode: userFromDb?.activeRoom } : {},
       }
     });
     try {

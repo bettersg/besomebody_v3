@@ -17,55 +17,28 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function HomeworkAvatarBox(props) {
-    const { result2 } = props
+    const { chaptersByCharacter,user } = props
     const classes = useStyles();  
 
-//   const reflectionId = parseInt(reflection);
-//   const { characterId, reflectionId } = REFLECTION_ID_MAP[reflectionId];
+    //   const reflectionId = parseInt(reflection);
+    //   const { characterId, reflectionId } = REFLECTION_ID_MAP[reflectionId];
     // const persona = CHARACTER_MAP.find((character) => character.characterId === characterId)  
     // console.log('characterId',characterId)
     // console.log('reflectionID',reflectionId)
     // console.log('persona',persona)
 
     return (
-    result2.map((reflection,i) => {
-      
+      chaptersByCharacter.map((character, i) => {      
+
       return (
-        <><HomeworkAvatar key={i} reflection={reflection} />
+        <><HomeworkAvatar key={i} characters={character} user={user}/>
           <hr />
         </>
-        //  <Box key={reflection}>                  
-            
-        //     Character: {reflection.characterId}        
-            
-        //     {reflection.chapterIds.map((reflectionId,i) => {
-               
-        //        return (
-        //          <Box>
-        //                {/* <HomeworkAvatar characterId={reflection.characterId} reflectionId={reflectionId} />                  */}
-        //                {reflectionId}
-        //            </Box>
-        //        )
-        //      })
-        //     }
-
-
-        //  </Box>
         )
       }
      )
     )
-    // return (      
-    //   <div>          
-    //       {/* {persona.name}
-    //         <Avatar alt={persona.name} src={persona.profileImage} className={classes.large} />
-    //       Chapter {reflectionId} */} 
-    //         {characterId} -  {reflectionId}
-
-            
-    //   </div>
    
-    //   );
 }
 
 
