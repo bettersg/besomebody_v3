@@ -91,12 +91,13 @@ export const getDbReflectionResponse = async(id) => {
 export const getDbReflectionResponseByRoomCode = async (
   roomCode,
   reflectionId,
-  
+  userId
 ) => {
   try {
     reflectionId = parseInt(reflectionId);
     let query = firestore
       .collection('reflectionResponses')
+      .where('userId','==', userId)
       .where('roomCode', '==', roomCode)
       .where('reflectionId', '==', reflectionId)
       .where('questionId' , '==', 3) // hardcoded to the longform responses

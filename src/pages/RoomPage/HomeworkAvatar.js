@@ -49,12 +49,6 @@ export default function HomeworkAvatar(props) {
  const roomCode = user.activeRoom
    
 
-// parameters for getDbReflectionResponseByRoomCode :  roomCode, reflectionId, getOnlyReflections   
-  const checkIfCompleted2 = async (roomCode, reflectionId) => {
-    const response = await getDbReflectionResponseByRoomCode(roomCode, reflectionId, true);
-    // console.log(response.length >=1)  // this evaluates correctly
-    return (response.length >=1);
-  };
     
 
                                   
@@ -72,7 +66,7 @@ export default function HomeworkAvatar(props) {
 
             return (
 
-                <HomeworkDone chapterNum={chapter.chapterId} reflectionId={chapter.reflectionId} roomCode={user.activeRoom}/>
+                <HomeworkDone chapterNum={chapter.chapterId} reflectionId={chapter.reflectionId} user={user}/>
 
             )
           })              
@@ -87,18 +81,17 @@ export default function HomeworkAvatar(props) {
 
 
 export  function HomeworkDone(props) {
-  const { chapterNum, reflectionId , roomCode} = props
+  const { chapterNum, reflectionId , user} = props
   const [completed, setCompleted] = useState(false)
-  
-  const checkIfCompleted = async (roomCode, reflectionId) => {
-    const response = await getDbReflectionResponseByRoomCode(roomCode, reflectionId, true);
-    // console.log(response.length >=1)  // this evaluates correctly
+
+  const checkIfCompleted = async (roomCode, reflectionId, userId) => {
+    const response = await getDbReflectionResponseByRoomCode(roomCode, reflectionId, userId);
+    console.log(response)  // this evaluates correctly
     return (response.length >=1);
   };
 
   useEffect(() => {
-    checkIfCompleted(roomCode, reflectionId).then(result => {
-      // console.log(result)
+    checkIfCompleted(user.activeRoom, reflectionId, user.id).then(result => {
       setCompleted(result)
     })
   },[reflectionId])
