@@ -97,10 +97,10 @@ export  function HomeworkDone(props) {
   },[reflectionId])
 
   return (
-    <>
+    <Box>
       Chapter {chapterNum} 
       {completed?  <span style={{ float:'right', fontWeight: '700', color: '#8dc000' }}>Done</span> :  <span style={{float:'right', fontWeight: '400', color: '#664EFC' }}>To do</span>}
-    </>
+    </Box>
   )
 
 }
