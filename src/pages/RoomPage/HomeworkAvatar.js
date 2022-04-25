@@ -86,7 +86,7 @@ export  function HomeworkDone(props) {
 
   const checkIfCompleted = async (roomCode, reflectionId, userId) => {
     const response = await getDbReflectionResponseByRoomCode(roomCode, reflectionId, userId);
-    console.log(response)  // this evaluates correctly
+    // console.log(response)  // this evaluates correctly
     return (response.length >=1);
   };
 

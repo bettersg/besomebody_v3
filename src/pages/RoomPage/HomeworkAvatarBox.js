@@ -20,6 +20,7 @@ export default function HomeworkAvatarBox(props) {
     const { chaptersByCharacter,user } = props
     const classes = useStyles();  
 
+  
     //   const reflectionId = parseInt(reflection);
     //   const { characterId, reflectionId } = REFLECTION_ID_MAP[reflectionId];
     // const persona = CHARACTER_MAP.find((character) => character.characterId === characterId)  

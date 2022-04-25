@@ -173,7 +173,7 @@ const RoomJoinPage = () => {
         event.preventDefault();
         // console.log(event.target.value);
         setRoom(event.target.value);
-        console.log(room)
+        // console.log(room)
       };
 
       return (

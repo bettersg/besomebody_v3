@@ -12,8 +12,9 @@ import { Link, useParams , useHistory } from 'react-router-dom'
 import { getRoomDb } from '../../models/roomModel'
 // import { firestore} from '../../firebase'
 import { updateRoomParticipantsDb } from '../../models/roomModel'
+
 import { useSnackbar } from '../../contexts/SnackbarContext'
-import { updateUserRoomDb , updateDbUser } from '../../models/userModel'
+import { updateUserRoomDb , updateDbUser , getDbUser} from '../../models/userModel'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import SVG from 'react-inlinesvg'
 import HomeworkAvatarBox from './HomeworkAvatarBox'
@@ -136,6 +137,7 @@ const useStyles = makeStyles((theme) => ({
 
 const RoomInfoPage = () => {
   const [isLoading, setIsLoading] = useState(false)
+  const [userFromDb, setUserFromDb] = useState(null)
   const classes = useStyles()  
   const history = useHistory()
   const { currentUser } = useAuth()
@@ -149,13 +151,23 @@ const RoomInfoPage = () => {
   
   const { roomUrl } = useParams()
   // if (roomCode == null) {    
-  //   setroomCode(roomUrl)            
+  //   setroomCode(roomUrl)
   // }
+  useEffect(() => {
+    setIsLoading(true)    
+    const getUser = async () => {
+      const user = await getDbUser(currentUser.id)
+      return setUserFromDb(user)
+      }         
+    getUser()
+    setIsLoading(false)    
+}, [currentUser.id])
   
   // console.log(roomUrl)
 
   
   useEffect(() => {
+    setIsLoading(true)    
     const loadRoom = async () => {
       try {
         const room = setRoom(await getRoomDb(roomUrl))
@@ -164,6 +176,7 @@ const RoomInfoPage = () => {
       catch (err) { console.log(err) }
     }
     loadRoom()
+    setIsLoading(false)    
   }, [roomUrl])
   
   // console.log('Room.id ',room)
@@ -198,8 +211,8 @@ const RoomInfoPage = () => {
 
 
   const exitActiveRoom = async () => {        
+    setIsLoading(true)          
     try {
-      setIsLoading(true)          
     //   await updateRoomParticipantsDb(room.id, currentUser.id)  
     //   await updateUserRoomDb(currentUser.id, room.id)  
       await updateDbUser({ activeRoom: null }, currentUser.id)   
@@ -230,17 +243,21 @@ const RoomInfoPage = () => {
 }     
   
   
-  if (reflectionIdsCharacter !== undefined ) {
-    var results = groupBy(reflectionIdsCharacter, (c) => c.characterId);    
+   
+  if (reflectionIdsCharacter !== undefined) {
+    var results = groupBy(reflectionIdsCharacter, (c) => c.characterId);
     // console.log('results', results)
     
-    var result2 = Object.entries(results).map(([key, value]) => ({
-      characterId: key,
-      chapterIds: value.map((v) => v.chapterId)
-    }))
-    // setCharacterChapters(result2)  // error only happens if this line is added. if i comment this line out, the error disappears but CharacterChapters is null
-       
+    var groupedResults = Object.keys(results).map(function (key) {
+      return {
+        characterId: key,
+        chapters: results[key]
+      };
+    });
   }
+
+  
+    
   // console.log('cc', characterChapters)      
 
 
@@ -300,65 +317,85 @@ const RoomInfoPage = () => {
     // </Box>
 
     <Box className={classes.background}>
-    <Box py={1} className={classes.overline}>
-      
-      <Link to="/" style={{ textDecoration: 'none' }}><span align="left" style={{display:'inline-block', marginLeft: 10, color:'white'}}><SVG src="/chapter_choices_page/arrow.svg" />                </span></Link>
-        <span   style={{display:'inline-block',marginLeft:70}}><Typography variant="body1" style={{ fontWeight: '700'}} > Room: {room?.code} </Typography></span>
-      
-     </Box>
-  
-     <Accordion defaultExpanded>
+       {isLoading && 
+       <Box  m={4} textAlign="centre"  >
+        Loading...
+        </Box>
+      }
+    {room &&
+      <>  
+      <Box py={1} className={classes.overline}>
+        
+        <Link to="/" style={{ textDecoration: 'none' }}><span align="left" style={{display:'inline-block', marginLeft: 10, color:'white'}}><SVG src="/chapter_choices_page/arrow.svg" />                </span></Link>
+          <span   style={{display:'inline-block',marginLeft:70}}><Typography variant="body1" style={{ fontWeight: '700'}} > Room: {room?.code} </Typography></span>
+        
+      </Box>
+    
+      <Accordion defaultExpanded>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={classes.title} >Room Details</Typography>
+        </AccordionSummary>
+        <AccordionDetails style={{display:'block'}}>
+          
+          <div>
+            <Typography className={classes.title}  style={{display:'inline-block'}}>School / Organisation:</Typography>
+            <Typography paragraph={true} className={classes.body}  style={{display:'inline-block',marginLeft:10}}> {room?.organisation}</Typography>
+          </div>
+          <div >
+            <Typography className={classes.title} style={{display:'inline-block'}}>Class / Team:</Typography>
+            <Typography paragraph={true} className={classes.body} style={{display:'inline-block',marginLeft:10}}> {room?.name}</Typography>    
+            </div>
+          
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion defaultExpanded>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
-        aria-controls="panel1a-content"
-        id="panel1a-header"
+        aria-controls="panel2a-content"
+        id="panel2a-header"
       >
-        <Typography className={classes.title} >Room Details</Typography>
+        <Typography  className={classes.title}>Facilitator's Message</Typography>
       </AccordionSummary>
-      <AccordionDetails style={{display:'block'}}>
-        
-        <div>
-          <Typography className={classes.title}  style={{display:'inline-block'}}>School / Organisation:</Typography>
-          <Typography paragraph={true} className={classes.body}  style={{display:'inline-block',marginLeft:10}}> {room?.organisation}</Typography>
-        </div>
-        <div >
-          <Typography className={classes.title} style={{display:'inline-block'}}>Class / Team:</Typography>
-          <Typography paragraph={true} className={classes.body} style={{display:'inline-block',marginLeft:10}}> {room?.name}</Typography>    
-          </div>
-        
+      <AccordionDetails>
+      <Typography paragraph={true} className={classes.body}> {room?.instructions}</Typography>           
       </AccordionDetails>
     </Accordion>
+      
+      
+        {/* <hr style={{ border: 0, height: 2, width:'100%', marginTop:24, marginBottom: 24, backgroundColor: 'rgba(102,78,252,0.34)'}}/> */}
+      
+        <Box m={3}>
+            <Typography className={classes.title}>Assigned characters:</Typography>
+            <Typography paragraph={true} className={classes.body}>
+            { groupedResults &&
+              <HomeworkAvatarBox chaptersByCharacter={groupedResults} user={userFromDb}/>
+            }
+            </Typography>           
+        </Box>  
 
-    <Accordion defaultExpanded>
-    <AccordionSummary
-      expandIcon={<ExpandMoreIcon />}
-      aria-controls="panel2a-content"
-      id="panel2a-header"
-    >
-      <Typography  className={classes.title}>Facilitator's Message</Typography>
-    </AccordionSummary>
-    <AccordionDetails>
-     <Typography paragraph={true} className={classes.body}> {room?.instructions}</Typography>           
-    </AccordionDetails>
-  </Accordion>
-    
-    
-      {/* <hr style={{ border: 0, height: 2, width:'100%', marginTop:24, marginBottom: 24, backgroundColor: 'rgba(102,78,252,0.34)'}}/> */}
-    
-      <Box m={3}>
-        <Typography className={classes.title}>Assigned characters:</Typography>
-        <Typography paragraph={true} className={classes.body}>
-        { result2 &&
-          <HomeworkAvatarBox result2={result2} />
-        }
-        </Typography>           
-    </Box>  
+      <Box className={classes.bottom}>
+        {/* <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} href="/">Play Game</Button>          */}
+        <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} onClick={() => saveRoomStartGame()}>Start Game</Button>         
+        <Button variant="outlined" type="submit" className={classes.btn2} disabled={isLoading} onClick={() => exitActiveRoom()}>Leave Room</Button>         
+        </Box>        
+        
+    </>
+    }
+    {!room && !isLoading &&
+        <Box  m={4} textAlign="left"  >
+          <Typography className={classes.title} >Room Code</Typography>
+          <Typography >You have entered an invalid room code. Please check the URL again or scan the QR code that was sent to you.</Typography>
+          <Button variant="contained" type="submit" className={classes.btn} fullWidth style={{marginTop: 150}} disabled={isLoading} href="/room_join">Enter new room code</Button>
+        </Box>
+      }
 
-    <Box className={classes.bottom}>
-      {/* <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} href="/">Play Game</Button>          */}
-      <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} onClick={() => saveRoomStartGame()}>Start Game</Button>         
-      <Button variant="outlined" type="submit" className={classes.btn2} disabled={isLoading} onClick={() => exitActiveRoom()}>Leave Room</Button>         
-    </Box>        
+   
+
   </Box>
 
   

@@ -259,6 +259,9 @@ const RoomDetailsPage = () => {
 
     return (
       <Box className={classes.background}>
+
+      {room &&
+        <>  
         <Box py={1} className={classes.overline}>
           
           <Link to="/" style={{ textDecoration: 'none' }}><span align="left" style={{display:'inline-block', marginLeft: 10, color:'white'}}><SVG src="/chapter_choices_page/arrow.svg" />                </span></Link>
@@ -322,6 +325,17 @@ const RoomDetailsPage = () => {
           <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} onClick={() => saveRoomStartGame()}>Play Game</Button>         
           <Button variant="outlined" type="submit" className={classes.btn2} disabled={isLoading} onClick={() => exitActiveRoom()}>Leave Room</Button>         
         </Box>        
+      </>
+      }
+      {!room &&
+            <Box py={3} textAlign="left"  >
+            <Typography >You have entered an invalid room code. Please check the URL again or scan the QR code that was sent to you.</Typography>
+            <Button variant="contained" type="submit" className={classes.btn2} fullWidth style={{marginTop: 200}} disabled={isLoading} href="/room_join">Enter new room code</Button>
+          </Box>
+        }
+          
+      
+
       </Box>
   
     
