@@ -3,9 +3,9 @@ import {
   Box,
   Button,
   Typography,
-  Container,
+  Container, Accordion, AccordionSummary, AccordionDetails 
 } from '@material-ui/core'
-
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import { useAuth } from '../../contexts/AuthContext'
 import { RoomContext } from '../../contexts/RoomContext'
 import { Link, useParams , useHistory } from 'react-router-dom'
@@ -15,6 +15,10 @@ import { updateRoomParticipantsDb } from '../../models/roomModel'
 import { useSnackbar } from '../../contexts/SnackbarContext'
 import { updateUserRoomDb , updateDbUser } from '../../models/userModel'
 import makeStyles from '@material-ui/core/styles/makeStyles'
+import SVG from 'react-inlinesvg'
+import HomeworkAvatarBox from './HomeworkAvatarBox'
+import { CHARACTER_MAP, REFLECTION_ID_MAP } from '../../models/storyMap'
+
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
@@ -24,40 +28,22 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 const useStyles = makeStyles((theme) => ({
   background: {
-    backgroundImage: ({ image }) => `url('/commons/bg_pattern.png')`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
+    // backgroundImage: ({ image }) => `url('/images/whatsapp.png')`,
+    // backgroundSize: 'cover',
+    // backgroundPosition: 'center',
+    backgroundColor: 'white',
     height: '660px',
+    overflow: 'auto',
     [theme.breakpoints.only('xs')]: {
         height: 'calc(var(--vh, 1vh) * 100)',
     },
     bottom: 0, 
 
   },
-  card: {
-    position: 'absolute',
-    top: 100,
-    // left: 20,
-    left: 'calc(50% - 160px)',
-    padding: '20px 20px',
-    boxSizing: 'border-box',
-    borderRadius: 15,
-    backgroundColor: '#ffffff',
-    width: 320,
-    height: 520,
-    boxShadow: '0px 4px 14px rgba(0, 91, 105, 0.2)',
-  },
-  centered: {
-    alignItems: 'center',
-    textAlign: 'center',
-  },
   bottom: {
-    bottom: 0,
-    height: '140px',
-    position: 'absolute',
-    background: '#CBF1F4',
-    borderRadius: '0px 0px 15px 15px',
-    padding: 20,
+    // bottom: 20,
+    // height: '20vh',
+    // position: 'absolute',
     marginLeft: 'auto',
     marginRight: 'auto',
     left: 0,
@@ -74,56 +60,27 @@ const useStyles = makeStyles((theme) => ({
   btn: {
     padding: '10px 50px',
     borderRadius: '40px',
-    // marginTop: '20px',
+    marginBottom: '20px',
     background: '#664EFC',
-    // backgroundColor: '#664EFC',
+    backgroundColor: '#664EFC',
     textDecoration: 'none',
     color: '#ffffff',
     fontWeight: '700',
     '&:hover': {
       backgroundColor: '#6C70DD',      
-      boxShadow: 'none',      
+      boxShadow: 'none',
+      
     },
   },
-  btn2: {
-    padding: '5px 30px',
-    marginTop: 10,
-    borderRadius: '40px',
-    // marginTop: '20px',
-    // background: '#664EFC',
-    // backgroundColor: '#664EFC',
-    textDecoration: 'none',
-    // color: '#ffffff',
-    fontWeight: '700',
-    '&:hover': {
-      // backgroundColor: '#6C70DD',      
-      boxShadow: 'none',      
-    },
-  },
-  headline: {    
-    color: '#ffffff',
-    width: '100%',
-    // padding: '15px',
-    fontSize: '24px',
-    fontWeight: '700',
-    textAlign: 'center',
-    // marginTop: 20,
-    textShadow: '0px 4px 14px rgba(0, 91, 105, 0.2)',
-  }, 
-  line: {
-    width: '80px',
-    border: '2px solid rgba(25,163,173,0.3)' ,
-    display: 'inline-block',    
-  },  
   overline: {
     backgroundColor: '#664EFC',
     color: '#ffffff',
-    width: '100%',  
+    width: '100%',      
   },
-  details: {
-    fontWeight: '400',
-    fontSize: '0.9rem',
-    lineHeight: '1.1rem',
+  whiteBox: {
+    backgroundColor: '#ffffff',
+    color: '#000000',
+    width: '100%',  
   },
   link: {
     color: '#000A11',
@@ -133,8 +90,48 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       color: '#664EFC'
     },
+  },
+  title: {
+    fontSize: '1rem',
+    fontWeight: '700',
+  },
+  body: {
+    fontSize: '0.9rem',
+    fontWeight: '400',
+  },
+
+  btn: {
+    padding: '10px 50px',
+    borderRadius: '40px',
+    marginBottom: '20px',
+    background: '#664EFC',
+    backgroundColor: '#664EFC',
+    textDecoration: 'none',
+    color: '#ffffff',
+    fontWeight: '700',
+    '&:hover': {
+      backgroundColor: '#6C70DD',      
+      boxShadow: 'none',
+      
+    },
+  },
+  btn2: {
+    padding: '10px 50px',
+    borderRadius: '40px',
+    marginBottom: '20px',
+    border: '2px solid',
+    borderColor:'#664EFC',
+    textDecoration: 'none',
+    color: '#664EFC',
+    fontWeight: '700',
+    '&:hover': {      
+      boxShadow: 'none',
+      
+    },
   }
-}))
+
+}))  
+
 
 
 const RoomInfoPage = () => {
@@ -219,6 +216,33 @@ const RoomInfoPage = () => {
 
   };
   
+  
+  const reflectionIdsCharacter = room?.reflectionIds.map((reflectionId) => { 
+    const { characterId, chapterId } = REFLECTION_ID_MAP[reflectionId]
+    return { characterId, chapterId }
+  })
+
+
+  function groupBy(xs, f) {
+    if(xs !== undefined) {
+      return xs.reduce((r, v, i, a, k = f(v)) => ((r[k] || (r[k] = [])).push(v), r), {});        
+    }
+}     
+  
+  
+  if (reflectionIdsCharacter !== undefined ) {
+    var results = groupBy(reflectionIdsCharacter, (c) => c.characterId);    
+    // console.log('results', results)
+    
+    var result2 = Object.entries(results).map(([key, value]) => ({
+      characterId: key,
+      chapterIds: value.map((v) => v.chapterId)
+    }))
+    // setCharacterChapters(result2)  // error only happens if this line is added. if i comment this line out, the error disappears but CharacterChapters is null
+       
+  }
+  // console.log('cc', characterChapters)      
+
 
 // console.log(room)
 // 0. get roomCode from URL params X unable to call useParams from inside Provider
@@ -228,51 +252,114 @@ const RoomInfoPage = () => {
  
 
   return (
+    
+    // <Box className={classes.background}>
+      
+    //   <Box py={1} textAlign="center"  className={classes.overline}>
+    //     <Typography variant="overline" > You are a participant in a facilitated room. </Typography>
+    //   </Box>
+      
+      
+    //      <Box py={1} textAlign="center"  >
+    //         <Typography className={classes.headline} > Your Room Information</Typography>
+    //       </Box>
+        
+    //   <Box className={classes.card}>
+        
+    //     {currentUser && room &&
+    //        <Box py={3} textAlign="left"  >
+    //       <Typography>Your game reflections will be visible to the facilitator</Typography>
+    //       <Box py={2} >
+    //         <Typography className={classes.details} paragraph={true}>Room Code: {room.code}</Typography>
+    //         <Typography  className={classes.details} paragraph={true}>Organisation Name: {room.organisation}</Typography>
+    //           <Typography  className={classes.details} paragraph={true}>Class Name: {room.name}</Typography>
+    //           {/* <Typography  className={classes.details} paragraph={true}>Reflections: {room.reflectionIds}</Typography>
+    //           <hr />
+    //         <Typography  className={classes.details} paragraph={true}>Instructions: {room.instructions}</Typography> */}
+    //       </Box>
+    //     </Box>
+    //     }
+
+    //     {currentUser && !room &&
+    //         <Box py={3} textAlign="left"  >
+    //         <Typography >You have entered an invalid room code. Please check the URL again or scan the QR code that was sent to you.</Typography>
+    //         <Button variant="contained" type="submit" className={classes.btn2} fullWidth style={{marginTop: 200}} disabled={isLoading} href="/room_join">Enter new room code</Button>
+    //       </Box>
+    //     }
+
+    //     {currentUser && room &&
+    //       <Box className={classes.bottom}>
+    //         <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} onClick={() => saveRoomStartGame()}>Confirm & Play Game</Button>
+    //         {/* <Button variant="outlined" type="submit"   disabled={isLoading} onClick={() => saveRoomStartGame()}>Player Guide</Button>    */}
+    //         <Button variant="outlined" type="submit" className={classes.btn2} disabled={isLoading} onClick={() => exitActiveRoom()}>Leave Room</Button>
+    //       </Box>
+        
+    //     }
+        
+    //     </Box>
+    // </Box>
+
     <Box className={classes.background}>
+    <Box py={1} className={classes.overline}>
       
-      <Box py={1} textAlign="center"  className={classes.overline}>
-        <Typography variant="overline" > You are a participant in a facilitated room. </Typography>
-      </Box>
+      <Link to="/" style={{ textDecoration: 'none' }}><span align="left" style={{display:'inline-block', marginLeft: 10, color:'white'}}><SVG src="/chapter_choices_page/arrow.svg" />                </span></Link>
+        <span   style={{display:'inline-block',marginLeft:70}}><Typography variant="body1" style={{ fontWeight: '700'}} > Room: {room?.code} </Typography></span>
       
-      
-         <Box py={1} textAlign="center"  >
-            <Typography className={classes.headline} > Your Room Information</Typography>
-          </Box>
+     </Box>
+  
+     <Accordion defaultExpanded>
+      <AccordionSummary
+        expandIcon={<ExpandMoreIcon />}
+        aria-controls="panel1a-content"
+        id="panel1a-header"
+      >
+        <Typography className={classes.title} >Room Details</Typography>
+      </AccordionSummary>
+      <AccordionDetails style={{display:'block'}}>
         
-      <Box className={classes.card}>
+        <div>
+          <Typography className={classes.title}  style={{display:'inline-block'}}>School / Organisation:</Typography>
+          <Typography paragraph={true} className={classes.body}  style={{display:'inline-block',marginLeft:10}}> {room?.organisation}</Typography>
+        </div>
+        <div >
+          <Typography className={classes.title} style={{display:'inline-block'}}>Class / Team:</Typography>
+          <Typography paragraph={true} className={classes.body} style={{display:'inline-block',marginLeft:10}}> {room?.name}</Typography>    
+          </div>
         
-        {currentUser && room &&
-           <Box py={3} textAlign="left"  >
-          <Typography>Your game reflections will be visible to the facilitator</Typography>
-          <Box py={2} >
-            <Typography className={classes.details} paragraph={true}>Room Code: {room.code}</Typography>
-            <Typography  className={classes.details} paragraph={true}>Organisation Name: {room.organisation}</Typography>
-              <Typography  className={classes.details} paragraph={true}>Class Name: {room.name}</Typography>
-              {/* <Typography  className={classes.details} paragraph={true}>Reflections: {room.reflectionIds}</Typography>
-              <hr />
-            <Typography  className={classes.details} paragraph={true}>Instructions: {room.instructions}</Typography> */}
-          </Box>
-        </Box>
-        }
+      </AccordionDetails>
+    </Accordion>
 
-        {currentUser && !room &&
-            <Box py={3} textAlign="left"  >
-            <Typography >You have entered an invalid room code. Please check the URL again or scan the QR code that was sent to you.</Typography>
-            <Button variant="contained" type="submit" className={classes.btn2} fullWidth style={{marginTop: 200}} disabled={isLoading} href="/room_join">Enter new room code</Button>
-          </Box>
+    <Accordion defaultExpanded>
+    <AccordionSummary
+      expandIcon={<ExpandMoreIcon />}
+      aria-controls="panel2a-content"
+      id="panel2a-header"
+    >
+      <Typography  className={classes.title}>Facilitator's Message</Typography>
+    </AccordionSummary>
+    <AccordionDetails>
+     <Typography paragraph={true} className={classes.body}> {room?.instructions}</Typography>           
+    </AccordionDetails>
+  </Accordion>
+    
+    
+      {/* <hr style={{ border: 0, height: 2, width:'100%', marginTop:24, marginBottom: 24, backgroundColor: 'rgba(102,78,252,0.34)'}}/> */}
+    
+      <Box m={3}>
+        <Typography className={classes.title}>Assigned characters:</Typography>
+        <Typography paragraph={true} className={classes.body}>
+        { result2 &&
+          <HomeworkAvatarBox result2={result2} />
         }
+        </Typography>           
+    </Box>  
 
-        {currentUser && room &&
-          <Box className={classes.bottom}>
-            <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} onClick={() => saveRoomStartGame()}>Confirm & Play Game</Button>
-            {/* <Button variant="outlined" type="submit"   disabled={isLoading} onClick={() => saveRoomStartGame()}>Player Guide</Button>    */}
-            <Button variant="outlined" type="submit" className={classes.btn2} disabled={isLoading} onClick={() => exitActiveRoom()}>Leave Room</Button>
-          </Box>
-        
-        }
-        
-        </Box>
-    </Box>
+    <Box className={classes.bottom}>
+      {/* <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} href="/">Play Game</Button>          */}
+      <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} onClick={() => saveRoomStartGame()}>Start Game</Button>         
+      <Button variant="outlined" type="submit" className={classes.btn2} disabled={isLoading} onClick={() => exitActiveRoom()}>Leave Room</Button>         
+    </Box>        
+  </Box>
 
   
   ) 

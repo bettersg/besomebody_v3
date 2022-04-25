@@ -5,7 +5,7 @@ import { updateRoomParticipantsDb , getRoomDb } from '../../models/roomModel'
 import {CHARACTER_MAP,REFLECTION_ID_MAP} from '../../models/storyMap'
 import SVG from 'react-inlinesvg'
 
-import {  useHistory, Link } from 'react-router-dom'
+import {  useHistory, Link , useParams } from 'react-router-dom'
 import { useSnackbar } from '../../contexts/SnackbarContext'
 import {
     Box,
@@ -156,7 +156,7 @@ const RoomDetailsPage = () => {
   const { setSnackbar } = useSnackbar()
   const classes = useStyles()  
 
-  
+  const { roomUrl } = useParams()
 
   useEffect(() => {
       const getUser = async () => {
