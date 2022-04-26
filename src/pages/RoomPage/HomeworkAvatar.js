@@ -6,6 +6,7 @@ import { Box, Avatar, Button , Typography }
     from "@material-ui/core";
 import { CHARACTER_MAP, REFLECTION_ID_MAP } from '../../models/storyMap'
 import { getDbReflectionResponseByRoomCode } from '../../models/reflectionResponseModel'
+import {   useParams } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
   large: {
@@ -83,6 +84,7 @@ export default function HomeworkAvatar(props) {
 export  function HomeworkDone(props) {
   const { chapterNum, reflectionId , user} = props
   const [completed, setCompleted] = useState(false)
+  const { roomUrl } = useParams()
 
   const checkIfCompleted = async (roomCode, reflectionId, userId) => {
     const response = await getDbReflectionResponseByRoomCode(roomCode, reflectionId, userId);
@@ -91,7 +93,7 @@ export  function HomeworkDone(props) {
   };
 
   useEffect(() => {
-    checkIfCompleted(user.activeRoom, reflectionId, user.id).then(result => {
+    checkIfCompleted(roomUrl, reflectionId, user.id).then(result => {
       setCompleted(result)
     })
   },[reflectionId])
