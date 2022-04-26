@@ -15,6 +15,7 @@ import { updateRoomParticipantsDb } from '../../models/roomModel'
 import { useSnackbar } from '../../contexts/SnackbarContext'
 import { updateUserRoomDb , updateDbUser } from '../../models/userModel'
 import makeStyles from '@material-ui/core/styles/makeStyles'
+import RoomDetailsPage from './RoomDetailsPage'
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
@@ -145,29 +146,29 @@ const RoomInfoPage = () => {
   const { setSnackbar } = useSnackbar()
 
  
-  const { roomValue } = React.useContext(RoomContext);
-  const [room, setRoom] = roomValue;
-  // const [roomCode, setroomCode] = roomCodeValue;
+  // // const { roomValue } = React.useContext(RoomContext);
+  // const [room, setRoom] = useState(null);
+  // // const [roomCode, setroomCode] = roomCodeValue;
   
   
-  const { roomUrl } = useParams()
-  // if (roomCode == null) {    
-  //   setroomCode(roomUrl)            
-  // }
+  // const { roomUrl } = useParams()
+  // // if (roomCode == null) {    
+  // //   setroomCode(roomUrl)            
+  // // }
   
-  // console.log(roomUrl)
+  // // console.log(room)
 
   
-  useEffect(() => {
-    const loadRoom = async () => {
-      try {
-        const room = setRoom(await getRoomDb(roomUrl))
-        return room     
-      }
-      catch (err) { console.log(err) }
-    }
-    loadRoom()
-  }, [roomUrl])
+  // useEffect(() => {
+  //   const loadRoom = async () => {
+  //     try {
+  //       const room = setRoom(await getRoomDb(roomUrl))
+  //       return room     
+  //     }
+  //     catch (err) { console.log(err) }
+  //   }
+  //   loadRoom()
+  // }, [roomUrl])
   
   // console.log('Room.id ',room)
   // console.log('roomCode params: ',roomCode)
@@ -176,48 +177,48 @@ const RoomInfoPage = () => {
   // TODO: is this page suitable to be the room details page with the teacher instructions and homework? Check that the saves make sense.
 
 
-  const saveRoomStartGame = async () => {
-    // e.preventDefault()
+  // const saveRoomStartGame = async () => {
+  //   // e.preventDefault()
       
-    // console.log(formData);        
+  //   // console.log(formData);        
     
-    try {
-      setIsLoading(true)          
-      await updateRoomParticipantsDb(room.id, currentUser.id)  
-      await updateUserRoomDb(currentUser.id, room.id)  
-      await updateDbUser({ activeRoom: roomUrl }, currentUser.id)   
-      console.log('Room Updated', roomUrl)
-      history.push('/room_explainer')  // redirect to root which will be the characterchoice page now.     
-    } catch (err) {
-      setSnackbar({
-        message: `There was an error: ${err.message}`,
-        open: true,
-        type: 'error',
-      })
-    }
-    setIsLoading(false)      
+  //   try {
+  //     setIsLoading(true)          
+  //     await updateRoomParticipantsDb(room.id, currentUser.id)  
+  //     await updateUserRoomDb(currentUser.id, room.id)  
+  //     await updateDbUser({ activeRoom: roomUrl }, currentUser.id)   
+  //     console.log('Room Updated', roomUrl)
+  //     history.push('/room_explainer')  // redirect to root which will be the characterchoice page now.     
+  //   } catch (err) {
+  //     setSnackbar({
+  //       message: `There was an error: ${err.message}`,
+  //       open: true,
+  //       type: 'error',
+  //     })
+  //   }
+  //   setIsLoading(false)      
 
-  };
+  // };
 
 
-  const exitActiveRoom = async () => {        
-    try {
-      setIsLoading(true)          
-    //   await updateRoomParticipantsDb(room.id, currentUser.id)  
-    //   await updateUserRoomDb(currentUser.id, room.id)  
-      await updateDbUser({ activeRoom: null }, currentUser.id)   
-      console.log('Room Exited')
-      history.push('/')  // redirect to root which will be the characterchoice page now.     
-    } catch (err) {
-      setSnackbar({
-        message: `There was an error: ${err.message}`,
-        open: true,
-        type: 'error',
-      })
-    }
-    setIsLoading(false)      
+  // const exitActiveRoom = async () => {        
+  //   try {
+  //     setIsLoading(true)          
+  //   //   await updateRoomParticipantsDb(room.id, currentUser.id)  
+  //   //   await updateUserRoomDb(currentUser.id, room.id)  
+  //     await updateDbUser({ activeRoom: null }, currentUser.id)   
+  //     console.log('Room Exited')
+  //     history.push('/')  // redirect to root which will be the characterchoice page now.     
+  //   } catch (err) {
+  //     setSnackbar({
+  //       message: `There was an error: ${err.message}`,
+  //       open: true,
+  //       type: 'error',
+  //     })
+  //   }
+  //   setIsLoading(false)      
 
-  };
+  // };
   
 
 // console.log(room)
@@ -228,51 +229,55 @@ const RoomInfoPage = () => {
  
 
   return (
-    <Box className={classes.background}>
+    <>
+      <RoomDetailsPage />
       
-      <Box py={1} textAlign="center"  className={classes.overline}>
-        <Typography variant="overline" > You are a participant in a facilitated room. </Typography>
-      </Box>
+    </>  
+    // <Box className={classes.background}>
+      
+    //   <Box py={1} textAlign="center"  className={classes.overline}>
+    //     <Typography variant="overline" > You are a participant in a facilitated room. </Typography>
+    //   </Box>
       
       
-         <Box py={1} textAlign="center"  >
-            <Typography className={classes.headline} > Your Room Information</Typography>
-          </Box>
+    //      <Box py={1} textAlign="center"  >
+    //         <Typography className={classes.headline} > Your Room Information</Typography>
+    //       </Box>
         
-      <Box className={classes.card}>
+    //   <Box className={classes.card}>
         
-        {currentUser && room &&
-           <Box py={3} textAlign="left"  >
-          <Typography>Your game reflections will be visible to the facilitator</Typography>
-          <Box py={2} >
-            <Typography className={classes.details} paragraph={true}>Room Code: {room.code}</Typography>
-            <Typography  className={classes.details} paragraph={true}>Organisation Name: {room.organisation}</Typography>
-              <Typography  className={classes.details} paragraph={true}>Class Name: {room.name}</Typography>
-              {/* <Typography  className={classes.details} paragraph={true}>Reflections: {room.reflectionIds}</Typography>
-              <hr />
-            <Typography  className={classes.details} paragraph={true}>Instructions: {room.instructions}</Typography> */}
-          </Box>
-        </Box>
-        }
+    //     {currentUser && room &&
+    //        <Box py={3} textAlign="left"  >
+    //       <Typography>Your game reflections will be visible to the facilitator</Typography>
+    //       <Box py={2} >
+    //         <Typography className={classes.details} paragraph={true}>Room Code: {room.code}</Typography>
+    //         <Typography  className={classes.details} paragraph={true}>Organisation Name: {room.organisation}</Typography>
+    //           <Typography  className={classes.details} paragraph={true}>Class Name: {room.name}</Typography>
+    //           {/* <Typography  className={classes.details} paragraph={true}>Reflections: {room.reflectionIds}</Typography>
+    //           <hr />
+    //         <Typography  className={classes.details} paragraph={true}>Instructions: {room.instructions}</Typography> */}
+    //       </Box>
+    //     </Box>
+    //     }
 
-        {currentUser && !room &&
-            <Box py={3} textAlign="left"  >
-            <Typography >You have entered an invalid room code. Please check the URL again or scan the QR code that was sent to you.</Typography>
-            <Button variant="contained" type="submit" className={classes.btn2} fullWidth style={{marginTop: 200}} disabled={isLoading} href="/room_join">Enter new room code</Button>
-          </Box>
-        }
+    //     {currentUser && !room &&
+    //         <Box py={3} textAlign="left"  >
+    //         <Typography >You have entered an invalid room code. Please check the URL again or scan the QR code that was sent to you.</Typography>
+    //         <Button variant="contained" type="submit" className={classes.btn2} fullWidth style={{marginTop: 200}} disabled={isLoading} href="/room_join">Enter new room code</Button>
+    //       </Box>
+    //     }
 
-        {currentUser && room &&
-          <Box className={classes.bottom}>
-            <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} onClick={() => saveRoomStartGame()}>Confirm & Play Game</Button>
-            {/* <Button variant="outlined" type="submit"   disabled={isLoading} onClick={() => saveRoomStartGame()}>Player Guide</Button>    */}
-            <Button variant="outlined" type="submit" className={classes.btn2} disabled={isLoading} onClick={() => exitActiveRoom()}>Leave Room</Button>
-          </Box>
+    //     {currentUser && room &&
+    //       <Box className={classes.bottom}>
+    //         <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} onClick={() => saveRoomStartGame()}>Confirm & Play Game</Button>
+    //         {/* <Button variant="outlined" type="submit"   disabled={isLoading} onClick={() => saveRoomStartGame()}>Player Guide</Button>    */}
+    //         <Button variant="outlined" type="submit" className={classes.btn2} disabled={isLoading} onClick={() => exitActiveRoom()}>Leave Room</Button>
+    //       </Box>
         
-        }
+    //     }
         
-        </Box>
-    </Box>
+    //     </Box>
+    // </Box>
 
   
   ) 
