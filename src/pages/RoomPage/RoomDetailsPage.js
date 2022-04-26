@@ -5,7 +5,7 @@ import { updateRoomParticipantsDb , getRoomDb } from '../../models/roomModel'
 import {CHARACTER_MAP,REFLECTION_ID_MAP} from '../../models/storyMap'
 import SVG from 'react-inlinesvg'
 
-import {  useHistory, Link } from 'react-router-dom'
+import {  useHistory, Link , useParams } from 'react-router-dom'
 import { useSnackbar } from '../../contexts/SnackbarContext'
 import {
     Box,
@@ -155,7 +155,11 @@ const RoomDetailsPage = () => {
   const history = useHistory()
   const { setSnackbar } = useSnackbar()
   const classes = useStyles()  
-
+  
+  // const [roomCode, setroomCode] = roomCodeValue;
+  
+  
+  const { roomUrl } = useParams()
   
 
   useEffect(() => {
@@ -168,11 +172,11 @@ const RoomDetailsPage = () => {
   
   useEffect(() => {
       const getRoom = async () => {
-        const room = await getRoomDb(userFromDb?.activeRoom)
+        const room = await getRoomDb(roomUrl)
         return setRoom(room)
         }         
     getRoom()    
-    }, [userFromDb?.activeRoom])
+    }, [roomUrl])
   
   const reflectionIdsCharacter = room?.reflectionIds.map((reflectionId) => { 
     const { characterId, chapterId } = REFLECTION_ID_MAP[reflectionId]
@@ -262,66 +266,78 @@ const RoomDetailsPage = () => {
         <Box py={1} className={classes.overline}>
           
           <Link to="/" style={{ textDecoration: 'none' }}><span align="left" style={{display:'inline-block', marginLeft: 10, color:'white'}}><SVG src="/chapter_choices_page/arrow.svg" />                </span></Link>
-            <span   style={{display:'inline-block',marginLeft:70}}><Typography variant="body1" style={{ fontWeight: '700'}} > Room: {room?.code} </Typography></span>
+          <span style={{ display: 'inline-block', marginLeft: 70 }}><Typography variant="body1" style={{ fontWeight: '700' }} > {room && <>Room: {room?.code} </>} {!room && <>INVALID ROOM CODE</>}</Typography></span>
+          
           
          </Box>
       
-         <Accordion defaultExpanded>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-            className={classes.thinner}
-          >
-            <Typography className={classes.title} >Room Details</Typography>
-          </AccordionSummary>
-          <AccordionDetails style={{display:'block'}} >
+        {room &&
+          <>
+            <Accordion defaultExpanded>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+                className={classes.thinner}
+              >
+                <Typography className={classes.title} >Room Details</Typography>
+              </AccordionSummary>
+              <AccordionDetails style={{ display: 'block' }} >
             
-            <div>
-              <Typography className={classes.title}  style={{display:'inline-block'}}>School / Organisation:</Typography>
-              <Typography paragraph={true} className={classes.body}  style={{display:'inline-block',marginLeft:10}}> {room?.organisation}</Typography>
-            </div>
-            <div >
-              <Typography className={classes.title} style={{display:'inline-block'}}>Class / Team:</Typography>
-              <Typography paragraph={true} className={classes.body} style={{display:'inline-block',marginLeft:10}}> {room?.name}</Typography>    
-              </div>
+                <div>
+                  <Typography className={classes.title} style={{ display: 'inline-block' }}>School / Organisation:</Typography>
+                  <Typography paragraph={true} className={classes.body} style={{ display: 'inline-block', marginLeft: 10 }}> {room?.organisation}</Typography>
+                </div>
+                <div >
+                  <Typography className={classes.title} style={{ display: 'inline-block' }}>Class / Team:</Typography>
+                  <Typography paragraph={true} className={classes.body} style={{ display: 'inline-block', marginLeft: 10 }}> {room?.name}</Typography>
+                </div>
             
-          </AccordionDetails>
-        </Accordion>
+              </AccordionDetails>
+            </Accordion>
 
-        <Accordion defaultExpanded >
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-            id="panel2a-header"
-            className={classes.thinner}
-        >
-          <Typography  className={classes.title}>Facilitator's Message</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography className={classes.body}>
-            <pre style={{ fontFamily: 'inherit', margin: 0 , width:320}} className={classes.preWrap}>{room?.instructions}</pre>
-          </Typography>           
-        </AccordionDetails>
-      </Accordion>
+            <Accordion defaultExpanded >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel2a-content"
+                id="panel2a-header"
+                className={classes.thinner}
+              >
+                <Typography className={classes.title}>Facilitator's Message</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography className={classes.body}>
+                  <pre style={{ fontFamily: 'inherit', margin: 0, width: 320 }} className={classes.preWrap}>{room?.instructions}</pre>
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
         
         
-          {/* <hr style={{ border: 0, height: 2, width:'100%', marginTop:24, marginBottom: 24, backgroundColor: 'rgba(102,78,252,0.34)'}}/> */}
+            {/* <hr style={{ border: 0, height: 2, width:'100%', marginTop:24, marginBottom: 24, backgroundColor: 'rgba(102,78,252,0.34)'}}/> */}
         
-          <Box m={3}>
-            <Typography className={classes.title}>Assigned characters:</Typography>
-            <Typography paragraph={true} className={classes.body}>
-            { groupedResults &&
-              <HomeworkAvatarBox chaptersByCharacter={groupedResults} user={userFromDb}/>
-            }
-            </Typography>           
-        </Box>  
+            <Box m={3}>
+              <Typography className={classes.title}>Assigned characters:</Typography>
+              <Typography paragraph={true} className={classes.body}>
+                {groupedResults &&
+                  <HomeworkAvatarBox chaptersByCharacter={groupedResults} user={userFromDb} />
+                }
+              </Typography>
+            </Box>
 
-        <Box className={classes.bottom}>
-          {/* <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} href="/">Play Game</Button>          */}
-          <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} onClick={() => saveRoomStartGame()}>Play Game</Button>         
-          <Button variant="outlined" type="submit" className={classes.btn2} disabled={isLoading} onClick={() => exitActiveRoom()}>Leave Room</Button>         
-        </Box>        
+            <Box className={classes.bottom}>
+              {/* <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} href="/">Play Game</Button>          */}
+              <Button variant="contained" type="submit" className={classes.btn} disabled={isLoading} onClick={() => saveRoomStartGame()}>Play Game</Button>
+              <Button variant="outlined" type="submit" className={classes.btn2} disabled={isLoading} onClick={() => exitActiveRoom()}>Leave Room</Button>
+            </Box>
+          </>
+        } 
+        {!room &&
+          <Box m={3} textAlign="left"  >
+            <Typography >You have entered an invalid room code. Please check the URL again or scan the QR code that was sent to you.</Typography>
+            <Button variant="contained" type="submit" className={classes.btn2} fullWidth style={{ marginTop: 200 }} disabled={isLoading} href="/room_join">Enter new room code</Button>
+          </Box>
+        }
+
       </Box>
   
     
