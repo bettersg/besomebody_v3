@@ -157,7 +157,7 @@ const Whatsapp = (props) => {
                 else if (step.tags[0]?.includes('timestamp')) {
                   if (innerMonoRef.current) { innerMonoRef.current.hidden = 'true' }
                   return (
-                    <Box style={{ textAlign: 'center', paddingTop: 5 }}> <Typography key={step.text} variant="overline"> {step.text}hr</Typography> </Box>
+                    <Box style={{ textAlign: 'center', paddingTop: 5 }}> <Typography key={step.text} variant="overline"> {step.text}</Typography> </Box>
                     )
                 }
                 else if (step.tags[0]?.includes('clear')) {     // this is needed to avoid rendering inner_monologue

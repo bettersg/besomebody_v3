@@ -1792,6 +1792,7 @@ I can’t tell her why it’d be a bad idea to sit with them. I know it would up
 === ravi_3_3a ===
 #knot:ravi_3_3a
 #ui:scene
+#background:bg_ravi_cafeteria.jpg
 #speaker_left_image:cha_ravi_valerie_normal.png
 #speaker_left_name:Val
 #speaker_right_image:cha_ravi_marcus_gossipy.png
@@ -1813,6 +1814,7 @@ And they saw Val. They're definitely going to say that I don't deserve her. My h
 === ravi_3_3b ===
 #knot:ravi_3_3b
 #ui:scene
+#background:bg_ravi_cafeteria.jpg
 #speaker_left_image:cha_ravi_valerie_normal.png
 #speaker_left_name:Val
 #speaker_right_image:cha_ravi_marcus_qian.png
@@ -2160,397 +2162,123 @@ My colleagues would differ on that. These guys had a whole whatsapp chat making 
 Well, I am not your colleague. And Amma is not your colleague. And if people at work are acting like it’s the middle ages, then it’s time you spoke to them about it. That’s not cool. #speaker_left
 I will. #speaker_self
 // amma enters the home
+Shoot, Amma's back! #inner_monologue
 #speaker_right_image:cha_ravi_mum_dress_normal.png
 #speaker_right_name:Amma
-Hey Amma is home finally. AMMA, RAVI HAS A GIRLFRIEND! #speaker_left
+AMMAAAAAAAA, RAVI HAS A GIRLFRIEND! #speaker_left
 Shut up!!! #speaker_self
 Who has a girlfriend? #speaker_right
-
-
-Hello Amma. How was your day? I think there are some curry puffs I think. Oh no wait, I finished all of them haha. Where were you Amma? How was your day? #speaker_self
-
-Oh god, stupid revuuuu! I’m blabbering! #inner_monologue
-
-
-Oh hello kanna! I’ve never seen you this excited. You’ve lost weight. As usual. #speaker_right
-
-
-Oh do we have to be a cliche? I’ve become fitter. Look at my muscles. #speaker_self
-
-You call them muscles? More like mussels. #speaker_left
-
-
-What? #speaker_self
-
-
-Mussels, like the little snotty things inside a shell. Like you. #speaker_left
-
-
-You think you so funny is it! #speaker_self
-
-
-
-Funnier than you lah! #speaker_left
-
-
-Not funnier than that little moustache on your lip twitch-twitch-twitch blowing in the wind. #speaker_self
-
-
-Amma! #speaker_left
-
-
-Ravi, stop bullying your sis. What’s this about a girlfriend? #speaker_right
-
-
+Hello Amma. I think there are some curry puffs  #speaker_self
+Ravi has a girlfriend! #speaker_left
+Revati's just messing around. Stop it Revu!  #speaker_self
+நேதஂதிகஂகு தானஂ எனஂ காது குத்திசஂசா? (Do you think my ears were pierced yesterday?) Who is this girl? #speaker_right
 Ho ho ho! #speaker_left
-
-
-Uh..nothing ma. She’s just blabbering. #speaker_self
-
-
-நேதஂதிகஂகு தானஂ எனஂ காது குத்திசஂசா? (Do you think my ears were pierced yesterday?)? Who is this girl? #speaker_right
-
-
 Uh..just a friend ma. #speaker_self
-
-
 Just a friend. And a girl... #speaker_left
-
-
 Why are you acting like a kid? #speaker_self
-
-
-Leave her alone. Who’s this girl? #speaker_right
-
-
-Valerie...she’s really cool. She loves Indian food and... #speaker_self
-
-
-
-...Indian guys... #speaker_left
-
-
-Revati, can you shut up for a second please? #speaker_self
-
-
-Ravi, stop yelling at her! #speaker_right
-
-
-She’s being so annoying ma! #speaker_self
-
-
-Yeah I know. Doesn’t mean you can yell at her like that. #speaker_right
-
-
-Sorry.. #speaker_self
-
-
-Anyway, tell me. Valerie ah? #speaker_right
-
-
-Yeah amma. Just met her a couple of months ago. #speaker_self
-
-
-Very cute too! #speaker_left
-
-
-Is she? #speaker_right
-
-
-Yeah. She looks like some indie movie actress haha #speaker_left
-
-
-Oh god my sis will be the death of me. #inner_monologue
-
-
-Like which Hindi movie actress? #speaker_right
-
-
-No! Indie! Like independent movies. You know, super cool, super cute, super quirky. #speaker_left
-
-
-She is also super friendly ma. You’ll like her. #speaker_self
-
-
-Yeah that’s what I said! #speaker_left
-
-
+She is one. Now, who’s this girl? #speaker_right
+She's so hip, she looks like some indie movie actress haha #speaker_self
+Oh my god, my sis will be the death of me. #inner_monologue
+Hindi movie actress? Which one?  #speaker_right
+No Amma, Indie! Like independent films. You know, very edgy, very cool, very quirky. #speaker_left
+She is also super friendly ma.  #speaker_self
+I'm sure Amma will like her! #speaker_left
 Ok. Busy with girlfriend ah? Is that why you haven’t come over in so long? #speaker_right
-
-
 It’s not like that ma. #speaker_self
-
-
-Then what? Didn’t come for dinner here. No call also? #speaker_right
-
-
-Just super busy with work ma. #speaker_self
-
-
-
-Doesn’t matter. You make sure you come see us ok? Girlfriend or no girlfriend. Busy or not busy. #speaker_right
-
-
-It’s just that...it’s not been easy ma. #speaker_self
-
-
+What’s her name? #speaker_right
+Valerie...she’s really cool. She loves Indian food and - #speaker_self
+...Indian guys! #speaker_left
+Revati, can you shut up for a second please? #speaker_self
+Revati kanna (dear), don't disturb your brother. Anyway tell me. Valerie?  #speaker_right
+Yeah Amma. Just met her a couple of months ago.   #speaker_self
+Bring her over! Most important is that you you make sure you come see family ok? Girlfriend or no girlfriend. Busy or not busy. #speaker_right
+It’s just that...thing’s have not been easy for me ma. #speaker_self
 Why kanna? #speaker_right
-
-
-Work has been hard. And I’ve been working at the cafe too. And I have...a girlfriend now… #speaker_self
-
-
+Work has been hard. And I’ve been working at the cafe too. #speaker_self
 Don’t think you can talk to me, is it? #speaker_right
-
-
-That’s not what I meant, ma. I did feel like I could talk to you. But I don’t want to make it hard for you with my problems also, you know? #speaker_self
-
-
+That’s not what I meant, ma. But I don’t want to make it hard for you with my problems also, you know? #speaker_self
 Kanna, your problems are my problems. If you don’t tell me, we can’t solve it. Come sit down. #speaker_right
-
-
-It’s ok ma. Can we just watch a movie or something? We can talk about this another time? #speaker_self
-
-
-No. I’m going to make coffee. Think about what you want to talk about. #speaker_right
-
-Oh where do I even begin. Val is Chinese. My colleagues are stupid. And I really have lost weight. #inner_monologue
-
-
-So tell me about Valerie #speaker_right
-
-
-She’s quite tall I think. Almost as tall as Ravi! #speaker_left
-
-
-Revu, be quiet. Ravi, tell me. #speaker_right
+I’m going to make coffee. Think about what you want to talk about. #speaker_right
+Oh where do I even begin. Val is Chinese. My colleagues are stupid. And I really have lost weight, along with all my self-confidence. #inner_monologue
+So tell me about Valerie first. #speaker_right
 
 + She’s a regular at the coffee shop [] #speaker_self
     Bet you made a heart shape on her coffee #speaker_left
     Please lah. I’m not that lame. #speaker_self
     
-+ She's tall[,] She’s also very kind. And clever. #speaker_self
++ She's smart and worldly[,] and also very kind. And clever. #speaker_self
     Kind and clever. All the things you’re not. Great. #speaker_left
     Please lah. I’m clever ok? And very kind to you, you brat.  #speaker_self
-- She’s Chinese, is it? #speaker_right
-Yeah  #speaker_self
-
-
+- And she’s Chinese, eg? #speaker_right
+Yeah.  #speaker_self
 Hmmm #speaker_right
-
-
-Oh no. This is going to be a problem huh? I thought we could skirt over this topic. But cannot lah. #inner_monologue
-
+Oh no. This is going to be a problem huh? I thought we could skirt around this topic.   #inner_monologue
 I knew it. #speaker_right
-
-Huh, how did you know? #speaker_self
-
-You always had a thing for Chinese girls. That girl, Marie? #speaker_right
-
-Eee no! Marie is like my sister. #speaker_self
-
-Oh, good to know there’s one more to suffer with me. #speaker_left
-
-Hmm, I thought there was something going on between you two. #speaker_right
-
-Nothing ma. She’s my boss now anyway. Best boss ever! #speaker_self
-
-Cannot find a good Indian girl? #speaker_right
-
+Uh, because of her name? #speaker_self
+Just a guess. But why, kanna? Cannot find a good Indian girl? #speaker_right
 I knew it. This question. It was always going to be like this. What can I say without offending her? #inner_monologue
-
 + [I tried] The one Indian girl I asked out said no. #speaker_self
     Oh, that’s news! #speaker_right
     Yeah, when I was, like 14. She said I was too dark. I cried the whole night. #speaker_self
     Oh, I remember that day. Your eyes were swollen. You told me it was because Liverpool lost! #speaker_right
-    Yeah, that was the friend. Chandni. Stupid girl. #speaker_self
+    Yeah, well it was because of Chandni. Stupid girl. #speaker_self
     
 + [I never looked ] I really wasn’t looking for an Indian girl. #speaker_self
     Why? Not good enough for you? #speaker_right
-    
     No! I really wasn’t looking for any girl! #speaker_self
-    
     Yeah, you think I was born yesterday? #speaker_right
-
     Amma! Really! #speaker_self
 
 - Anyway. You know why I’m asking you, right? #speaker_right
 Oh god, here it comes. Mum is going to say no. How can I break it to Val that my family is...racist? #inner_monologue
-
-
 Because you want me to end up with an Indian girl? #speaker_self
-
-
 No! Because I know it’s not easy. #speaker_right
-
-
 Not easy? #speaker_self
-
-
 Because it’s not common. And some people have a problem with it. #speaker_right
-
-
 I know! These guys at work. They were making fun of me. And her. And I kinda don’t want to work there any more. #speaker_self
-
-
 At your internship? #speaker_right
-
-
 Yeah. They said some pretty nasty things. Like how can someone like me get a girlfriend. And a chinese girlfriend.. #speaker_self
-
-
 And what did you say? #speaker_right
-
-
-
 What can I say? The boss also doesn’t think anything is wrong. I don’t know what to do. Because if I yell at them, I’m the bad guy. If I don’t, then I’m the weakling. #speaker_self
-
-
 And Valerie? What does she say? #speaker_right
-
-
-
 She says she likes me a lot..and wants to be with me. #speaker_self
-
-
 Ok. Then what’s the problem? #speaker_right
-
-
 Problem is...I don’t know if I can be with her like this. Like, people passing comments. #speaker_self
-
-
 Ravi, this is not you. You date a Chinese girl, or Indian girl, or Indonesian girl...I don’t care. #speaker_right
-
-
 Really? #speaker_self
-
-
 Yes! Did you really think I would have a problem with you dating someone? You think I’m one of your colleagues? #speaker_right
-
-
 You tell him! I told him the same thing! #speaker_left
-
-
-
 Look, kanna. We are all going through a very tough time. I don’t need to tell you this. We have to tackle things together. #speaker_right
-
-
 I know..but I thought… #speaker_self
-
-
 Don’t keep thinking...talk to me! #speaker_right
-
-
 Sorry, I just thought I would have to deal with some things myself. I don’t want to burden you. #speaker_self
-
 Yes, there are some things you have to deal with yourself. But don’t think you have to save the family on your own. Burden, it seems. I have been working for 30 over years. I know it’s hard. #speaker_right
-Look, it’s ok to date who you like. It’s ok to expect to be respected at work. #speaker_right 
-Amma, so it’s ok? #speaker_self
-
-
-Ok for what? #speaker_right
-
-
-For me to date Valerie? #speaker_self
-
-
-Revati, can you beat up your brother for me please? #speaker_right
-
-
-With pleasure! #speaker_left
-
-
-Ravi, have you not been listening to me? #speaker_right
-
-
-I’m listening, ma. #speaker_self
-
-
-There will be many obstacles. People won’t like the way you look. Or the way you speak. Or think you smell. There are very nice people. And not so nice people. You can’t control that. If you want to live away from us, that’s ok. But you can’t lose your way like this. And think we won’t support you. #speaker_right
-
-
+Look, it’s ok to date who you like. It’s ok to expect to be respected at work. #speaker_right
+There will be many obstacles. People won’t like the way you look. Or the way you speak. Or think you smell. You can’t control other people. If you want to live away from us, that’s ok. But you can’t lose your way like this. And think we won’t support you. #speaker_right
 And these once-in-a-blue-moon visits won’t do. #speaker_left
-
-
-Aiyoh sorry lah. #speaker_self
-
-
+Aiyoh sorry la. #speaker_self
 It’s ok. You’ve always been the slow one in the family. I’m sure Valerie thinks so too. #speaker_left
-
 She actually does. #speaker_self
-
-
-Bring her home one day. Anyway, this internship. It is more important now. #speaker_right
-
-
-Yes, it is. #speaker_self
-
-
-So, have you decided? #speaker_right
-
-
-About? #speaker_self
-
-
-About what to do about your situation. #speaker_right
-
-
+Bring her home one day. Anyway, this internship. Have you decided what to do yet? #speaker_right
 I don’t know. There is too much to think about. #speaker_self
-
-
 When you look at everything together, it can be overwhelming. #speaker_right
-
-Yeah, But I don’t even know where to start. It’s very complicated you know...I wish Appa was here... #
-
-
-
+Yeah, But I don’t even know where to start. It’s very complicated you know...I wish Appa was here... #speaker_self
 Why? #speaker_right 
 // angry
-
-
 He’s the reason I wanted to get into aeronautics in the first place. #speaker_self
-
-
 He’s also the reason I had to take care of you all, by myself. #speaker_right
-
-
-That’s why ma, I wish he was here. #speaker_self
-
-
+That’s why I wish he was here. #speaker_self
 How can you say that, Ravi? #speaker_left
-
-
 It’s ok. Let him talk. #speaker_right
-
-
-It’s not like that, ma. Can’t I wish for something? #speaker_self
-
-
-Why don’t you wish for some gold and a condo while you’re at it. And oh, curry puff over right? You can also wish for some free curry puffs? #speaker_right
-
-
-Amma, why are you getting angry? #speaker_self
-
-
-I’m not. Go on, keep wishing, Ravi. #speaker_right
-
-
+It’s not like that, Amma. Can’t I wish for something? #speaker_self
+Why don’t you wish for some gold and a condo while you’re at it. Much more valuable than your useless father. #speaker_right
 Amma, calm down. Ravi, you’re a real idiot. #speaker_left
-
-
 I don’t know what I said that is so wrong #speaker_self
-
-
-
 Why don’t you wish for some buddhi (brain)? #speaker_right
-
-
 Amma, why are you getting so upset? #speaker_self
-
-
-Yeah, I am sorry. I am only here to make you some fish curry and approve your girlfriends right? #speaker_right
-
-Why is Amma so angry? I can’t miss my pa? Maybe I shouldn’t have said what I said. But she literally just said I am supposed to speak my mind. And here I thought we were having a moment. #inner_monologue
+I am only here to make you some fish curry and approve your girlfriends right? But your father is your big important hero. But of course. #speaker_right
+He left before you were old enough to stop idolising him and see him for what he was. A coward. #speaker_right
+No no that's not what I meant.... I can’t miss my pa? Maybe I shouldn’t have said what I said. But she literally just said I am supposed to speak my mind. And here I thought we were having a moment. #inner_monologue
 
 + [Stay calm] That’s not what I said, ma. #speaker_self
     You don’t need to say any more. #speaker_right
@@ -2559,147 +2287,110 @@ Why is Amma so angry? I can’t miss my pa? Maybe I shouldn’t have said what I
     Oh, big man. #speaker_right
     You want me to speak my mind, and then you get angry when I do.   #speaker_self
 - I said, speak your mind. I also told you not to bring up appa. #speaker_right
-
-
-Whatever. If he was here, we wouldn’t be fighting like this. #speaker_self
-
-
-Po Da (Go away)! You like flying planes right? Fly away like your appa. #speaker_right
-
-
-Enough! Both of you! Stop fighting! #speaker_left
-
-
-Sorry kanna. I didn’t mean to raise my voice. #speaker_right
-
-
-It’s ok ma. I know why you’re angry. Ravi, can you, for a second, think about what you’re saying. Your words affect people you know. #speaker_left
-
-
+It’s ok Amma, Ravi didn't mean it that way. Ravi, can you, for a second, think about what you’re saying. Your words affect people you know. #speaker_left
 Works both ways. #speaker_self
-
-
-I’m tired of both of you talking to each other like this. Ravi, whatever you’re going through, we’ll be there. But you got to look at what’s here and now right? #speaker_left
-
-
-
-YOU have to be there for me? I don’t want that. I want to be there for you. #speaker_self
-
-
-Why is that? #speaker_left
-
-
-Because I’m your brother. #speaker_self
-
-
-
-Works both ways. #speaker_left
-
-
-I know, but I’m the man here. #speaker_self
-
-
-So? #speaker_left
-
-
-So I have a responsibility. #speaker_self
-
-
-Why, are we not capable of taking care of each other? You think because I’m a girl that I need big brother to support me? #speaker_left
-Or Amma who wiped your ass when you were a kid needs saving? And only from you? Or our father, who even after all your wishing, is missing? #speaker_left
-
-
-But you’re so little. And Amma is doing everything on her own. #speaker_self
-
-
-
-
-And we should stick together. #speaker_left
-
-
-I know. But who can I talk to about work ma? #speaker_self
-
-
-Are you forgetting I have been working for so many years. Nothing you can learn from me, is it? #speaker_right
-
-
-But you worked at a department store ma. It’s not the same. #speaker_self
-
-
-Ravi! #speaker_left
-
-
+Are you forgetting I have been working for so many years? Nothing you can learn from me, is it? #speaker_right
+But you worked at a department store Amma. It’s not the same. #speaker_self
+Ravi!! #speaker_left
 He’s right. It’s not the same. But I can tell you this much. Not one of the days I have worked I have expected anything less than respect from anyone. And that respect, I give back to them. Whether you’re flying planes, or selling shoes you need to be happy with yourself. #speaker_right
 If you are doing something for the sake of it, or just because Appa did it, then you will always feel small. The department store paid for your food. It paid for your clothes. It paid for your school. And your university. And even when they asked me to go, I had to respect that. #speaker_right
-
-
-What is wrong with me? Can’t believe I am speaking to mum like that. #inner_monologue
-
-
-I’m sorry. #speaker_self
-
-
+What is wrong with me? Can’t believe I am speaking to Amma like this. I can't take out my work stresses on her. #inner_monologue
+I’m sorry Amma. It's just... work has drained me, emotionally.   #speaker_self
 You don’t have to be sorry. #speaker_right
-
-
-
 Still, I’m sorry. I don’t know why I said all those things. My head is constantly full of doubt, and I feel like my dream will just stay that, you know, a dream. #speaker_self
-
-
-You can realise your dream. But first, realise why the dream is important for you. Don’t anyhow think it’s for us, or for appa. Is it really what you want to do? #speaker_right
-
-
-
+You can realise your dream. But first, realise why the dream is important for you. Don’t anyhow think it’s for us, or even for whatever you imagine that Appa is. This dream - is it really what you want to do? #speaker_right
 Yes. It still is. #speaker_self
-
-
-Then you have a few decisions to make. Starting with speaking to your boss and your colleagues. Last time whenever I had a problem I brought it up. So many managers over my time. Some good lah. Some were so rude. Whether they help or not is out of your hands. But if you don’t speak up, then no chance. #speaker_right
-
-
-
-Yeah #speaker_self
-
-
+Then you have a few decisions to make. Starting with speaking to your boss and your colleagues. Last time whenever I had a problem I brought it up. #speaker_right
+So many managers over my time. Some good lah. Some were so rude. Whether they help or not is out of your hands. But if you don’t speak up, then no chance. #speaker_right
 Do you want to stay in this internship? #speaker_right
 
 + [Stay?] I think I want to stay. I can sort it out. Thank you ma. #speaker_self
-
-    
     Ok. Then you know what you have to do. #speaker_right
-    
-    
     Yeah. I’m gonna speak to them next week. #speaker_self
-    
-    
     Whatever they say, stay calm. Don’t get angry.Remember,ஆறுவது சினம் (Anger should be calmed) Then you lose your ground. #speaker_right
-    
-    
     I will try ma. Thank you. #speaker_self
-    
-    
     You decide what’s best for you. Be Ravi. Not a scaredy-poke. #speaker_right
 
 + [Quit?] I think I want to quit ma. I don’t want to stay in a place like that. #speaker_self
-
     Ok. Then can you do another internship? #speaker_right
-    
-    
     I would have to look for one. #speaker_self
-    
-    
-    Would it be a problem? #speaker_right
-    
-    
-    Think it will be a bit hard because it’s a bit hard to get an internship outside the window. But I will try. #speaker_self
-    
-    
-    
+    You should speak to them first. Let them know. Will another internship be easy to find? #speaker_right
+    Yeah, I'll speak to them first. It will be a bit hard to get an internship outside the window. But I can try, if that's the only option. #speaker_self
     You decide what’s best for you. Be Ravi. Not a scaredy-poke. #speaker_right
+
 -Amma didn’t raise a scaredy-poke. #speaker_left
 No she didn’t. #speaker_self
-Oh no she didn’t. #speaker_right
+Just be yourself, kanna.  #speaker_right
 
-FINAL EMAIL SEQUENCE GOES HERE
+-> ravi_3_7
+
+
+=== ravi_3_7 ===
+#ui:narrator
+#background:bg_ravi_bedroom_mirror.jpg
+Ok. Enough of just sitting back and letting things happen. 
+If I have dreams, I need to wake up to realise them. Come on Ravi, you got this. 
+First things first. I need to speak to Roger tomorrow. I hate confrontation though. I can’t just bust into the room and blurt things out. I’m just not cut out for it. 
+How do people do it? Stand up for the things they want, without fear? Practise? Maybe I need to practise. Hmm. In front of the mirror? Should I be gentle and apologetic? Or aggressive? 
+I don’t even know what I look like when I’m being aggressive. Maybe if I can face myself saying things I want to say, I’ll figure it out. 
+Let me go talk in front of the mirror. I can’t control Roger’s actions, but I can have control over my own. Over my own words. Ok. Imagine it’s Roger in front of me. Here goes.
+#ui:scene
+#background:bg_ravi_bedroom_mirror.jpg
+#speaker_left_image:cha_ravi_roger_transparent.png 
+Hello Roger #speaker_self
+... #speaker_left
++ There's something I need to talk to you about.[] #speaker_self
+    It's regarding workplace behaviour. #speaker_self
++ I hope I’m not disturbing you.[] #speaker_self
+    It’s just a small thing.  #speaker_self
+- And... #speaker_self
++ I would like you to get a full understanding of the situation.  #speaker_self
+    Marcus and Qi An have said things about me, not knowing that I was listening. Nasty, racist things about my girlfriend and me.  #speaker_self
++ I’m not sure if you know the whole story.   #speaker_self
+    Basically, there’s been a misunderstanding between Marcus, Qi An and me. They were saying upsetting things about my girlfriend and me.   #speaker_self
+- I... 
++ think that is uncalled for. [] #speaker_self
+    And a blatant display of how they view me as a lesser person. #speaker_self
+    These attitudes can seem harmless in private. But things are private only until they are not. #speaker_self
+
++ I don’t mean to snitch on them. []
+    I feel like you deserve to know. I think they were just joking around. #speaker_self
+    But it hurt me. #speaker_self
+- And... #speaker_self
++ I’m not comfortable working in this environment. [] #speaker_self
+    I deserve respect. It’s the least I can expect. #speaker_self
++ I don’t feel so easy saying this.  []#speaker_self
+    I want to apologise for my directness. #speaker_self
+- I am left with no other option, but to say... #speaker_self
++ I would like to tender my resignation. [] #speaker_self
+// ending 1
+    Thank you for the opportunity here. #speaker_self
++ If you would like me to stay on in the company.  []#speaker_self
+// ending 2
+    I would like you to address this situation in any way you think is suitable. #speaker_self
+// transparent Roger disappears
+#speaker_left_image:pixel.png 
+- Whoa. Saying that aloud lifted such a weight off my shoulders. #inner_monologue
+#ui:narrator
+#background:bg_ravi_bedroom_mirror.jpg
+Remember, you’re not asking for too much, and don’t have to feel bad about it. 
+Maybe you could be a little more confident? But hey, at least you got a start. 
+You’re doing this for Amma. For Revu. And for Val too. But most importantly, for yourself. 
+Just never forget... to be yourself. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 -> ravi_3_reflection
