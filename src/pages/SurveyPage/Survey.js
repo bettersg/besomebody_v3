@@ -44,7 +44,7 @@ const Survey = (props) => {
       getStory()
     } catch (err) {
       setSnackbar({
-        message: `Failed to submit survery: ${err.message}`,
+        message: `Failed to submit survey: ${err.message}`,
         open: true,
         type: 'error',
       })

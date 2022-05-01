@@ -142,7 +142,7 @@ const ReflectionForm = ({ reflection }) => {
       await createDbReflectionResponses(answerDocs);
     } catch (err) {
       setSnackbar({
-        message: "Failed to submit!",
+        message: `Failed to submit: ${err.message}`,
         open: true,
         type: "error",
       })

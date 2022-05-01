@@ -69,7 +69,7 @@ export const REFLECTION_ID_MAP = {
     characterId: 3,
     chapterId: 3,
   },
-  10: {  // Ravi 4
+  10: {  // Ravi  NOT USED
     characterId: 3,
     chapterId: 4,
   },
@@ -544,7 +544,7 @@ export const CHARACTER_MAP = [
     playable: true,
     primaryColour: '#8DC000',
     secondaryColour: '#FF8944',
-    newestChapter: 2,
+    newestChapter: 3,
     chapters: [
       {
         chapterId: 1,
@@ -564,10 +564,10 @@ export const CHARACTER_MAP = [
           "/images/bg_ravi_rentals3.jpg",
           "/images/bg_ravi_fishcurry.jpg",
           "/images/bg_ravi_home.jpg",
-          "/images/cha_ravi_mum_normal.jpg",
-          "/images/cha_ravi_mum_worried.jpg",
-          "/images/cha_ravi_revati_normal.jpg",
-          "/images/cha_ravi_revati_concerned.jpg",
+          "/images/cha_ravi_mum_normal.png",
+          "/images/cha_ravi_mum_worried.png",
+          "/images/cha_ravi_revati_normal.png",
+          "/images/cha_ravi_revati_concerned.png",
           "/images/ui_emailsent.png",
           "/images/ui_emailsent.png",
           "/images/ui_emailinbox.png",
@@ -588,31 +588,6 @@ export const CHARACTER_MAP = [
           },
         ]
       },
-      // {
-      //   chapterId: 2,
-      //   number: 2,
-      //   reflectionId:8,
-      //   title: "(merged with Chapter 1) ",
-      //   knotTag: "ravi_2_2",
-      //   summary: "Ravi decides to move out. But his choices are not that straightforward.",
-      //   playable: true,
-      //   images: [           
-      //     "/images/bg_launch.jpg",
-      //     "/images/bg_reflections.jpg",
-      //   ],
-      //   endings: [
-      //     {
-      //       endingId: 1,
-      //       title: "Azlin gets upset with you",
-      //       inkVar: "chapter2_ending_1",
-      //     },
-      //     {
-      //       endingId: 2,
-      //       title: "Azlin tells you to give him up",
-      //       inkVar: "chapter2_ending_2",
-      //     },
-      //   ]
-      // },
       {
         chapterId: 2,
         number: 2,
@@ -668,53 +643,74 @@ export const CHARACTER_MAP = [
         reflectionId:9,
         title: "The Internship",
         knotTag: "ravi_3_intro",
-        summary: "Ravi lands an internship to fulfill his university credits. And finds himself in a situation that tests him.",
-        playable: false,
-        discordLink: 'https://discord.com/channels/934082509061357598/938335768521363456',
-        images: [           
-          "/images/bg_launch.jpg",
-          "/images/bg_reflections.jpg",
+        summary: "Ravi lands an internship, but finds himself in a tricky situation. He opens up to his family, and gets a much-needed reminder ",        
+        playable: true,
+        discordLink: 'https://discord.gg/8BYKfJDd67',
+        images: [                     
+          '/images/bg_ravi_bedroom_mirror.jpg',
+          '/images/bg_ravi_bedroom.jpg',
+          '/images/bg_ravi_cafeteria.jpg',
+          '/images/bg_ravi_meetingroom.jpg',
+          '/images/bg_ravi_pushpa_home.jpg',
+          '/images/black.jpg',
+          '/images/cha_ravi_marcus_gossipy.png',
+          '/images/cha_ravi_marcus_normal.png',
+          '/images/cha_ravi_marcus_qian.png',
+          '/images/cha_ravi_qian_gossipy.png',
+          '/images/cha_ravi_qian_normal.png',
+          '/images/cha_ravi_mum_dress_normal.png',
+          "/images/cha_ravi_mum_dress_worried.png",
+          "/images/cha_ravi_mum_dress_happy.png",
+          "/images/cha_ravi_revati_normal.png",
+          "/images/cha_ravi_revati_concerned.png",
+          '/images/cha_ravi_roger_normal.png',
+          '/images/cha_ravi_roger_transparent.png',
+          '/images/cha_ravi_valerie_concerned.png',
+          '/images/cha_ravi_valerie_flirt.png',
+          '/images/cha_ravi_valerie_happy.png',
+          '/images/cha_ravi_valerie_incredulous.png',
+          '/images/cha_ravi_valerie_normal.png',
+          '/images/pixel.png',
+          '/images/ui_ravi_phonecall_val.jpg',
+          '/images/ui_ravi_phonecall.jpg',
+          '/images/whatsapp.png',
         ],
         endings: [
           {
             endingId: 1,
-            title: "Azlin gets upset with you",
-            inkVar: "chapter2_ending_1",
+            title: "Ravi resigns his internship",
+            inkVar: "chapter_3_ending",
           },
           {
             endingId: 2,
-            title: "Azlin tells you to give him up",
-            inkVar: "chapter2_ending_2",
+            title: "Ravi asks for better workplace conditions",
+            inkVar: "chapter_3_ending",
           },
         ]
       },
-      {
-        chapterId: 4,
-        number: 4,
-        reflectionId:10,
-        title: "Cleared for Take Off",
-        knotTag: "ravi_4_intro",
-        summary: "Ravi breaks down and reveals his fears to both Valerie and Revati. They give him a new perspective, and much-needed reminders. ",
-        playable: false,
-        discordLink: 'https://discord.com/channels/934082509061357598/938335768521363456',
-        images: [           
-          "/images/bg_launch.jpg",
-          "/images/bg_reflections.jpg",
-        ],
-        endings: [
-          {
-            endingId: 1,
-            title: "Azlin gets upset with you",
-            inkVar: "chapter2_ending_1",
-          },
-          {
-            endingId: 2,
-            title: "Azlin tells you to give him up",
-            inkVar: "chapter2_ending_2",
-          },
-        ]
-      },
+      
     ],
+    reflectionBrowser: [
+      {         
+        title: "Reflection Browser",
+        knotTag: "story_end_browser",
+        summary: "Ravi's story in the game has ended, but the stories of all our players are waiting to be explored.",
+        playable: true,
+        discordLink:'https://discord.gg/8BYKfJDd67',
+        images: [
+          "/images/bg_ravi_intro.jpg",         
+          "/images/bg_launch.jpg",
+          "/images/bg_reflections.jpg",
+        ],
+        empathyCharacters: [
+          {
+            characterName: 'Ravi',
+            characterImage: '/shareable_avatars/ravi.png',
+            shareImage:'/shareable_avatars/ravi_share.svg',
+          }
+        ]
+      },
+    ]
   }, 
   {
     characterId: 4,
