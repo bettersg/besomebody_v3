@@ -1640,7 +1640,7 @@ It’s Day One of the internship.
 This is it. Ok, Ravi. You've got this. #inner_monologue
 “Ravi Kannasamy, engineering intern.” So this is what adulting sounds like. Neat.  #inner_monologue
 God, I’m so nervous. I’m wearing my lucky socks but they’re not helping. But of course. Socks aren’t lucky.  #inner_monologue
-Right. Ok. I’m good art what I do. And I’m doing it for Amma. And Revu. Shoot my hands are shaking.
+Right. Ok. I’m good at what I do. And I’m doing it for Amma. And Revu. Shoot my hands are shaking.
  #inner_monologue
 The email said to report at 830. Maybe I shouldn’t have come so early. #inner_monologue
 // Qi An appears – looks relaxed* #
