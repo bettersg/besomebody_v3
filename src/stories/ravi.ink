@@ -1575,7 +1575,7 @@ Reflection 8
     It feels like I’ve won the lottery twice. I’m excited, but now I’m also feeling anxious for my first day tomorrow.
      }
 
-~ chapter_id = 2
+~ chapter_id = 3
 #background:black.jpg
 CHAPTER {chapter_id} #title
 The Internship #title
@@ -2228,8 +2228,8 @@ That’s not what I meant, ma. But I don’t want to make it hard for you with m
 Kanna, your problems are my problems. If you don’t tell me, we can’t solve it. Come sit down. #speaker_right
 I’m going to make coffee. Think about what you want to talk about. #speaker_right
 Oh where do I even begin. Val is Chinese. My colleagues are stupid. And I really have lost weight, along with all my self-confidence. #inner_monologue
-So tell me about Valerie first. #speaker_right
 #speaker_right_image:cha_ravi_mum_dress_happy.png
+So tell me about Valerie first. #speaker_right
 + She’s a regular at the coffee shop [] #speaker_self
     Bet you made a heart shape on her coffee #speaker_left
     Please lah. I’m not that lame. #speaker_self
@@ -2358,6 +2358,7 @@ Just be yourself, kanna.  #speaker_right
 
 
 === ravi_3_7 ===
+#knot:ravi_3_7
 #ui:narrator
 #background:bg_ravi_bedroom_mirror.jpg
 Ok. Enough of just sitting back and letting things happen. 

@@ -544,7 +544,7 @@ export const CHARACTER_MAP = [
     playable: true,
     primaryColour: '#8DC000',
     secondaryColour: '#FF8944',
-    newestChapter: 2,
+    newestChapter: 3,
     chapters: [
       {
         chapterId: 1,
@@ -588,31 +588,6 @@ export const CHARACTER_MAP = [
           },
         ]
       },
-      // {
-      //   chapterId: 2,
-      //   number: 2,
-      //   reflectionId:8,
-      //   title: "(merged with Chapter 1) ",
-      //   knotTag: "ravi_2_2",
-      //   summary: "Ravi decides to move out. But his choices are not that straightforward.",
-      //   playable: true,
-      //   images: [           
-      //     "/images/bg_launch.jpg",
-      //     "/images/bg_reflections.jpg",
-      //   ],
-      //   endings: [
-      //     {
-      //       endingId: 1,
-      //       title: "Azlin gets upset with you",
-      //       inkVar: "chapter2_ending_1",
-      //     },
-      //     {
-      //       endingId: 2,
-      //       title: "Azlin tells you to give him up",
-      //       inkVar: "chapter2_ending_2",
-      //     },
-      //   ]
-      // },
       {
         chapterId: 2,
         number: 2,
