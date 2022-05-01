@@ -1961,6 +1961,12 @@ Roger didn’t see what Qi An wrote. But I don’t have any proof. I didn’t ta
 And even if Roger did understand, what can he do about it? It’s already over. The messages are gone already. #inner_monologue
 This is getting out of hand. I can’t go on like this. I am asking to be transferred to another department starting tomorrow. Or better still, quit this internship. #inner_monologue
 
+
+#knot:ravi_3_minigame
+#ui:mcq
+#game_id:9
+Minigame 9 // must add some text
+
 // chapter 3 ending 1
 
 -> ravi_3_5
