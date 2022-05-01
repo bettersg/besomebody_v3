@@ -69,7 +69,7 @@ export const REFLECTION_ID_MAP = {
     characterId: 3,
     chapterId: 3,
   },
-  10: {  // Ravi 4
+  10: {  // Ravi  NOT USED
     characterId: 3,
     chapterId: 4,
   },

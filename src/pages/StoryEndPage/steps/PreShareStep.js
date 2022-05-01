@@ -103,7 +103,7 @@ const PreShareStep = ({ next }) => {
   return (
   <Box className={classes.background} onClick={() => next()} >
     <div className={classes.fullPage}>
-      <Typography className={classes.text}>The story for Nadia might be over, but the conversation does not - only if you share your experience with others. Be part of our community.</Typography>
+      <Typography className={classes.text}>This character's story might be over, but the conversation can continue - only if you share your experience with others. Join our community and explore these issues further.</Typography>
         <img src="/reflection/next_icon.png" className={`${classes.nextButton}`}/>
     </div>
   </Box>
