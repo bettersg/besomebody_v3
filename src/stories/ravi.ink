@@ -1658,8 +1658,10 @@ Nobody wants to speak...I guess they’re as nervous as I am, too. #inner_monolo
 ...Good, sir. How are you sir? #speaker_right
 Wow, this Marcus fella. So formal. Makes me feel like I’m back in NS again. #inner_monologue
 Good. Good. What’s your name again? #speaker_left
+#speaker_right_image:cha_ravi_marcus_concerned.png
 Marcus Mak sir. M.A.R.C.U.S space M.A.K. I answer to Marcus. #speaker_right
 Wow maybe he’s not just formal, he’s a complete robot! #inner_monologue
+#speaker_right_image:cha_ravi_marcus_normal.png 
 Ok, and what about you? #speaker_left
 Oh, me? Oh! Me! Hello! #speaker_self
 Yes, hello. What’s your name? #speaker_left
@@ -1668,14 +1670,17 @@ Oh good, easy name ah. #speaker_left
 Haha, yes. #speaker_self
 Ravi what ah? #speaker_left
 Kannasamy. Ravi Kannasamy. #speaker_self
+#speaker_left_image:cha_ravi_roger_confused.png 
 Kandaswamy ah? #speaker_left
 + [Correct him] Kannasamy. With two Ns. #speaker_self
+    #speaker_left_image:cha_ravi_roger_sheepish.png
     Oh ok. Ravi KandasaNNy right? Better I just call you just Ravi haha! Anyway, I’m Roger. #speaker_left
     Uh #speaker_self
     It’s Kannasamy... but I think I better not push this otherwise I might upset him on my first day. Anyway it’s not a big deal. #inner_monologue
 + [Ignore it] Sigh. It’s Kannasamy... It's not even that hard. #inner_monologue
     But I think I better not push this otherwise I might upset him on my first day. Anyway it’s not a big deal. #inner_monologue
 - I’ll be your supervisor. You will be rotated around different teams, but you’ll start with the Systems Team first, focusing on AI integration, which is my team.  #speaker_left
+#speaker_left_image:cha_ravi_roger_normal.png 
 I’ll brief you all about this team and the other teams later. #speaker_left
 HR has already set up your emails and assigned you computers. All of you will be seated in the interns' room.  #speaker_left
 You will have an Orientation Booklet placed at your desks. Read it ah, it should give you all the info you’ll need. #speaker_left
@@ -1684,6 +1689,7 @@ Thank you, sir. #speaker_right
 #speaker_right_name:Qi An
 Thank you.#speaker_right
 Ok, follow me. I’ll bring you to my colleague who’s giving the tour. She’ll also give you your passes  to enter the office. #speaker_left
+#speaker_left_image:cha_ravi_roger_cheerful.png 
 [In Chinese] lkvki wthzc yalao snidl jdyos mljhq pwvpc zgcgi wfyku vufui lkvki wthzc yalao snidl jdyos mljhq pwvpc zgcgi wfyku vufuilkvki wthzc yalao snidl jdyos mljhq pwvpc zgcgi wfyku vufui #speaker_left
 Oh sorry Ravi, there’s a welcome lunch. Dim sum. You eat right? #speaker_left
 Yes I do! #speaker_self
@@ -1698,7 +1704,7 @@ Wait what? What did he say? Is it ok to ask? Crap. #inner_monologue
     Ok, thank you! #speaker_self
 + [Don't ask him] Hmm… hope it isn’t anything important. I'll figure it out later. #inner_monologue
     Yes!  #speaker_self
-    #speaker_left_image:cha_ravi_qian_normal.png 
+    #speaker_left_image:cha_ravi_qian_obnoxious.png
     #speaker_left_name:Qi An
     Eh sorry ah guys, what did he say at the end?  #speaker_self
     Weren’t you listening? You should always pay respect to your seniors and superiors.  #speaker_right
@@ -1707,11 +1713,11 @@ Wait what? What did he say? Is it ok to ask? Crap. #inner_monologue
     Ok, thank you! #speaker_self
 
 - I know Roger didn’t mean any harm, but couldn’t he have just told all of us the same thing at the same time? He probably just didn’t think it through.  #inner_monologue
+#speaker_left_image:cha_ravi_qian_normal.png 
+#speaker_left_name:Qi An
 Anyway. Let me go get my pass! Can’t wait to get started. I want to see how the rest of the office looks like. #inner_monologue
 So, Qi An and...Marcus, right? #speaker_self
 Affirmative. #speaker_right
-#speaker_left_image:cha_ravi_qian_normal.png 
-#speaker_left_name:Qi An
 Let’s talk at lunch later. I’m going to meet my uncle first. #speaker_left
 He works here? #speaker_self
 Yeah. He’s the CEO. #speaker_left
@@ -1720,7 +1726,9 @@ Yeah, Marcus, let’s go, I’ll introduce you to him. See you later Ravi. #spea
 Ok! uh ... see you later guys #speaker_self
 Wait, why wasn’t I invited? Did they know each other before this internship? They did seem quite chummy earlier when they were talking to Roger jus- #inner_monologue
 (turns and bangs into glass door) OWWW! #speaker_self
+#speaker_left_image:cha_ravi_qian_obnoxious.png
 Wah. Are you alright? #speaker_left
+#speaker_right_image:cha_ravi_marcus_concerned.png
 Owww... Yeah I’m ok.  #speaker_self
 Wow. Keep your eyes open, bro. #speaker_left
 Affirmative. It’s best to see where you are going. You reduce clumsiness that way. #speaker_right
@@ -1754,13 +1762,16 @@ Seriously... #speaker_self
 I’m really thankful for Val. She’s really cheery once you get to know her. And headstrong, too. She inspires me whenever I feel overwhelmed. Not that everything is smooth-sailing though... #inner_monologue
 I told them I’ve come to meet the great Mr. Ravi Kannasamy. And they said, “Yes ma’am, of course, this way please.” #speaker_left
 Val...seriously! #speaker_self
+#speaker_left_image:cha_ravi_valerie_incredulous.png
 Why are you so worked up! I thought you'd be happy to see me. #speaker_left
 Yes, but they shouldn’t have let you in! You need a pass. #speaker_self
 Wow. Someone’s wound up. I spoke to the security guard and he said I could wait until you came out. And then I kinda just slowly shuffled over into the reception area. He seemed too engrossed on his phone. And now I’m here. #speaker_left
+#speaker_left_image:cha_ravi_valerie_angry.png
 Could you not do things like this please? This is an office, if you don’t realise. You can’t just waltz in like this. #speaker_self
 Ok I’m sorry, no waltzing. I’ll let you know when I’m coming next time. #speaker_left
 Anyway, I’m starving. What's good here? #speaker_left
 Oh - the canteen is already full. #speaker_self
+#speaker_left_image:cha_ravi_valerie_normal.png
 No it’s not, I see a couple of seats over there! There’s two seats left. We can ask to share. #speaker_left
 #speaker_right_image:cha_ravi_marcus_qian.png
 #speaker_right_name:Marcus & Qi An
@@ -1773,6 +1784,7 @@ Why not? #speaker_left
 Because … I don’t want to. #speaker_self
 We can go somewhere else? #speaker_left
 I have to be back in the office at 1 sharp. #speaker_self
+#speaker_left_image:cha_ravi_valerie_concerned.png
 You’re acting really weird, you know that? #speaker_left
 I just don’t want to sit with them. That’s it. #speaker_self
 Ok, so what should we do then? #speaker_left
@@ -1784,6 +1796,7 @@ No, no, why would it be because of you? #speaker_self
 I don’t know either! Is it my dress sense? Or the fact that you don’t want your engineer friends to know you’re dating a girl in arts school? What’s wrong with the arts? #speaker_left
 No, no, Val, it’s not that...it’s- #speaker_self
 What is it then? Just tell me! Gosh.  #speaker_left
+#speaker_left_image:cha_ravi_valerie_incredulous.png
 Ravi, please, talk to me. What's bothering you? #speaker_left
 I can’t tell her why it’d be a bad idea to sit with them. I know it would upset her that they are ostracising me. I don’t know what they’d say if they found out we were dating. Sigh. #inner_monologue
 + [Play it cool with her] -> ravi_3_3a
@@ -1987,8 +2000,7 @@ This is getting out of hand. I can’t go on like this. I am asking to be transf
 
 #knot:ravi_3_minigame
 #ui:mcq
-#game_id:8 
-// replace with 9 later *** IMPORTANT
+#game_id:9
 Minigame 9 // must add some text
 
 
@@ -2034,6 +2046,7 @@ I feel like you’re trying to be so many things you’re forgetting to be yours
 Am I? #speaker_self
 Coffee shop Ravi and Kopitiam Ravi are so different. #speaker_left
 Haha #speaker_self
+#speaker_left_image:cha_ravi_valerie_flirt.png 
 Ooh hear that sound? #speaker_left
 What sound? #speaker_self
 Something strange. #speaker_left
@@ -2046,6 +2059,7 @@ Sounded like a laugh. Your laugh. Haven’t heard that in a while. #speaker_left
     I have a hundred more ideas to cheer you up, still unused! Like... #speaker_left
 - Have you ever tried brushing your teeth to Megan Thee Stallion? #speaker_left
 I can’t say I have. #speaker_self
+#speaker_left_image:cha_ravi_valerie_happy.png 
 You’ll feel shiny eeeeee! #speaker_left
 Ok I’ll try tomorrow morning haha. #speaker_self
 Promise you’ll do it? Or at least do something that’ll cheer you up? #speaker_left
@@ -2131,6 +2145,7 @@ Oh shoot, what is wrong with me... #inner_monologue
 - Really! #speaker_self
 Don’t pull this innocent act on me. I’ve known you since I was born. #speaker_left
 Ugh. Ok. She’s my girlfriend. #speaker_self
+#speaker_left_image:cha_ravi_revati_grin.png 
 Waaaaaah! You also can get girlfriend ah? #speaker_left
 Why does everyone keep saying that? #speaker_self
 Eh, who else is saying that? Only I’m allowed to make fun of you. #speaker_left
@@ -2138,14 +2153,17 @@ So what’s her name?? #speaker_left
 Valerie. #speaker_self
 Eeee so exciting! #speaker_left
 Haha... #speaker_self
+#speaker_left_image:cha_ravi_revati_normal.png 
 Show me a picture! #speaker_left
 ...I don’t have any. #speaker_self
 Useless. Show me her IG la! #speaker_left
 Oh yeah. Here you go. #speaker_self
+#speaker_left_image:cha_ravi_revati_grin.png 
 Dude, she’s hot. #speaker_left
 Yeah, dude. Thanks, I guess? #speaker_self
 How did you get with her? #speaker_left
 Through my charm, good looks, and oozing machismo. #speaker_self
+#speaker_left_image:cha_ravi_revati_normal.png 
 Machismo your head la. The only thing you’re oozing are bad jokes. She probably took pity on your terrible hairstyle and thought you needed help. #speaker_left
 Something like that. #
 So...are you going to tell mum? #speaker_left
@@ -2165,11 +2183,14 @@ I will. #speaker_self
 Shoot, Amma's back! #inner_monologue
 #speaker_right_image:cha_ravi_mum_dress_normal.png
 #speaker_right_name:Amma
+#speaker_left_image:cha_ravi_revati_grin.png 
 AMMAAAAAAAA, RAVI HAS A GIRLFRIEND! #speaker_left
 Shut up!!! #speaker_self
 Who has a girlfriend? #speaker_right
 Hello Amma. I think there are some curry puffs  #speaker_self
 Ravi has a girlfriend! #speaker_left
+#speaker_left_image:cha_ravi_revati_normal.png 
+#speaker_right_image:cha_ravi_mum_dress_happy.png
 Revati's just messing around. Stop it Revu!  #speaker_self
 நேதஂதிகஂகு தானஂ எனஂ காது குத்திசஂசா? (Do you think my ears were pierced yesterday?) Who is this girl? #speaker_right
 Ho ho ho! #speaker_left
@@ -2193,6 +2214,7 @@ Revati kanna (dear), don't disturb your brother. Anyway tell me. Valerie?  #spea
 Yeah Amma. Just met her a couple of months ago.   #speaker_self
 Bring her over! Most important is that you you make sure you come see family ok? Girlfriend or no girlfriend. Busy or not busy. #speaker_right
 It’s just that...thing’s have not been easy for me ma. #speaker_self
+#speaker_right_image:cha_ravi_mum_dress_worried.png
 Why kanna? #speaker_right
 Work has been hard. And I’ve been working at the cafe too. #speaker_self
 Don’t think you can talk to me, is it? #speaker_right
@@ -2201,7 +2223,7 @@ Kanna, your problems are my problems. If you don’t tell me, we can’t solve i
 I’m going to make coffee. Think about what you want to talk about. #speaker_right
 Oh where do I even begin. Val is Chinese. My colleagues are stupid. And I really have lost weight, along with all my self-confidence. #inner_monologue
 So tell me about Valerie first. #speaker_right
-
+#speaker_right_image:cha_ravi_mum_dress_happy.png
 + She’s a regular at the coffee shop [] #speaker_self
     Bet you made a heart shape on her coffee #speaker_left
     Please lah. I’m not that lame. #speaker_self
@@ -2215,6 +2237,7 @@ Hmmm #speaker_right
 Oh no. This is going to be a problem huh? I thought we could skirt around this topic.   #inner_monologue
 I knew it. #speaker_right
 Uh, because of her name? #speaker_self
+#speaker_right_image:cha_ravi_mum_dress_worried.png
 Just a guess. But why, kanna? Cannot find a good Indian girl? #speaker_right
 I knew it. This question. It was always going to be like this. What can I say without offending her? #inner_monologue
 + [I tried] The one Indian girl I asked out said no. #speaker_self
@@ -2264,7 +2287,7 @@ I don’t know. There is too much to think about. #speaker_self
 When you look at everything together, it can be overwhelming. #speaker_right
 Yeah, But I don’t even know where to start. It’s very complicated you know...I wish Appa was here... #speaker_self
 Why? #speaker_right 
-// angry
+#speaker_left_image:cha_ravi_revati_confused.png
 He’s the reason I wanted to get into aeronautics in the first place. #speaker_self
 He’s also the reason I had to take care of you all, by myself. #speaker_right
 That’s why I wish he was here. #speaker_self
@@ -2291,6 +2314,7 @@ It’s ok Amma, Ravi didn't mean it that way. Ravi, can you, for a second, think
 Works both ways. #speaker_self
 Are you forgetting I have been working for so many years? Nothing you can learn from me, is it? #speaker_right
 But you worked at a department store Amma. It’s not the same. #speaker_self
+#speaker_left_image:cha_ravi_revati_concerned.png
 Ravi!! #speaker_left
 He’s right. It’s not the same. But I can tell you this much. Not one of the days I have worked I have expected anything less than respect from anyone. And that respect, I give back to them. Whether you’re flying planes, or selling shoes you need to be happy with yourself. #speaker_right
 If you are doing something for the sake of it, or just because Appa did it, then you will always feel small. The department store paid for your food. It paid for your clothes. It paid for your school. And your university. And even when they asked me to go, I had to respect that. #speaker_right
@@ -2298,6 +2322,8 @@ What is wrong with me? Can’t believe I am speaking to Amma like this. I can't 
 I’m sorry Amma. It's just... work has drained me, emotionally.   #speaker_self
 You don’t have to be sorry. #speaker_right
 Still, I’m sorry. I don’t know why I said all those things. My head is constantly full of doubt, and I feel like my dream will just stay that, you know, a dream. #speaker_self
+#speaker_right_image:cha_ravi_mum_normal.png
+#speaker_left_image:cha_ravi_revati_normal.png
 You can realise your dream. But first, realise why the dream is important for you. Don’t anyhow think it’s for us, or even for whatever you imagine that Appa is. This dream - is it really what you want to do? #speaker_right
 Yes. It still is. #speaker_self
 Then you have a few decisions to make. Starting with speaking to your boss and your colleagues. Last time whenever I had a problem I brought it up. #speaker_right
@@ -2353,7 +2379,7 @@ Hello Roger #speaker_self
     And a blatant display of how they view me as a lesser person. #speaker_self
     These attitudes can seem harmless in private. But things are private only until they are not. #speaker_self
 
-+ I don’t mean to snitch on them. []
++ don’t mean to snitch on them. []
     I feel like you deserve to know. I think they were just joking around. #speaker_self
     But it hurt me. #speaker_self
 - And... #speaker_self
@@ -2363,13 +2389,16 @@ Hello Roger #speaker_self
     I want to apologise for my directness. #speaker_self
 - I am left with no other option, but to say... #speaker_self
 + I would like to tender my resignation. [] #speaker_self
-// ending 1
+    VAR chapter_3_ending = 1
+    ~ chapter_3_ending = 1
     Thank you for the opportunity here. #speaker_self
-+ If you would like me to stay on in the company.  []#speaker_self
-// ending 2
-    I would like you to address this situation in any way you think is suitable. #speaker_self
++ If you would like me to stay on in the company, please address this issue. []#speaker_self
+    ~ chapter_3_ending = 2
+    I believe that if you improve the workplace conditions, the company will be better off in the long run. #speaker_self
 // transparent Roger disappears
 #speaker_left_image:pixel.png 
+VAR story_finished = true
+~ story_finished = true
 - Whoa. Saying that aloud lifted such a weight off my shoulders. #inner_monologue
 #ui:narrator
 #background:bg_ravi_bedroom_mirror.jpg
@@ -2379,32 +2408,44 @@ You’re doing this for Amma. For Revu. And for Val too. But most importantly, f
 Just never forget... to be yourself. 
 
 
+-> ravi_3_ending
 
 
-
-
-
-
-
-
-
-
-
-
-
-
--> ravi_3_reflection
-
-
-=== ravi_3_reflection ===
-#knot:ravi_3_reflection
-#ui:chapter_reflection
+=== ravi_3_ending ===
+#knot:chapter_3_ending_1
+#ui:story_end
 #reflection_id:9
 Reflection 9
 
 
-
-
-
-
 -> END
+
+
+    
+    // === chapter_3_ending_1 ===
+    // #knot:chapter_3_ending_1
+    // #ui:story_end
+    // #reflection_id:9
+    // ~ chapter_3_ending = 1
+    // Reflection 9
+    
+    
+    // -> END
+    
+    
+    // === chapter_3_ending_2 ===
+    // #knot:chapter_3_ending_2
+    // #ui:story_end
+    // #reflection_id:9
+    // ~ chapter_3_ending = 2
+    // Reflection 9
+    
+    
+    // -> END
+
+=== story_end_browser ===
+#ui:story_end_browser
+#reflection_id:9
+reflection browser 9
+
+    -> END
