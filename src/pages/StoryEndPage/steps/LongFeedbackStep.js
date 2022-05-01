@@ -18,7 +18,7 @@ const LongFeedbackStep = ({ reflection, questions, characterId, setState, getSta
 
 
     const currentUserDb = await getDbUser(currentUser.id);
-    // console.log(currentUserDb)
+    console.log((currentUserDb)?.activeRoom)
 
     const answerDocs = answers.map((answer, index) => {
       const questionId = questionIds[index];

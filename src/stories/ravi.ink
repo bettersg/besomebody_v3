@@ -2328,7 +2328,7 @@ What is wrong with me? Can’t believe I am speaking to Amma like this. I can't 
 I’m sorry Amma. It's just... work has drained me, emotionally.   #speaker_self
 You don’t have to be sorry. #speaker_right
 Still, I’m sorry. I don’t know why I said all those things. My head is constantly full of doubt, and I feel like my dream will just stay that, you know, a dream. #speaker_self
-#speaker_right_image:cha_ravi_mum_normal.png
+#speaker_right_image:cha_ravi_mum_dress_normal.png
 #speaker_left_image:cha_ravi_revati_normal.png
 You can realise your dream. But first, realise why the dream is important for you. Don’t anyhow think it’s for us, or even for whatever you imagine that Appa is. This dream - is it really what you want to do? #speaker_right
 Yes. It still is. #speaker_self
