@@ -2371,6 +2371,7 @@ Let me go talk in front of the mirror. I can’t control Roger’s actions, but 
 #background:bg_ravi_bedroom_mirror.jpg
 #speaker_left_image:cha_ravi_roger_transparent.png 
 Hello Roger #speaker_self
+#background:bg_ravi_bedroom_mirror2.jpg
 ... #speaker_left
 + There's something I need to talk to you about.[] #speaker_self
     It's regarding workplace behaviour. #speaker_self
