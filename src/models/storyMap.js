@@ -648,6 +648,7 @@ export const CHARACTER_MAP = [
         discordLink: 'https://discord.gg/8BYKfJDd67',
         images: [                     
           '/images/bg_ravi_bedroom_mirror.jpg',
+          '/images/bg_ravi_bedroom_mirror2.jpg',
           '/images/bg_ravi_bedroom.jpg',
           '/images/bg_ravi_cafeteria.jpg',
           '/images/bg_ravi_meetingroom.jpg',
