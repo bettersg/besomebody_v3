@@ -2427,7 +2427,7 @@ I...
     VAR chapter_3_ending = 1
     ~ chapter_3_ending = 1
     Thank you for the opportunity here, but I think I am better off serving my internship in a place that respects diversity. #speaker_self
-+ If you would like me to stay on in the company, I need you to please address this issue. []#speaker_self
++ If you would like me to stay on, I need you to please address this.[]#speaker_self
     ~ chapter_3_ending = 2
     I believe that if you improve the workplace conditions, the company will also be better off in the long run. #speaker_self
 // transparent Roger disappears
