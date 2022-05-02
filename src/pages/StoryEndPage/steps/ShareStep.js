@@ -103,7 +103,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 
-const ShareStep = ({ reflection, characterId, setState, getState, next }) => {
+const ShareStep = ({ reflection, reflectionNum, characterId, setState, getState, next }) => {
   const history = useHistory()
   const classes = useStyles()
 
@@ -111,10 +111,10 @@ const ShareStep = ({ reflection, characterId, setState, getState, next }) => {
   const personaName = persona.name.split(" ")[0]
   const personaFullName = persona.name
 
+  // console.log('charmap',CHARACTER_MAP)
   
-  const discordLink = CHARACTER_MAP.flatMap(character => character.chapters).find( ({reflectionId}) => reflectionId === reflection.id).discordLink
-
-  // console.log('discord',discordLink)
+  // const discordLink = CHARACTER_MAP.flatMap(character => character.chapters).find( ({reflectionId}) => reflectionId === reflectionNum).discordLink
+  const discordLink = 'https://discord.gg/bjenhVbPwq'
     
   const data2 = getState('answerDocs') ? getState('answerDocs') : null;  
   // const empathyCharacter = getState('answerDocs') ?

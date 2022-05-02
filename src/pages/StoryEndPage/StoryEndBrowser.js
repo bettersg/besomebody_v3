@@ -62,7 +62,7 @@ const StoryEndBrowser = ({ reflectionId: propsReflectionId, globalVariables }) =
         {/* <Step title="Long Feedback" component={(props) => <LongFeedbackStep reflection={reflection} user={user} {...props} />} /> */}
         {/* <Step title="Data Browser" component={DataBrowserStep} /> */}
         <Step title="Pre-Share Step" component={PreShareStep} />
-        <Step title="Share" component={(props) => <ShareStep reflection={reflection} characterId={globalVariables.character_id} user={user} {...props} />} />
+        <Step title="Share" component={(props) => <ShareStep reflection={reflection} reflectionNum={reflectionId}  characterId={globalVariables.character_id} user={user} {...props} />} />
         
 
       </Steps>
