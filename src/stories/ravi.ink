@@ -1675,9 +1675,12 @@ Kandaswamy ah? #speaker_left
 + [Correct him] Kannasamy. With two Ns. #speaker_self
     #speaker_left_image:cha_ravi_roger_sheepish.png
     Oh ok. Ravi KandasaNNy right? Better I just call you just Ravi haha! Anyway, I’m Roger. #speaker_left
+    VAR ravi_3_correctname = true
+    ~ ravi_3_correctname = true
     Uh #speaker_self
     It’s Kannasamy... but I think I better not push this otherwise I might upset him on my first day. Anyway it’s not a big deal. #inner_monologue
 + [Ignore it] Sigh. It’s Kannasamy... It's not even that hard. #inner_monologue
+    ~ ravi_3_correctname = false
     But I think I better not push this otherwise I might upset him on my first day. Anyway it’s not a big deal. #inner_monologue
 - I’ll be your supervisor. You will be rotated around different teams, but you’ll start with the Systems Team first, focusing on AI integration, which is my team.  #speaker_left
 #speaker_left_image:cha_ravi_roger_normal.png 
@@ -1700,9 +1703,12 @@ Sure! #speaker_right
 Yes, sir.#speaker_right
 Wait what? What did he say? Is it ok to ask? Crap. #inner_monologue
 + [Ask Roger directly] Excuse me, Roger? Sorry, I didn’t quite get that. #speaker_self
+    VAR ravi_3_checktranslation = true
+    ~ ravi_3_checktranslation = true
     Ah, sorry. Lunch is at 1230. Meet me downstairs later if you’re coming. #speaker_left
     Ok, thank you! #speaker_self
 + [Don't ask him] Hmm… hope it isn’t anything important. I'll figure it out later. #inner_monologue
+    ~ ravi_3_checktranslation = false
     Yes!  #speaker_self
     #speaker_left_image:cha_ravi_qian_obnoxious.png
     #speaker_left_name:Qi An
@@ -1772,23 +1778,27 @@ Ok I’m sorry, no waltzing. I’ll let you know when I’m coming next time. #s
 Anyway, I’m starving. What's good here? #speaker_left
 Oh - the canteen is already full. #speaker_self
 #speaker_left_image:cha_ravi_valerie_normal.png
-No it’s not, I see a couple of seats over there! There’s two seats left. We can ask to share. #speaker_left
+No it’s not, I see a couple of seats over there! We can ask those two guys to share. #speaker_left
 #speaker_right_image:cha_ravi_marcus_qian.png
 #speaker_right_name:Marcus & Qi An
-Wait a minute, no!  #speaker_self
-What’s wrong? #speaker_left
-Those people are my colleagues. #speaker_self
-So? #speaker_left
-So, I don’t want to sit with them. #speaker_self
-Why not? #speaker_left
-Because … I don’t want to. #speaker_self
-We can go somewhere else? #speaker_left
+... #speaker_right
++ [No - we can't sit there] Wait a minute, no!  #speaker_self
+    What’s wrong? #speaker_left
+    Those people are my colleagues. #speaker_self
+    So? #speaker_left
+    So, I don’t want to sit with them. #speaker_self
+    Why not? #speaker_left
+    Because … I don’t want to. #speaker_self
++ [The table is probably full] Wait a minute, no!  #speaker_self
+    Those are my colleagues, and they uh.. are probably expecting more people. #speaker_self
+- We can go somewhere else? #speaker_left
 I have to be back in the office at 1 sharp. #speaker_self
-#speaker_left_image:cha_ravi_valerie_concerned.png
 You’re acting really weird, you know that? #speaker_left
+#speaker_left_image:cha_ravi_valerie_concerned.png
 I just don’t want to sit with them. That’s it. #speaker_self
 Ok, so what should we do then? #speaker_left
 Let's wait for another table. #speaker_self
+#speaker_right_image:pixel.png
 Right... care to tell me why you can't sit next to your workmates? #speaker_left
 It's uh... it's... come here, let's move out of their view. #speaker_self
 It’s because of me, isn’t it? #speaker_left
@@ -1817,6 +1827,8 @@ I can’t tell her why it’d be a bad idea to sit with them. I know it would up
 #speaker_right_image:pixel.png
 Crap they saw. They're definitely talking crap about us. #inner_monologue
 Ok, now that we’ve left, please tell me what’s going on. Did something happen with those guys? #speaker_left
+VAR ravi_3_tellvaltruth = false
+~ ravi_3_tellvaltruth = false
 Nothing. I just don’t want to make a scene here. Let’s just grab a quick burger next door. The queue is probably shorter too. #speaker_self
 I can’t tell her. How do I tell her how toxic those two are. I don’t feel like I belong here. They make me feel so small. I know they don’t like me. Or even understand me.  #inner_monologue
 And they saw Val. They're definitely going to say that I don't deserve her. My hands are shaking.  #inner_monologue
@@ -1834,6 +1846,7 @@ And they saw Val. They're definitely going to say that I don't deserve her. My h
 #speaker_right_name:Marcus & Qi An
 Well, they’re not very nice people, to be honest. #speaker_self
 What do you mean? #speaker_left
+~ ravi_3_tellvaltruth = true
 I have been working here for a month. And the only time they have said anything remotely friendly to me has been NEVER. I just shut up and do what I’m told. When I can understand it. #speaker_self
 What do you mean, “When you understand it”? #speaker_left
 Val, they just talk all the time with each other -- and mostly in Chinese. I miss meeting times because they just make their own plans and don’t tell me when they change. I just do my reports and shut up. Just hear them laugh at their stupid jokes. #speaker_self
@@ -1927,12 +1940,14 @@ I’m disappointed. No, I’m angry. NO – I’m ENRAGED. If Valerie were in my
 #speaker_3_name:Roger
 #timestamp:16.37
 Hey. I saw all that. #speaker_self
+VAR ravi_3_confrontcolleagues = true
+~ ravi_3_confrontcolleagues = true
 Oh no. This is a bad situation. #speaker_2
 Hey bro, sorry ah haha #speaker_1
 I was just joking #speaker_1
-Don’t “bro” me. #speaker_self
-I KNOW you weren’t joking #speaker_self
-You really insulted both me and my girlfriend #speaker_self
++ Don’t “bro” me. [] #speaker_self
++ I KNOW you weren’t joking [] #speaker_self
+- You really insulted both me and my girlfriend #speaker_self
 You think it’s ok to make these jokes? #speaker_self
 Grow up la #speaker_self
 Hey man, I’m sorry. I really didn’t mean to offend you #speaker_1
@@ -1941,7 +1956,6 @@ I’ve been quiet this whole internship #speaker_self
 Don’t think I didn’t hear what you tell Marcus all the time #speaker_self
 I’m going to talk to somebody about this #speaker_self
 I don’t care that you act like a bigshot just because you know the CEO or whatever #speaker_self
-// add speaker info
 (roger is typing…) #timestamp
 Hey boys. I’m in this chat too you know #speaker_3
 Oh no. This bad situation just got worse. #speaker_2
@@ -1955,7 +1969,6 @@ You need to learn to be more professional. #speaker_3
 I hope this puts an end to this, whatever this was. Got it? #speaker_3
 Affirmative. #speaker_2
 ...Alright. #speaker_self
-// inner
 This isn’t fair. I didn’t do anything wrong. #inner_monologue
 Roger didn’t see what Qi An wrote. But I don’t have any proof. I didn’t take any screenshots in time. #inner_monologue
 And even if Roger did understand, what can he do about it? It’s already over. The messages are gone already. #inner_monologue
@@ -1982,6 +1995,7 @@ Minigame 9 // must add some text
 #speaker_3_name:Roger
 #timestamp:16.37
 Hey guys. Any plans today? #speaker_self
+~ ravi_3_confrontcolleagues = false
 Oh hey Ravi... No...just going to finish up and go for family dinner. #speaker_1
 Negative. Still clearing my work. #speaker_2
 Really? Because I could swear I saw like 300 messages here that just vanished all of a sudden. #speaker_self
@@ -1990,11 +2004,11 @@ My phone was vibrating like crazy eh #speaker_self
 Huh? What are you talking about #speaker_1
 Must be a bug haha #speaker_1
 Possibly. #speaker_2
-A bug ah? Oh phew #speaker_self
-I didn’t read the full thing but I saw something about my girlfriend #speaker_self
-In case you guys don’t know I’m attached #speaker_self
-Must be a weird bug, I think it showed me some message I sent her in this chat instead? Weird #speaker_self
-Haha, yah, must be #speaker_1
++ A bug ah? Oh phew [] #speaker_self
+    Must be a weird bug, I think I saw some messages for me and my gf in this chat instead? Weird #speaker_self
+    Haha, yah, must be   #speaker_1
++ I didn’t read the full thing but I thought there was something about my girlfriend [] #speaker_self
+- In case you guys don’t know I’m attached #speaker_self
 Wah congrats bro I didn’t know you had a girlfriend #speaker_1
 Can she speak tamil though #speaker_1
 Why would you ask that? #speaker_self
@@ -2175,8 +2189,11 @@ Something like that. #
 So...are you going to tell mum? #speaker_left
 
 + [Yes] Yeah. I don’t know what she’ll say though. I'm a bit worried how she'll take to someone like Val. #speaker_self
+    VAR ravi_3_afraidtotellmum = false
+    ~ ravi_3_afraidtotellmum = false
 
 + [Hmmm, maybe not] Hmmm... maybe when we're all in a better siuation, Revu. #speaker_self
+    ~ ravi_3_afraidtotellmum = true
     Huh? Why not now? Are you scared of her reaction? #speaker_left
     I mean, Amma probably pictured me with someone ... different. #speaker_self
 - You’re so annoying. Amma will be super happy! Just the other day, she was asking me if I knew if you were dating someone. #speaker_left
@@ -2219,11 +2236,12 @@ Revati, can you shut up for a second please? #speaker_self
 Revati kanna (dear), don't disturb your brother. Anyway tell me. Valerie?  #speaker_right
 Yeah Amma. Just met her a couple of months ago.   #speaker_self
 Bring her over! Most important is that you you make sure you come see family ok? Girlfriend or no girlfriend. Busy or not busy. #speaker_right
-It’s just that...thing’s have not been easy for me ma. #speaker_self
-#speaker_right_image:cha_ravi_mum_dress_worried.png
-Why kanna? #speaker_right
-Work has been hard. And I’ve been working at the cafe too. #speaker_self
-Don’t think you can talk to me, is it? #speaker_right
++ [Things have been hard for me] It’s just that...thing’s have not been easy for me ma. #speaker_self
+    #speaker_right_image:cha_ravi_mum_dress_worried.png
+    Why kanna? #speaker_right
+    Work has been hard. And I’ve been working at the cafe too. #speaker_self
++ [I'm not sure I was ready to talk about this] It's just that... I didn't really know if I was ready to talk about this Amma.  #speaker_self
+- Don’t think you can talk to me, is it? #speaker_right
 That’s not what I meant, ma. But I don’t want to make it hard for you with my problems also, you know? #speaker_self
 Kanna, your problems are my problems. If you don’t tell me, we can’t solve it. Come sit down. #speaker_right
 I’m going to make coffee. Think about what you want to talk about. #speaker_right
@@ -2291,7 +2309,7 @@ She actually does. #speaker_self
 Bring her home one day. Anyway, this internship. Have you decided what to do yet? #speaker_right
 I don’t know. There is too much to think about. #speaker_self
 When you look at everything together, it can be overwhelming. #speaker_right
-Yeah, But I don’t even know where to start. It’s very complicated you know...I wish Appa was here... #speaker_self
+Yeah, But I don’t even know where to start. It’s very complicated you know...I wish Appa (dad) was here... #speaker_self
 Why? #speaker_right 
 #speaker_left_image:cha_ravi_revati_confused.png
 He’s the reason I wanted to get into aeronautics in the first place. #speaker_self
@@ -2315,7 +2333,7 @@ No no that's not what I meant.... I can’t miss my pa? Maybe I shouldn’t have
 + [Fire back] This is why I don’t come to the house.  #speaker_self
     Oh, big man. #speaker_right
     You want me to speak my mind, and then you get angry when I do.   #speaker_self
-- I said, speak your mind. I also told you not to bring up appa. #speaker_right
+- I said, speak your mind. I also told you not to bring up Appa. #speaker_right
 It’s ok Amma, Ravi didn't mean it that way. Ravi, can you, for a second, think about what you’re saying. Your words affect people you know. #speaker_left
 Works both ways. #speaker_self
 Are you forgetting I have been working for so many years? Nothing you can learn from me, is it? #speaker_right
@@ -2337,14 +2355,17 @@ So many managers over my time. Some good lah. Some were so rude. Whether they he
 Do you want to stay in this internship? #speaker_right
 
 + [Stay?] I think I want to stay. I can sort it out. Thank you ma. #speaker_self
+    VAR ravi_3_internshipchoicetomum = "stay"
+    ~ ravi_3_internshipchoicetomum = "stay"
     Ok. Then you know what you have to do. #speaker_right
     Yeah. I’m gonna speak to them next week. #speaker_self
     Whatever they say, stay calm. Don’t get angry.Remember,ஆறுவது சினம் (Anger should be calmed) Then you lose your ground. #speaker_right
     I will try ma. Thank you. #speaker_self
     You decide what’s best for you. Be Ravi. Not a scaredy-poke. #speaker_right
-
+    
 + [Quit?] I think I want to quit ma. I don’t want to stay in a place like that. #speaker_self
     Ok. Then can you do another internship? #speaker_right
+    ~ ravi_3_internshipchoicetomum = "quit"
     I would have to look for one. #speaker_self
     You should speak to them first. Let them know. Will another internship be easy to find? #speaker_right
     Yeah, I'll speak to them first. It will be a bit hard to get an internship outside the window. But I can try, if that's the only option. #speaker_self
@@ -2362,6 +2383,11 @@ Just be yourself, kanna.  #speaker_right
 #ui:narrator
 #background:bg_ravi_bedroom_mirror.jpg
 Ok. Enough of just sitting back and letting things happen. 
+{ravi_3_internshipchoicetomum == "stay": 
+    I told Amma that I wanted to stay. But is that really the best way for me to get to my dreams?
+    - else :
+    I told Amma that I intended to quit. But what do I really want to do for myself?
+    }
 If I have dreams, I need to wake up to realise them. Come on Ravi, you got this. 
 First things first. I need to speak to Roger tomorrow. I hate confrontation though. I can’t just bust into the room and blurt things out. I’m just not cut out for it. 
 How do people do it? Stand up for the things they want, without fear? Practise? Maybe I need to practise. Hmm. In front of the mirror? Should I be gentle and apologetic? Or aggressive? 
@@ -2374,15 +2400,17 @@ Hello Roger #speaker_self
 #background:bg_ravi_bedroom_mirror2.jpg
 ... #speaker_left
 + There's something I need to talk to you about.[] #speaker_self
-    It's regarding workplace behaviour. #speaker_self
+    It's regarding the workplace environment. #speaker_self
 + I hope I’m not disturbing you.[] #speaker_self
     It’s just a small thing.  #speaker_self
-- And... #speaker_self
-+ I would like you to get a full understanding of the situation.  #speaker_self
+- And I would like you to get a full understanding of the situation.  #speaker_self
     Marcus and Qi An have said things about me, not knowing that I was listening. Nasty, racist things about my girlfriend and me.  #speaker_self
-+ I’m not sure if you know the whole story.   #speaker_self
-    Basically, there’s been a misunderstanding between Marcus, Qi An and me. They were saying upsetting things about my girlfriend and me.   #speaker_self
-- I... 
+    {ravi_3_confrontcolleagues == true: 
+        I tried to address this directly with them, but they deleted the texts and refused to discuss it further. #speaker_self 
+        - else:
+        I was not confident enough to address this directly with them when it first happened to me on the chat group.  #speaker_self 
+    }
+I... 
 + think that is uncalled for. [] #speaker_self
     And a blatant display of how they view me as a lesser person. #speaker_self
     These attitudes can seem harmless in private. But things are private only until they are not. #speaker_self
@@ -2393,16 +2421,15 @@ Hello Roger #speaker_self
 - And... #speaker_self
 + I’m not comfortable working in this environment. [] #speaker_self
     I deserve respect. It’s the least I can expect. #speaker_self
-+ I don’t feel so easy saying this.  []#speaker_self
-    I want to apologise for my directness. #speaker_self
-- I am left with no other option, but to say... #speaker_self
++ I want to apologise for my directness.  []#speaker_self
+- I have decided that ... #speaker_self
 + I would like to tender my resignation. [] #speaker_self
     VAR chapter_3_ending = 1
     ~ chapter_3_ending = 1
-    Thank you for the opportunity here. #speaker_self
-+ If you would like me to stay on in the company, please address this issue. []#speaker_self
+    Thank you for the opportunity here, but I think I am better off serving my internship in a place that respects diversity. #speaker_self
++ If you would like me to stay on in the company, I need you to please address this issue. []#speaker_self
     ~ chapter_3_ending = 2
-    I believe that if you improve the workplace conditions, the company will be better off in the long run. #speaker_self
+    I believe that if you improve the workplace conditions, the company will also be better off in the long run. #speaker_self
 // transparent Roger disappears
 #speaker_left_image:pixel.png 
 VAR story_finished = true
