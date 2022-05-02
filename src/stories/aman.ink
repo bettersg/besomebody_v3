@@ -252,41 +252,14 @@ You are so cheeky to your mum. Where do you learn all these bad things? #speaker
 #speaker_3_name:Cousin Harpreet
 #timestamp:21.52
 Tomorrow our Aman is going into NS. We are all proud of him. #speaker_1
-#ui:scene
-#background:bg_aman_bedroom.jpg
-What is Papa-ji doing? This is so unlike him. He never makes these grand speeches, let alone about me. #inner_monologue
-#ui:whatsapp
-#background:whatsapp.png
-#chat_group_title:Extended Family Chat
-#chat_group_image:ico_aman_extendedfamily.png
-#speaker_1_name:Papa
-#speaker_2_name:Uncle Ranjit
-#speaker_3_name:Cousin Harpreet
+What is Papa-ji doing? This is so unlike him. He never makes these grand speeches, let alone about me. #wa_inner_monologue
 🙏🏽 A noble time of life. Aman, remember that Sikhs have always been warriors and defenders. It is in our blood, in our history as a martial people. Do us proud! #speaker_2
-#ui:scene
-#background:bg_aman_bedroom.jpg
-Wow, it can’t get more stressful than that. #inner_monologue
-#ui:whatsapp
-#background:whatsapp.png
-#chat_group_title:Extended Family Chat
-#chat_group_image:ico_aman_extendedfamily.png
-#speaker_1_name:Papa
-#speaker_2_name:Uncle Ranjit
-#speaker_3_name:Cousin Harpreet
+Wow, it can’t get more stressful than that. #wa_inner_monologue
 In fact, I am sure you will make it into OCS (Officer Cadet School). Just like our Harpreet! #speaker_2
 🙌🏽 All the best Aman! #speaker_3
 And don’t worry BMT is not that bad! haha  #speaker_3
 Am sure you’ve been keeping fit etc   #speaker_3
-#ui:scene
-#background:bg_aman_bedroom.jpg
-I take it back, it just got worse. Uh... #inner_monologue
-#ui:whatsapp
-#background:whatsapp.png
-#chat_group_title:Extended Family Chat
-#chat_group_image:ico_aman_extendedfamily.png
-#speaker_1_name:Papa
-#speaker_2_name:Uncle Ranjit
-#speaker_3_name:Cousin Harpreet
+I take it back, it just got worse. Uh... #wa_inner_monologue
 Thanks everyone!
 + [I'll do my best]  🙏🏽🙏🏽 very touched by the support #speaker_self
     Will do my best 😅 #speaker_self
@@ -2346,15 +2319,9 @@ I just wanted to see you 🤣🤣 #speaker_1
 - Ah… now #speaker_1
 The hard part #speaker_1
 
-#ui:scene
-#background:bg_aman_bedroom.jpg
-Why does my stomach feel hollow? #inner_monologue
-Like my heart is clenching. #inner_monologue
-#ui:whatsapp
-#background:whatsapp.png
-#chat_group_title:Sel 😍😍 
-#chat_group_image:ico_aman_selinder.png
-#speaker_1_name:Selinder
+Why does my stomach feel hollow? #wa_inner_monologue
+Like my heart is clenching. #wa_inner_monologue
+  #clear
 Last night and today were tough for me jaan #speaker_1
 I cried last night #speaker_1
 I cried all afternoon #speaker_1
@@ -2441,16 +2408,8 @@ Loved you for a decade #speaker_1
 Always will. #speaker_1
 Thank you for everything #speaker_1
 Goodbye. #speaker_1
+Wait, this can’t be it… just like that? #wa_inner_monologue
 
-#ui:scene
-#background:bg_aman_bedroom.jpg
-Wait, this can’t be it… just like that? #inner_monologue
-
-#ui:whatsapp
-#background:whatsapp.png
-#chat_group_title:Sel 😍😍 
-#chat_group_image:ico_aman_selinder.png
-#speaker_1_name:Selinder
 Wait, Sel #speaker_self
 Sel?? #speaker_self
 
@@ -2576,18 +2535,7 @@ What comes next? How is your job hunt going? #speaker_2
     Awaiting the good news, beta! #speaker_5
     Acting, hmm? Your work life balance should be good. #speaker_2
     Not like our Harpreet, he is in banking and always meeting with bigshots, so we never get to see him. #speaker_2
-    #ui:scene
-    #background:bg_aman_bedroom.jpg
-    Oh, Uncle Ranjit…… always trying to humblebrag about your Harpreet. #inner_monologue
-    #ui:whatsapp
-    #background:whatsapp.png
-    #chat_group_title:Extended Family Chat
-    #chat_group_image:ico_aman_extendedfamily.png
-    #speaker_1_name:Papa
-    #speaker_2_name:Uncle Ranjit
-    #speaker_3_name:Cousin Harpreet
-    #speaker_4_name:Jothi
-    #speaker_5_name:Mum
+    Oh, Uncle Ranjit…… always trying to humblebrag about your Harpreet. #wa_inner_monologue
 }
 
 -> aman_3_4c

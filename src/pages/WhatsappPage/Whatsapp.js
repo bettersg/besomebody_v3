@@ -163,7 +163,7 @@ const Whatsapp = (props) => {
                 else if (step.tags[0]?.includes('clear')) {     // this is needed to avoid rendering inner_monologue
                   if (innerMonoRef.current) { innerMonoRef.current.hidden = 'true' }
                       return (null)
-                } else if (step.tags[0]?.includes('inner_monologue')) {                
+                } else if (step.tags[0]?.includes('wa_inner_monologue')) {                
                   return (
                     <div className="Whatsapp__innerMono" ref={innerMonoRef}> <Typography key={step.text}  className="Whatsapp__innerMono--text"> {step.text}</Typography> </div>
                     )
