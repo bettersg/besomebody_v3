@@ -676,20 +676,28 @@ export const MINI_GAME_MAP = [
       {
         question_id: 3,
         question:
-          "Shopee (a big tech company) was accused in 2021 of toxic workplace conditions, including speaking in Chinese during meetings.",
+          "Based on complaints to the Tripartite Alliance for Fair and Progressive Employment Practices (Tafep), most companies discriminated on the basis of:  ",
         type: "text",
         correct_answer_id: 1,
         explanation:
-          "Reviews on job hunting websites accused the company of overt preference for Chinese (female) staff, speaking in Chinese during meetings, and other toxic workplace conditions. They have since apologised.",
+          "MOM provided a breakdown of the discrimination complaints in 2021: 233 were based on nationality, 69 based on age, 49 on gender, and 13 on family responsibilities.",
           answers: [
             {
               answer_id: 1,
-              title: "True",
+              title: "Nationality",
             },
             {
               answer_id: 2,
-              title: "False",
-            },             
+              title: "Gender",
+            },  
+            {
+              answer_id: 3,
+              title: "Age",
+            },   
+            {
+              answer_id: 3,
+              title: "Pregnancy",
+            },   
           ],
       },  
     ],
