@@ -419,8 +419,9 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
   useEffect(() => fetchCount(), [reflectionIds]);
   useEffect(() => fetchMoreResponsesIfNotOverflow(), [hasMore, lastDocSnapshot, reflectionIds]);
 
-  // console.log(responses)
   // console.log(reflectionId)
+  // const blankResponse = { "id": 1,  "answer":"Users will leave their reflections", "chapter":1,}
+  
 
   return (
     <div>
@@ -465,7 +466,7 @@ const ReflectionResponsesStep = ({ reflectionId, next }) => {
           currentPage === 4 ?
           <div className={classes.yourStoriesBkgrd}  onClick={() => setCurrentPage(currentPage + 1)}>
             <div className={classes.gradientBkgrd}>
-              <ChapterResponse key={highlightedResponse.id} response={highlightedResponse} />
+                        {highlightedResponse ? <ChapterResponse key={highlightedResponse.id} response={highlightedResponse} /> : <>There are no responses yet</>}
               <div className={classes.bottomLikeSection}>
                 <img src="/reflection/reflection_heart_white.png" className={classes.heart}/>
                 <Typography className={classes.whiteTextReflection}>Tap on this icon to say that you connected with a reflection.</Typography>

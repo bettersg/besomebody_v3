@@ -1544,7 +1544,943 @@ Reflection 8
 
 
 // -> ravi_3_intro
+-> ravi_3_intro
 
+
+
+
+
+// CHAPTER 3
+
+
+
+
+
+=== ravi_3_intro ===
+#knot:ravi_3_intro
+#ui:narrator
+#background:bg_ravi_bedroom.jpg
+{chapter_2_ending == 1: 
+    So, the impossible happened: Val and I got together. I am still in shock - how can a girl like that be with a guy like me?! 
+    That’s the first great change in my life.
+    The second change is - I’ve landed an engineering internship! Not only will I fulfil my semester credits, I’m gonna get a taste of office life! 
+    It feels like I’ve won the lottery twice. I’m excited, but now I’m also feeling anxious for my first day tomorrow.
+- else :
+    So, what happened for Val and me? The impossible.
+    After I decided not to answer her call, she strode into the cafe the next day and told me if I wasn’t going to take the next step, I’d need to give her an honest reason why. 
+    Before I could answer, she asked me if I liked her. Point-blank. 
+    Of course I said yes. Then she looked me square in the eye and said I’d better prove it with a date.
+    So, uh, we’re together now. I still can't believe it. That’s the first great change in my life.
+    The second change is - I’ve landed an engineering internship! Not only will I fulfil my semester credits, I’m gonna get a taste of office life! 
+    It feels like I’ve won the lottery twice. I’m excited, but now I’m also feeling anxious for my first day tomorrow.
+     }
+
+~ chapter_id = 3
+#background:black.jpg
+CHAPTER {chapter_id} #title
+The Internship #title
+
+
+-> ravi_3_1
+
+
+=== ravi_3_1 ===
+#knot:ravi_2_1_narration
+#ui:whatsapp
+#background:bg_ravi_bedroom.jpg
+#background:whatsapp.png
+#chat_group_title:Family
+#chat_group_image:ico_ravi_family.png
+#speaker_1_name:Revati
+#speaker_2_name:Amma
+#timestamp:21.31
+Earlier before you left you said you had something on today? #speaker_2
+Didn’t hear you properly. Next time don’t speak when you eat. #speaker_2
+Anna said he was going to start his uni internship tomorrow #speaker_1
+Yes haha #speaker_self
+I needed an internship to fulfil my university credits #speaker_self
+And I’ve been applying for a while #speaker_self
+Wow! Good that you managed to find one. #speaker_2
+Did your boss at the café give you any trouble? #speaker_2
++ [She's very understanding] Marie? No, she’s very understanding #speaker_self
+    She gave me time to prepare for interviews and make my internship applications #speaker_self
+    I don’t think I would have got the internship if not for her actually #speaker_self
+    Can you do anything on your own? #speaker_1
+    🙄 #speaker_self
++ [I just manage my time well] I squeezed out time for interviews and applications somehow  #speaker_self
+    I suspect Marie let you have lots of flexibility Anna #speaker_1
+    Well, to tell the truth, she was quite nice la. We're friends after all. #speaker_self
+- Anyway the internship starts tomorrow #speaker_self
+It’s going to be for 3 months #speaker_self
+I hope I don't mess it up #speaker_self
+Don’t worry kanna. #speaker_2
+I know you can do it. #speaker_2
+You are a man now! #speaker_2
+Only in Amma's eyes... 😂  #speaker_1
+HAHAHA #speaker_self
+Thank you Amma and thangachi (sister) #speaker_self
+Wish me luck! #speaker_self
+
+-> ravi_3_2
+
+=== ravi_3_2 ===
+#knot:ravi_3_2
+#ui:narrator
+#background:bg_ravi_meetingroom.jpg
+8.20 a.m. Turbine Engineering Pte Ltd Aerospace Meeting Room 3. 
+It’s Day One of the internship. 
+#ui:scene
+#background:bg_ravi_meetingroom.jpg
+#speaker_left_image:cha_ravi_roger_normal.png 
+#speaker_left_name:Roger
+#speaker_right_image:cha_ravi_qian_normal.png 
+#speaker_right_name:Qi An
+// speaker_right_image:cha_ravi_marcus.png 
+// speaker_right_name:Marcus
+This is it. Ok, Ravi. You've got this. #inner_monologue
+“Ravi Kannasamy, engineering intern.” So this is what adulting sounds like. Neat.  #inner_monologue
+God, I’m so nervous. I’m wearing my lucky socks but they’re not helping. But of course. Socks aren’t lucky.  #inner_monologue
+Right. Ok. I’m good at what I do. And I’m doing it for Amma. And Revu. Shoot my hands are shaking.
+ #inner_monologue
+The email said to report at 830. Maybe I shouldn’t have come so early. #inner_monologue
+// Qi An appears – looks relaxed* #
+// Marcus appears – looks very serious* #
+Oh my god, there are people who came earlier than me! Hopefully I can make some friends. #inner_monologue
+I’m like the only Indian here.   #inner_monologue
+// *Roger appears* #
+There’s somebody they’re all talking to. He looks important. Oh boy, here we go. I’m really feeling it now. #inner_monologue
+Hello everyone. Good Morning. Welcome to Turbine Engineering Pte Ltd for your internship programme. You will be able to learn much more about aviation engineering in the next few weeks. #speaker_left
+...Quite sunny today ah? Sorry ah, I’m not very good at this kind of corporate introduction. #speaker_left
+So how’s everyone doing? #speaker_left
+Nobody wants to speak...I guess they’re as nervous as I am, too. #inner_monologue
+#speaker_right_image:cha_ravi_marcus_normal.png 
+#speaker_right_name:Marcus
+...Good, sir. How are you sir? #speaker_right
+Wow, this Marcus fella. So formal. Makes me feel like I’m back in NS again. #inner_monologue
+Good. Good. What’s your name again? #speaker_left
+#speaker_right_image:cha_ravi_marcus_concerned.png
+Marcus Mak sir. M.A.R.C.U.S space M.A.K. I answer to Marcus. #speaker_right
+Wow maybe he’s not just formal, he’s a complete robot! #inner_monologue
+#speaker_right_image:cha_ravi_marcus_normal.png 
+Ok, and what about you? #speaker_left
+Oh, me? Oh! Me! Hello! #speaker_self
+Yes, hello. What’s your name? #speaker_left
+Ravi. #speaker_self
+Oh good, easy name ah. #speaker_left
+Haha, yes. #speaker_self
+Ravi what ah? #speaker_left
+Kannasamy. Ravi Kannasamy. #speaker_self
+#speaker_left_image:cha_ravi_roger_confused.png 
+Kandaswamy ah? #speaker_left
++ [Correct him] Kannasamy. With two Ns. #speaker_self
+    #speaker_left_image:cha_ravi_roger_sheepish.png
+    Oh ok. Ravi KandasaNNy right? Better I just call you just Ravi haha! Anyway, I’m Roger. #speaker_left
+    VAR ravi_3_correctname = true
+    ~ ravi_3_correctname = true
+    Uh #speaker_self
+    It’s Kannasamy... but I think I better not push this otherwise I might upset him on my first day. Anyway it’s not a big deal. #inner_monologue
++ [Ignore it] Sigh. It’s Kannasamy... It's not even that hard. #inner_monologue
+    ~ ravi_3_correctname = false
+    But I think I better not push this otherwise I might upset him on my first day. Anyway it’s not a big deal. #inner_monologue
+- I’ll be your supervisor. You will be rotated around different teams, but you’ll start with the Systems Team first, focusing on AI integration, which is my team.  #speaker_left
+#speaker_left_image:cha_ravi_roger_normal.png 
+I’ll brief you all about this team and the other teams later. #speaker_left
+HR has already set up your emails and assigned you computers. All of you will be seated in the interns' room.  #speaker_left
+You will have an Orientation Booklet placed at your desks. Read it ah, it should give you all the info you’ll need. #speaker_left
+Thank you, sir. #speaker_right
+#speaker_right_image:cha_ravi_qian_normal.png 
+#speaker_right_name:Qi An
+Thank you.#speaker_right
+Ok, follow me. I’ll bring you to my colleague who’s giving the tour. She’ll also give you your passes  to enter the office. #speaker_left
+#speaker_left_image:cha_ravi_roger_cheerful.png 
+[In Chinese] lkvki wthzc yalao snidl jdyos mljhq pwvpc zgcgi wfyku vufui lkvki wthzc yalao snidl jdyos mljhq pwvpc zgcgi wfyku vufuilkvki wthzc yalao snidl jdyos mljhq pwvpc zgcgi wfyku vufui #speaker_left
+Oh sorry Ravi, there’s a welcome lunch. Dim sum. You eat right? #speaker_left
+Yes I do! #speaker_self
+[In Chinese] lwnbq ysnmu dwaec uytaj bvixn qlhcg wbhxz lnbtp rfbbr  12:30 ok? #speaker_left
+Sure! #speaker_right
+#speaker_right_image:cha_ravi_marcus_normal.png 
+#speaker_right_name:Marcus
+Yes, sir.#speaker_right
+Wait what? What did he say? Is it ok to ask? Crap. #inner_monologue
++ [Ask Roger directly] Excuse me, Roger? Sorry, I didn’t quite get that. #speaker_self
+    VAR ravi_3_checktranslation = true
+    ~ ravi_3_checktranslation = true
+    Ah, sorry. Lunch is at 1230. Meet me downstairs later if you’re coming. #speaker_left
+    Ok, thank you! #speaker_self
++ [Don't ask him] Hmm… hope it isn’t anything important. I'll figure it out later. #inner_monologue
+    ~ ravi_3_checktranslation = false
+    Yes!  #speaker_self
+    #speaker_left_image:cha_ravi_qian_obnoxious.png
+    #speaker_left_name:Qi An
+    Eh sorry ah guys, what did he say at the end?  #speaker_self
+    Weren’t you listening? You should always pay respect to your seniors and superiors.  #speaker_right
+    I mean, I WAS listening...he said something in Chinese, didn’t he？ #speaker_self
+    Oh! Yeah, he said lunch was at 12.30. We can meet him downstairs later. #speaker_left
+    Ok, thank you! #speaker_self
+
+- I know Roger didn’t mean any harm, but couldn’t he have just told all of us the same thing at the same time? He probably just didn’t think it through.  #inner_monologue
+#speaker_left_image:cha_ravi_qian_normal.png 
+#speaker_left_name:Qi An
+Anyway. Let me go get my pass! Can’t wait to get started. I want to see how the rest of the office looks like. #inner_monologue
+So, Qi An and...Marcus, right? #speaker_self
+Affirmative. #speaker_right
+Let’s talk at lunch later. I’m going to meet my uncle first. #speaker_left
+He works here? #speaker_self
+Yeah. He’s the CEO. #speaker_left
+Oh wow. That’s cool! #speaker_self
+Yeah, Marcus, let’s go, I’ll introduce you to him. See you later Ravi. #speaker_left
+Ok! uh ... see you later guys #speaker_self
+Wait, why wasn’t I invited? Did they know each other before this internship? They did seem quite chummy earlier when they were talking to Roger jus- #inner_monologue
+(turns and bangs into glass door) OWWW! #speaker_self
+#speaker_left_image:cha_ravi_qian_obnoxious.png
+Wah. Are you alright? #speaker_left
+#speaker_right_image:cha_ravi_marcus_concerned.png
+Owww... Yeah I’m ok.  #speaker_self
+Wow. Keep your eyes open, bro. #speaker_left
+Affirmative. It’s best to see where you are going. You reduce clumsiness that way. #speaker_right
+Haha, yeah... so embarrassing. #speaker_self
+Marcus, let’s go. #speaker_left
+#speaker_left_image:pixel.png 
+#speaker_right_image:pixel.png 
+Why am I so unlucky today? Must be the nerves. Keep your head up and walk, Ravi. And keep your eyes open. #inner_monologue
+
+
+-> ravi_3_3
+
+=== ravi_3_3 ===
+#knot:ravi_3_3
+#ui:narrator
+#background:bg_ravi_cafeteria.jpg
+And just like that, the days passed. My internship is going ok, if I do say so myself! I got my hands on the machinery and equipment they used, and learned a lot more than in uni.
+There's one thing that bugs me - I can’t seem to make friends. The interns share the same room, but we hardly talk. Doesn’t help that Marcus is so robotic and Qi An is so aloof. And they usually chat in Chinese.
+Well, there's also another thing that bugs me. I think Qi An and Marcus made some comments about me when they were chatting. I don’t want to confront them, but what they said really hurt me. 
+I know they think it’s funny, but it’s not. I mean, I’ve had my fair share of such comments before. But come on, we’re already in uni. It’s time to grow up.
+With all that's happened, I'm glad that it's lunch now. 
+#ui:scene
+#speaker_left_image:cha_ravi_valerie_normal.png
+#speaker_left_name:Val
+Hmm...what should I get for lunch today- #inner_monologue
+Hi!!!! #speaker_left
+WOAH! You scared me. #speaker_self
+Wait a minute, how did you even get in? How did you get past security? #
+I have my tricks. #speaker_left
+Seriously... #speaker_self
+I’m really thankful for Val. She’s really cheery once you get to know her. And headstrong, too. She inspires me whenever I feel overwhelmed. Not that everything is smooth-sailing though... #inner_monologue
+I told them I’ve come to meet the great Mr. Ravi Kannasamy. And they said, “Yes ma’am, of course, this way please.” #speaker_left
+Val...seriously! #speaker_self
+#speaker_left_image:cha_ravi_valerie_incredulous.png
+Why are you so worked up! I thought you'd be happy to see me. #speaker_left
+Yes, but they shouldn’t have let you in! You need a pass. #speaker_self
+Wow. Someone’s wound up. I spoke to the security guard and he said I could wait until you came out. And then I kinda just slowly shuffled over into the reception area. He seemed too engrossed on his phone. And now I’m here. #speaker_left
+#speaker_left_image:cha_ravi_valerie_angry.png
+Could you not do things like this please? This is an office, if you don’t realise. You can’t just waltz in like this. #speaker_self
+Ok I’m sorry, no waltzing. I’ll let you know when I’m coming next time. #speaker_left
+Anyway, I’m starving. What's good here? #speaker_left
+Oh - the canteen is already full. #speaker_self
+#speaker_left_image:cha_ravi_valerie_normal.png
+No it’s not, I see a couple of seats over there! We can ask those two guys to share. #speaker_left
+#speaker_right_image:cha_ravi_marcus_qian.png
+#speaker_right_name:Marcus & Qi An
+... #speaker_right
++ [No - we can't sit there] Wait a minute, no!  #speaker_self
+    What’s wrong? #speaker_left
+    Those people are my colleagues. #speaker_self
+    So? #speaker_left
+    So, I don’t want to sit with them. #speaker_self
+    Why not? #speaker_left
+    Because … I don’t want to. #speaker_self
++ [The table is probably full] Wait a minute, no!  #speaker_self
+    Those are my colleagues, and they uh.. are probably expecting more people. #speaker_self
+- We can go somewhere else? #speaker_left
+I have to be back in the office at 1 sharp. #speaker_self
+You’re acting really weird, you know that? #speaker_left
+#speaker_left_image:cha_ravi_valerie_concerned.png
+I just don’t want to sit with them. That’s it. #speaker_self
+Ok, so what should we do then? #speaker_left
+Let's wait for another table. #speaker_self
+#speaker_right_image:pixel.png
+Right... care to tell me why you can't sit next to your workmates? #speaker_left
+It's uh... it's... come here, let's move out of their view. #speaker_self
+It’s because of me, isn’t it? #speaker_left
+No, no, why would it be because of you? #speaker_self
+I don’t know either! Is it my dress sense? Or the fact that you don’t want your engineer friends to know you’re dating a girl in arts school? What’s wrong with the arts? #speaker_left
+No, no, Val, it’s not that...it’s- #speaker_self
+What is it then? Just tell me! Gosh.  #speaker_left
+#speaker_left_image:cha_ravi_valerie_incredulous.png
+Ravi, please, talk to me. What's bothering you? #speaker_left
+I can’t tell her why it’d be a bad idea to sit with them. I know it would upset her that they are ostracising me. I don’t know what they’d say if they found out we were dating. Sigh. #inner_monologue
++ [Play it cool with her] -> ravi_3_3a
++ [Tell her the truth] -> ravi_3_3b
+
+=== ravi_3_3a ===
+#knot:ravi_3_3a
+#ui:scene
+#background:bg_ravi_cafeteria.jpg
+#speaker_left_image:cha_ravi_valerie_normal.png
+#speaker_left_name:Val
+#speaker_right_image:cha_ravi_marcus_gossipy.png
+#speaker_right_name:Marcus
+[Marcus whispers something to Qi An] #speaker_right
+#speaker_right_image:cha_ravi_qian_gossipy.png
+#speaker_right_name:Qi An
+[Qi An whispers back]  #speaker_right
+#speaker_right_image:pixel.png
+Crap they saw. They're definitely talking crap about us. #inner_monologue
+Ok, now that we’ve left, please tell me what’s going on. Did something happen with those guys? #speaker_left
+VAR ravi_3_tellvaltruth = false
+~ ravi_3_tellvaltruth = false
+Nothing. I just don’t want to make a scene here. Let’s just grab a quick burger next door. The queue is probably shorter too. #speaker_self
+I can’t tell her. How do I tell her how toxic those two are. I don’t feel like I belong here. They make me feel so small. I know they don’t like me. Or even understand me.  #inner_monologue
+And they saw Val. They're definitely going to say that I don't deserve her. My hands are shaking.  #inner_monologue
+
+-> ravi_3_4
+
+
+=== ravi_3_3b ===
+#knot:ravi_3_3b
+#ui:scene
+#background:bg_ravi_cafeteria.jpg
+#speaker_left_image:cha_ravi_valerie_normal.png
+#speaker_left_name:Val
+#speaker_right_image:cha_ravi_marcus_qian.png
+#speaker_right_name:Marcus & Qi An
+Well, they’re not very nice people, to be honest. #speaker_self
+What do you mean? #speaker_left
+~ ravi_3_tellvaltruth = true
+I have been working here for a month. And the only time they have said anything remotely friendly to me has been NEVER. I just shut up and do what I’m told. When I can understand it. #speaker_self
+What do you mean, “When you understand it”? #speaker_left
+Val, they just talk all the time with each other -- and mostly in Chinese. I miss meeting times because they just make their own plans and don’t tell me when they change. I just do my reports and shut up. Just hear them laugh at their stupid jokes. #speaker_self
+AAAH. I’m so FRUSTRATED! Sometimes I wish I NEVER took this internship. #speaker_self
+Where did that come from? This is not me. I miss Amma. And I miss Revu. I haven’t even seen them this week. And I’m being very rude to Valerie. My hands are shaking. #inner_monologue
+Ravi, I don’t know what they did to you, but you’ve wanted this internship forever. #speaker_left
+And what do you mean by stupid jokes? #speaker_left
+Argh, nevermind. Recounting them will just spoil our lunch. #speaker_self
+We can go to nearby for lunch. Hopefully some food will cheer you up. #speaker_left
+Oh, Val, you know how to make me happy. #speaker_self
+
+-> ravi_3_4
+
+=== ravi_3_4 ===
+#knot:ravi_3_4
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Interns @ Turbine Engineering
+#chat_group_image:ico_ravi_turbine.png
+#speaker_1_name:Qi An
+#speaker_2_name:Marcus
+#speaker_3_name:Roger
+#timestamp:16.27
+Hey, you finish work alr? I downstairs #speaker_1
+Is he asking me? Can’t be right? #inner_monologue
+Negative. T-minus 30 minutes. My tasks will be complete by then. #speaker_2
+😤 😤 😤 #speaker_1
+Faster leh. I want to go catch happy hour! #speaker_1
+Noted with thanks. I’ll expedite my work. #speaker_2
+Faster ok! #speaker_1
+Anyway, what are your thoughts? #speaker_1
+Thoughts? On what? #speaker_2
+You know, what do you think? About...that #speaker_1
+I am confused. Please elaborate. #speaker_2
+Ravi and that girl he was fighting with in the canteen.  #speaker_1
+They really don’t realise I’m on this chat... #inner_monologue
+Negative. I was too focused on my chicken beryani #speaker_2
+Well, I think it’s his gf leh #speaker_1
+Ravi can get a girlfriend? He seems so robotic. #speaker_2
+No offence, but has he looked in a mirror? #inner_monologue
+I agree. Chinese girl some more. #speaker_1
+Oi…they better not be saying stuff about Val. #inner_monologue
+A Chinese girl? Why would a Chinese girl date Ravi? Was she cute or not? #speaker_2
+Wah Marcus you really get it man. That’s the spirit #speaker_1
+Cutting straight to the heart of the matter! #speaker_1
+7 / 10 #speaker_1
+Maybe a bit higher, but under 8. #speaker_1
+I mean let’s be real tbh. SG girls aren't known for looks. #speaker_1
+wth ... #inner_monologue
+Ravi got gf. I got you. 😅 What’s wrong with this world? #speaker_1
+How come the ugly guys get the girls ah? #speaker_1
+I can’t get any matches on my dating apps #speaker_1
+Splinter, TehMeetDonut, Stumble all nothing #speaker_1
+Then Ravi from nowhere also can get gf #speaker_1
+How come our an neh (derogatory term for indian) don’t get some Rani or Vani ah? #speaker_1
+Now less girls for me to pick man #speaker_1
+What is an an neh? #speaker_2
+You don’t know what an an neh is ah? #speaker_1
+Ravi la, his type #speaker_1
+Aiyah anyway life’s unfair I tell you #speaker_1
+This kind still say I got Chinese privilege #speaker_1
+If I really got Chinese privilege then where is my chiobu?  #speaker_1
+Eh... this chat group is the main one. Oh crap.  #speaker_1
+<This message has been deleted> #speaker_2
+<This message has been deleted> #speaker_1
+<This message has been deleted> #speaker_1
+<This message has been deleted> #speaker_1
+<This message has been deleted> #speaker_1
+<This message has been deleted> #speaker_1
+Wrong group sorry #speaker_1
+<This message has been deleted> #speaker_2
+<This message has been deleted> #speaker_2
+<This message has been deleted> #speaker_2
+<This message has been deleted> #speaker_2
+// inner monologue
+They finally noticed. I knew they were mean, but not this horrible. I didn’t realise I was THAT invisible. They really ran their mouths huh? Said what they were thinking? #inner_monologue
+I’m disappointed. No, I’m angry. NO – I’m ENRAGED. If Valerie were in my shoes she’d go and punch them in the face or screenshot all this and just dox them online. #inner_monologue
+ I can’t take this anymore. I don’t know how I’m supposed to look them in the eyes tomorrow. What should I do? #inner_monologue
+. #clear
++ [Confront them] -> ravi_3_4a
++ [Play dumb] -> ravi_3_4b
+
+=== ravi_3_4a ===
+#knot:ravi_3_4a
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Interns @ Turbine Engineering
+#chat_group_image:ico_ravi_turbine.png
+#speaker_1_name:Qi An
+#speaker_2_name:Marcus
+#speaker_3_name:Roger
+#timestamp:16.37
+Hey. I saw all that. #speaker_self
+VAR ravi_3_confrontcolleagues = true
+~ ravi_3_confrontcolleagues = true
+Oh no. This is a bad situation. #speaker_2
+Hey bro, sorry ah haha #speaker_1
+I was just joking #speaker_1
++ Don’t “bro” me. [] #speaker_self
++ I KNOW you weren’t joking [] #speaker_self
+- You really insulted both me and my girlfriend #speaker_self
+You think it’s ok to make these jokes? #speaker_self
+Grow up la #speaker_self
+Hey man, I’m sorry. I really didn’t mean to offend you #speaker_1
+What did you mean then? #speaker_self
+I’ve been quiet this whole internship #speaker_self
+Don’t think I didn’t hear what you tell Marcus all the time #speaker_self
+I’m going to talk to somebody about this #speaker_self
+I don’t care that you act like a bigshot just because you know the CEO or whatever #speaker_self
+(roger is typing…) #timestamp
+Hey boys. I’m in this chat too you know #speaker_3
+Oh no. This bad situation just got worse. #speaker_2
+I don’t know what you guys were talking about #speaker_3
+And I can’t read the messages that were deleted #speaker_3
+But take it offline. Don’t do this in our work group #speaker_3
+Ravi, come see me in my office tomorrow. #speaker_3
+What did I do wrong? What about Qi An? #speaker_self
+I don’t know what Qi An wrote. he deleted it already but he apologised already #speaker_3
+You need to learn to be more professional. #speaker_3
+I hope this puts an end to this, whatever this was. Got it? #speaker_3
+Affirmative. #speaker_2
+...Alright. #speaker_self
+This isn’t fair. I didn’t do anything wrong. #inner_monologue
+Roger didn’t see what Qi An wrote. But I don’t have any proof. I didn’t take any screenshots in time. #inner_monologue
+And even if Roger did understand, what can he do about it? It’s already over. The messages are gone already. #inner_monologue
+This is getting out of hand. I can’t go on like this. I am asking to be transferred to another department starting tomorrow. Or better still, quit this internship. #inner_monologue
+
+
+#knot:ravi_3_minigame
+#ui:mcq
+#game_id:9
+Minigame 9 // must add some text
+
+// chapter 3 ending 1
+
+-> ravi_3_5
+
+=== ravi_3_4b ===
+#knot:ravi_3_4b
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Interns @ Turbine Engineering
+#chat_group_image:ico_ravi_turbine.png
+#speaker_1_name:Qi An
+#speaker_2_name:Marcus
+#speaker_3_name:Roger
+#timestamp:16.37
+Hey guys. Any plans today? #speaker_self
+~ ravi_3_confrontcolleagues = false
+Oh hey Ravi... No...just going to finish up and go for family dinner. #speaker_1
+Negative. Still clearing my work. #speaker_2
+Really? Because I could swear I saw like 300 messages here that just vanished all of a sudden. #speaker_self
+I got a notification for each and every message you know #speaker_self
+My phone was vibrating like crazy eh #speaker_self
+Huh? What are you talking about #speaker_1
+Must be a bug haha #speaker_1
+Possibly. #speaker_2
++ A bug ah? Oh phew [] #speaker_self
+    Must be a weird bug, I think I saw some messages for me and my gf in this chat instead? Weird #speaker_self
+    Haha, yah, must be   #speaker_1
++ I didn’t read the full thing but I thought there was something about my girlfriend [] #speaker_self
+- In case you guys don’t know I’m attached #speaker_self
+Wah congrats bro I didn’t know you had a girlfriend #speaker_1
+Can she speak tamil though #speaker_1
+Why would you ask that? #speaker_self
+Oh, uh...nvm #speaker_1
+Yeah why did I ask that #speaker_1
+Oh ok. Anyway I don’t want to waste your time. #speaker_self
+Enjoy your family dinner, I’m heading home too. See you tomorrow! =) #speaker_self
+This is getting out of hand. I can’t go on like this. I am asking to be transferred to another department starting tomorrow. Or better still, quit this internship. #inner_monologue
+
+#knot:ravi_3_minigame
+#ui:mcq
+#game_id:9
+Minigame 9 // must add some text
+
+
+-> ravi_3_5
+
+
+=== ravi_3_5 ===
+#knot:ravi_3_5
+#ui:notification
+#background:ui_ravi_phonecall.jpg
+VALERIE # message
+#ui:scene
+#background:ui_ravi_phonecall_val.jpg
+#speaker_left_image:cha_ravi_valerie_concerned.png 
+#speaker_left_name:Val (phone)
+Hey #speaker_left
+Hey Val. #speaker_self
+How are you? #speaker_left
+As good as can be. #speaker_self
+It is hard, Ravi. I can see you struggling. #speaker_left
++ I'll get by, somehow[] #speaker_self
++ I can see myself struggling. [] But I can’t seem to do anything about it. #speaker_self
+- I’m here for you. #speaker_left
+You know, when you think you saw something but you're not sure it's actually there? #speaker_self
+Hmm...yes? #speaker_left
+That’s what every day feels like. Like what is happening to me isn't really real.  #speaker_self
+That is heavy. #speaker_left
+It is. I can’t seem to move myself anywhere. My colleagues are horrible. I don’t see my family any more. Even when I do, I don’t know what to tell them. 
+I just eat the fish curry. Then I make up some excuse and leave. I can’t sleep at night. I’m awake, looking at my phone, scrolling through an endless stream of tik toks. 
+I sleep when I start to see the sun, out of fear of not getting enough sleep, which I don’t anyway. I have to be up at 7am. I gag when I brush my teeth. Like I want to puke. But nothing comes out. #speaker_self
+Ravi. I don’t know what to say..other than that I’m so sorry. I feel like I added to all the pressure. #speaker_left
++  No! Val! You’re my one bright spot.[] #speaker_self
+    If I’m the bright spot, then something isn’t right. #speaker_left
++  Oh Val, I haven’t been very nice to you. [] #speaker_self
+    I was a bit confused. But I know that person at that stupid kopitiam isn’t you. I just didn’t know why. #speaker_left
+    It’s not me. Who was that guy? Let me beat him up. #speaker_self
+- I care about you a lot, you know. #speaker_self
+I know. I wouldn’t be with you if you didn’t. #speaker_left
+Thank you #speaker_self
+“Thank you?” Am I one of your “colleagues” now? So formal. #speaker_left
+Eh don’t liddat. I’m just trying to be polite. #speaker_self
+I feel like you’re trying to be so many things you’re forgetting to be yourself. #speaker_left
+Am I? #speaker_self
+Coffee shop Ravi and Kopitiam Ravi are so different. #speaker_left
+Haha #speaker_self
+#speaker_left_image:cha_ravi_valerie_flirt.png 
+Ooh hear that sound? #speaker_left
+What sound? #speaker_self
+Something strange. #speaker_left
+Huh? #speaker_self
+Sounded like a laugh. Your laugh. Haven’t heard that in a while. #speaker_left
++ You’re so lame. [] #speaker_self
+    You have no idea. #speaker_left
+    Actually, I do. Nobody else has a spotify list specifically for brushing teeth. #speaker_self
++  You always know how to cheer me up [] #speaker_self
+    I have a hundred more ideas to cheer you up, still unused! Like... #speaker_left
+- Have you ever tried brushing your teeth to Megan Thee Stallion? #speaker_left
+I can’t say I have. #speaker_self
+#speaker_left_image:cha_ravi_valerie_happy.png 
+You’ll feel shiny eeeeee! #speaker_left
+Ok I’ll try tomorrow morning haha. #speaker_self
+Promise you’ll do it? Or at least do something that’ll cheer you up? #speaker_left
++ [I will] Yeah. Thank you Val. #speaker_self
+    Yay! That’s more like the Ravi I  love. #speaker_left
+    #speaker_left_image:cha_ravi_valerie_incredulous.png 
+    Wait..what? #speaker_self
+    Shit #speaker_left
+    Shit? #speaker_self
+    I mean. Not shit. I ... I do love you. #speaker_left
+    I know. It’s just weird to hear you say it. #speaker_self
+    Weird? #speaker_left
+    #speaker_left_image:cha_ravi_valerie_flirt.png 
+    I mean...not weird. But you, know, strange. #speaker_self
+    It’s cool. You’ve always been a bit of a space cadet. Head always up in the clouds, Mr. Aeronaut. #speaker_left
+    I think it goes without saying... #speaker_self
+    When things go without saying, they just go without saying. So, say it, if you mean it. #speaker_left
+
++ [It's hard] It’s hard. I don’t think I can just magically switch into sunshine mode. #speaker_self
+    I don’t expect you to. It’ll be a while before you get back to the Ravi I love. #speaker_left
+    #speaker_left_image:cha_ravi_valerie_incredulous.png 
+    Wait..what? #speaker_self
+    Shit #speaker_left
+    Shit? #speaker_self
+    #speaker_left_image:cha_ravi_valerie_flirt.png 
+    I mean. Not shit. I.. I do love you. #speaker_left
+    I know. It’s just weird to hear you say it. #speaker_self
+    Weird? #speaker_left
+    I mean...not weird. But you, know, strange. #speaker_self
+    I know the feeling. It’s strange for me too. #speaker_left
+    Um..sorry. I just didn’t expect it. #speaker_self
+    Well, it doesn’t change the fact that I, at this moment, without a doubt, love you. #speaker_left
+    I think it goes without saying... #speaker_self
+    When things go without saying, they just go without saying. So, say it, if you mean it. #speaker_left
+
+- I love you. #speaker_self
+Great. Now that that’s out of the way… #speaker_left
+Ufff #speaker_self
+What? #speaker_left
+We are so cheesy #speaker_self
+Extra cheese, baby. #speaker_left
+#speaker_left_image:cha_ravi_valerie_happy.png 
+Feels good getting things off my chest. #speaker_self
+Good. You dwell in your own thoughts like that, you’re gonna have to start paying rent. #speaker_left
+I’m a lousy tenant. #speaker_self
+But a great engineer. And an amazing barista. Great now it sounds like I'm a suck-up. #speaker_left
+But a very charming self-aware suck-up. The wind beneath my wiiiiiings (sings). #speaker_self
+You’re good at many things, but singing isn’t one of them. Anyway, good night. I should really go to sleep. Got an early start tomorrow. #speaker_left
+Want me to sing you a lullaby? #speaker_self
+I’d rather kiss a jellyfish. What are your plans tomorrow? #speaker_left
+Made no plans. Might sleep in. #speaker_self
+Maybe go see your family. I think it’ll be nice. #speaker_left
+
+-> ravi_3_6
+
+
+=== ravi_3_6 ===
+#knot:ravi_3_6
+#ui:narrator
+#background:bg_ravi_pushpa_home.jpg
+Sunday, 4.15 pm. 
+I wonder how Amma is doing. And I miss Revu. I've been so busy, I haven't seen them in a while. 
+Maybe I should tell them about Val. Part of me feels excited to tell them about her... But maybe now is not the right time. 
+#ui:scene
+#background:bg_ravi_pushpa_home.jpg
+#speaker_left_image:cha_ravi_revati_normal.png 
+#speaker_left_name:Revati
+Hi Revu! #speaker_self
+Oh, the prodigal son returns! Poor Amma isn’t here to welcome her darling son back. What a travesty. #speaker_left
+So drama lah you! #speaker_self
+Then what? You haven’t come home in, like, three weeks?? #speaker_left
+Yeah, I know. Been busy. Where’s Amma? #speaker_self
+What kind of excuse is that? Amma has just gone to the store I think. What's with your hair? Have you given up on barbers? #speaker_left
+I like it with a little curry puff on top haha #speaker_self
+Oh, we have some curry puff from the mamak shop next door. Want? #speaker_left
+Yeah I should take some for Val. She’ll love it. #speaker_self
+Val? Who’s Val? #speaker_left
+Oh shoot, what is wrong with me... #inner_monologue
++ [A friend] Oh, just a friend. #speaker_self
+    “Just a friend?” Hmm... #speaker_left
++ [A customer] Oh, just a regular customer. #speaker_self
+    “Just a regular customer?” Hmm... #speaker_left
+- Really! #speaker_self
+Don’t pull this innocent act on me. I’ve known you since I was born. #speaker_left
+Ugh. Ok. She’s my girlfriend. #speaker_self
+#speaker_left_image:cha_ravi_revati_grin.png 
+Waaaaaah! You also can get girlfriend ah? #speaker_left
+Why does everyone keep saying that? #speaker_self
+Eh, who else is saying that? Only I’m allowed to make fun of you. #speaker_left
+So what’s her name?? #speaker_left
+Valerie. #speaker_self
+Eeee so exciting! #speaker_left
+Haha... #speaker_self
+#speaker_left_image:cha_ravi_revati_normal.png 
+Show me a picture! #speaker_left
+...I don’t have any. #speaker_self
+Useless. Show me her IG la! #speaker_left
+Oh yeah. Here you go. #speaker_self
+#speaker_left_image:cha_ravi_revati_grin.png 
+Dude, she’s hot. #speaker_left
+Yeah, dude. Thanks, I guess? #speaker_self
+How did you get with her? #speaker_left
+Through my charm, good looks, and oozing machismo. #speaker_self
+#speaker_left_image:cha_ravi_revati_normal.png 
+Machismo your head la. The only thing you’re oozing are bad jokes. She probably took pity on your terrible hairstyle and thought you needed help. #speaker_left
+Something like that. #
+So...are you going to tell mum? #speaker_left
+
++ [Yes] Yeah. I don’t know what she’ll say though. I'm a bit worried how she'll take to someone like Val. #speaker_self
+    VAR ravi_3_afraidtotellmum = false
+    ~ ravi_3_afraidtotellmum = false
+
++ [Hmmm, maybe not] Hmmm... maybe when we're all in a better siuation, Revu. #speaker_self
+    ~ ravi_3_afraidtotellmum = true
+    Huh? Why not now? Are you scared of her reaction? #speaker_left
+    I mean, Amma probably pictured me with someone ... different. #speaker_self
+- You’re so annoying. Amma will be super happy! Just the other day, she was asking me if I knew if you were dating someone. #speaker_left
+What?? #speaker_self
+Yeah. We talk a loooot about you. If I'm cool with her, Amma will be too. Trust me! #speaker_left
+My colleagues would differ on that. These guys had a whole whatsapp chat making fun of me and Val. Like "how dare I steal one of their women" – as though they were entitled to have girlfriends.  #speaker_self
+Well, I am not your colleague. And Amma is not your colleague. And if people at work are acting like it’s the middle ages, then it’s time you spoke to them about it. That’s not cool. #speaker_left
+I will. #speaker_self
+// amma enters the home
+Shoot, Amma's back! #inner_monologue
+#speaker_right_image:cha_ravi_mum_dress_normal.png
+#speaker_right_name:Amma
+#speaker_left_image:cha_ravi_revati_grin.png 
+AMMAAAAAAAA, RAVI HAS A GIRLFRIEND! #speaker_left
+Shut up!!! #speaker_self
+Who has a girlfriend? #speaker_right
+Hello Amma. I think there are some curry puffs  #speaker_self
+Ravi has a girlfriend! #speaker_left
+#speaker_left_image:cha_ravi_revati_normal.png 
+#speaker_right_image:cha_ravi_mum_dress_happy.png
+Revati's just messing around. Stop it Revu!  #speaker_self
+நேதஂதிகஂகு தானஂ எனஂ காது குத்திசஂசா? (Do you think my ears were pierced yesterday?) Who is this girl? #speaker_right
+Ho ho ho! #speaker_left
+Uh..just a friend ma. #speaker_self
+Just a friend. And a girl... #speaker_left
+Why are you acting like a kid? #speaker_self
+She is one. Now, who’s this girl? #speaker_right
+She's so hip, she looks like some indie movie actress haha #speaker_self
+Oh my god, my sis will be the death of me. #inner_monologue
+Hindi movie actress? Which one?  #speaker_right
+No Amma, Indie! Like independent films. You know, very edgy, very cool, very quirky. #speaker_left
+She is also super friendly ma.  #speaker_self
+I'm sure Amma will like her! #speaker_left
+Ok. Busy with girlfriend ah? Is that why you haven’t come over in so long? #speaker_right
+It’s not like that ma. #speaker_self
+What’s her name? #speaker_right
+Valerie...she’s really cool. She loves Indian food and - #speaker_self
+...Indian guys! #speaker_left
+Revati, can you shut up for a second please? #speaker_self
+Revati kanna (dear), don't disturb your brother. Anyway tell me. Valerie?  #speaker_right
+Yeah Amma. Just met her a couple of months ago.   #speaker_self
+Bring her over! Most important is that you you make sure you come see family ok? Girlfriend or no girlfriend. Busy or not busy. #speaker_right
++ [Things have been hard for me] It’s just that...thing’s have not been easy for me ma. #speaker_self
+    #speaker_right_image:cha_ravi_mum_dress_worried.png
+    Why kanna? #speaker_right
+    Work has been hard. And I’ve been working at the cafe too. #speaker_self
++ [I'm not sure I was ready to talk about this] It's just that... I didn't really know if I was ready to talk about this Amma.  #speaker_self
+- Don’t think you can talk to me, is it? #speaker_right
+That’s not what I meant, ma. But I don’t want to make it hard for you with my problems also, you know? #speaker_self
+Kanna, your problems are my problems. If you don’t tell me, we can’t solve it. Come sit down. #speaker_right
+I’m going to make coffee. Think about what you want to talk about. #speaker_right
+Oh where do I even begin. Val is Chinese. My colleagues are stupid. And I really have lost weight, along with all my self-confidence. #inner_monologue
+#speaker_right_image:cha_ravi_mum_dress_happy.png
+So tell me about Valerie first. #speaker_right
++ She’s a regular at the coffee shop [] #speaker_self
+    Bet you made a heart shape on her coffee #speaker_left
+    Please lah. I’m not that lame. #speaker_self
+    
++ She's smart and worldly[,] and also very kind. And clever. #speaker_self
+    Kind and clever. All the things you’re not. Great. #speaker_left
+    Please lah. I’m clever ok? And very kind to you, you brat.  #speaker_self
+- And she’s Chinese, eg? #speaker_right
+Yeah.  #speaker_self
+Hmmm #speaker_right
+Oh no. This is going to be a problem huh? I thought we could skirt around this topic.   #inner_monologue
+I knew it. #speaker_right
+Uh, because of her name? #speaker_self
+#speaker_right_image:cha_ravi_mum_dress_worried.png
+Just a guess. But why, kanna? Cannot find a good Indian girl? #speaker_right
+I knew it. This question. It was always going to be like this. What can I say without offending her? #inner_monologue
++ [I tried] The one Indian girl I asked out said no. #speaker_self
+    Oh, that’s news! #speaker_right
+    Yeah, when I was, like 14. She said I was too dark. I cried the whole night. #speaker_self
+    Oh, I remember that day. Your eyes were swollen. You told me it was because Liverpool lost! #speaker_right
+    Yeah, well it was because of Chandni. Stupid girl. #speaker_self
+    
++ [I never looked ] I really wasn’t looking for an Indian girl. #speaker_self
+    Why? Not good enough for you? #speaker_right
+    No! I really wasn’t looking for any girl! #speaker_self
+    Yeah, you think I was born yesterday? #speaker_right
+    Amma! Really! #speaker_self
+
+- Anyway. You know why I’m asking you, right? #speaker_right
+Oh god, here it comes. Mum is going to say no. How can I break it to Val that my family is...racist? #inner_monologue
+Because you want me to end up with an Indian girl? #speaker_self
+No! Because I know it’s not easy. #speaker_right
+Not easy? #speaker_self
+Because it’s not common. And some people have a problem with it. #speaker_right
+I know! These guys at work. They were making fun of me. And her. And I kinda don’t want to work there any more. #speaker_self
+At your internship? #speaker_right
+Yeah. They said some pretty nasty things. Like how can someone like me get a girlfriend. And a chinese girlfriend.. #speaker_self
+And what did you say? #speaker_right
+What can I say? The boss also doesn’t think anything is wrong. I don’t know what to do. Because if I yell at them, I’m the bad guy. If I don’t, then I’m the weakling. #speaker_self
+And Valerie? What does she say? #speaker_right
+She says she likes me a lot..and wants to be with me. #speaker_self
+Ok. Then what’s the problem? #speaker_right
+Problem is...I don’t know if I can be with her like this. Like, people passing comments. #speaker_self
+Ravi, this is not you. You date a Chinese girl, or Indian girl, or Indonesian girl...I don’t care. #speaker_right
+Really? #speaker_self
+Yes! Did you really think I would have a problem with you dating someone? You think I’m one of your colleagues? #speaker_right
+You tell him! I told him the same thing! #speaker_left
+Look, kanna. We are all going through a very tough time. I don’t need to tell you this. We have to tackle things together. #speaker_right
+I know..but I thought… #speaker_self
+Don’t keep thinking...talk to me! #speaker_right
+Sorry, I just thought I would have to deal with some things myself. I don’t want to burden you. #speaker_self
+Yes, there are some things you have to deal with yourself. But don’t think you have to save the family on your own. Burden, it seems. I have been working for 30 over years. I know it’s hard. #speaker_right
+Look, it’s ok to date who you like. It’s ok to expect to be respected at work. #speaker_right
+There will be many obstacles. People won’t like the way you look. Or the way you speak. Or think you smell. You can’t control other people. If you want to live away from us, that’s ok. But you can’t lose your way like this. And think we won’t support you. #speaker_right
+And these once-in-a-blue-moon visits won’t do. #speaker_left
+Aiyoh sorry la. #speaker_self
+It’s ok. You’ve always been the slow one in the family. I’m sure Valerie thinks so too. #speaker_left
+She actually does. #speaker_self
+Bring her home one day. Anyway, this internship. Have you decided what to do yet? #speaker_right
+I don’t know. There is too much to think about. #speaker_self
+When you look at everything together, it can be overwhelming. #speaker_right
+Yeah, But I don’t even know where to start. It’s very complicated you know...I wish Appa (dad) was here... #speaker_self
+Why? #speaker_right 
+#speaker_left_image:cha_ravi_revati_confused.png
+He’s the reason I wanted to get into aeronautics in the first place. #speaker_self
+He’s also the reason I had to take care of you all, by myself. #speaker_right
+That’s why I wish he was here. #speaker_self
+How can you say that, Ravi? #speaker_left
+It’s ok. Let him talk. #speaker_right
+It’s not like that, Amma. Can’t I wish for something? #speaker_self
+Why don’t you wish for some gold and a condo while you’re at it. Much more valuable than your useless father. #speaker_right
+Amma, calm down. Ravi, you’re a real idiot. #speaker_left
+I don’t know what I said that is so wrong #speaker_self
+Why don’t you wish for some buddhi (brain)? #speaker_right
+Amma, why are you getting so upset? #speaker_self
+I am only here to make you some fish curry and approve your girlfriends right? But your father is your big important hero. But of course. #speaker_right
+He left before you were old enough to stop idolising him and see him for what he was. A coward. #speaker_right
+No no that's not what I meant.... I can’t miss my pa? Maybe I shouldn’t have said what I said. But she literally just said I am supposed to speak my mind. And here I thought we were having a moment. #inner_monologue
+
++ [Stay calm] That’s not what I said, ma. #speaker_self
+    You don’t need to say any more. #speaker_right
+    You want me to speak my mind, and then you get angry when I do. #speaker_self
++ [Fire back] This is why I don’t come to the house.  #speaker_self
+    Oh, big man. #speaker_right
+    You want me to speak my mind, and then you get angry when I do.   #speaker_self
+- I said, speak your mind. I also told you not to bring up Appa. #speaker_right
+It’s ok Amma, Ravi didn't mean it that way. Ravi, can you, for a second, think about what you’re saying. Your words affect people you know. #speaker_left
+Works both ways. #speaker_self
+Are you forgetting I have been working for so many years? Nothing you can learn from me, is it? #speaker_right
+But you worked at a department store Amma. It’s not the same. #speaker_self
+#speaker_left_image:cha_ravi_revati_concerned.png
+Ravi!! #speaker_left
+He’s right. It’s not the same. But I can tell you this much. Not one of the days I have worked I have expected anything less than respect from anyone. And that respect, I give back to them. Whether you’re flying planes, or selling shoes you need to be happy with yourself. #speaker_right
+If you are doing something for the sake of it, or just because Appa did it, then you will always feel small. The department store paid for your food. It paid for your clothes. It paid for your school. And your university. And even when they asked me to go, I had to respect that. #speaker_right
+What is wrong with me? Can’t believe I am speaking to Amma like this. I can't take out my work stresses on her. #inner_monologue
+I’m sorry Amma. It's just... work has drained me, emotionally.   #speaker_self
+You don’t have to be sorry. #speaker_right
+Still, I’m sorry. I don’t know why I said all those things. My head is constantly full of doubt, and I feel like my dream will just stay that, you know, a dream. #speaker_self
+#speaker_right_image:cha_ravi_mum_dress_normal.png
+#speaker_left_image:cha_ravi_revati_normal.png
+You can realise your dream. But first, realise why the dream is important for you. Don’t anyhow think it’s for us, or even for whatever you imagine that Appa is. This dream - is it really what you want to do? #speaker_right
+Yes. It still is. #speaker_self
+Then you have a few decisions to make. Starting with speaking to your boss and your colleagues. Last time whenever I had a problem I brought it up. #speaker_right
+So many managers over my time. Some good lah. Some were so rude. Whether they help or not is out of your hands. But if you don’t speak up, then no chance. #speaker_right
+Do you want to stay in this internship? #speaker_right
+
++ [Stay?] I think I want to stay. I can sort it out. Thank you ma. #speaker_self
+    VAR ravi_3_internshipchoicetomum = "stay"
+    ~ ravi_3_internshipchoicetomum = "stay"
+    Ok. Then you know what you have to do. #speaker_right
+    Yeah. I’m gonna speak to them next week. #speaker_self
+    Whatever they say, stay calm. Don’t get angry.Remember,ஆறுவது சினம் (Anger should be calmed) Then you lose your ground. #speaker_right
+    I will try ma. Thank you. #speaker_self
+    You decide what’s best for you. Be Ravi. Not a scaredy-poke. #speaker_right
+    
++ [Quit?] I think I want to quit ma. I don’t want to stay in a place like that. #speaker_self
+    Ok. Then can you do another internship? #speaker_right
+    ~ ravi_3_internshipchoicetomum = "quit"
+    I would have to look for one. #speaker_self
+    You should speak to them first. Let them know. Will another internship be easy to find? #speaker_right
+    Yeah, I'll speak to them first. It will be a bit hard to get an internship outside the window. But I can try, if that's the only option. #speaker_self
+    You decide what’s best for you. Be Ravi. Not a scaredy-poke. #speaker_right
+
+-Amma didn’t raise a scaredy-poke. #speaker_left
+No she didn’t. #speaker_self
+Just be yourself, kanna.  #speaker_right
+
+-> ravi_3_7
+
+
+=== ravi_3_7 ===
+#knot:ravi_3_7
+#ui:narrator
+#background:bg_ravi_bedroom_mirror.jpg
+Ok. Enough of just sitting back and letting things happen. 
+{ravi_3_internshipchoicetomum == "stay": 
+    I told Amma that I wanted to stay. But is that really the best way for me to get to my dreams?
+    - else :
+    I told Amma that I intended to quit. But what do I really want to do for myself?
+    }
+If I have dreams, I need to wake up to realise them. Come on Ravi, you got this. 
+First things first. I need to speak to Roger tomorrow. I hate confrontation though. I can’t just bust into the room and blurt things out. I’m just not cut out for it. 
+How do people do it? Stand up for the things they want, without fear? Practise? Maybe I need to practise. Hmm. In front of the mirror? Should I be gentle and apologetic? Or aggressive? 
+I don’t even know what I look like when I’m being aggressive. Maybe if I can face myself saying things I want to say, I’ll figure it out. 
+Let me go talk in front of the mirror. I can’t control Roger’s actions, but I can have control over my own. Over my own words. Ok. Imagine it’s Roger in front of me. Here goes.
+#ui:scene
+#background:bg_ravi_bedroom_mirror.jpg
+#speaker_left_image:cha_ravi_roger_transparent.png 
+Hello Roger #speaker_self
+#background:bg_ravi_bedroom_mirror2.jpg
+... #speaker_left
++ There's something I need to talk to you about.[] #speaker_self
+    It's regarding the workplace environment. #speaker_self
++ I hope I’m not disturbing you.[] #speaker_self
+    It’s just a small thing.  #speaker_self
+- And I would like you to get a full understanding of the situation.  #speaker_self
+    Marcus and Qi An have said things about me, not knowing that I was listening. Nasty, racist things about my girlfriend and me.  #speaker_self
+    {ravi_3_confrontcolleagues == true: 
+        I tried to address this directly with them, but they deleted the texts and refused to discuss it further. #speaker_self 
+        - else:
+        I was not confident enough to address this directly with them when it first happened to me on the chat group.  #speaker_self 
+    }
+I... 
++ think that is uncalled for. [] #speaker_self
+    And a blatant display of how they view me as a lesser person. #speaker_self
+    These attitudes can seem harmless in private. But things are private only until they are not. #speaker_self
+
++ don’t mean to snitch on them. []
+    I feel like you deserve to know. I think they were just joking around. #speaker_self
+    But it hurt me. #speaker_self
+- And... #speaker_self
++ I’m not comfortable working in this environment. [] #speaker_self
+    I deserve respect. It’s the least I can expect. #speaker_self
++ I want to apologise for my directness.  []#speaker_self
+- I have decided that ... #speaker_self
++ I would like to tender my resignation. [] #speaker_self
+    VAR chapter_3_ending = 1
+    ~ chapter_3_ending = 1
+    Thank you for the opportunity here, but I think I am better off serving my internship in a place that respects diversity. #speaker_self
++ If you would like me to stay on, I need you to please address this.[]#speaker_self
+    ~ chapter_3_ending = 2
+    I believe that if you improve the workplace conditions, the company will also be better off in the long run. #speaker_self
+// transparent Roger disappears
+#speaker_left_image:pixel.png 
+VAR story_finished = true
+~ story_finished = true
+- Whoa. Saying that aloud lifted such a weight off my shoulders. #inner_monologue
+#ui:narrator
+#background:bg_ravi_bedroom_mirror.jpg
+Remember, you’re not asking for too much, and don’t have to feel bad about it. 
+Maybe you could be a little more confident? But hey, at least you got a start. 
+You’re doing this for Amma. For Revu. And for Val too. But most importantly, for yourself. 
+Just never forget... to be yourself. 
+
+
+-> ravi_3_ending
+
+
+=== ravi_3_ending ===
+#knot:ravi_3_ending
+#ui:story_end
+#reflection_id:9
+Reflection 9
 
 
 -> END
+
+
+    
+    // === chapter_3_ending_1 ===
+    // #knot:chapter_3_ending_1
+    // #ui:story_end
+    // #reflection_id:9
+    // ~ chapter_3_ending = 1
+    // Reflection 9
+    
+    
+    // -> END
+    
+    
+    // === chapter_3_ending_2 ===
+    // #knot:chapter_3_ending_2
+    // #ui:story_end
+    // #reflection_id:9
+    // ~ chapter_3_ending = 2
+    // Reflection 9
+    
+    
+    // -> END
+
+=== story_end_browser ===
+#ui:story_end_browser
+#reflection_id:9
+reflection browser 9
+
+    -> END

@@ -49,6 +49,7 @@
   {
     "id": 4,  
     "story":"Nadia", 
+    "chapter":3,
     "didyouknow": "Inter-cultural relationships are increasingly common in Singapore - but there are still hurdles and hardships along the way.",
     "media": "https://www.facebook.com/mosg.tv/videos/705929542901799/",
     "mediatype" : "video",
@@ -83,6 +84,7 @@
   {
     "id": 6,  
     "story":"Aman", 
+    "chapter":3,
     "didyouknow": "There are many smaller ethnic groups in Singapore. Find out more about them.",
     "media": "https://www.psd.gov.sg/challenge/ideas/feature/singapores-smaller-ethnic-minority-groups",    
     
@@ -126,6 +128,28 @@
     },
     "questions": [
       9,2,11,1,3
+    ]
+  },
+  {
+    "id": 9,  
+    "story":"Ravi", 
+    "chapter":3,
+    "didyouknow": "Discrimination can take a toll on people. Let's hear from those who experienced it.",
+    "mediatype" : "video",
+    "mediaimage" : "/didyouknow/ravi_3_video.jpg",
+    "media": "https://www.youtube.com/watch?v=muLdoCDdxBw",
+    "context": {
+      "character_name": "Ravi"
+    },
+    "quickQuestions": [     
+      9,      
+      2,
+      13,
+      10
+    ],
+    "longQuestions": [
+      1,      
+      3
     ]
   },
   {

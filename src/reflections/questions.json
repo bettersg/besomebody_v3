@@ -240,5 +240,32 @@
         "image_url": "/reflection/avatars/lukman.png"
       }  
     ]
+  },
+  {
+    "id": 13,
+    "type": "MULTI_CHOICE_IMAGE",
+    "body": "Which character do you most resonate with in {character_name}’s journey?",
+    "choices": [
+      {
+        "id":1,
+        "body": "Ravi" ,
+        "image_url": "/reflection/avatars/ravi.png"  
+      },
+      {
+        "id":2,
+        "body": "Revati",
+        "image_url": "/reflection/avatars/revati.png"  
+      },
+      {
+        "id":3,
+        "body": "Val",
+        "image_url": "/reflection/avatars/valerie.png"  
+      },
+      {
+        "id":4,
+        "body": "Roger",
+        "image_url": "/reflection/avatars/roger.png"          
+      }  
+    ]
   }
 ]

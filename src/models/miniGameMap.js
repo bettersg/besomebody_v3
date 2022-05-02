@@ -622,6 +622,87 @@ export const MINI_GAME_MAP = [
     ],
   },
   
+  // ravi 3
+  {
+    game_id: 9,
+    ui: "mcq",
+    introduction: "Ravi is experiencing some workplace discrimination. Let's understand this issue further.",
+    questions: [
+      {
+        question_id: 1,
+        question:
+          "What percentage of each race experienced discrimination when it came to applying for a job in Singapore? [2018 Survey]",
+        type: "text",
+        correct_answer_id: 4,
+        explanation:
+          "Based on the 2018 IPS Survey, 73 per cent of Malays, 68 per cent of Indians and about 50% of Others (which includes Eurasians) - felt that they had experienced discrimination when it came to applying for a job. In contrast, 38 per cent of Chinese respondents felt that way.",
+        answers: [
+          {
+            answer_id: 1,
+            title: "10% of Chinese, 85% of Malays, 50% of Indians",
+          },
+          {
+            answer_id: 2,
+            title: "10% of Chinese, 85% of Malays, 38% of Indians",
+          },
+          {
+            answer_id: 3,
+            title: "38% of Chinese, 38% of Malays, 85% Indians",
+          },
+          {
+            answer_id: 4,
+            title: "38% of Chinese, 73% of Malays, 68% of Indians",
+          },
+        ],
+      },
+      {
+        question_id: 2,
+        question:
+          "PM Lee announced in 2021 that, as there is currently no law prohibiting racial discrimination in the workplace, a new one would be introduced.",
+        correct_answer_id: 1,
+        explanation: "PM Lee said in his 2021 National Day Rally: Philosophically, writing the Tripartite Alliance for Fair Employment Practice guidelines into the law is a major move. It signals that we do not tolerate discrimination at workplaces.",
+        type: "text",
+        answers: [
+          {
+            answer_id: 1,
+            title: "True",
+          },
+          {
+            answer_id: 2,
+            title: "False",
+          },
+        ],
+      },
+      {
+        question_id: 3,
+        question:
+          "Based on complaints to the Tripartite Alliance for Fair and Progressive Employment Practices (Tafep), most companies discriminated on the basis of:  ",
+        type: "text",
+        correct_answer_id: 1,
+        explanation:
+          "MOM provided a breakdown of the discrimination complaints in 2021: 233 were based on nationality, 69 based on age, 49 on gender, and 13 on family responsibilities.",
+          answers: [
+            {
+              answer_id: 1,
+              title: "Nationality",
+            },
+            {
+              answer_id: 2,
+              title: "Gender",
+            },  
+            {
+              answer_id: 3,
+              title: "Age",
+            },   
+            {
+              answer_id: 3,
+              title: "Pregnancy",
+            },   
+          ],
+      },  
+    ],
+  },
+
 // zhihao 1
   {
   game_id: 11,

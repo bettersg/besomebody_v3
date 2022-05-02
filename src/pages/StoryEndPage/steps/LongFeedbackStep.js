@@ -16,6 +16,10 @@ const LongFeedbackStep = ({ reflection, questions, characterId, setState, getSta
     const questionIds = [...reflection.quickQuestions, ...reflection.longQuestions];
     const answers = [...quickAnswers, ...longAnswers];
 
+
+    const currentUserDb = await getDbUser(currentUser.id);
+    console.log((currentUserDb)?.activeRoom)
+
     const answerDocs = answers.map((answer, index) => {
       const questionId = questionIds[index];
       const question = questions.find(question => question.id === questionId);
@@ -38,21 +42,20 @@ const LongFeedbackStep = ({ reflection, questions, characterId, setState, getSta
 
     // Update the user achievements.
 
-    const currentUserDb = await getDbUser(currentUser.id);
-    console.log(currentUserDb)
 
     await updateDbUser({
       [`character_${characterId}_completed`]: true,
-    }, currentUserDb.id)          
+    }, currentUserDb.id)   
+    
   };
 
   const handleSuccess = () => {
     next();
   };
 
-  const handleError = () => {
+  const handleError = (err) => {
     setSnackbar({
-      message: "Failed to submit!",
+      message: `Failed to submit: ${err.message}`,
       open: true,
       type: "error",
     })
