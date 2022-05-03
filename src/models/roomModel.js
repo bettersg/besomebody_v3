@@ -21,35 +21,21 @@ import { firestore} from '../firebase'
 
 
 export const updateRoomParticipantsDb = async (id, userId) => {
-  
+  try {
     const roomRef = firestore.collection('rooms').doc(id)
-    roomRef.get().then((doc) => {
-      if (doc.exists) {
-        if (doc.data().numParticipants == null) {
-          roomRef.set({ // or should it be set
-            // numParticipants: 1,
-            participantIds: [userId]
-          },{merge: true})
-        }
-        if (doc.data().participantIds.includes(userId)) {
-          console.log("User already exists in room");
-          return null
-        }
-        else {
-          roomRef.update(
-            {
-              // numParticipants: doc.data().numParticipants + 1,
-              participantIds: [...doc.data().participantIds,userId]
-            }
-          )
-        }
-        
-      } 
-      else {
-        console.log("No such document!");
-      }
-    }).catch((error) => {
-      console.log("Error getting document:", error);
-    });  
+    const doc = await roomRef.get()
+    if (!doc.exists) {
+      throw new Error("Room does not exist")
+    }
+    const existingParticipantIds = doc.data().participantIds
+    if (existingParticipantIds.includes(userId)) {
+      console.log("User already exists in room")
+      return null
+    }
+    const newParticipantIds = [...existingParticipantIds, userId]
+    roomRef.update({ participantIds: newParticipantIds })
+  } catch (err) {
+    throw new Error(`Error at updateRoomParticipantsDb: ${err}`)
+  }
 }
 
