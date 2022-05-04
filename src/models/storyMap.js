@@ -736,6 +736,7 @@ export const CHARACTER_MAP = [
         knotTag: "zhihao_1_intro",
         summary: "Zhihao meets his uncles, and unwinds by playing games later. Both situations put him in a tough spot.",
         playable: true,
+        discordLink: 'https://discord.gg/bszB9A5bt6',
         images: [
           "/images/bg_zhihao_intro.jpg",          
           "/images/bg_zhihao_bedroom.jpg",
@@ -785,6 +786,7 @@ export const CHARACTER_MAP = [
         knotTag: "zhihao_2_intro",
         summary: "Zhihao is tested in multiple ways. Even with his skills, he may let a friend down.",
         playable: false,
+        discordLink: 'https://discord.gg/bszB9A5bt6',
         images: [
           "/images/bg_nadia_intro.jpg",
         ],
@@ -808,7 +810,8 @@ export const CHARACTER_MAP = [
         title: "Playing to the Crowd",
         knotTag: "zhihao_3_intro",
         summary: "Zhihao witnesses the power of social media. Will he master it, or will it conquer him?",
-        playable: true,
+        playable: false,
+        discordLink: 'https://discord.gg/bszB9A5bt6',
         images: [
           "/images/bg_nadia_intro.jpg",     
         ],
@@ -837,6 +840,7 @@ export const CHARACTER_MAP = [
         knotTag: "story_end_browser",
         summary: "Zhihao's story in the game has ended, but the stories of all our players are waiting to be explored.",
         playable: true,
+        discordLink: 'https://discord.gg/bszB9A5bt6',
         images: [
           "/images/bg_nadia_intro.jpg",         
         ],
@@ -875,6 +879,7 @@ export const CHARACTER_MAP = [
     description: "Unaisah wants to excel as a new teacher - but can she break the glass ceiling while dealing with things at home?",
     jsonLink: '../stories/nadia.ink.json',
     playable: false,
+    chapters: []
   }, 
   {
     characterId: 6,
@@ -885,6 +890,7 @@ export const CHARACTER_MAP = [
     description: "Marie wants to open her own cafe - but will her heritage and gender stand in the way of her success?",
     jsonLink: '../stories/nadia.ink.json',
     playable: false,
+    chapter: []
   },
 ];
 

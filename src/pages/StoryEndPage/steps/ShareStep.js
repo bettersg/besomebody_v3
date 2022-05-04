@@ -110,12 +110,12 @@ const ShareStep = ({ reflection, reflectionNum, characterId, setState, getState,
   const persona = CHARACTER_MAP.find((character) => character.characterId === characterId);  // I modified the last part slightly because  in this component, we know the characterId so we can reference that instead of the useParams option.
   const personaName = persona.name.split(" ")[0]
   const personaFullName = persona.name
-
-  // console.log('charmap',CHARACTER_MAP)
   
-  // const discordLink = CHARACTER_MAP.flatMap(character => character.chapters).find( ({reflectionId}) => reflectionId === reflectionNum).discordLink
-  const discordLink = 'https://discord.gg/bjenhVbPwq'
-    
+  // const discordLink = 'https://discord.gg/bjenhVbPwq'
+  // const discordLink = CHARACTER_MAP.flatMap(character => character.chapters).find( ({reflectionId}) => parseInt(reflectionId) === parseInt(reflectionNum)).discordLink
+
+  const discordLink = [persona.chapters][0].find(({ reflectionId }) => reflectionId === reflection.id).discordLink;
+
   const data2 = getState('answerDocs') ? getState('answerDocs') : null;  
   // const empathyCharacter = getState('answerDocs') ?
   //   data2[2].answer ? persona.reflectionBrowser[0].empathyCharacters.find((character) => character.characterName.toUpperCase() === data2[2].answer.toUpperCase()) : persona.reflectionBrowser[0].empathyCharacters[0]

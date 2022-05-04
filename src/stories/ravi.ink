@@ -1223,11 +1223,14 @@ Earth to Ravi...? #speaker_right
 ... #speaker_self
 Dude, don’t just live in your head. Talk to me! #speaker_right
 + [I should talk to Marie. Maybe she can help.] Well...it’s just that I can do all that, but it won’t change our financial situation.  You know what I mean? #speaker_self
+    VAR ravi_2_talktomarie = true
+    ~ ravi_2_talktomarie = true
     Well, I’m not saying it will. I don’t think your mum is expecting that either. But you can at least be a good son to her. #speaker_right
     Sometimes just reaching out is what it takes to make the other person feel better. #speaker_right
     It’d still be putting a band-aid on a fracture. #speaker_self
 
 + [I can’t talk to Marie about this right now. ] It’s nothing. Yeah, you’re right. #speaker_self
+    ~ ravi_2_talktomarie = false
     Come on man. What’s wrong? Tell me. #speaker_right
     Hey... I can’t, not right now. #speaker_self
     Why not? Aren’t we friends? We’ve known each other for so long. #speaker_right

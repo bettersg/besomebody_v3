@@ -131,7 +131,7 @@ const ChapterEnd = () => {
   const personaFullName = persona.name
   
   const discordLink = persona.chapters.find((chapter) => chapter.chapterId == chapterNumber ).discordLink 
-  // console.log(chapterNumber)
+  // console.log(discordLink)
   // .find(({ chapterId }) => chapterId === chapter).discordLink
   
   const characterId = persona.characterId
