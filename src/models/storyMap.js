@@ -785,7 +785,7 @@ export const CHARACTER_MAP = [
         title: "Team Work",
         knotTag: "zhihao_2_intro",
         summary: "Zhihao is tested in multiple ways. Even with his skills, he may let a friend down.",
-        playable: false,
+        playable: true,
         discordLink: 'https://discord.gg/bszB9A5bt6',
         images: [
           "/images/bg_nadia_intro.jpg",
