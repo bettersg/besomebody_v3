@@ -1008,6 +1008,7 @@ Maybe I can add comedy to my skills list haha.
     Even if it's the truth, I think no need to say this kind of thing online lah.
 }
 Anyway, business is damn good coz now  my twitch follower numbers so high.
+#background:ui_emailinbox.png
 I just got an email invite from Singapore Elites, the best gaming team in Singapore! 
 ~ chapter_id = 2
 CHAPTER {chapter_id} #title
@@ -1033,15 +1034,15 @@ Eh how to reply ah. Is formal correct anot? Or informal? Sekali (what if) I use 
 + [Formal safer] -> zhihao_2_1a
 + [Aiyah, I copy Ian's informal template] -> zhihao_2_1b
 
-= zhihao_2_1a
+=== zhihao_2_1a ===
 #knot:zhihao_2_1a
 #ui:email
 #emailheader:Compose Email
-#emailto:Univ Housing <admin@univ.edu.sg>
-#emailfrom:Elite Gamers <ian.lim@elitegamers.sg>
+#emailto:Elite Gamers <ian.lim@elitegamers.sg>
+#emailfrom:Zhihao <zhihao@email.com>
 #emailfromicon:ico_zhihao.png
 #emailsubject:Invitation to Alphas Tryouts
-#replyemaildate:On Wed 6 Oct 2021, Univ Housing <admin@univ.edu.sg> wrote:  
+#replyemaildate:On Wed 6 Oct 2021, Iam <ian.lim@elitegamers.sg> wrote:  
 #replyemailtext:Hi Zhihao, /n /n Team Singapore Elites notes your gaming prowess on Twitch, and hence would like to invite you to our Alphas tryouts! It will take place this Saturday at 2.00 PM at The Chaos Arena. /n /n Let us know about your participation by this Wednesday. We hope that you can make it! /n /n Best, /n Ian Lim  /n  Lead Coordinator, Elite Gamers Singapore
 Dear Mr Lim, #speaker_self
 VAR zhihao_2_formalemail = true
@@ -1059,15 +1060,15 @@ Lim Zhihao  #speaker_self
 -> zhihao_2_2
 
 
-= zhihao_2_1b
+=== zhihao_2_1b ===
 #knot:zhihao_2_1b
 #ui:email
 #emailheader:Compose Email
-#emailto:Univ Housing <admin@univ.edu.sg>
-#emailfrom:Elite Gamers <ian.lim@elitegamers.sg>
+#emailto:Elite Gamers <ian.lim@elitegamers.sg>
+#emailfrom:Zhihao <zhihao@email.com>
 #emailfromicon:ico_zhihao.png
 #emailsubject:Invitation to Alphas Tryouts
-#replyemaildate:On Wed 6 Oct 2021, Univ Housing <admin@univ.edu.sg> wrote:  
+#replyemaildate:On Wed 6 Oct 2021, Iam <ian.lim@elitegamers.sg> wrote:  
 #replyemailtext:Hi Zhihao, /n /n Team Singapore Elites notes your gaming prowess on Twitch, and hence would like to invite you to our Alphas tryouts! It will take place this Saturday at 2.00 PM at The Chaos Arena. /n /n Let us know about your participation by this Wednesday. We hope that you can make it! /n /n Best, /n Ian Lim  /n  Lead Coordinator, Elite Gamers Singapore
 Hi Ian, #speaker_self
 ~ zhihao_2_formalemail = false
@@ -1516,13 +1517,29 @@ If that’s your preference, we can.#speaker_left
 You know, it’s odd. We paired you and Alex together as we thought your personalities are similar. #speaker_left
 It’s a pity it’s turned out this way between you two. #speaker_left
 
+-> zhihao_2_5
 
+// minigame goes here
 
-
-
-
-
-
+=== zhihao_2_5 === 
+#knot:zhihao_2_5
+#ui:narrator
+#background:bg_zhihao_home.jpg
+Wahlao, the judges blind issit? How am I like Alex! Siao.
+I just happy this round finish liao. But I think I cocked it up.
+#ui:scene
+#background:bg_zhihao_home.jpg
+MA! #speaker_self
+Where’s Ma? Today Saturday got her ‘Sheng Siong Show’, she how come go out? #inner_monologue
+{zhihao_2_taketaxi == true:
+    Aiyah but this morning she confirm angry with me.  #inner_monologue
+    But she drive until so teruk how to reach the place on time.  #inner_monologue
+    I better cook dinner. So she happier.  #inner_monologue
+- else:
+    This morning she make me late.   #inner_monologue
+    Today if she cook confirm cook late.   #inner_monologue
+    Aiyah I cook dinner myself better lah.   #inner_monologue
+}
 
 
 
