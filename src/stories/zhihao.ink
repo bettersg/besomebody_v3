@@ -1121,12 +1121,12 @@ Even though I told Ma not to come!
 #speaker_left_image:cha_zhihao_mother_frustrated.png
 #speaker_left_name:Ma
 Ah Boy! Faster get in! #speaker_left
+#speaker_right_image:cha_zhihao_driver_normal.png
+#speaker_right_name:Driver
 Ah, Mister! Mister! I can fetch my son-- nevermind! Like that you can fetch other people. Thank you ah, thank you! #speaker_left
 You want to go to your mother’s car? It’s okay. You pay already so cannot cancel. #speaker_right
 Malu, sia. #inner_monologue
 And Ma drive sibeh slow. Aiyoh why she do this... #inner_monologue
-#speaker_right_image:cha_zhihao_driver_normal.png
-#speaker_right_name:Driver
 + [Take the taxi] -> zhihao_2_2a
 + [Take your ma's offer] -> zhihao_2_2b
 
@@ -1159,7 +1159,7 @@ Haiz. I look at Ma’s face I feel bad already. #inner_monologue
 #ui:scene
 #background:bg_zhihao_esports.jpg
 #speaker_left_image:cha_zhihao_ian_normal.png
-#speaker_left_name:Ma
+#speaker_left_name:Ian
 Woah. The place looks cool. Where’s the registration?  #inner_monologue
 // IAN stands in front of ZHIHAO. 
 Hey there! I’m Ian. You’re here for the tryouts, right? #speaker_left
