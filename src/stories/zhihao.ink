@@ -1519,9 +1519,14 @@ It’s a pity it’s turned out this way between you two. #speaker_left
 
 -> zhihao_2_5
 
-// minigame goes here
+
 
 === zhihao_2_5 === 
+#knot:zhihao_2_minigame
+#ui:mcq
+#game_id:12
+Minigame 12 // must add some text
+
 #knot:zhihao_2_5
 #ui:narrator
 #background:bg_zhihao_home.jpg
