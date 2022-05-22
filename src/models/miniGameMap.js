@@ -784,6 +784,88 @@ export const MINI_GAME_MAP = [
     },  
   ],
   },
+
+  // zhihao 2
+  {
+    game_id: 12,
+    ui: "mcq",
+    introduction: "...",
+    questions: [
+      {
+        question_id: 1,
+        question:
+          "Zhihao's family speaks Chinese dialect. What percentage of all local households speak a Chinese dialect at home?",
+        type: "text",
+        correct_answer_id: 1,
+        explanation:
+          "In 2020, only 8.7% of all households speak dialects at home (reduction from 2010, which was 14.3%). 48.3% speak English, 29.9% speak Mandarin, 9.2% speak Malay, and 2.5% speak Tamil at home.  [2020 Census]",
+        answers: [
+          {
+            answer_id: 1,
+            title: "8.7%",
+          },
+          {
+            answer_id: 2,
+            title: "12.5%",
+          },
+          {
+            answer_id: 3,
+            title: "14.3%",
+          },
+          {
+            answer_id: 4,
+            title: "20.1%",
+          },
+        ],
+      },
+      {
+        question_id: 2,
+        question:
+          "After Zhihao's father passed, the family observed a period of mourning and did not attend events. Which of these customs is not associated with Chinese (non-Christian) funerals?",
+        correct_answer_id: 4,
+        explanation: "Immediate cremation is normally associated with Hindu funerals, as Hindus believe the physical body has no sacred purpose and cremation helps reincarnation. For Chinese funerals, the deceased may be buried or cremated, usually after a multi-day wake is held.",
+        type: "text",
+        answers: [
+          {
+            answer_id: 1,
+            title: "Wearing a small cloth patch on your shoulder",
+          },
+          {
+            answer_id: 2,
+            title: "Disposing of a red string after attending the wake",
+          },
+          {
+            answer_id: 3,
+            title: "Burning paper models of possessions for the loved one",
+          },
+          {
+            answer_id: 4,
+            title: "Immediate cremation of the body",
+          },
+        ],
+      },
+      {
+        question_id: 3,
+        question:
+          "Older Chinese Singaporeans protested heavily against the removal of Chinese-medium schools (like the original Chinese High and Nantah University), and felt such actions reflected a lack of their 'Chinese Privilege'.",
+        type: "text",
+        correct_answer_id: 1,
+        explanation:
+          "In a 2021 speech by Min Lawrence Wong, he explained that older local Chinese feel like the modern term 'Chinese Privilege' does not reflect their lived experience, because of the 'Nantah episode' and the emphasis on English over Chinese language (and the removal of dialects) put them at a distinct disadvantage, despite being an ethnic majority.",
+          answers: [
+            {
+              answer_id: 1,
+              title: "True",
+            },
+            {
+              answer_id: 2,
+              title: "False",
+            },
+          
+          ],
+      },  
+    ],
+    },
 ];
   
 
