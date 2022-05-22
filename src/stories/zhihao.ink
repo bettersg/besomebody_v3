@@ -1541,23 +1541,205 @@ Where’s Ma? Today Saturday got her ‘Sheng Siong Show’, she how come go out
     Aiyah I cook dinner myself better lah.   #inner_monologue
 }
 
+#background:bg_zhihao_home_emptyfridge.jpg
+Shit. I so shag, forgot to buy groceries also.  #inner_monologue
+I put my bag in my room first.  #inner_monologue
+
+//A shot of the open master bedroom entrance, with Ma holding up her camera phone taking pictures, facing away from ZHIHAO.
+Eh, ma is home leh... #inner_monologue
+#background:bg_zhihao_home.jpg
+#speaker_left_image:cha_zhihao_mother_normal.png
+#speaker_left_name:Ma
+Ma! Just now I call you why you diam-diam! #speaker_self
+What you doing? #speaker_self
+Eh? You come back already ah! Chi bao le mei you? (Eaten already?) #speaker_left
+Not yet. I going NTUC. Today dinner I help you cook. #speaker_self
+Don’t lah I go down later. Eh you help me look, which photo of the room better? #speaker_left
+//Close-up of MOTHER’s phone screen with a picture of the master bedroom. #
+For what? #speaker_self
+For the property agent. She tell me take picture of the room, take one set day one set night. Dunno if take like that okay anot. #speaker_left
+Eh, Ma. Why you prata? That time you say you don’t want to rent out the bedroom. #speaker_self
+I never say don’t want mah! Bo pian need to support your Ah Gong what. Nevermind one, I can sleep in the other room. #speaker_left
+Wah, she give up so fast. #inner_monologue
+//Montage of the aspects of the room with Pa’s things, eg. a framed wedding picture, a planner, letters in envelopes, a Casio watch, a box of folded men’s shirts etc. #
+All of Pa’s things still here in the room. What’s she going to do? Pack them all up? Give them away? #inner_monologue
++ [Confront Ma] So just like that you let Pa go? #speaker_self
+    Who say I let him go? You better watch what you say ah. #speaker_left
+    VAR zhihao_2_confrontma = true
+    ~ zhihao_2_confrontma = true
+    I can pay the fees, you know. #speaker_self
+    You keep your money for your studies. This kind of thing you don’t make into your problem. This one for me and Ji Gu to handle. #speaker_left
+    I can pay the fee difference. You don’t chin cai move Pa’s things away. #speaker_self
+    Ah Boy, I tell you already, you don’t action try to be hero. You think this problem I dunno how to solve issit? #speaker_left
+    Problem you where got solve. You let strangers stay lagi big problem. #speaker_self
+    You think carefully: This is Pa’s bed. Your bed. For twenty years. #speaker_self
+    You still anyhow want to let strangers sleep in it? #speaker_self
+    Bed is just bed lah! So big I one person sleep, waste space. #speaker_left
+    Better I move to the other room, let people pay for this one. #speaker_left
+    Then how come that time Ji Gu say this idea you angry? #speaker_self
+    TSK. You don’t geh kiang (act nosy) lah. Talk so much. #speaker_left
+    Wah lao she damn qian bian (annoying). #inner_monologue
+    Why you so fast change your mind? Pa’s things must respect leh. #speaker_self
+    If you want to respect Pa, first thing you respect is me hor. #speaker_left
+    Aiyah.. Forget it lah. #inner_monologue
+    I go out now. #speaker_self
+    For what? #speaker_left
+    Buy to cook dinner lah. Just now say already. #speaker_self
+    I go buy lah, you stay home. #speaker_left
+    You busy taking picture how to go now. #speaker_self
+    //Shot of grille door and corridor indicating ZHIHAO leaving the house. #
+    #background:bg_zhihao_hdb_carpark.jpg
+    Wah lao, she never even ask about my tryouts. #inner_monologue
+    Everytime we talk, we end up fighting. Always over Pa. #inner_monologue
+
++ [Avoid bringing up Pa] Haiz. But if I talk about Pa we confirm fight.#inner_monologue
+    The other room can cover the fees right. Why need to rent the master bedroom? #speaker_self
+    ~ zhihao_2_confrontma = false
+    The other room got so much barang (stuff) how to put in the bed? Smaller also. Confirm people don’t want lah. #speaker_left
+    You never try how you know. #speaker_self
+    Our area so ulu you think people like to stay here issit? If I rent out that room will only get the funny type. #speaker_left
+    Eh Ma, I pay the fee difference. Don’t rent out the room. #speaker_self
+    You earn how much only! Your money you don’t end up pay for everything. Save for your uni. #speaker_left
+    Just let me pay lah. #speaker_self
+    Ah Boy, I know you want to help lah, but you don’t busybody can. This problem I know how to solve. #speaker_left
+    Wahlao, I cannot say to her face but sometimes Ma damn qian bian (annoying) #inner_monologue
+    I earn enough. I can pay. #speaker_self
+    If halfway you want to stop work just go school how? #speaker_left
+    Won’t lah. #speaker_self
+    Today your competition how? Win anot? #speaker_left
+    Lol she now then ask. #inner_monologue
+    Next round then is the final. They haven’t select yet. #speaker_self
+    When you will know? #speaker_left
+    Dunno. Maybe next few days. #speaker_self
+    Orh. Jiayou ah. #speaker_left
+    Eh this room you don’t rent hor. #speaker_self
+    If you get in, maybe I change to the small room. #speaker_left
+    EH! #speaker_self
+    End of discussion. #speaker_left
+    
+- -> zhihao_2_6
+
+=== zhihao_2_6 ===
+#knot:zhihao_2_6
+#ui:notification
+#background:ui_zhihao_message.jpg
+Gavin: Hey bro # message
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Gavin Tan
+#chat_group_image:ico_nadia_gavin.png
+#speaker_1_name:Gavin
+Hey bro #speaker_1
+{chapter_1_ending_1:
+    Crap. I delete the tweet liao how come he still know? #wa_inner_monologue
+    - else: 
+    Crap. Must be he saw the tweet.#wa_inner_monologue
+}
++ [Play it cool] Yo #speaker_self
++ [Do not respond yet] He write like that I cannot even tell if he angry or what. #wa_inner_monologue
+    I think better not reply first. #wa_inner_monologue
+- How did the tryouts go? #speaker_1
+Not bad #speaker_self
+But not v good also #speaker_self
+Dunno if he asking me this just to start the convo. #wa_inner_monologue
+Nahh you prob owned everyone. When will they release the results? #speaker_1
+Next few days #speaker_self
+Will pray for you haha #speaker_1
+LOL #speaker_self
+Btw there’s something I need to let you know #speaker_1
+Hope you don’t take it the wrong way #speaker_1
+Jialat he wanna talk about the tweet liao. #wa_inner_monologue
++ Issit cos of my tweet? [] #speaker_self
++ Eh.. uh I always joke when I tweet... []  Dun take so seriously #speaker_self
+- Is Tue 2pm okay with you for the lunch? I finish tutorials by then #speaker_1
+//GAVIN’s message comes up almost simultaneously with ZHIHAO’s answer above. #
+Sorry I pegged down a solid date only now lol #speaker_1
+Eh what. Totally different topic sia. #wa_inner_monologue
+Lol what tweet? #speaker_1
+Wtf lah why I sabo myself. #wa_inner_monologue
+Tue is ok #speaker_self
+Haha that’s what you wanna ask? #speaker_self
+Thing is, I’ve asked Nadia to join us #speaker_1
+Wah piang why he must bring his gf. Now I become lightbulb sia. #wa_inner_monologue
++ [Accept it] Oh... #speaker_self
+    But if he really want her there, very bad to say no. #wa_inner_monologue
+    VAR zhihao_2_acceptnadiadate = true
+    ~ zhihao_2_acceptnadiadate = true
+    Lol kk #speaker_self
+    Dunno if she’ll understand me lol. School never talk that much with her. #speaker_self
+    Haha she understands anything #speaker_1
+    Don’t worry bro you’ll like talking to her #speaker_self
+    Wouldn’t do it if I didn’t think you two would get along #speaker_self
+    Suan le ba [Forget it.] I want also cannot change his mind. #wa_inner_monologue
+    Kk, see you Mon #speaker_self
+
++ [Say no] Uh... #speaker_self
+     I better say no. #wa_inner_monologue
+    ~ zhihao_2_acceptnadiadate = false
+    If she join us will be damn paiseh #speaker_self
+    Cos very hard to talk #speaker_self
+    You’ll warm up to each other, I’m sure #speaker_1
+    She already knows Aman and they get along great #speaker_1
+    Another time better #speaker_self
+    We eating bakchormee rmb #speaker_self
+    We still can, she’ll order something else #speaker_1
+    Then everytime we eat bakchormee she eat different food like very out #speaker_self
+    Cannot lah #speaker_self
+    If you feel paiseh we don’t have to eat bakchormee lol #speaker_1
+    Haiz. That’s why my tweet is the truth. #wa_inner_monologue
+    We should still eat bakchormee lah #speaker_self
+    Kk, see you Mon #speaker_self
+
+- Thanks man! Means a lot to me btw haha #speaker_1
+Hey, of the three of us, you’re the best gamer by a mile #speaker_1
+Just don’t tell Aman hahaha #speaker_1
+I dunno if cos he super religious or what, but Gavin really sibeh (damn) steady. #wa_inner_monologue
+He always got something good to say about people. Even if got nothing good about them, heh. #wa_inner_monologue
+I know if I tell him anything, he won’t judge. #wa_inner_monologue
+Wah seh you say me until liddat I paiseh (shy) leh #speaker_self
+All the best for the finals #speaker_1
+Dunno if in yet lah #speaker_self
+It’s a given. Trust me 🤩  #speaker_1
+Btw you wanted to tell me about some tweet earlier? #speaker_1
+
++ [Try to cover it up] Lol I forgot what tweet alr #speaker_self
+    VAR chapter_2_ending = 1
+    ~ chapter_2_ending = 1
+    Nothing impt. Nowadays i got a lot of followers, so got too many tweets la. #speaker_self
+    Oh lol #speaker_1
+    Anw excited to intro you to have you get to know Nad better #speaker_1
+    Been waiting for it for a long time #speaker_1
+    Haha macam (almost like) meet vip #speaker_self
+    All my bros are VIPs lol #speaker_1
+    Sometimes, I dunno how Gavin is friends with me. #wa_inner_monologue
+    And I dunno if he knows, but it’s a very important friendship to me. Maybe my most important friendship. #wa_inner_monologue
+    Sometimes I’m scared we’ll drift apart. Cos Gavin already got so many good friends, now got his new gf-- he where got time for everyone? #wa_inner_monologue
+    But of course I won’t tell him this lah, a bit malu (embarrassed) sia. #wa_inner_monologue
+    Must show I have my shit together. I’m not a kid anymore. #wa_inner_monologue
+
++ [Mention it but skip the details] Oh haha #speaker_self
+    I tweeted a joke abt you and bakchormee #speaker_self
+    ~ chapter_2_ending = 2
+    LOLOL what’s new #speaker_1
+    You’re always joking about me and bakchormee #speaker_1
+    But  bakchormee and I are inseparable hahaha #speaker_1
+    I don’t say this to Gavin lah, but he’s a damn important friend. #wa_inner_monologue
+    Eating lunch with him is the best time I have in school. #wa_inner_monologue
+    I never think of this before sia, but now he got Nadia, I dunno if he will start to pangseh our break-times. #wa_inner_monologue
+    I try not to think about it. But buay sai (I am unable to stop myself) lah.  #wa_inner_monologue
+    
+- -> zhihao_2_reflection
+
+
+=== zhihao_2_reflection ===
+#knot:zhihao_1_reflection
+#ui:chapter_reflection
+#reflection_id:12
+Reflection 12
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// -> zhihao_3_intro
 
 
 
