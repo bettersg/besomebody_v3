@@ -1104,7 +1104,7 @@ If she say ten means twenty. Opposite of Pa. #inner_monologue
 #ui:whatsapp 
 #background:whatsapp.png
 #chat_group_title:Ma
-#chat_group_image:cha_zhihao_gavinprofileicon.jpg
+#chat_group_image:ico_zhihao_mother.png
 #speaker_1_name:Ma
 Eh Ma, nevermind lah. I take Grab. #speaker_self
 Tsk, don’t waste money! #speaker_1
