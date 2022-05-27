@@ -2,6 +2,7 @@ import NadiaInk from '../stories/nadia.ink.json'
 import AmanInk from '../stories/aman.ink.json'
 import RaviInk from '../stories/ravi.ink.json'
 import ZhihaoInk from '../stories/zhihao.ink.json'
+import UnaisahInk from '../stories/unaisah.ink.json'
 
 // TODO: Update with other properties such as character image, character bio, chapter summary, etc
 /* 
@@ -28,7 +29,7 @@ chapters []
  
  -> to add the primary colour and secondary colour info for each character based on the UI design.
  
-// reflectionIDs: aman 1,5,6 | nadia 2,3,4 |  ravi 7,8,9,10 |  zhihao 11,12,13
+// reflectionIDs: aman 1,5,6 | nadia 2,3,4 |  ravi 7,8,9,10 |  zhihao 11,12,13 | unaisah 14,15,16, 17
 
 */
 
@@ -873,18 +874,192 @@ export const CHARACTER_MAP = [
   {
     characterId: 5,
     name: "Unaisah Begum",
-    linkName: "",
+    linkName: "unaisah",
     profileImage: "/images/profile_unaisah.png",
     characterIntroImage:  "/character_choice_page/unaisah.png",
     description: "Unaisah wants to excel as a new teacher - but can she break the glass ceiling while dealing with things at home?",
-    jsonLink: '../stories/nadia.ink.json',
-    playable: false,
-    chapters: []
+    jsonLink: '../stories/unaisah.ink.json',
+    playable: true,
+    shareImage:'/shareable_avatars/nadia_share.svg',
+    jsonFile: UnaisahInk,
+    primaryColour: '#FB5A3F',
+    secondaryColour: '#664EFC',
+    newestChapter: 1,    
+    chapters: [
+      {
+        chapterId: 1,
+        reflectionId:2,
+        number: 1,
+        title: "Teacher’s First Day",
+        knotTag: "unaisah_1_intro",
+        summary: "After leaving her previous job, Unaisah experiences her first week as a teacher. What will she tell her colleagues about her past?",
+        playable: true,
+        discordLink: 'https://discord.gg/QyR2fvqSgN',
+        images: [
+          "/images/bg_nadia_intro.jpg",
+          "/images/bg_nadia_schooldrivewayatnight.jpg",
+           
+        ],
+        endings: [
+          {
+            endingId: 1,
+            title: "Nadia likes a type of guy",
+            inkVar: "chapter_1_ending_1",
+          },
+          {
+            endingId: 2,
+            title: "Nadia doesn't have a type",
+            inkVar: "chapter_1_ending_2",
+          },
+         
+        ]
+      },
+      {
+        chapterId: 2,
+        number: 2,
+        reflectionId:3,
+        title: "The Date Crasher",
+        knotTag: "nadia_2_intro",
+        summary: "Nadia runs into some hard realities. Sometimes, having dreams isn't as straightforward as it should be.",
+        playable: false,
+        discordLink: 'https://discord.gg/Az4tr5XXJM',
+        images: [
+          "/images/bg_nadia_intro.jpg",
+          "/images/bg_nadia_bedroom.jpg",
+          "/images/bg_nadia_selfiehijab.jpg",
+          "/images/bg_nadia_mall.jpg",
+          "/images/bg_nadia_cinema.jpg",
+          "/images/bg_nadia_library.jpg",          
+          "/images/ui_nadia_message.jpg",
+          "/images/bg_nadia_playgroundnight.jpg",          
+          "/images/cha_nadia_gavin_casual_concerned.png",                  
+          "/images/cha_nadia_gavin_casual_grinning.png",                  
+          "/images/cha_nadia_gavin_casual_nervous.png",                  
+          "/images/cha_nadia_gavin_casual_normal.png",                  
+          "/images/cha_nadia_chloe_school_concerned.png",                  
+          "/images/cha_nadia_chloe_school_confused.png",
+          "/images/cha_nadia_chloe_school_frustrated.png",                  
+          "/images/cha_nadia_chloe_school_grinning.png",                  
+          "/images/cha_nadia_chloe_school_normal.png",
+          "/images/cha_nadia_chloe_school_sad.png",
+          "/images/cha_nadia_azlin_normal.png",
+          "/images/cha_nadia_azlin_teasing.png",
+          "/images/cha_nadia_azlin_angry.png",
+          "/images/cha_nadia_azlin_happy.png",
+          "/images/cha_nadia_azlin_confused.png",
+          "/images/cha_nadia_azlin_concerned.png",
+          "/images/bg_launch.jpg",
+          "/images/bg_reflections.jpg",
+        ],
+        endings: [
+          {
+            endingId: 1,
+            title: "Azlin gets upset with you",
+            inkVar: "chapter2_ending_1",
+          },
+          {
+            endingId: 2,
+            title: "Azlin tells you to give him up",
+            inkVar: "chapter2_ending_2",
+          },
+        ]
+      },
+      {
+        chapterId: 3,
+        number: 3,
+        reflectionId:4,
+        title: "Fork in the Road",
+        knotTag: "nadia_3_intro",
+        summary: "As one door closes, another opens. But which girl will step through that door? As JC life comes to an end, only Nadia can choose.",
+        playable: false,
+        discordLink: 'https://discord.gg/9ttyzdsANY',
+        images: [
+          "/images/bg_nadia_intro.jpg",
+          "/images/bg_nadia_bedroom.jpg",
+          "/images/bg_nadia_selfiehijab.jpg",
+          "/images/bg_nadia_library.jpg",          
+          "/images/ui_nadia_message.jpg",
+          "/images/cha_nadia_gavin_casual_concerned.png",                  
+          "/images/cha_nadia_gavin_casual_grinning.png",                  
+          "/images/cha_nadia_gavin_casual_nervous.png",                  
+          "/images/cha_nadia_gavin_casual_normal.png",                  
+          "/images/cha_nadia_chloe_school_concerned.png",                  
+          "/images/cha_nadia_chloe_school_confused.png",
+          "/images/cha_nadia_chloe_school_frustrated.png",                  
+          "/images/cha_nadia_chloe_school_grinning.png",                  
+          "/images/cha_nadia_chloe_school_normal.png",
+          "/images/cha_nadia_chloe_school_sad.png",
+          "/images/cha_nadia_unaisah.png",
+          "/images/cha_nadia_zhihao.png",
+          "/images/bg_launch.jpg",
+          "/images/bg_nadia_schoolhall.jpg",
+          "/images/bg_nadia_chloehome.jpg",
+          "/images/bg_nadia_gavinhome.jpg",
+          "/images/bg_nadia_fathercaratday.jpg",        
+        ],
+        endings: [
+          {
+            endingId: 1,
+            title: "Nadia and Gavin, together",
+            inkVar: "chapter3_ending_1",
+          },
+          {
+            endingId: 2,
+            title: "Nadia keeps her options open",
+            inkVar: "chapter3_ending_2",
+          },          
+          {
+            endingId: 3,
+            title: "Nadia moves forward alone",
+            inkVar: "chapter3_ending_3",
+          }, 
+        ]
+      },
+    ],
+    reflectionBrowser: [
+      {         
+        title: "Reflection Browser",
+        knotTag: "story_end_browser",
+        summary: "Nadia's story in the game has ended, but the stories of all our players are waiting to be explored.",
+        playable: false,
+        discordLink: 'https://discord.gg/9ttyzdsANY',
+        images: [
+          "/images/bg_nadia_intro.jpg",         
+          "/images/bg_launch.jpg",
+          "/images/bg_reflections.jpg",
+        ],
+        empathyCharacters: [
+          {
+            characterName: 'Nadia',
+            characterImage: '/shareable_avatars/nadia.png',
+            shareImage:'/shareable_avatars/nadia_share.svg',
+          },
+          {
+            characterName: 'Azlin',
+            characterImage: '/shareable_avatars/azlin.png',
+          },
+          {
+            characterName: 'Gavin',
+            characterImage: '/shareable_avatars/gavin.png',
+          },
+          {
+            characterName: 'Chloe',
+            characterImage: '/shareable_avatars/chloe.png',
+          },
+          {
+            characterName: 'Rahman',
+            characterImage: '/shareable_avatars/rahman.png',
+          },
+
+        ]
+      },
+    ]
+
   }, 
   {
     characterId: 6,
     name: "Marie da Costa",
-    linkName: "",
+    linkName: "marie",
     profileImage: "/images/profile_blank.png",
     characterIntroImage:  "/images/instagram_blank.png",
     description: "Marie wants to open her own cafe - but will her heritage and gender stand in the way of her success?",
