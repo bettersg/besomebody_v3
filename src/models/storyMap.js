@@ -888,7 +888,7 @@ export const CHARACTER_MAP = [
     chapters: [
       {
         chapterId: 1,
-        reflectionId:2,
+        reflectionId:14,
         number: 1,
         title: "Teacher’s First Day",
         knotTag: "unaisah_1_intro",
@@ -903,13 +903,18 @@ export const CHARACTER_MAP = [
         endings: [
           {
             endingId: 1,
-            title: "Nadia likes a type of guy",
-            inkVar: "chapter_1_ending_1",
+            title: "Unaisah says she loves teaching",
+            
           },
           {
             endingId: 2,
-            title: "Nadia doesn't have a type",
-            inkVar: "chapter_1_ending_2",
+            title: "Unaisah says she was not happy there",
+            
+          },
+          {
+            endingId: 3,
+            title: "Unaisah tells them her secret",
+            
           },
          
         ]
@@ -917,10 +922,10 @@ export const CHARACTER_MAP = [
       {
         chapterId: 2,
         number: 2,
-        reflectionId:3,
-        title: "The Date Crasher",
-        knotTag: "nadia_2_intro",
-        summary: "Nadia runs into some hard realities. Sometimes, having dreams isn't as straightforward as it should be.",
+        reflectionId:15,
+        title: "Mistaken Identity",
+        knotTag: "unaisah_2_intro",
+        summary: "Unaisah must confront who she is--by confronting who others think she is.",
         playable: false,
         discordLink: 'https://discord.gg/Az4tr5XXJM',
         images: [
@@ -967,34 +972,42 @@ export const CHARACTER_MAP = [
       {
         chapterId: 3,
         number: 3,
-        reflectionId:4,
-        title: "Fork in the Road",
-        knotTag: "nadia_3_intro",
-        summary: "As one door closes, another opens. But which girl will step through that door? As JC life comes to an end, only Nadia can choose.",
+        reflectionId:16,
+        title: "The Mother of All Expectations",
+        knotTag: "unaisah_3_intro",
+        summary: "Even as Unaisah progresses in her teaching career, she must make a crucial life decision.",
         playable: false,
         discordLink: 'https://discord.gg/9ttyzdsANY',
         images: [
           "/images/bg_nadia_intro.jpg",
-          "/images/bg_nadia_bedroom.jpg",
-          "/images/bg_nadia_selfiehijab.jpg",
-          "/images/bg_nadia_library.jpg",          
-          "/images/ui_nadia_message.jpg",
-          "/images/cha_nadia_gavin_casual_concerned.png",                  
-          "/images/cha_nadia_gavin_casual_grinning.png",                  
-          "/images/cha_nadia_gavin_casual_nervous.png",                  
-          "/images/cha_nadia_gavin_casual_normal.png",                  
-          "/images/cha_nadia_chloe_school_concerned.png",                  
-          "/images/cha_nadia_chloe_school_confused.png",
-          "/images/cha_nadia_chloe_school_frustrated.png",                  
-          "/images/cha_nadia_chloe_school_grinning.png",                  
-          "/images/cha_nadia_chloe_school_normal.png",
-          "/images/cha_nadia_chloe_school_sad.png",
-          "/images/cha_nadia_unaisah.png",
-          "/images/cha_nadia_zhihao.png",
-          "/images/bg_launch.jpg",
-          "/images/bg_nadia_schoolhall.jpg",
-          "/images/bg_nadia_chloehome.jpg",
-          "/images/bg_nadia_gavinhome.jpg",
+          "/images/bg_nadia_bedroom.jpg",         
+          "/images/bg_nadia_fathercaratday.jpg",        
+        ],
+        endings: [
+          {
+            endingId: 1,
+            title: "Nadia and Gavin, together",
+            inkVar: "chapter3_ending_1",
+          },
+          {
+            endingId: 2,
+            title: "Nadia keeps her options open",
+            inkVar: "chapter3_ending_2",
+          },         
+        ]
+      },
+      {
+        chapterId: 4,
+        number: 4,
+        reflectionId:17,
+        title: "To Baby or not to baby?",
+        knotTag: "unaisah_4_intro",
+        summary: "Managing the consequences of her previous choices proves to be harder than she realised.",
+        playable: false,
+        discordLink: 'https://discord.gg/9ttyzdsANY',
+        images: [
+          "/images/bg_nadia_intro.jpg",
+          "/images/bg_nadia_bedroom.jpg",         
           "/images/bg_nadia_fathercaratday.jpg",        
         ],
         endings: [

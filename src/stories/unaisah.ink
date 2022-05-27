@@ -405,23 +405,22 @@ What if they judge me? Can I even trust them? #inner_monologue
     Is there anything we can do to support you? A few of our classes are down the hall from each other. I can keep an eye out for you. #speaker_left
     No, I don’t need bodyguards. Just having you two listening and asking me how I’m doing is enough. #speaker_self
     Thank you. #speaker_self
-    
+    -> unaisah_1_reflection
+
 + [Don't tell them]
     It could happen to anyone, anywhere.  #inner_monologue
     And if it happens or has happened to anybody here, I want them to know I’m always here to listen or help in any way I can. Maybe we can look out for one another. #inner_monologue
     And it would certainly make things more comfortable for me if I didn’t keep this bottled up... #inner_monologue
     But I’m just not ready to tell them yet. #inner_monologue
-There’s really not much to it. Long story short… #speaker_self
-+ [I love teaching] -> unaisah_1_4a
-+ [I wasn't happy there] -> unaisah_1_4b
+    There’s really not much to it. Long story short… #speaker_self
+    ++ [I love teaching] -> unaisah_1_4a
+    ++ [I wasn't happy there] -> unaisah_1_4b
 
-
--> unaisah_1_reflection
 
 === unaisah_1_reflection ===
 #knot:unaisah_1_reflection
 #ui:chapter_reflection
-#reflection_id:7  
+#reflection_id:14
 Reflection 14  // change this to 14
 
 -> END
