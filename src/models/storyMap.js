@@ -880,7 +880,7 @@ export const CHARACTER_MAP = [
     description: "Unaisah wants to excel as a new teacher - but can she break the glass ceiling while dealing with things at home?",
     jsonLink: '../stories/unaisah.ink.json',
     playable: true,
-    shareImage:'/shareable_avatars/nadia_share.svg',
+    shareImage:'/shareable_avatars/unaisah_share.svg',
     jsonFile: UnaisahInk,
     primaryColour: '#FB5A3F',
     secondaryColour: '#664EFC',
