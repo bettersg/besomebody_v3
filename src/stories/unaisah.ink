@@ -516,6 +516,7 @@ Hwee Ling is already there, nose buried in some papers. Her face is not unkind, 
 === unaisah_1_6b ===
 #knot:unaisah_1_6b
 #ui:scene
+#background:bg_unaisah_CH2_UnaisahDesk_WithWork.png
 #speaker_left_image:cha_unaisah_hweeling_neutral.png
 #speaker_left_name:Hwee Ling
 So, how’ve your first few weeks here been? #speaker_left
@@ -578,16 +579,148 @@ Malay Dance? If the reason is what I think it is… #inner_monologue
     
 - That's settled then. My door is usually open when I'm in, which means you can come in to talk anytime. #speaker_left
 
-// https://docs.google.com/document/d/11vpIu3Fn53DJFoHSO7z9xbf6W6V-7hg-gyzaCFtOYDI/edit?pli=1#bookmark=id.k80ort15ox47
+
+-> unaisah_1_7
+
+=== unaisah_1_7 ===
+#knot:unaisah_1_7
+#ui:scene
+#background:bg_unaisah_CH2_LivingRoom_Night_wFood.png
+#speaker_left_image:cha_Unaisah_Basheer_Laughing_HomeWear.png 
+#speaker_left_name:Basheer
+
+{unaisah_1_cca == "malaydance":
+    Dance! You? Hahaha, I can’t believe it. #speaker_left
+    I don’t know if I’m more bothered by that, or the Malay thing. #speaker_self
+    What Malay thing? #speaker_left
+    You know, the fact that people often lump us together with Malays because we’re Muslim. #speaker_self
+    It's like they have lived alongside Indian Muslims for so long but they assume that all Muslims must be Malay. #speaker_self
+    So? #speaker_left
+    So? We’re not, and I’m tired of others thinking we’re interchangeable. #speaker_self
+    They just don’t know better. It’s usually quite innocent. Don’t waste your energy bothering about them, alright? #speaker_left
+    It is important though. Is it really too much to ask for people to recognise that Indians can be Muslim too? And I wish you weren’t so dismissive about it. #speaker_self
+    There’s only room for one smart, strong, independent, and brave partner in this relationship... and it definitely isn’t me. #speaker_left
+    You got that right. #speaker_self
+    - else :
+    Robotics! You? Hahaha, I can’t believe it. #speaker_left
+    Time to take a crash course through YouTube videos... #speaker_self
+    Don’t they give you something you’re good at? #speaker_left
+    Hey! #speaker_self
+    ... #speaker_self
+    Okay, you’re not wrong. But who knows, give me a couple months, I could be a tech whiz. #speaker_self
+    I always thought teachers get to pick their CCAs. #speaker_left
+    I think they do, but I joined later so they’d all been taken. Trust me, it could’ve been worse. It could’ve been Malay dance. #speaker_self
+    I, for one, would have loved to see you dance. #speaker_left
+    Anyways, I don’t actually have to know anything about the subject. #speaker_self
+    Really? #speaker_left
+    I’m just there to [mimicking Hwee Ling] "Impart values. Care for the Community." #speaker_self
+    Sure, but shouldn’t CCA teachers at least be interested in the activities? #speaker_left
+    Well, what was your CCA back in the day Bash? #speaker_self
+    You’re looking at Staff Sergeant Basheer, of the National Police Cadet Corps. #speaker_left
+    Your CCA teachers, were they the police type? #speaker_self
+    Yah. Of course. #speaker_left
+    Okay, whatever. It’s not important. #speaker_self
+}
+
+You know what’s important to me though? #speaker_left
+Us? #speaker_self
+Well yes, but also my parents want to drop by next week. #speaker_left
+Fine. I can’t say no, right? #speaker_self
+I guess not...and I hope this visit goes better than the last one. #speaker_left
+I don’t like where this is going. #inner_monologue
+
++ [Avoid conflict] Alright. I get it, she’s your mother. It’s natural that she’s eager to have a grandchild. #speaker_self
+    Thank you dear. #speaker_left
+    We need to have a proper talk about this soon though. #speaker_self
+    It's a choice that affects me greatly. #speaker_self
+    I know what I want...I think. But it feels lonely. #speaker_self
+    I’m sorry. #speaker_left
+    Don't leave me hanging too long ya? #speaker_self
+
++ [Confront Basheer] That’s up to you. #speaker_self
+    Come on, don’t make a man choose between his mother and his wife. It never ends well, alright? #speaker_left
+    So you’re asking me to side with your mother when she asks me about having a baby again. Shall I just pop one for her now? #speaker_self
+    That’s not what I said, alright? #speaker_left
+    Well what will you say then? What do YOU actually feel about having a child? #speaker_self
+    Unni, we’ve talked about this. #speaker_left
+    Wrong. I’ve talked about it. I’ve made it clear that I’m not ready yet. #speaker_self
+    You’ve talked around it. You change the subject. Or you say a lot of things without actually saying anything at all. It feels like you’ve been avoiding this discussion. #
+    Not now, alright? #speaker_left
+    
+    ++ [Then when?] See what I mean! Then when? #speaker_self
+        How much longer do you want to drag this out? This is my life too, my body. #speaker_self
+        Just...not now. I have a lot on my mind. #speaker_left
+        Weren’t you the one who said this is important? #speaker_self
+        I meant telling you my mother is coming was important. This… can wait. #speaker_left
+        Maybe you should tell her that then. #speaker_self
+        Unni...please. #speaker_left
+        I feel so alone in this. I just want to know if you’ll stand by me. #speaker_self
+        I’m sorry. #speaker_left
+        
+    ++ [Alright] Alright. I get it, she’s your mother. It’s natural that she’s eager to have a grandchild. #speaker_self
+        Thank you dear. #speaker_left
+        We need to have a proper talk about this soon though. #speaker_self
+        It's a choice that affects me greatly. #speaker_self
+        I know what I want...I think. But it feels lonely. #speaker_self
+        I’m sorry. #speaker_left
+        Don't leave me hanging too long ya? #speaker_self
+
+- I can...do the dishes tonight. #speaker_left
+Oh, when you feel bad then you offer to do is it? #speaker_self
+Don’t put it that way, alright... #speaker_left
+It’s fine. It’s my turn today anyway. #speaker_self
+    
+-> unaisah_1_8
 
 
-
-
-
-
-
-
-
+=== unaisah_1_8 ===
+#knot:unaisah_1_8
+#ui:narrator
+{unaisah_1_cca == "malaydance":
+    #background:bg_unaisah_CH2_MalayDanceCCARoom.png
+    - else:
+    #background:bg_unaisah_CH2_RoboticsCCARoom.png
+}
+Four month later.
+#ui:scene
+#speaker_left_image:cha_unaisah_roslan.png
+#speaker_left_name:Roslan
+#speaker_right_image:cha_unaisah_chitra.png
+#speaker_right_name:Chitra
+{unaisah_1_cca == "malaydance":
+    #background:bg_unaisah_CH2_MalayDanceCCARoom.png
+    I was skeptical about taking on the Malay Dance CCA, but I’ve really started to enjoy it. #inner_monologue
+    The students are passionate, and they always left practice with smiles on their faces. #inner_monologue
+    - else:
+    #background:bg_unaisah_CH2_RoboticsCCARoom.png
+    I was skeptical about taking on the Robotics CCA, but I’ve really started to enjoy it. #inner_monologue
+    The students are passionate, and Desmond is very capable of guiding through the technical aspects. #inner_monologue
+}
+Okay, that’s it for today. #speaker_self
+Thank you Madam Unaisah! #speaker_left
+Hehehe... #speaker_right
+Hehehe... #speaker_left
+What are you all looking at on your phones? #speaker_self
+Nothing, nothing! #speaker_right
+Come on, it seems to be quite entertaining to all of you. #speaker_self
+Ma’am, we’re looking at Zhihao’s IG stories! #speaker_left
+Oi! Ros! #speaker_right
+He’s saying Nad and Gavin-- #speaker_left
+Eh, enough ah! #speaker_right
+Is this something I should know? #speaker_self
+No no no. Just our own jokes. #speaker_left
+If you say so. #speaker_self
+Eh Mdm Una...you got IG or not? #speaker_left
+I do, but it’s private. #speaker_self
+Can add or not? You know us. #speaker_left
+You can always talk to me in person. We’re in school all the time. Why go online? #speaker_self
+I can also talk to Zhihao anytime. But because I’m on IG with him, I can see that Nad-- #speaker_left
+Last warning ah! #speaker_right
+Eh eh Madam Una. Is this one you? #speaker_left
+// [We see an IG account, which is private. The handle is @otakunaisah and the profile pic is an anime-style character of Unaisah.] #
+How did they..?? #inner_monologue
+Maybe I shouldn’t have used my real name as part of my handle… #inner_monologue
+    
 
 -> unaisah_1_reflection
 
