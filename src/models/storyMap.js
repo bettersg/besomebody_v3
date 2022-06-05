@@ -29,7 +29,7 @@ chapters []
  
  -> to add the primary colour and secondary colour info for each character based on the UI design.
  
-// reflectionIDs: aman 1,5,6 | nadia 2,3,4 |  ravi 7,8,9,10 |  zhihao 11,12,13 | unaisah 14,15,16, 17
+// reflectionIDs: aman 1,5,6 | nadia 2,3,4 |  ravi 7,8,9 (10 not used) |  zhihao 11,12,13 | unaisah 14,15,16 
 
 */
 
@@ -892,7 +892,7 @@ export const CHARACTER_MAP = [
         number: 1,
         title: "Teacher’s First Day",
         knotTag: "unaisah_1_intro",
-        summary: "After leaving her previous job, Unaisah experiences her first week as a teacher. What will she tell her colleagues about her past?",
+        summary: "Unaisah embarks on a new life as a teacher - but awkward questions about her past and identity confront her.",
         playable: true,
         discordLink: 'https://discord.gg/QyR2fvqSgN',
         images: [
@@ -923,9 +923,9 @@ export const CHARACTER_MAP = [
         chapterId: 2,
         number: 2,
         reflectionId:15,
-        title: "Mistaken Identity",
+        title: "The Mother of All Expectations",
         knotTag: "unaisah_2_intro",
-        summary: "Unaisah must confront who she is--by confronting who others think she is.",
+        summary: "Even as Unaisah progresses in her teaching career, she must make a crucial life decision.",
         playable: false,
         discordLink: 'https://discord.gg/Az4tr5XXJM',
         images: [
@@ -973,9 +973,9 @@ export const CHARACTER_MAP = [
         chapterId: 3,
         number: 3,
         reflectionId:16,
-        title: "The Mother of All Expectations",
+        title: "To Baby or not to baby?",
         knotTag: "unaisah_3_intro",
-        summary: "Even as Unaisah progresses in her teaching career, she must make a crucial life decision.",
+        summary: "Managing the consequences of her previous choices proves to be harder than she realised.",
         playable: false,
         discordLink: 'https://discord.gg/9ttyzdsANY',
         images: [
@@ -996,38 +996,38 @@ export const CHARACTER_MAP = [
           },         
         ]
       },
-      {
-        chapterId: 4,
-        number: 4,
-        reflectionId:17,
-        title: "To Baby or not to baby?",
-        knotTag: "unaisah_4_intro",
-        summary: "Managing the consequences of her previous choices proves to be harder than she realised.",
-        playable: false,
-        discordLink: 'https://discord.gg/9ttyzdsANY',
-        images: [
-          "/images/bg_nadia_intro.jpg",
-          "/images/bg_nadia_bedroom.jpg",         
-          "/images/bg_nadia_fathercaratday.jpg",        
-        ],
-        endings: [
-          {
-            endingId: 1,
-            title: "Nadia and Gavin, together",
-            inkVar: "chapter3_ending_1",
-          },
-          {
-            endingId: 2,
-            title: "Nadia keeps her options open",
-            inkVar: "chapter3_ending_2",
-          },          
-          {
-            endingId: 3,
-            title: "Nadia moves forward alone",
-            inkVar: "chapter3_ending_3",
-          }, 
-        ]
-      },
+      // {
+      //   chapterId: 4,
+      //   number: 4,
+      //   reflectionId:17,
+      //   title: "To Baby or not to baby?",
+      //   knotTag: "unaisah_4_intro",
+      //   summary: "Managing the consequences of her previous choices proves to be harder than she realised.",
+      //   playable: false,
+      //   discordLink: 'https://discord.gg/9ttyzdsANY',
+      //   images: [
+      //     "/images/bg_nadia_intro.jpg",
+      //     "/images/bg_nadia_bedroom.jpg",         
+      //     "/images/bg_nadia_fathercaratday.jpg",        
+      //   ],
+      //   endings: [
+      //     {
+      //       endingId: 1,
+      //       title: "Nadia and Gavin, together",
+      //       inkVar: "chapter3_ending_1",
+      //     },
+      //     {
+      //       endingId: 2,
+      //       title: "Nadia keeps her options open",
+      //       inkVar: "chapter3_ending_2",
+      //     },          
+      //     {
+      //       endingId: 3,
+      //       title: "Nadia moves forward alone",
+      //       inkVar: "chapter3_ending_3",
+      //     }, 
+      //   ]
+      // },
     ],
     reflectionBrowser: [
       {         

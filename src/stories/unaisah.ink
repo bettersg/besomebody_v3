@@ -64,7 +64,7 @@ Minigame // must add some text
 
 // DECLARE GLOBAL VARIABLES
 VAR character_id = 3
-// VAR chapter_1_ending = 0 
+VAR chapter_1_ending = 0 
 // VAR chapter_2_ending = 0 
 // VAR chapter_3_ending = 0 
 // VAR chapter_4_ending = 0 
@@ -89,7 +89,7 @@ This is an exciting time for me. After a year of training, I’m about to start 
 Did you know there are over 30,000 teachers in Singapore? A few of them are straight out of school. Some of them did a mid-career switch like me.    
 I was previously in public relations, but that didn’t work out… Perhaps the less said about that, the better.
 At least I’ve kept one friend from my previous job—Marie. She’s a ray of sunshine, that one. Helped me through some tough times.
-Switching careers at 32 is daunting, however I really want to give it my best shot. It doesn’t help that my in-laws have been expecting a grandchild ever since I got married. 
+Switching careers at 32 is daunting, but I really want to give it my best shot. It doesn’t help that my in-laws have been expecting a grandchild ever since I got married. 
 If it were only up to me, I’d rather settle into a stable career before having a child.
 So that’s me — Unaisah. And this is what it’s like to be me.
 CHAPTER {chapter_id} #title
@@ -106,30 +106,28 @@ Teacher’s First Day #title
 #knot:unaisah_1_1
 #ui:narrator
 #background:bg_unaisah_CH2_Bedroom_Night.png
-It’s dark. The rectangular outline of a phone lights up on a bedside table. 
-An alarm goes off. It’s 5:30am. 
+It’s 5:30am. My alarm goes off. 
 + [Snooze]
-    With eyes still closed, I press the “Snooze” button. 
-    I barely drift back to sleep when the alarm goes off again.
+    Ugh no. I need to sleep... a bit longer... 
+    My alarm goes off again.
     ++ [Snooze]
-        A few snoozes later...
-        The sound of the tap running in the bathroom jolts me awake. 
-        It’s 5:57 am.
+        A few snoozes later…
+        The tap’s running. What time is it?  It's already 5:57 am!
+        Oh great, what a late start. Basheer shouldn’t have let me sleep in.
 
     ++ [Wake up]
-        I wriggle into a sitting position and focuses my eyes on the screen. 
-        My quiet morning is gently interrupted by the sound of a running tap from the bathroom. 
-        It is now 5:47am. 
+        It's 5:47 am.
+        The tap’s running. Basheer. For once, he is up before me.
     
 + [Wake up]
-    I wriggle into a sitting position and focuses my eyes on the screen. 
-    My quiet morning is gently interrupted by the sound of a running tap from the bathroom. 
+    I can hear the tap running. Must be Basheer. 
+    It feels strange that he, for once, is up before me. 
 - 
 #ui:scene
 #background:bg_unaisah_CH2_Bedroom_Night.png
-Basheer and I have not prayed together in a long time, since I used to wake up even earlier and leave before he wakes up. #inner_monologue
-It will be nice to seek God’s blessings together for my first day. #inner_monologue
-I lay out the prayer mats as Basheer steps out of the bathroom.#inner_monologue
+Basheer and I have not prayed together in a long time, since I used to wake up even earlier and leave before he’d wake up.  #inner_monologue
+It’d be nice to seek God’s blessings together for my first day.  #inner_monologue
+I lay out the prayer mats as Basheer steps out of the bathroom. #inner_monologue
 #speaker_left_image:cha_Unaisah_Basheer_Neutral_HomeWear.png
 #speaker_left_name:Basheer
 Ennenga (dear), wait for me. Let’s pray together. #speaker_self
@@ -140,7 +138,8 @@ The water is cold as I run my hands under it. I start washing each hand three ti
 The rhythm of my morning routine is... centering. #inner_monologue
 #ui:narrator
 #background:bg_unaisah_CH2_Bedroom_Night.png
- Our heads rest on the floor in prostration together at the end of the prayer. Basheer’s mat is in front of mine. 
+Our heads rest on the floor in prostration together at the end of the prayer. Basheer’s mat is in front of mine. 
+10 minutes of prayer pass in a blink.
 #ui:scene
 #background:bg_unaisah_CH2_Bedroom_Night.png
 This was a nice start to my day. I feel ready now.#inner_monologue
@@ -160,7 +159,7 @@ Ah, my taxi has arrived just in time.
 #background:bg_unaisah_CH1_GrabInterior_Day.png
 #speaker_right_image:cha_unaisah_grabdriver_normal.png
 #speaker_right_name:Driver
-Singapura Junior College? You teacher, ah?  #speaker_right
+Saint Peter's Junior College? You teacher, ah?  #speaker_right
 + [Yes] Yes. #speaker_self
     VAR unaisah_1_silent = 0
     How long already? #speaker_right
@@ -238,14 +237,16 @@ Marie: Babe!!! # message
 #chat_group_image:ico_marie.png
 #speaker_1_name:Marie
 #timestamp:07.32
-Babe!!! Woke up early to send you love on your first day. See I remembered! #speaker_1
+Babe!!! Woke up early to send you love on your first day. See I remembered! 😉  #speaker_1
 Haha thanks babe! #speaker_self
-This is it Unni!! You waited so long to get out of there and here you are finally. You are going to kill this. #speaker_1
+This is it Unni!! You waited so long to get out of there and here you are finally.  #speaker_1
+You are going to ROCK this. #speaker_1
 ❤️💪  #speaker_self
 Hey have you told anyone? About, you know... #speaker_1
 Are you kidding? I’m just starting here #speaker_self
 People might ask. I think it’s important. We both left that dump together. Make our sacrifice count for something #speaker_1
-Easy for you to say, you’re the one who’s going to be your own boss. You don’t need to worry what people will think. Anyway I gotta work ya? ttyl #speaker_self
+Easy for you to say, you’re the one who’s going to be your own boss. You don’t need to worry what people will think #speaker_self
+Anyway I gotta work ya? ttyl #speaker_self
 
 
 -> unaisah_1_4
@@ -261,6 +262,7 @@ The staff room is a maze of decorated cubicle walls.
 Heyyy! Hello! #speaker_right
 A fellow teacher! She seems to be around my age, but there’s a buoyancy that makes her feel younger. #inner_monologue
 You must be Unasyah. #speaker_right
+Ah, that wasn't quite right  #inner_monologue
 + [Ignore the mispronunciation] Hi… #speaker_self
     VAR unaisah_1_correctveronica = false
     ~ unaisah_1_correctveronica = false
@@ -290,7 +292,7 @@ They won’t be in for another few weeks. Take your time to settle in. Anyway, d
     } 
 #ui:narrator
 #background:bg_unaisah_CH1_MeetingRoom.png
-Later that afternoon, in the teachers' meeting room.
+Later that afternoon, I met a few other teachers.
 #ui:scene
 #speaker_right_image:cha_unaisah_veronica_neutral.png
 #speaker_right_name:Veronica
@@ -312,9 +314,9 @@ Here we go again... #inner_monologue
     #speaker_left_image:cha_unaisah_jeremy_neutral.png
     Can do! #speaker_self
     
-- Unasah. Quite an unusual name. I’ve never known an Unasah. #speaker_left
+- Quite an unusual name. I’ve never known an Unasah. #speaker_left
 {unaisah_1_correctveronica == false:
-    You do now #speaker_right
+    You do now! #speaker_right
     - else:
     Gonna take me a while to learn that one #speaker_left
     #speaker_right_image:cha_unaisah_veronica_laughing.png
@@ -322,7 +324,7 @@ Here we go again... #inner_monologue
     How rude! #inner_monologue
 }
 Hey, I heard you’re a mid-career teacher. Where were you previously? #speaker_left
-I was at Glendorf & Smith, doing public relations. #speaker_self
+I was at Brown & Grey, doing public relations. #speaker_self
 #speaker_left_image:cha_unaisah_jeremy_laughing.png
 Wow that sounds like quite a good job. Why did you decide to...join the dark side? Haha #speaker_left
 + [I love teaching] -> unaisah_1_4a
@@ -335,9 +337,9 @@ Wow that sounds like quite a good job. Why did you decide to...join the dark sid
 #speaker_right_name:Veronica
 #speaker_left_image:cha_unaisah_jeremy_neutral.png
 #speaker_left_name:Jeremy
-Well...I’ve always loved the idea of teaching, of nurturing young minds, preparing them to seize life’s opportunities... #speaker_self
-VAR chapter_1_ending = 1
-~ chapter_1_ending = 1
+Well...I’ve always loved the idea of teaching, you know,  nurturing young minds and preparing them to seize opportunities... #speaker_self
+VAR unaisah_1_teachingreason = ""
+~ unaisah_1_teachingreason = "love teaching"
 Haha! Is that what you told the interview panel? #speaker_left
 I’m sorry? #speaker_self
 Nah, it just sounded like an advertisement for teaching. I was more curious about what made you give up a good position in the private sector like that. #speaker_left
@@ -346,9 +348,10 @@ But what made you figure? #speaker_left
 Everyone says they want to nurture the next generation, or they’ve always loved kids. #speaker_left
 Those of us in the teaching track from the beginning, we heard our calling and stayed there. #speaker_left
 But you made a career switch. Something had to have happened. #speaker_left
-Tamara--you’ll meet her later--also made a mid-career switch. Her trigger was becoming an aunt. For Alistair, it was turning 30. #speaker_left
+Tamara--you’ll meet her later--also made a mid-career switch. Her trigger was becoming an aunt. For Alistair over there, it was turning 30. #speaker_left
 Haiyoh can you not be such a busybody, she already answered you. It’s only her first day here, there’s still a lot of time to get to know her. #speaker_right
--> unaisah_1_reflection
+// -> unaisah_1_reflection
+-> unaisah_1_5
 
 = unaisah_1_4b
 #ui:scene
@@ -357,7 +360,7 @@ Haiyoh can you not be such a busybody, she already answered you. It’s only her
 #speaker_left_image:cha_unaisah_jeremy_neutral.png
 #speaker_left_name:Jeremy
 It sounds nice, but honestly the work there was crazy. I was burning so many weekends. Then I realised that I didn’t have to. #speaker_self
-~ chapter_1_ending = 2
+~ unaisah_1_teachingreason = "not happy"
 I could still be involved in the field of communications, by teaching it. #speaker_self
 Haha! Like they say about us teachers. Those who can’t, teach right? #speaker_left
 Hey! How can you say that. She can. She just chose to teach. #speaker_right
@@ -367,7 +370,8 @@ I’ll take teenage problems over boss and client problems! #speaker_self
 Boss problems...? #speaker_left
 Um... #speaker_self
 Haiyoh can you not be such a busybody, she already answered you. It’s only her first day here, there’s still a lot of time to get to know her. #speaker_right
--> unaisah_1_reflection
+// -> unaisah_1_reflection
+-> unaisah_1_5
 
 = unaisah_1_4c
 #ui:scene
@@ -382,7 +386,7 @@ What if they judge me? Can I even trust them? #inner_monologue
     #speaker_right_image:cha_unaisah_veronica_concerned.png
     #speaker_left_image:cha_unaisah_jeremy_sympathetic.png
     Take as long as you want. #speaker_right
-    ~ chapter_1_ending = 3
+    ~ unaisah_1_teachingreason = "harassment"
     I wasn’t expecting to tell anyone this early, but...some bad things happened at my previous workplace. #speaker_self
     Oh dear. #speaker_left
     We really didn’t mean to dig this up. You don’t have to say any more if you don’t want to. #speaker_right
@@ -405,7 +409,8 @@ What if they judge me? Can I even trust them? #inner_monologue
     Is there anything we can do to support you? A few of our classes are down the hall from each other. I can keep an eye out for you. #speaker_left
     No, I don’t need bodyguards. Just having you two listening and asking me how I’m doing is enough. #speaker_self
     Thank you. #speaker_self
-    -> unaisah_1_reflection
+    // -> unaisah_1_reflection
+    -> unaisah_1_5
 
 + [Don't tell them]
     It could happen to anyone, anywhere.  #inner_monologue
@@ -416,11 +421,184 @@ What if they judge me? Can I even trust them? #inner_monologue
     ++ [I love teaching] -> unaisah_1_4a
     ++ [I wasn't happy there] -> unaisah_1_4b
 
+=== unaisah_1_5 ===
+#knot:unaisah_1_5
+#ui:mcq
+#game_id:14
+Minigame 14 // must add some text
+-> unaisah_1_5a
+
+=== unaisah_1_5a ===
+#knot:unaisah_1_5a
+#ui:narrator
+#background:bg_unaisah_intro.jpg
+3 weeks later.
+It’s been a crazy first few weeks as a teacher. It’s fun, but I also feel like I’m going to burst.
+On the one hand, I do want to do well. To make up for leaving a promising career in public relations prematurely. To show my expertise still counts, even as a GP teacher.
+On the other hand, to do well, I think I need to slow down and learn the ropes properly.
+I thought moving from the private to the public sector would be easy, but it’s been tougher than I’d expected. 
+Anyway, need to pick up groceries on the way home from school.
+
+#ui:scene
+#background:bg_unaisah_CH2_Supermarket_Day.png
+#speaker_right_image:cha_unaisah_malayuncle.png
+#speaker_right_name:Elderly Man
+Let’s see, did I get everything...milk, eggs, coriander, dried mango....feels like I forgot something… #inner_monologue
+Oh! Ginger! #inner_monologue
+Wait--no, there it-- #inner_monologue
+Maaf, bagaimana pergi stesen bas? (Excuse me, how do I get to the bus station?) #speaker_right
+Oh... #speaker_self
+
++ [Reply in your limited Malay] Maaf, saya tak boleh cakap Melayu. (Sorry, I don’t speak Malay.) #speaker_self
+    VAR unaisah_1_replyelderly = "malay"
+    ~ unaisah_1_replyelderly = "malay"
+    Kamu Melayu? (Aren’t you Malay?) #speaker_right
+    Ahh, should’ve just gone with English. #inner_monologue
+    I only know how to say “I don’t speak Malay” because I’ve had to say it so often. #inner_monologue
+    Erh...sikit-sikit (a little). I’m Indian. #speaker_self
++ [Correct him] Sorry uncle, I don’t speak Malay.  #speaker_self
+    ~ unaisah_1_replyelderly = "correct"
+    How can I help? #speaker_self
+
++ [Reply in Tamil] Mannikkavum (sorry) #speaker_self
+    ~ unaisah_1_replyelderly = "tamil"
+    Apa...?? #speaker_right
+    What was that about! Why did I do that? #inner_monologue
+    Sorry, I don’t understand. I’m Indian. #speaker_self
+
+- Oh sorry, I thought you Malay! Old already...eyes no good. Haha. Eh...how to go to the bus interchange? #speaker_right
+Okay, see the two blocks over there? Walk between them until you reach the main road, turn right. #speaker_self
+Orh, orh, thank you. #speaker_right
+Walk carefully uncle! #speaker_self
+If I had a dollar for every time...I gotta tell Marie about this. #inner_monologue
+
+-> unaisah_1_6
+
+
+ === unaisah_1_6 ===
+#knot:unaisah_1_6 
+#ui:narrator
+#background:ui_emailinbox.png
+Wow, it’s been a tiring month. But I feel I’m getting a hang of things now. I’ve settled into a rhythm. 
+First class starts in 20 minutes. Better get those emails out of the way. God knows how hectic it gets once that first bell goes…
+
+#ui:emailinbox
+
+#newemailfrom:NEO HWEE LING
+#newemailprofileicon:ico_ravi_rebecca.png
+#newemailsubject: Chat this afternoon?
+#newemailpreview: Unaisah, haven't had the change to catch up...
+.
+
+#ui:narrator
+#background:ui_emailinbox.png
+That’s my supervisor. What does she want to talk about? Could this be my chance to tell her about my workload?
+-> unaisah_1_6a
+
+=== unaisah_1_6a ===
+#knot:unaisah_1_6a
+#ui:email
+#emailheader:Read Email
+#emailfrom:NEO Hwee Ling <NEO_Hwee_Ling@sjc.edu.sg>
+#emailto:Unaisah BEGUM <Unaisah_BEGUM@sjc.edu.sg>
+#emailfromicon:ico_zhihao_elite.png
+#emailsubject:Chat this afternoon?
+
+Unaisah, haven’t had the chance to catch up since you joined us. /n /n If you’re free after 3 this afternoon could you drop by my office for a short while? /n /n cheers, /n HL  #speaker_1
+
+#ui:narrator
+#background:ui_emailinbox.png
+The day trudges on as usual. At the end of my last class, I make my way to a small meeting room. It is quite plain, with a few plaques and motivational posters on the wall.
+Hwee Ling is already there, nose buried in some papers. Her face is not unkind, but stern. Definitely not someone I’d want to mess with.
+
+-> unaisah_1_6b
+
+=== unaisah_1_6b ===
+#knot:unaisah_1_6b
+#ui:scene
+#speaker_left_image:cha_unaisah_hweeling_neutral.png
+#speaker_left_name:Hwee Ling
+So, how’ve your first few weeks here been? #speaker_left
++ [Hype it up]  Incredible! Such an eye-opening and energising experience. #speaker_self
+    Spoken like a true BT (beginning teacher). The real challenge is keeping it up. #speaker_left
++ [Slow it down]   To be honest, it’s a lot more than I expected. #speaker_self
+    I’ve been taking on quite a lot of admin duties and was hoping to focus more on my students. #speaker_self
+    Don’t worry too much, it’s early days, you’ll grow into it. #speaker_left
+- Heh... #inner_monologue
+In fact, I wanted to talk to you about CCAs. We’re aware we haven’t assigned you one yet. #speaker_left
+Here it comes. More work. #inner_monologue
+We did all the allocations before you joined us, but there’s a space for you in... #speaker_left
+...Malay Dance. #speaker_left
+VAR unaisah_1_cca = ""
+Malay Dance? If the reason is what I think it is… #inner_monologue
+
++ [Accept Malay Dance]   Oh! Great. Great! So...cultural. #speaker_self
+    My childhood bestie took Malay dance in school. I can sort of remember attending a few of her performances... #speaker_self
+    ~ unaisah_1_cca = "malaydance"
+    That’s a plus, not a requisite. We’re not asking you to do this because you’re Malay. #speaker_left
+    I’m not. #inner_monologue
+    Because you’re not. #speaker_left
+    Okay, phew, she gets it. #inner_monologue
+    Any teacher can be in charge of any CCA. Because what you’re doing is imparting values. Leadership. Teamwork. Care for the community. #speaker_left
+    The technical parts, we can always get vendors in if necessary. Some CCAs, like the Uniformed Groups, practically run themselves, thanks to seniors. #speaker_left
+    So, how about it? #speaker_left
+
++ [Ask for something else]  ... #speaker_self
+    Anything wrong? #speaker_left
+    I was just wondering if you meant Indian Dance. I’m, well, Indian. #speaker_self
+    I know you are. We know you are. But we had to shut down Indian Dance two years ago because there weren’t enough students interested in it. Ever since the school moved, our student profile has been shifting. #speaker_left
+    I understand. Sorry, it’s just that it happens so much that people assume I’m Malay because I’m Muslim so I thought-- #speaker_self
+    Don’t worry about it. No harm, no foul. #speaker_left
+    So how about it? Try something new? #speaker_left
+    So, how about it? #speaker_left
+
+- Hmmm...
++ [Accept Malay Dance now]    Okay. I’ll do it. It will be a learning opportunity for me, too. #speaker_self
+    That’s the spirit. Everything else good? #speaker_left
+    ~ unaisah_1_cca = "malaydance"
+    Yup, yup, still adjusting, but good. #speaker_self
+    A mid-career shift can be tough. If anything pops up, let me know. #speaker_left
+    
++ [Ask for something else still]    I understand, but honestly I'm not sure I'd be very inspiring to the students. I have two left feet and have little interest in dance. #speaker_self
+    It’s good that you know your interests, Unaisah. I appreciate that. But we do really need a teacher to head Malay Dance. It’s not as if you’ll be doing any dancing yourself anyway. #speaker_left
+    Are there any other CCAs that need someone? #speaker_self
+    Well, the Robotics Club is growing and there’s a big tournament this year. I’m not sure Desmond can handle it on his own. #speaker_left
+    Great. I’m even less into circuits than dance... #inner_monologue
+    But I'm tired of always being in the minority box, even ones that don't really apply to me. #inner_monologue
+    I’ve gotten Hwee Ling to think of other options so I probably shouldn't back out now. #inner_monologue
+    
+    ++ [Accept Robotics] That sounds good. It’s a growing field. Coding is the future! #speaker_self
+    That’s the spirit. Everything else good? #speaker_left
+    ~ unaisah_1_cca = "malaydance"
+    
+    ++ [Choose Malay Dance] You know what, I think I should give myself a chance with dance. If I can get into something I’m not good at, then I can use that to motivate my students. #speaker_self
+    That’s the spirit. Everything else good? #speaker_left
+    ~ unaisah_1_cca = "robotics"
+    -- Yup, yup, still adjusting, but good. #speaker_self
+    
+- That's settled then. My door is usually open when I'm in, which means you can come in to talk anytime. #speaker_left
+
+// https://docs.google.com/document/d/11vpIu3Fn53DJFoHSO7z9xbf6W6V-7hg-gyzaCFtOYDI/edit?pli=1#bookmark=id.k80ort15ox47
+
+
+
+
+
+
+
+
+
+
+-> unaisah_1_reflection
 
 === unaisah_1_reflection ===
 #knot:unaisah_1_reflection
 #ui:chapter_reflection
 #reflection_id:14
 Reflection 14  // change this to 14
+
+
+
+
 
 -> END
