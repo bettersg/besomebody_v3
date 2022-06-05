@@ -720,9 +720,90 @@ Eh eh Madam Una. Is this one you? #speaker_left
 // [We see an IG account, which is private. The handle is @otakunaisah and the profile pic is an anime-style character of Unaisah.] #
 How did they..?? #inner_monologue
 Maybe I shouldn’t have used my real name as part of my handle… #inner_monologue
-    
 
--> unaisah_1_reflection
++ [Confess] Wow, you are really a resourceful lot. How did you know? #speaker_self
+    Looks like you what. And your name is right there. #speaker_left
+    Eh, you like anime? #speaker_left
+    As a matter of fact, I do. #speaker_self
+    Which ones? #speaker_left
+    Recently I’ve been re-watching Mob Psychic 300. #speaker_self
+    So how, can we add you on IG? #speaker_left
+    Like I said, you can just talk to me in school if you need anything. #speaker_self
+
++ [Deny] No it’s not. #speaker_self
+    Don’t bluff, Mdm Una! Your name is right there. #speaker_left
+    How do you know. It could be another Unaisah, anywhere in the world. #speaker_self
+    Never mind...challenge accepted. If we find your account, will you add us? #speaker_left
+    We’ll see about that. #speaker_self
+
+- -> unaisah_1_9
+
+=== unaisah_1_9 ===
+#knot:unaisah_1_9
+#ui:scene
+#background:bg_unaisah_CH1_UnaisahDesk.png
+#speaker_left_image:cha_unaisah_veronica_concerned.png
+#speaker_left_name:Veronica
+Heyyy! Hey Unaisah. #speaker_left
+What’s up? #speaker_self
+What are you going to wear for Racial Harmony Day? #speaker_left
+Yeeaah that’s coming up right? #speaker_self
+A few of us are thinking of coordinating and going with a theme. Like same colour. #speaker_left
+You know, like how some Malay families wear the same colour during Hari Raya? #speaker_left
+My family doesn’t do that though. #speaker_self
+Also isn’t it harder to get the same colour for different ethnic costumes? #speaker_self
+Just try lah. Are you in or not? #speaker_left
+
++ [Agree] Why not? Could be fun. #speaker_self
+    Okay okay! I’ll let the others know. We’ll figure something out. #speaker_left
++ [Decline] See first? I’m having enough trouble as it is figuring out what to wear. #speaker_self
+    Okay sure. Let me know if you change your mind ya. Still got time. #speaker_left
+- Hey Veron...? While you’re here, can I ask you something? #speaker_self
+Sure, what is it? #speaker_left
+Are you friends with any of your students on social media? #speaker_self
+Oh no no no, no no. #speaker_left
+That’s emphatic! #speaker_self
+There’s a code of conduct. We can’t. #speaker_left
+I know that, but that’s just on paper. Wouldn’t it really help to bond with students? #speaker_self
+I mean, they already have our phone numbers for class chat groups. #speaker_self
+I just think it could be useful to build that teacher-student relationship that our colleagues are always talking about. #speaker_self
+Unaisah, I know you mean well, but this is really not a good idea. It’s a slippery slope. #speaker_left
+You may think it’s okay now, but it can lead to a lot of problems later. #speaker_left
+Okay, okay. #speaker_self
+One more thing. #speaker_self
+Yes? #speaker_left
+Are any of your students in BGRs? #speaker_self
+Boy-girl relationships? Sure. #speaker_left
+How do you deal with that? #speaker_self
+I don’t. #speaker_left
+Not unless it affects their schoolwork. Usually it doesn’t. #speaker_left
+I see. #speaker_self
+Are you suspecting any of your students are...? #speaker_left
+Oh, oh not really. Just heard the kids talking. #speaker_self
+Just let them be. You want to hear about BGR? I even have BBR, GGR. Haha. I can give you all kinds. #speaker_left
+And that’s … okay? #speaker_self
+Why shouldn’t it be? #speaker_left
+Oh I just thought...you know, given the religious affiliation for the school... #speaker_self
+Honestly, I'm here to teach. Dealing with all the other headaches that students cause is just … extra work, which I'd much rather avoid. #speaker_left
+So take my advice - just ignore it and don't get involved #speaker_left
+Of course. #speaker_self
+
+-> unaisah_1_10
+
+=== unaisah_1_10 ===
+#knot:unaisah_1_10
+#ui:narrator
+#background:ui_unaisah_instagram.png
+Later that night. 
+A new IG request from @roslando_calrissian
++ [Accept] I hope I don't regret this.
+    ~ chapter_1_ending = 1
++ [Decline] No thanks.
+    ~ chapter_1_ending = 2
++ [Ignore] Hmm.
+    ~ chapter_1_ending = 3
+
+-      -> unaisah_1_reflection
 
 === unaisah_1_reflection ===
 #knot:unaisah_1_reflection
