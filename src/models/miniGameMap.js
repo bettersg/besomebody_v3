@@ -793,74 +793,81 @@ export const MINI_GAME_MAP = [
       {
         question_id: 1,
         question:
-          "Q1?",
+          "What percentage of workers in Singapore reported being victims of sexual harassment in Singapore?",
         type: "text",
         correct_answer_id: 1,
         explanation:
-          "In 2020, only 8.7% of all households speak dialects at home (reduction from 2010, which was 14.3%). 48.3% speak English, 29.9% speak Mandarin, 9.2% speak Malay, and 2.5% speak Tamil at home.  [2020 Census]",
+          "2 in 5 workers said they had been victims of unwanted sexual advances, in the form of crude remarks, sexual pictures or texts, or remarks about their appearance or sexual activities. [Straits Times, Jan 2021]",
         answers: [
           {
             answer_id: 1,
-            title: "8.7%",
+            title: "20%",
           },
           {
             answer_id: 2,
-            title: "12.5%",
+            title: "30%",
           },
           {
             answer_id: 3,
-            title: "14.3%",
+            title: "40%",
           },
           {
             answer_id: 4,
-            title: "20.1%",
+            title: "50%",
           },
         ],
       },
       {
         question_id: 2,
         question:
-          "Q2?",
+          "What percentage of workers reported being touched in an unwelcome way?",
         correct_answer_id: 4,
-        explanation: "Immediate cremation is normally associated with Hindu funerals, as Hindus believe the physical body has no sacred purpose and cremation helps reincarnation. For Chinese funerals, the deceased may be buried or cremated, usually after a multi-day wake is held.",
+        explanation: "13% reported being touched at work, or more than one in every ten workers. This included male respondees.",
         type: "text",
         answers: [
           {
             answer_id: 1,
-            title: "Wearing a small cloth patch on your shoulder",
+            title: "3%",
           },
           {
             answer_id: 2,
-            title: "Disposing of a red string after attending the wake",
+            title: "8%",
           },
           {
             answer_id: 3,
-            title: "Burning paper models of possessions for the loved one",
+            title: "13%",
           },
           {
             answer_id: 4,
-            title: "Immediate cremation of the body",
+            title: "21%",
           },
         ],
       },
       {
         question_id: 3,
         question:
-          "Q3.",
+          "Of all the reported victims of harassment, how many of them filed official complaints with the authorities (at work, or the police)?",
         type: "text",
         correct_answer_id: 1,
         explanation:
-          "In a 2021 speech by Min Lawrence Wong, he explained that older local Chinese feel like the modern term 'Chinese Privilege' does not reflect their lived experience, because of the 'Nantah episode' and the emphasis on English over Chinese language (and the removal of dialects) put them at a distinct disadvantage, despite being an ethnic majority.",
+          "Only 1 in 3 filed an official report.Those who did not said they wanted to forget the unpleasant experience or felt what they had experienced was not serious enough. Some also felt they had no evidence of the wrong-doing. ",
           answers: [
             {
               answer_id: 1,
-              title: "True",
+              title: "25%",
             },
             {
               answer_id: 2,
-              title: "False",
+              title: "33%",
             },
-          
+            {
+              answer_id: 3,
+              title: "50%",
+            },
+            {
+              answer_id: 4,
+              title: "75%",
+            },
           ],
       },  
     ],
