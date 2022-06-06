@@ -234,13 +234,13 @@ Marie: Babe!!! # message
 #ui:whatsapp 
 #background:whatsapp.png
 #chat_group_title:Marie de Costa
-#chat_group_image:ico_marie.png
+#chat_group_image:ico_unaisah_marie.jpg
 #speaker_1_name:Marie
 #timestamp:07.32
 Babe!!! Woke up early to send you love on your first day. See I remembered! 😉  #speaker_1
 Haha thanks babe! #speaker_self
-This is it Unni!! You waited so long to get out of there and here you are finally.  #speaker_1
-You are going to ROCK this. #speaker_1
+This is it Unni!! You waited so long to get out of there and here you are finally  #speaker_1
+You are going to ROCK this! #speaker_1
 ❤️💪  #speaker_self
 Hey have you told anyone? About, you know... #speaker_1
 Are you kidding? I’m just starting here #speaker_self
@@ -681,7 +681,7 @@ It’s fine. It’s my turn today anyway. #speaker_self
     - else:
     #background:bg_unaisah_CH2_RoboticsCCARoom.png
 }
-Four month later.
+Four months later.
 #ui:scene
 #speaker_left_image:cha_unaisah_roslan.png
 #speaker_left_name:Roslan
@@ -785,7 +785,7 @@ And that’s … okay? #speaker_self
 Why shouldn’t it be? #speaker_left
 Oh I just thought...you know, given the religious affiliation for the school... #speaker_self
 Honestly, I'm here to teach. Dealing with all the other headaches that students cause is just … extra work, which I'd much rather avoid. #speaker_left
-So take my advice - just ignore it and don't get involved #speaker_left
+So take my advice - just ignore it and don't get involved. #speaker_left
 Of course. #speaker_self
 
 -> unaisah_1_10
@@ -795,7 +795,8 @@ Of course. #speaker_self
 #ui:narrator
 #background:ui_unaisah_instagram.png
 Later that night. 
-A new IG request from @roslando_calrissian
+A new IG request from @roslando_calrissian.
+I should...
 + [Accept] I hope I don't regret this.
     ~ chapter_1_ending = 1
 + [Decline] No thanks.
