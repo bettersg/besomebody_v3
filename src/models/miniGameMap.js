@@ -795,7 +795,7 @@ export const MINI_GAME_MAP = [
         question:
           "What percentage of workers in Singapore reported being victims of sexual harassment in Singapore?",
         type: "text",
-        correct_answer_id: 1,
+        correct_answer_id: 3,
         explanation:
           "2 in 5 workers said they had been victims of unwanted sexual advances, in the form of crude remarks, sexual pictures or texts, or remarks about their appearance or sexual activities. [Straits Times, Jan 2021]",
         answers: [
@@ -821,7 +821,7 @@ export const MINI_GAME_MAP = [
         question_id: 2,
         question:
           "What percentage of workers reported being touched in an unwelcome way?",
-        correct_answer_id: 4,
+        correct_answer_id: 3,
         explanation: "13% reported being touched at work, or more than one in every ten workers. This included male respondees.",
         type: "text",
         answers: [
@@ -848,7 +848,7 @@ export const MINI_GAME_MAP = [
         question:
           "Of all the reported victims of harassment, how many of them filed official complaints with the authorities (at work, or the police)?",
         type: "text",
-        correct_answer_id: 1,
+        correct_answer_id: 2,
         explanation:
           "Only 1 in 3 filed an official report.Those who did not said they wanted to forget the unpleasant experience or felt what they had experienced was not serious enough. Some also felt they had no evidence of the wrong-doing. ",
           answers: [
