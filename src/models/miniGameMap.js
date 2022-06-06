@@ -788,7 +788,7 @@ export const MINI_GAME_MAP = [
   {
     game_id: 14,
     ui: "mcq",
-    introduction: "Unaisah MCQ1. Let's explore them further.",
+    introduction: "Unaisah left her previous job because she faced some harassment. Let's explore this issue further.",
     questions: [
       {
         question_id: 1,
