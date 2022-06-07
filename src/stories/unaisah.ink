@@ -678,10 +678,12 @@ It’s fine. It’s my turn today anyway. #speaker_self
 #ui:narrator
 {unaisah_1_cca == "malaydance":
     #background:bg_unaisah_CH2_MalayDanceCCARoom.png
+    Four months later.
     - else:
     #background:bg_unaisah_CH2_RoboticsCCARoom.png
+    Four months later.
 }
-Four months later.
+
 #ui:scene
 #speaker_left_image:cha_unaisah_roslan.png
 #speaker_left_name:Roslan
