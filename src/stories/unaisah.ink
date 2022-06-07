@@ -569,12 +569,12 @@ Malay Dance? If the reason is what I think it is… #inner_monologue
     I’ve gotten Hwee Ling to think of other options so I probably shouldn't back out now. #inner_monologue
     
     ++ [Accept Robotics] That sounds good. It’s a growing field. Coding is the future! #speaker_self
-    That’s the spirit. Everything else good? #speaker_left
-    ~ unaisah_1_cca = "malaydance"
+        ~ unaisah_1_cca = "robotics"
+        That’s the spirit. Everything else good? #speaker_left
     
     ++ [Choose Malay Dance] You know what, I think I should give myself a chance with dance. If I can get into something I’m not good at, then I can use that to motivate my students. #speaker_self
-    That’s the spirit. Everything else good? #speaker_left
-    ~ unaisah_1_cca = "robotics"
+        ~ unaisah_1_cca = "malaydance"
+        That’s the spirit. Everything else good? #speaker_left
     -- Yup, yup, still adjusting, but good. #speaker_self
     
 - That's settled then. My door is usually open when I'm in, which means you can come in to talk anytime. #speaker_left
