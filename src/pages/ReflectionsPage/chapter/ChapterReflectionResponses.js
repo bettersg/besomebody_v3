@@ -319,9 +319,10 @@ const ChapterReflectionResponses = ({ reflectionId, setPage }) => {
         currentPage === 2 ? 
           <div className={classes.yourStoriesBkgrd}  onClick={() => setCurrentPage(currentPage + 1)}>
               <div className={classes.gradientBkgrd}>
-                {responses.length === 0 ? 
+                { highlightedResponse == null ? 
                   <ChapterResponse response={defaultResponse[0]} />
-                  : <ChapterResponse key={highlightedResponse.id} response={highlightedResponse} />
+                    :                    
+                    <ChapterResponse key={highlightedResponse.id} response={highlightedResponse} />
                 }
               {/* <ChapterResponse key={responses[0].id} response={responses[0]} /> */}
               <div className={classes.bottomLikeSection}>
