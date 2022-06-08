@@ -63,8 +63,7 @@ Minigame // must add some text
 */
 
 // DECLARE GLOBAL VARIABLES
-VAR character_id = 3
-VAR chapter_1_ending = 0 
+VAR character_id = 5
 // VAR chapter_2_ending = 0 
 // VAR chapter_3_ending = 0 
 // VAR chapter_4_ending = 0 
@@ -521,12 +520,14 @@ Hwee Ling is already there, nose buried in some papers. Her face is not unkind, 
 #speaker_left_name:Hwee Ling
 So, how’ve your first few weeks here been? #speaker_left
 + [Hype it up]  Incredible! Such an eye-opening and energising experience. #speaker_self
+    #speaker_left_image:cha_unaisah_hweeling_grinning.png
     Spoken like a true BT (beginning teacher). The real challenge is keeping it up. #speaker_left
 + [Slow it down]   To be honest, it’s a lot more than I expected. #speaker_self
     I’ve been taking on quite a lot of admin duties and was hoping to focus more on my students. #speaker_self
     Don’t worry too much, it’s early days, you’ll grow into it. #speaker_left
 - Heh... #inner_monologue
 In fact, I wanted to talk to you about CCAs. We’re aware we haven’t assigned you one yet. #speaker_left
+#speaker_left_image:cha_unaisah_hweeling_neutral.png
 Here it comes. More work. #inner_monologue
 We did all the allocations before you joined us, but there’s a space for you in... #speaker_left
 ...Malay Dance. #speaker_left
@@ -536,20 +537,26 @@ Malay Dance? If the reason is what I think it is… #inner_monologue
 + [Accept Malay Dance]   Oh! Great. Great! So...cultural. #speaker_self
     My childhood bestie took Malay dance in school. I can sort of remember attending a few of her performances... #speaker_self
     ~ unaisah_1_cca = "malaydance"
+    VAR chapter_1_ending = 0 
+    ~ chapter_1_ending = 1
     That’s a plus, not a requisite. We’re not asking you to do this because you’re Malay. #speaker_left
     I’m not. #inner_monologue
+    #speaker_left_image:cha_unaisah_hweeling_concerned.png
     Because you’re not. #speaker_left
     Okay, phew, she gets it. #inner_monologue
     Any teacher can be in charge of any CCA. Because what you’re doing is imparting values. Leadership. Teamwork. Care for the community. #speaker_left
     The technical parts, we can always get vendors in if necessary. Some CCAs, like the Uniformed Groups, practically run themselves, thanks to seniors. #speaker_left
+    #speaker_left_image:cha_unaisah_hweeling_neutral.png
     So, how about it? #speaker_left
 
 + [Ask for something else]  ... #speaker_self
     Anything wrong? #speaker_left
     I was just wondering if you meant Indian Dance. I’m, well, Indian. #speaker_self
+    #speaker_left_image:cha_unaisah_hweeling_concerned.png
     I know you are. We know you are. But we had to shut down Indian Dance two years ago because there weren’t enough students interested in it. Ever since the school moved, our student profile has been shifting. #speaker_left
     I understand. Sorry, it’s just that it happens so much that people assume I’m Malay because I’m Muslim so I thought-- #speaker_self
     Don’t worry about it. No harm, no foul. #speaker_left
+    #speaker_left_image:cha_unaisah_hweeling_neutral.png
     So how about it? Try something new? #speaker_left
     So, how about it? #speaker_left
 
@@ -557,6 +564,7 @@ Malay Dance? If the reason is what I think it is… #inner_monologue
 + [Accept Malay Dance now]    Okay. I’ll do it. It will be a learning opportunity for me, too. #speaker_self
     That’s the spirit. Everything else good? #speaker_left
     ~ unaisah_1_cca = "malaydance"
+    ~ chapter_1_ending = 1
     Yup, yup, still adjusting, but good. #speaker_self
     A mid-career shift can be tough. If anything pops up, let me know. #speaker_left
     
@@ -570,10 +578,12 @@ Malay Dance? If the reason is what I think it is… #inner_monologue
     
     ++ [Accept Robotics] That sounds good. It’s a growing field. Coding is the future! #speaker_self
         ~ unaisah_1_cca = "robotics"
+        ~ chapter_1_ending = 2
         That’s the spirit. Everything else good? #speaker_left
     
     ++ [Choose Malay Dance] You know what, I think I should give myself a chance with dance. If I can get into something I’m not good at, then I can use that to motivate my students. #speaker_self
         ~ unaisah_1_cca = "malaydance"
+        ~ chapter_1_ending = 1
         That’s the spirit. Everything else good? #speaker_left
     -- Yup, yup, still adjusting, but good. #speaker_self
     
@@ -584,6 +594,9 @@ Malay Dance? If the reason is what I think it is… #inner_monologue
 
 === unaisah_1_7 ===
 #knot:unaisah_1_7
+#ui:narrator
+#background:black.jpg
+Later that night.
 #ui:scene
 #background:bg_unaisah_CH2_LivingRoom_Night_wFood.png
 #speaker_left_image:cha_Unaisah_Basheer_Laughing_HomeWear.png 
@@ -597,6 +610,7 @@ Malay Dance? If the reason is what I think it is… #inner_monologue
     It's like they have lived alongside Indian Muslims for so long but they assume that all Muslims must be Malay. #speaker_self
     So? #speaker_left
     So? We’re not, and I’m tired of others thinking we’re interchangeable. #speaker_self
+    #speaker_left_image:cha_Unaisah_Basheer_Neutral_HomeWear.png 
     They just don’t know better. It’s usually quite innocent. Don’t waste your energy bothering about them, alright? #speaker_left
     It is important though. Is it really too much to ask for people to recognise that Indians can be Muslim too? And I wish you weren’t so dismissive about it. #speaker_self
     There’s only room for one smart, strong, independent, and brave partner in this relationship... and it definitely isn’t me. #speaker_left
@@ -612,10 +626,12 @@ Malay Dance? If the reason is what I think it is… #inner_monologue
     I think they do, but I joined later so they’d all been taken. Trust me, it could’ve been worse. It could’ve been Malay dance. #speaker_self
     I, for one, would have loved to see you dance. #speaker_left
     Anyways, I don’t actually have to know anything about the subject. #speaker_self
+    #speaker_left_image:cha_Unaisah_Basheer_Neutral_HomeWear.png 
     Really? #speaker_left
     I’m just there to [mimicking Hwee Ling] "Impart values. Care for the Community." #speaker_self
     Sure, but shouldn’t CCA teachers at least be interested in the activities? #speaker_left
     Well, what was your CCA back in the day Bash? #speaker_self
+    #speaker_left_image:cha_Unaisah_Basheer_Laughing_HomeWear.png 
     You’re looking at Staff Sergeant Basheer, of the National Police Cadet Corps. #speaker_left
     Your CCA teachers, were they the police type? #speaker_self
     Yah. Of course. #speaker_left
@@ -626,6 +642,7 @@ You know what’s important to me though? #speaker_left
 Us? #speaker_self
 Well yes, but also my parents want to drop by next week. #speaker_left
 Fine. I can’t say no, right? #speaker_self
+#speaker_left_image:cha_Unaisah_Basheer_Concerned_HomeWear.png
 I guess not...and I hope this visit goes better than the last one. #speaker_left
 I don’t like where this is going. #inner_monologue
 
@@ -641,6 +658,7 @@ I don’t like where this is going. #inner_monologue
     Come on, don’t make a man choose between his mother and his wife. It never ends well, alright? #speaker_left
     So you’re asking me to side with your mother when she asks me about having a baby again. Shall I just pop one for her now? #speaker_self
     That’s not what I said, alright? #speaker_left
+    #speaker_left_image:cha_Unaisah_Basheer_Defeated_HomeWear.png
     Well what will you say then? What do YOU actually feel about having a child? #speaker_self
     Unni, we’ve talked about this. #speaker_left
     Wrong. I’ve talked about it. I’ve made it clear that I’m not ready yet. #speaker_self
@@ -659,6 +677,7 @@ I don’t like where this is going. #inner_monologue
         
     ++ [Alright] Alright. I get it, she’s your mother. It’s natural that she’s eager to have a grandchild. #speaker_self
         Thank you dear. #speaker_left
+        #speaker_left_image:cha_Unaisah_Basheer_Concerned_HomeWear.png
         We need to have a proper talk about this soon though. #speaker_self
         It's a choice that affects me greatly. #speaker_self
         I know what I want...I think. But it feels lonely. #speaker_self
@@ -744,7 +763,7 @@ Maybe I shouldn’t have used my real name as part of my handle… #inner_monolo
 #knot:unaisah_1_9
 #ui:scene
 #background:bg_unaisah_CH1_UnaisahDesk.png
-#speaker_left_image:cha_unaisah_veronica_concerned.png
+#speaker_left_image:cha_unaisah_veronica_neutral.png
 #speaker_left_name:Veronica
 Heyyy! Hey Unaisah. #speaker_left
 What’s up? #speaker_self
@@ -754,6 +773,7 @@ A few of us are thinking of coordinating and going with a theme. Like same colou
 You know, like how some Malay families wear the same colour during Hari Raya? #speaker_left
 My family doesn’t do that though. #speaker_self
 Also isn’t it harder to get the same colour for different ethnic costumes? #speaker_self
+#speaker_left_image:cha_unaisah_veronica_laughing.png
 Just try lah. Are you in or not? #speaker_left
 
 + [Agree] Why not? Could be fun. #speaker_self
@@ -761,8 +781,10 @@ Just try lah. Are you in or not? #speaker_left
 + [Decline] See first? I’m having enough trouble as it is figuring out what to wear. #speaker_self
     Okay sure. Let me know if you change your mind ya. Still got time. #speaker_left
 - Hey Veron...? While you’re here, can I ask you something? #speaker_self
+#speaker_left_image:cha_unaisah_veronica_neutral.png
 Sure, what is it? #speaker_left
 Are you friends with any of your students on social media? #speaker_self
+#speaker_left_image:cha_unaisah_veronica_disgusted.png
 Oh no no no, no no. #speaker_left
 That’s emphatic! #speaker_self
 There’s a code of conduct. We can’t. #speaker_left
@@ -772,6 +794,7 @@ I just think it could be useful to build that teacher-student relationship that 
 Unaisah, I know you mean well, but this is really not a good idea. It’s a slippery slope. #speaker_left
 You may think it’s okay now, but it can lead to a lot of problems later. #speaker_left
 Okay, okay. #speaker_self
+#speaker_left_image:cha_unaisah_veronica_neutral.png
 One more thing. #speaker_self
 Yes? #speaker_left
 Are any of your students in BGRs? #speaker_self
@@ -782,10 +805,12 @@ Not unless it affects their schoolwork. Usually it doesn’t. #speaker_left
 I see. #speaker_self
 Are you suspecting any of your students are...? #speaker_left
 Oh, oh not really. Just heard the kids talking. #speaker_self
+#speaker_left_image:cha_unaisah_veronica_laughing.png
 Just let them be. You want to hear about BGR? I even have BBR, GGR. Haha. I can give you all kinds. #speaker_left
 And that’s … okay? #speaker_self
 Why shouldn’t it be? #speaker_left
 Oh I just thought...you know, given the religious affiliation for the school... #speaker_self
+#speaker_left_image:cha_unaisah_veronica_neutral.png
 Honestly, I'm here to teach. Dealing with all the other headaches that students cause is just … extra work, which I'd much rather avoid. #speaker_left
 So take my advice - just ignore it and don't get involved. #speaker_left
 Of course. #speaker_self
@@ -800,13 +825,18 @@ Later that night.
 A new IG request from @roslando_calrissian.
 I should...
 + [Accept] I hope I don't regret this.
-    ~ chapter_1_ending = 1
 + [Decline] No thanks.
-    ~ chapter_1_ending = 2
 + [Ignore] Hmm.
-    ~ chapter_1_ending = 3
+- Ok, that's settled, for now.
+#background:black.jpg
+Navigating all these social dynamics as a teacher is just as difficult as it was in my previous job. 
+Who should I make friends with? How close should I get to them? How should I let them treat me? 
+Should I speak up for myself, or stay silent? Should I be open about my issues with my boss, or keep my troubles to myself?
+And not to mention my in-laws and their demands for a grandchild. 
+Ok, deep breath. I can do this.
 
--      -> unaisah_1_reflection
+
+-> unaisah_1_reflection
 
 === unaisah_1_reflection ===
 #knot:unaisah_1_reflection

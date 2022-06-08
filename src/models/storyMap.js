@@ -903,19 +903,14 @@ export const CHARACTER_MAP = [
         endings: [
           {
             endingId: 1,
-            title: "Unaisah says she loves teaching",
+            title: "Unaisah accepts Malay Dance",
             
           },
           {
             endingId: 2,
-            title: "Unaisah says she was not happy there",
+            title: "Unaisah chooses Robotics",
             
-          },
-          {
-            endingId: 3,
-            title: "Unaisah tells them her secret",
-            
-          },
+          },          
          
         ]
       },
@@ -1033,7 +1028,7 @@ export const CHARACTER_MAP = [
       {         
         title: "Reflection Browser",
         knotTag: "story_end_browser",
-        summary: "Nadia's story in the game has ended, but the stories of all our players are waiting to be explored.",
+        summary: "Unaisah's story in the game has ended, but the stories of all our players are waiting to be explored.",
         playable: false,
         discordLink: 'https://discord.gg/9ttyzdsANY',
         images: [
