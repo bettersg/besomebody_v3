@@ -144,8 +144,7 @@ Our heads rest on the floor in prostration together at the end of the prayer. Ba
 This was a nice start to my day. I feel ready now.#inner_monologue
 Three outfits, twenty minutes, and a struggle with a tube of lipstick later, I’m smoothing my hijab down the back of my head, ready to embark on my first day as a teacher. #inner_monologue
 Good luck today chellam! #speaker_left
-It’s time. #inner_monologue
-I can do this! #inner_monologue
+It’s time to embark on my first day as a teacher #inner_monologue
 
 -> unaisah_1_2
 
@@ -349,7 +348,10 @@ Those of us in the teaching track from the beginning, we heard our calling and s
 But you made a career switch. Something had to have happened. #speaker_left
 Tamara--you’ll meet her later--also made a mid-career switch. Her trigger was becoming an aunt. For Alistair over there, it was turning 30. #speaker_left
 Haiyoh can you not be such a busybody, she already answered you. It’s only her first day here, there’s still a lot of time to get to know her. #speaker_right
-// -> unaisah_1_reflection
+#ui:narrator
+#background:bg_unaisah_CH1_MeetingRoom.png
+Today was a lot to take in, but I think I’m warming up to my colleagues, and I like the vibe of the school. It’s a good start! 
+
 -> unaisah_1_5
 
 = unaisah_1_4b
@@ -369,7 +371,10 @@ I’ll take teenage problems over boss and client problems! #speaker_self
 Boss problems...? #speaker_left
 Um... #speaker_self
 Haiyoh can you not be such a busybody, she already answered you. It’s only her first day here, there’s still a lot of time to get to know her. #speaker_right
-// -> unaisah_1_reflection
+#ui:narrator
+#background:bg_unaisah_CH1_MeetingRoom.png
+Today was a lot to take in, but I think I’m warming up to my colleagues, and I like the vibe of the school. It’s a good start! 
+
 -> unaisah_1_5
 
 = unaisah_1_4c
@@ -408,7 +413,10 @@ What if they judge me? Can I even trust them? #inner_monologue
     Is there anything we can do to support you? A few of our classes are down the hall from each other. I can keep an eye out for you. #speaker_left
     No, I don’t need bodyguards. Just having you two listening and asking me how I’m doing is enough. #speaker_self
     Thank you. #speaker_self
-    // -> unaisah_1_reflection
+    #ui:narrator
+    #background:bg_unaisah_CH1_MeetingRoom.png
+    Today was a lot to take in, but I think I’m warming up to my colleagues, and I like the vibe of the school. It’s a good start! 
+
     -> unaisah_1_5
 
 + [Don't tell them]
@@ -477,8 +485,9 @@ If I had a dollar for every time...I gotta tell Marie about this. #inner_monolog
  === unaisah_1_6 ===
 #knot:unaisah_1_6 
 #ui:narrator
+#background:bg_unaisah_CH1_StaffRoom_Day.png
+(Yawns) Wow, it’s been a tiring month. But I feel I’m getting a hang of things now. I’ve settled into a rhythm. 
 #background:ui_emailinbox.png
-Wow, it’s been a tiring month. But I feel I’m getting a hang of things now. I’ve settled into a rhythm. 
 First class starts in 20 minutes. Better get those emails out of the way. God knows how hectic it gets once that first bell goes…
 
 #ui:emailinbox
@@ -506,7 +515,7 @@ That’s my supervisor. What does she want to talk about? Could this be my chanc
 Unaisah, haven’t had the chance to catch up since you joined us. /n /n If you’re free after 3 this afternoon could you drop by my office for a short while? /n /n cheers, /n HL  #speaker_1
 
 #ui:narrator
-#background:ui_emailinbox.png
+#background:bg_unaisah_CH1_StaffRoom_Day.png
 The day trudges on as usual. At the end of my last class, I make my way to a small meeting room. It is quite plain, with a few plaques and motivational posters on the wall.
 Hwee Ling is already there, nose buried in some papers. Her face is not unkind, but stern. Definitely not someone I’d want to mess with.
 
@@ -602,7 +611,19 @@ Later that night.
 #speaker_left_image:cha_Unaisah_Basheer_Laughing_HomeWear.png 
 #speaker_left_name:Basheer
 
+Oh wow, did you get these from the Old Airport Road stall? Haven’t had these in so long!  #speaker_left
+The best thing about your new workplace, it’s near all the great hawker stalls haha.   #speaker_left
+True! Oh - you’ll never guess what happened to me today!  Guess what CCA I’m now in charge of.  #speaker_self
+...Debate?  #speaker_left
+And what’s that supposed to mean? #speaker_self
+Heh, that you are very sharp?  #speaker_left
+Good save. But no. #speaker_self
+…The Otaku Club? As president?  #speaker_left
+Ha. Ha. #speaker_self
+But okay, this is serious. #speaker_self
+
 {unaisah_1_cca == "malaydance":
+    It's Malay Dance. #speaker_self
     Dance! You? Hahaha, I can’t believe it. #speaker_left
     I don’t know if I’m more bothered by that, or the Malay thing. #speaker_self
     What Malay thing? #speaker_left
@@ -612,15 +633,19 @@ Later that night.
     So? We’re not, and I’m tired of others thinking we’re interchangeable. #speaker_self
     #speaker_left_image:cha_Unaisah_Basheer_Neutral_HomeWear.png 
     They just don’t know better. It’s usually quite innocent. Don’t waste your energy bothering about them, alright? #speaker_left
-    It is important though. Is it really too much to ask for people to recognise that Indians can be Muslim too? And I wish you weren’t so dismissive about it. #speaker_self
-    There’s only room for one smart, strong, independent, and brave partner in this relationship... and it definitely isn’t me. #speaker_left
+    Well, it isn’t for me. #speaker_self
+    Seriously Basheer, is it really too much to ask for people to recognise that Indians can be Muslim too? #speaker_self
+    And I wish you weren’t so dismissive about it. It’s not funny. #speaker_self
+    Alright alright, it’s not a joke. And may I also add that there’s only room for one smart, strong, independent, and brave partner in this relationship... and it definitely isn’t me. #speaker_left
     You got that right. #speaker_self
     - else :
+    It's Robotics. #speaker_self
     Robotics! You? Hahaha, I can’t believe it. #speaker_left
     Time to take a crash course through YouTube videos... #speaker_self
-    Don’t they give you something you’re good at? #speaker_left
+    Don’t they give you something you’re good at? Oh wait! Now I can see it! Must be all the Gundam fighters you watch. #speaker_left
     Hey! #speaker_self
-    ... #speaker_self
+    Bhew blew bhew bhew! Target destroyed! #speaker_left
+    Hahaha! Oh my god Bash, stop joking.  #speaker_self 
     Okay, you’re not wrong. But who knows, give me a couple months, I could be a tech whiz. #speaker_self
     I always thought teachers get to pick their CCAs. #speaker_left
     I think they do, but I joined later so they’d all been taken. Trust me, it could’ve been worse. It could’ve been Malay dance. #speaker_self
@@ -662,7 +687,7 @@ I don’t like where this is going. #inner_monologue
     Well what will you say then? What do YOU actually feel about having a child? #speaker_self
     Unni, we’ve talked about this. #speaker_left
     Wrong. I’ve talked about it. I’ve made it clear that I’m not ready yet. #speaker_self
-    You’ve talked around it. You change the subject. Or you say a lot of things without actually saying anything at all. It feels like you’ve been avoiding this discussion. #
+    You’ve talked around it. You change the subject. Or you say a lot of things without actually saying anything at all. It feels like you’ve been avoiding this discussion. #speaker_self
     Not now, alright? #speaker_left
     
     ++ [Then when?] See what I mean! Then when? #speaker_self
@@ -688,6 +713,10 @@ I don’t like where this is going. #inner_monologue
 Oh, when you feel bad then you offer to do is it? #speaker_self
 Don’t put it that way, alright... #speaker_left
 It’s fine. It’s my turn today anyway. #speaker_self
+#ui:narrator
+Lately, I find myself taking my frustrations out on Basheer. I don’t yet know what I want for my future, and I’m already torn up about this without my mum-in-law adding to the pressure. 
+Sometimes, I wonder what Basheer would do if his mum and I were drowning in open water – would he go get me, or her? Every time I think about it, I have to stop the answer from crystallising.  
+
     
 -> unaisah_1_8
 
