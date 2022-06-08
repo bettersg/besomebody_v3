@@ -884,9 +884,9 @@ export const CHARACTER_MAP = [
   {
     characterId: 6,
     name: "Marie da Costa",
-    linkName: "",
-    profileImage: "/images/profile_blank.png",
-    characterIntroImage:  "/images/instagram_blank.png",
+    linkName: "marie",
+    profileImage: "/images/profile_marie.jpg",
+    characterIntroImage:   "/character_choice_page/marie.png",
     description: "Marie wants to open her own cafe - but will her heritage and gender stand in the way of her success?",
     jsonLink: '../stories/nadia.ink.json',
     playable: false,
