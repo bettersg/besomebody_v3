@@ -2,6 +2,7 @@ import NadiaInk from '../stories/nadia.ink.json'
 import AmanInk from '../stories/aman.ink.json'
 import RaviInk from '../stories/ravi.ink.json'
 import ZhihaoInk from '../stories/zhihao.ink.json'
+import UnaisahInk from '../stories/unaisah.ink.json'
 
 // TODO: Update with other properties such as character image, character bio, chapter summary, etc
 /* 
@@ -28,7 +29,7 @@ chapters []
  
  -> to add the primary colour and secondary colour info for each character based on the UI design.
  
-// reflectionIDs: aman 1,5,6 | nadia 2,3,4 |  ravi 7,8,9,10 |  zhihao 11,12,13
+// reflectionIDs: aman 1,5,6 | nadia 2,3,4 |  ravi 7,8,9 (10 not used) |  zhihao 11,12,13 | unaisah 14,15,16 
 
 */
 
@@ -736,6 +737,7 @@ export const CHARACTER_MAP = [
         knotTag: "zhihao_1_intro",
         summary: "Zhihao meets his uncles, and unwinds by playing games later. Both situations put him in a tough spot.",
         playable: true,
+        discordLink: 'https://discord.gg/bszB9A5bt6',
         images: [
           "/images/bg_zhihao_intro.jpg",          
           "/images/bg_zhihao_bedroom.jpg",
@@ -785,6 +787,7 @@ export const CHARACTER_MAP = [
         knotTag: "zhihao_2_intro",
         summary: "Zhihao is tested in multiple ways. Even with his skills, he may let a friend down.",
         playable: false,
+        discordLink: 'https://discord.gg/bszB9A5bt6',
         images: [
           "/images/bg_nadia_intro.jpg",
         ],
@@ -808,7 +811,8 @@ export const CHARACTER_MAP = [
         title: "Playing to the Crowd",
         knotTag: "zhihao_3_intro",
         summary: "Zhihao witnesses the power of social media. Will he master it, or will it conquer him?",
-        playable: true,
+        playable: false,
+        discordLink: 'https://discord.gg/bszB9A5bt6',
         images: [
           "/images/bg_nadia_intro.jpg",     
         ],
@@ -837,6 +841,7 @@ export const CHARACTER_MAP = [
         knotTag: "story_end_browser",
         summary: "Zhihao's story in the game has ended, but the stories of all our players are waiting to be explored.",
         playable: true,
+        discordLink: 'https://discord.gg/bszB9A5bt6',
         images: [
           "/images/bg_nadia_intro.jpg",         
         ],
@@ -869,22 +874,220 @@ export const CHARACTER_MAP = [
   {
     characterId: 5,
     name: "Unaisah Begum",
-    linkName: "",
+    linkName: "unaisah",
     profileImage: "/images/profile_unaisah.png",
     characterIntroImage:  "/character_choice_page/unaisah.png",
     description: "Unaisah wants to excel as a new teacher - but can she break the glass ceiling while dealing with things at home?",
-    jsonLink: '../stories/nadia.ink.json',
-    playable: false,
+    jsonLink: '../stories/unaisah.ink.json',
+    playable: true,
+    shareImage:'/shareable_avatars/unaisah_share.svg',
+    jsonFile: UnaisahInk,
+    primaryColour: '#FB5A3F',
+    secondaryColour: '#664EFC',
+    newestChapter: 1,    
+    chapters: [
+      {
+        chapterId: 1,
+        reflectionId:14,
+        number: 1,
+        title: "Teacher’s First Day",
+        knotTag: "unaisah_1_intro",
+        summary: "Unaisah embarks on a new life as a teacher - but awkward questions about her past and identity confront her.",
+        playable: true,
+        discordLink: 'https://discord.gg/QyR2fvqSgN',
+        images: [          
+          '/images/whatsapp.png',
+          '/images/pixel.png',
+          '/images/whatsapp.png',
+          '/images/bg_unaisah_intro.jpg',
+          '/images/bg_unaisah_CH2_Bedroom_Night.png',
+          '/images/cha_Unaisah_Basheer_Neutral_HomeWear.png',
+          '/images/bg_unaisah_CH1_VoidDeck_Day.png',
+          '/images/bg_unaisah_CH1_GrabInterior_Day.png',
+          '/images/cha_unaisah_grabdriver_normal.png',
+          '/images/bg_unaisah_driverrating.jpg',
+          '/images/ico_unaisah_marie.jpg',
+          '/images/bg_unaisah_CH1_StaffRoom_Day.png',
+          '/images/cha_unaisah_veronica_laughing.png',
+          '/images/cha_unaisah_veronica_concerned.png',
+          '/images/bg_unaisah_CH1_MeetingRoom.png',
+          '/images/cha_unaisah_veronica_neutral.png',
+          '/images/cha_unaisah_jeremy_neutral.png',
+          '/images/cha_unaisah_jeremy_sympathetic.png',
+          '/images/cha_unaisah_jeremy_laughing.png',
+          '/images/bg_unaisah_CH2_Supermarket_Day.png',
+          '/images/cha_unaisah_malayuncle.png',
+          '/images/ui_emailinbox.png',
+          '/images/bg_unaisah_CH2_UnaisahDesk_WithWork.png',
+          '/images/cha_unaisah_hweeling_neutral.png',
+          '/images/cha_unaisah_hweeling_grinning.png',
+          '/images/cha_unaisah_hweeling_concerned.png',
+          '/images/black.jpg',
+          '/images/bg_unaisah_CH2_LivingRoom_Night_wFood.png',
+          '/images/cha_Unaisah_Basheer_Laughing_HomeWear.png',
+          '/images/cha_Unaisah_Basheer_Concerned_HomeWear.png',
+          '/images/cha_Unaisah_Basheer_Defeated_HomeWear.png',
+          '/images/bg_unaisah_CH2_MalayDanceCCARoom.png',
+          '/images/bg_unaisah_CH2_RoboticsCCARoom.png',
+          '/images/cha_unaisah_roslan.png',
+          '/images/cha_unaisah_chitra.png',
+          '/images/bg_unaisah_CH1_UnaisahDesk.png',
+          '/images/cha_unaisah_veronica_disgusted.png',
+          '/images/ui_unaisah_instagram.png',
+        ],
+        endings: [
+          {
+            endingId: 1,
+            title: "Unaisah accepts Malay Dance",
+            
+          },
+          {
+            endingId: 2,
+            title: "Unaisah chooses Robotics",
+            
+          },          
+         
+        ]
+      },
+      {
+        chapterId: 2,
+        number: 2,
+        reflectionId:15,
+        title: "The Mother of All Expectations",
+        knotTag: "unaisah_2_intro",
+        summary: "Even as Unaisah progresses in her teaching career, she must make a crucial life decision.",
+        playable: false,
+        discordLink: 'https://discord.gg/Az4tr5XXJM',
+        images: [
+          "/images/bg_nadia_intro.jpg",
+          "/images/bg_nadia_bedroom.jpg",
+          "/images/bg_nadia_selfiehijab.jpg",          
+          "/images/bg_launch.jpg",
+          "/images/bg_reflections.jpg",
+        ],
+        endings: [
+          {
+            endingId: 1,
+            title: "Azlin gets upset with you",
+            inkVar: "chapter2_ending_1",
+          },
+          {
+            endingId: 2,
+            title: "Azlin tells you to give him up",
+            inkVar: "chapter2_ending_2",
+          },
+        ]
+      },
+      {
+        chapterId: 3,
+        number: 3,
+        reflectionId:16,
+        title: "To Baby or not to baby?",
+        knotTag: "unaisah_3_intro",
+        summary: "Managing the consequences of her previous choices proves to be harder than she realised.",
+        playable: false,
+        discordLink: 'https://discord.gg/9ttyzdsANY',
+        images: [
+          "/images/bg_nadia_intro.jpg",
+          "/images/bg_nadia_bedroom.jpg",         
+          "/images/bg_nadia_fathercaratday.jpg",        
+        ],
+        endings: [
+          {
+            endingId: 1,
+            title: "Nadia and Gavin, together",
+            inkVar: "chapter3_ending_1",
+          },
+          {
+            endingId: 2,
+            title: "Nadia keeps her options open",
+            inkVar: "chapter3_ending_2",
+          },         
+        ]
+      },
+      // {
+      //   chapterId: 4,
+      //   number: 4,
+      //   reflectionId:17,
+      //   title: "To Baby or not to baby?",
+      //   knotTag: "unaisah_4_intro",
+      //   summary: "Managing the consequences of her previous choices proves to be harder than she realised.",
+      //   playable: false,
+      //   discordLink: 'https://discord.gg/9ttyzdsANY',
+      //   images: [
+      //     "/images/bg_nadia_intro.jpg",
+      //     "/images/bg_nadia_bedroom.jpg",         
+      //     "/images/bg_nadia_fathercaratday.jpg",        
+      //   ],
+      //   endings: [
+      //     {
+      //       endingId: 1,
+      //       title: "Nadia and Gavin, together",
+      //       inkVar: "chapter3_ending_1",
+      //     },
+      //     {
+      //       endingId: 2,
+      //       title: "Nadia keeps her options open",
+      //       inkVar: "chapter3_ending_2",
+      //     },          
+      //     {
+      //       endingId: 3,
+      //       title: "Nadia moves forward alone",
+      //       inkVar: "chapter3_ending_3",
+      //     }, 
+      //   ]
+      // },
+    ],
+    reflectionBrowser: [
+      {         
+        title: "Reflection Browser",
+        knotTag: "story_end_browser",
+        summary: "Unaisah's story in the game has ended, but the stories of all our players are waiting to be explored.",
+        playable: false,
+        discordLink: 'https://discord.gg/9ttyzdsANY',
+        images: [
+          "/images/bg_nadia_intro.jpg",         
+          "/images/bg_launch.jpg",
+          "/images/bg_reflections.jpg",
+        ],
+        empathyCharacters: [
+          {
+            characterName: 'Nadia',
+            characterImage: '/shareable_avatars/nadia.png',
+            shareImage:'/shareable_avatars/nadia_share.svg',
+          },
+          {
+            characterName: 'Azlin',
+            characterImage: '/shareable_avatars/azlin.png',
+          },
+          {
+            characterName: 'Gavin',
+            characterImage: '/shareable_avatars/gavin.png',
+          },
+          {
+            characterName: 'Chloe',
+            characterImage: '/shareable_avatars/chloe.png',
+          },
+          {
+            characterName: 'Rahman',
+            characterImage: '/shareable_avatars/rahman.png',
+          },
+
+        ]
+      },
+    ]
+
   }, 
   {
     characterId: 6,
     name: "Marie da Costa",
-    linkName: "",
-    profileImage: "/images/profile_blank.png",
-    characterIntroImage:  "/images/instagram_blank.png",
+    linkName: "marie",
+    profileImage: "/images/profile_marie.jpg",
+    characterIntroImage:   "/character_choice_page/marie.png",
     description: "Marie wants to open her own cafe - but will her heritage and gender stand in the way of her success?",
     jsonLink: '../stories/nadia.ink.json',
     playable: false,
+    chapter: []
   },
 ];
 
