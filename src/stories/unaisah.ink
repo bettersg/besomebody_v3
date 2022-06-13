@@ -348,6 +348,8 @@ Those of us in the teaching track from the beginning, we heard our calling and s
 But you made a career switch. Something had to have happened. #speaker_left
 Tamara--you’ll meet her later--also made a mid-career switch. Her trigger was becoming an aunt. For Alistair over there, it was turning 30. #speaker_left
 Haiyoh can you not be such a busybody, she already answered you. It’s only her first day here, there’s still a lot of time to get to know her. #speaker_right
+Sigh. There was obviously something more, and he senses it. #inner_monologue
+But telling them about the harassment I faced there... I think it's too early. I don't know how they would respond, or if they would even believe me. #inner_monologue
 #ui:narrator
 #background:bg_unaisah_CH1_MeetingRoom.png
 Today was a lot to take in, but I think I’m warming up to my colleagues, and I like the vibe of the school. It’s a good start! 
@@ -371,6 +373,8 @@ I’ll take teenage problems over boss and client problems! #speaker_self
 Boss problems...? #speaker_left
 Um... #speaker_self
 Haiyoh can you not be such a busybody, she already answered you. It’s only her first day here, there’s still a lot of time to get to know her. #speaker_right
+Sigh. He senses that there is more to the story than I'm letting on. #inner_monologue
+But telling them about the harassment I faced there... I think it's too early. I don't know how they would respond, or if they would even believe me. #inner_monologue
 #ui:narrator
 #background:bg_unaisah_CH1_MeetingRoom.png
 Today was a lot to take in, but I think I’m warming up to my colleagues, and I like the vibe of the school. It’s a good start! 
@@ -853,9 +857,16 @@ Of course. #speaker_self
 Later that night. 
 A new IG request from @roslando_calrissian.
 I should...
-+ [Accept] I hope I don't regret this.
-+ [Decline] No thanks.
++ [Accept] I'll accept it.
+    VAR unaisah_1_instagram = true
+    ~ unaisah_1_instagram = true
+    I hope I don't regret this.
++ [Decline] I'll decline it.
+    ~ unaisah_1_instagram = false
+    No thanks.
 + [Ignore] Hmm.
+    ~ unaisah_1_instagram = false
+    I think best to just ignore it.
 - Ok, that's settled, for now.
 #background:black.jpg
 Navigating all these social dynamics as a teacher is just as difficult as it was in my previous job. 
