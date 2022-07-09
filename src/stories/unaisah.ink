@@ -875,6 +875,7 @@ Should I speak up for myself, or stay silent? Should I be open about my issues w
 And not to mention my in-laws and their demands for a grandchild. 
 Ok, deep breath. I can do this.
 
+// the unaisah_1_instagram was added later, so for subsequent conditionals must do "if true, else" (to catch the null / undefined options) rather than specify "if true" and "if false". 
 
 -> unaisah_1_reflection
 
@@ -887,5 +888,408 @@ Reflection 14  // change this to 14
 
 
 
+-> unaisah_2_intro
 
+
+
+
+
+
+
+
+
+
+// CHAPTER 2
+
+
+
+
+
+=== unaisah_2_intro ===
+#knot:unaisah_2_intro
+#ui:narrator
+#background:bg_unaisah_CH2_UnaisahDesk_WithWork.png
+I can’t believe it’s already a new school term.  The work is hard but I have a good rhythm. I’m on top of things. I have colleagues who are considerate. 
+I really feel I have a shot at doing well, and finally putting the troubles of my previous job behind me.
+The timing is awkward though. I’m 35 now and my in-laws have been putting more and more pressure on me to have a child. They do it with a smile, but it adds up.
+I haven’t made up my mind. Putting everything I have into this job is so important to me. 
+But my experiences with my students have also gotten me thinking how nice it would be to care for and raise a child of my own, with all the God-given potential.
+I wish I knew where Bash stands on this. I think Bash might want a child more than me, but I don’t know whether it’s him, or his parents. 
+Somehow we’ve managed to skirt around this difficult conversation for so long...
+
+~ chapter_id = 2
+#background:black.jpg
+CHAPTER {chapter_id} #title
+The Mother of All Expectations #title
+
+
+-> unaisah_2_1
+
+
+=== unaisah_2_1 ===
+#knot:unaisah_2_1
+#ui:scene
+#background:bg_unaisah_CH2_UnaisahDesk_WithWork.png
+#speaker_left_image:cha_unaisah_hweeling_neutral.png
+#speaker_left_name:Hwee Ling
+...and that’s all the feedback I have for you. Well done, Unaisah. You’re doing great. Keep this up. #speaker_left
+Thank you, Hwee Ling. I’m trying my best. #speaker_self
+It feels like a lifetime ago that I met Hwee Ling for the first time in this room. I’ve grown a lot in just a few months #inner_monologue
+Do you have any other questions about your performance? Anything you want to raise? Or disagree with? #speaker_left
++ [About my progression...] I think I’ve done well, and I’m thinking about my progression. #speaker_self
+    VAR unaisah_2_progression = ""
+    ~  unaisah_2_progression = "ask"
+    I want to know what I need to do to become a Subject Head some day. #speaker_self
+    That’s direct. #speaker_left
+    Did I just mess this up? #inner_monologue
+    It’s perfectly fine to ask. In the service, promotions don’t come until several years in. #speaker_left
+    But you do come with a lot of relevant experience from the private sector. And you’ve been using it. #speaker_left
+    Mid-career teachers like you can and do progress faster than fresh graduates. #speaker_left
+    Thanks, Hwee Ling. Good to know that. #speaker_self
+    Is it important to you, though? #speaker_left
+    I just want to be able to make the most impact, with my abilities. #speaker_self
+
++ [We covered everything] I just wanted to thank you, for all the tips and guidance.  #speaker_self
+    I’ve learned a lot from you, not just about teaching, but also about being a community leader. Instilling values. How to inspire students, get them excited about {unaisah_1_cca}, even when I’m not sure about it myself. #speaker_self
+    That’s very sweet of you, Unaisah. I appreciate #speaker_left
+    Are you sure there’s nothing else you wanted to talk about? #speaker_left
+    
+    ++ [My progression...] Well… #speaker_self
+    I think I’ve done well, and I’m thinking about my progression. I want to know what I need to do to become a Subject Head some day . #speaker_self
+    ~  unaisah_2_progression = "ask"
+    I just want to be able to make the most impact, with my abilities. #speaker_self
+    It’s perfectly fine to ask. In the service, it's a bit early to be thinking about this. #speaker_left
+    But you do come with a lot of relevant experience from the private sector. And you’ve been using it. #speaker_left
+    Mid-career teachers like you can and do progress faster than fresh graduates. #speaker_left
+    Thanks, Hwee Ling. Good to know that. #speaker_self
+    I can see this is important to you. #speaker_left
+    And I must admit, you’ve improved a lot since you first arrived here. You’re a natural teacher and I see how much you care for the students. #speaker_left
+    So you think I have a shot? #speaker_self
+    To be honest, there’s a little more to it than just ability. It depends on vacancies, supply and demand, that sort of thing. #speaker_left
+    I see. #speaker_self
+    But I will say, I see a lot of potential for you here… with more time. When the opportunity arises, I’d be happy to recommend you. #speaker_left
+    
+    ++ [No, that's all...] Nope, that’s it. I think we covered everything. #speaker_self
+        ~  unaisah_2_progression = "nothing"
+        Thanks so much. #speaker_self
+
+- You know, there is one more thing you can work on. #speaker_left
+Yes? #speaker_self
+You’ve been sharing a lot of your expertise in communications with your students. Which is great. #speaker_left
+How about going one step further? Could you use your connections with your former colleagues to set up opportunities for students? #speaker_left
+Internships, learning journeys, that sort of thing. #speaker_left
+Oh. I’ll see what I can do. #speaker_self
+It would be such a great help. #speaker_left
+How do I tell her that I really, really want nothing to do with my former colleagues or company. #inner_monologue
+There are some memories that I just want to bury forever. #inner_monologue
+But.. if this helps my new career… #inner_monologue
+
+-> unaisah_2_2
+
+
+=== unaisah_2_2 ===
+#knot:unaisah_2_2
+#ui:narrator
+#background:bg_unaisah_CH2_home.png
+
+They don’t understand. I didn’t leave my previous company just to go running back to them for help.
+But if I don’t, will I be a disappointment to Hwee Ling and the school management?
+I need to talk this through with someone.
+...wait, what’s that smell? 
+I have more pressing things to think about though...
++ [Ignore smell] I'll get to that another day.
+     VAR unaisah_2_smell = ""
+    ~ unaisah_2_smell = "ignore"
+    -> unaisah_2_3
++ [Investigate smell] It seems to be coming from the kitchen. But the dishes are done.
+    ~ unaisah_2_smell = "investigate"
+#background:bg_unaisah_CH2_kitchen.png
+It seems to be coming from the kitchen. But the dishes are done.
+- UGH! Rotting food in the trash! It was Basheer's turn to take care of this! How long has it been here? 
+There better not be any cockroaches!	
+
++ [Throw the trash] I want to show him this, but I also cannot take the smell. 
+    VAR unaisah_2_trash = ""
+    ~ unaisah_2_trash = "throw"
+    How many times have I had to do this for him? Urghhhh! Men!
+
++ [Leave it for Basheer] It’s been here two days, I think it can wait another hour or two. 
+    ~ unaisah_2_trash = "leave"
+    I’ll show him!
+
+- -> unaisah_2_3 
+
+=== unaisah_2_3 ===
+#knot:unaisah_2_3
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Marie de Costa
+#chat_group_image:cha_unaisah_marie.png
+#speaker_1_name:Marie
+#timestamp:21.34
+Hey Marie, just wanted to get something off my chest, maybe know what you think. #speaker_self
+Hey hey! What’s up #speaker_1
+My RO did my work appraisal today, and it’s good. #speaker_self
+But she also said one thing. #speaker_self
+She asked me to see if I could use my former contacts to set up internships and stuff for the students. #speaker_self
+I mean, you of all people know. I can’t bring myself to do that. #speaker_self
+But this could also be my chance to prove myself. Do something the other teachers can’t. You know? #speaker_self
+Why would your RO even ask that if she knows what happened? #speaker_1
+
+{unaisah_1_teachingreason == "harassment": 
+    -> unaisah_2_3a
+
+- else:
+    -> unaisah_2_3b
+}
+
+= unaisah_2_3a
+
++ [Maybe she forgot] I have, but it was a long time ago, maybe she forgot. #speaker_self
++ [I told my colleagues] I  def told my colleageus and I think I mentioned it to her too. #speaker_self
+- Look, if it’s important enough, just remind her. And find other ways to prove yourself. #speaker_1
+You could send some interns to me! HAHAHA #speaker_1
+HAHA Marie!! #speaker_self
+I’m not a food & nutrition teacher ya. My students are not going to get an A for their essays by learning how to do latte art. #speaker_self
+Life skills yo! Dealing with real people and all. #speaker_1
+-> unaisah_2_3c
+
+
+= unaisah_2_3b
+
+Marie... I haven't told anyone. #speaker_self
+HUH #speaker_1
+People can be judgemental #
+And they always remember first impressions #
+I didn’t want to start off on the wrong foot. It took me so long to find another job, I couldn’t risk it… #
+Ok but hello that was months ago! #speaker_1
+You’ve not had the chance to tell anyone in all this time? But we agreed that this was something that we should not be ashamed about. #speaker_1
+    + [It got harder as time passed] I dunno, I thought it would get easier, but it actually got harder to tell them as time went by. #speaker_self
+    Because things went so smoothly, it just never came up, and I was afraid that if I brought it up for no reason, it would affect things #speaker_self
+    This is why so few women speak up about these things, and this is why we agreed to #speaker_1
+    
+    + [My mother-in-law’s reaction scared me] Yah, but remember how my mother-in-law reacted?? #speaker_self
+    Oh #speaker_1
+    Every time I thought about telling them… #speaker_self
+    Her words would ring in my head. Shameful. Better not tell anyone. #speaker_self
+    As if it was somehow my fault!! #speaker_self
+    Sorry… I didn’t mean to dredge that up. #speaker_1
+
+- I really tried to Marie, I just couldn’t do it. #speaker_self
+No no. It’s your choice, after all. #speaker_1
+I’m sorry for pressuring you to do something before you’re even ready. #speaker_1
+I’m sorry too. I should just have been upfront about this from the start. #speaker_self
+So... what are you gonna do about the internships then? #speaker_1
+UGHHH #speaker_self
+I don’t know… 😭  #speaker_self
+    
+-> unaisah_2_3c
+
+=== unaisah_2_3c ===
+#knot:unaisah_2_3c
+#ui:notification
+#background:ui_unaisah_message.jpg
+WEIWEN MOTHER: Hi Mdm Unaisah, sorry to bother you. # message
+
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:CLASS 3A PARENTS
+#chat_group_image:profile_blank.png
+#speaker_1_name:Weiwen Mother
+#timestamp:21.52
+Hi Mdm Unaisah, sorry to bother you. Is there a consent form for this Friday’s event? ##speaker_1
+Alamak! I got so worked up with my own issues I forgot to send this out. #inner_monologue
+Hi parents, here is the link to the consent form for this Friday’s event. Kindly fill it up tomorrow. Thank you! #speaker_self
+
+-> unaisah_2_4    
+    
+=== unaisah_2_4 ===
+#knot:unaisah_2_2
+#ui:narrator
+#background:bg_unaisah_CH2_LivingRoom_Night_wFood.png
+Finally, at 8.27pm, Bash is home. Blissfully ignorant of his sloppiness. By choice. 
+#ui:scene
+#background:bg_unaisah_CH2_LivingRoom_Night_wFood.png
+#speaker_left_name:Basheer
+#speaker_left_image:cha_Unaisah_Basheer_Neutral_HomeWear.png
+How did my favourite teacher’s day go? I bought us Thai green curry from the better stall near my office. Good thing I got there on time because they closed the kitchen after my order. #speaker_left
+Hey. You look angry. Is everything ok? #speaker_left
+sigh... #speaker_self
+Alright. What did I do wrong this time? #speaker_left
+
+{unaisah_2_smell == "ignore": 
+    I just have a lot on my mind. #speaker_self
+    Phew, so it’s not me. Work? #speaker_left
+    Work, students, everything. #speaker_self
+    What happened? #speaker_left
+    It’s just everything. It’s okay, I’ll manage. #speaker_self
+    You’re still okay with my parents coming over this weekend, right? #speaker_left
+    Do I have a choice? I’ll be fine. Thanks for getting dinner. #speaker_self
+
+- else:
+    -> unaisah_2_4a
+}
+
+= unaisah_2_4a
+
+{unaisah_2_trash == "throw": 
+    -> unaisah_2_4b
+- else:
+    -> unaisah_2_4c
+}
+
+= unaisah_2_4b
+I just have a lot on my mind. #speaker_self
+Phew. So it’s not me. Work? #speaker_left
+Work, students, everything. #speaker_self
+By the way, I emptied the bin for you. Next time, if you know we’re not cooking for a few days, can you please empty it, instead of letting it rot and attract cockroaches. #speaker_self
+Were there cockroaches? #speaker_left
+
++ [That’s not the point]  No. #speaker_self
+    Then it’s fine, either of us can do it, alright? #speaker_left
+    Either of us can, but somehow that means it’s always me. #speaker_self
+    Not always! #speaker_left
+
++ [You need to be more responsible] How am I supposed to seriously consider having a kid when I have to be responsible for most things? #speaker_self
+    Look, Unni. It’s not like I don’t have my own problems. I do, and yet I bring dinner home and try to tell you something funny the moment I come in the door. And this is what I get. #speaker_left
+
+
+- That’s not what I meant. Look...let’s both do better. We can make sure everything goes smoothly when your parents come over this weekend. #speaker_self
+You’re still on for that? #speaker_left
+We’ll be fine. Thanks for getting dinner. #speaker_self
+
+-> unaisah_2_5
+
+= unaisah_2_4c
+Can you please empty the bin. #speaker_self
+What? #speaker_left
+Empty the bin. The food has been rotting there for two days. #speaker_self
+You were home two hours earlier, alright? You could’ve done it. #speaker_left
+I always do it. You were the last one who cooked. #speaker_self
+Yes I cooked, isn’t that enough? And what about all the times I did clear the bin? #speaker_left
+
+    + [That’s not the point] That’s not the point! Don’t take credit for something you’re supposed to do! #speaker_self
+    Then I can’t take credit for anything? #speaker_left
+    This isn't about credit, it is about taking responsibility for the things we say we will do. #speaker_self
+    Fine, I’ll clear it. A bin is such a small thing. Why make it into something big? Are you stressed out from work? #speaker_left
+    Don’t make this about me! Don’t blame my problems. This is about you not doing your bit. Not enough, anyway. #speaker_self
+    I’ll do better, alright? #speaker_left
+    Thanks. #speaker_self
+    
+    + [I have a lot on my mind] I just need you to be more responsible. I have a lot on my mind. #speaker_self
+    It’s not like I don’t have my own problems. I do, and yet I bring dinner home and try to tell you something funny the moment I come in the door. And this is what I get. #speaker_left
+    Look, I want to hear your problems too. I just want to be able to come home and focus on what I need to do, instead of being greeted by a disgusting bin. #speaker_self
+    I guess my problems will have to wait then, since your main concern is the bin. #speaker_left
+
+- Enough about that. Look. Let’s both do better. We can make sure everything goes smoothly when your parents come over this weekend. #speaker_self
+You’re still on for that? #speaker_left
+Do I have a choice? I’ll be fine. Thanks for getting dinner. #speaker_self
+
+-> unaisah_2_5
+
+
+= unaisah_2_5
+#knot:unaisah_2_5
+#ui:narrator
+#background:bg_unaisah_CH2_Bedroom_Night.png
+We ate while bantering uneasily about the food, about our colleagues. Superficial things to avoid the real problem between us... 
+When we were done, Basheer emptied the trash immediately, no further reminder needed. . When he glanced at me, I forced a smile.
+That night, as he lay snoring next to me, I found the space to cry.
+I’m fed-up with this cycle we’re in: Skirting round the topic of his mum, pretending small amendments and accommodations would resolve things.
+The hardest part of a relationship is not about apologising, or compromising - It’s about hashing out difficult truths that we often don’t want to hear.  
+And frankly, Basheer and I still can’t have an honest conversation about children.  Because we can’t have an honest conversation about his mum. 
+Sometimes I feel like we’re kids ourselves when it comes to this issue. Imagine if we were to really raise kids. The irony.  
+
+
+// minigame
+
+
+-> unaisah_2_6
+
+
+=== unaisah_2_6 ===
+#knot:unaisah_2_6
+#ui:narrator
+{unaisah_1_cca == "malaydance":
+    #background:bg_unaisah_CH2_MalayDanceCCARoom.png
+    The next afternoon, after CCA
+    - else:
+    #background:bg_unaisah_CH2_RoboticsCCARoom.png
+    The next afternoon, after CCA
+}
+
+#ui:scene
+#speaker_right_image:cha_unaisah_chitra.png
+#speaker_right_name:Chitra
+Okay students, that’s it for this week. Go home quickly! It looks like it’s going to rain soon. #speaker_self
+Madam Unaisah..? Do you have a moment to talk? #speaker_right
+Of course! How are things with you? #speaker_self
+All good, ma’am. Struggling with Maths, but my ma signed me up for extra tuition and it’s improving… #speaker_right
+That’s good. Keep at it, it will get easier. #speaker_self
+You seem... upset though? #speaker_self
+Actually, ma’am, it’s not me… #speaker_right
+Can you promise not to tell anyone? #speaker_right
+Chitra, I... I want you to be able to have full trust in me. #speaker_self
+But in order to do that, I have to tell you, depending what the situation is, there are circumstances - like if someone is in danger - where I’d have to report it. #speaker_self
+Oh… #speaker_right
+But I won’t tell anyone more than who needs to know. I can promise you that. #speaker_self
+Whatever it is though, let me help you? #speaker_self
+But what if.. this thing… what if it gets my friend in trouble? Her parents are already mad because her grades have been dropping and-- #speaker_right
+If a friend is in trouble--and this sounds quite serious--getting them in trouble with their parents may be a lesser evil than whatever is going on. #speaker_self
+And if her parents do have to know about it, I will be there to mediate the conversation okay? #speaker_self
+Okay… #speaker_right
+It’s about Wan Ling actually. #speaker_right
+Oh, Wan Ling. Yes, she’s been absent… A fever, I heard. Is she doing ok? #speaker_self
+That’s the thing. She’s not sick. #speaker_right
+She called the school using her mum’s phone. I don’t know how, but I guess it was convincing enough. Maybe I should take up drama too, heh. #speaker_right
+Sorry, sorry, just joking. #speaker_right
++ [Thank her for sharing this] Well, thanks for telling me this Chitra, it must not have been easy. I'll handle this issue delicately. #speaker_self
+    Wait, I’m not done. #speaker_right
+    It’s not her fault. Really! #speaker_right
++ [Probe further] Thank you Chitra. It sounds like there's more though.
+    
+- She doesn’t want to go to school because there’s… a guy. He keeps bothering her. #speaker_right
+Oh dear. #speaker_self
+She hasn’t reported it because… well, it’s not, like, mean, or anything. #speaker_right
+It’s hard to explain… He thinks he’s being nice. Like, always offering to carry her things or buying her snacks. #speaker_right
+He texts her. Like, all the time.. Sending her these cheesy mandopop songs he says make him think of hers, or asking her out after school. #speaker_right
+And Wan Ling ALWAYS replies. I keep telling her not to, but she says she feels bad if she doesn’t reply. So she just makes excuses about being busy. Or her parents want her home. #speaker_right
+I get it. It’s not malicious. But definitely unwanted. #speaker_self
+Exactly! So that’s why she’s been absent. She’s avoiding him. #speaker_right
+And he’s always there! Like, he’s found out all her breaks and he’ll wait for her between classes. Even after CCA – he’s always waiting for her... trying to, like, play with her hair, or he’s poking her, all the excuses to touch her. #speaker_right
+I think it’s kind of creepy, actually. #speaker_right
+It’s definitely creepy. #speaker_self
+Maybe he thinks Wan Ling is playing hard to get, but I know her. She’s scared to hurt his feelings so she doesn’t tell him outright that she doesn’t like him. #speaker_right
+Because one time she tried to turn him down by saying he should find someone who really clicks with him, but he went into this rant – like, how much of a filial and loyal guy he is and how he knows so many guys who are dicks and that he’ll never treat her like that. #speaker_right
+He talks like he knows her, but he can’t even read her and everything is just fantasy. #speaker_right
+He really takes it like some drama series where he’s the good guy who wins the girl after persisting. As if she’s an exam he eventually passes after studying hard. Or a doll. #speaker_right
+(Rolls eyes) I mean, like, dudeeee. If she doesn’t like you now, she will never like you. Just deal with it. #speaker_right
+Anyway, sorry for unloading. #speaker_right
+No no, don’t apologise. I’m here to listen. I can’t imagine the stress you and Wan Ling have been under. #speaker_self
+Yah. And I couldn’t tell anyone either. Because he’s not doing anything wrong. #speaker_right
++ [Why do you think this is not wrong?] Why do you think this isn't harassment?
+
++ [This is a type of harassment] Just because he doesn't intend to hurt Wan Ling, doesn’t mean he’s not. Often, especially this kind of harassment, people don’t realise what they’re doing is wrong. #speaker_self
+- But isn’t harassment, like, when you attack someone? #speaker_right
+Yes, that is a form of harassment, but there are other forms of it too. It can be subtle, especially when you’re not looking for it. #speaker_self
+If Wan Ling’s not at school, and her parents don’t know she’s been skipping, where is Wan Ling? #speaker_right
+.... #speaker_right
+I just want to make sure she’s safe. If something happens while she’s roaming around with no supervision… #speaker_self
+Okay, okay, she usually just hangs out at the playground two blocks away. #speaker_right
+
++ [Probe further for the guy's name] And one more thing, who is this guy? #speaker_right
+    …. #speaker_right
+    You’re scared to tell me. #speaker_self
+    I feel bad too even though we all can’t stand him. #speaker_right
++ [Leave it at this] Okay. #speaker_self
+- Listen, I’m going to have to report this to the Vice Principal. I will do my best to not mention you or Wan Ling. Again, no promises, because Wan Ling did skip school, but I will at least explain the circumstances and that she felt unsafe. #speaker_self
+Hopefully, we can talk to this person, get him to understand, maybe have a discussion about boundaries, and, with luck, we can settle this quietly. #speaker_self
+But there’s not much I can do if I don’t know who we’re dealing with. #speaker_self
+Okay… #speaker_right
+Thank you, Chitra, for trusting me. #speaker_self
+
+
+
+
+    
 -> END
