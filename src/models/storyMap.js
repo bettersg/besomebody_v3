@@ -956,7 +956,7 @@ export const CHARACTER_MAP = [
         title: "The Mother of All Expectations",
         knotTag: "unaisah_2_intro",
         summary: "Even as Unaisah progresses in her teaching career, she must make a crucial life decision.",
-        playable: false,
+        playable: true,
         discordLink: 'https://discord.gg/Az4tr5XXJM',
         images: [
           "/images/bg_nadia_intro.jpg",
