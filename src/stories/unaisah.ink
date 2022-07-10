@@ -1301,9 +1301,12 @@ That weekend...
 I can't stop thinking about it.
 I feel...
 + [discouraged] I’m so disturbed by the whole thing. The world can be so cruel, and so unsafe for young people.
+    VAR unaisah_2_feeling = ""
+    ~ unaisah_2_feeling = "discouraged"
     Maybe Allah’s plan is for me to ease the suffering of others, rather than to bring one more child into the world to suffer.
 + [hopeful]
     I’m exhausted, but I’m glad the school managed to sort things out in the end.
+    ~ unaisah_2_feeling = "hopeful"
     In the past week I’ve seen both the worst, as well as the best in my students.
     Young people may be misguided sometimes, but they are still full of promise.
     If I can get through this, I can get through anything. Even raising a child of my own.
@@ -1322,8 +1325,144 @@ Do you want to talk about it? #speaker_left
 + [Let's talk in the living room] Yeah. But it’s a long story.  #speaker_self
     #background:bg_unaisah_CH1_LivingRoom_Night.png
     Let’s go to the living room. I’ll make tea. #speaker_self
-- ... and that's 
+- 
+#ui:narrator
+I explained everything that had happened at school that week to him.
+#ui:scene
+So what happened to the girl, in the end? #speaker_left
+Well, we had to tell Wan Ling’s parents and, needless to say, they were furious. #speaker_self
+At the boy? #speaker_left
+At everyone. At the boy, at the school, at their daughter. #speaker_self
+They even blamed Chitra for not reporting it sooner. #speaker_self
+Poor kid, caught in the crossfires. #speaker_left
+And the boy who was harassing her, Joseph, his parents... It’s even worse. #speaker_self
+Oh no. #speaker_left
+We were hoping that we could just talk to him calmly. Get him to understand why he was making her uncomfortable. #speaker_self
+And he might’ve too, if his parents didn't barge in. #speaker_self
+Barge in? #speaker_left
+It was mostly the father. The boy was at the counsellor’s office, they were having a talk about boundaries. When we explained the situation to his parents, the father went ballistic. #speaker_self
+“How dare you accuse my son?” #speaker_self
+“He want to help the girl carry her bag, you say harassment?” #speaker_self
+“You talk as if he beat her up or what.” #speaker_self
+That kind of thing. They didn’t get it. #speaker_self
+That’s awful. #speaker_left
+Yeah. There’s a saying amongst the teachers, that to make sense of why a child is the way they are, you just have to see their parents. #speaker_self
+I’m worried for Joseph. I hope he’s learnt his lesson, but having a father like that doesn’t do him any favours. #speaker_self
+No kidding. #speaker_left
 
+{unaisah_1_cca == "discouraged":
+    -> unaisah_2_7a
+    - else:
+    -> unaisah_2_7b
+}   
+
+= unaisah_2_7a
+Scary isn’t it? No one wants to be a bad parent but we all have our = blindspots, emotional triggers, bad coping mechanisms… things we may not even be aware of. #speaker_self
+...This isn’t just about Joseph and his father, isn’t it? #speaker_left
+Before, when we would talk about having children, I wasn’t absolutely sure where I stood. #speaker_self
+I know. #speaker_left
+Is that why you put off the conversation and stayed passive when your mother kept pressuring me? #speaker_self
+Deep down, I agreed with her too. Not the stuff about women’s duty, or the relatives’ gossip. #speaker_left
+But about having children, yes. #speaker_left
+I was hoping that, with some time, you’d come around to starting a family. Especially since you started teaching and working with kids. #speaker_left
+
++ [Discuss the issue directly] What does raising a child mean to you, Bash? What is your idea of parenthood? #speaker_self
+    Unni, I know you have your fears about about the impact on your career. But you’re tough as nails. And you should trust yourself like I trust you. #speaker_left
+    It’s not even about my career. It’s about raising a child well. There are so many complexities, and even if we have good intentions, we might end up failing our kids. #speaker_self
+    We won’t. You’ve always had your head on your shoulders. And a clear sense of morals– you stood up to your ex-boss when most people would have kept quiet. #speaker_left
+    Parenting is a big challenge, but it’s the kind of challenge that helps us grow as people. And that itself is worth it. #speaker_left
+    But children are sponges. They absorb everything, whether it’s meant for them or not. The weight of that responsibility, to have that much influence on young and innocent beings, I can’t handle that. #speaker_self
+
++ [Respond indirectly] I do love teaching. And I love my students. #speaker_self
+    Chelam, you know that’s not what I meant. #speaker_left
+    You know my mother was a nurse, right? Before she had my sister and me. She was a great one too. But she gave it up to focus on raising us. #speaker_self
+    She says she wouldn’t have had it any other way. We were her pride and joy. But she also said a woman’s true fulfillment comes when she takes on motherhood – it’s more fulfilling than any career. #speaker_self
+    Don’t get me wrong, I loved having her around growing up. I can’t imagine what it would have been like if she was away at work instead of home with me. Would I have felt sidelined by her patients? Maybe. #speaker_self
+    I don’t get it. What does this have to do with your mother? #speaker_left
+    By giving up her own goals to raise us, she inadvertently taught us that the needs of others are more important than your own. And even though I know better now, I hear her words and second-guess all my career decisions. #speaker_self
+    Then, when this whole thing at school happened and I saw how the parents reacted, I don’t agree with it, but if I were in their shoes… I don’t think I would have reacted differently either. #speaker_self
+
+- I’m sorry, Basheer. I don’t want to have children. And if this changes how you feel about me, about us, I won’t hold it against you. #speaker_self
+Oh no. That look on his face. He’s crushed. #inner_monologue
+He’s putting on his ‘brave’ front now. #inner_monologue
+VAR unaisah_2_baby = ""
+~ unaisah_2_baby = "no"
+VAR chapter_2_ending = 0
+~ chapter_2_ending = 1
+Chelam, even before we were married, we did have conversations about children. Do you remember? #speaker_left
+I remember, but at that point, we just decided not now. #speaker_self
+Possibly not ever. But also possibly in a few year’s time… #speaker_self
+But now, it’s definitely not. And I’m so sorry, and I- #speaker_self
+Let me finish. #speaker_left
+Yes, and we said that we weren’t ready. But we also said we would love each other and stay together no matter what we decide on. #speaker_left
+I meant it then and I mean it now, alright? #speaker_left
+Plus, even while I was hopeful, it’s not like I was completely blind to this possibility. I’m just happy to be with you regardless. #speaker_left
+But you want children, right? #speaker_self
+Yes, but I don’t want to raise a child you don’t want. #speaker_left
+I don’t want you to end up resenting me for, or maybe even our child, for what you’ll end up sacrificing. #speaker_left
+That’s no environment to raise a child in. #speaker_left
+
+-> unaisah_2_reflection
+
+
+= unaisah_2_7b
+I hope that if we become parents, we’d be more understanding. #speaker_self
+... #speaker_left
+~ unaisah_2_baby = "yes"
+~ chapter_2_ending = 2
+We really need to talk about that, don’t we? #speaker_left
+Tell me something first though… In the years I’ve known you, not once have you shied away from something challenging. This is a big conversation, I get that, but why were you so hesitant to have it? #speaker_self
+When you quit your job at Brown & Grey, I had this feeling that you were leaning towards “no” much more than you let on. #speaker_left
+You’re not wrong. What happened to me there, it shook me up pretty bad. Whenever I thought about bringing a child into this world, someone so pure and innocent, while also knowing all the evil that exists out there, I couldn’t bear it. #speaker_self
+So... does this... this means...so we agree? We’re having children? #speaker_left
+
+    + [Yes] You really think we can do it? #speaker_self
+    If anyone can make it work, it’s us. #speaker_left
+    Okay then. Let’s do it. Let’s have children. #speaker_self
+    Really? #speaker_left
+    Yeah. Really. #speaker_self
+    Okay! #speaker_left
+    Wow. #speaker_left
+    I can’t believe we’re really doing this. #speaker_self
+    Me neither. #speaker_left
+    
+    
+    + [There's one more thing...] Hold on. There’s still one more thing. #speaker_self
+    You know my Amma was a nurse, before she had my sister? #speaker_self
+    I vaguely remember you telling me this. What does this have to do with having children? #speaker_left
+    She was a great nurse. But she gave it up to focus on raising us. She said she wouldn’t have had it any other way. We were her pride and joy. #speaker_self
+    And I’m so glad that she did. I can’t imagine what it would have been like if I had to grow up sharing Amma’s time with thousands of other patients. #speaker_self
+    But I don’t think I can make the same sacrifice. I do want children, but I don’t think I can give up working for it. I love teaching. I love my students. I love having independence. #speaker_self
+    You don’t have to quit your job. Plenty of mums continue working. After your maternity leave ends, we can keep the baby with either of our parents during the day. They’d be more than happy for the company. #speaker_left
+    Plus, they’ve been nagging us all along, I’m sure they’d be more than happy to get more time with the baby. #speaker_left
+    I know that but… I think part of why Amma raised us so well is because she was able to devote her full time and attention to it. I don’t want to raise a child with half a heart. #speaker_self
+    You won’t be. #speaker_left
+    Listen, that’s how your mother decided to raised you. Did it work out well? Yes. But it doesn't mean it’s the only way. #speaker_left
+    It seems like a lot to juggle. I mean, raising a child while also taking care of 20 others during the day… #speaker_self
+    If anyone can make it work, it’s us. #speaker_left
+    Okay. #speaker_self
+    Okay? #speaker_left
+    Yeah. Okay. #speaker_self
+    Okay!!! #speaker_left
+    Wow. #speaker_left
+    I can’t believe we’re really doing this. #speaker_self
+    Me too. #speaker_left
+   
+- I love you so much. I am the happiest guy alive right now, seriously. #speaker_left
+
+
+-> unaisah_2_reflection
+
+=== unaisah_2_reflection ===
+#knot:unaisah_1_reflection
+#ui:chapter_reflection
+#reflection_id:14
+Reflection 14  // change this to 15 and add reflection.json
+
+
+ 
+
+// -> unaisah_3_intro
 
     
 -> END
