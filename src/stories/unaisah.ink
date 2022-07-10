@@ -1290,6 +1290,40 @@ Thank you, Chitra, for trusting me. #speaker_self
 
 
 
+-> unaisah_2_7
+
+
+=== unaisah_2_7 ===
+#knot:unaisah_2_7
+#ui:narrator
+#background:bg_unaisah_CH2_Bedroom_Night.png
+That weekend...
+I can't stop thinking about it.
+I feel...
++ [discouraged] I’m so disturbed by the whole thing. The world can be so cruel, and so unsafe for young people.
+    Maybe Allah’s plan is for me to ease the suffering of others, rather than to bring one more child into the world to suffer.
++ [hopeful]
+    I’m exhausted, but I’m glad the school managed to sort things out in the end.
+    In the past week I’ve seen both the worst, as well as the best in my students.
+    Young people may be misguided sometimes, but they are still full of promise.
+    If I can get through this, I can get through anything. Even raising a child of my own.
+- What a difficult week it has been.
+
+#ui:scene
+#background:bg_unaisah_CH2_Bedroom_Night.png
+#speaker_left_name:Basheer
+#speaker_left_image:cha_Unaisah_Basheer_Neutral_HomeWear.png
+You look like you've had a rough week. #speaker_left
+You read my mind #speaker_self
+Do you want to talk about it? #speaker_left
++ [Yes] Yeah, and it's a long story.  #speaker_self
+    #background:bg_unaisah_CH2_Bedroom_Night.png
+    It's ok, I'm plenty comfortable. Why don't you start at the start?  #speaker_left
++ [Let's talk in the living room] Yeah. But it’s a long story.  #speaker_self
+    #background:bg_unaisah_CH1_LivingRoom_Night.png
+    Let’s go to the living room. I’ll make tea. #speaker_self
+- ... and that's 
+
 
     
 -> END
