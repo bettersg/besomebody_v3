@@ -990,7 +990,7 @@ But.. if this helps my new career… #inner_monologue
 === unaisah_2_2 ===
 #knot:unaisah_2_2
 #ui:narrator
-#background:bg_unaisah_CH2_home.png
+#background:bg_unaisah_CH3_Kitchen_Night.png
 
 They don’t understand. I didn’t leave my previous company just to go running back to them for help.
 But if I don’t, will I be a disappointment to Hwee Ling and the school management?
@@ -1003,7 +1003,7 @@ I have more pressing things to think about though...
     -> unaisah_2_3
 + [Investigate smell] It seems to be coming from the kitchen. But the dishes are done.
     ~ unaisah_2_smell = "investigate"
-#background:bg_unaisah_CH2_kitchen.png
+#background:bg_unaisah_CH3_Kitchen_Night.png
 It seems to be coming from the kitchen. But the dishes are done.
 - UGH! Rotting food in the trash! It was Basheer's turn to take care of this! How long has it been here? 
 There better not be any cockroaches!	
