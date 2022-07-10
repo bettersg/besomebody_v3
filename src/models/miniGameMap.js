@@ -871,6 +871,93 @@ export const MINI_GAME_MAP = [
           ],
       },  
     ],
+  },
+  // unaisah 2 https://www.straitstimes.com/singapore/why-some-women-choose-to-be-child-free  https://www.channelnewsasia.com/commentary/fewer-babies-lower-fertility-singapore-reasons-marriage-dating-1319246
+  {
+    game_id: 15,
+    ui: "mcq",
+    introduction: "The pressure to have children can be hard for young couples to deal with. Let's understand this issue better.",
+    questions: [
+      {
+        question_id: 1,
+        question:
+          "q1?",
+        type: "text",
+        correct_answer_id: 3,
+        explanation:
+          "2 in 5 workers said they had been victims of unwanted sexual advances, in the form of crude remarks, sexual pictures or texts, or remarks about their appearance or sexual activities. [Straits Times, Jan 2021]",
+        answers: [
+          {
+            answer_id: 1,
+            title: "20%",
+          },
+          {
+            answer_id: 2,
+            title: "30%",
+          },
+          {
+            answer_id: 3,
+            title: "40%",
+          },
+          {
+            answer_id: 4,
+            title: "50%",
+          },
+        ],
+      },
+      {
+        question_id: 2,
+        question:"q2?",
+        correct_answer_id: 3,
+        explanation: "13% reported being touched at work, or more than one in every ten workers. This included male respondees.",
+        type: "text",
+        answers: [
+          {
+            answer_id: 1,
+            title: "3%",
+          },
+          {
+            answer_id: 2,
+            title: "8%",
+          },
+          {
+            answer_id: 3,
+            title: "13%",
+          },
+          {
+            answer_id: 4,
+            title: "21%",
+          },
+        ],
+      },
+      {
+        question_id: 3,
+        question:
+          "q3?",
+        type: "text",
+        correct_answer_id: 2,
+        explanation:
+          "Only 1 in 3 filed an official report.Those who did not said they wanted to forget the unpleasant experience or felt what they had experienced was not serious enough. Some also felt they had no evidence of the wrong-doing. ",
+          answers: [
+            {
+              answer_id: 1,
+              title: "25%",
+            },
+            {
+              answer_id: 2,
+              title: "33%",
+            },
+            {
+              answer_id: 3,
+              title: "50%",
+            },
+            {
+              answer_id: 4,
+              title: "75%",
+            },
+          ],
+      },  
+    ],
     },
 ];
   
