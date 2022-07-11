@@ -1310,8 +1310,8 @@ Thank you, Chitra, for trusting me. #speaker_self
 #ui:narrator
 #background:bg_unaisah_CH2_Bedroom_Night.png
 That weekend...
-I can't stop thinking about it. It was really hard dealing with that, but maybe I made a difference. Or maybe not.
-I feel...
+I couldn't stop thinking about what happened. It was really hard, but maybe I made a difference?
+Dealing with young people is complex. I feel...
 + [discouraged] I’m so disturbed by the whole thing. The world can be so cruel, and so unsafe for young people.
     VAR unaisah_2_feeling = ""
     ~ unaisah_2_feeling = "discouraged"
@@ -1462,7 +1462,7 @@ So... does this... this means...so we agree? We’re having children? #speaker_l
     Okay. #speaker_self
     Okay? #speaker_left
     Yeah. Okay. #speaker_self
-    #speaker_left_image:cha_Unaisah_Basheer_Laughing_HomeWear.png
+    #speaker_left_image:cha_Unaisah_Basheer_Laughing_HomeWear.png 
     Okay!!! #speaker_left
     Wow. #speaker_left
     I can’t believe we’re really doing this. #speaker_self
