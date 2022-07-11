@@ -1024,7 +1024,7 @@ There better not be any cockroaches!
 #ui:whatsapp
 #background:whatsapp.png
 #chat_group_title:Marie de Costa
-#chat_group_image:cha_unaisah_marie.png
+#chat_group_image:ico_unaisah_marie.jpg
 #speaker_1_name:Marie
 #timestamp:21.34
 Hey Marie, just wanted to get something off my chest, maybe know what you think. #speaker_self
@@ -1098,7 +1098,7 @@ WEIWEN MOTHER: Hi Mdm Unaisah, sorry to bother you. # message
 #speaker_1_name:Weiwen Mother
 #timestamp:21.52
 Hi Mdm Unaisah, sorry to bother you. Is there a consent form for this Friday’s event? ##speaker_1
-Alamak! I got so worked up with my own issues I forgot to send this out. #inner_monologue
+Alamak! I got so worked up with my own issues I forgot to send this out. #wa_inner_monologue
 Hi parents, here is the link to the consent form for this Friday’s event. Kindly fill it up tomorrow. Thank you! #speaker_self
 
 -> unaisah_2_4    
@@ -1115,6 +1115,7 @@ Finally, at 8.27pm, Bash is home. Blissfully ignorant of his sloppiness. By choi
 How did my favourite teacher’s day go? I bought us Thai green curry from the better stall near my office. Good thing I got there on time because they closed the kitchen after my order. #speaker_left
 Hey. You look angry. Is everything ok? #speaker_left
 sigh... #speaker_self
+#speaker_left_image:cha_Unaisah_Basheer_Defeated_HomeWear.png
 Alright. What did I do wrong this time? #speaker_left
 
 {unaisah_2_smell == "ignore": 
@@ -1144,6 +1145,7 @@ I just have a lot on my mind. #speaker_self
 Phew. So it’s not me. Work? #speaker_left
 Work, students, everything. #speaker_self
 By the way, I emptied the bin for you. Next time, if you know we’re not cooking for a few days, can you please empty it, instead of letting it rot and attract cockroaches. #speaker_self
+#speaker_left_image:cha_Unaisah_Basheer_Defeated_HomeWear.png
 Were there cockroaches? #speaker_left
 
 + [That’s not the point]  No. #speaker_self
@@ -1152,10 +1154,12 @@ Were there cockroaches? #speaker_left
     Not always! #speaker_left
 
 + [You need to be more responsible] How am I supposed to seriously consider having a kid when I have to be responsible for most things? #speaker_self
+    #speaker_left_image:cha_Unaisah_Basheer_Frustrated_HomeWear.png
     Look, Unni. It’s not like I don’t have my own problems. I do, and yet I bring dinner home and try to tell you something funny the moment I come in the door. And this is what I get. #speaker_left
 
 
 - That’s not what I meant. Look...let’s both do better. We can make sure everything goes smoothly when your parents come over this weekend. #speaker_self
+#speaker_left_image:cha_Unaisah_Basheer_Neutral_HomeWear.png
 You’re still on for that? #speaker_left
 We’ll be fine. Thanks for getting dinner. #speaker_self
 
@@ -1167,6 +1171,7 @@ What? #speaker_left
 Empty the bin. The food has been rotting there for two days. #speaker_self
 You were home two hours earlier, alright? You could’ve done it. #speaker_left
 I always do it. You were the last one who cooked. #speaker_self
+#speaker_left_image:cha_Unaisah_Basheer_Frustrated_HomeWear.png
 Yes I cooked, isn’t that enough? And what about all the times I did clear the bin? #speaker_left
 
     + [That’s not the point] That’s not the point! Don’t take credit for something you’re supposed to do! #speaker_self
@@ -1174,6 +1179,7 @@ Yes I cooked, isn’t that enough? And what about all the times I did clear the 
     This isn't about credit, it is about taking responsibility for the things we say we will do. #speaker_self
     Fine, I’ll clear it. A bin is such a small thing. Why make it into something big? Are you stressed out from work? #speaker_left
     Don’t make this about me! Don’t blame my problems. This is about you not doing your bit. Not enough, anyway. #speaker_self
+    #speaker_left_image:cha_Unaisah_Basheer_Frustrated_HomeWear.png
     I’ll do better, alright? #speaker_left
     Thanks. #speaker_self
     
@@ -1183,6 +1189,7 @@ Yes I cooked, isn’t that enough? And what about all the times I did clear the 
     I guess my problems will have to wait then, since your main concern is the bin. #speaker_left
 
 - Enough about that. Look. Let’s both do better. We can make sure everything goes smoothly when your parents come over this weekend. #speaker_self
+#speaker_left_image:cha_Unaisah_Basheer_Neutral_HomeWear.png
 You’re still on for that? #speaker_left
 Do I have a choice? I’ll be fine. Thanks for getting dinner. #speaker_self
 
@@ -1303,7 +1310,7 @@ Thank you, Chitra, for trusting me. #speaker_self
 #ui:narrator
 #background:bg_unaisah_CH2_Bedroom_Night.png
 That weekend...
-I can't stop thinking about it.
+I can't stop thinking about it. It was really hard dealing with that, but maybe I made a difference. Or maybe not.
 I feel...
 + [discouraged] I’m so disturbed by the whole thing. The world can be so cruel, and so unsafe for young people.
     VAR unaisah_2_feeling = ""
@@ -1334,6 +1341,7 @@ Do you want to talk about it? #speaker_left
 #ui:narrator
 I explained everything that had happened at school that week to him.
 #ui:scene
+#speaker_left_image:cha_Unaisah_Basheer_Concerned_HomeWear.png
 So what happened to the girl, in the end? #speaker_left
 Well, we had to tell Wan Ling’s parents and, needless to say, they were furious. #speaker_self
 At the boy? #speaker_left
@@ -1345,7 +1353,9 @@ Oh no. #speaker_left
 We were hoping that we could just talk to him calmly. Get him to understand why he was making her uncomfortable. #speaker_self
 And he might’ve too, if his parents didn't barge in. #speaker_self
 Barge in? #speaker_left
-It was mostly the father. The boy was at the counsellor’s office, they were having a talk about boundaries. When we explained the situation to his parents, the father went ballistic. #speaker_self
++ [The father was being unreasonable]
++ [It was so hard to get through to them]
+- It was mostly the father. The boy was at the counsellor’s office, they were having a talk about boundaries. When we explained the situation to his parents, the father went ballistic. #speaker_self
 “How dare you accuse my son?” #speaker_self
 “He want to help the girl carry her bag, you say harassment?” #speaker_self
 “You talk as if he beat her up or what.” #speaker_self
@@ -1388,6 +1398,7 @@ I was hoping that, with some time, you’d come around to starting a family. Esp
     Then, when this whole thing at school happened and I saw how the parents reacted, I don’t agree with it, but if I were in their shoes… I don’t think I would have reacted differently either. #speaker_self
 
 - I’m sorry, Basheer. I don’t want to have children. And if this changes how you feel about me, about us, I won’t hold it against you. #speaker_self
+#speaker_left_image:cha_Unaisah_Basheer_Defeated_HomeWear.png
 Oh no. That look on his face. He’s crushed. #inner_monologue
 He’s putting on his ‘brave’ front now. #inner_monologue
 VAR unaisah_2_baby = ""
@@ -1404,6 +1415,7 @@ I meant it then and I mean it now, alright? #speaker_left
 Plus, even while I was hopeful, it’s not like I was completely blind to this possibility. I’m just happy to be with you regardless. #speaker_left
 But you want children, right? #speaker_self
 Yes, but I don’t want to raise a child you don’t want. #speaker_left
+#speaker_left_image:cha_Unaisah_Basheer_Concerned_HomeWear.png
 I don’t want you to end up resenting me for, or maybe even our child, for what you’ll end up sacrificing. #speaker_left
 That’s no environment to raise a child in. #speaker_left
 
@@ -1419,11 +1431,13 @@ We really need to talk about that, don’t we? #speaker_left
 Tell me something first though… In the years I’ve known you, not once have you shied away from something challenging. This is a big conversation, I get that, but why were you so hesitant to have it? #speaker_self
 When you quit your job at Brown & Grey, I had this feeling that you were leaning towards “no” much more than you let on. #speaker_left
 You’re not wrong. What happened to me there, it shook me up pretty bad. Whenever I thought about bringing a child into this world, someone so pure and innocent, while also knowing all the evil that exists out there, I couldn’t bear it. #speaker_self
+#speaker_left_image:cha_Unaisah_Basheer_Neutral_HomeWear.png
 So... does this... this means...so we agree? We’re having children? #speaker_left
 
     + [Yes] You really think we can do it? #speaker_self
     If anyone can make it work, it’s us. #speaker_left
     Okay then. Let’s do it. Let’s have children. #speaker_self
+    #speaker_left_image:cha_Unaisah_Basheer_Laughing_HomeWear.png
     Really? #speaker_left
     Yeah. Really. #speaker_self
     Okay! #speaker_left
@@ -1448,6 +1462,7 @@ So... does this... this means...so we agree? We’re having children? #speaker_l
     Okay. #speaker_self
     Okay? #speaker_left
     Yeah. Okay. #speaker_self
+    #speaker_left_image:cha_Unaisah_Basheer_Laughing_HomeWear.png
     Okay!!! #speaker_left
     Wow. #speaker_left
     I can’t believe we’re really doing this. #speaker_self

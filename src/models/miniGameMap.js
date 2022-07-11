@@ -881,79 +881,71 @@ export const MINI_GAME_MAP = [
       {
         question_id: 1,
         question:
-          "q1?",
+          "Singaporean couples are generally having fewer children than before.",
         type: "text",
-        correct_answer_id: 3,
+        correct_answer_id: 1,
         explanation:
-          "2 in 5 workers said they had been victims of unwanted sexual advances, in the form of crude remarks, sexual pictures or texts, or remarks about their appearance or sexual activities. [Straits Times, Jan 2021]",
+          "True. Compared to a decade ago, women are having fewer children, across all age groups, ethnicities, and educational levels. [Census, 2020]",
         answers: [
           {
             answer_id: 1,
-            title: "20%",
+            title: "True",
           },
           {
             answer_id: 2,
-            title: "30%",
-          },
-          {
-            answer_id: 3,
-            title: "40%",
-          },
-          {
-            answer_id: 4,
-            title: "50%",
-          },
+            title: "False",
+          }, 
         ],
       },
       {
         question_id: 2,
-        question:"q2?",
-        correct_answer_id: 3,
-        explanation: "13% reported being touched at work, or more than one in every ten workers. This included male respondees.",
+        question:"What percentage of married women in their 40s did NOT have children?",
+        correct_answer_id: 2,
+        explanation: "In 2020, 13.5%  of married women in their 40s did not have children - up from 9.3%  in 2010. This follows a similar pattern across all age bands, including those in their 30s and 50s and older. [Straits Times, May 2022]",
         type: "text",
         answers: [
           {
             answer_id: 1,
-            title: "3%",
-          },
-          {
-            answer_id: 2,
             title: "8%",
           },
           {
-            answer_id: 3,
+            answer_id: 2,
             title: "13%",
           },
           {
-            answer_id: 4,
+            answer_id: 3,
             title: "21%",
+          },
+          {
+            answer_id: 4,
+            title: "33%",
           },
         ],
       },
       {
         question_id: 3,
         question:
-          "q3?",
+          "What is the pay gap between men and women in their 30s (i.e. when they start having children)?",
         type: "text",
         correct_answer_id: 2,
         explanation:
-          "Only 1 in 3 filed an official report.Those who did not said they wanted to forget the unpleasant experience or felt what they had experienced was not serious enough. Some also felt they had no evidence of the wrong-doing. ",
+          "The gap is ~20%. MOM's Labour Force Survey indicates that, contrary to the belief that the gender pay gap starts at the onset of their career, the gap appears to actually only start in the 30s (i.e. when women typically start to have children) and continues for the rest of their lives. [Today, 2019]",
           answers: [
             {
               answer_id: 1,
-              title: "25%",
+              title: "10%",
             },
             {
               answer_id: 2,
-              title: "33%",
+              title: "20%",
             },
             {
               answer_id: 3,
-              title: "50%",
+              title: "30%",
             },
             {
               answer_id: 4,
-              title: "75%",
+              title: "40%",
             },
           ],
       },  

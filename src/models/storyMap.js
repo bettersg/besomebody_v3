@@ -968,13 +968,13 @@ export const CHARACTER_MAP = [
         endings: [
           {
             endingId: 1,
-            title: "Azlin gets upset with you",
-            inkVar: "chapter2_ending_1",
+            title: "Unaisah chooses to have a child",
+            // inkVar: "chapter2_ending_1",
           },
           {
             endingId: 2,
-            title: "Azlin tells you to give him up",
-            inkVar: "chapter2_ending_2",
+            title: "Unaisah chooses not to have a child",
+            // inkVar: "chapter2_ending_2",
           },
         ]
       },
