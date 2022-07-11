@@ -871,6 +871,85 @@ export const MINI_GAME_MAP = [
           ],
       },  
     ],
+  },
+  // unaisah 2 https://www.straitstimes.com/singapore/why-some-women-choose-to-be-child-free  https://www.channelnewsasia.com/commentary/fewer-babies-lower-fertility-singapore-reasons-marriage-dating-1319246
+  {
+    game_id: 15,
+    ui: "mcq",
+    introduction: "The pressure to have children can be hard for young couples to deal with. Let's understand this issue better.",
+    questions: [
+      {
+        question_id: 1,
+        question:
+          "Singaporean couples are generally having fewer children than before.",
+        type: "text",
+        correct_answer_id: 1,
+        explanation:
+          "True. Compared to a decade ago, women are having fewer children, across all age groups, ethnicities, and educational levels. [Census, 2020]",
+        answers: [
+          {
+            answer_id: 1,
+            title: "True",
+          },
+          {
+            answer_id: 2,
+            title: "False",
+          }, 
+        ],
+      },
+      {
+        question_id: 2,
+        question:"What percentage of married women in their 40s did NOT have children?",
+        correct_answer_id: 2,
+        explanation: "In 2020, 13.5%  of married women in their 40s did not have children - up from 9.3%  in 2010. This follows a similar pattern across all age bands, including those in their 30s and 50s and older. [Straits Times, May 2022]",
+        type: "text",
+        answers: [
+          {
+            answer_id: 1,
+            title: "8%",
+          },
+          {
+            answer_id: 2,
+            title: "13%",
+          },
+          {
+            answer_id: 3,
+            title: "21%",
+          },
+          {
+            answer_id: 4,
+            title: "33%",
+          },
+        ],
+      },
+      {
+        question_id: 3,
+        question:
+          "What is the pay gap between men and women in their 30s (i.e. when they start having children)?",
+        type: "text",
+        correct_answer_id: 2,
+        explanation:
+          "The gap is ~20%. MOM's Labour Force Survey indicates that, contrary to the belief that the gender pay gap starts at the onset of their career, the gap appears to actually only start in the 30s (i.e. when women typically start to have children) and continues for the rest of their lives. [Today, 2019]",
+          answers: [
+            {
+              answer_id: 1,
+              title: "10%",
+            },
+            {
+              answer_id: 2,
+              title: "20%",
+            },
+            {
+              answer_id: 3,
+              title: "30%",
+            },
+            {
+              answer_id: 4,
+              title: "40%",
+            },
+          ],
+      },  
+    ],
     },
 ];
   
