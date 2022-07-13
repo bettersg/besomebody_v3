@@ -1036,7 +1036,6 @@ She asked me to see if I could use my former contacts to set up internships and 
 I mean, you of all people know. I can’t bring myself to do that. #speaker_self
 But this could also be my chance to prove myself. Do something the other teachers can’t. You know? #speaker_self
 Why would your RO even ask that if she knows what happened? #speaker_1
-
 {unaisah_1_teachingreason == "harassment": 
     -> unaisah_2_3a
 
@@ -1045,7 +1044,6 @@ Why would your RO even ask that if she knows what happened? #speaker_1
 }
 
 = unaisah_2_3a
-
 + [Maybe she forgot] I have, but it was a long time ago, maybe she forgot. #speaker_self
 + [I told my colleagues] I  def told my colleageus and I think I mentioned it to her too. #speaker_self
 - Look, if it’s important enough, just remind her. And find other ways to prove yourself. #speaker_1
@@ -1057,7 +1055,6 @@ Life skills yo! Dealing with real people and all. #speaker_1
 
 
 = unaisah_2_3b
-
 Marie... I haven't told anyone. #speaker_self
 HUH #speaker_1
 People can be judgemental #
@@ -1202,7 +1199,9 @@ Do I have a choice? I’ll be fine. Thanks for getting dinner. #speaker_self
 #ui:narrator
 #background:bg_unaisah_CH2_Bedroom_Night.png
 We ate while bantering uneasily about the food, about our colleagues. Superficial things to avoid the real problem between us... 
-When we were done, Basheer emptied the trash immediately, no further reminder needed. . When he glanced at me, I forced a smile.
+{unaisah_2_trash =="leave": 
+When we were done, Basheer emptied the trash immediately, no further reminder needed. When he glanced at me, I forced a smile.
+}
 That night, as he lay snoring next to me, I found the space to cry.
 I’m fed-up with this cycle we’re in: Skirting round the topic of his mum, pretending small amendments and accommodations would resolve things.
 The hardest part of a relationship is not about apologising, or compromising - It’s about hashing out difficult truths that we often don’t want to hear.  
