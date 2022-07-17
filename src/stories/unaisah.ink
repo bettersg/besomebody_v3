@@ -1332,14 +1332,16 @@ You look like you've had a rough week. #speaker_left
 You read my mind #speaker_self
 Do you want to talk about it? #speaker_left
 + [Yes] Yeah, and it's a long story.  #speaker_self
-    #background:bg_unaisah_CH2_Bedroom_Night.png
     It's ok, I'm plenty comfortable. Why don't you start at the start?  #speaker_left
+    #ui:narrator    
+    #background:bg_unaisah_CH2_Bedroom_Night.png
+    I explained everything that had happened at school that week to him.
 + [Let's talk in the living room] Yeah. But it’s a long story.  #speaker_self
-    #background:bg_unaisah_CH1_LivingRoom_Night.png
     Let’s go to the living room. I’ll make tea. #speaker_self
+    #ui:narrator    
+    #background:bg_unaisah_CH1_LivingRoom_Night.png
+    I explained everything that had happened at school that week to him.
 - 
-#ui:narrator
-I explained everything that had happened at school that week to him.
 #ui:scene
 #speaker_left_image:cha_Unaisah_Basheer_Concerned_HomeWear.png
 So what happened to the girl, in the end? #speaker_left
@@ -1365,7 +1367,7 @@ Yeah. There’s a saying amongst the teachers, that to make sense of why a child
 I’m worried for Joseph. I hope he’s learnt his lesson, but having a father like that doesn’t do him any favours. #speaker_self
 No kidding. #speaker_left
 
-{unaisah_1_cca == "discouraged":
+{unaisah_2_feeling == "discouraged":
     -> unaisah_2_7a
     - else:
     -> unaisah_2_7b
