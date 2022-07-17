@@ -1367,7 +1367,7 @@ Yeah. There’s a saying amongst the teachers, that to make sense of why a child
 I’m worried for Joseph. I hope he’s learnt his lesson, but having a father like that doesn’t do him any favours. #speaker_self
 No kidding. #speaker_left
 
-{unaisah_1_cca == "discouraged":
+{unaisah_2_feeling == "discouraged":
     -> unaisah_2_7a
     - else:
     -> unaisah_2_7b
