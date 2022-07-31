@@ -727,7 +727,7 @@ export const CHARACTER_MAP = [
     jsonFile: ZhihaoInk,
     primaryColour: '#7F89BC',
     secondaryColour: '#B1EAEE',
-    newestChapter: 1,
+    newestChapter: 2,   
     chapters: [
       {
         chapterId: 1,
