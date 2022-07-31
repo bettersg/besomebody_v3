@@ -1196,9 +1196,9 @@ Wah lao confirm late liao. Confirm plus chop. #inner_monologue
 // Background: An esports training facility. It is darkly lit, with RGB keyboards, desktops and even headphones. Depending on who you ask, it is either cool or garish. It’s also nearly empty.
 #ui:scene
 #background:bg_zhihao_esports.jpg
+Shit. The whole place so rojak (mixed up). I cannot even find where to register.  #inner_monologue
 #speaker_left_image:cha_zhihao_ian_normal.png
 #speaker_left_name:Ian
-Shit. The whole place so rojak (mixed up). I cannot even find where to register.  #inner_monologue
 // IAN stands in front of ZHIHAO. #
 Hey there! Tryouts are this way. Are you Zhihao? #speaker_left
 Yah, sorry I’m late. #speaker_self
@@ -1216,8 +1216,6 @@ Let’s get you to your assigned team and find you a seat. #speaker_left
 The Alphas tryout is about to start. 
 #ui:scene
 #background:bg_zhihao_esports.jpg
-#speaker_left_image:cha_zhihao_ian_normal.png
-#speaker_left_name:Ian
 #speaker_right_image:cha_zhihao_alex_normal.png
 #speaker_right_name:Alex
 // Background: A desktop setup, with a gaming monitor that looks like the ASUS ROG SWIFT PG258Q (i.e. an angular-looking expensive gaming monitor). There is an RGB keyboard, mouse and desk mat. #
@@ -1248,11 +1246,14 @@ If it’s a tongue-twister for you, just call me Alex, yeah? #speaker_right
 Orh. Yah. Alex. Okay. #speaker_self
 //Two other players have now entered the room. Shot of the four of them in chairs in a small circle. #
 Heng ah everybody lai liao. #inner_monologue
+#speaker_left_image:cha_zhihao_ian_normal.png
+#speaker_left_name:Ian
 //Ian enters. #
 Alright people! You're going to be scrimming against another group of players in the other room. So get ready as a team, steady those nerves and, most importantly, have fun! All the best! #speaker_left
 Fellas. We're gonna own them. Use your wits, go all out, be brutal! #speaker_right
 
 + [Observe Alex first] He wanna be boss issit. Extra sia. #inner_monologue
+    #speaker_left_image:pixel.png
     VAR zhihao_2_observealexfirst = true
     ~ zhihao_2_observealexfirst = true
     I see what else he say first. #inner_monologue
@@ -1269,6 +1270,7 @@ Fellas. We're gonna own them. Use your wits, go all out, be brutal! #speaker_rig
     Nevermind. Team, let’s roll! #speaker_right
 
 + [Take the lead first] I need to talk more in comms. Sekali this ang moh pai (Western-sounding person) wanna be boss. #inner_monologue
+    #speaker_left_image:pixel.png
     ~ zhihao_2_observealexfirst = false
     Eh guys, first we must think of a strategy. So if we look at the other team right-- #speaker_self
     Okay we’re all equals here. #speaker_right
@@ -1283,17 +1285,20 @@ Fellas. We're gonna own them. Use your wits, go all out, be brutal! #speaker_rig
     But we’re starting the game now, cannot anyhow lose focus. #inner_monologue
 
 - Ok. Match starting already liao.  #inner_monologue
+#ui:narrator
 #background:bg_zhihao_alphas.jpg
 First level is abandoned city. Steady. I know this one by heart. #inner_monologue
+#ui:scene
+#background:bg_zhihao_alphas.jpg
+#speaker_right_image:cha_zhihao_alex_normal.png
+#speaker_right_name:Alex
 Ok, better pick my opening move #inner_monologue
 
 + [Charge out using a trick you learned on youtube] 
-    #speaker_left_image:cha_zhihao_teammate2_normal.png
-    #speaker_left_name:Teammate 2
-    Woah, that’s insane! #speaker_left
     #speaker_left_image:cha_zhihao_teammate1_normal.png
     #speaker_left_name:Teammate 1
-    Sweet, man! Didn't know you could do that. #speaker_left
+    Woah, that’s insane! #speaker_left
+    Didn't know you could do that. #speaker_left
     Not difficult lah. I learn from Youtube one. #speaker_self
     Lol. #speaker_right
     Why everybody down here jiak kantang (speaks with a Western accent). #inner_monologue
@@ -1317,10 +1322,9 @@ Ok, better pick my opening move #inner_monologue
 - ALPHAS: The objective is now available. 
 Ok, let's gooooo... What the.. DAMNIT. Some idiot sniped me! Where the fish was he hiding?! #inner_monologue
     
-    + [Ask for assistance] 
+    + [Ask for assistance] Healing healing healing! #speaker_self
     #speaker_left_image:cha_zhihao_teammate1.png
     #speaker_left_name:Teammate 1
-    Healing healing healing! #speaker_self
     Can't outheal that! #speaker_left
     Still can! #speaker_self
     #speaker_left_image:cha_zhihao_teammate2_normal.png
@@ -1330,10 +1334,9 @@ Ok, let's gooooo... What the.. DAMNIT. Some idiot sniped me! Where the fish was 
     If I don’t heal we confirm lose-- #speaker_self
     Guys, move on. Now! #speaker_right
 
-    + [Don't slow down the team] 
+    + [Don't slow down the team]  Eh sorry guys. I better hang back, my character wounded. #speaker_self
     #speaker_left_image:cha_zhihao_teammate1.png
     #speaker_left_name:Teammate 1
-    Eh sorry guys. I better hang back, my character wounded. #speaker_self
     It's okay. #speaker_left
     Zhihao, if you’re out you’re out. Stop interrupting everyone by apologising. #speaker_right
 
@@ -1341,8 +1344,7 @@ Ok, let's gooooo... What the.. DAMNIT. Some idiot sniped me! Where the fish was 
 ALPHAS: BLUE team is losing. 3 minutes left.
 Must tell them or not? Dunno if I tell them then end up scolded again for distracting them. #inner_monologue
 
-+ [Tell them] 
-    Right tower got sniper. #speaker_self]
++ [Tell them]  Right tower got sniper. #speaker_self
     VAR zhihao_2_tellthemsniper = true
     ~ zhihao_2_tellthemsniper = true
     Got it. #speaker_left
@@ -1363,8 +1365,7 @@ Must tell them or not? Dunno if I tell them then end up scolded again for distra
     He tekan me I tekan back. #inner_monologue
     But now I don’t feel good about my skills. #inner_monologue
 
-+ [Remain silent]
-    Aiyah I diam better. #inner_monologue
++ [Remain silent]   Aiyah I diam better. #inner_monologue
     ~ zhihao_2_tellthemsniper = false
     The sniper quite obvious, should be they all can see. #inner_monologue
     ALPHAS: ALEX is killed by a headshot from RED team.
@@ -1425,9 +1426,7 @@ Why? #speaker_self
 This fella damn qian bian (asking for a beating). If he got problem with me don’t have to hide and give fake reason. #inner_monologue
 Scratch that. Most times I don’t get what you’re saying. You need to learn how to talk properly. It cost us certain fights. #speaker_right
 He's fine! #speaker_left
-#speaker_left_image:cha_zhihao_teammate2_normal.png
-#speaker_left_name:Teammate 2
-Yeah. Zhihao, it’s cool. We’re all good. #speaker_left
+Zhihao, it’s cool. We’re all good. #speaker_left
 Yah yah the whole team all good. I’m not. #inner_monologue
 
 + [Get even with Alex] Alex. What’s my name? #speaker_self
@@ -1438,26 +1437,26 @@ Yah yah the whole team all good. I’m not. #inner_monologue
     The hell? No! No. #speaker_right
     Scared just say you scared lah. #speaker_self
     // ALEX (rolling his eyes): #
-    #speaker_right_image:cha_zhihao_alex_eyeroll.png
+    #speaker_right_image:cha_zhihao_alex_frustrated.png
     Jer Hao. #speaker_right
+    #speaker_left_image:cha_zhihao_teammate1_laughing.png
     There you go, that’s your stupid-ass name. #speaker_right
     //TEAMMATES 1 and 2 are trying to hold back their laughter. #
-    #speaker_left_image:cha_zhihao_teammate1_laughing.png
-    Jer. Hao. Who? #speaker_left
+    Jer. JERRRRR Hao. Who? #speaker_left
     #speaker_right_image:cha_zhihao_alex_normal.png
     You “Jer Hao”-“Jer Hao” who? Zhi-Hao lah! #speaker_self
 
 + [Criticise Alex's gaming] Oi Alex. Every fight, you’re the first one to die. Cos you keep feeding them ult charge. #speaker_self
     Rubbish. #speaker_right
     If I talk until so cham, how come everybody else can understand me except you? #speaker_self
-    #speaker_left_image:cha_zhihao_teammate2_normal.png
-    #speaker_left_name:Teammate 2
+    #speaker_left_image:cha_zhihao_teammate1_normal.png
+    #speaker_left_name:Teammate 1
     He's not wrong. #speaker_left
     I think you really cannot make it lah. Cannot only do things one by one. By the time you take action after people give instructions you die liao. #speaker_self
     That’s because your instructions are crap. #speaker_right
 
 - The reality is, you're just a content creator. You give a lot of opinions. That’s the easy part. #speaker_right
-But you don’t play a good game-- you either give instructions too late or give unimportant ones. And that’s besides me struggling to make out what you’re saying. #speaker_right
+But you don’t play a good game. You either give instructions too late or give unimportant ones. And that’s besides me struggling to make out what you’re saying. #speaker_right
 
 + [Argue back] Wtf I won’t let him tell me where I stand. #inner_monologue
     If you not there right, we confirm win every game. #speaker_self
@@ -1482,14 +1481,15 @@ But you don’t play a good game-- you either give instructions too late or give
 #background:bg_zhihao_esports.jpg
 #speaker_left_image:cha_zhihao_ian_normal.png
 #speaker_left_name:Ian
+#speaker_right_image:pixel.png
 Alright! We're going to swap players around for the next game. Excited guys? #speaker_left
 // Background: An office in the esports arena, with similar decor as other rooms. #
 #ui:narrator
-#background:bg_zhihao_esportsoffice.jpg
+#background:bg_zhihao_esports.jpg
 After the whole event, everyone had to give feedback to Ian and the panel. 
 They interviewed us one by one.
 #ui:scene
-#background:bg_zhihao_esportsoffice.jpg
+#background:bg_zhihao_esports.jpg
 #speaker_left_image:cha_zhihao_ian_normal.png
 #speaker_left_name:Ian
 So, Zhihao! What do you think of the first team? We plan to pair you players with teammates and coaches you're comfortable with. #speaker_left
@@ -1624,7 +1624,7 @@ All of Pa’s things still here in the room. What’s she going to do? Pack them
     Next round then is the final. They haven’t select yet. #speaker_self
     When you will know? #speaker_left
     Dunno. Maybe next few days. #speaker_self
-    Orh. Jiayou ah. #speaker_left
+    Orh. Jiayou (fight on!) ah. #speaker_left
     Eh this room you don’t rent hor. #speaker_self
     If you get in, maybe I change to the small room. #speaker_left
     EH! #speaker_self
@@ -1648,7 +1648,8 @@ Hey bro #speaker_1
     - else: 
     Crap. Must be he saw the tweet.#wa_inner_monologue
 }
-+ [Play it cool] Yo #speaker_self
+Hey.. #speaker_self
++ [Play it cool] What's up? #speaker_self
 + [Do not respond yet] He write like that I cannot even tell if he angry or what. #wa_inner_monologue
     I think better not reply first. #wa_inner_monologue
 - How did the tryouts go? #speaker_1
@@ -1662,6 +1663,7 @@ LOL #speaker_self
 Btw there’s something I need to let you know #speaker_1
 Hope you don’t take it the wrong way #speaker_1
 Jialat he wanna talk about the tweet liao. #wa_inner_monologue
+Orh...#speaker_self
 + Issit cos of my tweet? [] #speaker_self
 + Eh.. uh I always joke when I tweet... []  Dun take so seriously #speaker_self
 - Is Tue 2pm okay with you for the lunch? I finish tutorials by then #speaker_1
@@ -1674,8 +1676,8 @@ Tue is ok #speaker_self
 Haha that’s what you wanna ask? #speaker_self
 Thing is, I’ve asked Nadia to join us #speaker_1
 Wah piang why he must bring his gf. Now I become lightbulb sia. #wa_inner_monologue
-+ [Accept it] Oh... #speaker_self
-    But if he really want her there, very bad to say no. #wa_inner_monologue
+Oh...#speaker_self
++ [Accept it] But if he really want her there, very bad to say no. #wa_inner_monologue
     VAR zhihao_2_acceptnadiadate = true
     ~ zhihao_2_acceptnadiadate = true
     Lol kk #speaker_self
@@ -1684,10 +1686,9 @@ Wah piang why he must bring his gf. Now I become lightbulb sia. #wa_inner_monolo
     Don’t worry bro you’ll like talking to her #speaker_self
     Wouldn’t do it if I didn’t think you two would get along #speaker_self
     Suan le ba [Forget it.] I want also cannot change his mind. #wa_inner_monologue
-    Kk, see you Mon #speaker_self
+    Kk, see you then #speaker_self
 
-+ [Say no] Uh... #speaker_self
-     I better say no. #wa_inner_monologue
++ [Say no]      I better say no. #wa_inner_monologue
     ~ zhihao_2_acceptnadiadate = false
     If she join us will be damn paiseh #speaker_self
     Cos very hard to talk #speaker_self
@@ -1701,7 +1702,7 @@ Wah piang why he must bring his gf. Now I become lightbulb sia. #wa_inner_monolo
     If you feel paiseh we don’t have to eat bakchormee lol #speaker_1
     Haiz. That’s why my tweet is the truth. #wa_inner_monologue
     We should still eat bakchormee lah #speaker_self
-    Kk, see you Mon #speaker_self
+    Kk, see you then #speaker_self
 
 - Thanks man! Means a lot to me btw haha #speaker_1
 Hey, of the three of us, you’re the best gamer by a mile #speaker_1
