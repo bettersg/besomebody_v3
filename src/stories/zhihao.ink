@@ -1328,7 +1328,7 @@ Ok, let's gooooo... What the.. DAMNIT. Some idiot sniped me! Where the fish was 
     Can't outheal that! #speaker_left
     Still can! #speaker_self
     #speaker_left_image:cha_zhihao_teammate2_normal.png
-    #speaker_left_name:Teammate 2
+    #speaker_left_name:Teammate 2 (out of sight)
     But how-- #speaker_left
     There’s no time. We have to move on! #speaker_right
     If I don’t heal we confirm lose-- #speaker_self
