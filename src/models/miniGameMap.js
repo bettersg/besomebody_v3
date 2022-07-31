@@ -784,90 +784,258 @@ export const MINI_GAME_MAP = [
     },  
   ],
   },
-
-  // zhihao 2
+// zhihao 2
   {
-    game_id: 12,
+  game_id: 12,
+  ui: "mcq",
+  introduction: "Zhihao Chapter 2",
+  questions: [
+    {
+      question_id: 1,
+      question:
+        "Zhihao's family speaks Chinese dialect. What percentage of all local households speak a Chinese dialect at home?",
+      type: "text",
+      correct_answer_id: 1,
+      explanation:
+        "In 2020, only 8.7% of all households speak dialects at home (reduction from 2010, which was 14.3%). 48.3% speak English, 29.9% speak Mandarin, 9.2% speak Malay, and 2.5% speak Tamil at home.  [2020 Census]",
+      answers: [
+        {
+          answer_id: 1,
+          title: "8.7%",
+        },
+        {
+          answer_id: 2,
+          title: "12.5%",
+        },
+        {
+          answer_id: 3,
+          title: "14.3%",
+        },
+        {
+          answer_id: 4,
+          title: "20.1%",
+        },
+      ],
+    },
+    {
+      question_id: 2,
+      question:
+        "After Zhihao's father passed, the family observed a period of mourning and did not attend events. Which of these customs is not associated with Chinese (non-Christian) funerals?",
+      correct_answer_id: 4,
+      explanation: "Immediate cremation is normally associated with Hindu funerals, as Hindus believe the physical body has no sacred purpose and cremation helps reincarnation. For Chinese funerals, the deceased may be buried or cremated, usually after a multi-day wake is held.",
+      type: "text",
+      answers: [
+        {
+          answer_id: 1,
+          title: "Wearing a small cloth patch on your shoulder",
+        },
+        {
+          answer_id: 2,
+          title: "Disposing of a red string after attending the wake",
+        },
+        {
+          answer_id: 3,
+          title: "Burning paper models of possessions for the loved one",
+        },
+        {
+          answer_id: 4,
+          title: "Immediate cremation of the body",
+        },
+      ],
+    },
+    {
+      question_id: 3,
+      question:
+        "Older Chinese Singaporeans protested heavily against the removal of Chinese-medium schools (like the original Chinese High and Nantah University), and felt such actions reflected a lack of their 'Chinese Privilege'.",
+      type: "text",
+      correct_answer_id: 1,
+      explanation:
+        "In a 2021 speech by Min Lawrence Wong, he explained that older local Chinese feel like the modern term 'Chinese Privilege' does not reflect their lived experience, because of the 'Nantah episode' and the emphasis on English over Chinese language (and the removal of dialects) put them at a distinct disadvantage, despite being an ethnic majority.",
+        answers: [
+          {
+            answer_id: 1,
+            title: "True",
+          },
+          {
+            answer_id: 2,
+            title: "False",
+          },
+        
+        ],
+    },  
+  ],
+  },
+
+  // unaisah 1
+  {
+    game_id: 14,
     ui: "mcq",
-    introduction: "...",
+    introduction: "Unaisah hinted at harassment in her previous job. Let's explore this issue further.",
     questions: [
       {
         question_id: 1,
         question:
-          "Zhihao's family speaks Chinese dialect. What percentage of all local households speak a Chinese dialect at home?",
+          "What percentage of workers in Singapore reported being victims of sexual harassment in Singapore?",
         type: "text",
-        correct_answer_id: 1,
+        correct_answer_id: 3,
         explanation:
-          "In 2020, only 8.7% of all households speak dialects at home (reduction from 2010, which was 14.3%). 48.3% speak English, 29.9% speak Mandarin, 9.2% speak Malay, and 2.5% speak Tamil at home.  [2020 Census]",
+          "2 in 5 workers said they had been victims of unwanted sexual advances, in the form of crude remarks, sexual pictures or texts, or remarks about their appearance or sexual activities. [Straits Times, Jan 2021]",
         answers: [
           {
             answer_id: 1,
-            title: "8.7%",
+            title: "20%",
           },
           {
             answer_id: 2,
-            title: "12.5%",
+            title: "30%",
           },
           {
             answer_id: 3,
-            title: "14.3%",
+            title: "40%",
           },
           {
             answer_id: 4,
-            title: "20.1%",
+            title: "50%",
           },
         ],
       },
       {
         question_id: 2,
         question:
-          "After Zhihao's father passed, the family observed a period of mourning and did not attend events. Which of these customs is not associated with Chinese (non-Christian) funerals?",
-        correct_answer_id: 4,
-        explanation: "Immediate cremation is normally associated with Hindu funerals, as Hindus believe the physical body has no sacred purpose and cremation helps reincarnation. For Chinese funerals, the deceased may be buried or cremated, usually after a multi-day wake is held.",
+          "What percentage of workers reported being touched in an unwelcome way?",
+        correct_answer_id: 3,
+        explanation: "13% reported being touched at work, or more than one in every ten workers. This included male respondees.",
         type: "text",
         answers: [
           {
             answer_id: 1,
-            title: "Wearing a small cloth patch on your shoulder",
+            title: "3%",
           },
           {
             answer_id: 2,
-            title: "Disposing of a red string after attending the wake",
+            title: "8%",
           },
           {
             answer_id: 3,
-            title: "Burning paper models of possessions for the loved one",
+            title: "13%",
           },
           {
             answer_id: 4,
-            title: "Immediate cremation of the body",
+            title: "21%",
           },
         ],
       },
       {
         question_id: 3,
         question:
-          "Older Chinese Singaporeans protested heavily against the removal of Chinese-medium schools (like the original Chinese High and Nantah University), and felt such actions reflected a lack of their 'Chinese Privilege'.",
+          "Of all the reported victims of harassment, how many of them filed official complaints with the authorities (at work, or the police)?",
         type: "text",
-        correct_answer_id: 1,
+        correct_answer_id: 2,
         explanation:
-          "In a 2021 speech by Min Lawrence Wong, he explained that older local Chinese feel like the modern term 'Chinese Privilege' does not reflect their lived experience, because of the 'Nantah episode' and the emphasis on English over Chinese language (and the removal of dialects) put them at a distinct disadvantage, despite being an ethnic majority.",
+          "Only 1 in 3 filed an official report.Those who did not said they wanted to forget the unpleasant experience or felt what they had experienced was not serious enough. Some also felt they had no evidence of the wrong-doing. ",
           answers: [
             {
               answer_id: 1,
-              title: "True",
+              title: "25%",
             },
             {
               answer_id: 2,
-              title: "False",
+              title: "33%",
             },
-          
+            {
+              answer_id: 3,
+              title: "50%",
+            },
+            {
+              answer_id: 4,
+              title: "75%",
+            },
+          ],
+      },  
+    ],
+  },
+  // unaisah 2 https://www.straitstimes.com/singapore/why-some-women-choose-to-be-child-free  https://www.channelnewsasia.com/commentary/fewer-babies-lower-fertility-singapore-reasons-marriage-dating-1319246
+  {
+    game_id: 15,
+    ui: "mcq",
+    introduction: "The pressure to have children can be hard for young couples to deal with. Let's understand this issue better.",
+    questions: [
+      {
+        question_id: 1,
+        question:
+          "Singaporean couples are generally having fewer children than before.",
+        type: "text",
+        correct_answer_id: 1,
+        explanation:
+          "True. Compared to a decade ago, women are having fewer children, across all age groups, ethnicities, and educational levels. [Census, 2020]",
+        answers: [
+          {
+            answer_id: 1,
+            title: "True",
+          },
+          {
+            answer_id: 2,
+            title: "False",
+          }, 
+        ],
+      },
+      {
+        question_id: 2,
+        question:"What percentage of married women in their 40s did NOT have children?",
+        correct_answer_id: 2,
+        explanation: "In 2020, 13.5%  of married women in their 40s did not have children - up from 9.3%  in 2010. This follows a similar pattern across all age bands, including those in their 30s and 50s and older. [Straits Times, May 2022]",
+        type: "text",
+        answers: [
+          {
+            answer_id: 1,
+            title: "8%",
+          },
+          {
+            answer_id: 2,
+            title: "13%",
+          },
+          {
+            answer_id: 3,
+            title: "21%",
+          },
+          {
+            answer_id: 4,
+            title: "33%",
+          },
+        ],
+      },
+      {
+        question_id: 3,
+        question:
+          "What is the pay gap between men and women in their 30s (i.e. when they start having children)?",
+        type: "text",
+        correct_answer_id: 2,
+        explanation:
+          "The gap is ~20%. MOM's Labour Force Survey indicates that, contrary to the belief that the gender pay gap starts at the onset of their career, the gap appears to actually only start in the 30s (i.e. when women typically start to have children) and continues for the rest of their lives. [Today, 2019]",
+          answers: [
+            {
+              answer_id: 1,
+              title: "10%",
+            },
+            {
+              answer_id: 2,
+              title: "20%",
+            },
+            {
+              answer_id: 3,
+              title: "30%",
+            },
+            {
+              answer_id: 4,
+              title: "40%",
+            },
           ],
       },  
     ],
     },
 ];
   
+
 
 
 
