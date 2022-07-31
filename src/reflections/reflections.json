@@ -165,7 +165,7 @@
       9,2,11,1,3
     ]
   },
-    {
+  {
    "id": 12,  
     "story":"Zhihao", 
     "chapter":1,
@@ -173,6 +173,7 @@
     "media": "https://www.straitstimes.com/singapore/social-media-use-can-trigger-feelings-of-inferiority-or-inadequacy-among-young-experts",
     "context": {
       "character_name": "Zhihao"
+    },
     "questions": [
       9,2,11,1,3
     ]
