@@ -989,7 +989,7 @@ Reflection 11
 #knot:zhihao_2_intro
 #ui:narrator
 #background:bg_zhihao_bedroom.jpg
-Got a lot of things happen since my last stream. 
+A lot of things happened since my last stream. 
 My viewers growing like no tomorrow. 
 //Flashback scenes of Chapter 1 alongside each following sentence ZHIHAO makes (viewership numbers, streaming screen, tweet and ‘like’ count).
 Maybe cos my gameplay sibeh zhai (damn good). 
@@ -1029,8 +1029,8 @@ Hi Zhihao, /n /n Team Singapore Elites notes your gaming prowess on Twitch, and 
 
 #ui:narrator
 #background:ui_emailinbox.png
-So awesome. If I can join them, I can earn so much more. Plus they got a lot of fans. 
-Eh how to reply ah. Is formal correct anot? Or informal? Sekali (what if) I use wrong then he think I not zai (impressive).
+Of course I’ll join them, their fan-base damn big. And I can earn SO much more! 
+Wah this one how to reply sia. Is formal correct anot? Or informal? Sekali (what if) I use wrong then he think I suaku (uncultured).
 + [Formal safer] -> zhihao_2_1a
 + [Aiyah, I copy Ian's informal template] -> zhihao_2_1b
 
@@ -1089,7 +1089,7 @@ Zhihao  #speaker_self
 #ui:narrator
 #background:bg_zhihao_bedroom.jpg
 The whole week I everyday also practise. During tutorial break I play until next class. Never talk to my friends at all.
-Today I wake up super early for the tryouts. Nervous, sia.
+Today I wake up super early for the tryouts. The whole morning can only feel kan cheong (nervous)
 #ui:scene
 #background:bg_zhihao_hdb_carpark.jpg
 // #background:bg_zhihao_car.jpg
@@ -1106,16 +1106,16 @@ If she say ten means twenty. Opposite of Pa. #inner_monologue
 #chat_group_title:Ma
 #chat_group_image:ico_zhihao_mother.png
 #speaker_1_name:Ma
-Eh Ma, nevermind lah. I take Grab. #speaker_self
+Eh Ma, nevermind lah. I take taxi. #speaker_self
 Tsk, don’t waste money! #speaker_1
 I driving now. Fifteen min only. You wait hor! #speaker_1
-Wahlao eh, Ma! Ten or fifteen? Don’t need to come lah, I book Grab liao #speaker_self
+Wahlao eh, Ma! Ten or fifteen? No need come la, I book taxi liao #speaker_self
 //ZHIHAO ends the call. Switch to the Grab screen with the map showing 10 minutes ETA. #
 Wah piang, the Grab also take ten minutes. Like that how to reach on time sia?  #wa_inner_monologue
 #ui:narrator
 #background:bg_zhihao_hdb_carpark.jpg
 10 minutes later, both Ma and the taxi arrived at the same time. 
-Even though I told Ma not to come!
+Even though I tell her already don't come! Tsk!
 #ui:scene
 #background:bg_zhihao_hdb_carpark.jpg
 #speaker_left_image:cha_zhihao_mother_frustrated.png
@@ -1124,9 +1124,8 @@ Ah Boy! Faster get in! #speaker_left
 #speaker_right_image:cha_zhihao_driver_normal.png
 #speaker_right_name:Driver
 Ah, Mister! Mister! I can fetch my son-- nevermind! Like that you can fetch other people. Thank you ah, thank you! #speaker_left
-You want to go to your mother’s car? It’s okay. You pay already so cannot cancel. #speaker_right
 Malu, sia. #inner_monologue
-And Ma drive sibeh slow. Aiyoh why she do this... #inner_monologue
+You want to go to your mother’s car? It’s okay. You pay already anyway. #speaker_right
 + [Take the taxi] -> zhihao_2_2a
 + [Take your ma's offer] -> zhihao_2_2b
 
@@ -1139,6 +1138,7 @@ And Ma drive sibeh slow. Aiyoh why she do this... #inner_monologue
 #speaker_right_name:Driver
 #background:bg_zhihao_taxi.jpg
 Uncle, let's go please. #speaker_self
+Mah drive sibeh (very) slow. Wah piang she give me so much headache! #inner_monologue
 VAR zhihao_2_taketaxi = true
 ~ zhihao_2_taketaxi = true
 You sure? #speaker_right
@@ -1187,7 +1187,7 @@ It's ok boy. You paid already anyway. #speaker_right
 //Ambient sound of car door closing, then opening. Shift to vantage point in MOTHER’s car, in the shotgun seat. #
 Eh Ma, must drive faster. #speaker_self
 I drive very fast already! Wait accident then you know. #speaker_left
-Confirm late liao. Confirm plus chop. #inner_monologue
+Wah lao confirm late liao. Confirm plus chop. #inner_monologue
 
 #speaker_right_image:pixel.png
 #ui:narrator
@@ -1198,7 +1198,7 @@ Confirm late liao. Confirm plus chop. #inner_monologue
 #background:bg_zhihao_esports.jpg
 #speaker_left_image:cha_zhihao_ian_normal.png
 #speaker_left_name:Ian
-Shit. The whole place so rojak. I cannot even find where to register.  #inner_monologue
+Shit. The whole place so rojak (mixed up). I cannot even find where to register.  #inner_monologue
 // IAN stands in front of ZHIHAO. #
 Hey there! Tryouts are this way. Are you Zhihao? #speaker_left
 Yah, sorry I’m late. #speaker_self
@@ -1268,7 +1268,7 @@ Fellas. We're gonna own them. Use your wits, go all out, be brutal! #speaker_rig
     KNN why he roll his eyes! #inner_monologue
     Nevermind. Team, let’s roll! #speaker_right
 
-+ [Take the lead first] I need to talk more in comms. Sekali this ang moh pai wanna be boss. #inner_monologue
++ [Take the lead first] I need to talk more in comms. Sekali this ang moh pai (Western-sounding person) wanna be boss. #inner_monologue
     ~ zhihao_2_observealexfirst = false
     Eh guys, first we must think of a strategy. So if we look at the other team right-- #speaker_self
     Okay we’re all equals here. #speaker_right
@@ -1358,7 +1358,7 @@ Must tell them or not? Dunno if I tell them then end up scolded again for distra
     The next two fights do not go smoothly. My BLUE team is losing.
     #ui:scene
     Usually I speak more in comms. #inner_monologue
-    But I dunno, like damn hard to talk with this team. They jiak kantang until cannot click. #inner_monologue
+    But I dunno, like damn hard to talk with this team. They jiak kantang (speak like Westerners) until cannot click. #inner_monologue
     Especially that Alex. Everytime want tekan (tease/punish) me. #inner_monologue
     He tekan me I tekan back. #inner_monologue
     But now I don’t feel good about my skills. #inner_monologue
@@ -1380,15 +1380,17 @@ Must tell them or not? Dunno if I tell them then end up scolded again for distra
     The next two fights do not go smoothly. My BLUE team is losing.
     #ui:scene
     I dunno what happen to me. Usually in comms I talk a lot. Now I feel like I always say the wrong thing. #inner_monologue
-    I buay tahan that Alex. #inner_monologue
+    I buay tahan (cannot tolerate) that Alex. #inner_monologue
     But buay sai have to tahan. #inner_monologue
 
 - Ok, this is our last chance to prove ourselves. #inner_monologue
-The only way to win now is to beat everyone in the other team.#inner_monologue
+Now we must beat everyone in the other team to win.#inner_monologue
 I think still can… if we clutch.#inner_monologue
 
 + [Explain your plan] Ok, I'm going to ult in three. I need cover fire. #speaker_self
     Okay, body-blocking them. #speaker_left
+    VAR zhihao_2_winthegame = true
+    ~ zhihao_2_winthegame = true
    #ui:narrator 
    #background:bg_zhihao_alphas.jpg
     Zhihao flanks and uses his ultimate (special weapon), wiping the enemy team. 
@@ -1398,6 +1400,7 @@ I think still can… if we clutch.#inner_monologue
     #ui:narrator 
     #background:bg_zhihao_alphas.jpg
     ZHIHAO flanks and uses his ultimate  (special weapon), yet he is immediately stunned and eliminated.
+    ~ zhihao_2_winthegame = false
     BLUE team loses again.
     #ui:scene
     Oh, for Christ’s sake! #speaker_right
@@ -1419,7 +1422,7 @@ I think we could have done better with a different team. #speaker_right
 Different avatars issit? #speaker_self
 Nope. Sometimes I'm not sure what you're saying. #speaker_right
 Why? #speaker_self
-This fella damn qian bian* <This fella is asking for a beating>. If he got problem with me don’t have to hide and give fake reason. #inner_monologue
+This fella damn qian bian (asking for a beating). If he got problem with me don’t have to hide and give fake reason. #inner_monologue
 Scratch that. Most times I don’t get what you’re saying. You need to learn how to talk properly. It cost us certain fights. #speaker_right
 He's fine! #speaker_left
 #speaker_left_image:cha_zhihao_teammate2_normal.png
@@ -1458,6 +1461,8 @@ But you don’t play a good game-- you either give instructions too late or give
 
 + [Argue back] Wtf I won’t let him tell me where I stand. #inner_monologue
     If you not there right, we confirm win every game. #speaker_self
+    VAR zhihao_2_arguewithalex = true
+    ~ zhihao_2_arguewithalex = true
     I have the same PC as this, and I'm used to it. #speaker_right
     I’ve watched you play and I know you use a shitty oldwood PC. #speaker_right
     So you say your computer so zhai also cannot help you lah. #speaker_self
@@ -1467,7 +1472,7 @@ But you don’t play a good game-- you either give instructions too late or give
 + [Defend your content]
     Lol people like my content. And my content got a lot of instructions. #speaker_self
     Your content leh? #speaker_self
-    //ALEX rolls his eyes. #
+    ~ zhihao_2_arguewithalex = false
     #speaker_right_image:cha_zhihao_alex_eyeroll.png
     I don’t need to resort to that. #speaker_right
     No skills, no content. Your ang moh talk also fake. #speaker_self
@@ -1493,6 +1498,8 @@ So, Zhihao! What do you think of the first team? We plan to pair you players wit
     I die-die also don’t want to be on the same team as Alex. #inner_monologue
     The whole team is okay except Alex. He got attitude problem. #speaker_self
     Oh, did something happen? #speaker_left
+    VAR zhihao_2_honestwithian = true
+    ~ zhihao_2_honestwithian = true
     He only got problem with me cos he don’t like how I talk. But he’s the only one who complained cannot understand. #speaker_self
     Okay, so it’s a language barrier you’re saying? #speaker_left
     No lah! He just don’t like me. The language is an excuse. #speaker_self
@@ -1504,6 +1511,7 @@ So, Zhihao! What do you think of the first team? We plan to pair you players wit
 
 + [Be polite] Uh, better not sound like a complainer. #inner_monologue
     I scared they think I the one got problem. Then they put me with all the cui (lousy) people. #inner_monologue
+    ~ zhihao_2_honestwithian = false
     Uh, I think the team is not bad. #speaker_self
     The panel and I were observing the voice chat and I have to say, it was a bit chaotic. #speaker_left
     Wah piang, they spy on all the teams ah? #inner_monologue
@@ -1538,11 +1546,11 @@ MA! #speaker_self
 Where’s Ma? Today Saturday got her ‘Sheng Siong Show’, she how come go out? #inner_monologue
 {zhihao_2_taketaxi == true:
     Aiyah but this morning she confirm angry with me.  #inner_monologue
-    But she drive until so teruk how to reach the place on time.  #inner_monologue
+    But she drive until so teruk (bad) how to reach the place on time.  #inner_monologue
     I better cook dinner. So she happier.  #inner_monologue
 - else:
     This morning she make me late.   #inner_monologue
-    Today if she cook confirm cook late.   #inner_monologue
+    Today if she cook, confirm cook late.   #inner_monologue
     Aiyah I cook dinner myself better lah.   #inner_monologue
 }
 
@@ -1563,7 +1571,7 @@ Don’t lah I go down later. Eh you help me look, which photo of the room better
 //Close-up of MOTHER’s phone screen with a picture of the master bedroom. #
 For what? #speaker_self
 For the property agent. She tell me take picture of the room, take one set day one set night. Dunno if take like that okay anot. #speaker_left
-Eh, Ma. Why you prata? That time you say you don’t want to rent out the bedroom. #speaker_self
+Eh, Ma. Why you prata (flipped opinion)? That time you say you don’t want to rent out the bedroom. #speaker_self
 I never say don’t want mah! Bo pian need to support your Ah Gong what. Nevermind one, I can sleep in the other room. #speaker_left
 Wah, she give up so fast. #inner_monologue
 //Montage of the aspects of the room with Pa’s things, eg. a framed wedding picture, a planner, letters in envelopes, a Casio watch, a box of folded men’s shirts etc. #
@@ -1723,7 +1731,7 @@ Btw you wanted to tell me about some tweet earlier? #speaker_1
     Must show I have my shit together. I’m not a kid anymore. #wa_inner_monologue
 
 + [Mention it but skip the details] Oh haha #speaker_self
-    I tweeted a joke abt you and bakchormee #speaker_self
+    I tweeted a lame joke abt you and bakchormee #speaker_self
     ~ chapter_2_ending = 2
     LOLOL what’s new #speaker_1
     You’re always joking about me and bakchormee #speaker_1
@@ -1731,7 +1739,7 @@ Btw you wanted to tell me about some tweet earlier? #speaker_1
     I don’t say this to Gavin lah, but he’s a damn important friend. #wa_inner_monologue
     Eating lunch with him is the best time I have in school. #wa_inner_monologue
     I never think of this before sia, but now he got Nadia, I dunno if he will start to pangseh our break-times. #wa_inner_monologue
-    I try not to think about it. But buay sai (I am unable to stop myself) lah.  #wa_inner_monologue
+    I try not to think about it. But buay sai (unable to stop myself) lah.  #wa_inner_monologue
     
 - -> zhihao_2_reflection
 
