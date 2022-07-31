@@ -1308,7 +1308,7 @@ Ok, better pick my opening move #inner_monologue
     I feel like one also. #inner_monologue
 
 + [Stick close to the team] 
-    #speaker_left_image:cha_zhihao_teammate1.png
+    #speaker_left_image:cha_zhihao_teammate1_normal.png
     #speaker_left_name:Teammate 1
     Guys let’s group up, take the high ground first. #speaker_left
     Orh. #speaker_self
@@ -1323,7 +1323,7 @@ Ok, better pick my opening move #inner_monologue
 Ok, let's gooooo... What the.. DAMNIT. Some idiot sniped me! Where the fish was he hiding?! #inner_monologue
     
     + [Ask for assistance] Healing healing healing! #speaker_self
-    #speaker_left_image:cha_zhihao_teammate1.png
+    #speaker_left_image:cha_zhihao_teammate1_normal.png
     #speaker_left_name:Teammate 1
     Can't outheal that! #speaker_left
     Still can! #speaker_self
@@ -1335,7 +1335,7 @@ Ok, let's gooooo... What the.. DAMNIT. Some idiot sniped me! Where the fish was 
     Guys, move on. Now! #speaker_right
 
     + [Don't slow down the team]  Eh sorry guys. I better hang back, my character wounded. #speaker_self
-    #speaker_left_image:cha_zhihao_teammate1.png
+    #speaker_left_image:cha_zhihao_teammate1_normal.png
     #speaker_left_name:Teammate 1
     It's okay. #speaker_left
     Zhihao, if you’re out you’re out. Stop interrupting everyone by apologising. #speaker_right
@@ -1589,6 +1589,7 @@ All of Pa’s things still here in the room. What’s she going to do? Pack them
     You still anyhow want to let strangers sleep in it? #speaker_self
     Bed is just bed lah! So big I one person sleep, waste space. #speaker_left
     Better I move to the other room, let people pay for this one. #speaker_left
+    #speaker_left_image:cha_zhihao_mother_frustrated.png
     Then how come that time Ji Gu say this idea you angry? #speaker_self
     TSK. You don’t geh kiang (act nosy) lah. Talk so much. #speaker_left
     Wah lao she damn qian bian (annoying). #inner_monologue
@@ -1601,6 +1602,7 @@ All of Pa’s things still here in the room. What’s she going to do? Pack them
     I go buy lah, you stay home. #speaker_left
     You busy taking picture how to go now. #speaker_self
     //Shot of grille door and corridor indicating ZHIHAO leaving the house. #
+    #speaker_left_image:pixel.png
     #background:bg_zhihao_hdb_carpark.jpg
     Wah lao, she never even ask about my tryouts. #inner_monologue
     Everytime we talk, we end up fighting. Always over Pa. #inner_monologue
@@ -1683,8 +1685,8 @@ Oh...#speaker_self
     Lol kk #speaker_self
     Dunno if she’ll understand me lol. School never talk that much with her. #speaker_self
     Haha she understands anything #speaker_1
-    Don’t worry bro you’ll like talking to her #speaker_self
-    Wouldn’t do it if I didn’t think you two would get along #speaker_self
+    Don’t worry bro you’ll like talking to her #speaker_1
+    Wouldn’t do it if I didn’t think you two would get along #speaker_1
     Suan le ba [Forget it.] I want also cannot change his mind. #wa_inner_monologue
     Kk, see you then #speaker_self
 
