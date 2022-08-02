@@ -788,79 +788,87 @@ export const MINI_GAME_MAP = [
   {
   game_id: 12,
   ui: "mcq",
-  introduction: "Zhihao Chapter 2",
+  introduction: "Online gaming is growing in popularity, but there are challenges and concerns in this industry. Explore the issues here.",
   questions: [
     {
       question_id: 1,
       question:
-        "Zhihao's family speaks Chinese dialect. What percentage of all local households speak a Chinese dialect at home?",
+        "What percentage of the top 300 gamers in the world (by earnings) are women?",
       type: "text",
       correct_answer_id: 1,
       explanation:
-        "In 2020, only 8.7% of all households speak dialects at home (reduction from 2010, which was 14.3%). 48.3% speak English, 29.9% speak Mandarin, 9.2% speak Malay, and 2.5% speak Tamil at home.  [2020 Census]",
+        "0%. BBC found that there are no female players in the top 300 earners and only a tiny fraction of the millions being won in competitions around the world is going to women.   [BBC Survey, 2021]",
       answers: [
         {
           answer_id: 1,
-          title: "8.7%",
+          title: "0%",
         },
         {
           answer_id: 2,
-          title: "12.5%",
+          title: "10%",
         },
         {
           answer_id: 3,
-          title: "14.3%",
+          title: "20%",
         },
         {
           answer_id: 4,
-          title: "20.1%",
+          title: "30%",
         },
       ],
     },
+    // https://journals.sagepub.com/doi/full/10.1177/0004867420962851
     {
       question_id: 2,
       question:
-        "After Zhihao's father passed, the family observed a period of mourning and did not attend events. Which of these customs is not associated with Chinese (non-Christian) funerals?",
+        "What is the prevalance of clinical gaming-related disorders in Asia?",
       correct_answer_id: 4,
-      explanation: "Immediate cremation is normally associated with Hindu funerals, as Hindus believe the physical body has no sacred purpose and cremation helps reincarnation. For Chinese funerals, the deceased may be buried or cremated, usually after a multi-day wake is held.",
+      explanation: "A series of studies revealed that gaming disorder prevalence rate was the highest in Asia, at ~5.08%. The global rate was 3.05% [ANZ Journal of Psychology]",
       type: "text",
       answers: [
         {
           answer_id: 1,
-          title: "Wearing a small cloth patch on your shoulder",
+          title: "1%",
         },
         {
           answer_id: 2,
-          title: "Disposing of a red string after attending the wake",
+          title: "5%",
         },
         {
           answer_id: 3,
-          title: "Burning paper models of possessions for the loved one",
+          title: "15%",
         },
         {
           answer_id: 4,
-          title: "Immediate cremation of the body",
+          title: "30%",
         },
       ],
     },
     {
       question_id: 3,
       question:
-        "Older Chinese Singaporeans protested heavily against the removal of Chinese-medium schools (like the original Chinese High and Nantah University), and felt such actions reflected a lack of their 'Chinese Privilege'.",
+        "What of these symptoms is * NOT * a symptom of clinical gaming disorder (as defined by the World Health Organisation)?",
       type: "text",
-      correct_answer_id: 1,
+      correct_answer_id: 4,
       explanation:
-        "In a 2021 speech by Min Lawrence Wong, he explained that older local Chinese feel like the modern term 'Chinese Privilege' does not reflect their lived experience, because of the 'Nantah episode' and the emphasis on English over Chinese language (and the removal of dialects) put them at a distinct disadvantage, despite being an ethnic majority.",
+        "The desire to win may be acceptable, but the rest are symptoms of a disorder.The World Health Organization has defined gaming disorder as a mental health condition and it will be officially added to the International Classification of Diseases, ICD-11, in 2022.",
         answers: [
           {
             answer_id: 1,
-            title: "True",
+            title: "Impaired control over gaming",
           },
           {
             answer_id: 2,
-            title: "False",
+            title: "Gaming takes precedence over other interests and daily activities",
           },
-        
+          {
+            answer_id: 3,
+            title: "Continuation of gaming despite the occurrence of negative consequences",
+          },
+          {
+            answer_id: 4,
+            title: "Competitive desire to win lots of games",
+          },        
         ],
     },  
   ],
