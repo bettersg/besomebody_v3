@@ -784,6 +784,96 @@ export const MINI_GAME_MAP = [
     },  
   ],
   },
+// zhihao 2
+  {
+  game_id: 12,
+  ui: "mcq",
+  introduction: "Online gaming is growing in popularity, but there are challenges and concerns in this industry. Explore the issues here.",
+  questions: [
+    {
+      question_id: 1,
+      question:
+        "What percentage of the top 300 gamers in the world (by earnings) are women?",
+      type: "text",
+      correct_answer_id: 1,
+      explanation:
+        "0%. BBC found that there are no female players in the top 300 earners and only a tiny fraction of the millions being won in competitions around the world is going to women.   [BBC Survey, 2021]",
+      answers: [
+        {
+          answer_id: 1,
+          title: "0%",
+        },
+        {
+          answer_id: 2,
+          title: "10%",
+        },
+        {
+          answer_id: 3,
+          title: "20%",
+        },
+        {
+          answer_id: 4,
+          title: "30%",
+        },
+      ],
+    },
+    // https://journals.sagepub.com/doi/full/10.1177/0004867420962851
+    {
+      question_id: 2,
+      question:
+        "What is the prevalance of clinical gaming-related disorders in Asia?",
+      correct_answer_id: 2,
+      explanation: "A series of studies revealed that gaming disorder prevalence rate was the highest in Asia, at ~5.08%. The global rate was 3.05% [ANZ Journal of Psychology]",
+      type: "text",
+      answers: [
+        {
+          answer_id: 1,
+          title: "1%",
+        },
+        {
+          answer_id: 2,
+          title: "5%",
+        },
+        {
+          answer_id: 3,
+          title: "15%",
+        },
+        {
+          answer_id: 4,
+          title: "30%",
+        },
+      ],
+    },
+    {
+      question_id: 3,
+      question:
+        "What of these symptoms is * NOT * a symptom of clinical gaming disorder (as defined by the World Health Organisation)?",
+      type: "text",
+      correct_answer_id: 4,
+      explanation:
+        "The desire to win may be acceptable, but the rest are symptoms of a disorder.The World Health Organization has defined gaming disorder as a mental health condition and it will be officially added to the International Classification of Diseases, ICD-11, in 2022.",
+        answers: [
+          {
+            answer_id: 1,
+            title: "Impaired control over gaming",
+          },
+          {
+            answer_id: 2,
+            title: "Gaming takes precedence over other interests and daily activities",
+          },
+          {
+            answer_id: 3,
+            title: "Continuation of gaming despite the occurrence of negative consequences",
+          },
+          {
+            answer_id: 4,
+            title: "Competitive desire to win lots of games",
+          },        
+        ],
+    },  
+  ],
+  },
+
   // unaisah 1
   {
     game_id: 14,

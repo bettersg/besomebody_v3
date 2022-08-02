@@ -843,11 +843,13 @@ const GLOBAL_VAR_MAP = [
         endings: [
           {
             endingId: 1,
+            name: 'chapter_1_ending',
             title: 'Ravi moves into the university dorm',
             inkVar: 'chapter_1_ending_1',
           },
           {
             endingId: 2,
+            name: 'chapter_1_ending',
             title: 'Ravi is still looking for a place to stay',
             inkVar: 'chapter_1_ending_2',
           },
@@ -964,10 +966,12 @@ const GLOBAL_VAR_MAP = [
         endings: [
           {
             endingId: 1,
+            name: 'chapter_2_ending',
             title: 'Ravi calls Val',
           },
           {
             endingId: 2,
+            name: 'chapter_2_ending',
             title: 'Ravi does not call val',
           },
         ],
@@ -1023,10 +1027,12 @@ const GLOBAL_VAR_MAP = [
         endings: [
           {
             endingId: 1,
+            name: 'chapter_3_ending',
             title: 'Ravi resigns the internship',
           },
           {
             endingId: 2,
+            name: 'chapter_3_ending',
             title: 'Ravi asks for better workplace conditions',
           },
         ],
