@@ -822,7 +822,7 @@ export const MINI_GAME_MAP = [
       question_id: 2,
       question:
         "What is the prevalance of clinical gaming-related disorders in Asia?",
-      correct_answer_id: 4,
+      correct_answer_id: 2,
       explanation: "A series of studies revealed that gaming disorder prevalence rate was the highest in Asia, at ~5.08%. The global rate was 3.05% [ANZ Journal of Psychology]",
       type: "text",
       answers: [
