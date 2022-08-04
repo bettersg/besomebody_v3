@@ -775,7 +775,7 @@ at least not indian #speaker_1
 Eh wth. They can joke around about other ppl but now they are insulting Aman. I need to stop the convo. #inner_monologue
 😂😂 	#speaker_2	
 + [Tell @graphene off for that comment.] @graphene get out of the stream #speaker_self
-    If anyone else wanna talk shit about @amanonfire they can leave too #speaker_self
+    If anyone else wanna talk shit about my friend @AmanOnFire they can leave too #speaker_self
     VAR zhihao_1_racistgamer = ""
     ~ zhihao_1_racistgamer = "scold racists"
     wth i’m just saying in general not abt @amanonfire #speaker_1
@@ -1007,9 +1007,9 @@ Maybe I can add comedy to my skills list haha.
     But I felt bad lah, better delete.
     Even if it's the truth, I think no need to say this kind of thing online lah.
 }
-Anyway, business is damn good coz now  my twitch follower numbers so high.
+Anyway, business is damn good cos now  my twitch follower numbers so high.
 #background:ui_emailinbox.png
-I just got an email invite from Singapore Elites, the best gaming team in Singapore! 
+I just got an email invite from Singapore Elites. They're the best gaming team in Singapore. Swee!
 ~ chapter_id = 2
 CHAPTER {chapter_id} #title
 Team Work #title
@@ -1089,11 +1089,11 @@ Zhihao  #speaker_self
 #ui:narrator
 #background:bg_zhihao_bedroom.jpg
 The whole week I everyday also practise. During tutorial break I play until next class. Never talk to my friends at all.
-Today I wake up super early for the tryouts. The whole morning can only feel kan cheong (nervous)
+Today I woke up chao (very) early for the tryouts. The whole morning can only feel kan cheong (nervous).
 #ui:scene
 #background:bg_zhihao_hdb_carpark.jpg
 // #background:bg_zhihao_car.jpg
-Sigh, but no point. Ma is late. As usual. #inner_monologue
+Haiz, but no point. Ma is late. As usual. #inner_monologue
 I really never learn leh. If Ma wants to fetch me and I say okay, then no matter what, I WILL be late. No matter how much extra time ahead I give.  #inner_monologue
 #ui:notification
 #background:ui_zhihao_message.jpg
@@ -1107,7 +1107,7 @@ If she say ten means twenty. Opposite of Pa. #inner_monologue
 #chat_group_image:ico_zhihao_mother.png
 #speaker_1_name:Ma
 Eh Ma, nevermind lah. I take taxi. #speaker_self
-Tsk, don’t waste money! #speaker_1
+Tsk, don’t waste money. #speaker_1
 I driving now. Fifteen min only. You wait hor! #speaker_1
 Wahlao eh, Ma! Ten or fifteen? No need come la, I book taxi liao #speaker_self
 //ZHIHAO ends the call. Switch to the Grab screen with the map showing 10 minutes ETA. #
@@ -1134,7 +1134,6 @@ You want to go to your mother’s car? It’s okay. You pay already anyway. #spe
 #ui:scene
 #speaker_left_image:cha_zhihao_mother_frustrated.png
 #speaker_left_name:Ma
-#speaker_right_image:cha_zhihao_driver_normal.png
 #speaker_right_name:Driver
 #background:bg_zhihao_taxi.jpg
 Uncle, let's go please. #speaker_self
@@ -1143,18 +1142,18 @@ VAR zhihao_2_taketaxi = true
 ~ zhihao_2_taketaxi = true
 You sure? #speaker_right
 Faster lah, Ah Boy! Wait late already. #speaker_left
+#speaker_left_image:pixel.png
 How come the window cannot go down? #inner_monologue
 Uncle, can help wind down the window? #speaker_self
 //Window is wound down. 
 Ma! No need, I pay already… No lah I need to go now. #speaker_self
 Uncle, can drive on please? You can wind up the window now. Thanks. #speaker_self
-#speaker_left_image:pixel.png
 Haiz. I look at Ma’s face I feel bad already. #inner_monologue
 #speaker_right_image:pixel.png
 // View from the car’s rear window of MOTHER’S car left behind. 
 #ui:narrator
 #background:bg_zhihao_esports.jpg
-20 minutes later, I arrived just in time at the Alphas try-outs venue.
+20 minutes later, just nice I reached the Alphas try-outs venue on time.
 // Background: An esports training facility. It is darkly lit, with RGB keyboards, desktops and even headphones. Depending on who you ask, it is either cool or garish. It’s also nearly empty.
 #ui:scene
 #background:bg_zhihao_esports.jpg
@@ -1174,9 +1173,8 @@ You're a bit early but that’s alright. Just find a seat around and relax. We'l
 #ui:scene
 #speaker_left_image:cha_zhihao_mother_frustrated.png
 #speaker_left_name:Ma
-#speaker_right_image:cha_zhihao_driver_normal.png
 #speaker_right_name:Driver
-#background:bg_zhihao_taxi.jpg
+#background:bg_zhihao_car.jpg
 Uh… #speaker_self
 //MOTHER has opened the door of the shotgun seat, facing ZHIHAO’s vantage point. #
 Quick lah! Come in to the car. #speaker_left
@@ -1226,9 +1224,9 @@ No time to kan cheong liao, must stay in comms all the way. #inner_monologue
 // Flashback to ZHIHAO’s webcam covered up/falling off (depending on player’s choice) in previous chapter. Montage of chat stream close-ups of teammates’ criticisms. #
 I cannot lose control of my team, like that time during my stream session. #inner_monologue
 // Close-up of a hand drawing out the chair next to ZHIHAO. #
-You're Ah-hao right? Your IGN (in-game name), at least. #speaker_right
+You're Ah Hao right? Your IGN (in-game name), at least. #speaker_right
 //A tall Chinese boy is now sitting beside ZHIHAO. He leans back easily in his chair with an air of confidence. #
-+ Uh, yes that's me. [] #speaker_self
++ Uh, yah that's me. [] #speaker_self
     Wah piang. This one jiak kantang sia. #inner_monologue
     Funny fella. He wanna wait for me to say what?  #inner_monologue
     Uh, my real name is Zhihao. #speaker_self
@@ -1292,7 +1290,7 @@ First level is abandoned city. Steady. I know this one by heart. #inner_monologu
 #background:bg_zhihao_alphas.jpg
 #speaker_right_image:cha_zhihao_alex_normal.png
 #speaker_right_name:Alex
-Ok, better pick my opening move #inner_monologue
+Okay, better pick my opening move #inner_monologue
 
 + [Charge out using a trick you learned on youtube] 
     #speaker_left_image:cha_zhihao_teammate1_normal.png
@@ -1314,8 +1312,10 @@ Ok, better pick my opening move #inner_monologue
     Orh. #speaker_self
     Good call. #speaker_right
     Why everybody down here jiak kantang one  (speaks with a Western accent). #inner_monologue
-    Zxy Ahao, watch out! #speaker_left
-    Stop dreaming, dude. #speaker_right
+    #speaker_left_image:cha_zhihao_teammate1_surprised.png
+    Ahao, watch out! #speaker_left
+    Stop dreaming, dude! #speaker_right
+    #speaker_left_image:cha_zhihao_teammate1_normal.png
     Shuddup lah. #inner_monologue
     Stupid ang moh pai. #inner_monologue
     
@@ -1380,7 +1380,7 @@ Must tell them or not? Dunno if I tell them then end up scolded again for distra
     #background:bg_zhihao_alphas.jpg
     The next two fights do not go smoothly. My BLUE team is losing.
     #ui:scene
-    I dunno what happen to me. Usually in comms I talk a lot. Now I feel like I always say the wrong thing. #inner_monologue
+    I dunno what happened to me. Usually in comms I talk a lot. Jialat now I always say the wrong thing. #inner_monologue
     I buay tahan (cannot tolerate) that Alex. #inner_monologue
     But buay sai have to tahan. #inner_monologue
 
@@ -1510,7 +1510,7 @@ So, Zhihao! What do you think of the first team? We plan to pair you players wit
     
 
 + [Be polite] Uh, better not sound like a complainer. #inner_monologue
-    I scared they think I the one got problem. Then they put me with all the cui (lousy) people. #inner_monologue
+    Sekali they think I the problem. Then they put me with all the cui (lousy) people. #inner_monologue
     ~ zhihao_2_honestwithian = false
     Uh, I think the team is not bad. #speaker_self
     The panel and I were observing the voice chat and I have to say, it was a bit chaotic. #speaker_left
@@ -1539,7 +1539,7 @@ Minigame 12 // must add some text
 #ui:narrator
 #background:bg_zhihao_home.jpg
 Wahlao, the judges blind issit? How am I like Alex! Siao.
-I just happy this round finish liao. But I think I cocked it up.
+I just happy this round finish liao. But still got cock-up sia (made mistakes).
 #ui:scene
 #background:bg_zhihao_home.jpg
 MA! #speaker_self
@@ -1559,7 +1559,7 @@ Shit. I so shag, forgot to buy groceries also.  #inner_monologue
 I put my bag in my room first.  #inner_monologue
 
 //A shot of the open master bedroom entrance, with Ma holding up her camera phone taking pictures, facing away from ZHIHAO.
-Eh, ma is home leh... #inner_monologue
+Eh, Ma is home leh... #inner_monologue
 #background:bg_zhihao_home.jpg
 #speaker_left_image:cha_zhihao_mother_normal.png
 #speaker_left_name:Ma
@@ -1572,7 +1572,7 @@ Don’t lah I go down later. Eh you help me look, which photo of the room better
 For what? #speaker_self
 For the property agent. She tell me take picture of the room, take one set day one set night. Dunno if take like that okay anot. #speaker_left
 Eh, Ma. Why you prata (flipped opinion)? That time you say you don’t want to rent out the bedroom. #speaker_self
-I never say don’t want mah! Bo pian need to support your Ah Gong what. Nevermind one, I can sleep in the other room. #speaker_left
+I never say don’t want mah! Bo pian need to support your Ah Gong what. Nevermind, I sleep in the other room. #speaker_left
 Wah, she give up so fast. #inner_monologue
 //Montage of the aspects of the room with Pa’s things, eg. a framed wedding picture, a planner, letters in envelopes, a Casio watch, a box of folded men’s shirts etc. #
 All of Pa’s things still here in the room. What’s she going to do? Pack them all up? Give them away? #inner_monologue
@@ -1617,7 +1617,7 @@ All of Pa’s things still here in the room. What’s she going to do? Pack them
     You earn how much only! Your money you don’t end up pay for everything. Save for your uni. #speaker_left
     Just let me pay lah. #speaker_self
     Ah Boy, I know you want to help lah, but you don’t busybody can. This problem I know how to solve. #speaker_left
-    Wahlao, I cannot say to her face but sometimes Ma damn qian bian (annoying) #inner_monologue
+    Wahlao, I cannot say to her face but sometimes Ma damn qian bian (annoying). #inner_monologue
     I earn enough. I can pay. #speaker_self
     If halfway you want to stop work just go school how? #speaker_left
     Won’t lah. #speaker_self
