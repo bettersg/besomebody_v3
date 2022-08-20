@@ -1022,7 +1022,7 @@ Team Work #title
 #emailheader:Read Email
 #emailfrom:Elite Gamers <ian.lim@elitegamers.sg>
 #emailto:Zhihao <zhihao@email.com>
-#emailfromicon:ico_zhihao_elite.png
+#emailfromicon:ico_zhihao_elites.png
 #emailsubject:Invitation to Alphas Tryouts
 
 Hi Zhihao, /n /n Team Singapore Elites notes your gaming prowess on Twitch, and hence would like to invite you to our Alphas tryouts! It will take place this Saturday at 2.00 PM at The Chaos Arena. /n /n Let us know about your participation by this Wednesday. We hope that you can make it! /n /n Best, /n Ian Lim  /n  Lead Coordinator, Elite Gamers Singapore #speaker_1
@@ -1042,7 +1042,7 @@ Wah this one how to reply sia. Is formal correct anot? Or informal? Sekali (what
 #emailfrom:Zhihao <zhihao@email.com>
 #emailfromicon:ico_zhihao.png
 #emailsubject:Invitation to Alphas Tryouts
-#replyemaildate:On Wed 6 Oct 2021, Iam <ian.lim@elitegamers.sg> wrote:  
+#replyemaildate:On Wed 6 Oct 2021, Ian <ian.lim@elitegamers.sg> wrote:  
 #replyemailtext:Hi Zhihao, /n /n Team Singapore Elites notes your gaming prowess on Twitch, and hence would like to invite you to our Alphas tryouts! It will take place this Saturday at 2.00 PM at The Chaos Arena. /n /n Let us know about your participation by this Wednesday. We hope that you can make it! /n /n Best, /n Ian Lim  /n  Lead Coordinator, Elite Gamers Singapore
 Dear Mr Lim, #speaker_self
 VAR zhihao_2_formalemail = true
@@ -1052,8 +1052,6 @@ I can make it for the tryouts on Saturday at 2.00 PM. #speaker_self
 Sincerely, #speaker_self
 Lim Zhihao  #speaker_self
 #ui:narrator
-#background:ui_emailsending.png
-.
 #background:ui_emailsent.png
 .
 
@@ -1068,7 +1066,7 @@ Lim Zhihao  #speaker_self
 #emailfrom:Zhihao <zhihao@email.com>
 #emailfromicon:ico_zhihao.png
 #emailsubject:Invitation to Alphas Tryouts
-#replyemaildate:On Wed 6 Oct 2021, Iam <ian.lim@elitegamers.sg> wrote:  
+#replyemaildate:On Wed 6 Oct 2021, Ian <ian.lim@elitegamers.sg> wrote:  
 #replyemailtext:Hi Zhihao, /n /n Team Singapore Elites notes your gaming prowess on Twitch, and hence would like to invite you to our Alphas tryouts! It will take place this Saturday at 2.00 PM at The Chaos Arena. /n /n Let us know about your participation by this Wednesday. We hope that you can make it! /n /n Best, /n Ian Lim  /n  Lead Coordinator, Elite Gamers Singapore
 Hi Ian, #speaker_self
 ~ zhihao_2_formalemail = false
@@ -1078,8 +1076,6 @@ I can make it on Saturday. Thanks again! #speaker_self
 Best, #speaker_self
 Zhihao  #speaker_self
 #ui:narrator
-#background:ui_emailsending.png
-.
 #background:ui_emailsent.png
 .
 -> zhihao_2_2
@@ -1755,7 +1751,423 @@ Reflection 12
 
 
 
-// -> zhihao_3_intro
+-> zhihao_3_intro
+
+
+
+
+
+
+
+
+// CHAPTER 3
+
+
+
+
+
+=== zhihao_3_intro ===
+#knot:zhihao_3_intro
+#ui:narrator
+#background:bg_zhihao_bedroom.jpg
+Two days ago was my Alphas tryout. I really hope I get into the finals. 
+~ chapter_id = 3
+But I dunno if the finals got clash with my exams. 
+Team SG Elites haven’t call or email back, so I a bit scared. Like that no answer very hard to focus. 
+But what to do? I worry about it also cannot change anything.
+I need to keep streaming, keep working. Next week we need to pay the old folks’ home fees for Ah Gong. 
+I tell Ma already don’t go rent out the master bedroom, but yesterday she ti-kee (stubborn) go send the agent the photos. 
+Today she wants results already. LOL.
+CHAPTER {chapter_id} #title
+Playing to the Crowd #title
+
+-> zhihao_3_1
+
+=== zhihao_3_1 ===
+#ui:scene
+#background:bg_zhihao_home.jpg
+#speaker_left_image:cha_zhihao_mother_normal.png
+#speaker_left_name:Ma
+How come I cannot click on the views ah? #speaker_left
+Views for what? #speaker_self
+The room lah. Got 15 views but how to know who is looking? #speaker_left
+If they interested they will contact your agent. If no one contact means not interested lor. #speaker_self
+Like that have to wait how long? Tsk, your Ji Gu say very fast can find tenants, now I think he talking rubbish lah. #speaker_left
+Ma, don’t kan cheong lah. #speaker_self
+She keeping quiet. Confirm she under a lot of pressure with the money. #inner_monologue
+
++ [Offer to pay] If I bluff, say I only pay for this month, she will accept. #inner_monologue 
+    VAR zhihao_3_offertopay = ""
+    ~ zhihao_3_offertopay = "directly"
+    $450 right? I pay this month. #speaker_self
+    No need lah! #speaker_left
+    I pay first lah. If you get the tenant then you pay me back lor. #speaker_self
+    Good, can see she’s thinking. #inner_monologue
+    I can pay. You don’t pay. #speaker_left
+    Eh Ma you don’t so ti-kee can anot! If you can pay you don’t need to be landlord liao. #speaker_self
+    You think I dunno your pattern ah? Once I let you pay, you will keep paying. #speaker_left
++ [Try to pay secretly] I better find a way to pay secretly. I’ll send Ji Gu the money. #inner_monologue
+    ~ zhihao_3_offertopay = "secretly"
+    You got Ji Gu’s number? That time he offer me the lobang I wanna take. #speaker_self
+    Your computer job not enough meh? Eh you don’t every lobang also take, wait got no time to study how. #speaker_left
+    I see his lobang good or not. #speaker_self
+    You want I call him now… #speaker_left
+    No lah Ma! You whatsapp me his number. #speaker_self
+    Why you look at me like that? #speaker_self
+    You think I dunno what you doing issit? I won’t give you his number. #speaker_left
+    Oi! #speaker_self
+    You will send him your money. Cannot. #speaker_left
+- Wah lao. Help her solve problem she want to give problem. #inner_monologue
+Hmmm.. maybe I can solve this with some creativity without her finding out. #inner_monologue
++ [Contact the agent] -> zhihao_3_1a 
++ [Ask Gavin to help] -> zhihao_3_1b
+
+=== zhihao_3_1a ===
+#knot:zhihao_3_1a
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:James (Property Agent)
+#chat_group_image:ico_ravi_james.png
+#speaker_1_name:James
+
+Hi James, I’m asking on behalf of my mother, Mdm Wee Boon Hwei to change the room for rent. It’s this room: #speaker_self
+renting.com/yio-chu-kang-master-room_2348709/rent #speaker_self
+Can we change it to the common room? Thx #speaker_self
+-Zhihao #speaker_self
+Hi Zhihao, can send pics and video of the room? #speaker_1
+I sending you now #speaker_self
+Also let me verify with Mdm Wee first. Need to check that you’re her son #speaker_1
+Wah lao. Cannot lah. #wa_inner_monologue
+Nevermind just leave the the ad up. Thx #speaker_self
+Tough sia. #wa_inner_monologue
+Oh wait. I ask Gavin to help. #wa_inner_monologue
+    
+-> zhihao_3_2
+
+=== zhihao_3_1b ===    
+#knot:zhihao_3_1b
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Gavin
+#chat_group_image:ico_nadia_gavin.png
+#speaker_1_name:Gavin
+BRO #speaker_self
+Need your favour #speaker_self
+Yoooo #speaker_1
+Favour how big?  #speaker_1
++ [Small enough for you] Small enough for you #speaker_self
++ [Just need your help] Just need your help  #speaker_self
+- LOL #speaker_1
+My mother wanna rent out the master bedroom to pay for my Ah Gong’s home fees. But I wanna change it to the smaller room #speaker_self
+Okay… #speaker_1
+She kancheong wanna get tenant but cannot find #speaker_self
+So I need to bluff her got someone interested in the smaller room #speaker_self
+Lol so you want me to be the potential tenant? #speaker_1
+Correct!! #speaker_self
+I transfer you the money to transfer her #speaker_self
+You tell her you pay $500 upfront today to chope the room #speaker_self
+What happens when I don’t move in? She’ll know something’s up #speaker_1
+Aiyah when she realises it’s me she’ll give up and let me pay #speaker_self
+Just must make sure I get my foot through the door #speaker_self
+You send me your mum’s no. I’ll send you my acct details #speaker_1
+SWEE BRO #speaker_self
+TYVM #speaker_self
+That's what friends are for man. Anytime bro. #speaker_1
+Hahaha you better meet Nad and me on Thu #speaker_1
+Yah lah #speaker_self
+Nadia, Nadia. Everything also Nadia. I got real problems to deal with here la. #wa_inner_monologue    
+    
+-> zhihao_3_2    
+
+=== zhihao_3_2 ===
+#knot:zhihao_3_2
+#ui:emailinbox
+#newemailfrom:Ian Lim (SG Elites)
+#newemailprofileicon:profile_blank.png 
+#newemailsubject:Alphas Trial Results
+#newemailpreview:On behalf of Team Singapore Elites, we would...
+.
+-> zhihao_3_2a
+
+=== zhihao_3_2a ===
+#knot:zhihao_3_2a
+#ui:email
+#emailheader:Read Email
+#emailfrom:Ian Lim (SG Elites)
+#emailto:Zhihao <zhihao@email.com>
+#emailfromicon:ico_zhihao_elites.png
+#emailsubject:Alphas Trial Results
+
+Hi Zhihao, /n /n  On behalf of Team Singapore Elites, we would like to nominate you for our Alphas team! Big congratulations on your nomination! We hope you’ll take it up.  /n /n  We look forward to your response by this Friday.  /n /n  Best,  /n  Ian Lim /n  Lead Coordinator /n  Elite Gamers Singapore  #speaker_1
+
+#ui:narrator
+#background:ui_emailinbox.png
+WOOOHOOOOOOOOOOOOOOOooooooo! 
+Ok, calm down. Must reply. 
+Should I show Ian that I CAN communicate properly or should I try to build a more casual relationship?
+
++ [Accept formally] -> zhihao_3_2b
++ [Send a casual reply] -> zhihao_3_2c
+
+
+=== zhihao_3_2b ===
+#knot:zhihao_3_2b
+#ui:email
+#emailheader:Compose Email
+#emailto:Elite Gamers <ian.lim@elitegamers.sg>
+#emailfrom:Zhihao <zhihao@email.com>
+#emailfromicon:ico_zhihao.png
+#emailsubject:Alphas Trial Results
+#replyemaildate:On Wed, Ian <ian.lim@elitegamers.sg> wrote:  
+#replyemailtext:Hi Zhihao, /n /n  On behalf of Team Singapore Elites, we would like to nominate you for our Alphas team! Big congratulations on your nomination! We hope you’ll take it up.  /n /n  We look forward to your response by this Friday.  /n /n  Best,  /n  Ian Lim /n  Lead Coordinator /n  Elite Gamers Singapore
+Hi Ian,#speaker_self
+I am happy to have been nominated and will join the Alphas team. #speaker_self
+VAR zhihao_3_formalemail = true
+~ zhihao_3_formalemail = true
+Thank you. #speaker_self
+Regards, #speaker_self
+Zhihao #speaker_self
+#ui:narrator
+#background:ui_emailsent.png
+.
+
+-> zhihao_3_2c
+
+
+=== zhihao_3_2c ===
+#knot:zhihao_3_2c
+#ui:email
+#emailheader:Compose Email
+#emailto:Elite Gamers <ian.lim@elitegamers.sg>
+#emailfrom:Zhihao <zhihao@email.com>
+#emailfromicon:ico_zhihao.png
+#emailsubject:Alphas Trial Results
+#replyemaildate:On Wed, Ian <ian.lim@elitegamers.sg> wrote:  
+#replyemailtext:Hi Zhihao, /n /n  On behalf of Team Singapore Elites, we would like to nominate you for our Alphas team! Big congratulations on your nomination! We hope you’ll take it up.  /n /n  We look forward to your response by this Friday.  /n /n  Best,  /n  Ian Lim /n  Lead Coordinator /n  Elite Gamers Singapore
+Hey Ian, #speaker_self
+Thanks! I am super excited to join the Alphas team! Woohoo! #speaker_self
+~ zhihao_3_formalemail = false
+Zhihao  #speaker_self
+#ui:narrator
+#background:ui_emailsent.png
+.
+
+-> zhihao_3_2d
+
+
+=== zhihao_3_2d ===
+#knot:zhihao_3_2c
+#ui:notification
+#background:ui_zhihao_message.jpg
+Irfan: CONGRATS BRO! HEARD THE NEWS #message
+Alric: Well done man! Knew you would get it! #message
+#ui:narrator
+#background:ui_zhihao_message.jpg
+Wah damn hard to believe leh. Eh no, of course I believe it. Hah. I DID IT LAH!
+Must be fate. I’m fated to be pro, man. Cos talent don’t lie.
+ 
+-> zhihao_3_3
+
+=== zhihao_3_3 ===
+#knot:zhihao_3_3
+#ui:narrator
+#background:ui_zhihao_home.jpg
+When you’re happy, the days fly by. It’s been two days and I still feel like a king. 
+I’m a pro-gamer, and my plan for Ah Gong going swee swee. 
+And today I can wake up at 12pm like a boss.
+#ui:scene
+#background:bg_zhihao_home.jpg
+#speaker_left_image:cha_zhihao_mother_normal.png
+#speaker_left_name:Ma
+Eh your friend that Gavin ah, yesterday he pay the deposit but say he only using the room to store his things. #speaker_left
+Where got people pay money for a storeroom? Now I think better to sign contract. #speaker_left
+You got pay the fees for Ah Gong already? #speaker_self
+Yah. This morning. #speaker_left
+I find a better time to tell her the truth. #inner_monologue
+Don’t need him to sign anything lah. He’s my bro. #speaker_left
+
+#ui:notification
+#background:ui_zhihao_message.jpg
+Aman: Dude are you free to talk? #message
+
+-> zhihao_3_3a
+
+=== zhihao_3_3a ===
+#knot: zhihao_3_3a
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Aman Singh
+#chat_group_image:ico_aman.png
+#speaker_1_name:Aman
+Dude are you free to talk? #speaker_1
+With my mother now. Why? #speaker_self
+Just read the stuff on Twitter #speaker_1
+Wah piang I just now then wake up, check what? #wa_inner_monologue
+What happened on twitter #speaker_self
+😱 #speaker_1
+Did you just wake up?! #speaker_1
++ [Might as well tell him] Yeah #speaker_self
+    I havent checked #speaker_self
++ [Wahlao he think I do nothing all day ah] No lah #speaker_self
+    Was busy this morning. Trying to sort out my mother and the rent #speaker_self
+    Luckily Gavin helped me bluff her so I can pay the home fees for my grandpa. Our plan quite crazy lol #speaker_self
+    Have you talked to Gavin today? #speaker_1
+    Huh. Why sia? #wa_inner_monologue
+    No #speaker_self
+- I’m getting scared, seriously. Why Aman never say what it is?     #wa_inner_monologue
+You should visit this. twitter.com/TeamSGElites/status/1192799386574
++ [Visit the link] ok #speaker_self
++ [Do not visit the link] Have you opened the link? #speaker_1
+    Lol later #speaker_self
+    Best to do it now so you can work out how to answer Gavin #speaker_1
+- -> zhihao_3_4
+ 
+=== zhihao_3_4 ===
+#knot:zhihao_3_4
+#ui:twitter
+#chat_group_title:Twitter: @SGElites
+#chat_group_image:ico_zhihao_elites.png
+#speaker_self_tag:ahao_gamer
+#speaker_self_image:ico_zhihao.png
+#speaker_1_name:Ducklord
+#speaker_1_tag:ducklord
+#speaker_2_name:SniperMain
+#speaker_2_tag:oneshotonekill
+#speaker_3_name:ryan
+#speaker_3_tag:zeraselm4life
+#speaker_4_name:AddMeToYourGuild
+#speaker_4_tag:leeroy97
+#speaker_5_name:Pandan
+#speaker_5_tag:pandan999
+#speaker_6_name:Celestial Being
+#speaker_6_tag:celest3
+// #speaker_1_image:ico_aman_lukman.png
+// #speaker_2_image:ico_aman_family.png
+// #speaker_3_image:ico_aman_selinder.png
+#timestamp:23.41
+#likes:0 ❤️
+We welcome moth, lamp, ahao, plas and mfa to our \#AlphasWorldCup team! We look forward to a great tournament at StormCon! \#SGElites #thread_header
+nani #speaker_1
+moth and lamp haha #speaker_2
+huge pickup #speaker_3
+Insane roster! Can probably play any comp well if the players work together #speaker_4
+Sweeee! I didn't realise they already announced it publicly!  #inner_monologue
+Kinda disappointed. What happened to the @crash rumours? He was epic. #speaker_1
+ahao_gamer? isn't it that toxic streamer #speaker_5
+Didn't ahao_gamer post a racist tweet some time ago? #speaker_6
+#speaker_1_name:blackwolf
+#speaker_1_tag:xxblackwolfxx
+This post didn't age well lol. F #speaker_1
+bg_zhihao_tweet_screenshot.jpg #image #speaker_1
+Shit. These people got nothing better to do issit? #inner_monologue
+#ui:narrator
+#background:ui_zhihao_message.jpg
+I got message from Gavin and also Aman. Wah. Who to answer first.
++ [Answer Gavin first] -> zhihao_3_4_gavin
+    
++ [Answer Aman first] -> zhihao_3_4_aman
+
+=== zhihao_3_4_gavin ===
+#knot: zhihao_3_4_gavin
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Gavin Tan
+#chat_group_image:ico_nadia_gavin.png
+#speaker_1_name:Gavin
+VAR zhihao_3_replyfirst = "gavin"
+~ zhihao_3_replyfirst = "gavin"
+When were you going to tell me? #speaker_1
+Sia lah, I cannot. I really cannot deal #wa_inner_monologue
+- -> zhihao_3_4a
+
+
+=== zhihao_3_4_aman ===
+#knot: zhihao_3_4_aman
+#ui:whatsapp
+#background:whatsapp.png
+#chat_group_title:Aman Singh
+#chat_group_image:ico_aman.png
+#speaker_1_name:Aman
+Are you ok? #speaker_1
++ Uh, yeah [] #speaker_self
+    Don’t have to paiseh. I'm here if you need to talk #speaker_1
+    I’m ok. But not sure what to do #speaker_self
+    I haven't seen him like this before #speaker_1
+    Seen him like what? #wa_inner_monologue
+    I’d apologise quickly, let it blow over #speaker_1
++ Did Gavin talk to you? [] #speaker_self
+    No  #speaker_1
+    I dunno if he’s found out. And I’m not gonna notify him #speaker_1
+    Think it’s prob best if he can hear it from you #speaker_1
+- -> zhihao_3_4a
+
+=== zhihao_3_4a ===
+#knot:zhihao_3_4a
+#ui:twitter
+#chat_group_title:Twitter: @SGElites
+#chat_group_image:ico_zhihao_elites.png
+#speaker_self_tag:ahao_gamer
+#speaker_self_image:ico_zhihao.png
+#speaker_1_name:Ducklord
+#speaker_1_tag:ducklord
+#speaker_2_name:SniperMain
+#speaker_2_tag:oneshotonekill
+#speaker_3_name:ryan
+#speaker_3_tag:zeraselm4life
+#speaker_4_name:AddMeToYourGuild
+#speaker_4_tag:leeroy97
+#speaker_5_name:Pandan
+#speaker_5_tag:pandan999
+#speaker_6_name:Celestial Being
+#speaker_6_tag:celest3
+// #speaker_1_image:ico_aman_lukman.png
+// #speaker_2_image:ico_aman_family.png
+// #speaker_3_image:ico_aman_selinder.png
+#timestamp:23.41
+#likes:0 ❤️
+We welcome moth, lamp, ahao, plas and mfa to our \#AlphasWorldCup team! We look forward to a great tournament at StormCon! \#SGElites #thread_header
+Why got so many comments? Omg.  #inner_monologue
+It's def him. Looked up his twitter and twitch profiles. Same. #speaker_3
+#speaker_1_name:Fred Loo
+#speaker_1_tag:mrt2
+What? This is the worst take. #speaker_1
+#speaker_1_name:Paul🤷
+#speaker_1_tag:paulpullsaggro
+Yikes another typical chinese singaporean male #speaker_1
+#speaker_1_name:ace
+#speaker_1_tag:progamer_ace
+Inb4 he's cancelled #speaker_1
+#speaker_1_name:farrah
+#speaker_1_tag:nerf_hitscan
+I'm bringing popcorn to this cancelling 🍿🍿🍿 #speaker_1
+{ chapter_1_ending == 1: 
+    WTF. I deleted the tweet quickly. Who the hell took a screenshot?! SIAO #inner_monologue
+- else:
+    WTF. That tweet has been reshared 2300 times! And it's a trending topic? WTF seriously  #inner_monologue
+}
+#speaker_1_name:INTJ
+#speaker_1_tag:intjguy99
+@ahao_gamer you're a trash person.  #speaker_1
+#speaker_1_name:Diamond
+#speaker_1_tag:d1amond
+@ahao_gamer should apologise already #speaker_1
+{ chapter_1_ending == 1: 
+    he tried to delete his tweet but the INTERNET DOES NOT FORGET you racist #speaker_6
+- else:
+  he didn't even bother to delete the tweet lol #speaker_6
+}
+if you want to talk about privilege look at @ahao_gamer #speaker_5
+#speaker_1_name:Nyaa
+#speaker_1_tag:natthecat2
+Privileged dumb male strikes again. The Gamergate refugees like ahao_gamer can't keep their mouths shut. #speaker_1
+#speaker_1_name:Fight Me⚔️
+#speaker_1_tag:forjustice
+ahao_gamer looks like another brainwashed chi-na guy!#speaker_1
+What privilege? My life got a lot of privilege meh?  And what the hell is Gamergate about. #inner_monologue
+And I'm not from China lah, wah lao! I never even go China before! #inner_monologue
+All these people, they dunno me. They dunno anything but they act like they do. #inner_monologue
+And they're all just happy to hantam. #inner_monologue
+
 
 
 
