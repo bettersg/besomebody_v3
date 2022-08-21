@@ -2108,35 +2108,25 @@ Are you ok? #speaker_1
 #chat_group_image:ico_zhihao_elites.png
 #speaker_self_tag:ahao_gamer
 #speaker_self_image:ico_zhihao.png
-#speaker_1_name:Ducklord
-#speaker_1_tag:ducklord
-#speaker_2_name:SniperMain
-#speaker_2_tag:oneshotonekill
+#speaker_1_name:Fred Loo
+#speaker_1_tag:mrt2
+#speaker_2_name:Paul🤷
+#speaker_2_tag:paulpullsaggro
 #speaker_3_name:ryan
 #speaker_3_tag:zeraselm4life
-#speaker_4_name:AddMeToYourGuild
-#speaker_4_tag:leeroy97
+#speaker_4_name:ace
+#speaker_4_tag:progamer_ace
 #speaker_5_name:Pandan
 #speaker_5_tag:pandan999
 #speaker_6_name:Celestial Being
 #speaker_6_tag:celest3
-// #speaker_1_image:ico_aman_lukman.png
-// #speaker_2_image:ico_aman_family.png
-// #speaker_3_image:ico_aman_selinder.png
-#timestamp:23.41
-#likes:0 ❤️
+#likes:2300 💬 ️
 We welcome moth, lamp, ahao, plas and mfa to our \#AlphasWorldCup team! We look forward to a great tournament at StormCon! \#SGElites #thread_header
 Why got so many comments? Omg.  #inner_monologue
 It's def him. Looked up his twitter and twitch profiles. Same. #speaker_3
-#speaker_1_name:Fred Loo
-#speaker_1_tag:mrt2
 What? This is the worst take. #speaker_1
-#speaker_1_name:Paul🤷
-#speaker_1_tag:paulpullsaggro
-Yikes another typical chinese singaporean male #speaker_1
-#speaker_1_name:ace
-#speaker_1_tag:progamer_ace
-Inb4 he's cancelled #speaker_1
+Yikes another typical chinese singaporean male #speaker_2
+Inb4 he's cancelled #speaker_4
 #speaker_1_name:farrah
 #speaker_1_tag:nerf_hitscan
 I'm bringing popcorn to this cancelling 🍿🍿🍿 #speaker_1
@@ -2145,28 +2135,304 @@ I'm bringing popcorn to this cancelling 🍿🍿🍿 #speaker_1
 - else:
     WTF. That tweet has been reshared 2300 times! And it's a trending topic? WTF seriously  #inner_monologue
 }
-#speaker_1_name:INTJ
-#speaker_1_tag:intjguy99
-@ahao_gamer you're a trash person.  #speaker_1
-#speaker_1_name:Diamond
-#speaker_1_tag:d1amond
-@ahao_gamer should apologise already #speaker_1
+#speaker_3_name:INTJ
+#speaker_3_tag:intjguy99
+@ahao_gamer you're a trash person.  #speaker_3
+#speaker_2_name:Diamond
+#speaker_2_tag:d1amond
+@ahao_gamer should apologise already #speaker_2
 { chapter_1_ending == 1: 
-    he tried to delete his tweet but the INTERNET DOES NOT FORGET you racist #speaker_6
+    he tried to delete his tweet but the INTERNET DOES NOT FORGET, you racist #speaker_6
 - else:
   he didn't even bother to delete the tweet lol #speaker_6
 }
 if you want to talk about privilege look at @ahao_gamer #speaker_5
-#speaker_1_name:Nyaa
-#speaker_1_tag:natthecat2
-Privileged dumb male strikes again. The Gamergate refugees like ahao_gamer can't keep their mouths shut. #speaker_1
-#speaker_1_name:Fight Me⚔️
-#speaker_1_tag:forjustice
+#speaker_4_name:Nyaa
+#speaker_4_tag:natthecat2
+Privileged dumb male strikes again. The Gamergate refugees like ahao_gamer can't keep their  mouths shut. #speaker_4
+#speaker_3_name:Fight Me⚔️
+#speaker_3_tag:forjustice
 ahao_gamer looks like another brainwashed chi-na guy!#speaker_1
 What privilege? My life got a lot of privilege meh?  And what the hell is Gamergate about. #inner_monologue
 And I'm not from China lah, wah lao! I never even go China before! #inner_monologue
 All these people, they dunno me. They dunno anything but they act like they do. #inner_monologue
 And they're all just happy to hantam. #inner_monologue
+#ui:narrator
+#background:new_call_notification.jpg
+Shit. Gavin is calling  #inner_monologue
++ [Answer the call] 
+    VAR zhihao_3_answergavin = true
+    ~ zhihao_3_answergavin = true
+    -> zhihao_3_5
++ [Ignore the call] 
+    ~ zhihao_3_answergavin = false
+    -> zhihao_3_5b
+
+=== zhihao_3_5 ===
+#knot:zhihao_3_5
+#ui:scene
+#background:new_call_notification.jpg
+#speaker_right_image:cha_zhihao_gavin_3_betrayed.png
+#speaker_right_name:Gavin
+... #speaker_self
+~ zhihao_3_answergavin = true
++ [Start with an excuse] Bro, I was joking only. I dunno why become so jialat… #speaker_self
+    Seriously? You don’t know why? #speaker_right
+    It was a joke. #speaker_self
+    Fml he sibeh quiet sia. #inner_monologue
+    Okay lah the joke was bad-- #speaker_self
+    Funny how you’d hide a joke from me. Almost like you didn’t want me to know. #speaker_right
+    I didn’t hide it! I... #speaker_self
+    { chapter_1_ending == 1: 
+    Deleted the tweet, I didn’t know they go and screenshot-- #speaker_self
+    - else:
+    Forgot about it. I didn’t tell anyone-- #speaker_self
+    }
+    FOR GOD’S SAKE, ZHIHAO! #speaker_right
+    #speaker_right_image:cha_zhihao_gavin_3_angry.png
+    Shit… I never hear him shout before. #inner_monologue
+    Gavin… can leng jing (chill) a bit? #speaker_self
+    Look. I can’t listen to you talk right now. We’ll talk on Thursday. #speaker_right
+    Yeah? #speaker_right
+    …Yah. #speaker_self
+    You better show up. #speaker_right
+    //GAVIN ends the call. #
+    #background:ui_zhihao_phonecall_end.jpg
+
++ [Wait for Gavin to speak] So when were you going to tell me? Or you were never intending to? #speaker_right
+    Bro it was a joke only mah. I didn’t tell anyone also cos I wrote it for myself. #speaker_self
+    #speaker_right_image:cha_zhihao_gavin_3_angry.png
+    Which you put out on a public platform. #speaker_right
+    Jialat, what do I say now? #inner_monologue
+    Look, I can’t talk to you about it over the phone. We’ll do it on Thursday. #speaker_right
+    You’ll show up, yeah? #speaker_right
+    …Yah. #speaker_self
+    //GAVIN ends the call. #
+    #background:ui_zhihao_phonecall_end.jpg
+
+
+- -> zhihao_3_5b
+
+
+=== zhihao_3_5b ===
+#knot:zhihao_3_5b
+#ui:twitter
+#chat_group_title:Twitter: @SGElites
+#chat_group_image:ico_zhihao_elites.png
+#speaker_self_tag:ahao_gamer
+#speaker_self_image:ico_zhihao.png
+#speaker_1_name:ahao's biggest fan
+#speaker_1_tag:simpforahao
+#speaker_2_name:Sparkle Rainbow🌈
+#speaker_2_tag:lady_sprinkle_rainbow
+#speaker_3_name:Anselm Is The Best
+#speaker_3_tag:anselm_main
+#speaker_4_name:Nyaa
+#speaker_4_tag:natthecat
+#speaker_5_name:Singapore Elites
+#speaker_5_tag:SGElites
+#speaker_6_name:Celestial Being
+#speaker_6_tag:celest3
+
+@ahao_gamer didn't do anythng wrong #speaker_1
+More people have replied to my tweet with examples of horrifying harmful rhetoric that ahao_gamer has spread. How has he not been cancelled earlier! Linking here so it's easier to follow (1/18) #speaker_2
+// ZHIHAO clicks on the thread. There are screenshots of Zhihao's past tweets in the replies, along with lady_sprinkle_rainbow's text on top.
+He’s not just racist, he’s ableist too: "All of my teammates confirm autistic. Throw so many tantrums, dunno how they make it to 18 LOLZ" (2/18) #speaker_2
+Like excuse me: "NOOOO WHY THE DEVS CHANGE ARIA'S SKINS! Hide everything might as well change to burqas lah" (3/18) #speaker_2
+Can't deny that this looks bad. But why do you have so much time? Go solve systematic racism instead lol #speaker_3
+At least got fans stand up for me. #inner_monologue
+It's tweets like these that normalise discrimination! Run back to 4chan or kiwifarms  #speaker_2
+FML I cannot look at that thread anymore... #inner_monologue
+Man, every thread here is jialat (bad). #inner_monologue
+he should be banned from alphas #speaker_4
+he should be banned from living #speaker_5
+Wah lao I wrote those tweets in sec school, why must dig up so far back? #inner_monologue
+Now of course I won't write this kind of thing lah. If they want me banned then like that then everyone who wrote stupid shit when they young should be cancelled now lah. #inner_monologue
+We are aware about the current situation regarding Lim "Ahao" Zhihao. We are investigating the situation internally. #speaker_5
+As an organisation, we do not condone racism or sexism on any level. We believe that video games should be a safe, inclusive space for everyone. Our professional players should reflect the principles of the Alphas World Cup and Team Singapore Elites. #speaker_5
+It is our hope that Mr Lim can return with the focus that it takes to play at the Alphas World Cup. #speaker_5
+Another meaningless PR statement #speaker_6
+#speaker_2_name:Aaron Lee
+#speaker_2_tag:rabakplayer
+ahao_gamer hasn't even apologised yet lol #speaker_2
+Jialat. (this is bad) #inner_monologue
+Okay. Leng jing. (Calm down.) #inner_monologue
+Leng jing yi xia. (Calm down for a bit.) #inner_monologue
+{ zhihao_3_answergavin == true:
+    I'll write a reply... but... where to start sia...#inner_monologue
+    - else:
+    -> zhihao_3_5c
+}
+-> zhihao_3_5d
+
+=== zhihao_3_5c ===
+#knot:zhihao_3_5c
+#ui:scene
+#background:bg_zhihao_home.jpg
+#speaker_left_image:cha_zhihao_mother_normal.png
+#speaker_left_name:Ma
+This whole thing is too much lah. I can’t deal. Suan le (forget it) lah I’ll just go back to sleep. #inner_monologue
+Ah Boy, your Gavin friend want to talk to you. Why you never pick up your phone? #speaker_left
+Wah lao Gavin... #inner_monologue
+I just wannna sleep here and forget everything lah. #inner_monologue
+And after that maybe everyone will forget. Then all swee-swee liao. #inner_monologue
+I got headache. Need to sleep. #speaker_self
+//MOTHER returns to the call on her phone. #
+Hello, Gavin ah? So sorry ah, Zhihao got headache… yah, he went to sleep. Dunno what happened lah, that boy… ah… okay.. Can can, Auntie will tell him. Thank you ah. Bye-bye! #speaker_left
+//MOTHER turns to ZHIHAO and lifts off his blanket. #
+Eh, Gavin say must remember to meet him on Thursday. Very important. #speaker_left
+You hear me anot? #speaker_left
+Orh. #speaker_self
+You remember ah. #speaker_left
+//MOTHER leaves. ZHIHAO takes out his phone to check Twitter again. #
+#speaker_left_image:pixel.png
+I buay tahan how all the commenters tweet like they know me. Okay lah my joke is a bit offensive, but the way they shoot me macam I got kill someone. #inner_monologue
+-> zhihao_3_5d
+
+=== zhihao_3_5d ===
+#knot:zhihao_3_5d
+#ui:twitter
+#chat_group_title:Twitter: @ahao_gamer
+#chat_group_image:ico_zhihao.png
+#speaker_self_tag:ahao_gamer
+#speaker_self_image:ico_zhihao.png
+#speaker_1_name:ahao's biggest fan
+#speaker_1_tag:simpforahao
+#speaker_2_name:Sparkle Rainbow🌈
+#speaker_2_tag:lady_sprinkle_rainbow
+#speaker_3_name:Jac
+#speaker_3_tag:icecreamunicorns
+#speaker_4_name:Diamond
+#speaker_4_tag:d1amond
+#speaker_5_name:Fight Me⚔️
+#speaker_5_tag:forjustice
+#speaker_6_name:Celestial Being
+#speaker_6_tag:celest3
+Ok I think best for me to ... #inner_monologue
+VAR zhihao_3_apologyscore = 0
+VAR zhihao_3_quitscore = 0
+VAR zhihao_3_toxicscore = 0
++ [Correct their assumptions about me]
+    Privileged dumb male strikes again. The Gamergate refugees like ahao_gamer can't keep their mouths shut. #speaker_4
+    ++ I dunno about Gamergate don’t anyhow presume can [] #speaker_self
+    ++ Says the pot to the kettle  [] #speaker_self
+    -- @ahao_gamer looks like another brainwashed chi-na guy! #speaker_5
+    ++ I’m not from China lah idiot [] #speaker_self
+    ++ Fyi I’m SGrean, and you’re the one who’s racist about China [] #speaker_self
+	-- @ahao_gamer. JUST. APOLOGISE. ALREADY. #speaker_3
+    ++ [Might as well ignore these losers sia]
+        VAR zhihao_3_tweetstorm = 1
+        ~ zhihao_3_tweetstorm = 1
+        ~ zhihao_3_toxicscore += 1
+        It’s true that autistic ppl throw tantrums. I’m just saying a fact not hating on them. You can go ask the special ed teachers  #speaker_self
+        true tho #speaker_1
+        his is the WORST take. The worst take. #speaker_4
+        #speaker_5_name:Jos
+        #speaker_5_tag:joslim
+        Strawman argument lol #speaker_5
+        Wtf is a strawman? #inner_monologue
+        And this @lady_sprinkle_rainbow tweet also makes no sense leh #inner_monologue
+        Like excuse me: "NOOOO WHY THE DEVS CHANGE ARIA'S SKINS! Hide everything then better change to burqas lah" (3/18) #speaker_2
+        Isn't she implying that burqa is wrong or bad? #inner_monologue
+        You're the racist ones for not liking burqas #speaker_self
+        No one said that #speaker_3
+        What on earth is this gaslighting #speaker_5
+        Free speech! #speaker_1
+        Okay at least got some people support. They get it. #inner_monologue
+        You can be sure of this: No more Alphas for you. A petition’s on the way. #speaker_6
+        // Petition successful. ZH is kicked out. Toxic ending. 
+        
+    ++ [Aiyah. If I apologise maybe they’ll stop attacking.]
+        ~ zhihao_3_tweetstorm = 2
+        ~ zhihao_3_quitscore += 1
+        I’m sorry I tweeted an offensive joke. #speaker_self
+        // ~ zhihao_3_apologyscore += 1
+        Finally. #speaker_3
+        Would appreciate it if people can stop threatening and harassing me TYVM #speaker_self
+        Talk about playing the victim. Leave Alphas first and MAYBE the ‘harassment’ will stop. But people have every right to call you out. Creating a petition now #speaker_6
+        // ZH quits before petition completes. Non-toxic ending.
+
++ [Acknowledge and explain]
+    Woke up to lots of responses. I'll just say this lah: it's true that interracial couples cannot do certain things #speaker_self
+    preach! #speaker_1
+    #speaker_5_name:Jos
+    #speaker_5_tag:joslim
+    When was ahao_gamer political #speaker_5
+    says a lot about singaporeans when even someone like ahao_gamer can have simps @simpforahao_gamer 🙄	#speaker_3
+    Strawman argument lol #speaker_5
+    Wtf is a strawman? #inner_monologue
+    This is disrespectful to all the female creators who received harassment and DEATH THREATS #speaker_5
+    ++ [Defend yourself]
+        Tbh yall overreacting sia. I’M the one getting harassed now hello #speaker_self
+        ~ zhihao_3_tweetstorm = 3
+        ~ zhihao_3_toxicscore += 1
+        @ahao_gamer. JUST. APOLOGISE. ALREADY. #speaker_3
+        All the people who are threatening and harassing me to apologise-- double standard lah yall #speaker_self
+        Talk about playing the victim. Leave Alphas first and MAYBE the ‘harassment’ will stop. But people have every right to call you out. Creating a petition now #speaker_6
+        // *Petition successful. ZH is kicked out.Toxic ending.
+    
+    ++ [Apologise]
+        I apologise for the offensive tweets. I didn’t know any better. #speaker_self
+        ~ zhihao_3_tweetstorm = 4
+        ~ zhihao_3_apologyscore += 1
+        Finally @ahao_gamer apologised. Took too long. #speaker_3
+        @ahao_gamer You can be sure of this: No more Alphas for you. A petition’s on the way. #speaker_6
+        // *Petition unsuccessful. ZH stays. Positive ending. 
+
+- 
+{ zhihao_3_tweetstorm == 2 or 4:
+    #ui:narrator
+    #background:bg_zhihao_petition.jpg
+    FML I say sorry already they still want to take away everything from me.
+    How much is enough sia? After they make sure Alphas drop me, will they make sure I’ll never be pro again?
+    - else:
+    #ui:narrator
+    #background:bg_zhihao_petition.jpg
+    All these sick people. They say I racist and shit, but they’re bullies lah. All so happy to take a stranger down. 
+    Will they say the same thing to my face? Tell me that I deserve to die? That I’m privileged? 
+    Who says I’m privileged? I’m working cos I have to. Bo pian must help Ma and Ah Gong. 
+    And so easy for all these stupid fellas-- all only go to school, all only know how to go cafe study, their pocket money all so easy to ask their father mother. They never headache over money before.
+    They think they know everything just cos they like to sound smart. But they know nothing about hardship. Only know how to read Twitter and point finger. Just cos I’m Chinese they think I’m privileged -- like them. 
+    Sibeh stupid sia, these children. 
+    Only people who don’t worry about money or work will kill others this way. Cos to them a bad joke costs more than a job.
+    This whole shit is a joke lah.
+}
+
+-> zhihao_3_5e
+
+=== zhihao_3_5e ===
+#knot:zhihao_2_1
+#ui:email
+#emailheader:Read Email
+#emailfrom:Marcus, The Singapore Journal <marcusreginald.tan@thesgjournal.com>
+#emailto:Zhihao <zhihao@email.com>
+#emailfromicon:ico_zhihao_elites.png
+#emailsubject:Invitation to Alphas Tryouts
+
+Hi Zhihao, /n /n Team Singapore Elites notes your gaming prowess on Twitch, and hence would like to invite you to our Alphas tryouts! It will take place this Saturday at 2.00 PM at The Chaos Arena. /n /n Let us know about your participation by this Wednesday. We hope that you can make it! /n /n Best, /n Ian Lim  /n  Lead Coordinator, Elite Gamers Singapore #speaker_1
+
+
+
+
+
+Dear Mr Lim Zhihao, 
+
+I’m a senior staff writer for The Singapore Journal. We are the leading local online tabloid with a subscription count of 250k+ readers. I’m writing a feature on your recent controversy on Twitter and believe it’s important to have you share your side of the story for a nuanced, in-depth report.
+
+Are you available for an interview in the next one or two days? We are planning to publish the feature before Friday. Including your voice in the article would be extremely helpful. I await your response. 
+
+Best regards,
+
+Marcus R. Tan
+Senior Staff Writer
+The Singapore Journal
+
+
+
+
+
+
+
 
 
 
