@@ -837,7 +837,7 @@ export const CHARACTER_MAP = [
         title: "Playing to the Crowd",
         knotTag: "zhihao_3_intro",
         summary: "Zhihao witnesses the power of social media. Will he master it, or will it conquer him?",
-        playable: false,
+        playable: true,
         discordLink: 'https://discord.gg/bszB9A5bt6',
         images: [
           "/images/bg_nadia_intro.jpg",     

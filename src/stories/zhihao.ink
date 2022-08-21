@@ -2407,25 +2407,8 @@ VAR zhihao_3_toxicscore = 0
 #emailfrom:Marcus, The Singapore Journal <marcusreginald.tan@thesgjournal.com>
 #emailto:Zhihao <zhihao@email.com>
 #emailfromicon:ico_zhihao_elites.png
-#emailsubject:Invitation to Alphas Tryouts
-
-Hi Zhihao, /n /n Team Singapore Elites notes your gaming prowess on Twitch, and hence would like to invite you to our Alphas tryouts! It will take place this Saturday at 2.00 PM at The Chaos Arena. /n /n Let us know about your participation by this Wednesday. We hope that you can make it! /n /n Best, /n Ian Lim  /n  Lead Coordinator, Elite Gamers Singapore #speaker_1
-
-
-
-
-
-Dear Mr Lim Zhihao, 
-
-I’m a senior staff writer for The Singapore Journal. We are the leading local online tabloid with a subscription count of 250k+ readers. I’m writing a feature on your recent controversy on Twitter and believe it’s important to have you share your side of the story for a nuanced, in-depth report.
-
-Are you available for an interview in the next one or two days? We are planning to publish the feature before Friday. Including your voice in the article would be extremely helpful. I await your response. 
-
-Best regards,
-
-Marcus R. Tan
-Senior Staff Writer
-The Singapore Journal
+#emailsubject:Interview request
+Dear Mr Lim Zhihao, /n /n I’m a senior staff writer for The Singapore Journal. We are the leading local online tabloid with a subscription count of 250k+ readers. /n  I’m writing a feature on your recent controversy on Twitter and believe it’s important to have you share your side of the story for a nuanced, in-depth report. /n /n  Are you available for an interview in the next one or two days? We are planning to publish the feature before Friday. Including your voice in the article would be extremely helpful. I await your response. /n /n Best regards, /n /n  Marcus R. Tan /n Senior Staff Writer /n The Singapore Journal #speaker_1
 
 
 
