@@ -2409,15 +2409,78 @@ VAR zhihao_3_toxicscore = 0
 #emailfromicon:ico_zhihao_elites.png
 #emailsubject:Interview request
 Dear Mr Lim Zhihao, /n /n I’m a senior staff writer for The Singapore Journal. We are the leading local online tabloid with a subscription count of 250k+ readers. /n  I’m writing a feature on your recent controversy on Twitter and believe it’s important to have you share your side of the story for a nuanced, in-depth report. /n /n  Are you available for an interview in the next one or two days? We are planning to publish the feature before Friday. Including your voice in the article would be extremely helpful. I await your response. /n /n Best regards, /n /n  Marcus R. Tan /n Senior Staff Writer /n The Singapore Journal #speaker_1
+VAR zhihao_3_interviewrequest = false
++ [Ignore the request] 
+    #ui:narrator
+    #background:bg_zhihao_bedroom_night.jpg
+    This shit won’t end right?
+    ~ zhihao_3_interviewrequest = true
+    Okay lah. I’m the asshole lah. Everybody else is hero.
+    //If ZH is NOT already in his bedroom, he enters it. In the bedroom, ZH closes the curtain. The room darkens. 
+    #background:black.jpg
+    Best I die lah. Then the whole world will be happy.
+    -> zhihao_3_6
++ [Agree to a written interview] -> zhihao_3_5f
 
 
 
+= zhihao_3_5f
+#knot:zhihao_3_5f
+#ui:email
+#emailheader:Compose Email
+#emailto:Marcus, The Singapore Journal <marcusreginald.tan@thesgjournal.com>
+#emailfrom:Zhihao <zhihao@email.com>
+#emailfromicon:ico_zhihao.png
+#emailsubject:Interview request
+#replyemaildate:On Wed, Marcus, The Singapore Journal <marcusreginald.tan@thesgjournal.com> wrote 
+#replyemailtext: Dear Mr Lim Zhihao, /n /n I’m a senior staff writer for The Singapore Journal. We are the leading local online tabloid with a subscription count of 250k+ readers. /n  I’m writing a feature on your recent controversy on Twitter and believe it’s important to have you share your side of the story for a nuanced, in-depth report. /n /n  Are you available for an interview in the next one or two days? We are planning to publish the feature before Friday. Including your voice in the article would be extremely helpful. I await your response. /n /n Best regards, /n /n  Marcus R. Tan /n Senior Staff Writer /n The Singapore Journal 
+Dear Marcus, #speaker_self
+~ zhihao_3_interviewrequest = true
+I’d be happy to assist and tell my side. But I only want to communicate in writing so it is in black and white. #speaker_self
+Thank you. #speaker_self
+Regards, #speaker_self
+Zhihao  #speaker_self
+#ui:narrator
+#background:ui_emailsent.png
+.
+-> zhihao_3_6
 
-
-
-
-
-
-
+=== zhihao_3_6 ===
+#knot:zhihao_3_6
+#ui:narrator
+#background:black.jpg
+Thursday, 11:06am.
+At the usual Bak Chor Mee place.
+#ui:scene
+#background:bg_zhihao_bakchormee.jpg
+I’m supposed to meet Gavin at 11 A.M. Usually I’m the early one. I know I’m late but I’m scared sia.
+#speaker_right_image:cha_zhihao_gavin_grim.png
+#speaker_right_name:Gavin
+Good lah. At least Gavin never bring Nadia. #inner_monologue
+I better walk faster. #inner_monologue
+Shit. His face chao black, I dunno how we can talk now. #inner_monologue
+Hi. #speaker_self
+... #speaker_right
+Uh. #speaker_self
+You not buying food? #speaker_self
+You can get yours if you’re hungry. #speaker_right
+I better get for him also. #inner_monologue
+‘Kay. I’ll go. #speaker_self
+#ui:narrator
+#background:bg_zhihao_bakchormee.jpg
+I bought two bowls of bak chor mee. Got him watermelon juice also.
+#ui:scene
+#background:bg_zhihao_bakchormee.jpg
+#speaker_right_image:cha_zhihao_gavin_grim.png
+#speaker_right_name:Gavin
+I got for you also. You haven’t eat yet right? #speaker_self
+I’ve never heard that kind of sentiment about Nadia from you. And I had to be the last to know. #speaker_right
+Wah straight away start this topic ah. #inner_monologue
+It was a joke... I don’t hate Nadia. #speaker_self
+#speaker_right_image:cha_zhihao_gavin_3_betrayed.png
+The only saving grace of this is that they didn’t dox her. #speaker_right
+Bro, I don’t hate Nadia lah. Serious! #speaker_self
+You know how ashamed I was that I couldn’t protect her? Because the attack had come from my closest circle? #speaker_right
+I felt I’d betrayed her. #speaker_right
 
 -> END
