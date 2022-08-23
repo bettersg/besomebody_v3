@@ -1984,7 +1984,7 @@ Where got people pay money for a storeroom? Now I think better to sign contract.
 You got pay the fees for Ah Gong already? #speaker_self
 Yah. This morning. #speaker_left
 I find a better time to tell her the truth. #inner_monologue
-Don’t need him to sign anything lah. He’s my bro. #speaker_left
+Don’t need him to sign anything lah. He’s my bro. #speaker_self
 
 #ui:notification
 #background:ui_zhihao_message.jpg
@@ -2015,11 +2015,13 @@ Did you just wake up?! #speaker_1
     Huh. Why sia? #wa_inner_monologue
     No #speaker_self
 - I’m getting scared, seriously. Why Aman never say what it is?     #wa_inner_monologue
-You should visit this. twitter.com/TeamSGElites/status/1192799386574
+You should visit this.  #speaker_1
+twitter.com/TeamSGElites/status/1192799386574 #speaker_1
 + [Visit the link] ok #speaker_self
 + [Do not visit the link] Have you opened the link? #speaker_1
     Lol later #speaker_self
     Best to do it now so you can work out how to answer Gavin #speaker_1
+    ok ok  #speaker_self
 - -> zhihao_3_4
  
 === zhihao_3_4 ===
@@ -2308,12 +2310,9 @@ I buay tahan how all the commenters tweet like they know me. Okay lah my joke is
 #speaker_5_tag:forjustice
 #speaker_6_name:Celestial Being
 #speaker_6_tag:celest3
+
 Ok I think best for me to ... #inner_monologue
-VAR zhihao_3_apologyscore = 0
-VAR zhihao_3_quitscore = 0
-VAR zhihao_3_toxicscore = 0
-+ [Correct their assumptions about me]
-    Privileged dumb male strikes again. The Gamergate refugees like ahao_gamer can't keep their mouths shut. #speaker_4
++ [Correct their assumptions about me] Privileged dumb male strikes again. The Gamergate refugees like ahao_gamer can't keep their mouths shut. #speaker_4
     ++ I dunno about Gamergate don’t anyhow presume can [] #speaker_self
     ++ Says the pot to the kettle  [] #speaker_self
     -- @ahao_gamer looks like another brainwashed chi-na guy! #speaker_5
@@ -2323,7 +2322,7 @@ VAR zhihao_3_toxicscore = 0
     ++ [Might as well ignore these losers sia]
         VAR zhihao_3_tweetstorm = 1
         ~ zhihao_3_tweetstorm = 1
-        ~ zhihao_3_toxicscore += 1
+        VAR zhihao_3_petitionsuccessful = true
         It’s true that autistic ppl throw tantrums. I’m just saying a fact not hating on them. You can go ask the special ed teachers  #speaker_self
         true tho #speaker_1
         his is the WORST take. The worst take. #speaker_4
@@ -2342,18 +2341,15 @@ VAR zhihao_3_toxicscore = 0
         You can be sure of this: No more Alphas for you. A petition’s on the way. #speaker_6
         // Petition successful. ZH is kicked out. Toxic ending. 
         
-    ++ [Aiyah. If I apologise maybe they’ll stop attacking.]
+    ++ [Aiyah. If I apologise maybe they’ll stop attacking.]  I’m sorry I tweeted an offensive joke. #speaker_self
         ~ zhihao_3_tweetstorm = 2
-        ~ zhihao_3_quitscore += 1
-        I’m sorry I tweeted an offensive joke. #speaker_self
-        // ~ zhihao_3_apologyscore += 1
+        ~ zhihao_3_petitionsuccessful = false
         Finally. #speaker_3
         Would appreciate it if people can stop threatening and harassing me TYVM #speaker_self
         Talk about playing the victim. Leave Alphas first and MAYBE the ‘harassment’ will stop. But people have every right to call you out. Creating a petition now #speaker_6
         // ZH quits before petition completes. Non-toxic ending.
 
-+ [Acknowledge and explain]
-    Woke up to lots of responses. I'll just say this lah: it's true that interracial couples cannot do certain things #speaker_self
++ [Acknowledge and explain] Woke up to lots of responses. I'll just say this lah: it's true that interracial couples cannot do certain things #speaker_self
     preach! #speaker_1
     #speaker_5_name:Jos
     #speaker_5_tag:joslim
@@ -2362,19 +2358,17 @@ VAR zhihao_3_toxicscore = 0
     Strawman argument lol #speaker_5
     Wtf is a strawman? #inner_monologue
     This is disrespectful to all the female creators who received harassment and DEATH THREATS #speaker_5
-    ++ [Defend yourself]
-        Tbh yall overreacting sia. I’M the one getting harassed now hello #speaker_self
+    ++ [Defend yourself] Tbh yall overreacting sia. I’M the one getting harassed now hello #speaker_self
         ~ zhihao_3_tweetstorm = 3
-        ~ zhihao_3_toxicscore += 1
+        ~ zhihao_3_petitionsuccessful = true
         @ahao_gamer. JUST. APOLOGISE. ALREADY. #speaker_3
         All the people who are threatening and harassing me to apologise-- double standard lah yall #speaker_self
         Talk about playing the victim. Leave Alphas first and MAYBE the ‘harassment’ will stop. But people have every right to call you out. Creating a petition now #speaker_6
         // *Petition successful. ZH is kicked out.Toxic ending.
     
-    ++ [Apologise]
-        I apologise for the offensive tweets. I didn’t know any better. #speaker_self
+    ++ [Apologise] I apologise for the offensive tweets. I didn’t know any better. #speaker_self
         ~ zhihao_3_tweetstorm = 4
-        ~ zhihao_3_apologyscore += 1
+        ~ zhihao_3_petitionsuccessful = false
         Finally @ahao_gamer apologised. Took too long. #speaker_3
         @ahao_gamer You can be sure of this: No more Alphas for you. A petition’s on the way. #speaker_6
         // *Petition unsuccessful. ZH stays. Positive ending. 
@@ -2471,7 +2465,7 @@ I better get for him also. #inner_monologue
 I bought two bowls of bak chor mee. Got him watermelon juice also.
 #ui:scene
 #background:bg_zhihao_bakchormee.jpg
-#speaker_right_image:cha_zhihao_gavin_grim.png
+#speaker_right_image:cha_zhihao_gavin_betrayed.png
 #speaker_right_name:Gavin
 I got for you also. You haven’t eat yet right? #speaker_self
 I’ve never heard that kind of sentiment about Nadia from you. And I had to be the last to know. #speaker_right
@@ -2482,5 +2476,112 @@ The only saving grace of this is that they didn’t dox her. #speaker_right
 Bro, I don’t hate Nadia lah. Serious! #speaker_self
 You know how ashamed I was that I couldn’t protect her? Because the attack had come from my closest circle? #speaker_right
 I felt I’d betrayed her. #speaker_right
++ [I should explain properly] I didn’t attack her, sia. I was just saying now you need to change your lifestyle cos she Muslim. #speaker_self
+    VAR zhihao_3_explaintogavin = true
+    ~ zhihao_3_explaintogavin = true
+    Ehh, I really don’t hate her, bro. I’m not saying she’s a bad person. She’s not. #speaker_self
+    You know you’re making strawmans right? #speaker_right
+    Wtf why everyone keep talking about strawman? #speaker_self
+    Uh I know you’re angry lah, but can don’t talk so cheem anot? #speaker_self
+    You’re twisting what I’m saying. #speaker_right
+    Orh. #inner_monologue
+    Am I? #inner_monologue
+
++ [I should say sorry first]
+    Bro, sorry. I didn’t know my joke was offensive. #speaker_self
+    But uh. Now I see why. #speaker_self
+    ~ zhihao_3_explaintogavin = false
+    You know, all those times when I’d tell you about all my dates with her, and you’d laugh along and say you were happy for me? Was that for real? #speaker_right
+    Yah! I was happy for you. Serious! #speaker_self
+    But you weren’t. #speaker_right
+    I mean... I was happy but I was sad also. Cos you were going to have less time for your friends. #speaker_self
+    That wasn’t what you tweeted. #speaker_right
+    Haiz. Best I don’t say anything liao. #inner_monologue
+
+- You know what I told Nadia about you? That you were a one-in-a-million dude. That you were filial, you were loyal. #speaker_right
+That you’re a damn sick gamer and you still never let it get to your head. #speaker_right
+I told her you didn’t care about people’s backgrounds because, oh hey, look at your two best friends. A Sikh and a Jesus freak! #speaker_right
+But that was my biggest error wasn’t it? Thinking you cut through all that outside noise and took people for who they are. I told her you were immune to bullshit. #speaker_right
+I told her to trust me. #speaker_right
+//GAVIN gives a mirthless laugh. His eyes convey sadness. #
+#speaker_right_image:cha_zhihao_gavin_angry.png
+But you’re the bullshit. #speaker_right
+I wanna vomit. #inner_monologue
+When he mentions me it’s all in past tense. #inner_monologue
+{ zhihao_3_explaintogavin == true:
+    Gavin I’m sorry. I dunno what else I can say. #speaker_self
+    I don’t know either. #speaker_right
+    I’m really sorry. #speaker_self
+    He taking chao long to say something. #inner_monologue
+    How? #inner_monologue
+    What to do now? #inner_monologue
+    You were like a brother to me. That’s all I can say. #speaker_right
+
+- else:
+    I’ll make it up to you. I can do whatever you need me to do. #speaker_self
+    Zhihao. This isn’t just about me. What you tweeted was what you really felt. #speaker_right
+    And I cannot be close to someone who doesn’t support my relationship with Nadia. #speaker_right
+}
+Shit. #inner_monologue
+What’re you saying? #speaker_self
+We can’t stay friends anymore. Nadia’s a priority. #speaker_right
+What the…? Shit he really mean it sia. #inner_monologue
+Uh, how’s Nadia? #speaker_self
+#speaker_right_image:cha_zhihao_gavin_betrayed.png
+She says she’s fine. But I don’t know. #speaker_right
++ [I should meet Nadia] Bo pian. I have to meet Nadia. #inner_monologue
+    Can I meet her? I want to apologise to her.  #speaker_self
++ [Ask Gavin to apologise to her for me] How to face Nadia? But I need Gavin to pass my apology to her. #inner_monologue
+    Can you tell Nadia I’m sorry?  #speaker_self
+- I’ll tell her to join us. In fact she wanted to meet you with me. But I told her I’d speak to you in private first. #speaker_right
+Oh. #speaker_self    
+#ui:notification
+#background:ui_zhihao_message.jpg
+Aman: Bro you made the news. Can always call me if you need to talk, yeah? #message
+Aman: thesgjournal.co.sg/breakingnews #message
+#ui:narrrator
+#background:bg_zhihao_newsarticle.jpg
+WTF the drama never end issit. 
+That bloody journalist write this kind of article about me. Haiz.
+{ zhihao_3_tweetstorm == 2:
+    Gamer Lim Zhihao’s Alphas spot hangs in the balance: The ‘racist’ Alphas gamer has apologised for his tweets - but it may come ‘too little too late’, says organiser Ian Lim.
+}
+{ zhihao_3_tweetstorm == 4:
+    Alphas gamer Lim Zhihao’s career on thin ice: ‘Racist’ Alphas gamer Lim Zhihao apologises for tweets - but a growing petition is calling for his axing.
+}
+{  zhihao_3_tweetstorm == 1 or 3:
+    Racism, bigotry, and Chinese privilege in professional gaming: We ask local gamers about Lim Zhihao’s racist Twitter fiasco, and whether industry culture is to blame.
+}
+What is it? #speaker_right
+Shit. #inner_monologue
+#speaker_right_image:cha_zhihao_gavin_concerned.png
+I cannot take it liao. The whole world hates me. Gavin hates me. #inner_monologue
+//GAVIN’s expression changes clearly to concern. ZHIHAO’s vision of GAVIN becomes blurry because he’s started to cry (put a filter?). #
+Zhihao--hey– Shucks, I don’t have tissue... #speaker_right
+Fuck lah now the whole canteen can see me cry like some stupid zha bo (female). #inner_monologue
+//Blurred vision of someone else (NADIA) next to GAVIN. #
+#speaker_left_image:cha_zhihao_nadia_concerned.png
+#speaker_left_name:Nadia
+Nad, do you have tissue? #speaker_right
+Oh! Oh no-- Gav. I told you not to pile on him. #speaker_left
+He was reading something. #speaker_right
+Someone showed me the article just now. Here, Zhihao, take the tissue. #speaker_left
+//ZHIHAO accepts the tissue from NADIA. #
+Thank you. #speaker_self
+You alright? #speaker_left
+Yeah. I’m sorry. #speaker_self
+I know what you wrote. I was really upset, especially since we know each other and you were always nice to me. At least to my face. #speaker_left
+
+
+
+
+
+
+
+
+
+
+
+
 
 -> END
