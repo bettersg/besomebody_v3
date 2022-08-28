@@ -2875,7 +2875,7 @@ Your computer game the drama, is that why Gavin don’t want to rent anymore? #s
     Of course he won’t come, I’m the idiot to think he said yes. #inner_monologue
     No. No point. #speaker_self
     But thank you, Ma. #speaker_self
-    -> zhihao_3_toxicending
+    Hmm -> zhihao_3_toxicending
 - else: 
     I called him. He’s coming tonight with Aman. #speaker_left
     #speaker_left_image:cha_zhihao_mother_smiling.png
@@ -2884,7 +2884,7 @@ Your computer game the drama, is that why Gavin don’t want to rent anymore? #s
     Is he really coming cos of me or cos Ma ask him then he paiseh? #inner_monologue
     What did he say? #speaker_self
     Nothing much. After a while he just tell me ‘okay Auntie’. You want to call him anot? Before he comes over? #speaker_left
-    -> zhihao_3_9a
+    Hmm  -> zhihao_3_9a
 }
 
 
