@@ -1931,7 +1931,7 @@ Zhihao #speaker_self
 #background:ui_emailsent.png
 .
 
--> zhihao_3_2c
+-> zhihao_3_2d
 
 
 === zhihao_3_2c ===
@@ -1962,7 +1962,7 @@ Zhihao  #speaker_self
 Irfan: CONGRATS BRO! HEARD THE NEWS #message
 Alric: Well done man! Knew you would get it! #message
 #ui:narrator
-#background:ui_zhihao_message.jpg
+#background:black.jpg
 Wah damn hard to believe leh. Eh no, of course I believe it. Hah. I DID IT LAH!
 Must be fate. I’m fated to be pro, man. Cos talent don’t lie.
  
@@ -1971,7 +1971,7 @@ Must be fate. I’m fated to be pro, man. Cos talent don’t lie.
 === zhihao_3_3 ===
 #knot:zhihao_3_3
 #ui:narrator
-#background:ui_zhihao_home.jpg
+#background:bg_zhihao_home.jpg
 When you’re happy, the days fly by. It’s been two days and I still feel like a king. 
 I’m a pro-gamer, and my plan for Ah Gong going swee swee. 
 And today I can wake up at 12pm like a boss.
@@ -2060,7 +2060,7 @@ Didn't ahao_gamer post a racist tweet some time ago? #speaker_6
 #speaker_1_name:blackwolf
 #speaker_1_tag:xxblackwolfxx
 This post didn't age well lol. F #speaker_1
-bg_zhihao_tweet_screenshot.jpg #image #speaker_1
+bg_zhihao_tweet_screenshot.jpg #image 
 Shit. These people got nothing better to do issit? #inner_monologue
 #ui:narrator
 #background:ui_zhihao_message.jpg
@@ -2173,7 +2173,7 @@ Shit. Gavin is calling  #inner_monologue
 === zhihao_3_5 ===
 #knot:zhihao_3_5
 #ui:scene
-#background:new_call_notification.jpg
+#background:ui_zhihao_phonecall.jpg
 #speaker_right_image:cha_zhihao_gavin_3_betrayed.png
 #speaker_right_name:Gavin
 ... #speaker_self
@@ -2247,7 +2247,7 @@ It's tweets like these that normalise discrimination! Run back to 4chan or kiwif
 FML I cannot look at that thread anymore... #inner_monologue
 Man, every thread here is jialat (bad). #inner_monologue
 he should be banned from alphas #speaker_4
-he should be banned from living #speaker_5
+he should be banned from living #speaker_3
 Wah lao I wrote those tweets in sec school, why must dig up so far back? #inner_monologue
 Now of course I won't write this kind of thing lah. If they want me banned then like that then everyone who wrote stupid shit when they young should be cancelled now lah. #inner_monologue
 We are aware about the current situation regarding Lim "Ahao" Zhihao. We are investigating the situation internally. #speaker_5
@@ -2310,7 +2310,8 @@ I buay tahan how all the commenters tweet like they know me. Okay lah my joke is
 #speaker_5_tag:forjustice
 #speaker_6_name:Celestial Being
 #speaker_6_tag:celest3
-Ok I think best for me to ... #inner_monologue
+Ok... must reply I think best for me to ... #inner_monologue
+Hey everybody, I'm reading these tweets. #speaker_self
 VAR zhihao_3_gamingoutcome = ""
 + [Correct their assumptions about me] Privileged dumb male strikes again. The Gamergate refugees like ahao_gamer can't keep their mouths shut. #speaker_4
     ++ I dunno about Gamergate don’t anyhow presume can [] #speaker_self
@@ -2396,30 +2397,31 @@ VAR zhihao_3_gamingoutcome = ""
 -> zhihao_3_5e
 
 === zhihao_3_5e ===
-#knot:zhihao_2_1
+#knot:zhihao_3_5e
 #ui:email
 #emailheader:Read Email
 #emailfrom:Marcus, The Singapore Journal <marcusreginald.tan@thesgjournal.com>
 #emailto:Zhihao <zhihao@email.com>
 #emailfromicon:ico_zhihao_elites.png
 #emailsubject:Interview request
-Dear Mr Lim Zhihao, /n /n I’m a senior staff writer for The Singapore Journal. We are the leading local online tabloid with a subscription count of 250k+ readers. /n  I’m writing a feature on your recent controversy on Twitter and believe it’s important to have you share your side of the story for a nuanced, in-depth report. /n /n  Are you available for an interview in the next one or two days? We are planning to publish the feature before Friday. Including your voice in the article would be extremely helpful. I await your response. /n /n Best regards, /n /n  Marcus R. Tan /n Senior Staff Writer /n The Singapore Journal #speaker_1
+Dear Mr Lim Zhihao, /n I’m a senior staff writer for The Singapore Journal. I’m writing a feature on your recent controversy on Twitter and believe it’s important to have you share your side of the story. Are you available for an interview? We are planning to publish the feature before Friday.  /n /n  Best regards, /n  Marcus R. Tan, Senior Staff Writer, The Singapore Journal #speaker_1
 VAR zhihao_3_interviewrequest = false
-+ [Ignore the request] 
-    #ui:narrator
-    #background:bg_zhihao_bedroom_night.jpg
-    This shit won’t end right?
-    ~ zhihao_3_interviewrequest = true
-    Okay lah. I’m the asshole lah. Everybody else is hero.
-    //If ZH is NOT already in his bedroom, he enters it. In the bedroom, ZH closes the curtain. The room darkens. 
-    #background:black.jpg
-    Best I die lah. Then the whole world will be happy.
-    -> zhihao_3_6
++ [Ignore the request] -> zhihao_3_5e_ignore
+
 + [Agree to a written interview] -> zhihao_3_5f
 
+=== zhihao_3_5e_ignore ===
+#ui:narrator
+#background:bg_zhihao_bedroom_night.jpg
+This shit won’t end right?
+~ zhihao_3_interviewrequest = true
+Okay lah. I’m the asshole lah. Everybody else is hero.
+//If ZH is NOT already in his bedroom, he enters it. In the bedroom, ZH closes the curtain. The room darkens. 
+#background:black.jpg
+Best I die lah. Then the whole world will be happy.
+-> zhihao_3_6
 
-
-= zhihao_3_5f
+=== zhihao_3_5f ===
 #knot:zhihao_3_5f
 #ui:email
 #emailheader:Compose Email
@@ -2428,7 +2430,7 @@ VAR zhihao_3_interviewrequest = false
 #emailfromicon:ico_zhihao.png
 #emailsubject:Interview request
 #replyemaildate:On Wed, Marcus, The Singapore Journal <marcusreginald.tan@thesgjournal.com> wrote 
-#replyemailtext: Dear Mr Lim Zhihao, /n /n I’m a senior staff writer for The Singapore Journal. We are the leading local online tabloid with a subscription count of 250k+ readers. /n  I’m writing a feature on your recent controversy on Twitter and believe it’s important to have you share your side of the story for a nuanced, in-depth report. /n /n  Are you available for an interview in the next one or two days? We are planning to publish the feature before Friday. Including your voice in the article would be extremely helpful. I await your response. /n /n Best regards, /n /n  Marcus R. Tan /n Senior Staff Writer /n The Singapore Journal 
+#replyemailtext: Dear Mr Lim Zhihao, /n I’m a senior staff writer for The Singapore Journal. I’m writing a feature on your recent controversy on Twitter and believe it’s important to have you share your side of the story. Are you available for an interview? We are planning to publish the feature before Friday.  /n /n  Best regards, /n  Marcus R. Tan, Senior Staff Writer, The Singapore Journal
 Dear Marcus, #speaker_self
 ~ zhihao_3_interviewrequest = true
 I’d be happy to assist and tell my side. But I only want to communicate in writing so it is in black and white. #speaker_self
@@ -2438,9 +2440,15 @@ Zhihao  #speaker_self
 #ui:narrator
 #background:ui_emailsent.png
 .
+
+#knot:zhihao_3_minigame
+#ui:mcq
+#game_id:13
+Minigame 13 // must add some text
+
 -> zhihao_3_6
 
-// MINIGAME GOES HERE
+
 
 === zhihao_3_6 ===
 #knot:zhihao_3_6
@@ -2451,7 +2459,7 @@ At the usual Bak Chor Mee place.
 I’m supposed to meet Gavin at 11 A.M. Usually I’m the early one. I know I’m late but I’m scared sia.
 #ui:scene
 #background:bg_zhihao_bakchormee.jpg
-#speaker_right_image:cha_zhihao_gavin_grim.png
+#speaker_right_image:cha_zhihao_gavin_3_grim.png
 #speaker_right_name:Gavin
 Good lah. At least Gavin never bring Nadia. #inner_monologue
 I better walk faster. #inner_monologue
@@ -2468,7 +2476,7 @@ I better get for him also. #inner_monologue
 I bought two bowls of bak chor mee. Got him watermelon juice also.
 #ui:scene
 #background:bg_zhihao_bakchormee.jpg
-#speaker_right_image:cha_zhihao_gavin_betrayed.png
+#speaker_right_image:cha_zhihao_gavin_3_betrayed.png
 #speaker_right_name:Gavin
 I got for you also. You haven’t eat yet right? #speaker_self
 I’ve never heard that kind of sentiment about Nadia from you. And I had to be the last to know. #speaker_right
@@ -2507,7 +2515,7 @@ I told her you didn’t care about people’s backgrounds because, oh hey, look 
 But that was my biggest error wasn’t it? Thinking you cut through all that outside noise and took people for who they are. I told her you were immune to bullshit. #speaker_right
 I told her to trust me. #speaker_right
 //GAVIN gives a mirthless laugh. His eyes convey sadness. #
-#speaker_right_image:cha_zhihao_gavin_angry.png
+#speaker_right_image:cha_zhihao_gavin_3_angry.png
 But you’re the bullshit. #speaker_right
 I wanna vomit. #inner_monologue
 When he mentions me it’s all in past tense. #inner_monologue
@@ -2530,7 +2538,7 @@ What’re you saying? #speaker_self
 We can’t stay friends anymore. Nadia’s a priority. #speaker_right
 What the…? Shit he really mean it sia. #inner_monologue
 Uh, how’s Nadia? #speaker_self
-#speaker_right_image:cha_zhihao_gavin_betrayed.png
+#speaker_right_image:cha_zhihao_gavin_3_betrayed.png
 She says she’s fine. But I don’t know. #speaker_right
 + [I should meet Nadia] Bo pian. I have to meet Nadia. #inner_monologue
     Can I meet her? I want to apologise to her.  #speaker_self
@@ -2542,7 +2550,12 @@ Oh. #speaker_self
 #background:ui_zhihao_message.jpg
 Aman: Bro you made the news. Can always call me if you need to talk, yeah? #message
 Aman: thesgjournal.co.sg/breakingnews #message
-#ui:narrrator
+#ui:narrator
+-> zhihao_3_6a
+
+=== zhihao_3_6a ===
+#knot:zhihao_3_6a
+#ui:narrator
 #background:bg_zhihao_newsarticle.jpg
 WTF the drama never end issit. 
 That bloody journalist write this kind of article about me. Haiz.
@@ -2554,15 +2567,20 @@ That bloody journalist write this kind of article about me. Haiz.
 - else:
     Racism, bigotry, and Chinese privilege in professional gaming: We ask local gamers about Lim Zhihao’s racist Twitter fiasco, and whether industry culture is to blame.
 }
+
+#ui:scene
+#background:bg_zhihao_bakchormee.jpg
+#speaker_right_image:cha_zhihao_gavin_3_betrayed.png
+#speaker_right_name:Gavin
 What is it? #speaker_right
 Shit. #inner_monologue
-#speaker_right_image:cha_zhihao_gavin_concerned.png
+#speaker_right_image:cha_zhihao_gavin_3_concerned.png
 I cannot take it liao. The whole world hates me. Gavin hates me. #inner_monologue
 //GAVIN’s expression changes clearly to concern. ZHIHAO’s vision of GAVIN becomes blurry because he’s started to cry (put a filter?). #
 Zhihao--hey– Shucks, I don’t have tissue... #speaker_right
-Fuck lah now the whole canteen can see me cry like some stupid zha bo (female). #inner_monologue
+Shit lah now the whole canteen can see me cry like some stupid zha bo (female). #inner_monologue
 //Blurred vision of someone else (NADIA) next to GAVIN. #
-#speaker_left_image:cha_zhihao_nadia_concerned.png
+#speaker_left_image:cha_zhihao_nadia_3_concerned.png
 #speaker_left_name:Nadia
 Nad, do you have tissue? #speaker_right
 Oh! Oh no-- Gav. I told you not to pile on him. #speaker_left
@@ -2607,11 +2625,11 @@ Eh omigod he’s crying leh! ##speaker_right
 Where? Ohh... ##speaker_left
 WTH is wrong with people. Why can't everybody just leave me alone #inner_monologue
 //GAVIN glares at the group. #
-#speaker_left_image:cha_zhihao_nadia_concerned.png
+#speaker_left_image:cha_zhihao_nadia_3_concerned.png
 #speaker_left_name:Nadia
-#speaker_right_image:cha_zhihao_gavin_angry.png
+#speaker_right_image:cha_zhihao_gavin_3_angry.png
 #speaker_right_name:Gavin
-Guys, cut it out. #speaker_right
+HEY! Cut it out. #speaker_right
 Both of you haven’t touched your food. #speaker_left
 It’s okay, I’m not hungry. Anyway we’ve got to go for Econs now. #speaker_right
 //GAVIN gets up. He pushes a five-dollar note across the table to ZHIHAO. #
@@ -2868,6 +2886,7 @@ Your computer game the drama, is that why Gavin don’t want to rent anymore? #s
     Nothing much. After a while he just tell me ‘okay Auntie’. You want to call him anot? Before he comes over? #speaker_left
     -> zhihao_3_9a
 }
+
 
 === zhihao_3_9a ===
 #knot:zhihao_3_9a
