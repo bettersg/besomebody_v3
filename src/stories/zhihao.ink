@@ -2015,8 +2015,8 @@ Did you just wake up?! #speaker_1
     Huh. Why sia? #wa_inner_monologue
     No #speaker_self
 - I’m getting scared, seriously. Why Aman never say what it is?     #wa_inner_monologue
-You should visit this.  #speaker_1
-twitter.com/TeamSGElites/status/1192799386574 #speaker_1
+You should visit this. And read the comments.   #speaker_1
+twitter.com/TeamSGElites/11927993 #speaker_1
 + [Visit the link] ok #speaker_self
 + [Do not visit the link] Have you opened the link? #speaker_1
     Lol later #speaker_self
@@ -2310,8 +2310,8 @@ I buay tahan how all the commenters tweet like they know me. Okay lah my joke is
 #speaker_5_tag:forjustice
 #speaker_6_name:Celestial Being
 #speaker_6_tag:celest3
-
 Ok I think best for me to ... #inner_monologue
+VAR zhihao_3_gamingoutcome = ""
 + [Correct their assumptions about me] Privileged dumb male strikes again. The Gamergate refugees like ahao_gamer can't keep their mouths shut. #speaker_4
     ++ I dunno about Gamergate don’t anyhow presume can [] #speaker_self
     ++ Says the pot to the kettle  [] #speaker_self
@@ -2319,11 +2319,10 @@ Ok I think best for me to ... #inner_monologue
     ++ I’m not from China lah idiot [] #speaker_self
     ++ Fyi I’m SGrean, and you’re the one who’s racist about China [] #speaker_self
 	-- @ahao_gamer. JUST. APOLOGISE. ALREADY. #speaker_3
-    ++ [Might as well ignore these losers sia]
+    ++ [Might as well ignore these losers sia] It’s true that autistic ppl throw tantrums. I’m just saying a fact not hating on them. You can go ask the special ed teachers  #speaker_self
         VAR zhihao_3_tweetstorm = 1
         ~ zhihao_3_tweetstorm = 1
-        VAR zhihao_3_petitionsuccessful = true
-        It’s true that autistic ppl throw tantrums. I’m just saying a fact not hating on them. You can go ask the special ed teachers  #speaker_self
+        ~ zhihao_3_gamingoutcome = "toxic"
         true tho #speaker_1
         his is the WORST take. The worst take. #speaker_4
         #speaker_5_name:Jos
@@ -2343,7 +2342,7 @@ Ok I think best for me to ... #inner_monologue
         
     ++ [Aiyah. If I apologise maybe they’ll stop attacking.]  I’m sorry I tweeted an offensive joke. #speaker_self
         ~ zhihao_3_tweetstorm = 2
-        ~ zhihao_3_petitionsuccessful = false
+        ~ zhihao_3_gamingoutcome = "quit"
         Finally. #speaker_3
         Would appreciate it if people can stop threatening and harassing me TYVM #speaker_self
         Talk about playing the victim. Leave Alphas first and MAYBE the ‘harassment’ will stop. But people have every right to call you out. Creating a petition now #speaker_6
@@ -2360,7 +2359,7 @@ Ok I think best for me to ... #inner_monologue
     This is disrespectful to all the female creators who received harassment and DEATH THREATS #speaker_5
     ++ [Defend yourself] Tbh yall overreacting sia. I’M the one getting harassed now hello #speaker_self
         ~ zhihao_3_tweetstorm = 3
-        ~ zhihao_3_petitionsuccessful = true
+        ~ zhihao_3_gamingoutcome = "toxic"
         @ahao_gamer. JUST. APOLOGISE. ALREADY. #speaker_3
         All the people who are threatening and harassing me to apologise-- double standard lah yall #speaker_self
         Talk about playing the victim. Leave Alphas first and MAYBE the ‘harassment’ will stop. But people have every right to call you out. Creating a petition now #speaker_6
@@ -2368,7 +2367,7 @@ Ok I think best for me to ... #inner_monologue
     
     ++ [Apologise] I apologise for the offensive tweets. I didn’t know any better. #speaker_self
         ~ zhihao_3_tweetstorm = 4
-        ~ zhihao_3_petitionsuccessful = false
+        ~ zhihao_3_gamingoutcome = "stay"
         Finally @ahao_gamer apologised. Took too long. #speaker_3
         @ahao_gamer You can be sure of this: No more Alphas for you. A petition’s on the way. #speaker_6
         // *Petition unsuccessful. ZH stays. Positive ending. 
@@ -2391,6 +2390,8 @@ Ok I think best for me to ... #inner_monologue
     Only people who don’t worry about money or work will kill others this way. Cos to them a bad joke costs more than a job.
     This whole shit is a joke lah.
 }
+
+
 
 -> zhihao_3_5e
 
@@ -2439,15 +2440,17 @@ Zhihao  #speaker_self
 .
 -> zhihao_3_6
 
+// MINIGAME GOES HERE
+
 === zhihao_3_6 ===
 #knot:zhihao_3_6
 #ui:narrator
 #background:black.jpg
 Thursday, 11:06am.
 At the usual Bak Chor Mee place.
+I’m supposed to meet Gavin at 11 A.M. Usually I’m the early one. I know I’m late but I’m scared sia.
 #ui:scene
 #background:bg_zhihao_bakchormee.jpg
-I’m supposed to meet Gavin at 11 A.M. Usually I’m the early one. I know I’m late but I’m scared sia.
 #speaker_right_image:cha_zhihao_gavin_grim.png
 #speaker_right_name:Gavin
 Good lah. At least Gavin never bring Nadia. #inner_monologue
@@ -2481,7 +2484,7 @@ I felt I’d betrayed her. #speaker_right
     ~ zhihao_3_explaintogavin = true
     Ehh, I really don’t hate her, bro. I’m not saying she’s a bad person. She’s not. #speaker_self
     You know you’re making strawmans right? #speaker_right
-    Wtf why everyone keep talking about strawman? #speaker_self
+    Wtf why everyone keep talking about strawman? #innner_monologue
     Uh I know you’re angry lah, but can don’t talk so cheem anot? #speaker_self
     You’re twisting what I’m saying. #speaker_right
     Orh. #inner_monologue
@@ -2543,13 +2546,12 @@ Aman: thesgjournal.co.sg/breakingnews #message
 #background:bg_zhihao_newsarticle.jpg
 WTF the drama never end issit. 
 That bloody journalist write this kind of article about me. Haiz.
-{ zhihao_3_tweetstorm == 2:
+{ zhihao_3_tweetstorm:
+- 2:
     Gamer Lim Zhihao’s Alphas spot hangs in the balance: The ‘racist’ Alphas gamer has apologised for his tweets - but it may come ‘too little too late’, says organiser Ian Lim.
-}
-{ zhihao_3_tweetstorm == 4:
+- 4:
     Alphas gamer Lim Zhihao’s career on thin ice: ‘Racist’ Alphas gamer Lim Zhihao apologises for tweets - but a growing petition is calling for his axing.
-}
-{  zhihao_3_tweetstorm == 1 or 3:
+- else:
     Racism, bigotry, and Chinese privilege in professional gaming: We ask local gamers about Lim Zhihao’s racist Twitter fiasco, and whether industry culture is to blame.
 }
 What is it? #speaker_right
@@ -2571,17 +2573,431 @@ Thank you. #speaker_self
 You alright? #speaker_left
 Yeah. I’m sorry. #speaker_self
 I know what you wrote. I was really upset, especially since we know each other and you were always nice to me. At least to my face. #speaker_left
++ [I'm sorry] Nadia, I’m sorry. I shouldn’t have posted that. I dunno why I did, but I don’t hate you. #speaker_self
+    I really don’t, sia. #speaker_self
+    What were you feeling before you wrote that? #speaker_left
+    … I was angry about something else. Some gaming thing. #speaker_self
+    And I dunno how it… yeah, I dunno why. #speaker_self
+    Aiyah it was a rubbish thing. #speaker_self
+    Zhihao, I know you don’t hate me. But you definitely don’t like that I’m “cramping” Gavin’s style, and yours by extension. #speaker_left
+    And you meant that part of it. Which was the whole tweet. #speaker_left
+
++ [I know you were hurt] Nadia, I know you were hurt by what I posted. I only did it cos I was-- #speaker_self
+    ...I was, uh… Gavin- #speaker_self
+    Shit, how to say what I feel? #inner_monologue
+    ...It got hard to go chill with Gavin. Cos both of you always pak tor. #speaker_self
+    It’s not cos I hate you or that kind of thing. #speaker_self
+    Who said anything about you hating me? #speaker_left
+    You missed Gavin’s company. And you saw me as a giant inconvenience who’d change all his habits and then change who he is to you. #speaker_left
+    Thing is, if it were a Chinese girl, you’d simply be ranting about time and friendship. #speaker_left
+    Or maybe you wouldn’t even have tweeted about it at all -- because it wouldn’t make people laugh. Right? #speaker_left
+
+- I-- no, I... #speaker_self
+I want you to know I’m not really angry anymore. Well, a lot less angry. Must have been a tough few days for you. I’ve seen what people tweeted. It’s terrible. #speaker_left
+...it’s okay. #speaker_self
+
+//A group of students passes their table. #
+#speaker_left_image:cha_zhihao_student_one_3_gossiping.png
+#speaker_left_name:Random Student 1
+#speaker_right_image:cha_zhihao_student_two_3_gossiping.png
+#speaker_right_name:Random Student 2
+
+I told you it’s that racist goon... ##speaker_left
+Eh omigod he’s crying leh! ##speaker_right
+Where? Ohh... ##speaker_left
+WTH is wrong with people. Why can't everybody just leave me alone #inner_monologue
+//GAVIN glares at the group. #
+#speaker_left_image:cha_zhihao_nadia_concerned.png
+#speaker_left_name:Nadia
+#speaker_right_image:cha_zhihao_gavin_angry.png
+#speaker_right_name:Gavin
+Guys, cut it out. #speaker_right
+Both of you haven’t touched your food. #speaker_left
+It’s okay, I’m not hungry. Anyway we’ve got to go for Econs now. #speaker_right
+//GAVIN gets up. He pushes a five-dollar note across the table to ZHIHAO. #
+Zhihao, here's cash for the lunch. Keep the change. For the food. Sorry we have to go. #speaker_right
+We always take turns to buy food. Now my treat he don’t even want to take. #inner_monologue
+You don’t need to pay me… #speaker_self
+Take care. #speaker_right
+Gav… #speaker_left
+I’m okay lah. Just go with Gavin. #speaker_self
+//ZHIHAO watches GAVIN and NADIA leave. NADIA is looking back at him in concern. #
+I not okay also cannot say, right. #inner_monologue
+
+-> zhihao_3_7
+
+=== zhihao_3_7 ===
+#knot:zhihao_3_7
+#ui:narrator
+#background:bg_zhihao_home.jpg
+That night, at home, while helping Ma in the kitchen.
+#ui:scene
+#background:bg_zhihao_home.jpg
+#speaker_left_image:cha_zhihao_mother_frustrated.png
+#speaker_left_name:Ma
+Eh when your Gavin friend going put his things in the room? #speaker_left
+You better ask him confirm so I can take leave and help him. One person alone cannot move all their barang. #speaker_left
++ [Come clean directly] He’s not actually renting lah. I asked him to bluff you so you got money to pay for Ah Gong. #speaker_self
+    Hah?!-- Eh. You stop and face me. You do what? He pay me is with whose money? #speaker_left
+    Is my money. #speaker_self
+    #speaker_left_image:cha_zhihao_mother_mean.png
+    Your money. You paying for your friend? #speaker_left
+    No. He stood in for me cos if not you won’t accept my money. #speaker_self
+    Why you go take down the ad? Now I need to look for tenant again. Waste time, you know. #speaker_left
+
++ [Avoid admitting to what you did] Better that we don’t rent out. #speaker_self
+    You say what? #speaker_left
+    I don’t want to mix my friends and money. #speaker_self
+    Haiyah! Then like that how! Now I have to put up ad again. #speaker_left
+    #speaker_left_image:cha_zhihao_mother_mean.png
+    Next time you don’t help lah, end up also prata. Now we back to square one. #speaker_left
+
+- I can pa-- #speaker_self
+{ zhihao_3_gamingoutcome:
+ - "quit":
+    Oh...I can’t pay. #inner_monologue
+    My whole career is dead now. #inner_monologue
+    Even if I still have fans, even if I still stream -- people will always call me the racist gamer. #inner_monologue
+    As long as I stream, my stupid joke will follow me. People will never let it go. #inner_monologue
+    Gavin will never let it go.  #inner_monologue
+    VAR zhihao_3_payrental = false
+    ~ zhihao_3_payrental = false
+    I’ll put up the ad again. Sorry Ma. #speaker_self
+- "stay":
+    Can I still pay? I dunno if I’m still with Alphas. #inner_monologue
+    But if they still give me chance, then I can prove myself. Change my image and make sure people know the real me.  #inner_monologue
+    Most important is that I keep my word to pay. I already bluff Ma and now I make her worry again. #inner_monologue
+    No matter what outcome, I’ll make sure she won’t  worry about Ah Gong. #inner_monologue
+    ~ zhihao_3_payrental = true
+    I will pay.  #speaker_self
+- "toxic":
+    Can I still pay? #inner_monologue
+    I must keeping paying. Even if Alphas kicks me out, I can still stream. #inner_monologue
+    You know what? If they don’t drop me yet I’ll withdraw. Show people that if they just wanna see me die, they can go jiak sai (eat shit). #inner_monologue
+    I’ll show them I’m a strong person. Cos I am. Cos they don’t know me. #inner_monologue
+    When I’m successful, they WILL know me. #inner_monologue
+    ~ zhihao_3_payrental = true
+    Let me pay. #speaker_self
+}
+
+-> zhihao_3_8
+
+=== zhihao_3_8 ===
+#knot:zhihao_3_8
+#ui:narrator
+#background:bg_zhihao_home.jpg
+Time passed. It's Chinese New Year again, already.
+{ zhihao_3_gamingoutcome:
+ - "quit":
+    I pulled out of Alphas. I wrote Ian an email to say I resign. 
+    I no matter how many times I say I don’t think like that anymore, people still say I’m haven’t changed. So many months already but still got people dm me to go and die.
+    So I quit streaming also. Bo pian. 
+    When Ma found the tenant for the master bedroom, I really damn heart pain. Cos I failed Pa.
+    Sometimes at night I pretend the whole thing never happened. 
+    But whenever I hear the tenant play his techno shit at 1am, or whenever I have to close my window cos of his cigarette smoke, I know how much I failed.   
+    And I cannot tell Gavin about these things anymore. 
+    When I think about Gavin, I start thinking of Pa also. And now I see it’s a good thing he’s dead – so he won’t know how I failed. 
+- "stay":
+    Alphas kept me in the end. The backlash at first very bad lah, but Ian said that cos I apologised early, and also cos it’s a hard lesson, he knows I won’t repeat the mistake. 
+    Actually it wasn’t really cos I scared I kena kick out by Alphas. It was cos of Gavin. 
+    Some people think I still hold the same view, just that I got learn to censor. 
+    But I don’t hold that view anymore. Not after I lost a brother in Gavin. Not after Nadia still go look out for me cos she saw I was depressed.
+    Am I better now? Maybe I’m a better person, but I don’t feel better.
+    The good thing is that I’m successful now. I don’t take it for granted.
+-  "toxic":
+    Alphas dropped me long ago The petition hit 10k signatures after people went to dig up all my past tweets.    
+    But it’s best like that. They’re PC, I’m not. And I have to stand up for myself. I still stream.
+    I don't have to be PC to be popular. I found out I got a lot of loyal supporters. They mean a lot to me, cos they helped me survive and pay for Ah Gong. I owe my success to them.
+    I don’t like to talk about Gavin. I try to keep busy so I don’t get think about it. Because if I do, I… I dunno how to describe the feeling. 
+    It’s something like when I know Pa won’t come back. 
+    I never thought it’d happen again – with someone I still see in school. First I lose Pa, now I lose my brother too.
+}
+#background:bg_zhihao_car.jpg
+Ma and I are on the way to my uncles' place for Chinese New Year lunch.
+Also, we are late. Again.
+#ui:scene
+#background:bg_zhihao_car.jpg
+#speaker_left_image:cha_zhihao_mother_normal.png
+#speaker_left_name:Ma
+... #speaker_self
+Why you so quiet? #speaker_left
+Nothing to talk about. #speaker_self
+...You okay anot? #speaker_left
+She still dunno what happened cos she don’t follow this online news. #speaker_self
++ [Tell her about what happened] If Ji Gu or Dua Gu talk about me in the news, you don’t listen to them. #speaker_self
+    How come? What happened? #speaker_left
+    VAR zhihao_3_tellma = true
+    ~ zhihao_3_tellma = true
+    I wrote a joke and some people didn’t like it. #speaker_self
+    Don’t like don’t like lor. Why become news? #speaker_left
+    Ji Gu and Dua Gu will talk rubbish. You just ignore. #speaker_self
+    What joke you tell? #speaker_left
+    Nevermind lah, Ma. #speaker_self
+    {zhihao_3_payrental == true:
+        Tonight we eat steamboat, okay? I buy all your favourite already. #speaker_left
+        Why? #speaker_self
+        Long time you never eat. #speaker_left
+        What we celebrating? #speaker_self
+        Tsk, treat you cannot issit? #speaker_left
+        But for what? #speaker_self
+        For Ah Gong lah. You always helping pay the home fees. I cannot don’t treat you mah! #speaker_left
+    - else: 
+        Tonight we eat steamboat okay? Ask our tenant that Mr Chua join. #speaker_left
+        He born in ‘99 you call him Mr Chua. #speaker_self
+        Must respect a bit lah he paying rent to us what. #speaker_left
+        What we celebrating? #speaker_self
+        If not for Mr Chua, how to pay for Ah Gong? #speaker_left    
+    }
+
+
++ [Be vague] Got some drama. But too complicated so Ji Gu and Dua Gu will talk rubbish. #speaker_self
+    What drama? They disturb you you better tell me. #speaker_left
+    ~ zhihao_3_tellma = false
+    Outside drama. They will talk about it. #speaker_self
+    {zhihao_3_payrental == true:
+        Issit your computer game? #speaker_left
+        Something like that. I just don’t like they confirm talk about it. #speaker_self
+        ...if it’s money problem you better tell me. We can still rent out the room. Ma still got the agent’s number. #speaker_left
+        Don’t have problem lah. You don’t worry about the money. #speaker_self
+        You sure anot? #speaker_left
+        Yah lah. Is okay. #speaker_self
+
+    - else: 
+       Your computer game issit! I thought you stop already? #speaker_left
+        I stop liao. I just don’t like they confirm talk about it. #speaker_self
+        Aiyah you don’t care them lah. #speaker_left
+        Anyway we got the tenant that Mr Chua, don’t need to worry about the money, hah. You focus on your school is enough. #speaker_left
+    }
+
+- -> zhihao_3_9
+
+=== zhihao_3_9 ===
+#knot:zhihao_3_9
+#ui:scene
+#background:bg_zhihao_jigu_livingroom.jpg
+#speaker_left_image:cha_zhihao_mother_normal.png
+#speaker_left_name:Ma
+#speaker_right_image:cha_zhihao_jigu_normal.png
+#speaker_right_name:Ji Gu
+
+They whole day talk about Ji Gu’s reno. Then REITs. Then Ji Gu’s reno again. #inner_monologue
+Nothing about me. #inner_monologue
+Swee. #inner_monologue
+Ah Hao! That time I see on the Tweeter... #speaker_right
+WAH LAO EHHHH... #inner_monologue
+Wah, some people sibeh jialat. They dig and dig to sabo you, that's why must be careful what you write! #speaker_right
+Eh you say is your computer game why suddenly become something else? What you write? #speaker_left
++ [Ignore Ma and Ji Gu] It’s okay lah. Over liao. #speaker_self
++ [Talk about the incident briefly] I tweeted something they don’t like, so a lot of gamers not happy. #speaker_self
+- Oh issit...#speaker_right
+{ zhihao_3_gamingoutcome: 
+- "quit":
+    You got fired right? Haiyoh, people are terrible, you know, just cos they don’t like what you say they come after your rice bowl. #speaker_right
+    I quit streaming long time liao. Old news. #speaker_self
+    So what you doing now? #speaker_right
+    I do VOD reviews for other players, review their gameplay. Help them improve. #speaker_self
+    You earn enough anot? #speaker_right
+    Testing only. Must see first. #speaker_self 
+- "stay":
+    Luckily your team never fire you ah. This kind of thing people got lose everything, you know. #speaker_right
+    All swee. I still stream also. That thing very long ago liao. #speaker_self
+    Why your team want to fire you? #speaker_left
+    I didn’t get fired lah. #speaker_self
+    They that time want to fire you for what? #speaker_left
+    Was a misunderstanding. I apologised and all swee liao. #speaker_self
+    Haiyah, as long as you still earning is okay. #speaker_right
+- "toxic":
+    You got fired right? Haiyoh, people are terrible, you know, just cos they don’t like what you say they come after your rice bowl. #speaker_right
+    Sometimes better to just say sorry, make people happy first. #speaker_right
+    Apologise to strangers for what? My life is not their business. #speaker_self
+    I’m streaming different games now so all is okay. Still got my followers who like me. #speaker_self
+    Ma’s face damn hard to read. And she keeping quiet. Why sia? #inner_monologue
+}
+
+#ui:narrator
+#background:bg_zhihao_car.jpg
+In the car, on the way home. 
+#ui:scene
+#speaker_right_image:pixel.png
+#speaker_left_image:cha_zhihao_mother_normal.png
+#speaker_left_name:Ma
+Your computer game the drama, is that why Gavin don’t want to rent anymore? #speaker_left
+{zhihao_3_tellma == true:
+    Ma I tell you already, is I get Gavin to bluff you so you’ll take my payment for Ah Gong’s fees. #speaker_self
+    I know. But that day your mood can tell. I think to myself, confirm you fight with him that’s why you so fast own up right. #speaker_left
+- else:
+    Ma, I just don’t want to mix friends and money lah. I say already. #speaker_self
+    That day your mood can tell. I think to myself, confirm you fight with him that’s why so fast tell me. #speaker_left
+    You think I dunno Gavin give me your money one ah? #speaker_left
+}
++ [Admit to it] Yah was my fault. #speaker_self
+    So how? #speaker_left
+    #speaker_left_image:cha_zhihao_mother_frustrated.png
+    Like that lor. He don’t wanna talk to me I also cannot do anything. #speaker_self
+    How long already? #speaker_left
+    Since that day. #speaker_self
+
++ [Gloss over it] Whatever lah, we not talking anymore. #speaker_self
+    You got try anot? #speaker_left
+    #speaker_left_image:cha_zhihao_mother_frustrated.png
+    He go his way I go my way. Nothing wrong what. #speaker_self
+    If nothing wrong then why since that day you stop going out to find your friends? Even Aman ask you you still stay at home. #speaker_left
+    ... #speaker_self
+
+- { zhihao_3_gamingoutcome: 
+- "toxic":
+    I called him and invited him to our steamboat. Together with Aman. #speaker_left
+    Siao ah! #speaker_self
+    #speaker_left_image:cha_zhihao_mother_normal.png
+    Wah, I better set up Diablo for us, is his favourite-  #inner_monologue
+    I tell them I already get the food for you all cannot waste. But only Aman is coming. #speaker_left
+    ...eh what. #inner_monologue
+    Orh. Gavin got say anything? #speaker_self
+    Nothing much. He just wish you and me happy CNY. He say he got church gathering leh. You want to call him anot? #speaker_left
+    Of course he won’t come, I’m the idiot to think he said yes. #inner_monologue
+    No. No point. #speaker_self
+    But thank you, Ma. #speaker_self
+    -> zhihao_3_toxicending
+- else: 
+    I called him. He’s coming tonight with Aman. #speaker_left
+    #speaker_left_image:cha_zhihao_mother_smiling.png
+    Siao ah! #speaker_self
+    He’s okay. I tell him I already get the food for you all cannot waste. #speaker_left
+    Is he really coming cos of me or cos Ma ask him then he paiseh? #inner_monologue
+    What did he say? #speaker_self
+    Nothing much. After a while he just tell me ‘okay Auntie’. You want to call him anot? Before he comes over? #speaker_left
+    -> zhihao_3_9a
+}
+
+=== zhihao_3_9a ===
+#knot:zhihao_3_9a
+#ui:scene
+#background:bg_zhihao_car.jpg
+#speaker_left_image:cha_zhihao_mother_normal.png
+#speaker_left_name:Ma
+
++ [Call Gavin] Wah scary, sia. I dunno what GAVIN is thinking. #inner_monologue
+    #background:ui_zhihao_phonecall.jpg    
+    But if he got say okay to the dinner then means he—- #inner_monologue
+    #speaker_right_image:cha_zhihao_gavin_3_grim.png
+    #speaker_right_name:Gavin
+    #speaker_left_image:pixel.png
+    Hey #speaker_right
+
++ [Don't call Gavin] Nevermind. #speaker_self
+    You sure? #speaker_left
+    I talk to him when he comes lor. #speaker_self
+    #background:ui_zhihao_phonecall.jpg
+    #speaker_right_image:cha_zhihao_gavin_3_grim.png
+    #speaker_right_name:Gavin
+    #speaker_left_image:pixel.png
+    Shit. He call to pangseh issit? #inner_monologue
+    Hey.  #speaker_right
+- Hey bro.  #speaker_self
+
++ [You coming later right?] Uh. You coming to my house for dinner later right? #speaker_self
+    Yeah. Your mum’s persistent. #speaker_right
+    Dunno whether he wanna back out. #inner_monologue
+    
+    ++ [I better make sure he shows up] Oh haha. Yah she like that one. #speaker_self
+        How are you? #speaker_right
+        Sama-sama lor. #speaker_self
+    ++ [If he really don't want then no point la] Eh, if you really don’t want to come, it’s okay one.#speaker_self
+    -- I heard from your mum you’ve been keeping to yourself a lot. #speaker_right
+    ++ Aiyah, she drama lah[]  #speaker_self
+    ++ Busy mah [] #speaker_self
+        {zhihao_3_gamingoutcome == "stay":
+            I need to stream #speaker_self
+        - else:
+            I need to study #speaker_self
+        }
+
++ [How are things?] How are things? #speaker_self
+    Things are good. Did your mum tell you Aman and I are coming over later? #speaker_right
+    Yah. #speaker_self
+    Awks sia. What do I say? #inner_monologue
+    ++ How are you and Nadia [] #speaker_self
+        We’re doing well. Nadia’s killing it as usual with the mid-terms.  #speaker_right
+    ++ Good that you and Aman are coming. [] If not sibeh sian Haha. #speaker_self
+
+- I.. um. Look, I know you’ve had a rough set of months. And I’ve been reflecting on this – I wasn’t there for you because I was angry. #speaker_right
+But I should have been. #speaker_right
+Is he trying to say sorry? But what for? #inner_monologue
+Eh, it was my fault lah. I understand if you don’t wanna stay friends. Don’t have to say yes to my mother. #speaker_self
+Uh, if you really don’t want to come. #speaker_self
+I’ll see you at your place at seven. Happy CNY, by the way. #speaker_right
+Woah. For real anot? #inner_monologue
+It’s a big weight off my shoulders. I feel like… #inner_monologue
+Can just cry sia. #inner_monologue
+Haha ‘kay bro. Happy CNY. #speaker_self
+ {zhihao_3_gamingoutcome:
+ - "stay": -> zhihao_3_stayending
+ - "quit": -> zhihao_3_quitending
+}
+
+
+=== zhihao_3_stayending ===
+#knot:zhihao_3_stayending
+#ui:narrator
+#background:bg_zhihao_steamboat.jpg
+It’s hard for me to look back on the past year. I lost face, I lost my game rep, I lost friends. The only people who can understand are people who also got hantam-ed online and made the news.
+VAR chapter_3_ending = 1
+~ chapter_3_ending = 1
+VAR story_finished = true
+~ story_finished = true
+But I dunno any of them, so when this kind of cancellation happens, there is no one you can turn to. No one who can help you rebuild your rep. 
+I can say that those days when I was trending, when everyone in SG knew my name and my tweets and never let them go – those days were almost as bad as the days after Pa died. 
+Sucks to compare it like that lah but that’s the truth sia. 
+But you know what? I’m still standing. And the people who matter are still with me – even after I did them wrong.
+I’m a lucky man, and now a damn grateful one. So this is what it’s like so far to be me. No regrets, swee. 
+-> zhihao_3_ending
+
+=== zhihao_3_quitending ===
+#knot:zhihao_3_quitending
+#ui:narrator
+#background:bg_zhihao_steamboat.jpg
+It’s hard for me to look back on the past year. I lost my rep, I quit my career, I lost friends. The only people who can understand are people who also got hantam-ed online and made the news.
+~ chapter_3_ending = 2
+~ story_finished = true
+But I dunno any of them, so when this kind of cancellation happens, there is no one you can turn to. No one who can help you rebuild your rep. 
+I can say that the week I quit streaming, and when Ma put up the master bedroom for rent again – it was almost as bad as the week Pa died. 
+So everytime I see that Mr Chua at home, it’s damn heart pain sia. Cos I failed to help Ma. I have to tell myself that I still got a long road, and I still got time to make Pa proud again.
+But you know what? I’m standing. And the people who matter are still with me – even after I did them wrong. I’m a lucky man, and this is what it’s been like, so far, to be me. 
+
+-> zhihao_3_ending
+
+=== zhihao_3_toxicending ===
+#knot:zhihao_3_toxicending
+#ui:narrator
+#background:bg_zhihao_steamboat.jpg
+I could have made different decisions in the past. But career-wise, I’m damn steady.
+~ chapter_3_ending = 3
+~ story_finished = true
+For a while, I lost my game rep, and I lost friends. When people die-die want you to lose your job over a joke, you start seeing how everyone can be an asshole – and most people never think of themselves as one.
+But I got no regrets standing up for myself - no tweet should cost anyone their ricebowl. No matter how offensive it is.
+Maybe it was a good thing I lost my place in Alphas, cos now I know that my real fans stick with my streaming. 
+One thing I hope for is that, eventually, Gavin and I will be friends again. And that he’ll forgive me for the one joke I now know I die-die cannot make. If we make up before we graduate, I’ll be the happiest person in the world. Serious.
+But I’m already a lucky man for keeping my streaming career. I can’t expect anything more. I can only hope for the best. So here’s my life now, lor. And this is what it’s been like, to be me. 
 
 
 
+-> zhihao_3_ending
 
 
+=== zhihao_3_ending ===
+#knot:zhihao_3_ending
+#ui:story_end
+#reflection_id:13
+Reflection 13
 
 
+-> END
 
 
-
-
+=== story_end_browser ===
+#ui:story_end_browser
+#reflection_id:4
+reflection browser
 
 
 -> END

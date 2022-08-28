@@ -873,6 +873,95 @@ export const MINI_GAME_MAP = [
     },  
   ],
   },
+// zhihao 3
+{
+  game_id: 13,
+  ui: "mcq",
+  introduction: "Sometimes the world can get you down. Dealing with depression and sadness can be tough.",
+  questions: [
+    {
+      question_id: 1,
+      question:
+        "Which demographic group has the higher percentage of mental health concerns, based on a 2020 MOH survey?",
+      type: "text",
+      correct_answer_id: 2,
+      explanation:
+        "The prevalence of Indian women (21 per cent) with poor mental health was almost doubled that of Indian men (11 per cent) while the gender differences among the Chinese (~12.6%) and Malays (~16.3%) were much narrower. [MOH Survey, 2020]",
+      answers: [
+        {
+          answer_id: 1,
+          title: "Chinese men",
+        },
+        {
+          answer_id: 2,
+          title: "Indian women",
+        },
+        {
+          answer_id: 3,
+          title: "Malay men",
+        },
+        {
+          answer_id: 4,
+          title: "Chinese women",
+        },
+      ],
+    },
+    // https://journals.sagepub.com/doi/full/10.1177/0004867420962851
+    {
+      question_id: 2,
+      question:
+        "Which of the following is a MYTH (i.e. not true) about depression?",
+      correct_answer_id: 4,
+      explanation: "All of these are myths. Depression can happen to anybody, and can be treated with the right help. [healthhub.sg]",
+      type: "text",
+      answers: [
+        {
+          answer_id: 1,
+          title: "Depression is rare and will not happen to me.",
+        },
+        {
+          answer_id: 2,
+          title: "Depression is temporary and will go away by itself.",
+        },
+        {
+          answer_id: 3,
+          title: "Depression can only be treated by medication.",
+        },
+        {
+          answer_id: 4,
+          title: "All of the above are myths",
+        },
+      ],
+    },
+    {
+      question_id: 3,
+      question:
+        "What are some of the effects of cyberbullying on the victim?",
+      type: "text",
+      correct_answer_id: 4,
+      explanation:
+        "All of the above. Anxiety caused by online bullying can have real health effects on a person.",
+        answers: [
+          {
+            answer_id: 1,
+            title: "Isolating yourself from others, absenteeism",
+          },
+          {
+            answer_id: 2,
+            title: "Drop in grades or work performance",
+          },
+          {
+            answer_id: 3,
+            title: "Sleeplessness",
+          },
+          {
+            answer_id: 4,
+            title: "All of the above",
+          },        
+        ],
+    },  
+  ],
+  },
 
   // unaisah 1
   {
