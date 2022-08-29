@@ -905,9 +905,10 @@ export const CHARACTER_MAP = [
         knotTag: "story_end_browser",
         summary: "Zhihao's story in the game has ended, but the stories of all our players are waiting to be explored.",
         playable: true,
-        discordLink: 'https://discord.gg/bszB9A5bt6',
+        discordLink:'https://discord.gg/bszB9A5bt6',
         images: [
-          "/images/bg_zhihao_intro.jpg",         
+          "/images/bg_launch.jpg",
+          "/images/bg_reflections.jpg",
         ],
         empathyCharacters: [
           {
@@ -930,7 +931,6 @@ export const CHARACTER_MAP = [
             characterName: 'Ma',
             characterImage: '/shareable_avatars/ma_z.png',
           },
-    
         ]
       },
     ]
