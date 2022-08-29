@@ -325,7 +325,7 @@ Wah issit? One month how much you make? #speaker_right
     So actually you can work more, lah. But because you still studying you cannot, right? #speaker_right
     Yah. #speaker_self
     Eh, Ah Mei! You want your son to work or study? #speaker_right
-    Tsk, of course his studies come first. He can do both, he’s okay. #speaker_right
+    Tsk, of course his studies come first. He can do both, he’s okay. #speaker_left
     Not good lah. If he must concentrate on school, you must find passive income. #speaker_right
     Mei shi lah, Ji Gu. (It’s not an issue lah, Ji Gu.) #speaker_self
     I like to work. #speaker_self
@@ -767,7 +767,7 @@ And I cannot handle sia. I crack my head from this also still dunno why. But it 
 A GIRL GAMER. hullo @nur_ayesa #speaker_1
 Wah lao. Now got girl confirm distract everyone. #inner_monologue
 gurl gamer #speaker_2
-eh her name sound malay... maybe it's bakchormee's gf #speaker_3
+eh her name sound malay... maybe it's @bakchormee's gf #speaker_3
 ask if she's chio #speaker_3
 maybe not... if she's chao ta (burnt / too dark) lol #speaker_1
 lololololol 	#speaker_2			   
@@ -1030,7 +1030,7 @@ Hi Zhihao, /n /n Team Singapore Elites notes your gaming prowess on Twitch, and 
 #ui:narrator
 #background:ui_emailinbox.png
 Of course I’ll join them, their fan-base damn big. And I can earn SO much more! 
-Wah this one how to reply sia. Is formal correct anot? Or informal? Sekali (what if) I use wrong then he think I suaku (uncultured).
+Wah this one how to reply. Is formal correct anot? Or informal? Sekali (what if) I use wrong then he think I suaku (uncultured).
 + [Formal safer] -> zhihao_2_1a
 + [Aiyah, I copy Ian's informal template] -> zhihao_2_1b
 
@@ -1102,12 +1102,12 @@ If she say ten means twenty. Opposite of Pa. #inner_monologue
 #chat_group_title:Ma
 #chat_group_image:ico_zhihao_mother.png
 #speaker_1_name:Ma
-Eh Ma, nevermind lah. I take taxi. #speaker_self
-Tsk, don’t waste money. #speaker_1
+Eh Ma, nevermind lah. I take taxi #speaker_self
+Tsk, don’t waste money #speaker_1
 I driving now. Fifteen min only. You wait hor! #speaker_1
 Wahlao eh, Ma! Ten or fifteen? No need come la, I book taxi liao #speaker_self
 //ZHIHAO ends the call. Switch to the Grab screen with the map showing 10 minutes ETA. #
-Wah piang, the Grab also take ten minutes. Like that how to reach on time sia?  #wa_inner_monologue
+Wah piang, the Grab also take ten minutes. Like that how to reach on time?  #wa_inner_monologue
 #ui:narrator
 #background:bg_zhihao_hdb_carpark.jpg
 10 minutes later, both Ma and the taxi arrived at the same time. 
@@ -1177,7 +1177,7 @@ Quick lah! Come in to the car. #speaker_left
 ~ zhihao_2_taketaxi = false
 Lai liao lah. #speaker_self
 Sorry, Uncle. I take my mother's car. #speaker_self
-It's ok boy. You paid already anyway. #speaker_right
+It's okay boy. You paid already anyway. #speaker_right
 //Ambient sound of car door closing, then opening. Shift to vantage point in MOTHER’s car, in the shotgun seat. #
 Eh Ma, must drive faster. #speaker_self
 I drive very fast already! Wait accident then you know. #speaker_left
@@ -1223,11 +1223,10 @@ I cannot lose control of my team, like that time during my stream session. #inne
 You're Ah Hao right? Your IGN (in-game name), at least. #speaker_right
 //A tall Chinese boy is now sitting beside ZHIHAO. He leans back easily in his chair with an air of confidence. #
 + Uh, yah that's me. [] #speaker_self
-    Wah piang. This one jiak kantang sia. #inner_monologue
+    Wah piang. This one jiak kantang. #inner_monologue
     Funny fella. He wanna wait for me to say what?  #inner_monologue
     Uh, my real name is Zhihao. #speaker_self
 + Yah, I'm the one and only ahao_gamer! [] #speaker_self
-    Yah, I’m the one and only Ahao. Haha. #speaker_self
     Wtf. This guy sibeh ang moh. #inner_monologue
     I see. And how may I address you? Just Ah-hao? #speaker_right
     Oh. Uh, my real name is Zhihao. #speaker_self
@@ -1278,7 +1277,7 @@ Fellas. We're gonna own them. Use your wits, go all out, be brutal! #speaker_rig
     Siao eh, this fella. #inner_monologue
     But we’re starting the game now, cannot anyhow lose focus. #inner_monologue
 
-- Ok. Match starting already liao.  #inner_monologue
+- Okay match starting liao.  #inner_monologue
 #ui:narrator
 #background:bg_zhihao_alphas.jpg
 First level is abandoned city. Steady. I know this one by heart. #inner_monologue
@@ -1439,7 +1438,6 @@ Yah yah the whole team all good. I’m not. #inner_monologue
     There you go, that’s your stupid-ass name. #speaker_right
     //TEAMMATES 1 and 2 are trying to hold back their laughter. #
     Jer. JERRRRR Hao. Who? #speaker_left
-    #speaker_right_image:cha_zhihao_alex_normal.png
     You “Jer Hao”-“Jer Hao” who? Zhi-Hao lah! #speaker_self
 
 + [Criticise Alex's gaming] Oi Alex. Every fight, you’re the first one to die. Cos you keep feeding them ult charge. #speaker_self
@@ -1452,6 +1450,8 @@ Yah yah the whole team all good. I’m not. #inner_monologue
     That’s because your instructions are crap. #speaker_right
 
 - The reality is, you're just a content creator. You give a lot of opinions. That’s the easy part. #speaker_right
+#speaker_right_image:cha_zhihao_alex_jealous.png
+#speaker_right_name:Alex
 But you don’t play a good game. You either give instructions too late or give unimportant ones. And that’s besides me struggling to make out what you’re saying. #speaker_right
 
 + [Argue back] Wtf I won’t let him tell me where I stand. #inner_monologue
@@ -1573,7 +1573,7 @@ Wah, she give up so fast. #inner_monologue
 //Montage of the aspects of the room with Pa’s things, eg. a framed wedding picture, a planner, letters in envelopes, a Casio watch, a box of folded men’s shirts etc. #
 All of Pa’s things still here in the room. What’s she going to do? Pack them all up? Give them away? #inner_monologue
 + [Confront Ma] So just like that you let Pa go? #speaker_self
-    Who say I let him go? You better watch what you say ah. #speaker_left
+    Who say I let him go? You better watch what you say okay. #speaker_left
     VAR zhihao_2_confrontma = true
     ~ zhihao_2_confrontma = true
     I can pay the fees, you know. #speaker_self
@@ -1644,7 +1644,7 @@ Hey bro #speaker_1
 {chapter_1_ending_1:
     Crap. I delete the tweet liao how come he still know? #wa_inner_monologue
     - else: 
-    Crap. Must be he saw the tweet.#wa_inner_monologue
+    Shit. Must be he saw the tweet.#wa_inner_monologue
 }
 Hey.. #speaker_self
 + [Play it cool] What's up? #speaker_self
@@ -1698,7 +1698,7 @@ Oh...#speaker_self
     Then everytime we eat bakchormee she eat different food like very out #speaker_self
     Cannot lah #speaker_self
     If you feel paiseh we don’t have to eat bakchormee lol #speaker_1
-    Haiz. That’s why my tweet is the truth. #wa_inner_monologue
+    Haiz. See, that’s why my tweet is the truth. #wa_inner_monologue
     We should still eat bakchormee lah #speaker_self
     Kk, see you then #speaker_self
 
@@ -1717,7 +1717,7 @@ Btw you wanted to tell me about some tweet earlier? #speaker_1
 + [Try to cover it up] Lol I forgot what tweet alr #speaker_self
     VAR chapter_2_ending = 1
     ~ chapter_2_ending = 1
-    Nothing impt. Nowadays i got a lot of followers, so got too many tweets la. #speaker_self
+    Nothing impt. Nowadays I got a lot of followers, so got too many tweets la. #speaker_self
     Oh lol #speaker_1
     Anw excited to intro you to have you get to know Nad better #speaker_1
     Been waiting for it for a long time #speaker_1
@@ -1818,7 +1818,7 @@ She keeping quiet. Confirm she under a lot of pressure with the money. #inner_mo
     Oi! #speaker_self
     You will send him your money. Cannot. #speaker_left
 - Wah lao. Help her solve problem she want to give problem. #inner_monologue
-Hmmm.. maybe I can solve this with some creativity without her finding out. #inner_monologue
+Hmmm.. maybe I can bluff a bit, she won't know. #inner_monologue
 + [Contact the agent] -> zhihao_3_1a 
 + [Ask Gavin to help] -> zhihao_3_1b
 
@@ -1875,7 +1875,7 @@ TYVM #speaker_self
 That's what friends are for man. Anytime bro. #speaker_1
 Hahaha you better meet Nad and me on Thu #speaker_1
 Yah lah #speaker_self
-Nadia, Nadia. Everything also Nadia. I got real problems to deal with here la. #wa_inner_monologue    
+Nadia, Nadia. Everything also Nadia. As if my own problems not enough. #wa_inner_monologue    
     
 -> zhihao_3_2    
 
@@ -1902,9 +1902,9 @@ Hi Zhihao, /n /n  On behalf of Team Singapore Elites, we would like to nominate 
 
 #ui:narrator
 #background:ui_emailinbox.png
-WOOOHOOOOOOOOOOOOOOOooooooo! 
-Ok, calm down. Must reply. 
-Should I show Ian that I CAN communicate properly or should I try to build a more casual relationship?
+WOOOHOOOooooo! 
+Ok Leng jing (calm down). Must reply. 
+Should I show Ian that I CAN communicate properly or should I be more casual?
 
 + [Accept formally] -> zhihao_3_2b
 + [Send a casual reply] -> zhihao_3_2c
@@ -2006,7 +2006,7 @@ Wah piang I just now then wake up, check what? #wa_inner_monologue
 What happened on twitter #speaker_self
 😱 #speaker_1
 Did you just wake up?! #speaker_1
-+ [Might as well tell him] Yeah #speaker_self
++ [Might as well tell him] Ya #speaker_self
     I havent checked #speaker_self
 + [Wahlao he think I do nothing all day ah] No lah #speaker_self
     Was busy this morning. Trying to sort out my mother and the rent #speaker_self
@@ -2014,10 +2014,10 @@ Did you just wake up?! #speaker_1
     Have you talked to Gavin today? #speaker_1
     Huh. Why sia? #wa_inner_monologue
     No #speaker_self
-- I’m getting scared, seriously. Why Aman never say what it is?     #wa_inner_monologue
-You should visit this. And read the comments.   #speaker_1
-twitter.com/TeamSGElites/11927993 #speaker_1
-+ [Visit the link] ok #speaker_self
+- You should visit this. And read the comments.   #speaker_1
+I’m getting scared, seriously. Why Aman never say what it is?     #wa_inner_monologue
+twitter/TeamSGElites/119293 #speaker_1
++ [Visit the link] kk #speaker_self
 + [Do not visit the link] Have you opened the link? #speaker_1
     Lol later #speaker_self
     Best to do it now so you can work out how to answer Gavin #speaker_1
@@ -2091,7 +2091,7 @@ Sia lah, I cannot. I really cannot deal #wa_inner_monologue
 #chat_group_image:ico_aman.png
 #speaker_1_name:Aman
 Are you ok? #speaker_1
-+ Uh, yeah [] #speaker_self
++ Uh, ya? [] #speaker_self
     Don’t have to paiseh. I'm here if you need to talk #speaker_1
     I’m ok. But not sure what to do #speaker_self
     I haven't seen him like this before #speaker_1
@@ -2131,12 +2131,12 @@ Yikes another typical chinese singaporean male #speaker_2
 Inb4 he's cancelled #speaker_4
 #speaker_1_name:farrah
 #speaker_1_tag:nerf_hitscan
-I'm bringing popcorn to this cancelling 🍿🍿🍿 #speaker_1
 { chapter_1_ending == 1: 
     WTF. I deleted the tweet quickly. Who the hell took a screenshot?! SIAO #inner_monologue
 - else:
     WTF. That tweet has been reshared 2300 times! And it's a trending topic? WTF seriously  #inner_monologue
 }
+I'm bringing popcorn to this cancelling 🍿🍿🍿 #speaker_1
 #speaker_3_name:INTJ
 #speaker_3_tag:intjguy99
 @ahao_gamer you're a trash person.  #speaker_3
@@ -2174,7 +2174,7 @@ Shit. Gavin is calling  #inner_monologue
 #knot:zhihao_3_5
 #ui:scene
 #background:ui_zhihao_phonecall.jpg
-#speaker_right_image:cha_zhihao_gavin_3_betrayed.png
+#speaker_right_image:cha_zhihao_gavin_3_angry.png
 #speaker_right_name:Gavin
 ... #speaker_self
 ~ zhihao_3_answergavin = true
@@ -2183,6 +2183,7 @@ Shit. Gavin is calling  #inner_monologue
     It was a joke. #speaker_self
     Fml he sibeh quiet sia. #inner_monologue
     Okay lah the joke was bad-- #speaker_self
+    #speaker_right_image:cha_zhihao_gavin_3_angry.png
     Funny how you’d hide a joke from me. Almost like you didn’t want me to know. #speaker_right
     I didn’t hide it! I... #speaker_self
     { chapter_1_ending == 1: 
@@ -2191,9 +2192,9 @@ Shit. Gavin is calling  #inner_monologue
     Forgot about it. I didn’t tell anyone-- #speaker_self
     }
     FOR GOD’S SAKE, ZHIHAO! #speaker_right
-    #speaker_right_image:cha_zhihao_gavin_3_angry.png
     Shit… I never hear him shout before. #inner_monologue
     Gavin… can leng jing (chill) a bit? #speaker_self
+    #speaker_right_image:cha_zhihao_gavin_3_betrayed.png
     Look. I can’t listen to you talk right now. We’ll talk on Thursday. #speaker_right
     Yeah? #speaker_right
     …Yah. #speaker_self
@@ -2203,10 +2204,10 @@ Shit. Gavin is calling  #inner_monologue
 
 + [Wait for Gavin to speak] So when were you going to tell me? Or you were never intending to? #speaker_right
     Bro it was a joke only mah. I didn’t tell anyone also cos I wrote it for myself. #speaker_self
-    #speaker_right_image:cha_zhihao_gavin_3_angry.png
     Which you put out on a public platform. #speaker_right
     Jialat, what do I say now? #inner_monologue
     Look, I can’t talk to you about it over the phone. We’ll do it on Thursday. #speaker_right
+    #speaker_right_image:cha_zhihao_gavin_3_betrayed.png
     You’ll show up, yeah? #speaker_right
     …Yah. #speaker_self
     //GAVIN ends the call. #
@@ -2249,9 +2250,9 @@ Man, every thread here is jialat (bad). #inner_monologue
 he should be banned from alphas #speaker_4
 he should be banned from living #speaker_3
 Wah lao I wrote those tweets in sec school, why must dig up so far back? #inner_monologue
-Now of course I won't write this kind of thing lah. If they want me banned then like that then everyone who wrote stupid shit when they young should be cancelled now lah. #inner_monologue
+Now of course I won't write this kind of thing lah. If they want me banned then like that everyone who wrote stupid shit when they young should be cancelled now lah. #inner_monologue
 We are aware about the current situation regarding Lim "Ahao" Zhihao. We are investigating the situation internally. #speaker_5
-As an organisation, we do not condone racism or sexism on any level. We believe that video games should be a safe, inclusive space for everyone. Our professional players should reflect the principles of the Alphas World Cup and Team Singapore Elites. #speaker_5
+As an organisation, we do not condone racism or sexism on any level. We believe that the gaming world should be a safe, inclusive space for everyone. Our professional players should reflect the principles of the Alphas World Cup and Team Singapore Elites. #speaker_5
 It is our hope that Mr Lim can return with the focus that it takes to play at the Alphas World Cup. #speaker_5
 Another meaningless PR statement #speaker_6
 #speaker_2_name:Aaron Lee
@@ -2276,7 +2277,7 @@ Leng jing yi xia. (Calm down for a bit.) #inner_monologue
 This whole thing is too much lah. I can’t deal. Suan le (forget it) lah I’ll just go back to sleep. #inner_monologue
 Ah Boy, your Gavin friend want to talk to you. Why you never pick up your phone? #speaker_left
 Wah lao Gavin... #inner_monologue
-I just wannna sleep here and forget everything lah. #inner_monologue
+I just wanna sleep here and forget everything lah. #inner_monologue
 And after that maybe everyone will forget. Then all swee-swee liao. #inner_monologue
 I got headache. Need to sleep. #speaker_self
 //MOTHER returns to the call on her phone. #
@@ -2465,7 +2466,9 @@ Good lah. At least Gavin never bring Nadia. #inner_monologue
 I better walk faster. #inner_monologue
 Shit. His face chao black, I dunno how we can talk now. #inner_monologue
 Hi. #speaker_self
+#speaker_right_image:cha_zhihao_gavin_3_angry.png
 ... #speaker_right
+#speaker_right_image:cha_zhihao_gavin_3_grim.png
 Uh. #speaker_self
 You not buying food? #speaker_self
 You can get yours if you’re hungry. #speaker_right
@@ -2479,22 +2482,28 @@ I bought two bowls of bak chor mee. Got him watermelon juice also.
 #speaker_right_image:cha_zhihao_gavin_3_betrayed.png
 #speaker_right_name:Gavin
 I got for you also. You haven’t eat yet right? #speaker_self
+He's not touching his food. #inner_monologue
+#speaker_right_image:cha_zhihao_gavin_3_angry.png
 I’ve never heard that kind of sentiment about Nadia from you. And I had to be the last to know. #speaker_right
+#speaker_right_image:cha_zhihao_gavin_3_betrayed.png
 Wah straight away start this topic ah. #inner_monologue
 It was a joke... I don’t hate Nadia. #speaker_self
-#speaker_right_image:cha_zhihao_gavin_3_betrayed.png
+#speaker_right_image:cha_zhihao_gavin_3_angry.png
 The only saving grace of this is that they didn’t dox her. #speaker_right
 Bro, I don’t hate Nadia lah. Serious! #speaker_self
 You know how ashamed I was that I couldn’t protect her? Because the attack had come from my closest circle? #speaker_right
+#speaker_right_image:cha_zhihao_gavin_3_betrayed.png
 I felt I’d betrayed her. #speaker_right
 + [I should explain properly] I didn’t attack her, sia. I was just saying now you need to change your lifestyle cos she Muslim. #speaker_self
     VAR zhihao_3_explaintogavin = true
     ~ zhihao_3_explaintogavin = true
     Ehh, I really don’t hate her, bro. I’m not saying she’s a bad person. She’s not. #speaker_self
+    #speaker_right_image:cha_zhihao_gavin_3_angry.png
     You know you’re making strawmans right? #speaker_right
-    Wtf why everyone keep talking about strawman? #innner_monologue
+    Wtf why everyone keep talking about strawman? #inner_monologue
     Uh I know you’re angry lah, but can don’t talk so cheem anot? #speaker_self
     You’re twisting what I’m saying. #speaker_right
+    #speaker_right_image:cha_zhihao_gavin_3_betrayed.png
     Orh. #inner_monologue
     Am I? #inner_monologue
 
@@ -2620,10 +2629,10 @@ I want you to know I’m not really angry anymore. Well, a lot less angry. Must 
 #speaker_right_image:cha_zhihao_student_two_3_gossiping.png
 #speaker_right_name:Random Student 2
 
-I told you it’s that racist goon... ##speaker_left
-Eh omigod he’s crying leh! ##speaker_right
-Where? Ohh... ##speaker_left
-WTH is wrong with people. Why can't everybody just leave me alone #inner_monologue
+I told you it’s that racist goon... #speaker_left
+Eh omigod he’s crying leh! #speaker_right
+Where? Ohh... #speaker_left
+WTH is wrong with people. Why can't everybody just leave me alone? #inner_monologue
 //GAVIN glares at the group. #
 #speaker_left_image:cha_zhihao_nadia_3_concerned.png
 #speaker_left_name:Nadia
@@ -2631,6 +2640,7 @@ WTH is wrong with people. Why can't everybody just leave me alone #inner_monolog
 #speaker_right_name:Gavin
 HEY! Cut it out. #speaker_right
 Both of you haven’t touched your food. #speaker_left
+#speaker_right_image:cha_zhihao_gavin_3_grim.png
 It’s okay, I’m not hungry. Anyway we’ve got to go for Econs now. #speaker_right
 //GAVIN gets up. He pushes a five-dollar note across the table to ZHIHAO. #
 Zhihao, here's cash for the lunch. Keep the change. For the food. Sorry we have to go. #speaker_right
@@ -2704,11 +2714,11 @@ You better ask him confirm so I can take leave and help him. One person alone ca
 #knot:zhihao_3_8
 #ui:narrator
 #background:bg_zhihao_home.jpg
-Time passed. It's Chinese New Year again, already.
+A lot of time passed. It's Chinese New Year again, already.
 { zhihao_3_gamingoutcome:
  - "quit":
     I pulled out of Alphas. I wrote Ian an email to say I resign. 
-    I no matter how many times I say I don’t think like that anymore, people still say I’m haven’t changed. So many months already but still got people dm me to go and die.
+    No matter how many times I say I don’t think like that anymore, people still say I’m haven’t changed. So many months already but still got people dm me to go and die.
     So I quit streaming also. Bo pian. 
     When Ma found the tenant for the master bedroom, I really damn heart pain. Cos I failed Pa.
     Sometimes at night I pretend the whole thing never happened. 
@@ -2723,15 +2733,15 @@ Time passed. It's Chinese New Year again, already.
     Am I better now? Maybe I’m a better person, but I don’t feel better.
     The good thing is that I’m successful now. I don’t take it for granted.
 -  "toxic":
-    Alphas dropped me long ago The petition hit 10k signatures after people went to dig up all my past tweets.    
+    Alphas dropped me long ago. You guess how many people signed the petition? 3k. After everyone went to dig up all my past tweets.    
     But it’s best like that. They’re PC, I’m not. And I have to stand up for myself. I still stream.
     I don't have to be PC to be popular. I found out I got a lot of loyal supporters. They mean a lot to me, cos they helped me survive and pay for Ah Gong. I owe my success to them.
-    I don’t like to talk about Gavin. I try to keep busy so I don’t get think about it. Because if I do, I… I dunno how to describe the feeling. 
+    I don’t like to talk about Gavin. I try to keep busy so I don’t get to think about it. Because if I do, I… I dunno how to describe the feeling. 
     It’s something like when I know Pa won’t come back. 
     I never thought it’d happen again – with someone I still see in school. First I lose Pa, now I lose my brother too.
 }
 #background:bg_zhihao_car.jpg
-Ma and I are on the way to my uncles' place for Chinese New Year lunch.
+So fast CNY again. Ma and I are on the way to my uncles' place to bai nian (visit for CNY).
 Also, we are late. Again.
 #ui:scene
 #background:bg_zhihao_car.jpg
@@ -2895,13 +2905,13 @@ Your computer game the drama, is that why Gavin don’t want to rent anymore? #s
 #speaker_left_image:cha_zhihao_mother_normal.png
 #speaker_left_name:Ma
 
-+ [Call Gavin] Wah scary, sia. I dunno what GAVIN is thinking. #inner_monologue
++ [Call Gavin] Wah scary, sia. I dunno what Gavin is thinking. #inner_monologue
     #background:ui_zhihao_phonecall.jpg    
     But if he got say okay to the dinner then means he—- #inner_monologue
     #speaker_right_image:cha_zhihao_gavin_3_grim.png
     #speaker_right_name:Gavin
     #speaker_left_image:pixel.png
-    Hey #speaker_right
+    Hey. #speaker_right
 
 + [Don't call Gavin] Nevermind. #speaker_self
     You sure? #speaker_left
@@ -2923,19 +2933,19 @@ Your computer game the drama, is that why Gavin don’t want to rent anymore? #s
         Sama-sama lor. #speaker_self
     ++ [If he really don't want then no point la] Eh, if you really don’t want to come, it’s okay one.#speaker_self
     -- I heard from your mum you’ve been keeping to yourself a lot. #speaker_right
-    ++ Aiyah, she drama lah[]  #speaker_self
-    ++ Busy mah [] #speaker_self
+    ++ Aiyah, she drama lah.[]  #speaker_self
+    ++ Busy mah. [] #speaker_self
         {zhihao_3_gamingoutcome == "stay":
-            I need to stream #speaker_self
+            I need to stream. #speaker_self
         - else:
-            I need to study #speaker_self
+            I need to study. #speaker_self
         }
 
 + [How are things?] How are things? #speaker_self
     Things are good. Did your mum tell you Aman and I are coming over later? #speaker_right
     Yah. #speaker_self
     Awks sia. What do I say? #inner_monologue
-    ++ How are you and Nadia [] #speaker_self
+    ++ How are you and Nadia? [] #speaker_self
         We’re doing well. Nadia’s killing it as usual with the mid-terms.  #speaker_right
     ++ Good that you and Aman are coming. [] If not sibeh sian Haha. #speaker_self
 
@@ -2980,8 +2990,9 @@ It’s hard for me to look back on the past year. I lost my rep, I quit my caree
 ~ story_finished = true
 But I dunno any of them, so when this kind of cancellation happens, there is no one you can turn to. No one who can help you rebuild your rep. 
 I can say that the week I quit streaming, and when Ma put up the master bedroom for rent again – it was almost as bad as the week Pa died. 
-So everytime I see that Mr Chua at home, it’s damn heart pain sia. Cos I failed to help Ma. I have to tell myself that I still got a long road, and I still got time to make Pa proud again.
-But you know what? I’m standing. And the people who matter are still with me – even after I did them wrong. I’m a lucky man, and this is what it’s been like, so far, to be me. 
+So every time I see that Mr Chua at home, it’s damn heart pain sia. Cos I failed to help Ma. I have to tell myself that I still got a long road, and I still got time to make Pa proud again.
+But you know what? I’m standing. And the people who matter are still with me – even after I did them wrong. 
+I’m a lucky man, and this is what it’s been like, so far, to be me. 
 
 -> zhihao_3_ending
 

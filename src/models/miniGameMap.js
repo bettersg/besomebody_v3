@@ -882,7 +882,7 @@ export const MINI_GAME_MAP = [
     {
       question_id: 1,
       question:
-        "Which demographic group has the higher percentage of mental health concerns, based on a 2020 MOH survey?",
+        "Which demographic group from the following list has the highest percentage of mental health concerns, based on a 2020 MOH survey?",
       type: "text",
       correct_answer_id: 2,
       explanation:
