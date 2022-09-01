@@ -841,6 +841,7 @@ export const CHARACTER_MAP = [
         discordLink: 'https://discord.gg/bszB9A5bt6',
         images: [
           '/images/bg_zhihao_bedroom.jpg',
+          '/images/bg_zhihao_promo.jpg',
           '/images/bg_zhihao_home.jpg',
           '/images/cha_zhihao_mother_normal.png',
           '/images/whatsapp.png',

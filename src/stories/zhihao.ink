@@ -1769,15 +1769,17 @@ Reflection 12
 === zhihao_3_intro ===
 #knot:zhihao_3_intro
 #ui:narrator
-#background:bg_zhihao_bedroom.jpg
+#background:bg_zhihao_promo.jpg
 Two days ago was my Alphas tryout. I really hope I get into the finals. 
 ~ chapter_id = 3
 But I dunno if the finals got clash with my exams. 
 Team SG Elites haven’t call or email back, so I a bit scared. Like that no answer very hard to focus. 
 But what to do? I worry about it also cannot change anything.
+#background:bg_zhihao_home.jpg
 I need to keep streaming, keep working. Next week we need to pay the old folks’ home fees for Ah Gong. 
 I tell Ma already don’t go rent out the master bedroom, but yesterday she ti-kee (stubborn) go send the agent the photos. 
 Today she wants results already. LOL.
+#background:black.jpg
 CHAPTER {chapter_id} #title
 Playing to the Crowd #title
 
@@ -2375,7 +2377,13 @@ VAR zhihao_3_gamingoutcome = ""
         // *Petition unsuccessful. ZH stays. Positive ending. 
 
 - 
-{ zhihao_3_tweetstorm == 2 or 4:
+{ zhihao_3_tweetstorm: 
+    - 2:
+    #ui:narrator
+    #background:bg_zhihao_petition.jpg
+    FML I say sorry already they still want to take away everything from me.
+    How much is enough sia? After they make sure Alphas drop me, will they make sure I’ll never be pro again?
+    - 4: 
     #ui:narrator
     #background:bg_zhihao_petition.jpg
     FML I say sorry already they still want to take away everything from me.
@@ -2431,7 +2439,7 @@ Best I die lah. Then the whole world will be happy.
 #emailfromicon:ico_zhihao.png
 #emailsubject:Interview request
 #replyemaildate:On Wed, Marcus, The Singapore Journal <marcusreginald.tan@thesgjournal.com> wrote 
-#replyemailtext: Dear Mr Lim Zhihao, /n I’m a senior staff writer for The Singapore Journal. I’m writing a feature on your recent controversy on Twitter and believe it’s important to have you share your side of the story. Are you available for an interview? We are planning to publish the feature before Friday.  /n /n  Best regards, /n  Marcus R. Tan, Senior Staff Writer, The Singapore Journal
+#replyemailtext: Dear Mr Lim Zhihao, /n ...
 Dear Marcus, #speaker_self
 ~ zhihao_3_interviewrequest = true
 I’d be happy to assist and tell my side. But I only want to communicate in writing so it is in black and white. #speaker_self
@@ -2977,6 +2985,7 @@ VAR story_finished = true
 But I dunno any of them, so when this kind of cancellation happens, there is no one you can turn to. No one who can help you rebuild your rep. 
 I can say that those days when I was trending, when everyone in SG knew my name and my tweets and never let them go – those days were almost as bad as the days after Pa died. 
 Sucks to compare it like that lah but that’s the truth sia. 
+#background:bg_zhihao_promo.jpg
 But you know what? I’m still standing. And the people who matter are still with me – even after I did them wrong.
 I’m a lucky man, and now a damn grateful one. So this is what it’s like so far to be me. No regrets, swee. 
 -> zhihao_3_ending
@@ -2991,6 +3000,7 @@ It’s hard for me to look back on the past year. I lost my rep, I quit my caree
 But I dunno any of them, so when this kind of cancellation happens, there is no one you can turn to. No one who can help you rebuild your rep. 
 I can say that the week I quit streaming, and when Ma put up the master bedroom for rent again – it was almost as bad as the week Pa died. 
 So every time I see that Mr Chua at home, it’s damn heart pain sia. Cos I failed to help Ma. I have to tell myself that I still got a long road, and I still got time to make Pa proud again.
+#background:bg_zhihao_promo.jpg
 But you know what? I’m standing. And the people who matter are still with me – even after I did them wrong. 
 I’m a lucky man, and this is what it’s been like, so far, to be me. 
 
@@ -3006,6 +3016,7 @@ I could have made different decisions in the past. But career-wise, I’m damn s
 For a while, I lost my game rep, and I lost friends. When people die-die want you to lose your job over a joke, you start seeing how everyone can be an asshole – and most people never think of themselves as one.
 But I got no regrets standing up for myself - no tweet should cost anyone their ricebowl. No matter how offensive it is.
 Maybe it was a good thing I lost my place in Alphas, cos now I know that my real fans stick with my streaming. 
+#background:bg_zhihao_promo.jpg
 One thing I hope for is that, eventually, Gavin and I will be friends again. And that he’ll forgive me for the one joke I now know I die-die cannot make. If we make up before we graduate, I’ll be the happiest person in the world. Serious.
 But I’m already a lucky man for keeping my streaming career. I can’t expect anything more. I can only hope for the best. So here’s my life now, lor. And this is what it’s been like, to be me. 
 
