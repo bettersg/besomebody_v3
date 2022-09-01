@@ -168,7 +168,7 @@
   {
    "id": 12,  
     "story":"Zhihao", 
-    "chapter":1,
+    "chapter":2,
     "didyouknow": "Despite being good at what he does, Zhihao still has feelings of inferiority. Find out how to deal with feelings like this.",
     "media": "https://www.straitstimes.com/singapore/social-media-use-can-trigger-feelings-of-inferiority-or-inadequacy-among-young-experts",
     "context": {
@@ -178,6 +178,29 @@
       9,2,11,1,3
     ]
   },
+  {
+    "id": 13,  
+    "story":"Zhihao", 
+    "chapter":3,
+    "didyouknow": "Social media has a dark side, and coping with it can be hard. Find out how others dealt with online toxicity.",
+    "mediatype" : "video",
+    "mediaimage" : "/didyouknow/zhihao_3_video.jpg",
+    "media": "https://www.youtube.com/watch?v=NFaVXeWixP8",
+    "context": {
+      "character_name": "Zhihao"
+    },
+    "quickQuestions": [     
+      9,      
+      2,
+      14,
+      10
+    ],
+    "longQuestions": [
+      1,      
+      3
+    ]
+  },
+
 
   {
     "id": 14,  

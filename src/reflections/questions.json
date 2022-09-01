@@ -267,5 +267,32 @@
         "image_url": "/reflection/avatars/roger.png"          
       }  
     ]
+  },
+  {
+    "id": 14,
+    "type": "MULTI_CHOICE_IMAGE",
+    "body": "Which character do you most resonate with in {character_name}’s journey?",
+    "choices": [
+      {
+        "id":1,
+        "body": "Zhihao" ,
+        "image_url": "/shareable_avatars/zhihao.png"  
+      },
+      {
+        "id":2,
+        "body": "Gavin",
+        "image_url": "/shareable_avatars/gavin_z.png"  
+      },
+      {
+        "id":3,
+        "body": "Nadia",
+        "image_url": "/shareable_avatars/nadia_z.png"  
+      },
+      {
+        "id":4,
+        "body": "Ma",
+        "image_url": "/shareable_avatars/ma_z.png"          
+      }  
+    ]
   }
 ]
