@@ -1844,7 +1844,7 @@ Nevermind just leave the the ad up. Thx #speaker_self
 Tough sia. #wa_inner_monologue
 Oh wait. I ask Gavin to help. #wa_inner_monologue
     
--> zhihao_3_2
+-> zhihao_3_1b
 
 === zhihao_3_1b ===    
 #knot:zhihao_3_1b
@@ -2058,7 +2058,7 @@ Insane roster! Can probably play any comp well if the players work together #spe
 Sweeee! I didn't realise they already announced it publicly!  #inner_monologue
 Kinda disappointed. What happened to the @crash rumours? He was epic. #speaker_1
 ahao_gamer? isn't it that toxic streamer #speaker_5
-Didn't ahao_gamer post a racist tweet some time ago? #speaker_6
+Didn't @ahao_gamer post a racist tweet some time ago? #speaker_6
 #speaker_1_name:blackwolf
 #speaker_1_tag:xxblackwolfxx
 This post didn't age well lol. F #speaker_1
@@ -2153,7 +2153,7 @@ I'm bringing popcorn to this cancelling 🍿🍿🍿 #speaker_1
 if you want to talk about privilege look at @ahao_gamer #speaker_5
 #speaker_4_name:Nyaa
 #speaker_4_tag:natthecat2
-Privileged dumb male strikes again. The Gamergate refugees like ahao_gamer can't keep their  mouths shut. #speaker_4
+Privileged dumb male strikes again. The Gamergate refugees like @ahao_gamer can't keep their  mouths shut. #speaker_4
 #speaker_3_name:Fight Me⚔️
 #speaker_3_tag:forjustice
 ahao_gamer looks like another brainwashed chi-na guy!#speaker_1
@@ -2240,7 +2240,7 @@ Shit. Gavin is calling  #inner_monologue
 #speaker_6_tag:celest3
 
 @ahao_gamer didn't do anythng wrong #speaker_1
-More people have replied to my tweet with examples of horrifying harmful rhetoric that ahao_gamer has spread. How has he not been cancelled earlier! Linking here so it's easier to follow (1/18) #speaker_2
+More people have replied to my tweet with examples of horrifying harmful rhetoric that @ahao_gamer has spread. How has he not been cancelled earlier! Linking here so it's easier to follow (1/18) #speaker_2
 // ZHIHAO clicks on the thread. There are screenshots of Zhihao's past tweets in the replies, along with lady_sprinkle_rainbow's text on top.
 He’s not just racist, he’s ableist too: "All of my teammates confirm autistic. Throw so many tantrums, dunno how they make it to 18 LOLZ" (2/18) #speaker_2
 Like excuse me: "NOOOO WHY THE DEVS CHANGE ARIA'S SKINS! Hide everything might as well change to burqas lah" (3/18) #speaker_2
@@ -2313,10 +2313,10 @@ I buay tahan how all the commenters tweet like they know me. Okay lah my joke is
 #speaker_5_tag:forjustice
 #speaker_6_name:Celestial Being
 #speaker_6_tag:celest3
-Ok... must reply I think best for me to ... #inner_monologue
+Ok... must reply. I think best for me too ... #inner_monologue
 Hey everybody, I'm reading these tweets. #speaker_self
 VAR zhihao_3_gamingoutcome = ""
-+ [Correct their assumptions about me] Privileged dumb male strikes again. The Gamergate refugees like ahao_gamer can't keep their mouths shut. #speaker_4
++ [Correct their assumptions about me] Privileged dumb male strikes again. The Gamergate refugees like @ahao_gamer can't keep their mouths shut. #speaker_4
     ++ I dunno about Gamergate don’t anyhow presume can [] #speaker_self
     ++ Says the pot to the kettle  [] #speaker_self
     -- @ahao_gamer looks like another brainwashed chi-na guy! #speaker_5
@@ -2356,8 +2356,8 @@ VAR zhihao_3_gamingoutcome = ""
     preach! #speaker_1
     #speaker_5_name:Jos
     #speaker_5_tag:joslim
-    When was ahao_gamer political #speaker_5
-    says a lot about singaporeans when even someone like ahao_gamer can have simps @simpforahao_gamer 🙄	#speaker_3
+    When was @ahao_gamer political #speaker_5
+    says a lot about singaporeans when even someone like @ahao_gamer can have simps @simpforahao_gamer 🙄	#speaker_3
     Strawman argument lol #speaker_5
     Wtf is a strawman? #inner_monologue
     This is disrespectful to all the female creators who received harassment and DEATH THREATS #speaker_5
@@ -2493,10 +2493,8 @@ I got for you also. You haven’t eat yet right? #speaker_self
 He's not touching his food. #inner_monologue
 #speaker_right_image:cha_zhihao_gavin_3_angry.png
 I’ve never heard that kind of sentiment about Nadia from you. And I had to be the last to know. #speaker_right
-#speaker_right_image:cha_zhihao_gavin_3_betrayed.png
 Wah straight away start this topic ah. #inner_monologue
 It was a joke... I don’t hate Nadia. #speaker_self
-#speaker_right_image:cha_zhihao_gavin_3_angry.png
 The only saving grace of this is that they didn’t dox her. #speaker_right
 Bro, I don’t hate Nadia lah. Serious! #speaker_self
 You know how ashamed I was that I couldn’t protect her? Because the attack had come from my closest circle? #speaker_right
@@ -2934,6 +2932,7 @@ Your computer game the drama, is that why Gavin don’t want to rent anymore? #s
 
 + [You coming later right?] Uh. You coming to my house for dinner later right? #speaker_self
     Yeah. Your mum’s persistent. #speaker_right
+    #speaker_right_image:cha_zhihao_gavin_3_concerned.png
     Dunno whether he wanna back out. #inner_monologue
     
     ++ [I better make sure he shows up] Oh haha. Yah she like that one. #speaker_self
@@ -2951,6 +2950,7 @@ Your computer game the drama, is that why Gavin don’t want to rent anymore? #s
 
 + [How are things?] How are things? #speaker_self
     Things are good. Did your mum tell you Aman and I are coming over later? #speaker_right
+    #speaker_right_image:cha_zhihao_gavin_3_concerned.png
     Yah. #speaker_self
     Awks sia. What do I say? #inner_monologue
     ++ How are you and Nadia? [] #speaker_self
