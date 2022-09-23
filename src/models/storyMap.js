@@ -1062,27 +1062,36 @@ export const CHARACTER_MAP = [
         chapterId: 3,
         number: 3,
         reflectionId:16,
-        title: "To Baby or not to baby?",
+        title: "A Labour of Love",
         knotTag: "unaisah_3_intro",
         summary: "Managing the consequences of her previous choices proves to be harder than she realised.",
-        playable: false,
+        playable: true,
         discordLink: 'https://discord.gg/9ttyzdsANY',
         images: [
-          "/images/bg_nadia_intro.jpg",
-          "/images/bg_nadia_bedroom.jpg",         
-          "/images/bg_nadia_fathercaratday.jpg",        
+          "/images/ui_unaisah_instagram.png",
+          
         ],
         endings: [
           {
             endingId: 1,
-            title: "Nadia and Gavin, together",
+            title: "Unaisah has no baby and is a JC teacher",
             inkVar: "chapter3_ending_1",
           },
           {
             endingId: 2,
-            title: "Nadia keeps her options open",
+            title: "Unaisah has no baby and is a Sec. School Vice Principal",
             inkVar: "chapter3_ending_2",
-          },         
+          },   
+          {
+            endingId: 3,
+            title: "Unaisah has a baby and is a JC teacher",
+            inkVar: "chapter3_ending_3",
+          },
+          {
+            endingId: 4,
+            title: "Unaisah has a baby and is a Sec. School Vice Principal",
+            inkVar: "chapter3_ending_4",
+          },        
         ]
       },
       // {
