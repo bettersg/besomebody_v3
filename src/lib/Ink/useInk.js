@@ -185,7 +185,7 @@ const useInk = (json, characterId) => {
       userId: currentUser.id,
       character: characterId,
       id: saveDataId,
-      email: currentUser.email,      
+      // email: currentUser.email,      // no impact if this is removed as the game does not pull emails from here. @ziwei to confirm if facil dashboard requires this.
       timestamp: new Date(),
       ...currentUser.activeRoom  ? { roomCode: currentUser.activeRoom } : {},
     }
