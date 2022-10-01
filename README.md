@@ -48,6 +48,12 @@ then run `npm start` to start the app on `localhost:3000`.
  
 The game uses Inky (by Inklestudios) as the backend for the narrative engine, and a custom React front end.
 
+### Deploying Cloud Functions
+
+To deploy the cloud functions in `/functions`:
+1. Ensure that you are logged in as the right user, by running `firebase login --reauth`
+2. Ensure that the project name being referenced in `.firebaserc` is correct
+3. Deploy the functions using `firebase deploy --only functions`
 
 ## Community
 

@@ -46,3 +46,27 @@ exports.incrementReflectionChoiceCounters = functions.firestore
       await choiceRef.update({ count: FieldValue.increment(1) });
     }
   });
+
+// Remove email field from users collection
+
+exports.removeEmailFieldFromUsersOnCreate = functions.firestore
+  .document('users/{docId}')
+  .onCreate(async (snap, context) => {
+    const { email } = snap.data();
+    if (!email) return;
+    const userRef = snap.ref;
+    await userRef.update({
+      email: FieldValue.delete(),
+    });
+  });
+
+exports.removeEmailFieldFromUsersOnUpdate = functions.firestore
+  .document('users/{docId}')
+  .onUpdate(async (change, context) => {
+    const { email } = change.after.data();
+    if (!email) return;
+    const userRef = change.after.ref;
+    await userRef.update({
+      email: FieldValue.delete(),
+    });
+  });
