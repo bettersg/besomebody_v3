@@ -1507,8 +1507,8 @@ Labour of love #title
 {chapter_2_ending == 1: 
     -> unaisah_3a_intro 
     - else: 
-    PLAYER CHOSE TO HAVE BABY BUT STORY NOT DONE. USING WITHOUT BABY STORY FOR TESTING
-    -> unaisah_3a_intro     // change this later 
+    // PLAYER CHOSE TO HAVE BABY BUT STORY NOT DONE. USING WITHOUT BABY STORY FOR TESTING
+    -> unaisah_3b_intro     // change this later 
     }
 
 
@@ -1987,14 +1987,60 @@ Reflection 15  // change this to 16 and add reflection.json
 // CHAPTER 3 WITH BABY
 
 === unaisah_3b_intro ===
+#knot:unaisah_3b_intro
 #ui:narrator
-NOT DONE YET
+#background:bg_unaisah_4_maternityshopping.jpg
+The last 9 months of preparing for the baby have been such a whirlwind.
+All the preparation...
+#background:bg_unaisah_CH4B_ultrasound.jpg
+All the changes to my body...
+All the fears I’ve had...
+All the work I've had to leave behind...
+#background:bg_unaisah_CH4B_Munir_Night.jpg
+And now, Alhamdulillah, Basheer and I have been blessed with a child...
+
+-> unaisah_3b_1
+
+=== unaisah_3b_1 ===
+#knot:unaisah_3b_1
+#ui:scene
+#background:bg_unaisah_CH2_Bedroom_Night.png
+..a child who needs to be fed constantly, day and night. #inner_monologue
+#background:bg_unaisah_CH4B_Munir_Night.jpg
+Still asleep, Munir? It’s hard enough waking up for every feed, now I have to wake you too? Hmm?  #inner_monologue
+Oh, come here...  #inner_monologue
+It’s tiring but I love you. Amma will do anything for you.  #inner_monologue
+#background:bg_unaisah_CH3_Bedroom_Day.png
+#speaker_left_image:cha_Unaisah_Basheer_Neutral_HomeWear.png
+#speaker_left_name:Basheer
+Did you get any rest last night? #speaker_left
+    + [Yes] Yes, off and on, in between. He fell back asleep quite quickly. #speaker_self
+    + [No] No. I feel like I’ve been doing nothing but feeding Munir since we left the hospital a week ago. I don’t know day or night. I’m so tired.  #speaker_self
+    + [No, but it's ok] No, but I’m alright. It’s just been a week. I’ll get used to it.  #speaker_self
+    + [What do you think?!] Well, what do you think?!  #speaker_self
+- I do want to help, alright? #speaker_left
+We’ve discussed this. I want to breastfeed him as long as I can. Bond with him. When I cannot take it, then I’ll pump and you can bottle feed him. #speaker_self
+Don’t wait until you cannot, alright? We’re not young anymore. Let me feed him sometimes when you’re tired, alright? #speaker_left
+You are already helping. With the chores, the diapers. I’ll let you know. #speaker_self
+Okay. Bonding, I understand. Very important. #speaker_left
+But maybe think of it another way. My paternity leave is much shorter than yours. #speaker_left
+At least let me use this time to learn first. So it is easier when we’re both around, alright? #speaker_left
++ [Try pumping] You know what, that makes sense. Let’s give this a go. #speaker_self
+    VAR unaisah_3b_breastfeed = false
+    ~ unaisah_3b_breastfeed = false
+    I’ll go take out the pump and we can look at the instructions later. #speaker_left
+    Thanks. I need to feed him first. #speaker_self
++ [Continue breastfeeding] Bash, I only have this one chance to bond with Munir in these first couple of weeks. I’m so afraid of giving this up. #speaker_self
+    ~ unaisah_3b_breastfeed = true
+    Hey, I’m his father. I should also bond with him, alright? #speaker_left
+    It’s different, please understand. Just let me have this one. You’ll have months, years with him. #speaker_self
+- Go ahead. I’ll make breakfast. Where is the thing your mother brought over yesterday? #speaker_left
+It’s in the back of the fridge, top shelf. #speaker_self
+Okay. #speaker_left
 
 
 
-
-
-
+// https://docs.google.com/document/d/11vpIu3Fn53DJFoHSO7z9xbf6W6V-7hg-gyzaCFtOYDI/edit#bookmark=id.8xbqyiht19uz
 
     
 -> END
