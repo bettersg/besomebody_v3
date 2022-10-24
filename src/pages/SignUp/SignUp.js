@@ -136,11 +136,7 @@ const SignUp = () => {
       if (!isThirdPartyAuth) {
         result = await signUp(values.email, values.password)
       }
-      const user = {
-        email: result.user.email, // @joel this is where the email address gets added to the user collection using the createDbUserIfNotExists function. Need your help to verify how it can be changed witbout breaking the signup authentication process.
-        id: result.user.uid,
-      }
-      const isCreated = await createDbUserIfNotExists(user)
+      const isCreated = await createDbUserIfNotExists(result.user.uid, result.user.email)
       if (isCreated) { // If user was not created, user is an existing user and we skip profilebuilder
         history.push('/profilebuilder')
       }

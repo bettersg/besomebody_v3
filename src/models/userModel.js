@@ -1,11 +1,14 @@
 import { firestore } from '../firebase'
 
-export const createDbUserIfNotExists = async (obj) => {
+export const createDbUserIfNotExists = async (userId, userEmail) => {
   try {
-    const userRef = firestore.collection('users').doc(obj.id)
+    const userRef = firestore.collection('users').doc(userId)
     const user = await userRef.get()
     if (!user.exists) {
-      await firestore.collection('users').doc(obj.id).set(obj)
+      await firestore.runTransaction(async txn => {
+        await txn.collection('users').doc(userId).set({id: userId})
+        await txn.collection('emails').doc(userId).set({email: userEmail})
+      })
       return true
     } else {
       return false

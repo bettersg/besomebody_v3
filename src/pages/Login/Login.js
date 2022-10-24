@@ -142,11 +142,7 @@ const Login = () => {
           history.push('/')
         }
       } else {
-        const user = {
-          email: authResult.user.email, // @joel this is where the email address gets added to the user collection using the createDbUserIfNotExists function. Need your help to verify how it can be changed witbout breaking the login authentication process.
-          id: authResult.user.uid,
-        }
-        const isCreated = await createDbUserIfNotExists(user)
+        const isCreated = await createDbUserIfNotExists(authResult.user.uid, authResult.user.email)
         if (isCreated) { 
           history.push('/profilebuilder')
           
