@@ -5,10 +5,11 @@ export const createDbUserIfNotExists = async (userId, userEmail) => {
     const userRef = firestore.collection('users').doc(userId)
     const user = await userRef.get()
     if (!user.exists) {
-      await firestore.runTransaction(async txn => {
-        await txn.collection('users').doc(userId).set({id: userId})
-        await txn.collection('emails').doc(userId).set({email: userEmail})
-      })
+      const batch = firestore.batch()
+      batch.set(userRef, {id: userId})
+      const emailRef = firestore.collection('emails').doc(userId)
+      batch.set(emailRef, {email: userEmail})
+      await batch.commit()
       return true
     } else {
       return false
