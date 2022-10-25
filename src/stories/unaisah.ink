@@ -1310,18 +1310,22 @@ Thank you, Chitra, for trusting me. #speaker_self
 #ui:narrator
 #background:bg_unaisah_CH2_Bedroom_Night.png
 That weekend...
-I couldn't stop thinking about what happened. It was really hard, but maybe I made a difference?
-Dealing with young people is complex. I feel...
-+ [discouraged] I’m so disturbed by the whole thing. The world can be so cruel, and so unsafe for young people.
+I couldn't stop thinking about the parent-teacher meeting. It was really hard, but maybe I made a difference?
+Am I ready to have my own children? It's such a huge responsibility to raise them right. 
++ [I'm not ready to become a parent] I’m so disturbed by the whole thing. The world can be so cruel, and so unsafe for young people.
     VAR unaisah_2_feeling = ""
     ~ unaisah_2_feeling = "discouraged"
+    Maybe parenthood blinds people to things they don’t wish to see in their kids – because it reminds them of their own lesser traits. Or maybe it surfaces their own trauma in childhood, when they felt small and humiliated, and so everyone else becomes an enemy. 
     Maybe Allah’s plan is for me to ease the suffering of others, rather than to bring one more child into the world to suffer.
-+ [hopeful]
-    I’m exhausted, but I’m glad the school managed to sort things out in the end.
+    Will I end up like that, too? Devolving into my worst attributes and shedding the good? And what if Bash regrets it?
+    We’re happy where we are. The greatest tragedy is to lose something good in a gamble. The risk is too great. 
+    I don’t want a child. 
+
++ [I think I could raise my child well] I’m exhausted, but I’m glad we managed to sort things out in the end.
     ~ unaisah_2_feeling = "hopeful"
-    In the past week I’ve seen both the worst, as well as the best in my students.
-    Young people may be misguided sometimes, but they are still full of promise.
-    If I can get through this, I can get through anything. Even raising a child of my own.
+    In the past week I’ve seen both the worst, as well as the best in my students - and their parents.
+    Young people may be misguided sometimes, but they are still full of promise with the right care and support.
+    It’s hard to believe it myself, but the hard knocks from teaching have prepared me for parenthood. 
 - What a difficult week it has been.
 
 #ui:scene
@@ -2040,7 +2044,10 @@ Okay. #speaker_left
 
 
 
+
 // https://docs.google.com/document/d/11vpIu3Fn53DJFoHSO7z9xbf6W6V-7hg-gyzaCFtOYDI/edit#bookmark=id.8xbqyiht19uz
+
+
 
     
 -> END
