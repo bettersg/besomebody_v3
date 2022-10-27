@@ -2042,12 +2042,142 @@ At least let me use this time to learn first. So it is easier when we’re both 
 It’s in the back of the fridge, top shelf. #speaker_self
 Okay. #speaker_left
 
+-> unaisah_3b_3
+
+=== unaisah_3b_3 ===
+#knot:unaisah_3b_3
+#ui:scene
+#background:bg_unaisah_CH4B_Munir_Night.jpg
+#speaker_right_name:Munir
+WAAAAAAAHHHHHH!!!! #speaker_right
+WAaaaaAAAAAAAHhhHH!!!! #speaker_right
+*WHEEEZE* WAAaaAHhhHH!!!! #speaker_right
+Is it 6 already? #speaker_self
+Oh goodness...it’s only 3:30. #speaker_self
+#background:bg_unaisah_CH2_Bedroom_Night.png
+#speaker_left_image:cha_Unaisah_Basheer_Defeated_HomeWear.png
+#speaker_left_name:Basheer
+{unaisah_3b_breastfeed == false:
+    I should take care of this. Basheer will do the bottle feed at 6am. #inner_monologue
+    I’ll take him outside… Shhh chellam, let’s not disturb Daddy okay? #speaker_self
+    Kanne, Kanmaniye, Kannurangai ponne, Mayilo, togai mayilo, Kuyilo, koovum kuyilo, Nilavo, nilavin oliyo, Imaiyo, imaiyin kanavo (Tamil lullaby) #speaker_self
+- else: 
+    Bash. #speaker_self
+    Mmph? #speaker_left
+    BASHEER. #speaker_self
+    Oh, what happened? #speaker_left
+    Could you help bring Munir please and turn on the light. I need to breast feed him. #speaker_self
+    Ok, ok ok. #speaker_left
+}
+#ui:narrator
+#background:black.jpg
+It's 6am. Time disappears when you're taking care of a baby. 
+#ui:scene
+#background:bg_unaisah_CH4B_Munir_Night.jpg
+#speaker_left_image:cha_Unaisah_Basheer_Defeated_HomeWear.png
+#speaker_left_name:Basheer
+{unaisah_3b_breastfeed == false:
+    Bash. #speaker_self
+    Mmph? #speaker_left
+    BASHEER. #speaker_self
+    Oh, what happened? #speaker_left
+    Your turn. Feed him from my milk in the fridge. #speaker_self
+    Ok, ok ok. #speaker_left
+    You remember how, right? We went through earlier? #speaker_self
+    Yes yes. #speaker_left
+    Ah...Back to sleep...this was the right choice. #inner_monologue
+- else:
+    I thought I knew what love was when I married Basheer. But with Munir, it’s on another plane entirely. #inner_monologue    
+}    
+
+-> unaisah_3b_4
+
+=== unaisah_3b_4 ===
+#knot:unaisah_3b_4
+#ui:narrator
+#background:black.jpg
+My relatives have all come over to peek at the new addition to our family.
+Feels like my first time being social in forever.
+#ui:scene   
+#background:bg_unaisah_CH4B_Munir_Night.jpg
+#speaker_left_image:cha_unaisah_Mother.png 
+#speaker_left_name:Amma
+#speaker_right_name:Male Relative
+#speaker_right_image:cha_unaisah_MaleRelative.png 
+Oh you are so handsome! #speaker_left
+Amma, thanks for your help these past weeks and months. I really don’t know how I could do this without you. #speaker_self
+Please, I am your mother. And now Munir’s grandmother. If I don’t help you, who would? #speaker_left
+I’m glad you’re okay with us having the Aqeeqah in the second week instead of the first. The first week was really tough. #speaker_self
+Waaahhh, so cute Mashallah! Looks like Basheer you know! Can see. How heavy? #speaker_right
+3.82kg. #speaker_self
+Waaahhh, big boy! Very good. Strong! #speaker_right    
+#speaker_right_name:Female Relative
+#speaker_right_image:cha_unaisah_FemaleRelative.png 
+Ohhh, so cute! Eh look like you Unaisah! Can see already. The nose, here. How heavy? #speaker_right
++ [3.82kg] 3.82kg. #speaker_self
+    I see, I see! Must be so healthy! #speaker_right
+    #speaker_right_image:pixel.png 
+    You should just hold up a sign with his weight. #speaker_left
+    And how many hours I was in labour. That’s all anyone can ask. #speaker_self
+    Eh actually how many? I also don’t know. #speaker_left
+    Aiyah, Amma! #speaker_self
++ [About the weight of a baby] About the weight of a baby. #speaker_self
+    ... #speaker_right
+    Sorry, she hasn’t slept much. Eyes open but brain still asleep. #speaker_left
+    Ah. Of course. You should get rest dear. You look tired. #speaker_right
+    #speaker_right_image:pixel.png 
+    I should just hold up a sign with his weight. And how many hours I was in labour. That’s all anyone can ask. #speaker_self
+    Be nice, Unaisah. You should be glad so many people care about you and Munir. #speaker_left
+    Motherhood can get lonely, you know. #speaker_left
+
+- -> unaisah_3b_5
+
+=== unaisah_3b_5 ===
+#knot:unaisah_3b_5
+#ui:narrator
+#background:bg_unaisah_CH4B_LivingRoom_Day_Messy.png
+40 days later, and the "confinement period" for me as a new mother is finally over.
+#ui:scene
+#background:bg_unaisah_CH4B_LivingRoom_Day_Messy.png
+They’re all gone. #inner_monologue
+My confinement is over, I can leave the house, but I can’t go anywhere.#inner_monologue
+My mother and mother-in-law aren’t coming over as regularly to help.#inner_monologue
+Basheer went back to work after his two-week paternity leave ended.#inner_monologue
+I have to do this all on my own.#inner_monologue
+First task is to make this mess liveable again.  #inner_monologue
++ [I can do this]  I can do this. It’s just the beginning. #inner_monologue
+    VAR unaisah_3b_motherscore = 0
+    ~ unaisah_3b_motherscore += 1
++ [Basheer could help more] Basheer was helpful when he was on leave, but these days it seems like he always has something better to do. #inner_monologue
+    ~ unaisah_3b_motherscore -= 1
+- And then there's all this breast milk pumping, freezing, thawing, preparing, bottling... #inner_monologue
++ [I can do this]  I can’t believe I managed to produce all that.  #inner_monologue
+    ~ unaisah_3b_motherscore += 1
++ [He's well fed but I’m so hungry] Munir’s milk is taking up so much space. It is all about him now. Feed feed feed. But what about me? I’m so tired and hungry. #inner_monologue
+    ~ unaisah_3b_motherscore -= 1
+- I keep staring at the clock these days. #inner_monologue
++ [I can do this] I need to be patient. Remember it’s all in Allah’s plan.   #inner_monologue
+    ~ unaisah_3b_motherscore += 1
++ [Time moves so slow.] Day after day after night after night. One month, two months - time disappears. Feed. Burp. Sleep. Change. Bathe. Feed. Burp. Sleep. Change. Bathe.. #inner_monologue
+    ~ unaisah_3b_motherscore -= 1
+- My school work files and teaching materials are gathering dust. 
++ [I can't do this] It’s been so long. It feels long. I might have forgotten how to teach. I’m not sure how I’ll get back into it.  #inner_monologue
+    ~ unaisah_3b_motherscore += 1
++ [Can I do this?] So many of my colleagues are parents. They go away to have a child and come back so effortlessly. Could I be worse than them all?  #inner_monologue
+    ~ unaisah_3b_motherscore -= 1
+#speaker_right_name:Munir
+#speaker_right_image:cha_unaisah_Munir_Baby.png
+WAAAAAAAHHHHHH!!!! #speaker_right
+WAaaaaAAAAAAAHhhHH!!!! #speaker_right
++ [My child needs me.] However tired I am, I am still your mother, and it breaks my heart to see you distressed. Let me see what you need.  #inner_monologue
+    ~ unaisah_3b_motherscore += 1
++ [My child hates me.] What is bothering you now. Have I not done enough for you? Is it me? Everyone was so nice to me last month but now they don’t care. Are you unhappy with me, too? #inner_monologue
+    ~ unaisah_3b_motherscore -= 1
+
+- -> unaisah_3b_6
 
 
-
-// https://docs.google.com/document/d/11vpIu3Fn53DJFoHSO7z9xbf6W6V-7hg-gyzaCFtOYDI/edit#bookmark=id.8xbqyiht19uz
-
-
+=== unaisah_3b_6 ===
 
     
 -> END
