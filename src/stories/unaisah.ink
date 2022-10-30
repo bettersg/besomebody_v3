@@ -514,7 +514,7 @@ That’s my supervisor. What does she want to talk about? Could this be my chanc
 #emailheader:Read Email
 #emailfrom:NEO Hwee Ling <NEO_Hwee_Ling@sjc.edu.sg>
 #emailto:Unaisah BEGUM <Unaisah_BEGUM@sjc.edu.sg>
-#emailfromicon:ico_zhihao_elite.png
+#emailfromicon:ico_ravi_rebecca.png
 #emailsubject:Chat this afternoon?
 
 Unaisah, haven’t had the chance to catch up since you joined us. /n /n If you’re free after 3 this afternoon could you drop by my office for a short while? /n /n cheers, /n HL  #speaker_1
@@ -2178,6 +2178,155 @@ WAaaaaAAAAAAAHhhHH!!!! #speaker_right
 
 
 === unaisah_3b_6 ===
+#knot:unaisah_3b_6
+#ui:scene
+#background:bg_unaisah_CH4B_LivingRoom_Night_Messy.png
+#speaker_left_image:cha_Unaisah_Basheer_Neutral_HomeWear.png
+#speaker_left_name:Basheer
+#speaker_right_name:Munir
+Could you turn that down please? I’m trying to put Munir back to sleep. #speaker_self
+Why don’t you both come sit here and watch as well? You don’t have to keep doing one thing at a time. Sit here and watch, and maybe before you even realise, he will be asleep. #speaker_left
+{
+- unaisah_3b_motherscore >= 1:
+    I’m not sure it’s a good idea. I’m worried the light and the noise from the TV will keep Munir awake. #speaker_self
+    I can turn it down a little. Just give it a try? If Munir doesn’t sleep then you can continue doing what you’re doing. #speaker_left
+    Okay then. #speaker_self
+    You know what...this is nice for a change. #speaker_self
+    Thanks for this. #speaker_self
+-  unaisah_3b_motherscore <= -2:
+    I’m worried the light and the noise from the TV will keep Munir awake. #speaker_self
+    I can turn it down a little. Just give it a try? If Munir doesn’t sleep then you can continue doing what you’re doing. #speaker_left
+    Easy for you to say, when I’m the one doing it. #speaker_self
+    I put Munir to bed sometimes too! #speaker_left
+    Don’t tell me how to do this! #speaker_self
+    Hey, calm down, alright? It’s late! #speaker_left
+    Don’t tell me how to feel! #speaker_self
+    Look, I think you’re being a little irrational right now. Please try to control your emotions a bit more, alright? #speaker_left
+    STOP. PATRONISING. ME. #speaker_self
+    ... #speaker_left
+    I’m sorry. I’m so sorry. #speaker_left
+    WAHHHHHHHH!!!! #speaker_right
+- else:
+    I’m worried the light and the noise from the TV will keep Munir awake. #speaker_self
+    I can turn it down a little. Just give it a try? If Munir doesn’t sleep then you can continue doing what you’re doing. #speaker_left
+    Easy for you to say, when I’m the one doing it. #speaker_self
+    I put Munir to bed sometimes too! #speaker_left
+    Don’t tell me how to do this! #speaker_self
+    Hey, calm down, alright? It’s late! #speaker_left
+    We might agitate Munir. #speaker_left
+    Fine. #speaker_self
+    I’ll turn off the TV, but just try to relax a bit, alright? #speaker_left
+    Alright. #speaker_self
+}
+
+
+- -> unaisah_3b_7
+
+
+=== unaisah_3b_7 ===
+#knot:unaisah_3b_7
+#ui:narrator
+#background:bg_unaisah_CH4B_LivingRoom_Day.png
+Four months pass.
+#ui:scene
+#background:bg_unaisah_CH4B_LivingRoom_Day.png
+#speaker_left_image:cha_Unaisah_Basheer_Neutral_HomeWear.png
+#speaker_left_name:Basheer
+#speaker_right_name:Munir
+#speaker_left_image:cha_unaisah_Munir_Baby.png
+So, are you feeling ready? #speaker_left
+I guess. #speaker_self
+I will pray for you. We got through these last four months together. We will get through everything else together also. #speaker_left
+Thanks. #speaker_self
+Well, I guess it’s time. It feels weird...I haven’t left home earlier than you in months. #speaker_self
+// [We see Munir in his cot.] #
+...and this is the first time I’m leaving home without him. #inner_monologue
+Chellam, Amma is only going to be away for a short while ya? #speaker_self
+Appa will bring you to your grandmother. Everything will be fine. #speaker_self
+WAAAAAAAHHHHHH!!!! #speaker_right
+WAaaaaAaAAAAaaaaAHHhhhHHHH!!!! #speaker_right
+Oh Bash...it’s like he knows! #speaker_self
+And you haven’t even left the house yet. #speaker_left
++ [I don't know if I can do this] I don’t know if I can do this... #speaker_self
++ [I have to be strong] I have to be strong. I can do this. #speaker_self
+- You can. We can. #speaker_left
+Now I’m going to cry too... #speaker_self
+Come Munir, let's say goodbye to Amma. #speaker_left
+// [We are looking at the gate of Unaisah’s flat. We see Basheer cradling Munir behind the gate.] #
+Amma loves you! #speaker_self
+See you later. #speaker_left
+#speaker_left_image:cha_Unaisah_Basheer_Laughing_HomeWear.png
+Munir, say “Bye Amma”? Say it? #speaker_left
+Grrgggbrrrrbphhh #speaker_right
+“Bye Amma!” (in a baby voice) #speaker_left
+Hahaha... close enough. Love you both. #speaker_self
+
+-> unaisah_3b_8
+
+
+=== unaisah_3b_8 ===
+#knot:unaisah_3b_8
+#ui:narrator
+#background:bg_unaisah_CH1_UnaisahDesk.png
+Getting back into my work schedule was not as hard as I had feared.
+In just a few months, I felt back in top form. 
+Perhaps even better, now that I had a child of my own and understood how a parent feels.
+#ui:scene
+#background:bg_unaisah_CH1_UnaisahDesk.png
+#speaker_left_image:cha_unaisah_hweeling_neutral.png 
+#speaker_left_name:Hwee Ling
+In short, we are so glad you’re back. And we think you can take over as Head of Department by the end of the year. #speaker_left
+Oh...oh! Oh that’s great. #speaker_self
+You look surprised. You shouldn’t. You’ve done good work. #speaker_left
+I’ve also spent nearly half of the year so far away from school. #speaker_self
+Yes, but in the teaching service, we do not assess you on work you could not have done. And what you have done, now and in your years with us, is definitely good enough. #speaker_left
+Thank you so, so much. #speaker_self
+So, is this something you’d want to do? The HOD role? #speaker_left
++ [Yes] Yes. Yes! Thank you for your confidence in me. I won’t let you down. #speaker_self
+    I’m glad. And happy for you. You deserve this. #speaker_left
+
++ [I'm not sure...] Thank you for your confidence in me. Please let me think this over. I have a newborn, and this a very important time for me to be around and available for him. #speaker_self
+    I know it wasn’t so long ago that we were sitting here, and I initiated the conversation about promotions, but ever since Munir came along… #speaker_self
+    Priorities have shifted? #speaker_left
+    It doesn’t mean I don’t want the role. I just need some time to think about whether or not I can handle it all. #speaker_self
+    Of course. I understand completely. Take your time. #speaker_left
+- Thanks so much, Hwee Ling. #speaker_self
+
+
+-> unaisah_3b_9
+
+
+=== unaisah_3b_9 ===
+#knot:unaisah_3b_9
+#background:bg_unaisah_CH4B_LivingRoom_Day_wFood.png
+#ui:narrator
+Years later.
+#ui:scene
+#background:bg_unaisah_CH4B_LivingRoom_Day_wFood.png
+#speaker_left_image:cha_unaisah_Mother.png 
+#speaker_left_name:Amma
+#speaker_right_name:Munir
+#speaker_left_image:cha_unaisah_Munir_5yo.png
+Happy birthday again Munir! Say cheese! #speaker_self
+// [The screen goes black for split second and there is a camera clicking sound.] #
+CHEEEEEEESE #speaker_right
+He’s grown so fast. #speaker_left
+Yes. I swear I can see the difference each week! #speaker_self
+Have you thought about a school for him yet? #speaker_left
+Basheer and I are still talking about it. #speaker_self
+It’s a little challenging because there aren’t any schools nearby that offer his Mother Tongue. #speaker_self
+Even finding a pre-school that offers Tamil was so hard. Singapore every pre-school offers Chinese, but almost none of them offer Malay or Tamil. #speaker_self
+So we are discussing whether to let him travel further to a school that offers it, or take a different language. #speaker_self
+But worried about him losing his heritage and also being at a disadvantage if he takes another language. #speaker_self
+#ui:narrator
+DING DONG. The doorbell rings. 
+#ui:scene
+#background:bg_unaisah_CH4B_LivingRoom_Day_wFood.png
+#speaker_left_image:cha_unaisah_Mother.png 
+#speaker_left_name:Amma
+Was that the door? Do you want to get it? #speaker_left
+
+
 
     
 -> END
