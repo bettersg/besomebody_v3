@@ -1,9 +1,13 @@
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
+const gcpFirestore = require('@google-cloud/firestore');
+const firestoreClient = new gcpFirestore.v1.FirestoreAdminClient();
 
 admin.initializeApp();
 const firestore = admin.firestore();
 const FieldValue = admin.firestore.FieldValue;
+
+const backupBucket = 'gs://besomebody-firestore-export';
 
 exports.incrementReflectionCounters = functions.firestore
   .document('reflectionResponses/{docId}')
@@ -46,3 +50,29 @@ exports.incrementReflectionChoiceCounters = functions.firestore
       await choiceRef.update({ count: FieldValue.increment(1) });
     }
   });
+
+  exports.backupFirestore = functions.pubsub
+    .schedule('0 0 1 * *')
+    .onRun(async () => {
+      const projectId = process.env.GCP_PROJECT || process.env.GCLOUD_PROJECT
+      const databaseName = firestoreClient.databasePath(projectId, '(default)')
+      
+      return firestoreClient
+        .exportDocuments({
+          name: databaseName,
+          outputUriPrefix: backupBucket,
+          // Leave collectionIds empty to export all collections
+          // or set to a list of collection IDs to export,
+          // collectionIds: ['users', 'posts']
+          collectionIds: []
+        })
+        .then(([response]) => {
+          console.log(`Operation Name: ${response.name}`)
+          return response
+        })
+        .catch(err => {
+          console.error(err)
+          throw new Error('Export operation failed')
+        })
+  
+    })
