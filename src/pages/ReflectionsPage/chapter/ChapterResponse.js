@@ -77,7 +77,7 @@ const ChapterResponse = ({ response }) => {
   const responseMessage = response.answer + ' <br/> reflection ID: ' + response.reflectionId + ' <br/> user ID : ' +   response.userId + ' <br/> submitted at ' + response.submittedAt 
 
   const [toSend, setToSend] = useState({
-    from_name: currentUser.email,
+    from_name: currentUser.email? currentUser.email : currentUser.id, // this pulls from auth not from users collection.
     to_name: 'TOBEYOU ADMIN',
     message: responseMessage,
     reply_to: 'tobeyou@better.sg',
