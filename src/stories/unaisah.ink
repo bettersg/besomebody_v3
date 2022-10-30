@@ -2306,7 +2306,7 @@ Years later.
 #speaker_left_image:cha_unaisah_Mother.png 
 #speaker_left_name:Amma
 #speaker_right_name:Munir
-#speaker_left_image:cha_unaisah_Munir_5yo.png
+#speaker_right_image:cha_unaisah_Munir_5yo.png
 Happy birthday again Munir! Say cheese! #speaker_self
 // [The screen goes black for split second and there is a camera clicking sound.] #
 CHEEEEEEESE #speaker_right
@@ -2326,7 +2326,43 @@ DING DONG. The doorbell rings.
 #speaker_left_name:Amma
 Was that the door? Do you want to get it? #speaker_left
 
-
-
+#ui:scene
+#background:bg_unaisah_CH4B_LivingRoom_Day_wFood.png
+#speaker_left_image:cha_unaisah_Volunteer_F.png
+#speaker_left_name:Young woman
+#speaker_right_image:cha_unaisah_Volunteer_M.png
+#speaker_right_name:Young man
+Good afternoon Ma’am. I hope we’re not interrupting anything. #speaker_left
+It’s okay. What’s this about? #speaker_self
+We just wanted to let you know your Member of Parliament is doing house visits and will be dropping by shortly. #speaker_left
+Sure. We have some juice. #speaker_self
+How should we address you? #speaker_right
+You can call me Madam Unaisah. #speaker_self
+Madam Unaisah. And what do you do? #speaker_right
++ [I'm a mother] I'm a mother.#speaker_self
+    VAR unaisah_3b_volunteer = ""
+    ~ unaisah_3b_volunteer = "mother"
+    That’s wonderful. #speaker_left
+    It is, isn’t it #speaker_self
+    #ui:narrator
+    So much has happened in the last few years. Quitting my corporate job, becoming a teacher, and now raising my beautiful, rabunctious boy. It’s actually hard to remember how life was really like before Munir came along. 
+    Sometimes I get overwhelmed with the grunt work of parenting. It never ends. There is no clock-off for my own space. At the places I now shuttle to –  the daycare, the clinic, the toddlers’ parties – I’m always known as ‘Munir’s mum’. Not Unaisah. 
     
+    The role sinks into my personhood: On bright days, it brings a fullness in love I never knew I could give. On hard days, it cuts like an anchor into sand, and I think: If I’m not careful it will become my personhood. I will forget myself.
+    Sometimes, on a family outing, I‘d observe the tables for two. It jolts me often, watching those couples –  their glossy presentations, the energy of their talk hurtling through gossip to hobbies to debates, or even their quiet ease, all on a long afternoon  – that this used to be me.  A good part of me envies them for their time.
+    But then Munir babbles, and Basheer tends to him with a deft stroke of humour, and I’m folded back into the action, and all feels right again with the world. I remember it’s a world I’ve forged, with deep challenges and joys, and my pride swells whenever I see what it shows: This is what it’s like, to be me. 
+
+
++ [I'm a teacher] I'm a teacher.#speaker_self
+    ~ unaisah_3b_volunteer = "teacher"
+    That’s wonderful. #speaker_left
+    It is, isn’t it #speaker_self
+    #ui:narrator
+    So much has happened in the last few years. Quitting my corporate job, becoming a teacher, and now raising my beautiful, rabunctious boy. It’s actually hard to remember how life was really like before Munir came along. 
+    Sometimes I get overwhelmed with the grunt work of parenting. It never ends. There is no clock-off for my own space. At the places I now shuttle to –  the daycare, the clinic, the toddlers’ parties – I’m always known as ‘Munir’s mum’. Not Unaisah. Or anything else.
+    That is why teaching is a raft that floats my identity – I am seen, my contributions noted in concrete, quantifiable measures that, for all their limitations, announce my value to the world. When I step into a classroom I love what greets me: youth and promise and the back-and-forth of intellect. 
+    It’s a welcome respite from Thomas the Train and Barney on loop. A gem we get from early parenthood: Not taking our work and social lives for granted. 
+    It’s hard to believe I’ve forged a balance between both worlds, each with deep challenges and joys, and my pride swells whenever I see what they show: This is what it’s like, to be me. 
+
+-     
 -> END
