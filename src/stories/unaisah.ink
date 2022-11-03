@@ -1840,6 +1840,11 @@ If company meetings happen over dinner and drinks, that’s no problem, I will h
 But if you’re asking if I would be willing to compromise on my faith to make life more convenient for the office, I’m sorry but my answer is no. I take my faith very seriously and hope you can respect that choice. #speaker_self
 I see. I think we’re done here. Thank you. #speaker_right
 
+#knot:unaisah_3_minigame
+#ui:mcq
+#game_id:16
+Minigame 16 // must add some text
+
 -> unaisah_3a_8
 
 === unaisah_3a_8 ===
@@ -2018,7 +2023,7 @@ It’s tiring but I love you. Amma will do anything for you.  #inner_monologue
 #speaker_left_image:cha_Unaisah_Basheer_Neutral_HomeWear.png
 #speaker_left_name:Basheer
 Did you get any rest last night? #speaker_left
-    + [Yes] Yes, off and on, in between. He fell back asleep quite quickly. #speaker_self
+    // + [Yes] Yes, off and on, in between. He fell back asleep quite quickly. #speaker_self
     + [No] No. I feel like I’ve been doing nothing but feeding Munir since we left the hospital a week ago. I don’t know day or night. I’m so tired.  #speaker_self
     + [No, but it's ok] No, but I’m alright. It’s just been a week. I’ll get used to it.  #speaker_self
     + [What do you think?!] Well, what do you think?!  #speaker_self
@@ -2037,7 +2042,7 @@ At least let me use this time to learn first. So it is easier when we’re both 
 + [Continue breastfeeding] Bash, I only have this one chance to bond with Munir in these first couple of weeks. I’m so afraid of giving this up. #speaker_self
     ~ unaisah_3b_breastfeed = true
     Hey, I’m his father. I should also bond with him, alright? #speaker_left
-    It’s different, please understand. Just let me have this one. You’ll have months, years with him. #speaker_self
+    It’s different, please understand. Just let me have this one. You’ll have years with him. #speaker_self
 - Go ahead. I’ll make breakfast. Where is the thing your mother brought over yesterday? #speaker_left
 It’s in the back of the fridge, top shelf. #speaker_self
 Okay. #speaker_left
@@ -2051,7 +2056,7 @@ Okay. #speaker_left
 #speaker_right_name:Munir
 WAAAAAAAHHHHHH!!!! #speaker_right
 WAaaaaAAAAAAAHhhHH!!!! #speaker_right
-*WHEEEZE* WAAaaAHhhHH!!!! #speaker_right
+WHEEEZE WAAaaAHhhHH!!!! #speaker_right
 Is it 6 already? #speaker_self
 Oh goodness...it’s only 3:30. #speaker_self
 #background:bg_unaisah_CH2_Bedroom_Night.png
@@ -2087,6 +2092,7 @@ It's 6am. Time disappears when you're taking care of a baby.
     Yes yes. #speaker_left
     Ah...Back to sleep...this was the right choice. #inner_monologue
 - else:
+    #speaker_left_image:pixel.png
     I thought I knew what love was when I married Basheer. But with Munir, it’s on another plane entirely. #inner_monologue    
 }    
 
@@ -2165,6 +2171,7 @@ First task is to make this mess liveable again.  #inner_monologue
     ~ unaisah_3b_motherscore += 1
 + [Can I do this?] So many of my colleagues are parents. They go away to have a child and come back so effortlessly. Could I be worse than them all?  #inner_monologue
     ~ unaisah_3b_motherscore -= 1
+- 
 #speaker_right_name:Munir
 #speaker_right_image:cha_unaisah_Munir_Baby.png
 WAAAAAAAHHHHHH!!!! #speaker_right
@@ -2183,6 +2190,7 @@ WAaaaaAAAAAAAHhhHH!!!! #speaker_right
 #background:bg_unaisah_CH4B_LivingRoom_Night_Messy.png
 #speaker_left_image:cha_Unaisah_Basheer_Neutral_HomeWear.png
 #speaker_left_name:Basheer
+#speaker_right_image:cha_unaisah_Munir_Baby.png
 #speaker_right_name:Munir
 Could you turn that down please? I’m trying to put Munir back to sleep. #speaker_self
 Why don’t you both come sit here and watch as well? You don’t have to keep doing one thing at a time. Sit here and watch, and maybe before you even realise, he will be asleep. #speaker_left
@@ -2226,14 +2234,14 @@ Why don’t you both come sit here and watch as well? You don’t have to keep d
 === unaisah_3b_7 ===
 #knot:unaisah_3b_7
 #ui:narrator
-#background:bg_unaisah_CH4B_LivingRoom_Day.png
+#background:bg_unaisah_CH3_Bedroom_Day.png
 Four months pass.
 #ui:scene
-#background:bg_unaisah_CH4B_LivingRoom_Day.png
+#background:bg_unaisah_CH3_Bedroom_Day.png
 #speaker_left_image:cha_Unaisah_Basheer_Neutral_HomeWear.png
 #speaker_left_name:Basheer
 #speaker_right_name:Munir
-#speaker_left_image:cha_unaisah_Munir_Baby.png
+#speaker_right_image:cha_unaisah_Munir_Baby.png
 So, are you feeling ready? #speaker_left
 I guess. #speaker_self
 I will pray for you. We got through these last four months together. We will get through everything else together also. #speaker_left
@@ -2260,6 +2268,13 @@ Munir, say “Bye Amma”? Say it? #speaker_left
 Grrgggbrrrrbphhh #speaker_right
 “Bye Amma!” (in a baby voice) #speaker_left
 Hahaha... close enough. Love you both. #speaker_self
+
+
+#knot:unaisah_3_minigame
+#ui:mcq
+#game_id:16
+Minigame 16 // must add some text
+
 
 -> unaisah_3b_8
 
@@ -2364,5 +2379,24 @@ Madam Unaisah. And what do you do? #speaker_right
     It’s a welcome respite from Thomas the Train and Barney on loop. A gem we get from early parenthood: Not taking our work and social lives for granted. 
     It’s hard to believe I’ve forged a balance between both worlds, each with deep challenges and joys, and my pride swells whenever I see what they show: This is what it’s like, to be me. 
 
--     
+- -> unaisah_3_ending
+
+
+=== unaisah_3_ending ===
+#knot:unaisah_3_ending
+#ui:story_end
+#reflection_id:16
+Reflection 16
+
+
+-> END
+
+
+
+=== story_end_browser ===
+#ui:story_end_browser
+#reflection_id:16
+reflection browser 16
+
+
 -> END
