@@ -232,10 +232,8 @@
     "id": 16,  
     "story":"Unaisah", 
     "chapter":3,
-    "didyouknow": "Being a mother and a teacher can be hard, but many are inspirations to young females. ",
-    "mediatype" : "video",
-    "mediaimage" : "/didyouknow/zhihao_3_video.jpg",
-    "media": "https://www.youtube.com/watch?v=NFaVXeWixP8",
+    "didyouknow": "Being a teacher can be hard, and many of their struggles are not well known. ",    
+    "media": "https://www.ricemedia.co/features-taking-care-of-our-teachers/",
     "context": {
       "character_name": "Unaisah"
     },
