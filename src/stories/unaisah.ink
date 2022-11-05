@@ -1112,7 +1112,7 @@ Finally, at 8.27pm, Bash is home. Blissfully ignorant of his sloppiness. By choi
 #speaker_left_image:cha_Unaisah_Basheer_Neutral_HomeWear.png
 How did my favourite teacher’s day go? I bought us Thai green curry from the better stall near my office. Good thing I got there on time because they closed the kitchen after my order. #speaker_left
 Hey. You look angry. Is everything ok? #speaker_left
-sigh... #speaker_self
+Sigh... #speaker_self
 #speaker_left_image:cha_Unaisah_Basheer_Defeated_HomeWear.png
 Alright. What did I do wrong this time? #speaker_left
 
@@ -1204,7 +1204,7 @@ When we were done, Basheer emptied the trash immediately, no further reminder ne
 }
 That night, as he lay snoring next to me, I found the space to cry.
 I’m fed-up with this cycle we’re in: Skirting round the topic of his mum, pretending small amendments and accommodations would resolve things.
-The hardest part of a relationship is not about apologising, or compromising - It’s about hashing out difficult truths that we often don’t want to hear.  
+The hardest part of a relationship is not about apologising, or compromising - it’s about hashing out difficult truths that we often don’t want to hear.  
 And frankly, Basheer and I still can’t have an honest conversation about children.  Because we can’t have an honest conversation about his mum. 
 Sometimes I feel like we’re kids ourselves when it comes to this issue. Imagine if we were to really raise kids. The irony.  
 
@@ -1323,7 +1323,7 @@ Am I ready to have my own children? It's such a huge responsibility to raise the
 
 + [I think I could raise my child well] I’m exhausted, but I’m glad we managed to sort things out in the end.
     ~ unaisah_2_feeling = "hopeful"
-    In the past week I’ve seen both the worst, as well as the best in my students - and their parents.
+    In the past week I’ve seen both the worst and the best in my students - and their parents.
     Young people may be misguided sometimes, but they are still full of promise with the right care and support.
     It’s hard to believe it myself, but the hard knocks from teaching have prepared me for parenthood. 
 - What a difficult week it has been.
@@ -1333,7 +1333,7 @@ Am I ready to have my own children? It's such a huge responsibility to raise the
 #speaker_left_name:Basheer
 #speaker_left_image:cha_Unaisah_Basheer_Neutral_HomeWear.png
 You look like you've had a rough week. #speaker_left
-You read my mind #speaker_self
+You read my mind. #speaker_self
 Do you want to talk about it? #speaker_left
 + [Yes] Yeah, and it's a long story.  #speaker_self
     It's ok, I'm plenty comfortable. Why don't you start at the start?  #speaker_left
@@ -1353,7 +1353,7 @@ Well, we had to tell Wan Ling’s parents and, needless to say, they were furiou
 At the boy? #speaker_left
 At everyone. At the boy, at the school, at their daughter. #speaker_self
 They even blamed Chitra for not reporting it sooner. #speaker_self
-Poor kid, caught in the crossfires. #speaker_left
+Poor kid, caught in the crossfire. #speaker_left
 And the boy who was harassing her, Joseph, his parents... It’s even worse. #speaker_self
 Oh no. #speaker_left
 We were hoping that we could just talk to him calmly. Get him to understand why he was making her uncomfortable. #speaker_self
@@ -1378,7 +1378,7 @@ No kidding. #speaker_left
 }   
 
 = unaisah_2_7a
-Scary isn’t it? No one wants to be a bad parent but we all have our = blindspots, emotional triggers, bad coping mechanisms… things we may not even be aware of. #speaker_self
+Scary isn’t it? No one wants to be a bad parent but we all have our blind spots, emotional triggers, bad coping mechanisms… things we may not even be aware of. #speaker_self
 ...This isn’t just about Joseph and his father, isn’t it? #speaker_left
 Before, when we would talk about having children, I wasn’t absolutely sure where I stood. #speaker_self
 I know. #speaker_left
@@ -1572,7 +1572,7 @@ You too. #speaker_self
 #knot:unaisah_3a_2
 #ui:narrator
 #background:bg_unaisah_CH4A_SchoolFoyer.png
-At the school main foyer.
+At school: The main foyer.
 #ui:scene
 #background:bg_unaisah_CH4A_SchoolFoyer.png
 #speaker_right_name:Veronica
@@ -1717,7 +1717,7 @@ Yeah, I haven’t seen Marie in ages. Also met one of her old school friends, Je
     The floor felt dusty. I think I’m getting old also, hair all falling out. #speaker_left
     #speaker_left_image:cha_Unaisah_Basheer_Laughing_HomeWear.png 
     Please. How much hair do you even have to drop in the first place? I'm sure most of it is mine. #speaker_self
-    Oy! Way to make me feel self-conscious about my hair… Or rather, lack thereof. #speaker_left
+    Oy! Way to make me feel self-conscious about my hair… Or lack thereof. #speaker_left
     It’s okay, I love you with or without hair. #speaker_self
     Glad we cleared that up. #speaker_left
     You know what I love more, though? #speaker_self
@@ -1760,17 +1760,19 @@ I can't believe I'm seriously considering applying for jobs again. I never thoug
 “Eloquent and persuasive”
 “5-8 years’ experience working with media”
 VAR unaisah_3_applynewjob = false
+~ unaisah_3_applynewjob = false
 What should I do?
 + [Apply. This could be the one.] 
     #background:black.jpg
     Three weeks later.
     ~  unaisah_3_applynewjob = true
     I can’t believe they called me for an interview.
-    Well, this is it, Inshallah
+    Well, this is it, Inshallah.
     -> unaisah_3a_7
 
-+ [Don't apply. It's risk] 
--> unaisah_3a_8
++ [Don't apply. It's a risk] 
+    ~ unaisah_3_applynewjob = false
+- -> unaisah_3a_8
 
 === unaisah_3a_7 ===
 #knot:unaisah_3a_7
@@ -1778,8 +1780,8 @@ What should I do?
 #background:bg_unaisah_CH4A_InterviewBoardroom.png 
 #speaker_right_name:Interviewer
 #speaker_right_image:cha_unaisah_INT_M.png 
-Well, we are certainly impressed by your CV, and breadth of your experience. #speaker_right
-Could you tell us: what do you consider your greatest strength, and why? #speaker_right
+Well, we are certainly impressed by your CV and breadth of experience. #speaker_right
+Could you tell us: What do you consider your greatest strength, and why? #speaker_right
 
 + [Collaboration with colleagues] It’s definitely my ability to bring people together. #speaker_self
     Elaborate. #speaker_right
@@ -1855,7 +1857,7 @@ Minigame 16 // must add some text
 #speaker_right_image:cha_unaisah_Marie_Concerned.png
 { unaisah_3_applynewjob == true:
     ...and yep. It’s been a month, I haven’t heard from them. I guess this is it. #speaker_self
-    That sucks, but forget them! You’re too good for them! ##speaker_right
+    That sucks, but forget them! You’re too good for them! #speaker_right
     Yeah, but I’m still back to square one. #speaker_self
     Well, at least you tried, so you’ll never wake up at night wondering “what if??” #speaker_right
 }
@@ -1967,7 +1969,12 @@ It's early morning again, and my taxi is almost here.
 #ui:narrator
 #background:bg_unaisah_intro.jpg
 So much has happened in the last few years. 
-My career has gone from strength to strength. I glean lessons from my students as much as I impart mine to them. I’ve made lifelong friends. 
+{chapter_3_ending == 1: 
+    It doesn't matter how high I've climbed in my teaching career -- it's not the point.
+- else: 
+    My career has gone from strength to strength. 
+}
+I glean lessons from my students as much as I impart mine to them. I’ve made lifelong friends. 
 While work is tough, it is never soulless. My life feels full and, as long as I have Basheer with me, this world I’ve built is enough. 
 I think it is. 
 Sometimes, on a weekend at a cafe, I’d feel a pang when I see couples struggling with their kids. Part of me wonders how I’d handle a toddler’s tantrum.  Would I stay calm? Would I lose my temper too? Would I take it out on Basheer? 
@@ -2164,7 +2171,7 @@ First task is to make this mess liveable again.  #inner_monologue
 - I keep staring at the clock these days. #inner_monologue
 + [I can do this] I need to be patient. Remember it’s all in Allah’s plan.   #inner_monologue
     ~ unaisah_3b_motherscore += 1
-+ [Time moves so slow.] Day after day after night after night. One month, two months - time disappears. Feed. Burp. Sleep. Change. Bathe. Feed. Burp. Sleep. Change. Bathe.. #inner_monologue
++ [Time moves so slowly.] Day after day after night after night. One month, two months - time disappears. Feed. Burp. Sleep. Change. Bathe. Feed. Burp. Sleep. Change. Bathe.. #inner_monologue
     ~ unaisah_3b_motherscore -= 1
 - My school work files and teaching materials are gathering dust. 
 + [I can't do this] It’s been so long. It feels long. I might have forgotten how to teach. I’m not sure how I’ll get back into it.  #inner_monologue
@@ -2285,7 +2292,7 @@ Minigame 16 // must add some text
 #background:bg_unaisah_CH1_UnaisahDesk.png
 Getting back into my work schedule was not as hard as I had feared.
 In just a few months, I felt back in top form. 
-Perhaps even better, now that I had a child of my own and understood how a parent feels.
+Perhaps even better, now that I have a child of my own and understand how a parent feels.
 #ui:scene
 #background:bg_unaisah_CH1_UnaisahDesk.png
 #speaker_left_image:cha_unaisah_hweeling_neutral.png 
@@ -2358,7 +2365,11 @@ Madam Unaisah. And what do you do? #speaker_right
     VAR unaisah_3b_volunteer = ""
     ~ unaisah_3b_volunteer = "mother"
     That’s wonderful. #speaker_left
-    It is, isn’t it #speaker_self
+     ~ chapter_3_ending = 3
+    It is, isn’t it? #speaker_self
+    { unaisah_3b_motherscore < 0:
+        It was hard at the start, but it gets easier each day. #inner_monologue
+    }
     #ui:narrator
     So much has happened in the last few years. Quitting my corporate job, becoming a teacher, and now raising my beautiful, rabunctious boy. It’s actually hard to remember how life was really like before Munir came along. 
     Sometimes I get overwhelmed with the grunt work of parenting. It never ends. There is no clock-off for my own space. At the places I now shuttle to –  the daycare, the clinic, the toddlers’ parties – I’m always known as ‘Munir’s mum’. Not Unaisah. 
@@ -2371,7 +2382,8 @@ Madam Unaisah. And what do you do? #speaker_right
 + [I'm a teacher] I'm a teacher.#speaker_self
     ~ unaisah_3b_volunteer = "teacher"
     That’s wonderful. #speaker_left
-    It is, isn’t it #speaker_self
+     ~ chapter_3_ending = 4 
+    It is, isn’t it? #speaker_self
     #ui:narrator
     So much has happened in the last few years. Quitting my corporate job, becoming a teacher, and now raising my beautiful, rabunctious boy. It’s actually hard to remember how life was really like before Munir came along. 
     Sometimes I get overwhelmed with the grunt work of parenting. It never ends. There is no clock-off for my own space. At the places I now shuttle to –  the daycare, the clinic, the toddlers’ parties – I’m always known as ‘Munir’s mum’. Not Unaisah. Or anything else.
