@@ -294,5 +294,32 @@
         "image_url": "/shareable_avatars/ma_z.png"          
       }  
     ]
+  },
+  {
+    "id": 15,
+    "type": "MULTI_CHOICE_IMAGE",
+    "body": "Which character do you most resonate with in {character_name}’s journey?",
+    "choices": [
+      {
+        "id":1,
+        "body": "Unaisah" ,
+        "image_url": "/shareable_avatars/profile_blank.png"  
+      },
+      {
+        "id":2,
+        "body": "Basheer",
+        "image_url": "/shareable_avatars/profile_blank.png"  
+      },
+      {
+        "id":3,
+        "body": "Hwee Ling",
+        "image_url": "/shareable_avatars/profile_blank.png"  
+      },
+      {
+        "id":4,
+        "body": "Marie",
+        "image_url": "/shareable_avatars/profile_blank.png"          
+      }  
+    ]
   }
 ]

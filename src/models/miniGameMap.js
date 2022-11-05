@@ -1104,7 +1104,7 @@ export const MINI_GAME_MAP = [
       {
         question_id: 3,
         question:
-          "What is the pay gap between men and women in their 30s (i.e. when they start having children)?",
+          "What is the pay gap between men and women in their 30s (i.e. roughly when some start having children)?",
         type: "text",
         correct_answer_id: 2,
         explanation:
@@ -1126,6 +1126,69 @@ export const MINI_GAME_MAP = [
               answer_id: 4,
               title: "40%",
             },
+          ],
+      },  
+    ],
+  },
+  // unaisah chapter 3
+  {
+    game_id: 16,
+    ui: "mcq",
+    introduction: "Being a teacher is not easy. Let's explore the challenges they face in Singapore",
+    questions: [
+      {
+        question_id: 1,
+        question:
+          "The average worker spends about 44 hours per week at work (MOM). Do teachers spend more or less than that?",
+        type: "text",
+        correct_answer_id: 1,
+        explanation:
+          "More. Teachers spend almost 53 hours per week at work [Parliamentary reply, 2022]",
+        answers: [
+          {
+            answer_id: 1,
+            title: "More",
+          },
+          {
+            answer_id: 2,
+            title: "Less",
+          }, 
+        ],
+      },
+      {
+        question_id: 2,
+        question:"There are more male teachers than female teachers across all primary, secondary, and JCs.",
+        correct_answer_id: 2,
+        explanation: "False. Nearly 71% (23,584 out of 33,129) of all education officers (teachers, principals and VPs) are female. [Education Statistics Digest, 2021]",
+        type: "text",
+        answers: [
+          {
+            answer_id: 1,
+            title: "True",
+          },
+          {
+            answer_id: 2,
+            title: "False",
+          }, 
+        ],
+      },
+      {
+        question_id: 3,
+        question:
+          "There are more male school Principals than females.",
+        type: "text",
+        correct_answer_id: 2,
+        explanation:
+          "False. 61% of Principals are female. [Education Statistics Digest, 2021]",
+          answers: [
+            {
+              answer_id: 1,
+              title: "True",
+            },
+            {
+              answer_id: 2,
+              title: "False",
+            }, 
           ],
       },  
     ],
@@ -1197,3 +1260,5 @@ export const MINI_GAME_MAP = [
   //   ],
   // },
   
+
+  // for marie: https://www.businesstimes.com.sg/leadership-management/empowering-women-is-key-to-unlocking-singapores-economic-potential What the Index reveals is that, though women in Singapore make up 44 per cent of the nation's workforce - close to half - they only make up 26.3 per cent of all business owners, while the number of male entrepreneurs is increasing much faster than that of their female counterparts. That gap means a loss in the innovation that these entrepreneurs can bring to the table, which may be holding Singapore back.
