@@ -1128,12 +1128,12 @@ export const CHARACTER_MAP = [
           },   
           {
             endingId: 3,
-            title: "Unaisah has a baby and is a JC teacher",
+            title: "Unaisah has a baby and identifies as a mother",
             inkVar: "chapter3_ending_3",
           },
           {
             endingId: 4,
-            title: "Unaisah has a baby and is a Sec. School Vice Principal",
+            title: "Unaisah has a baby and identifies as a teacher",
             inkVar: "chapter3_ending_4",
           },        
         ]
