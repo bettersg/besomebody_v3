@@ -55,7 +55,7 @@ async function up() {
   console.log('Creating emails...');
   await Promise.all(users.map(async (user) => {
     await firestore.collection('emails').doc(user.id).set({
-      email: user.email,
+      email: user.email || null,
     });
     console.log(`Created email document ${user.email} with user ID ${user.id}`)
   }));
