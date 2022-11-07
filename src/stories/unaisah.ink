@@ -1982,7 +1982,8 @@ I find myself taking pointers from these parents for their deftness and patience
 But then Basheer starts a joke about his boss’s tardiness, and I find myself laughing, and when we segue into politics the pang subsides completely. 
 Joy and connection. I’m lucky to have that with Basheer, because these things are hard to find – even with partners.
 I couldn’t be prouder of the life I’ve built. It’s a beautiful, purposeful one, and this is what it’s like to be me.
-
+VAR story_finished = true
+~ story_finished = true
 -> unaisah_3_reflection
 
 === unaisah_3_reflection ===
@@ -2390,6 +2391,8 @@ Madam Unaisah. And what do you do? #speaker_right
     That is why teaching is a raft that floats my identity – I am seen, my contributions noted in concrete, quantifiable measures that, for all their limitations, announce my value to the world. When I step into a classroom I love what greets me: youth and promise and the back-and-forth of intellect. 
     It’s a welcome respite from Thomas the Train and Barney on loop. A gem we get from early parenthood: Not taking our work and social lives for granted. 
     It’s hard to believe I’ve forged a balance between both worlds, each with deep challenges and joys, and my pride swells whenever I see what they show: This is what it’s like, to be me. 
+
+~ story_finished = true
 
 - -> unaisah_3_ending
 
