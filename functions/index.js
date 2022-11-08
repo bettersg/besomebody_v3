@@ -190,8 +190,12 @@ exports.inviteUserToBeCofacilitatorForRoom = functions.https
     }
 
     // Success (user to be invited as co-facilitator exists): add co-facilitator to room and send success email
+    const newRoom = { ...roomData, facilitatorIds: [...roomData.facilitatorIds, toUser.id] };
+    delete newRoom.id; // ID is already in doc ref, no need to store
+    await firestore.collection('rooms').doc(roomId).update(newRoom);
+
     const message = `
-      You have been added by your colleague at ${fromEmail} as a co-facilitator for room ${room.code} for ToBeYou.sg.
+      You have been added by your colleague at ${fromEmail} as a co-facilitator for room ${roomCode} for ToBeYou.sg.
       The room should now be available in your facilitator dashboard.
     `;
     sendInviteCoFacilitatorEmail(roomCode, toEmail, message);
