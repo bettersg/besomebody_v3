@@ -949,7 +949,7 @@ export const CHARACTER_MAP = [
     jsonFile: UnaisahInk,
     primaryColour: '#FB5A3F',
     secondaryColour: '#664EFC',
-    newestChapter: 2,    
+    newestChapter: 3,    
     chapters: [
       {
         chapterId: 1,
