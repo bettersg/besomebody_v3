@@ -303,22 +303,22 @@
       {
         "id":1,
         "body": "Unaisah" ,
-        "image_url": "/shareable_avatars/profile_blank.png"  
+        "image_url": "/shareable_avatars/unaisah.png"  
       },
       {
         "id":2,
         "body": "Basheer",
-        "image_url": "/shareable_avatars/profile_blank.png"  
+        "image_url": "/shareable_avatars/basheer.jpg"  
       },
       {
         "id":3,
         "body": "Hwee Ling",
-        "image_url": "/shareable_avatars/profile_blank.png"  
+        "image_url": "/shareable_avatars/hweeling.jpg"  
       },
       {
         "id":4,
         "body": "Marie",
-        "image_url": "/shareable_avatars/profile_blank.png"          
+        "image_url": "/shareable_avatars/marie.jpg"          
       }  
     ]
   }
