@@ -220,7 +220,7 @@ const RoomJoinPage = () => {
             </Box>   
             
             <Box className={classes.bottom}>
-              <Typography style={{fontSize: '12px'}}> ToBeYou.sg offers a <b>free</b> facilitation tool for schools and organisations to use. <a href="mailto:tobeyou@better.sg">Contact us</a> for enquires. </Typography>
+              <Typography style={{fontSize: '12px'}}> ToBeYou.sg offers <a href="https://facilitator.tobeyou.sg" target="_blank">a <b>free</b> facilitation tool</a> for schools and organisations to use. <a href="mailto:tobeyou@better.sg">Contact us</a> for enquires. </Typography>
              </Box>
           </Box>
 
