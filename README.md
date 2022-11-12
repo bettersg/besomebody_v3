@@ -48,6 +48,16 @@ then run `npm start` to start the app on `localhost:3000`.
  
 The game uses Inky (by Inklestudios) as the backend for the narrative engine, and a custom React front end.
 
+### Deploying Firebase Functions
+
+Ensure that your version of `firebase` is at least 11.
+
+To set up the environment variables for Firebase functions,
+create `functions/.env` and set the value for `EMAILJS_ACCESS_TOKEN` to be your EmailJS private key.
+
+Deploy to Firebase with `firebase deploy --only functions`.
+When deploying, you should see in the console that the environment variables have been loaded from `.env`.
+
 
 ## Community
 

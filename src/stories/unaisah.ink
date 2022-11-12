@@ -514,7 +514,7 @@ That’s my supervisor. What does she want to talk about? Could this be my chanc
 #emailheader:Read Email
 #emailfrom:NEO Hwee Ling <NEO_Hwee_Ling@sjc.edu.sg>
 #emailto:Unaisah BEGUM <Unaisah_BEGUM@sjc.edu.sg>
-#emailfromicon:ico_zhihao_elite.png
+#emailfromicon:ico_ravi_rebecca.png
 #emailsubject:Chat this afternoon?
 
 Unaisah, haven’t had the chance to catch up since you joined us. /n /n If you’re free after 3 this afternoon could you drop by my office for a short while? /n /n cheers, /n HL  #speaker_1
@@ -1112,7 +1112,7 @@ Finally, at 8.27pm, Bash is home. Blissfully ignorant of his sloppiness. By choi
 #speaker_left_image:cha_Unaisah_Basheer_Neutral_HomeWear.png
 How did my favourite teacher’s day go? I bought us Thai green curry from the better stall near my office. Good thing I got there on time because they closed the kitchen after my order. #speaker_left
 Hey. You look angry. Is everything ok? #speaker_left
-sigh... #speaker_self
+Sigh... #speaker_self
 #speaker_left_image:cha_Unaisah_Basheer_Defeated_HomeWear.png
 Alright. What did I do wrong this time? #speaker_left
 
@@ -1204,7 +1204,7 @@ When we were done, Basheer emptied the trash immediately, no further reminder ne
 }
 That night, as he lay snoring next to me, I found the space to cry.
 I’m fed-up with this cycle we’re in: Skirting round the topic of his mum, pretending small amendments and accommodations would resolve things.
-The hardest part of a relationship is not about apologising, or compromising - It’s about hashing out difficult truths that we often don’t want to hear.  
+The hardest part of a relationship is not about apologising, or compromising - it’s about hashing out difficult truths that we often don’t want to hear.  
 And frankly, Basheer and I still can’t have an honest conversation about children.  Because we can’t have an honest conversation about his mum. 
 Sometimes I feel like we’re kids ourselves when it comes to this issue. Imagine if we were to really raise kids. The irony.  
 
@@ -1310,18 +1310,22 @@ Thank you, Chitra, for trusting me. #speaker_self
 #ui:narrator
 #background:bg_unaisah_CH2_Bedroom_Night.png
 That weekend...
-I couldn't stop thinking about what happened. It was really hard, but maybe I made a difference?
-Dealing with young people is complex. I feel...
-+ [discouraged] I’m so disturbed by the whole thing. The world can be so cruel, and so unsafe for young people.
+I couldn't stop thinking about the parent-teacher meeting. It was really hard, but maybe I made a difference?
+Am I ready to have my own children? It's such a huge responsibility to raise them right. 
++ [I'm not ready to become a parent] I’m so disturbed by the whole thing. The world can be so cruel, and so unsafe for young people.
     VAR unaisah_2_feeling = ""
     ~ unaisah_2_feeling = "discouraged"
+    Maybe parenthood blinds people to things they don’t wish to see in their kids – because it reminds them of their own lesser traits. Or maybe it surfaces their own trauma in childhood, when they felt small and humiliated, and so everyone else becomes an enemy. 
     Maybe Allah’s plan is for me to ease the suffering of others, rather than to bring one more child into the world to suffer.
-+ [hopeful]
-    I’m exhausted, but I’m glad the school managed to sort things out in the end.
+    Will I end up like that, too? Devolving into my worst attributes and shedding the good? And what if Bash regrets it?
+    We’re happy where we are. The greatest tragedy is to lose something good in a gamble. The risk is too great. 
+    I don’t want a child. 
+
++ [I think I could raise my child well] I’m exhausted, but I’m glad we managed to sort things out in the end.
     ~ unaisah_2_feeling = "hopeful"
-    In the past week I’ve seen both the worst, as well as the best in my students.
-    Young people may be misguided sometimes, but they are still full of promise.
-    If I can get through this, I can get through anything. Even raising a child of my own.
+    In the past week I’ve seen both the worst and the best in my students - and their parents.
+    Young people may be misguided sometimes, but they are still full of promise with the right care and support.
+    It’s hard to believe it myself, but the hard knocks from teaching have prepared me for parenthood. 
 - What a difficult week it has been.
 
 #ui:scene
@@ -1329,7 +1333,7 @@ Dealing with young people is complex. I feel...
 #speaker_left_name:Basheer
 #speaker_left_image:cha_Unaisah_Basheer_Neutral_HomeWear.png
 You look like you've had a rough week. #speaker_left
-You read my mind #speaker_self
+You read my mind. #speaker_self
 Do you want to talk about it? #speaker_left
 + [Yes] Yeah, and it's a long story.  #speaker_self
     It's ok, I'm plenty comfortable. Why don't you start at the start?  #speaker_left
@@ -1349,7 +1353,7 @@ Well, we had to tell Wan Ling’s parents and, needless to say, they were furiou
 At the boy? #speaker_left
 At everyone. At the boy, at the school, at their daughter. #speaker_self
 They even blamed Chitra for not reporting it sooner. #speaker_self
-Poor kid, caught in the crossfires. #speaker_left
+Poor kid, caught in the crossfire. #speaker_left
 And the boy who was harassing her, Joseph, his parents... It’s even worse. #speaker_self
 Oh no. #speaker_left
 We were hoping that we could just talk to him calmly. Get him to understand why he was making her uncomfortable. #speaker_self
@@ -1374,7 +1378,7 @@ No kidding. #speaker_left
 }   
 
 = unaisah_2_7a
-Scary isn’t it? No one wants to be a bad parent but we all have our = blindspots, emotional triggers, bad coping mechanisms… things we may not even be aware of. #speaker_self
+Scary isn’t it? No one wants to be a bad parent but we all have our blind spots, emotional triggers, bad coping mechanisms… things we may not even be aware of. #speaker_self
 ...This isn’t just about Joseph and his father, isn’t it? #speaker_left
 Before, when we would talk about having children, I wasn’t absolutely sure where I stood. #speaker_self
 I know. #speaker_left
@@ -1484,7 +1488,927 @@ Reflection 15  // change this to 15 and add reflection.json
 
  
 
-// -> unaisah_3_intro
+-> unaisah_3_intro
 
+
+// CHAPTER 3
+
+
+
+
+=== unaisah_3_intro ===
+#knot:unaisah_3_intro
+#ui:narrator
+#background:bg_unaisah_intro.jpg
+The years really fly by. Wasn’t it only yesterday when I first joined teaching? I can’t believe it but I’m now on the wrong side of 30.
+Funny how which side you’re on frames whether the world is your oyster or you’re facing the view downhill.
+
+~ chapter_id = 3
+#background:black.jpg
+CHAPTER {chapter_id} #title
+Labour of love #title
+
+{chapter_2_ending == 1: 
+    -> unaisah_3a_intro 
+    - else: 
+    // PLAYER CHOSE TO HAVE BABY BUT STORY NOT DONE. USING WITHOUT BABY STORY FOR TESTING
+    -> unaisah_3b_intro     // change this later 
+    }
+
+
+// CHAPTER 3 WITHOUT BABY
+
+=== unaisah_3a_intro ===
+#knot:unaisah_3a_intro
+#ui:narrator
+#background:bg_unaisah_intro.jpg
+What my supervisor Hwee Ling said was right. Because of my previous work experience, I was promoted relatively quickly as a teacher.
+I was very encouraged, and worked hard to justify my promotion.
+I even took the huge decision with Basheer not to have children, and focus on my work and my happiness.
+It wasn’t easy, and the decision made things very difficult with my in-laws.
+But now it’s been another four years, and I’m not really moving anywhere.
+Did I make a mistake? What can I still do to make my sacrifices worth it? 
+
+-> unaisah_3a_1
+
+=== unaisah_3a_1 ===
+#knot:unaisah_3a_1
+#ui:narrator
+#background:bg_unaisah_CH4A_InterviewBoardroom.png
+Four years later. 
+#ui:scene
+#speaker_left_name:Hwee Ling
+#speaker_left_image:cha_unaisah_hweeling_neutral.png 
+...and that’s it. Thank you, Unaisah. #speaker_left
+Thanks. Hwee Ling... #speaker_self
+Yes? Is anything the matter? #speaker_left
++ [I would like to talk about my next promotion.]  See...I’ve been Subject Head for a few years now, and I want to know what the next step is.  #speaker_self
+    VAR unaisah_3a_promotion = true
+    ~ unaisah_3a_promotion = true
+   I know I’ve been contributing above my grade. What’s holding me back? #speaker_self
+   #speaker_left_image:cha_unaisah_hweeling_concerned.png
+    Unaisah. I want to be realistic with you. You’ve done well, but there also aren’t many key appointments available now. #speaker_left
+    #speaker_left_image:cha_unaisah_hweeling_grinning.png
+    Look at me, I’ve been here longer than you have, and I’m still doing the same thing. We can still grow in different ways. #speaker_left
+    I still want to give myself a chance in a bigger role. #speaker_self
+    #speaker_left_image:cha_unaisah_hweeling_concerned.png
+    Historically, things like this move more slowly in JCs. If you’re really keen on the leadership track, you might want to consider transferring to a Secondary school. There may be more opportunities for you to move up there. #speaker_left
+    Oh. I hadn’t thought about that. #speaker_self
+    It’s worth considering. There’s a lot more movement there. Bigger pond, that kind of thing. #speaker_left
+    We’d hate to lose you, but it’s also important you feel fulfilled. #speaker_left
+    ... #speaker_self
+    I need some time to think about this. #speaker_self
+
++ [I think we covered everything.] Nothing. Nothing, just remembering something for the next class. #speaker_self
+    ~ unaisah_3a_promotion = false
+    I can’t believe this. Is that really it? #inner_monologue
+- Alrighty. Have a good weekend. #speaker_left
+#speaker_left_image:cha_unaisah_hweeling_grinning.png
+You too. #speaker_self
+
+-> unaisah_3a_2
+
+=== unaisah_3a_2 ===
+#knot:unaisah_3a_2
+#ui:narrator
+#background:bg_unaisah_CH4A_SchoolFoyer.png
+At school: The main foyer.
+#ui:scene
+#background:bg_unaisah_CH4A_SchoolFoyer.png
+#speaker_right_name:Veronica
+#speaker_right_image:cha_unaisah_veronica_neutral.png 
+What’s Veronica doing with that student? Is she giving her students lifts home now? #inner_monologue
+Hi Unaisah! Going back? #speaker_right
+Yup! #speaker_self
++ [Ask about the student] Giving your student a lift back? #speaker_self
+    Oh haha! You don’t know? #speaker_right
+    #speaker_right_image:cha_unaisah_veronica_laughing.png 
+    ??? #speaker_self
+    This is my SON, Jervius. #speaker_right
+    He’s studying here? #speaker_self
+    ...You’re studying here! #speaker_self
+    Yes, just started. It’s not uncommon. But we stay out of each other’s way. This one, normally he wants me to pick him up outside the school gate. Doesn’t want his friends to see. Even though they know. #speaker_right
+    #speaker_left_name:Jervius
+    #speaker_left_image:cha_unaisah_Jervius.png 
+    Ma..! #speaker_left
+    #speaker_right_image:cha_unaisah_veronica_neutral.png 
+    Okay okay you better stop, you’re embarrassing him. #speaker_self
+    Hey I forgot, you have kids also? How old? #speaker_right
+    I...don’t. #speaker_self
+    #speaker_right_image:cha_unaisah_veronica_concerned.png 
+    Ah. It’s just that you’re so good with the students, I thought… #speaker_right
+    #speaker_right_image:cha_unaisah_veronica_neutral.png 
+    Well, I got to run! See you! #speaker_right
+
++ [Don't be kaypoh (nosey)] 
+
+- Have a good weekend!	#speaker_self
+
+-> unaisah_3a_3
+
+=== unaisah_3a_3 ===
+#knot:unaisah_3a_3
+#ui:narrator
+#background:bg_unaisah_CH4A_Restaurant.png
+Later that evening, at a restaurant.
+#ui:scene
+#background:bg_unaisah_CH4A_Restaurant.png
+#speaker_left_name:Jessica
+#speaker_left_image:cha_unaisah_Jessica.png
+#speaker_right_name:Marie
+#speaker_right_image:cha_unaisah_Marie_Happy.png
+Wow it feels so good to be out. #speaker_self
+I KNOW! It’s been so long. We need to do this more often. #speaker_right
+Easy to say. How many times have I asked you already? #speaker_self
+Haven’t you heard? Adulthood is where two people keep telling each other “hey let’s meet up” until they die. Funny right? I saw it in a meme. #speaker_right
+Yah, because some big boss is so busy with her café right. #speaker_self
+And big boss is big enough to boss other people to look after her café! Even on a Friday night. That’s why I can meet you! This is called hashtag made it. #speaker_right
+So what is it you do again, Unaisah? #speaker_left
+I’m a teacher. #speaker_self
+Cool! My mum’s a teacher. #speaker_left
+#speaker_right_image:cha_unaisah_Marie_Cheeky.png
+Hey don’t talk so much, let’s order first yah? #speaker_right
+Hey...do you mind if I get a beer? Would you be okay with that? #speaker_left
+Sure. #speaker_self
+Eh Jess, this one no need to ask one. She’s alright with a lot of things. I know. No pork no lard, can already. Otherwise why would I suggest this place? #speaker_right
+Oh I just thought, you know, with the, [pointing] you know, I thought you were more...the staunch kind. #speaker_left
++ [With the what?] With the what? #speaker_self
+    You know, your head thing. #speaker_left
+    My head thing? #speaker_self
+    #speaker_right_image:cha_unaisah_Marie_Happy.png
+    Eh Jess you failed your Social Studies ah? Tudung lah bodoh (fool). #speaker_right
+    I know I know I just forgot the word temporarily, can? #speaker_left
+    Tudung is Malay, Hijab is Arabic. I’m Indian, I don’t speak Malay, to me this is a hijab. I wear a hijab, I’m a hijabi. #speaker_self
+    #speaker_right_image:cha_unaisah_Marie_Concerned.png
+    It just means I wear a hijab. It doesn’t mean I’m a threat, or I’m unnecessarily difficult, or whatever other assumptions people have. #speaker_self
+    I didn’t say— #speaker_left
+    I know you didn’t, but many other people have seen it that way, so I’m just tired of this kind of talk. #speaker_self
+    I guess I’ve never thought of it like that before... Sorry... #speaker_left
+    No harm done.  #speaker_self
+
++ [Let it go] Oh I'm not. Wearing a hijab is important to me, but we’re all entitled to our own interpretations of our faith. #speaker_self
+    Ah okay. As long as you’re fine. #speaker_left
+- So what’s been up with you, Unaisah? #speaker_right
+#speaker_right_image:cha_unaisah_Marie_Neutral.png
+You know, it’s funny we’re meeting today. I have some things to vent. #speaker_self
+So I did my work appraisal again this afternoon, and it looks like things aren’t really moving. #speaker_self
+{ unaisah_3a_promotion == true:
+    Basically if I want to progress further, I need to transfer to a secondary school. #speaker_self
+    Huh? Why? #speaker_right
+    #speaker_right_image:cha_unaisah_Marie_Concerned.png
+    Not enough lobang (vacancies) where I am. Small pond. It’s very frustrating. I know I can do much more at a higher level. #speaker_self
+    So what do you have to do? #speaker_right
+    My boss said I could consider switching to a secondary school. More room to move up there. #speaker_self
+    Will you? #speaker_left
+    I don’t know. I worked very hard at my current school, and it isn’t just teaching and admin. It’s also building relationships. I don’t want to burn all that. #speaker_self
+    I just feel so stuck and confused now... #speaker_self
+- else: 
+    It’s been seven years. Three since my only promotion. And we didn’t discuss anything about progressing further. #speaker_self
+    #speaker_right_image:cha_unaisah_Marie_Concerned.png
+    Huh? Why? #speaker_right
+    I don’t know. It could be many things. It’s very frustrating. #speaker_self
+    Did you offend anyone? #speaker_right
+    #speaker_right_image:cha_unaisah_Marie_Annoyed.png
+    Offend? Hello, normally it’s other people who offend me. #speaker_self
+    Eh eh eh chill... #speaker_right
+    #speaker_right_image:cha_unaisah_Marie_Concerned.png
+    Do you have any, like, enemies? #speaker_left
+    Not that I know of. School simply isn’t that kind of place. I don’t know. I just feel confused and stuck. #speaker_self
+}
+
+Don’t be impatient, it could still happen. Hasn’t your supervisor been telling you all along that your improvements always surpass her expectations? That must mean you’re above average. #speaker_right
+Yes, AND I came in with experience. And I’ve been using that experience. I’ve taught students AND trained my colleagues. Set things up with other schools. And so on. #speaker_self
+I mean, if I never left the private sector...by now... #speaker_self
+Oh yah, okay I know what you mean. #speaker_right
+#speaker_right_image:cha_unaisah_Marie_Cheeky.png
+Jess—she’s the one from my previous company. That one. #speaker_right
+I didn’t know! Unaisah, I admire what you and Marie did. #speaker_left
+Marie, you told her? #speaker_self
+I tell everyone! That’s the whole point! #speaker_right
+Do you have a poster in your café announcing it? #speaker_self
+#speaker_right_image:cha_unaisah_Marie_Neutral.png
+Unaisah, you were the public communications manager there, right? #speaker_left
+Yes, look—I’ve put that behind me. #speaker_self
+No wait. Have you thought about going back into that line? #speaker_left
+Me? At this stage? No no no. When you’re out of the industry that long, it’s hard to go back. Also, I do like my school. #speaker_self
+She’s got a point, you know. #speaker_right
+If you think you’re stuck, maybe the way up—is OUT. #speaker_right
+#speaker_right_image:cha_unaisah_Marie_Concerned.png
+A good friend of mine, her company is hiring. They’re looking for someone who can do media relations and public education. I can pass you her contact. #speaker_left
+This is all very sudden. #speaker_self
+Look, just think about it? You’re not too old to start over, and this isn’t even starting over. Also you said you’re not going to have kids right? Make it count! #speaker_right
+
+
+
+-> unaisah_3a_4
+
+=== unaisah_3a_4 ===
+#knot:unaisah_3a_4
+#ui:narrator
+#background:bg_unaisah_CH4B_LivingRoom_Night_Messy.png 
+Back at home that night...
+#ui:scene
+#background:bg_unaisah_CH4B_LivingRoom_Night_Messy.png 
+#speaker_left_name:Basheer
+#speaker_left_image:cha_Unaisah_Basheer_Neutral_HomeWear.png
+You’re back! Had fun? #speaker_left
+Yeah, I haven’t seen Marie in ages. Also met one of her old school friends, Jessica. #speaker_self
++ [Thank you for vacuuming...] ...hey thanks for vacuuming. #speaker_self
+    The floor felt dusty. I think I’m getting old also, hair all falling out. #speaker_left
+    #speaker_left_image:cha_Unaisah_Basheer_Laughing_HomeWear.png 
+    Please. How much hair do you even have to drop in the first place? I'm sure most of it is mine. #speaker_self
+    Oy! Way to make me feel self-conscious about my hair… Or lack thereof. #speaker_left
+    It’s okay, I love you with or without hair. #speaker_self
+    Glad we cleared that up. #speaker_left
+    You know what I love more, though? #speaker_self
+    How can you love anything more than me? #speaker_left
+    I love walking on a clean floor after a long day. Thank you dear. #speaker_self
+    #speaker_left_image:cha_Unaisah_Basheer_Concerned_HomeWear.png 
+    Seriously though, are you okay? #speaker_left
+    You said you had fun, and yet you don’t look like you had fun. #speaker_left
+    I’ve known you so long, I know when you’re tired, and when you’re upset, alright? #speaker_left
+    There’s no need to hide. So what’s on your mind? #speaker_left
+
++ [Reflect on your discussion with Hwee Ling] ... #speaker_left
+    ...are you okay? #speaker_left
+    #speaker_left_image:cha_Unaisah_Basheer_Concerned_HomeWear.png 
+    Huh? What? Of course I’m fine. #speaker_self
+    You said you had fun, and yet you don’t look like you had fun. #speaker_left
+
+- Oh Basheer. #speaker_self
+Well? #speaker_left
+I had another work appraisal today, and I don’t think I’m getting a promotion anytime soon. #speaker_self
+It’s been quite a while Bash, and I’ve worked so hard. #speaker_self
+You have. #speaker_left
+Jessica, Marie’s friend, suggested over dinner that I try for a PR job in her friend’s company. #speaker_self
+Wait, you’re saying that you are thinking of applying for a job in the company of a friend of a friend of your friend? #speaker_left
+I don’t know. It’s a lot to think about. But at this stage I am prepared to try anything. I just know that I could be doing so much more. #speaker_self
+I don’t regret quitting Brown & Grey after the whole Nigel thing, but… sometimes I wonder… #speaker_self
+I know. #speaker_left
+#speaker_left_image:cha_Unaisah_Basheer_Defeated_HomeWear.png 
+Just think about it please. It’s a very big change. #speaker_left
+When you quit so suddenly last time--not that I would have wanted you to stay--knowing, now, what was happening--but it was hard--the freelance jobs--I mean, they sounded interesting--but it was hard seeing you so lost like that. #speaker_left
+#speaker_left_image:cha_Unaisah_Basheer_Concerned_HomeWear.png 
+I know, I know. #speaker_self
+Can we not talk about this right now? #speaker_self
+Alright. #speaker_left
+
+#ui:narrator
+#background:bg_unaisah_CH4A_Computer_Night.jpg 
+I can't believe I'm seriously considering applying for jobs again. I never thought I'd have to fill in these forms again.
+“Excellent command of English”
+“Eloquent and persuasive”
+“5-8 years’ experience working with media”
+VAR unaisah_3_applynewjob = false
+~ unaisah_3_applynewjob = false
+What should I do?
++ [Apply. This could be the one.] 
+    #background:black.jpg
+    Three weeks later.
+    ~  unaisah_3_applynewjob = true
+    I can’t believe they called me for an interview.
+    Well, this is it, Inshallah.
+    -> unaisah_3a_7
+
++ [Don't apply. It's a risk] 
+    ~ unaisah_3_applynewjob = false
+- -> unaisah_3a_8
+
+=== unaisah_3a_7 ===
+#knot:unaisah_3a_7
+#ui:scene
+#background:bg_unaisah_CH4A_InterviewBoardroom.png 
+#speaker_right_name:Interviewer
+#speaker_right_image:cha_unaisah_INT_M.png 
+Well, we are certainly impressed by your CV and breadth of experience. #speaker_right
+Could you tell us: What do you consider your greatest strength, and why? #speaker_right
+
++ [Collaboration with colleagues] It’s definitely my ability to bring people together. #speaker_self
+    Elaborate. #speaker_right
+    I have been doing this throughout my working life. #speaker_self
+    My previous company was an MNC. I had to work with almost every other department to figure out how best to publicise their research and products. #speaker_self
+    I also had to work across time zones with overseas offices to coordinate product launches. #speaker_self
+    As a teacher, I shared my past work experience and expertise with my colleagues, to level them up. #speaker_self
+    And I used my work contacts to organise learning trips for my students, as well as internships. #speaker_self
+    No experience is wasted with me—I know how to bring everything and everyone together, and make things count. #speaker_self
+    Phew!! That must be what my students feel like during an examination. #inner_monologue
+    Good. Then I think you have a feel for what our work is like. #speaker_right
+
++ [Compassion for students] I feel my greatest strength is my compassion. #speaker_self
+    Do give an example. #speaker_right
+    There was an incident in my school where a student was worried about their friend’s safety, but also hesitant to report it because the student did not want to get their friend into trouble. #speaker_self 
+    I had to navigate how to get them to trust me enough to tell me what was happening, while also balancing their expectations, that I may have to report the incident if someone is in danger. #speaker_self
+    Business partnerships are also about trust while balancing expectations. Being upfront about what can be delivered, and being accountable for what is promised. Finding out the needs of both parties to build mutually beneficial relationships. #speaker_self
+    With colleagues, it’s also crucial to be firm and respected, while also getting them to be comfortable with me. At the end of the day, distrust in the workplace affects the team’s overall productivity and the sustainability of a work environment. #speaker_self
+    Alright. Good. #speaker_right
+
+
++ [Courage to do the right thing] I would say that it’s courage. #speaker_self
+    How so? #speaker_right
+    Wow. Am I really going to tell them about why I left Brown & Grey? #inner_monologue
+    What if this puts them off hiring me? #inner_monologue
+    ++ [Go into detail] There is something you should know about my previous job. #speaker_self
+        One of senior managers there behaved inappropriately around me and several other women. #speaker_self
+        It was unprofessional, completely wrong, and made us feel uncomfortable. #speaker_self
+        I reported it to HR a few times over a few months, but nothing changed. #speaker_self
+        So I and another colleague, as a matter of principle, decided to quit. #speaker_self
+        Well, that was refreshing. #speaker_right
+        ...“refreshing”??! #inner_monologue
+        We are sorry you had that experience, Ms Begum. But why are you telling us this? Are you worried that something like that would happen here? #speaker_right
+        I’m sharing this to let you know that I have the courage to do the right thing. #speaker_self
+        And in what situation at our company do you envision this courage of yours being useful? #speaker_right
+        Doing what’s best, even if it means asking difficult questions, or having tough conversations. I want to uphold a positive company culture, which I believe is vital to the overall efficiency and sustainability of a workplace environment. #speaker_self
+        I also want to create a safe work environment for myself and other women. Support the other women in the field to be bold, take up space, insist on being treated well. #speaker_self
+        Okay. I’ve heard enough. #speaker_right
+        Is it just me or does he seem.... threatened? #inner_monologue
     
+    ++ [Be vague] In my previous job as a Secondary school teacher, I took on the role of supervising the {unaisah_1_cca == "malaydance":Malay Dance}{unaisah_1_cca == "robotics":Robotics} CCA, despite having no experience or knowledge of it. #speaker_self
+        It was daunting at first, but it opened my eyes to things I would not have been exposed to before. And for my students, seeing me try out something new even when I wasn’t sure of it, and then how I grew to enjoy it in the end. emboldened them to explore their interests too. #speaker_self
+        Alright. Good. #speaker_right
+
+- Thank you for coming here today. I think we’ve covered almost everything. #speaker_right
+Thank you for your time too. #speaker_self
+Just one last thing. #speaker_right
+Sure. #speaker_self
+I want to be very frank with you, Ms Begum. Here, especially in this role, appearances matter. #speaker_right
+The successful candidate will sometimes be the face of this company to the media, and the public. #speaker_right
+
+And whatever ideals you may have about humanity, how you appear, will affect perceptions of us. #speaker_right
+
+We also work with a lot of clients from China. A lot of our business meetings happen over dinner and drinks. #speaker_right
+Or we often arrange for catering, it would be… They may be more comfortable with someone with more similar...customs. #speaker_right
+Are you prepared to… adjust to the requirements? #speaker_right
+If company meetings happen over dinner and drinks, that’s no problem, I will have a soda. If you’re ordering catering, I’d be happy to suggest places with Halal options. #speaker_self
+But if you’re asking if I would be willing to compromise on my faith to make life more convenient for the office, I’m sorry but my answer is no. I take my faith very seriously and hope you can respect that choice. #speaker_self
+I see. I think we’re done here. Thank you. #speaker_right
+
+#knot:unaisah_3_minigame
+#ui:mcq
+#game_id:16
+Minigame 16 // must add some text
+
+-> unaisah_3a_8
+
+=== unaisah_3a_8 ===
+#knot:unaisah_3a_8
+#ui:scene
+#background:bg_unaisah_CH4A_MarieCafe.png
+#speaker_right_name:Marie
+#speaker_right_image:cha_unaisah_Marie_Concerned.png
+{ unaisah_3_applynewjob == true:
+    ...and yep. It’s been a month, I haven’t heard from them. I guess this is it. #speaker_self
+    That sucks, but forget them! You’re too good for them! #speaker_right
+    Yeah, but I’m still back to square one. #speaker_self
+    Well, at least you tried, so you’ll never wake up at night wondering “what if??” #speaker_right
+}
+So, what now? #speaker_right
+Now… I don’t know. #speaker_self
+I’m so torn up. Basheer and I got some news from his parents last week. #speaker_self
+What happened? #speaker_right
+His mother was diagnosed with Breast cancer. Stage 2. She’ll have to go for surgery. #speaker_self
+#speaker_right_image:cha_unaisah_Marie_Annoyed.png
+Oh my.... I’m so sorry to hear that, Uni. #speaker_right
+#speaker_right_image:cha_unaisah_Marie_Concerned.png
+Yes, and with my father in-law’s existing health conditions, he’s not going to be able to take care of her alone. #speaker_self
+The way I figure, my best option is to... #speaker_self
++ [stay in Singapore Junior College] -> unaisah_3a_8a
++ [apply for a Vice Principal job elsewhere]  -> unaisah_3a_8b
+
+= unaisah_3a_8a
+    #knot:unaisah_3a_8a
+    #ui:scene
+    #background:bg_unaisah_CH4A_MarieCafe.png
+    #speaker_right_name:Marie
+    #speaker_right_image:cha_unaisah_Marie_Concerned.png
+    Stay where I am. Where it’s comfortable and I have a routine.  #speaker_self
+    VAR unaisah_3_stayinsjc = true
+    ~  unaisah_3_stayinsjc = true
+    Maybe I don’t have the upwards progression, but at least work will be predictable, so I’ll be able to divert energy to taking care of my in-laws. #speaker_self
+    Are you sure about it? #speaker_right
+    Honestly, not really. But it’s the best way forward. Not only will it make my in-laws happy, but my own parents too. #speaker_self
+    Plus, with all the tension between Basheer’s mum and me about not having children and all, maybe it’ll be a good opportunity to get to know each other. Find common ground, that sort of thing. #speaker_self
+    I really admire you, Uni. #speaker_right
+    Aw thanks. #speaker_self
+    Where’s this coming from though? #speaker_self
+    Can’t a girl just compliment her best friend? #speaker_right
+    Look, this may be your biggest challenge yet. More difficult than anything you’ve ever had to do in your career. I’m really proud of you and in awe of your courage for taking the leap. #speaker_right
+    Yeah. It’ll be worth it. #speaker_self
+    -> unaisah_3a_9    
+
+= unaisah_3a_8b
+    #knot:unaisah_3a_8b
+    #ui:scene
+    #background:bg_unaisah_CH4A_MarieCafe.png
+    #speaker_right_name:Marie
+    #speaker_right_image:cha_unaisah_Marie_Concerned.png
+    Try my luck at a Secondary School. I was searching for job openings last night, just out of curiosity, Singapore Secondary has an opening for Vice Principal. #speaker_self
+    Wow! VP? That’s a great opportunity! #speaker_right
+    Well, with Basheer’s hours he just won’t have the time to take care of them. So it would have to be me who takes care of them. #speaker_self
+    BUT, with more pay, and since we’ve decided not to have children, we could afford hiring a caretaker for my in-laws. #speaker_self
+    Well then great! You get to move up and help your inlaws at the same time! #speaker_right
+    Yes! But it does make me feel a little guilty. #speaker_self
+    How so? #speaker_right
+    I don't know. It's the most practical solution, but a part of me wonders if I’m just being selfish. That I’m not doing right by not taking care of them myself. #speaker_self
+    But you are taking care of them while taking care of yourself. It’s not like you’re hanging them out to dry. They’ll have someone to take care of them while you also get to pursue what makes you happy. Two birds with one stone, right? #speaker_right
+    Yeah, but I know what my in-laws will think. What my parents will think too. #speaker_self
+    They’ll say that hiring someone to take care of them is the same as not taking care of them at all. #speaker_self
+    I see. That’s hard. #speaker_right
+    Will their judgement bother you more than not taking this opportunity though? #speaker_right
+    + [Yes] -> unaisah_3a_8a
+    + [No] No, it won't. #speaker_self
+        ~  unaisah_3_stayinsjc = false
+        Then it’s settled. #speaker_right
+        -> unaisah_3a_9
+
+=== unaisah_3a_9 ===
+#knot:unaisah_3a_9
+#ui:narrator
+#background:bg_unaisah_CH1_VoidDeck_Day.png
+Years passed. 
+It's early morning again, and my taxi is almost here.
+#ui:scene
+#background:bg_unaisah_CH1_GrabInterior_Day.png
+#speaker_right_image:cha_unaisah_grabdriver_normal.png
+#speaker_right_name:Driver
+{ unaisah_3_stayinsjc == true:
+    Singapore Junior College? You teacher, ah? #speaker_right
+    Yes. #speaker_self
+    How long already? #speaker_right
+    Seven years, uncle. #speaker_self
+    VAR chapter_3_ending = 0
+    ~ chapter_3_ending = 1
+    // no kids JC
+    Wah. Seven years. Long time already. Like that they never give you promotion, ah? #speaker_right
+    Seven years should be can become principal already. #speaker_right
+    Actually, it’s my decision. I realised taking care of my family was more important. #speaker_self
+    How many children you got? #speaker_right
+    No, not my children. My husband’s parents. They’re getting old and have some health condition. I stayed as a teacher so I can focus on taking care of them after work. #speaker_self
+    Ahhh. Good wife ah. Your husband lucky. #speaker_right
+    We try. It’s not always easy. But we do our best. #speaker_self
+- else:
+    Singapore Secondary school? You teacher, ah? #speaker_right
+    Ye- #speaker_self
+    Actually, I’m a Vice Principal. #speaker_self
+    ~ chapter_3_ending = 2 
+    // no kids VP SS
+    Wah so young got VP already. #speaker_right
+    No lah uncle, I old already. #speaker_self
+    What old! Look like you just finish schooling only. #speaker_right
+    Hahah. #speaker_self
+    Tell me ah, my son veeeery lazy to study. Uncle also cannot help him one. I try everything already. How to make him study? #speaker_right
+    Hmm... #speaker_self
+    I don’t know if you can make him study. #speaker_self
+    But maybe if he sees you try something difficult, maybe even something that you’ve avoided for a long time, he’ll see that he can do difficult things too. #speaker_self
+    Even if you try and fail, as long as you keep trying, you’re already setting a good example for him. #speaker_self
+}
+
+-> unaisah_3a_10
+
+=== unaisah_3a_10 ===
+#knot:unaisah_3a_10
+#ui:narrator
+#background:bg_unaisah_intro.jpg
+So much has happened in the last few years. 
+{chapter_3_ending == 1: 
+    It doesn't matter how high I've climbed in my teaching career -- it's not the point.
+- else: 
+    My career has gone from strength to strength. 
+}
+I glean lessons from my students as much as I impart mine to them. I’ve made lifelong friends. 
+While work is tough, it is never soulless. My life feels full and, as long as I have Basheer with me, this world I’ve built is enough. 
+I think it is. 
+Sometimes, on a weekend at a cafe, I’d feel a pang when I see couples struggling with their kids. Part of me wonders how I’d handle a toddler’s tantrum.  Would I stay calm? Would I lose my temper too? Would I take it out on Basheer? 
+I find myself taking pointers from these parents for their deftness and patience. Almost like I’m studying to be parent myself.
+But then Basheer starts a joke about his boss’s tardiness, and I find myself laughing, and when we segue into politics the pang subsides completely. 
+Joy and connection. I’m lucky to have that with Basheer, because these things are hard to find – even with partners.
+I couldn’t be prouder of the life I’ve built. It’s a beautiful, purposeful one, and this is what it’s like to be me.
+
+-> unaisah_3_reflection
+
+=== unaisah_3_reflection ===
+#knot:unaisah_1_reflection
+#ui:chapter_reflection
+#reflection_id:15
+Reflection 15  // change this to 16 and add reflection.json
+
+
+ 
+
+
+-> END
+
+
+
+
+// CHAPTER 3 WITH BABY
+
+=== unaisah_3b_intro ===
+#knot:unaisah_3b_intro
+#ui:narrator
+#background:bg_unaisah_4_maternityshopping.jpg
+The last 9 months of preparing for the baby have been such a whirlwind.
+All the preparation...
+#background:bg_unaisah_CH4B_ultrasound.jpg
+All the changes to my body...
+All the fears I’ve had...
+All the work I've had to leave behind...
+#background:bg_unaisah_CH4B_Munir_Night.jpg
+And now, Alhamdulillah, Basheer and I have been blessed with a child...
+
+-> unaisah_3b_1
+
+=== unaisah_3b_1 ===
+#knot:unaisah_3b_1
+#ui:scene
+#background:bg_unaisah_CH2_Bedroom_Night.png
+..a child who needs to be fed constantly, day and night. #inner_monologue
+#background:bg_unaisah_CH4B_Munir_Night.jpg
+Still asleep, Munir? It’s hard enough waking up for every feed, now I have to wake you too? Hmm?  #inner_monologue
+Oh, come here...  #inner_monologue
+It’s tiring but I love you. Amma will do anything for you.  #inner_monologue
+#background:bg_unaisah_CH3_Bedroom_Day.png
+#speaker_left_image:cha_Unaisah_Basheer_Neutral_HomeWear.png
+#speaker_left_name:Basheer
+Did you get any rest last night? #speaker_left
+    // + [Yes] Yes, off and on, in between. He fell back asleep quite quickly. #speaker_self
+    + [No] No. I feel like I’ve been doing nothing but feeding Munir since we left the hospital a week ago. I don’t know day or night. I’m so tired.  #speaker_self
+    + [No, but it's ok] No, but I’m alright. It’s just been a week. I’ll get used to it.  #speaker_self
+    + [What do you think?!] Well, what do you think?!  #speaker_self
+- I do want to help, alright? #speaker_left
+We’ve discussed this. I want to breastfeed him as long as I can. Bond with him. When I cannot take it, then I’ll pump and you can bottle feed him. #speaker_self
+Don’t wait until you cannot, alright? We’re not young anymore. Let me feed him sometimes when you’re tired, alright? #speaker_left
+You are already helping. With the chores, the diapers. I’ll let you know. #speaker_self
+Okay. Bonding, I understand. Very important. #speaker_left
+But maybe think of it another way. My paternity leave is much shorter than yours. #speaker_left
+At least let me use this time to learn first. So it is easier when we’re both around, alright? #speaker_left
++ [Try pumping] You know what, that makes sense. Let’s give this a go. #speaker_self
+    VAR unaisah_3b_breastfeed = false
+    ~ unaisah_3b_breastfeed = false
+    I’ll go take out the pump and we can look at the instructions later. #speaker_left
+    Thanks. I need to feed him first. #speaker_self
++ [Continue breastfeeding] Bash, I only have this one chance to bond with Munir in these first couple of weeks. I’m so afraid of giving this up. #speaker_self
+    ~ unaisah_3b_breastfeed = true
+    Hey, I’m his father. I should also bond with him, alright? #speaker_left
+    It’s different, please understand. Just let me have this one. You’ll have years with him. #speaker_self
+- Go ahead. I’ll make breakfast. Where is the thing your mother brought over yesterday? #speaker_left
+It’s in the back of the fridge, top shelf. #speaker_self
+Okay. #speaker_left
+
+-> unaisah_3b_3
+
+=== unaisah_3b_3 ===
+#knot:unaisah_3b_3
+#ui:scene
+#background:bg_unaisah_CH4B_Munir_Night.jpg
+#speaker_right_name:Munir
+WAAAAAAAHHHHHH!!!! #speaker_right
+WAaaaaAAAAAAAHhhHH!!!! #speaker_right
+WHEEEZE WAAaaAHhhHH!!!! #speaker_right
+Is it 6 already? #speaker_self
+Oh goodness...it’s only 3:30. #speaker_self
+#background:bg_unaisah_CH2_Bedroom_Night.png
+#speaker_left_image:cha_Unaisah_Basheer_Defeated_HomeWear.png
+#speaker_left_name:Basheer
+{unaisah_3b_breastfeed == false:
+    I should take care of this. Basheer will do the bottle feed at 6am. #inner_monologue
+    I’ll take him outside… Shhh chellam, let’s not disturb Daddy okay? #speaker_self
+    Kanne, Kanmaniye, Kannurangai ponne, Mayilo, togai mayilo, Kuyilo, koovum kuyilo, Nilavo, nilavin oliyo, Imaiyo, imaiyin kanavo (Tamil lullaby) #speaker_self
+- else: 
+    Bash. #speaker_self
+    Mmph? #speaker_left
+    BASHEER. #speaker_self
+    Oh, what happened? #speaker_left
+    Could you help bring Munir please and turn on the light. I need to breast feed him. #speaker_self
+    Ok, ok ok. #speaker_left
+}
+#ui:narrator
+#background:black.jpg
+It's 6am. Time disappears when you're taking care of a baby. 
+#ui:scene
+#background:bg_unaisah_CH4B_Munir_Night.jpg
+#speaker_left_image:cha_Unaisah_Basheer_Defeated_HomeWear.png
+#speaker_left_name:Basheer
+{unaisah_3b_breastfeed == false:
+    Bash. #speaker_self
+    Mmph? #speaker_left
+    BASHEER. #speaker_self
+    Oh, what happened? #speaker_left
+    Your turn. Feed him from my milk in the fridge. #speaker_self
+    Ok, ok ok. #speaker_left
+    You remember how, right? We went through earlier? #speaker_self
+    Yes yes. #speaker_left
+    Ah...Back to sleep...this was the right choice. #inner_monologue
+- else:
+    #speaker_left_image:pixel.png
+    I thought I knew what love was when I married Basheer. But with Munir, it’s on another plane entirely. #inner_monologue    
+}    
+
+-> unaisah_3b_4
+
+=== unaisah_3b_4 ===
+#knot:unaisah_3b_4
+#ui:narrator
+#background:black.jpg
+My relatives have all come over to peek at the new addition to our family.
+Feels like my first time being social in forever.
+#ui:scene   
+#background:bg_unaisah_CH4B_Munir_Night.jpg
+#speaker_left_image:cha_unaisah_Mother.png 
+#speaker_left_name:Amma
+#speaker_right_name:Male Relative
+#speaker_right_image:cha_unaisah_MaleRelative.png 
+Oh you are so handsome! #speaker_left
+Amma, thanks for your help these past weeks and months. I really don’t know how I could do this without you. #speaker_self
+Please, I am your mother. And now Munir’s grandmother. If I don’t help you, who would? #speaker_left
+I’m glad you’re okay with us having the Aqeeqah in the second week instead of the first. The first week was really tough. #speaker_self
+Waaahhh, so cute Mashallah! Looks like Basheer you know! Can see. How heavy? #speaker_right
+3.82kg. #speaker_self
+Waaahhh, big boy! Very good. Strong! #speaker_right    
+#speaker_right_name:Female Relative
+#speaker_right_image:cha_unaisah_FemaleRelative.png 
+Ohhh, so cute! Eh look like you Unaisah! Can see already. The nose, here. How heavy? #speaker_right
++ [3.82kg] 3.82kg. #speaker_self
+    I see, I see! Must be so healthy! #speaker_right
+    #speaker_right_image:pixel.png 
+    You should just hold up a sign with his weight. #speaker_left
+    And how many hours I was in labour. That’s all anyone can ask. #speaker_self
+    Eh actually how many? I also don’t know. #speaker_left
+    Aiyah, Amma! #speaker_self
++ [About the weight of a baby] About the weight of a baby. #speaker_self
+    ... #speaker_right
+    Sorry, she hasn’t slept much. Eyes open but brain still asleep. #speaker_left
+    Ah. Of course. You should get rest dear. You look tired. #speaker_right
+    #speaker_right_image:pixel.png 
+    I should just hold up a sign with his weight. And how many hours I was in labour. That’s all anyone can ask. #speaker_self
+    Be nice, Unaisah. You should be glad so many people care about you and Munir. #speaker_left
+    Motherhood can get lonely, you know. #speaker_left
+
+- -> unaisah_3b_5
+
+=== unaisah_3b_5 ===
+#knot:unaisah_3b_5
+#ui:narrator
+#background:bg_unaisah_CH4B_LivingRoom_Day_Messy.png
+40 days later, and the "confinement period" for me as a new mother is finally over.
+#ui:scene
+#background:bg_unaisah_CH4B_LivingRoom_Day_Messy.png
+They’re all gone. #inner_monologue
+My confinement is over, I can leave the house, but I can’t go anywhere.#inner_monologue
+My mother and mother-in-law aren’t coming over as regularly to help.#inner_monologue
+Basheer went back to work after his two-week paternity leave ended.#inner_monologue
+I have to do this all on my own.#inner_monologue
+First task is to make this mess liveable again.  #inner_monologue
++ [I can do this]  I can do this. It’s just the beginning. #inner_monologue
+    VAR unaisah_3b_motherscore = 0
+    ~ unaisah_3b_motherscore += 1
++ [Basheer could help more] Basheer was helpful when he was on leave, but these days it seems like he always has something better to do. #inner_monologue
+    ~ unaisah_3b_motherscore -= 1
+- And then there's all this breast milk pumping, freezing, thawing, preparing, bottling... #inner_monologue
++ [I can do this]  I can’t believe I managed to produce all that.  #inner_monologue
+    ~ unaisah_3b_motherscore += 1
++ [He's well fed but I’m so hungry] Munir’s milk is taking up so much space. It is all about him now. Feed feed feed. But what about me? I’m so tired and hungry. #inner_monologue
+    ~ unaisah_3b_motherscore -= 1
+- I keep staring at the clock these days. #inner_monologue
++ [I can do this] I need to be patient. Remember it’s all in Allah’s plan.   #inner_monologue
+    ~ unaisah_3b_motherscore += 1
++ [Time moves so slowly.] Day after day after night after night. One month, two months - time disappears. Feed. Burp. Sleep. Change. Bathe. Feed. Burp. Sleep. Change. Bathe.. #inner_monologue
+    ~ unaisah_3b_motherscore -= 1
+- My school work files and teaching materials are gathering dust. 
++ [I can't do this] It’s been so long. It feels long. I might have forgotten how to teach. I’m not sure how I’ll get back into it.  #inner_monologue
+    ~ unaisah_3b_motherscore += 1
++ [Can I do this?] So many of my colleagues are parents. They go away to have a child and come back so effortlessly. Could I be worse than them all?  #inner_monologue
+    ~ unaisah_3b_motherscore -= 1
+- 
+#speaker_right_name:Munir
+#speaker_right_image:cha_unaisah_Munir_Baby.png
+WAAAAAAAHHHHHH!!!! #speaker_right
+WAaaaaAAAAAAAHhhHH!!!! #speaker_right
++ [My child needs me.] However tired I am, I am still your mother, and it breaks my heart to see you distressed. Let me see what you need.  #inner_monologue
+    ~ unaisah_3b_motherscore += 1
++ [My child hates me.] What is bothering you now. Have I not done enough for you? Is it me? Everyone was so nice to me last month but now they don’t care. Are you unhappy with me, too? #inner_monologue
+    ~ unaisah_3b_motherscore -= 1
+
+- -> unaisah_3b_6
+
+
+=== unaisah_3b_6 ===
+#knot:unaisah_3b_6
+#ui:scene
+#background:bg_unaisah_CH4B_LivingRoom_Night_Messy.png
+#speaker_left_image:cha_Unaisah_Basheer_Neutral_HomeWear.png
+#speaker_left_name:Basheer
+#speaker_right_image:cha_unaisah_Munir_Baby.png
+#speaker_right_name:Munir
+Could you turn that down please? I’m trying to put Munir back to sleep. #speaker_self
+Why don’t you both come sit here and watch as well? You don’t have to keep doing one thing at a time. Sit here and watch, and maybe before you even realise, he will be asleep. #speaker_left
+{
+- unaisah_3b_motherscore >= 1:
+    I’m not sure it’s a good idea. I’m worried the light and the noise from the TV will keep Munir awake. #speaker_self
+    I can turn it down a little. Just give it a try? If Munir doesn’t sleep then you can continue doing what you’re doing. #speaker_left
+    Okay then. #speaker_self
+    You know what...this is nice for a change. #speaker_self
+    Thanks for this. #speaker_self
+-  unaisah_3b_motherscore <= -2:
+    I’m worried the light and the noise from the TV will keep Munir awake. #speaker_self
+    I can turn it down a little. Just give it a try? If Munir doesn’t sleep then you can continue doing what you’re doing. #speaker_left
+    Easy for you to say, when I’m the one doing it. #speaker_self
+    I put Munir to bed sometimes too! #speaker_left
+    Don’t tell me how to do this! #speaker_self
+    Hey, calm down, alright? It’s late! #speaker_left
+    Don’t tell me how to feel! #speaker_self
+    Look, I think you’re being a little irrational right now. Please try to control your emotions a bit more, alright? #speaker_left
+    STOP. PATRONISING. ME. #speaker_self
+    ... #speaker_left
+    I’m sorry. I’m so sorry. #speaker_left
+    WAHHHHHHHH!!!! #speaker_right
+- else:
+    I’m worried the light and the noise from the TV will keep Munir awake. #speaker_self
+    I can turn it down a little. Just give it a try? If Munir doesn’t sleep then you can continue doing what you’re doing. #speaker_left
+    Easy for you to say, when I’m the one doing it. #speaker_self
+    I put Munir to bed sometimes too! #speaker_left
+    Don’t tell me how to do this! #speaker_self
+    Hey, calm down, alright? It’s late! #speaker_left
+    We might agitate Munir. #speaker_left
+    Fine. #speaker_self
+    I’ll turn off the TV, but just try to relax a bit, alright? #speaker_left
+    Alright. #speaker_self
+}
+
+
+- -> unaisah_3b_7
+
+
+=== unaisah_3b_7 ===
+#knot:unaisah_3b_7
+#ui:narrator
+#background:bg_unaisah_CH3_Bedroom_Day.png
+Four months pass.
+#ui:scene
+#background:bg_unaisah_CH3_Bedroom_Day.png
+#speaker_left_image:cha_Unaisah_Basheer_Neutral_HomeWear.png
+#speaker_left_name:Basheer
+#speaker_right_name:Munir
+#speaker_right_image:cha_unaisah_Munir_Baby.png
+So, are you feeling ready? #speaker_left
+I guess. #speaker_self
+I will pray for you. We got through these last four months together. We will get through everything else together also. #speaker_left
+Thanks. #speaker_self
+Well, I guess it’s time. It feels weird...I haven’t left home earlier than you in months. #speaker_self
+// [We see Munir in his cot.] #
+...and this is the first time I’m leaving home without him. #inner_monologue
+Chellam, Amma is only going to be away for a short while ya? #speaker_self
+Appa will bring you to your grandmother. Everything will be fine. #speaker_self
+WAAAAAAAHHHHHH!!!! #speaker_right
+WAaaaaAaAAAAaaaaAHHhhhHHHH!!!! #speaker_right
+Oh Bash...it’s like he knows! #speaker_self
+And you haven’t even left the house yet. #speaker_left
++ [I don't know if I can do this] I don’t know if I can do this... #speaker_self
++ [I have to be strong] I have to be strong. I can do this. #speaker_self
+- You can. We can. #speaker_left
+Now I’m going to cry too... #speaker_self
+Come Munir, let's say goodbye to Amma. #speaker_left
+// [We are looking at the gate of Unaisah’s flat. We see Basheer cradling Munir behind the gate.] #
+Amma loves you! #speaker_self
+See you later. #speaker_left
+#speaker_left_image:cha_Unaisah_Basheer_Laughing_HomeWear.png
+Munir, say “Bye Amma”? Say it? #speaker_left
+Grrgggbrrrrbphhh #speaker_right
+“Bye Amma!” (in a baby voice) #speaker_left
+Hahaha... close enough. Love you both. #speaker_self
+
+
+#knot:unaisah_3_minigame
+#ui:mcq
+#game_id:16
+Minigame 16 // must add some text
+
+
+-> unaisah_3b_8
+
+
+=== unaisah_3b_8 ===
+#knot:unaisah_3b_8
+#ui:narrator
+#background:bg_unaisah_CH1_UnaisahDesk.png
+Getting back into my work schedule was not as hard as I had feared.
+In just a few months, I felt back in top form. 
+Perhaps even better, now that I have a child of my own and understand how a parent feels.
+#ui:scene
+#background:bg_unaisah_CH1_UnaisahDesk.png
+#speaker_left_image:cha_unaisah_hweeling_neutral.png 
+#speaker_left_name:Hwee Ling
+In short, we are so glad you’re back. And we think you can take over as Head of Department by the end of the year. #speaker_left
+Oh...oh! Oh that’s great. #speaker_self
+You look surprised. You shouldn’t. You’ve done good work. #speaker_left
+I’ve also spent nearly half of the year so far away from school. #speaker_self
+Yes, but in the teaching service, we do not assess you on work you could not have done. And what you have done, now and in your years with us, is definitely good enough. #speaker_left
+Thank you so, so much. #speaker_self
+So, is this something you’d want to do? The HOD role? #speaker_left
++ [Yes] Yes. Yes! Thank you for your confidence in me. I won’t let you down. #speaker_self
+    I’m glad. And happy for you. You deserve this. #speaker_left
+
++ [I'm not sure...] Thank you for your confidence in me. Please let me think this over. I have a newborn, and this a very important time for me to be around and available for him. #speaker_self
+    I know it wasn’t so long ago that we were sitting here, and I initiated the conversation about promotions, but ever since Munir came along… #speaker_self
+    Priorities have shifted? #speaker_left
+    It doesn’t mean I don’t want the role. I just need some time to think about whether or not I can handle it all. #speaker_self
+    Of course. I understand completely. Take your time. #speaker_left
+- Thanks so much, Hwee Ling. #speaker_self
+
+
+-> unaisah_3b_9
+
+
+=== unaisah_3b_9 ===
+#knot:unaisah_3b_9
+#background:bg_unaisah_CH4B_LivingRoom_Day_wFood.png
+#ui:narrator
+Years later.
+#ui:scene
+#background:bg_unaisah_CH4B_LivingRoom_Day_wFood.png
+#speaker_left_image:cha_unaisah_Mother.png 
+#speaker_left_name:Amma
+#speaker_right_name:Munir
+#speaker_right_image:cha_unaisah_Munir_5yo.png
+Happy birthday again Munir! Say cheese! #speaker_self
+// [The screen goes black for split second and there is a camera clicking sound.] #
+CHEEEEEEESE #speaker_right
+He’s grown so fast. #speaker_left
+Yes. I swear I can see the difference each week! #speaker_self
+Have you thought about a school for him yet? #speaker_left
+Basheer and I are still talking about it. #speaker_self
+It’s a little challenging because there aren’t any schools nearby that offer his Mother Tongue. #speaker_self
+Even finding a pre-school that offers Tamil was so hard. Singapore every pre-school offers Chinese, but almost none of them offer Malay or Tamil. #speaker_self
+So we are discussing whether to let him travel further to a school that offers it, or take a different language. #speaker_self
+But worried about him losing his heritage and also being at a disadvantage if he takes another language. #speaker_self
+#ui:narrator
+DING DONG. The doorbell rings. 
+#ui:scene
+#background:bg_unaisah_CH4B_LivingRoom_Day_wFood.png
+#speaker_left_image:cha_unaisah_Mother.png 
+#speaker_left_name:Amma
+Was that the door? Do you want to get it? #speaker_left
+
+#ui:scene
+#background:bg_unaisah_CH4B_LivingRoom_Day_wFood.png
+#speaker_left_image:cha_unaisah_Volunteer_F.png
+#speaker_left_name:Young woman
+#speaker_right_image:cha_unaisah_Volunteer_M.png
+#speaker_right_name:Young man
+Good afternoon Ma’am. I hope we’re not interrupting anything. #speaker_left
+It’s okay. What’s this about? #speaker_self
+We just wanted to let you know your Member of Parliament is doing house visits and will be dropping by shortly. #speaker_left
+Sure. We have some juice. #speaker_self
+How should we address you? #speaker_right
+You can call me Madam Unaisah. #speaker_self
+Madam Unaisah. And what do you do? #speaker_right
++ [I'm a mother] I'm a mother.#speaker_self
+    VAR unaisah_3b_volunteer = ""
+    ~ unaisah_3b_volunteer = "mother"
+    That’s wonderful. #speaker_left
+     ~ chapter_3_ending = 3
+    It is, isn’t it? #speaker_self
+    { unaisah_3b_motherscore < 0:
+        It was hard at the start, but it gets easier each day. #inner_monologue
+    }
+    #ui:narrator
+    So much has happened in the last few years. Quitting my corporate job, becoming a teacher, and now raising my beautiful, rabunctious boy. It’s actually hard to remember how life was really like before Munir came along. 
+    Sometimes I get overwhelmed with the grunt work of parenting. It never ends. There is no clock-off for my own space. At the places I now shuttle to –  the daycare, the clinic, the toddlers’ parties – I’m always known as ‘Munir’s mum’. Not Unaisah. 
+    
+    The role sinks into my personhood: On bright days, it brings a fullness in love I never knew I could give. On hard days, it cuts like an anchor into sand, and I think: If I’m not careful it will become my personhood. I will forget myself.
+    Sometimes, on a family outing, I‘d observe the tables for two. It jolts me often, watching those couples –  their glossy presentations, the energy of their talk hurtling through gossip to hobbies to debates, or even their quiet ease, all on a long afternoon  – that this used to be me.  A good part of me envies them for their time.
+    But then Munir babbles, and Basheer tends to him with a deft stroke of humour, and I’m folded back into the action, and all feels right again with the world. I remember it’s a world I’ve forged, with deep challenges and joys, and my pride swells whenever I see what it shows: This is what it’s like, to be me. 
+
+
++ [I'm a teacher] I'm a teacher.#speaker_self
+    ~ unaisah_3b_volunteer = "teacher"
+    That’s wonderful. #speaker_left
+     ~ chapter_3_ending = 4 
+    It is, isn’t it? #speaker_self
+    #ui:narrator
+    So much has happened in the last few years. Quitting my corporate job, becoming a teacher, and now raising my beautiful, rabunctious boy. It’s actually hard to remember how life was really like before Munir came along. 
+    Sometimes I get overwhelmed with the grunt work of parenting. It never ends. There is no clock-off for my own space. At the places I now shuttle to –  the daycare, the clinic, the toddlers’ parties – I’m always known as ‘Munir’s mum’. Not Unaisah. Or anything else.
+    That is why teaching is a raft that floats my identity – I am seen, my contributions noted in concrete, quantifiable measures that, for all their limitations, announce my value to the world. When I step into a classroom I love what greets me: youth and promise and the back-and-forth of intellect. 
+    It’s a welcome respite from Thomas the Train and Barney on loop. A gem we get from early parenthood: Not taking our work and social lives for granted. 
+    It’s hard to believe I’ve forged a balance between both worlds, each with deep challenges and joys, and my pride swells whenever I see what they show: This is what it’s like, to be me. 
+
+- -> unaisah_3_ending
+
+
+=== unaisah_3_ending ===
+#knot:unaisah_3_ending
+#ui:story_end
+#reflection_id:16
+Reflection 16
+
+
+-> END
+
+
+
+=== story_end_browser ===
+#ui:story_end_browser
+#reflection_id:16
+reflection browser 16
+
+
 -> END

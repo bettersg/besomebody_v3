@@ -1129,13 +1129,248 @@ const GLOBAL_VAR_MAP = [
   {
     characterId: 4,
     name: 'Zhihao Lim',
-    linkName: '',
-    profileImage: '/images/profile_blank.png',
-    characterIntroImage: '/images/instagram_blank.png',
+    linkName: 'zhihao',
+    profileImage: '/images/profile_zhihao.png',
+    characterIntroImage: '/character_choice_page/zhihao.png',
     description:
       'Zhihao might have a future in e-sports, but will it disappear before his eyes? Life is about to get complicated, as a fateful Tweet gains a life of its own...',
-    jsonLink: '../stories/nadia.ink.json',
-    playable: false,
+    jsonLink: '../stories/zhihao.ink.json',
+    playable: true,
+    chapters: [
+      {
+        chapterId: 1,
+        number: 1,
+        reflectionId: 11,
+        title: 'A Chinese New Year',
+        knotTag: 'zhihao_1_intro',
+        summary: "Zhihao meets his uncles, and unwinds by playing games later. Both situations put him in a tough spot.",
+        playable: true,
+        images: [
+          '/images/cha_zhihao_revati_concerned.jpg',
+        ],
+        endings: [
+          {
+            endingId: 1,
+            title: "Zhihao deletes the tweet",
+            name: "chapter_1_ending",
+          },
+          {
+            endingId: 2,
+            title: "Zhihao keeps the tweet for publicity",
+            name: "chapter_1_ending",
+          },
+          {
+            endingId: 3,
+            title: "Zhihao leaves the tweet as it will blow over",
+            name: "chapter_1_ending",
+          },
+        ]    
+        variables: [
+          {
+            name: 'zhihao_1_earning',
+            description: 'Ji Gu asks Zhihao how much he earns',
+            values: [
+              {
+                value: 'inflate',
+                description: 'Inflate the figure',
+              },
+              {
+                value: 'lower',
+                description: 'Lower the figure',
+              },
+              {
+                value: 'actual',
+                description: 'State the actual figure',
+              },
+            ],
+          },
+          {
+            name: 'zhihao_1_jigu',
+            description: "Ji Gu suggests Aman cannot be trusted because of his race",
+            values: [
+              {
+                value: 0,
+                description: 'Remain polite and subtly refute Ji Gu',
+              },
+              {
+                value: 1,
+                description: 'Be a smart alec',
+              },
+              {
+                value: 2,
+                description: 'Remain passive to kill the conversation',
+              },
+            ],
+          },
+          {
+            name: 'zhihao_1_racistgamer',
+            description: "Some gamers start making racist comments about Indians during his stream",
+            values: [
+              {
+                value: 'scold racists',
+                description: 'Tell @graphene off for that comment',
+              },
+              {
+                value: 'switch topic',
+                description: 'Switch topics abruptly',
+              },
+              {
+                value: 'focus on game',
+                description: 'Scold them for not playing well',
+              },
+            ],
+          },           
+        ],
+      },
+
+      {
+        chapterId: 2,
+        number: 2,
+        reflectionId: 12,
+        title: 'Team Work',
+        knotTag: 'zhihao_2_intro',
+        summary: 'Zhihao is tested in multiple ways. Even with his skills, he may let himself down.',
+        playable: true,
+        images: ['/images/bg_launch.jpg', '/images/bg_reflections.jpg'],
+        endings: [
+          {
+            endingId: 1,
+            title: "Zhihao sweeps the tweet under the carpet",
+            name: "chapter_2_ending",
+          },
+          {
+            endingId: 2,
+            title: "Zhihao fudges the details",
+            name: "chapter_2_ending",
+          },
+        ],
+        variables: [
+          {
+            name: 'zhihao_2_arguewithalex',
+            description: 'Alex calls Zhihao a content creator but not a good gamer',
+            values: [
+              {
+                value: 0,
+                description: 'Defend your content',
+              },
+              {
+                value: 1,
+                description: 'Argue back',
+              },
+            ],
+          },
+          {
+            name: 'zhihao_2_honestwithian',
+            description:  'Ian asks for feedback after the trial',
+            values: [
+              {
+                value: 0,
+                description: 'Be polite instead',
+              },
+              {
+                value: 1,
+                description: 'Be very honest',
+              }, 
+            ],
+          },
+          {
+            name: 'zhihao_2_confrontma',
+            description:  'Ma wants to rent out the master bedroom',
+            values: [
+              {
+                value: 0,
+                description: 'Confront Ma about letting go of Pa easily',
+              },
+              {
+                value: 1,
+                description: 'Avoid bringing up Pa',
+              }, 
+            ],
+          },
+        ],
+      },
+      {
+        chapterId: 3,
+        number: 3,
+        reflectionId: 13,
+        title: 'Playing to the Crowd',
+        knotTag: 'zhihao_3_intro',
+        summary:
+          'Zhihao witnesses the power of social media. Will he master it, or will it conquer him?',
+        playable: true,
+        images: ['/images/bg_launch.jpg', '/images/bg_reflections.jpg'],
+        endings: [
+          {
+            endingId: 1,
+            title: "Zhihao stays in gaming, and keeps Gavin as a friend",
+            name: "chapter_3_ending",
+          },
+          {
+            endingId: 2,
+            title: "Zhihao quits gaming, and keeps Gavin as a friend",
+            name: "chapter_3_ending",
+          },          
+          {
+            endingId: 3,
+            title: "Zhihao stays in gaming, but loses Gavin as a friend",
+            name: "chapter_3_ending",
+          }, 
+        ],
+        variables: [
+          {
+            name: 'zhihao_3_offertopay',
+            description: 'zhihao is afraid to tell his mother about Val ',
+            values: [
+              {
+                value: 0,
+                description: 'False',
+              },
+              {
+                value: 1,
+                description: 'True',
+              },
+            ],
+          },
+          {
+            name: 'zhihao_3_explaintogavin',
+            description: 'zhihao asks his boss about the Chinese instructions ',
+            values: [
+              {
+                value: 0,
+                description: 'False',
+              },
+              {
+                value: 1,
+                description: 'True',
+              },
+            ],
+          },
+          {
+            name: 'zhihao_3_tweetstorm',
+            description: 'Zhihao responds to the flood of tweets...',
+            values: [
+              {
+                value: 1,
+                description: 'Might as well ignore these losers sia',
+              },
+              {
+                value: 2,
+                description: 'Aiyah. If I apologise maybe they will stop attacking',
+              },
+              {
+                value: 3,
+                description: 'Defend myself. They are overreacting sia',
+              },
+              {
+                value: 4,
+                description: 'I apologise for the offensive tweets',
+              },
+            ],
+          },
+        ],
+      },
+      
+    ],
   },
   {
     characterId: 5,
@@ -1229,3 +1464,33 @@ export default GLOBAL_VAR_MAP;
 // ravi_3_internshipchoicetomum: "stay"
 // ravi_3_tellvaltruth: 0
 // story_finished: 1
+
+
+
+// chapter_1_ending: 1
+// chapter_2_ending: 2
+// chapter_3_ending: 1
+// chapter_id: 3
+// character_id: 4
+// story_finished: 1
+
+// zhihao_2_acceptnadiadate: 0
+// zhihao_2_arguewithalex: 1
+// zhihao_2_confrontma: 1
+// zhihao_2_formalemail: 1
+// zhihao_2_honestwithian: 1
+// zhihao_2_observealexfirst: 1
+// zhihao_2_taketaxi: 1
+// zhihao_2_tellthemsniper: 1
+// zhihao_2_winthegame: 1
+
+// zhihao_3_answergavin: 1
+// zhihao_3_explaintogavin: 1
+// zhihao_3_formalemail: 1
+// zhihao_3_gamingoutcome: "stay"
+// zhihao_3_interviewrequest: 1
+// zhihao_3_offertopay: "directly"
+// zhihao_3_payrental: 1
+// zhihao_3_replyfirst: "gavin"
+// zhihao_3_tellma: 1
+// zhihao_3_tweetstorm: 4

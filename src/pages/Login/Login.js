@@ -142,11 +142,7 @@ const Login = () => {
           history.push('/')
         }
       } else {
-        const user = {
-          email: authResult.user.email,
-          id: authResult.user.uid,
-        }
-        const isCreated = await createDbUserIfNotExists(user)
+        const isCreated = await createDbUserIfNotExists(authResult.user.uid, authResult.user.email)
         if (isCreated) { 
           history.push('/profilebuilder')
           
