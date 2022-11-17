@@ -78,6 +78,26 @@ export const REFLECTION_ID_MAP = {
     characterId: 4,
     chapterId: 1,
   },
+  12: {  // Zhihao 2
+    characterId: 4,
+    chapterId: 2,
+  },
+  13: {  // Zhihao 3
+    characterId: 4,
+    chapterId: 3,
+  },
+  14: {  // Unaisah 1
+    characterId: 5,
+    chapterId: 1,
+  },
+  15: {  // Unaisah 2
+    characterId: 5,
+    chapterId: 2,
+  },
+  16: {  // Unaisah 3
+    characterId: 5,
+    chapterId: 3,
+  },
 }
 
 
