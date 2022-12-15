@@ -967,85 +967,85 @@ export const MINI_GAME_MAP = [
   {
     game_id: 14,
     ui: "mcq",
-    introduction: "Unaisah hinted at harassment in her previous job. Let's explore this issue further.",
+    introduction: "Unaisah seemed sensitive to issues of her cultural identity, especially at the workplace. Let's explore this issue further.",
     questions: [
       {
         question_id: 1,
         question:
-          "What percentage of workers in Singapore reported being victims of sexual harassment in Singapore?",
+          "In a 2022 survey of the top 3 experiences of discrimination at the workplace, which of these was NOT on the list.",
         type: "text",
         correct_answer_id: 3,
         explanation:
-          "2 in 5 workers said they had been victims of unwanted sexual advances, in the form of crude remarks, sexual pictures or texts, or remarks about their appearance or sexual activities. [Straits Times, Jan 2021]",
+          "While blatant racism sometimes exists, it was NOT among the top 3 experiences reported in the survey. Unfair company policies, job advertisements that specified racial characteristics, and discriminatory promotion / appraisal system were on the list. [Aware survey, Sep 2022]",
         answers: [
           {
             answer_id: 1,
-            title: "20%",
+            title: "Unfair company policies or practices",
           },
           {
             answer_id: 2,
-            title: "30%",
+            title: "Job advertisements that specified preference for certain characteristics that were not job requirements",
           },
           {
             answer_id: 3,
-            title: "40%",
+            title: "Blatant racism from senior management at the workplace from colleagues",
           },
           {
             answer_id: 4,
-            title: "50%",
+            title: "Discriminatory employment practices in relation to performance appraisal and promotion",
           },
         ],
       },
       {
         question_id: 2,
         question:
-          "What percentage of workers reported being touched in an unwelcome way?",
+          "Which form of workplace discrimination was reported to be the most common form faced by respondents in that same survey?",
         correct_answer_id: 3,
-        explanation: "13% reported being touched at work, or more than one in every ten workers. This included male respondees.",
+        explanation: "When asked the grounds upon which they faced discrimination, respondents chose race (41% of those who experienced discrimination), age (35%) and gender (23%) as the top three. Others included: family responsibilities (18%), religion (16%), marital status (11%), medical conditions (7%), sexual orientation (7%), gender identity (6%), pregnancy (6%) and disability (5%). ",
         type: "text",
         answers: [
           {
             answer_id: 1,
-            title: "3%",
+            title: "Gender",
           },
           {
             answer_id: 2,
-            title: "8%",
+            title: "Age",
           },
           {
             answer_id: 3,
-            title: "13%",
+            title: "Race",
           },
           {
             answer_id: 4,
-            title: "21%",
+            title: "Sexuality",
           },
         ],
       },
       {
         question_id: 3,
         question:
-          "Of all the reported victims of harassment, how many of them filed official complaints with the authorities (at work, or the police)?",
+          "Of all the reported victims of discrimination, how many of them filed official complaints with the authorities (to a boss or HR, or with MOM)?",
         type: "text",
         correct_answer_id: 2,
         explanation:
-          "Only 1 in 3 filed an official report.Those who did not said they wanted to forget the unpleasant experience or felt what they had experienced was not serious enough. Some also felt they had no evidence of the wrong-doing. ",
+          "Less 1 in 2 respondents (46%) reported it. Top reasons why they did NOT report include: not believing that the discrimination was “severe” enough (36%); not trusting authorities to act on the report (30%) and not having enough evidence of discrimination (29%).",
           answers: [
             {
               answer_id: 1,
-              title: "25%",
+              title: "None",
             },
             {
               answer_id: 2,
-              title: "33%",
+              title: "Half",
             },
             {
               answer_id: 3,
-              title: "50%",
+              title: "A quarter",
             },
             {
               answer_id: 4,
-              title: "75%",
+              title: "Almost all",
             },
           ],
       },  
@@ -1192,7 +1192,98 @@ export const MINI_GAME_MAP = [
           ],
       },  
     ],
-    },
+  },
+  
+
+  // marie 1
+  {
+    game_id: 17,
+    ui: "mcq",
+    introduction: "Marie hinted at harassment in her previous job. Let's explore this issue further.",
+    questions: [
+      {
+        question_id: 1,
+        question:
+          "What proportion of workers in Singapore reported being victims of sexual harassment in Singapore?",
+        type: "text",
+        correct_answer_id: 3,
+        explanation:
+          "2 in 5 workers said they had been victims of unwanted sexual advances, in the form of crude remarks, sexual pictures or texts, or remarks about their appearance or sexual activities. [Straits Times, Jan 2021]",
+        answers: [
+          {
+            answer_id: 1,
+            title: "1 in 5",
+          },
+          {
+            answer_id: 2,
+            title: "3 in 10",
+          },
+          {
+            answer_id: 3,
+            title: "2 in 5",
+          },
+          {
+            answer_id: 4,
+            title: "Half",
+          },
+        ],
+      },
+      {
+        question_id: 2,
+        question:
+          "What percentage of male and/or female workers reported being touched in an unwelcome way?",
+        correct_answer_id: 3,
+        explanation: "13% reported being touched at work, or more than one in every ten workers. This included male respondees.",
+        type: "text",
+        answers: [
+          {
+            answer_id: 1,
+            title: "3%",
+          },
+          {
+            answer_id: 2,
+            title: "8%",
+          },
+          {
+            answer_id: 3,
+            title: "13%",
+          },
+          {
+            answer_id: 4,
+            title: "21%",
+          },
+        ],
+      },
+      {
+        question_id: 3,
+        question:
+          "Of all the reported victims of harassment, how many of them filed official complaints with the authorities (at work, or the police)?",
+        type: "text",
+        correct_answer_id: 2,
+        explanation:
+          "Only 1 in 3 filed an official report.Those who did not said they wanted to forget the unpleasant experience or felt what they had experienced was not serious enough. Some also felt they had no evidence of the wrong-doing. ",
+          answers: [
+            {
+              answer_id: 1,
+              title: "A quarter",
+            },
+            {
+              answer_id: 2,
+              title: "A third",
+            },
+            {
+              answer_id: 3,
+              title: "Half",
+            },
+            {
+              answer_id: 4,
+              title: "Almost all",
+            },
+          ],
+      },  
+    ],
+  },
+
 ];
   
 
