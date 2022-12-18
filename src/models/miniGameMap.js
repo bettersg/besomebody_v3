@@ -984,7 +984,7 @@ export const MINI_GAME_MAP = [
           },
           {
             answer_id: 2,
-            title: "Job advertisements that specified preference for certain characteristics that were not job requirements",
+            title: "Job ads with racial preferences that were not job requirements",
           },
           {
             answer_id: 3,
@@ -992,7 +992,7 @@ export const MINI_GAME_MAP = [
           },
           {
             answer_id: 4,
-            title: "Discriminatory employment practices in relation to performance appraisal and promotion",
+            title: "Discriminatory employment practices for appraisal and promotion",
           },
         ],
       },
