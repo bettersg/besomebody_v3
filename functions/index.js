@@ -113,17 +113,20 @@ exports.getCoFacilitatorEmailsForRoom = functions.https
   .onCall(async (data, context) => {
     const userId = context.auth && context.auth.uid;
     const { roomId } = data;
-    if (!userId) return;
+    if (!userId) {
+      throw new functions.https.HttpsError('unauthenticated', 'You must be signed in.');
+    }
 
     const { room, roomData } = await getDbRoom(roomId);
-    if (!isUserFacilitatorForRoom(userId, room)) return;
+    if (!isUserFacilitatorForRoom(userId, room)) {
+      throw new functions.https.HttpsError('permission-denied', 'You are not a facilitator for this room.');
+    }
 
-    const coFacilitatorEmails = Promise.all(roomData.facilitatorIds.map(async (coFacilitatorId) => {
+    const coFacilitatorEmails = await Promise.all((roomData.facilitatorIds || []).map(async (coFacilitatorId) => {
       const emailDoc = await firestore.collection('emails').doc(coFacilitatorId).get();
-      const email = emailDoc.data().email;
-      return email
+      return emailDoc.exists ? emailDoc.data().email : null;
     }));
-    return coFacilitatorEmails;
+    return coFacilitatorEmails.filter(Boolean);
   });
 
 // Input: roomId
@@ -133,16 +136,21 @@ exports.getParticipantIdsToEmailsForRoom = functions.https
   .onCall(async (data, context) => {
     const userId = context.auth && context.auth.uid;
     const { roomId } = data;
-    if (!userId) return;
+    if (!userId) {
+      throw new functions.https.HttpsError('unauthenticated', 'You must be signed in.');
+    }
 
     const { room, roomData } = await getDbRoom(roomId);
-    if (!isUserFacilitatorForRoom(userId, room)) return;
+    if (!isUserFacilitatorForRoom(userId, room)) {
+      throw new functions.https.HttpsError('permission-denied', 'You are not a facilitator for this room.');
+    }
 
     const participantIdEmailMap = {};
-    await Promise.all(roomData.participantIds.map(async (participantId) => {
+    await Promise.all((roomData.participantIds || []).map(async (participantId) => {
       const participant = await firestore.collection('emails').doc(participantId).get();
-      const participantEmail = participant.data().email;
-      participantIdEmailMap[participantId] = participantEmail;
+      if (participant.exists && participant.data().email) {
+        participantIdEmailMap[participantId] = participant.data().email;
+      }
     }));
     return participantIdEmailMap;
   });
@@ -154,10 +162,17 @@ exports.inviteUserToBeCofacilitatorForRoom = functions.https
   .onCall(async (data, context) => {
     const userId = context.auth && context.auth.uid;
     const { roomId, toEmail } = data;
-    if (!userId) return;
+    if (!userId) {
+      throw new functions.https.HttpsError('unauthenticated', 'You must be signed in.');
+    }
+    if (!toEmail) {
+      throw new functions.https.HttpsError('invalid-argument', 'A recipient email is required.');
+    }
 
     const { room, roomData } = await getDbRoom(roomId);
-    if (!isUserFacilitatorForRoom(userId, room)) return;
+    if (!isUserFacilitatorForRoom(userId, room)) {
+      throw new functions.https.HttpsError('permission-denied', 'You are not a facilitator for this room.');
+    }
 
     const fromEmail = (context.auth.token && context.auth.token.email) || '<no-email>';
     const roomCode = roomData.code;
@@ -172,7 +187,7 @@ exports.inviteUserToBeCofacilitatorForRoom = functions.https
         then let your colleague know the email address that you used to register so that they can add you again.
         Once they have added you, you can go to your facilitator dashboard to access the room.
       `;
-      sendInviteCoFacilitatorEmail(roomCode, toEmail, message);
+      await sendInviteCoFacilitatorEmail(roomCode, toEmail, message);
       return {
         success: false,
         message: `There is no account with email ${toEmail}. We've sent them an email inviting them to sign up with us.`,
@@ -180,7 +195,7 @@ exports.inviteUserToBeCofacilitatorForRoom = functions.https
     }
 
     const toUser = snapshot.docs[0]
-    const toUserAlreadyCoFacilitatorInRoom = roomData.facilitatorIds.includes(toUser.id);
+    const toUserAlreadyCoFacilitatorInRoom = (roomData.facilitatorIds || []).includes(toUser.id);
     if (toUserAlreadyCoFacilitatorInRoom) {
       // Failure (user to be invited as co-facilitator is already a co-facilitator already in room)
       return {
@@ -189,16 +204,18 @@ exports.inviteUserToBeCofacilitatorForRoom = functions.https
       }
     }
 
-    // Success (user to be invited as co-facilitator exists): add co-facilitator to room and send success email
-    const newRoom = { ...roomData, facilitatorIds: [...roomData.facilitatorIds, toUser.id] };
-    delete newRoom.id; // ID is already in doc ref, no need to store
-    await firestore.collection('rooms').doc(roomId).update(newRoom);
+    // Success (user to be invited as co-facilitator exists): atomically add the
+    // co-facilitator id only, so we don't clobber concurrent writes to other
+    // room fields (e.g. participantIds).
+    await firestore.collection('rooms').doc(roomId).update({
+      facilitatorIds: FieldValue.arrayUnion(toUser.id),
+    });
 
     const message = `
       You have been added by your colleague at ${fromEmail} as a co-facilitator for room ${roomCode} for ToBeYou.sg.
       The room should now be available in your facilitator dashboard.
     `;
-    sendInviteCoFacilitatorEmail(roomCode, toEmail, message);
+    await sendInviteCoFacilitatorEmail(roomCode, toEmail, message);
     return {
       success: true,
       message: `Success! We've sent an email to ${toEmail} to notify them that they've been added to the room.`,

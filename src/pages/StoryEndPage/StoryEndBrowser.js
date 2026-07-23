@@ -48,23 +48,40 @@ const StoryEndBrowser = ({ reflectionId: propsReflectionId, globalVariables }) =
     // }
   };
 
+  // Memoise step wrappers so they keep a stable identity across the Firestore
+  // user-snapshot re-renders (otherwise react-step-builder remounts the active
+  // step and loses in-progress state).
+  const characterId = globalVariables.character_id
+  const DidYouKnow = useMemo(
+    () => (props) => <DidYouKnowStep reflection={reflection} {...props} />,
+    [reflection]
+  )
+  const ReflectionResponses = useMemo(
+    () => (props) => <ReflectionResponsesStep reflectionId={reflectionId} {...props} />,
+    [reflectionId]
+  )
+  const Share = useMemo(
+    () => (props) => (
+      <ShareStep reflection={reflection} reflectionNum={reflectionId} characterId={characterId} user={user} {...props} />
+    ),
+    [reflection, reflectionId, characterId, user]
+  )
+
   return (
     <Frame>
-      <AudioPlayer Music={Music} />     
+      <AudioPlayer Music={Music} />
       <Steps config={config}>
         {/* <Step title="Outcome Unlocked" component={OutcomeUnlockedStep} /> */}
         {/* <Step title="Quick Feedback" component={(props) => <QuickFeedbackStep reflection={reflection} {...props} />} /> */}
         <Step title="Bonus Experience" component={BonusExperienceStep} />
-        <Step title="Did You Know"  component={(props) => <DidYouKnowStep reflection={reflection} {...props} />} />
+        <Step title="Did You Know"  component={DidYouKnow} />
         {/* <Step title="ReflectionIntroStep" component={ReflectionIntroStep} /> */}
         {/* <Step title="ReflectionIntro"  component={(props) => <ReflectionIntroStep reflectionId={reflectionId}  {...props} />}/> */}
-        <Step title="Reflections from Others"  component={(props) => <ReflectionResponsesStep reflectionId={reflectionId}  {...props} />} />
+        <Step title="Reflections from Others"  component={ReflectionResponses} />
         {/* <Step title="Long Feedback" component={(props) => <LongFeedbackStep reflection={reflection} user={user} {...props} />} /> */}
         {/* <Step title="Data Browser" component={DataBrowserStep} /> */}
         <Step title="Pre-Share Step" component={PreShareStep} />
-        <Step title="Share" component={(props) => <ShareStep reflection={reflection} reflectionNum={reflectionId}  characterId={globalVariables.character_id} user={user} {...props} />} />
-        
-
+        <Step title="Share" component={Share} />
       </Steps>
     </Frame>
   );

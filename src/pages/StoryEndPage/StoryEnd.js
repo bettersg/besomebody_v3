@@ -57,21 +57,53 @@ const StoryEnd = ({ reflectionId: propsReflectionId, globalVariables }) => {
     // }
   };
 
+  // These step wrappers must keep a stable component identity across renders.
+  // Previously they were defined inline as `component={(props) => ...}`, so a
+  // brand-new component type was created on every render; because StoryEnd
+  // re-renders on each Firestore user snapshot, react-step-builder remounted
+  // the active step and discarded any in-progress form input. Memoising them
+  // keeps identity stable unless their real dependencies change.
+  const characterId = globalVariables.character_id
+  const QuickFeedback = useMemo(
+    () => (props) => <QuickFeedbackStep reflection={reflection} {...props} />,
+    [reflection]
+  )
+  const DidYouKnow = useMemo(
+    () => (props) => <DidYouKnowStep reflection={reflection} {...props} />,
+    [reflection]
+  )
+  const ReflectionResponses = useMemo(
+    () => (props) => <ReflectionResponsesStep reflectionId={reflectionId} {...props} />,
+    [reflectionId]
+  )
+  const LongFeedback = useMemo(
+    () => (props) => (
+      <LongFeedbackStep reflection={reflection} questions={questions} characterId={characterId} user={user} {...props} />
+    ),
+    [reflection, questions, characterId, user]
+  )
+  const Share = useMemo(
+    () => (props) => (
+      <ShareStep reflection={reflection} characterId={characterId} user={user} {...props} />
+    ),
+    [reflection, characterId, user]
+  )
+
   return (
     <Frame>
-      <AudioPlayer Music={Music} />     
+      <AudioPlayer Music={Music} />
       <Steps config={config}>
         <Step title="Story Completed" component={StoryCompletedStep} />
         <Step title="Outcome Unlocked" component={OutcomeUnlockedStep} />
-        <Step title="Quick Feedback" component={(props) => <QuickFeedbackStep reflection={reflection} {...props} />} />
-        <Step title="Did You Know"  component={(props) => <DidYouKnowStep reflection={reflection} {...props} />} />
+        <Step title="Quick Feedback" component={QuickFeedback} />
+        <Step title="Did You Know"  component={DidYouKnow} />
         <Step title="Bonus Experience" component={BonusExperienceStep} />
         {/* <Step title="ReflectionIntro"  component={(props) => <ReflectionIntroStep reflectionId={reflectionId}  {...props} />}/> */}
-        <Step title="Reflections from Others"  component={(props) => <ReflectionResponsesStep reflectionId={reflectionId}  {...props} />} />
-        <Step title="Long Feedback" component={(props) => <LongFeedbackStep reflection={reflection} questions={questions} characterId={globalVariables.character_id} user={user} {...props} />} />
+        <Step title="Reflections from Others"  component={ReflectionResponses} />
+        <Step title="Long Feedback" component={LongFeedback} />
         {/* <Step title="Data Browser" component={DataBrowserStep} /> */}
         <Step title="Pre-Share Step" component={PreShareStep} />
-        <Step title="Share" component={(props) => <ShareStep reflection={reflection} characterId={globalVariables.character_id} user={user} {...props} />} />
+        <Step title="Share" component={Share} />
       </Steps>
     </Frame>
   );

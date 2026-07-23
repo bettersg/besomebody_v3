@@ -1,0 +1,105 @@
+rules_version = '2';
+
+// Firestore security rules for ToBeYou.sg.
+//
+// IMPORTANT: The app previously shipped with no rules under version control, so
+// all authorization was effectively client-side. These rules lock access down
+// to "signed-in + ownership" with the minimum allowances the app needs.
+//
+// Before deploying, validate every read/write path against the Firestore
+// emulator (`firebase emulators:start`) — tightening rules on a live app can
+// lock out legitimate flows. The existing CI only deploys Hosting; deploy these
+// deliberately with `firebase deploy --only firestore:rules`.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    // User profiles. Readable by any signed-in user because the "reflections
+    // from others" feature displays each reflection author's name/profile.
+    // Writable only by the owner.
+    match /users/{userId} {
+      allow read: if isSignedIn();
+      allow create, update, delete: if isOwner(userId);
+    }
+
+    // Email addresses (PII). Never read on the client: the facilitator email
+    // features run in Cloud Functions with the Admin SDK, which bypasses these
+    // rules. The client only creates/deletes its own email doc (sign-up /
+    // account deletion), so deny all client reads.
+    match /emails/{userId} {
+      allow read: if false;
+      allow create, update, delete: if isOwner(userId);
+    }
+
+    // Autosaved story state. The document id is `${uid}-${characterId}`, so
+    // scope both read and write to the owner via the id prefix. (Firebase Auth
+    // uids contain no hyphens, so split('-')[0] is always the uid.)
+    match /savedStates/{stateId} {
+      allow read, write: if isSignedIn()
+        && stateId.split('-')[0] == request.auth.uid;
+    }
+
+    // Reflection responses. Any signed-in user may read (community reflections),
+    // and may only create responses attributed to themselves. Updates/deletes
+    // are not performed from the client.
+    match /reflectionResponses/{responseId} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn()
+        && request.resource.data.userId == request.auth.uid;
+      allow update, delete: if false;
+    }
+
+    // Rooms (classrooms). Any signed-in user can read a room (needed to look a
+    // room up by code before joining). Facilitators fully manage their rooms;
+    // a participant may add only themselves to participantIds.
+    // NOTE: review the participant-self-join branch against your room write
+    // paths and validate in the emulator before deploying.
+    match /rooms/{roomId} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn();
+      allow update: if isSignedIn() && (
+        request.auth.uid in resource.data.get('facilitatorIds', [])
+        || (
+          request.resource.data.diff(resource.data).affectedKeys().hasOnly(['participantIds'])
+          && request.resource.data.participantIds.hasAll(resource.data.get('participantIds', []))
+          && request.auth.uid in request.resource.data.participantIds
+        )
+      );
+      allow delete: if isSignedIn()
+        && request.auth.uid in resource.data.get('facilitatorIds', []);
+    }
+
+    // Aggregate counters are maintained by Cloud Functions (Admin SDK). Clients
+    // may read them for display but must never write.
+    match /counters/{counterId} {
+      allow read: if isSignedIn();
+      allow write: if false;
+    }
+
+    // Survey / mini-game answers. Signed-in users may create; no client updates
+    // or deletes.
+    match /answers/{answerId} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn();
+      allow update, delete: if false;
+    }
+
+    match /quizAnswers/{answerId} {
+      allow read: if isSignedIn();
+      allow create, update: if isSignedIn();
+      allow delete: if false;
+    }
+
+    // Deny everything else by default.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

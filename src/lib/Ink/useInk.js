@@ -117,7 +117,7 @@ const useInk = (json, characterId) => {
       tags: normalTags,
       currentKnot: nextStep.currentKnot,
     }
-    setParagraphs([...paragraphs, paragraphValues])
+    setParagraphs((prevParagraphs) => [...prevParagraphs, paragraphValues])
 
     // Update choices if there's choices
     if (nextStep.choices.length) {

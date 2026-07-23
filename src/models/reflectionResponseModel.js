@@ -73,8 +73,11 @@ export const getDbReflectionResponsesPaginated = async ({
 export const getDbReflectionResponse = async(id) => {
   try {
     const doc = await firestore.collection("reflectionResponses").doc(id).get();
+    if (!doc.exists) return null;
+    // Spread the document DATA (previously spread the DocumentSnapshot itself,
+    // so downstream reads like `reflectionResponse.userId` were undefined).
     return populateDbUserOnReflectionResponse({
-      ...doc,
+      ...doc.data(),
       id: doc.id,
     });
   } catch (err) {

@@ -1,7 +1,7 @@
 import { renderHook, act } from '@testing-library/react-hooks'
 import { waitFor } from '@testing-library/react'
 import useInk from './useInk'
-import testJson from '../../stories/test.ink.json'
+import testJson from '../../stories/archived/test.ink.json'
 import { useAuth } from '../../contexts/AuthContext'
 import {
   createDbSavedStates,

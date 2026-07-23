@@ -30,7 +30,7 @@ export const getDbUser = async (objId) => {
       return user.data()
     }
   } catch (err) {
-    new Error(`Error at getDbUser: ${err}`)
+    throw new Error(`Error at getDbUser: ${err}`)
   }
 }
 
@@ -54,36 +54,34 @@ export const updateDbUser = async (obj, objId) => {
 
 export const deleteDbUser = async (userId) => {
   try {
-    await firestore.collection('users').doc(userId).delete()
+    // Delete the user doc and their email doc together so PII in `emails`
+    // is not orphaned (which also prevents later null-deref in the
+    // facilitator email Cloud Functions).
+    const batch = firestore.batch()
+    batch.delete(firestore.collection('users').doc(userId))
+    batch.delete(firestore.collection('emails').doc(userId))
+    await batch.commit()
   } catch (err) {
     throw new Error(`Error at deleteDbUser: ${err}`)
   }
 }
 
 export const updateUserRoomDb = async (userId, roomId) => {
-  
-    const userRef = firestore.collection('users').doc(userId)
-    userRef.get().then((doc) => {
-      if (doc.exists) {        
-        if (doc.data().room == null) {
-          userRef.set({
-            room: [roomId]
-          }, { merge: true })
-        }        
-        if (doc.data().room.includes(roomId)) {
-          console.log("Room already exists for user");
-          return null
-        }
-        else {
-          userRef.update(
-            {            
-              room: [...doc.data().room, roomId]
-            }
-          )
-        }
-      }
-   
-    }).catch((error) => {
-      console.log("Error getting document:", error);
-    });  
+  const userRef = firestore.collection('users').doc(userId)
+  try {
+    // Transaction so concurrent joins cannot drop rooms or crash on a
+    // missing `room` array (the previous version fell through to
+    // `doc.data().room.includes` when `room` was null).
+    await firestore.runTransaction(async (transaction) => {
+      const doc = await transaction.get(userRef)
+      if (!doc.exists) return
+
+      const rooms = doc.data().room || []
+      if (rooms.includes(roomId)) return
+
+      transaction.set(userRef, { room: [...rooms, roomId] }, { merge: true })
+    })
+  } catch (error) {
+    throw new Error(`Error at updateUserRoomDb: ${error}`)
+  }
 }

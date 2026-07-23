@@ -1,4 +1,3 @@
-import { getDbUser, updateDbUser } from '../models/userModel'
 import { firestore } from "../firebase";
 import { useState, useEffect } from 'react';
 import { useAuth } from '../contexts/AuthContext'
@@ -30,85 +29,91 @@ export default function useEndOfChapter({ globalVariables = {} }) {
       );
   }, [currentUser.id]);
 //   console.log(user)
-  // const userDB = async ()  => {return await getDbUser(currentUser.id) } 
-  
-  // console.log(globalVariables)
-  // Save user achievements data to Firestore whenever this component renders
+  // The ending the player just reached for this chapter.
+  const currentEnding = globalVariables[`chapter_${chapter_id}_ending`]
+
+  // Save the unlocked ending into the user's achievements. This runs inside a
+  // Firestore transaction so overlapping renders can't double-write or drop an
+  // ending, keys off the specific ending value (not the globalVariables object
+  // identity, which changed every render and caused repeated writes), builds
+  // the next achievements array immutably, and guards setState against unmount.
   useEffect(() => {
+    if (!currentUser?.id || character_id == null || chapter_id == null || !currentEnding) {
+      return
+    }
+
+    let isMounted = true
+
     const updateUserSaveGame = async () => {
       try {
-        // Helper variables
-        const currentUserDb = await getDbUser(currentUser.id)
-        const currentEnding = globalVariables[`chapter_${chapter_id}_ending`]        
-        const currentChapterInUserDb = currentUserDb?.achievements?.find(
-          (achievement) =>
-            achievement.character === character_id &&
-            achievement.chapter === chapter_id
-        )
-        const hasCurrentEnding = currentChapterInUserDb
-          ? Boolean(
-              currentChapterInUserDb.endings.find(
-                (ending) => ending.id === currentEnding
-              )
-            )
-          : false
-        // console.log(hasCurrentEnding)
-        // console.log(currentChapterInUserDb)
-        // If current character and chapter has not been saved before
-        if (!currentChapterInUserDb) {          
-          const saveData = {
-            createdAt: new Date().toISOString(),
-            updatedAt: new Date().toISOString(),
-            character: character_id,
-            chapter: chapter_id,
-            savedStateId: `${currentUserDb?.id}-${character_id}`,
-            endings: [
-              {
-                id: currentEnding,
-                completedAt: new Date().toISOString(),
-              },
-            ],
-            ...currentUserDb?.activeRoom  ? { roomCode: currentUserDb?.activeRoom } : {},
+        const userRef = firestore.collection('users').doc(currentUser.id)
+        await firestore.runTransaction(async (transaction) => {
+          const snapshot = await transaction.get(userRef)
+          const userData = snapshot.data() || {}
+          const achievements = userData.achievements || []
+          const now = new Date().toISOString()
+
+          const existingChapter = achievements.find(
+            (achievement) =>
+              achievement.character === character_id &&
+              achievement.chapter === chapter_id
+          )
+
+          // Chapter never saved before: add a fresh achievement entry.
+          if (!existingChapter) {
+            const newAchievement = {
+              createdAt: now,
+              updatedAt: now,
+              character: character_id,
+              chapter: chapter_id,
+              savedStateId: `${currentUser.id}-${character_id}`,
+              endings: [{ id: currentEnding, completedAt: now }],
+              ...(userData.activeRoom ? { roomCode: userData.activeRoom } : {}),
+            }
+            transaction.update(userRef, {
+              achievements: [...achievements, newAchievement],
+            })
+            return
           }
 
-          const nextAchievements = currentUserDb?.achievements || []
-          const newAchievements = nextAchievements.concat(saveData)
-          await updateDbUser({ achievements: newAchievements }, currentUserDb.id)          
-        }
-
-        // If current character and chapter has been saved before, but current ending has not been unlocked before
-        if (currentChapterInUserDb && !hasCurrentEnding) {
-          const newAchievements = currentUserDb?.achievements.map(
-            (achievement) => {
-              if (
-                achievement.character === character_id &&
-                achievement.chapter === chapter_id
-              ) {
-                const newEnding = {
-                  id: currentEnding,
-                  completedAt: new Date().toISOString(),
-                }
-                const nextEndings = achievement.endings.concat(newEnding)
-                achievement.endings = nextEndings
-                return achievement
-              }
-
-              return achievement
-            }
+          // Chapter saved, but this ending has not been unlocked yet.
+          const hasCurrentEnding = existingChapter.endings.some(
+            (ending) => ending.id === currentEnding
           )
-          await updateDbUser({ achievements: newAchievements }, currentUserDb.id)
-        }
-      } catch (err) {
-        setSnackbar({
-          message: `There was an error: ${err.message}`,
-          open: true,
-          type: 'error',
+          if (!hasCurrentEnding) {
+            const nextAchievements = achievements.map((achievement) =>
+              achievement.character === character_id &&
+              achievement.chapter === chapter_id
+                ? {
+                    ...achievement,
+                    updatedAt: now,
+                    endings: [
+                      ...achievement.endings,
+                      { id: currentEnding, completedAt: now },
+                    ],
+                  }
+                : achievement
+            )
+            transaction.update(userRef, { achievements: nextAchievements })
+          }
         })
+      } catch (err) {
+        if (isMounted) {
+          setSnackbar({
+            message: `There was an error: ${err.message}`,
+            open: true,
+            type: 'error',
+          })
+        }
       }
-      // setIsLoading(false);
     }
+
     updateUserSaveGame()
-  }, [chapter_id, character_id, currentUser.id, globalVariables, setSnackbar])
+
+    return () => {
+      isMounted = false
+    }
+  }, [character_id, chapter_id, currentEnding, currentUser.id, setSnackbar])
 
   return {
     user,

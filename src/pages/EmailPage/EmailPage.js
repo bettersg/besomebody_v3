@@ -16,7 +16,24 @@ let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-
+// Defined at module scope so the stylesheet/hook is created once, not rebuilt
+// on every render of this frequently re-rendering message screen.
+const useStyles = makeStyles((theme) => ({
+  EmailWrapper: {
+    backgroundImage: `url('/images/bg_ui_email.png')`,
+    backgroundSize: "cover",
+    height: '660px',
+    [theme.breakpoints.only('xs')]: {
+      height: 'calc(var(--vh, 1vh) * 100)',
+    },
+    width: "100%",
+    // overflow: "hidden",
+  },
+  EmailImage: {
+    maxWidth: 150,
+    maxHeight: 150,
+  }
+}))
 
 const Email = (props) => {
   const { currentParagraphs } = props
@@ -48,27 +65,7 @@ const Email = (props) => {
   //     console.log(maxHeight)
   //   }
   // }, []);
-  const useStyles = makeStyles((theme) => ({
-    EmailWrapper: {
-      backgroundImage: `url('/images/bg_ui_email.png')`,
-      backgroundSize: "cover", 
-      height: '660px',
-      [theme.breakpoints.only('xs')]: {
-        height: 'calc(var(--vh, 1vh) * 100)',
-      },
-      width: "100%", 
-      // overflow: "hidden", 
-    },
-    EmailImage: {
-      maxWidth: 150,
-      maxHeight: 150,
-    }
-    // EmailMsgs: {
-    //   maxHeight: maxHeight,
-    // }
-  }))
-
-  const classes = useStyles()  
+  const classes = useStyles()
   const { name } = useParams()
 
   // var prevSpeaker = ""
@@ -98,8 +95,8 @@ const Email = (props) => {
       .map((paragraph, idx) => {
         return (
          paragraph.tags[0].includes('speaker_1') ?
-           <p className="text-blue">{paragraph.text.split('/n').map((line, i) => <span key={i}>{line}<br /></span>)}</p> :
-           (<span className="typed-out type" style={{"--n": paragraph.text.length}}>{paragraph.text}<br/></span>)
+           <p key={idx} className="text-blue">{paragraph.text.split('/n').map((line, i) => <span key={i}>{line}<br /></span>)}</p> :
+           (<span key={idx} className="typed-out type" style={{"--n": paragraph.text.length}}>{paragraph.text}<br/></span>)
            )
       });
     

@@ -101,25 +101,21 @@ class App extends Component {
   openDialog = (dialogId, callback) => {
     const dialog = this.state[dialogId]
 
-    if (!dialog || dialog.open === undefined || null) {
+    if (!dialog || dialog.open === undefined) {
       return
     }
 
-    dialog.open = true
-
-    this.setState({ dialog }, callback)
+    this.setState({ [dialogId]: { ...dialog, open: true } }, callback)
   }
 
   closeDialog = (dialogId, callback) => {
     const dialog = this.state[dialogId]
 
-    if (!dialog || dialog.open === undefined || null) {
+    if (!dialog || dialog.open === undefined) {
       return
     }
 
-    dialog.open = false
-
-    this.setState({ dialog }, callback)
+    this.setState({ [dialogId]: { ...dialog, open: false } }, callback)
   }
 
   closeAllDialogs = (callback) => {

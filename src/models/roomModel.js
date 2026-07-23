@@ -14,26 +14,30 @@ import { firestore} from '../firebase'
         return room
       }
     } catch (err) {
-      new Error(`Error at getRoomDb: ${err}`)
+      throw new Error(`Error at getRoomDb: ${err}`)
     }
   }
-  
+
 
 
 export const updateRoomParticipantsDb = async (id, userId) => {
+  const roomRef = firestore.collection('rooms').doc(id)
   try {
-    const roomRef = firestore.collection('rooms').doc(id)
-    const doc = await roomRef.get()
-    if (!doc.exists) {
-      throw new Error("Room does not exist")
-    }
-    const existingParticipantIds = doc.data().participantIds
-    if (existingParticipantIds.includes(userId)) {
-      console.log("User already exists in room")
-      return null
-    }
-    const newParticipantIds = [...existingParticipantIds, userId]
-    roomRef.update({ participantIds: newParticipantIds })
+    // Transaction so simultaneous joins don't overwrite each other's
+    // participant list, and guard against a missing `participantIds` array.
+    await firestore.runTransaction(async (transaction) => {
+      const doc = await transaction.get(roomRef)
+      if (!doc.exists) {
+        throw new Error("Room does not exist")
+      }
+      const existingParticipantIds = doc.data().participantIds || []
+      if (existingParticipantIds.includes(userId)) {
+        return
+      }
+      transaction.update(roomRef, {
+        participantIds: [...existingParticipantIds, userId],
+      })
+    })
   } catch (err) {
     throw new Error(`Error at updateRoomParticipantsDb: ${err}`)
   }

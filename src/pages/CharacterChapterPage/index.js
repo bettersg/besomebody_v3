@@ -47,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
 
 const getInkJson = (nameParam) => {
   const persona = CHARACTER_MAP.find((character) => character.linkName === nameParam)
+  if (!persona) return {}
   return {
     inkJson: persona.jsonFile,
     characterId:persona.characterId,
@@ -83,13 +84,22 @@ const CharacterChapterPage = (props) => {
   const [userFromDb, setUserFromDb] = useState(null)
 
   useEffect(() => {
+    let isMounted = true
     const getUser = async () => {
       const user = await getDbUser(currentUser.id)
-      return setUserFromDb(user)
+      if (isMounted) setUserFromDb(user)
     }
 
     getUser()
+    return () => {
+      isMounted = false
+    }
   }, [currentUser.id])
+
+  // Redirect to the character selection screen if the URL contains an unknown character
+  useEffect(() => {
+    if (!persona) history.push('/characterchoice')
+  }, [persona, history])
 
   // UseInk variables
   const { inkJson, characterId } = getInkJson(name)
@@ -118,8 +128,9 @@ const CharacterChapterPage = (props) => {
     history.push('/story/' + name)
   }
 
-  const currentCharCompleted = 'userFromDb?.character_' + characterId + '_completed'
-  console.log(eval(currentCharCompleted))  
+  const currentCharCompleted = userFromDb?.[`character_${characterId}_completed`]
+
+  if (!persona) return null
 
   return (
     <Box className={classes.CharChaptWrapper}>
@@ -179,7 +190,7 @@ const CharacterChapterPage = (props) => {
         ) : (
           <div> No Chapters Available </div>
         )}
-        { eval(currentCharCompleted)  && 
+        { currentCharCompleted  &&
                 <ReflectionChapter
                 userFromDb={userFromDb}
                 characterId={characterId}

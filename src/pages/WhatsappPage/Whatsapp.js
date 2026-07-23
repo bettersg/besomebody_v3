@@ -13,6 +13,25 @@ let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
+// Defined at module scope so the stylesheet/hook is created once, not rebuilt
+// on every render of this frequently re-rendering message screen.
+const useStyles = makeStyles((theme) => ({
+  WhatsappWrapper: {
+    backgroundImage: `url('/images/bg_ui_whatsapp.png')`,
+    backgroundSize: "cover",
+    height: '660px',
+    [theme.breakpoints.only('xs')]: {
+      height: 'calc(var(--vh, 1vh) * 100)',
+    },
+    width: "100%",
+    // overflow: "hidden",
+  },
+  whatsappImage: {
+    maxWidth: 150,
+    maxHeight: 150,
+  }
+}))
+
 const Whatsapp = (props) => {
   const { currentParagraphs } = props
   const { getStory, choices, setChoice, specialTags } = useInkContext()
@@ -43,27 +62,7 @@ const Whatsapp = (props) => {
   //     console.log(maxHeight)
   //   }
   // }, []);
-  const useStyles = makeStyles((theme) => ({
-    WhatsappWrapper: {
-      backgroundImage: `url('/images/bg_ui_whatsapp.png')`,
-      backgroundSize: "cover", 
-      height: '660px',
-      [theme.breakpoints.only('xs')]: {
-        height: 'calc(var(--vh, 1vh) * 100)',
-      },
-      width: "100%", 
-      // overflow: "hidden", 
-    },
-    whatsappImage: {
-      maxWidth: 150,
-      maxHeight: 150,
-    }
-    // WhatsappMsgs: {
-    //   maxHeight: maxHeight,
-    // }
-  }))
-
-  const classes = useStyles()  
+  const classes = useStyles()
   const { name } = useParams()
 
   var prevSpeaker = ""
@@ -111,12 +110,12 @@ const Whatsapp = (props) => {
                   if (innerMonoRef.current) { innerMonoRef.current.hidden = 'true' }
                   return (
                     <Box
-                      key={step.text}
+                      key={i}
                       mx={1}
                       display="flex"
                       justifyContent="flex-end"
                     >
-                      <Fade in={step.text} key={step.text} timeout={300}>
+                      <Fade in={step.text} timeout={300}>
                         <Box
                           className={`Whatsapp__messages--sender ${isNotPrevSpeaker(step.tags[0])?"newSpeaker":""}`}
                           borderRadius={5}
@@ -132,8 +131,8 @@ const Whatsapp = (props) => {
                 } else if (step.tags[0]?.includes('speaker')) {     // this is needed to avoid rendering inner_monologue
                   if (innerMonoRef.current) { innerMonoRef.current.hidden = 'true' }
                   return (
-                    <Fade in={step.text} timeout={300}>
-                      <div key={step.text} className={`Whatsapp__messages--receiver ${isNotPrevSpeaker(step.tags[0])?"newSpeaker":""}`} 
+                    <Fade in={step.text} timeout={300} key={i}>
+                      <div className={`Whatsapp__messages--receiver ${isNotPrevSpeaker(step.tags[0])?"newSpeaker":""}`}
                         style={{}}
                       >
                         <div className="Whatsapp__messages--receiver--name"
@@ -157,7 +156,7 @@ const Whatsapp = (props) => {
                 else if (step.tags[0]?.includes('timestamp')) {
                   if (innerMonoRef.current) { innerMonoRef.current.hidden = 'true' }
                   return (
-                    <Box style={{ textAlign: 'center', paddingTop: 5 }}> <Typography key={step.text} variant="overline"> {step.text}</Typography> </Box>
+                    <Box key={i} style={{ textAlign: 'center', paddingTop: 5 }}> <Typography variant="overline"> {step.text}</Typography> </Box>
                     )
                 }
                 else if (step.tags[0]?.includes('clear')) {     // this is needed to avoid rendering inner_monologue
@@ -165,7 +164,7 @@ const Whatsapp = (props) => {
                       return (null)
                 } else if (step.tags[0]?.includes('wa_inner_monologue')) {                
                   return (
-                    <div className="Whatsapp__innerMono" ref={innerMonoRef}> <Typography key={step.text}  className="Whatsapp__innerMono--text"> {step.text}</Typography> </div>
+                    <div key={i} className="Whatsapp__innerMono" ref={innerMonoRef}> <Typography className="Whatsapp__innerMono--text"> {step.text}</Typography> </div>
                     )
                 }
               

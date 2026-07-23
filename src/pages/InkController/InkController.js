@@ -174,14 +174,15 @@ const InkController = () => {
     // Run this useEffect whenever currentKnot gets updated
   }, [currentKnot])
 
+  // Redirect back to the chapter list if the story has not been started
+  // (e.g. on a hard refresh of /story/:name). This must be a side effect,
+  // not a render-time navigation call.
+  useEffect(() => {
+    if (!isStoryStarted) history.push('/chapters/' + name)
+  }, [isStoryStarted, name, history])
+
   return (
     <Container maxWidth="lg" className="ink-controller">
-      {isStoryStarted ? null :       
-        history.push('/chapters/'+ name )
-        // <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><Box my={10}>Please start story from your last saved state <Button variant="contained" color="primary" fullWidth onClick={() => loadSavedStory()}>LOAD AUTOSAVE</Button></Box>
-        // </Container>
-      }
-
       {getUi({
         currentParagraphs,
         specialTags,

@@ -9,7 +9,7 @@ const NextButton = (props) => {
     // Trigger next on right arrow key
     const handleUserKeyPress = useCallback((event) => {
       const { key } = event;
-      if (key === 'ArrowRight' || 'Space') getStory()
+      if (key === 'ArrowRight' || key === ' ' || key === 'Spacebar') getStory()
     }, [getStory]);
     useEffect(() => {
       window.addEventListener("keydown", handleUserKeyPress);
