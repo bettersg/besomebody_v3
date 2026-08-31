@@ -1164,7 +1164,7 @@ const GLOBAL_VAR_MAP = [
             title: "Zhihao leaves the tweet as it will blow over",
             name: "chapter_1_ending",
           },
-        ]    
+        ],
         variables: [
           {
             name: 'zhihao_1_earning',
