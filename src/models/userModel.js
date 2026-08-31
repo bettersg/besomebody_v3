@@ -35,6 +35,9 @@ export const getDbUser = async (objId) => {
 }
 
 export const updateDbUser = async (obj, objId) => {
+  if (obj.email) {
+    delete obj.email // prevent email field from being saved in users collection
+  }
   try {
     const userRef = firestore.collection('users').doc(objId || obj.id)
     await userRef.update(obj)
